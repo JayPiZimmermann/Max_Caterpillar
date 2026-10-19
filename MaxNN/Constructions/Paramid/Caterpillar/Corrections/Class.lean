@@ -45,9 +45,9 @@ theorem coneClassIdentity_of_formulaClassIdentity
   convert hsub using 1
   abel
 
-/-- Finished ordinary two-hidden-layer construction, conditional only on the
-class identity proved by the global facet branch.  Full dimensionality is now
-discharged internally. -/
+/-- Compiles the formula class identity into an ordinary two-hidden-layer
+network. The global facet proof supplies this identity, and full dimensionality
+is proved internally. -/
 theorem twoLayerWidth_MAX_of_formulaClassIdentity (hr : 1 ≤ r)
     (hclass : FormulaClassIdentity r) :
     TwoLayerWidth (r + 1 + 1) (W (r + 1 + 1)) ((correctionKeys r).card + 2)

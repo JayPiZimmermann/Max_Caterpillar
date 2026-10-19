@@ -56,8 +56,7 @@ support function of a simplex, facet differences reduce the class identity to
 one lower-arity case, exposed faces provide the correction dictionary, and the
 normalized caterpillar descriptions are compiled into the two network layers.
 The underlying geometric construction and its relation to the work of
-Brunck, Stade, and Yehudayoff are stated in the paper and in
-[PROVENANCE.md](PROVENANCE.md).
+Brunck, Stade, and Yehudayoff are stated in the paper.
 
 ## Verification
 

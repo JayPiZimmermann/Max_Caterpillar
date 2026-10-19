@@ -2,8 +2,9 @@
 
 `main.tex` is the short article on the caterpillar construction for
 $\operatorname{MAX}_N$. Its introduction may cite general representation
-theorems for context, and the conclusion cites width lower bounds from the
-literature. These background results are not formalized here. The Lean links and checked claims in this repository
+theorems for context, and the conclusion cites width lower bounds and our
+separate Lean development extending them. These lower bounds are not included
+in this repository. The Lean links and checked claims in this repository
 concern only the maximum construction and the mathematical steps used in the
 paper.
 

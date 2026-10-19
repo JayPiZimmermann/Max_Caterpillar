@@ -15,11 +15,13 @@ Four independent subagents reviewed (1) face corrections and dictionary membersh
 - Paper checks passed: 13 pages, 98 Lean hyperlinks, 85 linked equations (83 Lean and 2 literature links), and no overfull boxes.
 - The reviewers performed source inspection; the build result is the parent's separate verification. Neither constitutes a new audit of Lean's kernel or Mathlib.
 
+A fresh full gate on the current tree again passed all 27 exact statements and all 166 Lean files. The current certificate has SHA-256 `7ad1e4d547633aca3e08023e32bff3399a8536ca394f7a548f773cdd2f213639` and aggregate source digest `5309e0d5ace2238c88342f271dff6092ab51c265977ae6d741ae91cae0e349ad`; all 169 recorded source and manifest hashes match the current files. The mathematical declarations are unchanged from the reviewed proof; the intervening Lean edit changed only a three-line explanatory comment.
+
 The snapshot hashes and build counts above are historical and remain unchanged. Paper line references in the original findings pin root commit [`3295f962bfa66108d570048962457c89c5112926`](https://github.com/JayPiZimmermann/Max_Caterpillar/tree/3295f962bfa66108d570048962457c89c5112926), so they continue to identify the manuscript that was reviewed.
 
 ## Resolution status in the current manuscript
 
-Here, “implemented” means that the stated repair is present in `paper/main.tex`. The evidence column records a completed source comparison with the named Lean declarations; it does not claim that the prose itself is machine checked. No Lean source changed during these manuscript repairs, so the prior full Lean certificate remains applicable to the theorem sources. PDF-build evidence is recorded separately in `verification/paper.json`; this review does not assert a fresh paper build.
+Here, “implemented” means that the stated repair is present in `paper/main.tex`. The evidence column records a completed source comparison with the named Lean declarations; it does not claim that the prose itself is machine checked. The mathematical declarations used by the review remain unchanged, and the current tree passed a fresh full Lean gate after the comment-only edit described above. PDF-build evidence is recorded separately in `verification/paper.json`; this review does not assert a fresh paper build.
 
 | Item | Status and current manuscript location | Lean source used for comparison |
 | --- | --- | --- |
@@ -39,7 +41,9 @@ Here, “implemented” means that the stated repair is present in `paper/main.t
 | Small 6: three-value reflection | Implemented in `eq:braid-reflection`, `eq:braid-germ`, and `eq:linear-facet`, including `R u=-u`, the linear covariance term, and the derivative conclusion. | `germDiff_formula_smul_braid_mem_LSpan_zero` |
 | Small 7: translated coordinate | Implemented in `eq:lower-arity-translation`; the correction `(W_{N-1}-1)x_1` is explicit, and `eq:lifted-induction` states the exact induction consequence. | `valueFormula_sub_MAX_eq` and `valueFormula_sub_MAX_mem_LSpan` |
 
-The final network presentation was also independently source-reviewed: the remainder is defined from auxiliary and absorbed coefficients, its compact readout uses the positive-shift identity, and the first-layer feature order, second-layer rows, output weights, and zero biases agree with the Lean compiler up to the fixed index enumerations. The final manuscript SHA-256 is `9cb509719a19fc3092549f8b9c24f64599e6b7a330423dd32e62e0fb012f428b`. The rebuilt PDF and link/layout checks are recorded in [paper.json](paper.json).
+The final network presentation was also independently source-reviewed: the remainder is defined from auxiliary and absorbed coefficients, its compact readout uses the positive-shift identity, and the first-layer feature order, second-layer rows, output weights, and zero biases agree with the Lean compiler up to the fixed index enumerations. The final manuscript SHA-256 is `cffac8d90925796cd743cb746ab34ac1fee62c907b1bd25363731e99d1254ff9`. The rebuilt PDF and link/layout checks are recorded in [paper.json](paper.json).
+
+The conclusion also reports the separately formalized results `MaxNN.QuadCover.twoHidden_firstWidth_quadThreshold` and `MaxNN.QuadCover.twoHidden_pairHinge_firstWidth`. Their source-bound QuadCover verification receipt in the research repository records a full rebuild and kernel replay with only the standard foundational axioms. The first extends Lu’s numerical bound to arbitrary affine skip connections; the second improves the bound under the explicit pair-direction hypothesis. They are not part of this repository’s 27-claim construction audit, and the manuscript identifies that development as separate.
 
 ## Historical findings requiring attention
 

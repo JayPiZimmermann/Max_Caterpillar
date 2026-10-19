@@ -1,7 +1,7 @@
 {
   "source_commit": null,
   "source_binding": "Verification ran on the completed working tree before the current commit; the source_files SHA-256 values bind this receipt to the exact checked artifacts independently of a commit identifier.",
-  "pages": 16,
+  "pages": 17,
   "lean_hyperlinks_checked": 120,
   "equation_links_checked": 107,
   "distinct_declaration_mappings": 124,
@@ -24,19 +24,20 @@
   },
   "reference_lean_command_block_sha256": "5fbb14cc0fa054738d968ded3e9e5a4f599d161cda206df53a60749c85f46b3f",
   "source_files": {
-    "paper/main.tex": "9cb509719a19fc3092549f8b9c24f64599e6b7a330423dd32e62e0fb012f428b",
+    "paper/main.tex": "cffac8d90925796cd743cb746ab34ac1fee62c907b1bd25363731e99d1254ff9",
     "paper/iclr2027_conference.sty": "75764eb39b41a933ffea270b1c8fcdca42238f416a9ba6193e2ffa01e6e2cf5b",
     "paper/lean_equation_links.sty": "4c8596ade352a9e907dd2255e738eb19f4e4ba09df150427a38343d5ab423d82",
     "paper/lean-map.json": "54cc5576ea2820340dddf5a24cefddf25efb664c7224ba0ff65d00c30f1a6178",
     "paper/lean-links.tex": "1576c393a82507af4bada97e9a259b3a9042719b95d30b68e2e21eb325d2b1c5",
     "paper/lean-links.json": "62662836cb749f5f687d3d76e00c04c0c87dc320494419cdef87b6e81cab935a",
     "paper/link-config.json": "6633d6ae65f452910cab89645e083f16ed0468f3d2ea6b2489ec624316c93e13",
-    "paper/main.pdf": "d5dbc3519a888d3609b97e66ac4037458d9720e07cdc17b699fe5473f6f59c82",
+    "paper/main.pdf": "dba6c5520d7d572dbda3bca8e9d7c5172f07e40773c31612da7cebdc6e6baf8c",
     "scripts/paper_links.py": "c5849a8bf458ffebef327b43d88c467bc00085c0df4fe8870e60997b15840d73",
     "paper/proof_commands.tex": "8a4a7577892289145faba84deb3c3612fa93f2bf0d961ac653e2e1c3b1c95742"
   },
   "proof_anchors_checked": 3,
   "reference_proof_command_block_sha256": "4b4126a016bdd2b374d9a3ff975cd6f5660e1f5f2622981eba8450011aad14c3",
   "proof_step_links_checked": 5,
-  "verified_on": "2026-10-19"
+  "verified_on": "2026-10-19",
+  "title": "TWO HIDDEN LAYERS SUFFICE: THE CATERPILLAR NET"
 }

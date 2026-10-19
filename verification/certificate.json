@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-19T16:00:20.841709+00:00",
+  "checked_at_utc": "2026-10-19T16:57:29.127164+00:00",
   "source_commit": null,
-  "source_sha256": "16eae06d5f72bd2b0b0353597a5b3c164b2cf77e1b4993d4398f8d0d0679f8e9",
+  "source_sha256": "5309e0d5ace2238c88342f271dff6092ab51c265977ae6d741ae91cae0e349ad",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -341,7 +341,7 @@
     "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean": "03325420fcf40fa63ff1dabe46192a828457ff1cc4b4c54b96203c8a465c32bc",
     "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Sparse.lean": "dba99928f60fbb828e4109de3c752977cd7ad22d2f4013ecf421605ee22c6579",
     "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean": "7ac84ea338153147b859cd9f9adedf672ca437c3537a111b883007b50cf03efb",
-    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Class.lean": "4528f6e0db4a8c60192776aa4e640e7d16e4d99ca5351693a74ad77bad7065c0",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Class.lean": "79288acd2e7b16877c28a4a2ff3127f4c82ba2e518085e36ea72f29ab69aac05",
     "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean": "6bc083794ce5a4f1183844be459722f6125625314b601702eadac8f65df8b37a",
     "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean": "ea584ed3de43bde38d2e3ef217a57da8ab128ad7f7fba57ae7af404717a49ac7",
     "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean": "63cc0b70e5f7c13290a77e0ac5f9ec769469ac9d7018ebcd7733474658f2ae8b",
