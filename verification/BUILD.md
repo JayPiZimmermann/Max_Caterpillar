@@ -40,3 +40,7 @@ links, 107 equation links (105 Lean links and two literature links), 124 distinc
 declaration mappings, three proof anchors, five proof-step links, and no
 overfull boxes. The corresponding source hashes are recorded in
 `verification/paper.json`.
+
+An independent build also passed with `lean-links.tex` omitted: the generated
+equation mappings are embedded in `main.tex`. Removing one mapping from a
+temporary copy caused TeX to fail with an explicit missing-source-link error.

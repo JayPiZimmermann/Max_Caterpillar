@@ -9,6 +9,37 @@ import subprocess
 from urllib.parse import quote
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+LINK_BLOCK_START = '% BEGIN GENERATED EQUATION LINKS'
+LINK_BLOCK_END = '% END GENERATED EQUATION LINKS'
+
+
+def embed_equation_links(manuscript, declarations):
+    """Keep copied main.tex files self-contained, and reject unlinked tags."""
+    guard = r'''\makeatletter
+\AtBeginDocument{%
+\let\paper@linked@tagform\tagform@
+\def\tagform@#1{%
+\ifpaper@displaytag
+\ifmeasuring@\else
+\ifcsname paper@lean@\paper@equationlabel\endcsname\else
+\PackageError{caterpillar}{Missing source link for equation `\paper@equationlabel'}{Run scripts/paper_links.py and copy the updated main.tex.}%
+\fi
+\fi
+\fi
+\paper@linked@tagform{#1}%
+}%
+}
+\makeatother'''
+    block = '\n'.join([LINK_BLOCK_START, declarations.rstrip(), guard, LINK_BLOCK_END])
+    if LINK_BLOCK_START in manuscript:
+        pattern = re.escape(LINK_BLOCK_START) + r'.*?' + re.escape(LINK_BLOCK_END)
+        manuscript, count = re.subn(pattern, lambda _: block, manuscript, flags=re.S)
+        if count != 1:
+            raise SystemExit('Expected exactly one generated equation-link block.')
+        return manuscript
+    if manuscript.count(r'\input{lean-links.tex}') != 1:
+        raise SystemExit('Expected the equation-link input or generated block.')
+    return manuscript.replace(r'\input{lean-links.tex}', block)
 
 
 def equation_rows(content):
@@ -152,8 +183,9 @@ def main():
             or len(set(declared_steps)) != len(declared_steps)
             or len(set(proof_steps)) != len(proof_steps)):
         raise SystemExit('Proof steps and Lean step mappings differ.')
-    main_path.write_text(manuscript)
-    (ROOT / 'paper/lean-links.tex').write_text('\n'.join(lines) + '\n')
+    declarations = '\n'.join(lines) + '\n'
+    main_path.write_text(embed_equation_links(manuscript, declarations))
+    (ROOT / 'paper/lean-links.tex').write_text(declarations)
     (ROOT / 'paper/lean-links.json').write_text(json.dumps(records, indent=2) + '\n')
     config_path.write_text(json.dumps({'base_url': base_url}, indent=2) + '\n')
     lean_count = sum('file' in entry for entry in records)

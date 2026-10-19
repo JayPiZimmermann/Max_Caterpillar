@@ -24,20 +24,22 @@
   },
   "reference_lean_command_block_sha256": "5fbb14cc0fa054738d968ded3e9e5a4f599d161cda206df53a60749c85f46b3f",
   "source_files": {
-    "paper/main.tex": "6867b47cb29f939d974e2c78efcded2df1ef1cd33213ad4c1522c7fe90ff00c1",
+    "paper/main.tex": "70a6d2bde8d727085146e29b204cef62b66b0434b14c4ca2d56ccd4cbaf7022d",
     "paper/iclr2027_conference.sty": "75764eb39b41a933ffea270b1c8fcdca42238f416a9ba6193e2ffa01e6e2cf5b",
     "paper/lean_equation_links.sty": "4c8596ade352a9e907dd2255e738eb19f4e4ba09df150427a38343d5ab423d82",
     "paper/lean-map.json": "54cc5576ea2820340dddf5a24cefddf25efb664c7224ba0ff65d00c30f1a6178",
     "paper/lean-links.tex": "1576c393a82507af4bada97e9a259b3a9042719b95d30b68e2e21eb325d2b1c5",
     "paper/lean-links.json": "62662836cb749f5f687d3d76e00c04c0c87dc320494419cdef87b6e81cab935a",
     "paper/link-config.json": "6633d6ae65f452910cab89645e083f16ed0468f3d2ea6b2489ec624316c93e13",
-    "paper/main.pdf": "2c3f9a65a63976cd5285589b8dade44eeedb4b88441d0b40df1a367ece577232",
-    "scripts/paper_links.py": "c5849a8bf458ffebef327b43d88c467bc00085c0df4fe8870e60997b15840d73",
+    "paper/main.pdf": "51e7869084aa4b3bd3418388cf0c0d45607f7ed1be8ab586ce1fe0af87979045",
+    "scripts/paper_links.py": "b7b2f6692a8bec4193bf8994675e60cc256c1fbf92b2231975a08984acae7cc4",
     "paper/proof_commands.tex": "8a4a7577892289145faba84deb3c3612fa93f2bf0d961ac653e2e1c3b1c95742"
   },
   "proof_anchors_checked": 3,
   "reference_proof_command_block_sha256": "4b4126a016bdd2b374d9a3ff975cd6f5660e1f5f2622981eba8450011aad14c3",
   "proof_step_links_checked": 5,
   "verified_on": "2026-10-19",
-  "title": "TWO HIDDEN LAYERS SUFFICE: THE CATERPILLAR NET"
+  "title": "TWO HIDDEN LAYERS SUFFICE: THE CATERPILLAR NET",
+  "standalone_equation_links_checked": true,
+  "missing_equation_link_rejected": true
 }

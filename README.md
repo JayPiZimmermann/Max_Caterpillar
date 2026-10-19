@@ -48,7 +48,7 @@ theorem maximum_width (N : ℕ) [NeZero N] :
 `Network N h₁ h₂` contains the six real parameter arrays of the two-hidden-layer
 network, and `Network.eval` is its explicit nested-sum evaluator.
 [Construction.lean](MaxCaterpillar/Construction.lean) defines the compiled
-caterpillar network. `network` is the construction used for the closed width
+caterpillar network. `network` is the construction used for the stated width
 bound.
 
 The proof follows the paper: a signed caterpillar sum is compared with the
