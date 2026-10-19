@@ -459,6 +459,7 @@ For each tag, split the coefficient of its represented function equally over its
 \begin{align}\label{eq:tagged-coefficients}
  \widetilde c_a:=\frac{c_{v(a)}}{|\{b\in\mathcal A:v(b)=v(a)\}|}.
 \end{align}
+While computationally intractable to extract explicit weights for large $N$, averaging over all bases avoids arbitrary symmetry-breaking and provides a canonical coefficient map ideal for formal verification.
 Regrouping by the fibers of $v$ gives the literal tagged expansion
 \begin{align}\label{eq:tagged-expansion}
  \maxn_N=\sum_{a\in\mathcal A}\widetilde c_a v(a).
