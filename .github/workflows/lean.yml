@@ -1,0 +1,23 @@
+name: Lean and exact statements
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned Lean toolchain
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Fetch pinned mathlib cache
+        run: lake exe cache get
+      - name: Build and verify
+        run: |
+          ulimit -s unlimited
+          python3 scripts/verify.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lean-verification
+          path: |
+            verification/certificate.json
+            verification/logs/

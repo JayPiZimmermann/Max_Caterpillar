@@ -1,0 +1,1093 @@
+[
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "maximum_width",
+    "equations": [
+      "eq:width"
+    ],
+    "key": "main",
+    "line": 18,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Theorems.lean#L18",
+    "sha256": "15c537c8ab6aa8b6135c54befcb2b02ea6fe52525368218feaba5e4c0573dc80"
+  },
+  {
+    "file": "MaxCaterpillar/Definitions.lean",
+    "name": "coneCount",
+    "equations": [
+      "eq:count"
+    ],
+    "key": "sizes",
+    "line": 51,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Definitions.lean#L51",
+    "sha256": "871e2d5b3ed06c74773c58159a8b0142fc785568f03c84f1b31b958cfebbc1ba"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean",
+    "name": "rawCone",
+    "equations": [
+      "eq:word"
+    ],
+    "key": "words",
+    "line": 130,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean#L130",
+    "sha256": "c0720731fb9a66108d3d5b6e549fe5d80e2842b4ec087aaa2cbeb7276b4054a4"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean",
+    "name": "faceKey",
+    "equations": [
+      "eq:faces",
+      "eq:face-description"
+    ],
+    "key": "faces",
+    "line": 29,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean#L29",
+    "sha256": "e3a2dea958657163cdea96e5bb0b8f8f08aab465bd9a415331bbb1c3fc22e83c"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
+    "name": "canonicalCoeff",
+    "equations": [
+      "eq:coefficients"
+    ],
+    "key": "coefficients",
+    "line": 49,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean#L49",
+    "sha256": "a7bbf57abf76d6796b815d9752c5113655a1823fb50136bd22b02e5c02c32cd6"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
+    "name": "gramMatrix_isUnit",
+    "key": "gram",
+    "line": 172,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean#L172",
+    "sha256": "03325420fcf40fa63ff1dabe46192a828457ff1cc4b4c54b96203c8a465c32bc"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "maximum_mem_dictionary",
+    "equations": [
+      "eq:dictionary-span"
+    ],
+    "key": "span",
+    "line": 54,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L54",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "network_correct",
+    "key": "network",
+    "line": 35,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Theorems.lean#L35",
+    "sha256": "15c537c8ab6aa8b6135c54befcb2b02ea6fe52525368218feaba5e4c0573dc80"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "class_identity",
+    "equations": [
+      "eq:class-identity"
+    ],
+    "steps": [
+      "stp:class"
+    ],
+    "key": "class",
+    "line": 48,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L48",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean",
+    "name": "mem_LSpan_of_mem_simplexMod_of_forall_germDiff_mem",
+    "key": "assembly",
+    "line": 36,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean#L36",
+    "sha256": "83c9e6a0806c8dbff83acb615a98333f4871dd209631cbb02cd405b89666c2da"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean",
+    "name": "germDiff_formula_braid_mem_LSpan_zero",
+    "key": "braid",
+    "line": 82,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean#L82",
+    "sha256": "9f677691bc230f4c8d372ccd919ecb8755c4176f6d953c0b3b4349f860848c60"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean",
+    "name": "simplex_sub_mem_coneFaceSpan",
+    "equations": [
+      "eq:geometric-class"
+    ],
+    "steps": [
+      "stp:corrections"
+    ],
+    "key": "coneclosure",
+    "line": 71,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean#L71",
+    "sha256": "61385b52393e6a537021d3d50eacb2f9ca5afc9eed514ce351e95eafe76e9ed0"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Block/Global.lean",
+    "name": "germDiff_formula_mem_LSpan_of_repeatedValues",
+    "key": "block",
+    "line": 62,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Block/Global.lean#L62",
+    "sha256": "8a62c1eb39d3622644ac139e72771e5357b3195a7ad9776801ed0e6fe4c93613"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Block/Transform.lean",
+    "name": "blockTransform_involutive",
+    "key": "toggle",
+    "line": 194,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Block/Transform.lean#L194",
+    "sha256": "b6133d9d892390631e63de54b394bfdb21938bfacb0182da9cc3c5fbb0af967c"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "coordinate_deletion",
+    "equations": [
+      "eq:coordinate-deletion"
+    ],
+    "key": "coordinate",
+    "line": 41,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L41",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean",
+    "name": "coordinateStructuredBlock_sub_lower_mem_LSpan_one",
+    "key": "insertion",
+    "line": 67,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean#L67",
+    "sha256": "945837ed3ecf752ba32afa7ac73a4932edaed71e93e8698dca36b91e80518452"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean",
+    "name": "coordinateEndpointStarSum_mem_LSpan",
+    "key": "star",
+    "line": 345,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean#L345",
+    "sha256": "0d0e99e58c434c7671a796c8b300a6952a53fd354ed59ba49da37c63eed76479"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/GraphKey.lean",
+    "name": "normalizedKey_wordKey_eq_graphKey",
+    "equations": [
+      "eq:graph"
+    ],
+    "key": "graph",
+    "line": 214,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/GraphKey.lean#L214",
+    "sha256": "4cb77914a3af422ab1f0d9eded669399e4b3581e31d3927a44169d22eddbd191"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/WordEncoding.lean",
+    "name": "normalizedKey_wordKey_eq_shapeKey",
+    "key": "encoding",
+    "line": 266,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/WordEncoding.lean#L266",
+    "sha256": "a23b2eaea3138a11a62adb25222d6b57bd4678634bf2e53d8c734af7efa34225"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/Reversal.lean",
+    "name": "card_shapeKeys_le_half",
+    "key": "reversal",
+    "line": 173,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/Reversal.lean#L173",
+    "sha256": "433c3ac7f424c85b35d9f86faf1dda36e1342bb83172f13fb651202f180a64b0"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "normalized_cone_count",
+    "equations": [
+      "eq:cone-count"
+    ],
+    "key": "count",
+    "line": 66,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L66",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
+    "name": "compactFeatureLayer",
+    "equations": [
+      "eq:features"
+    ],
+    "key": "features",
+    "line": 63,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean#L63",
+    "sha256": "63cc0b70e5f7c13290a77e0ac5f9ec769469ac9d7018ebcd7733474658f2ae8b"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Essential.lean",
+    "name": "compactEssentialNetwork",
+    "key": "absorb",
+    "line": 38,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Essential.lean#L38",
+    "sha256": "79cbf64cf89ad8b64eafb7c32e2e91e45400baeab3a6aa937b54f3d5b88a6d38"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "construction_width",
+    "key": "transport",
+    "line": 80,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L80",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
+    "name": "sum_canonicalCoeff_eq",
+    "equations": [
+      "eq:canonical-expansion"
+    ],
+    "key": "expansion",
+    "line": 72,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean#L72",
+    "sha256": "a7bbf57abf76d6796b815d9752c5113655a1823fb50136bd22b02e5c02c32cd6"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "facet_reduction",
+    "key": "reduction",
+    "line": 24,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L24",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "width_of_cone_count",
+    "equations": [
+      "eq:compilation-widths"
+    ],
+    "steps": [
+      "stp:size-network"
+    ],
+    "key": "compiler",
+    "line": 72,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L72",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "width_asymptotics",
+    "equations": [
+      "eq:asymptotics"
+    ],
+    "key": "asymptotics",
+    "line": 28,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Theorems.lean#L28",
+    "sha256": "15c537c8ab6aa8b6135c54befcb2b02ea6fe52525368218feaba5e4c0573dc80"
+  },
+  {
+    "file": "MaxCaterpillar/Definitions.lean",
+    "name": "Network",
+    "equations": [
+      "eq:network-parameters"
+    ],
+    "key": "networkParameters",
+    "line": 26,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Definitions.lean#L26",
+    "sha256": "871e2d5b3ed06c74773c58159a8b0142fc785568f03c84f1b31b958cfebbc1ba"
+  },
+  {
+    "file": "MaxCaterpillar/Definitions.lean",
+    "name": "Network.eval",
+    "equations": [
+      "eq:network-evaluation"
+    ],
+    "key": "networkEvaluation",
+    "line": 35,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Definitions.lean#L35",
+    "sha256": "871e2d5b3ed06c74773c58159a8b0142fc785568f03c84f1b31b958cfebbc1ba"
+  },
+  {
+    "file": "MaxCaterpillar/Definitions.lean",
+    "name": "Maximum",
+    "equations": [
+      "eq:maximum"
+    ],
+    "key": "maximumDefinition",
+    "line": 42,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Definitions.lean#L42",
+    "sha256": "871e2d5b3ed06c74773c58159a8b0142fc785568f03c84f1b31b958cfebbc1ba"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean",
+    "name": "valueFormula",
+    "equations": [
+      "eq:signed-word-sum"
+    ],
+    "key": "signedWordSum",
+    "line": 31,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean#L31",
+    "sha256": "718497c776e1ef528981e75bbcc822529ffa5da331c8978967c219a421922941"
+  },
+  {
+    "source_url": "https://doi.org/10.1109/TIT.2005.859246",
+    "title": "Wang and Sun, Generalization of hinging hyperplanes",
+    "equations": [
+      "eq:hinging-maps",
+      "eq:hinging-representation"
+    ],
+    "key": "wangSun",
+    "url": "https://doi.org/10.1109/TIT.2005.859246",
+    "kind": "literature"
+  },
+  {
+    "file": "MaxNN/Core/Relu.lean",
+    "name": "max_eq_relu_add",
+    "equations": [
+      "eq:max-hinge"
+    ],
+    "key": "maxHinge",
+    "line": 24,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Core/Relu.lean#L24",
+    "sha256": "98acff835fa4f1cc365f5d8f19c0b88eaa5178486c19cea633ca027e9f8d72ea"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean",
+    "name": "WordIndex",
+    "equations": [
+      "eq:caterpillar-data"
+    ],
+    "key": "wordIndex",
+    "line": 24,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean#L24",
+    "sha256": "c0720731fb9a66108d3d5b6e549fe5d80e2842b4ec087aaa2cbeb7276b4054a4"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Words.lean",
+    "name": "parent",
+    "equations": [
+      "eq:word-parent"
+    ],
+    "key": "wordParent",
+    "line": 28,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Words.lean#L28",
+    "sha256": "95f3b53915233f0987c7d3d069363f383eb48fbc2ce72e28b78ca97a441f1546"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean",
+    "name": "rawGamma",
+    "equations": [
+      "eq:word-gamma"
+    ],
+    "key": "wordGamma",
+    "line": 122,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean#L122",
+    "sha256": "c0720731fb9a66108d3d5b6e549fe5d80e2842b4ec087aaa2cbeb7276b4054a4"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean",
+    "name": "rawLabels",
+    "equations": [
+      "eq:edge-functions",
+      "eq:edge-comparison"
+    ],
+    "key": "wordEdges",
+    "line": 126,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean#L126",
+    "sha256": "c0720731fb9a66108d3d5b6e549fe5d80e2842b4ec087aaa2cbeb7276b4054a4"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
+    "name": "paramidOn",
+    "equations": [],
+    "key": "unitDefinition",
+    "line": 113,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Defs.lean#L113",
+    "sha256": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602"
+  },
+  {
+    "file": "MaxNN/Constructions/MaxN/Width/Layer/Features.lean",
+    "name": "featureLayer",
+    "equations": [
+      "eq:aux_functions"
+    ],
+    "key": "fullFeatures",
+    "line": 75,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/MaxN/Width/Layer/Features.lean#L75",
+    "sha256": "9a06e16ea76f77364fb9991406bd9b3a2f4426fe21af0441033944095e824849"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean",
+    "name": "basisSubsets",
+    "equations": [
+      "eq:bases"
+    ],
+    "key": "basisSubsets",
+    "line": 26,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean#L26",
+    "sha256": "e0d9b3822ac5f81abb8866548ee067dbf15cbca522c8abb9e7747267effeb109"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
+    "name": "gramMatrix",
+    "equations": [
+      "eq:gram-matrix"
+    ],
+    "key": "gramMatrix",
+    "line": 147,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean#L147",
+    "sha256": "03325420fcf40fa63ff1dabe46192a828457ff1cc4b4c54b96203c8a465c32bc"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
+    "name": "gramRhs",
+    "equations": [
+      "eq:gram-rhs"
+    ],
+    "key": "gramRhs",
+    "line": 201,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean#L201",
+    "sha256": "03325420fcf40fa63ff1dabe46192a828457ff1cc4b4c54b96203c8a465c32bc"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
+    "name": "ballInner",
+    "equations": [
+      "eq:inner-product"
+    ],
+    "key": "ballInner",
+    "line": 50,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean#L50",
+    "sha256": "03325420fcf40fa63ff1dabe46192a828457ff1cc4b4c54b96203c8a465c32bc"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean",
+    "name": "basisExpansion_eq",
+    "equations": [
+      "eq:basis-expansion"
+    ],
+    "key": "basisExpansion",
+    "line": 61,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean#L61",
+    "sha256": "e0d9b3822ac5f81abb8866548ee067dbf15cbca522c8abb9e7747267effeb109"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
+    "name": "lincomb_gramCoeff_eq",
+    "equations": [
+      "eq:normal-equations"
+    ],
+    "key": "normalEquations",
+    "line": 220,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean#L220",
+    "sha256": "03325420fcf40fa63ff1dabe46192a828457ff1cc4b4c54b96203c8a465c32bc"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/FiberCompiler.lean",
+    "name": "sum_finiteFiber_average_mul",
+    "equations": [],
+    "key": "fiberAverage",
+    "line": 38,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/FiberCompiler.lean#L38",
+    "sha256": "de5e91704f44bd72aecbb5161ac9da517928742f52eddcde3648a4167b2104a0"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
+    "name": "basisAverage_eq_sum_canonicalCoeff",
+    "equations": [
+      "eq:average-expansion"
+    ],
+    "key": "averageExpansion",
+    "line": 53,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean#L53",
+    "sha256": "a7bbf57abf76d6796b815d9752c5113655a1823fb50136bd22b02e5c02c32cd6"
+  },
+  {
+    "file": "MaxNN/Core/Relu.lean",
+    "name": "relu_sub_relu_neg",
+    "equations": [
+      "eq:hinge-reversal",
+      "eq:signed-remainder"
+    ],
+    "key": "signedRelu",
+    "line": 33,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Core/Relu.lean#L33",
+    "sha256": "98acff835fa4f1cc365f5d8f19c0b88eaa5178486c19cea633ca027e9f8d72ea"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean",
+    "name": "sum_essential_add_absorbedRemainder",
+    "equations": [
+      "eq:remainder"
+    ],
+    "key": "remainder",
+    "line": 95,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean#L95",
+    "sha256": "1f40af2fa65150b3e3df01e87b9e618dcdaa5f90cb93e114c6e6082391b5db42"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactTransport.lean",
+    "name": "compactOfDictionaryNetwork_computes_MAX",
+    "equations": [
+      "eq:remainder-translation"
+    ],
+    "key": "remainderTranslation",
+    "line": 19,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactTransport.lean#L19",
+    "sha256": "444f0b88b03cc382c7c949a526271420f51085d7809df9fdcc707a02cbd79ae8"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Simplex.lean",
+    "name": "simplexValues_zero",
+    "equations": [],
+    "key": "reducedCoordinates",
+    "line": 24,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Simplex.lean#L24",
+    "sha256": "3f2d1160d5a6d12b484bf7e7a0b5d7c94f59f864a30435c7fe8d7735a3f79e37"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
+    "name": "simplexVerts",
+    "equations": [
+      "eq:simplex"
+    ],
+    "key": "simplex",
+    "line": 121,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Defs.lean#L121",
+    "sha256": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
+    "name": "hS",
+    "equations": [
+      "eq:support-function"
+    ],
+    "key": "support",
+    "line": 43,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Defs.lean#L43",
+    "sha256": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Boundary/ConeFaces.lean",
+    "name": "hS_coneVertsOn_eq_paramidOn",
+    "equations": [
+      "eq:unit-polytope"
+    ],
+    "key": "unitPolytope",
+    "line": 400,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Boundary/ConeFaces.lean#L400",
+    "sha256": "98feabc0105a54f4a7477ed4843b53833ec56689ede5578efd9fa62107d86dd1"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
+    "name": "face",
+    "equations": [
+      "eq:face-normal",
+      "eq:exposed-face"
+    ],
+    "key": "faceDefinition",
+    "line": 62,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Defs.lean#L62",
+    "sha256": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Germ.lean",
+    "name": "germDiff_hS",
+    "equations": [
+      "eq:facet-difference"
+    ],
+    "key": "facetDifference",
+    "line": 460,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Germ.lean#L460",
+    "sha256": "bcf411f91b00276e314eb9eb82ed19ff7eccb155de797d7689aed03a3acfd4cd"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Germ.lean",
+    "name": "germ_hS",
+    "equations": [
+      "eq:face-derivative"
+    ],
+    "key": "faceGerm",
+    "line": 364,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Germ.lean#L364",
+    "sha256": "bcf411f91b00276e314eb9eb82ed19ff7eccb155de797d7689aed03a3acfd4cd"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
+    "name": "germDiff",
+    "key": "facetOperator",
+    "line": 73,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Defs.lean#L73",
+    "sha256": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
+    "name": "coneVertsOn",
+    "equations": [],
+    "key": "coneVertices",
+    "line": 117,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Defs.lean#L117",
+    "sha256": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean",
+    "name": "CaterpillarClassIdentity",
+    "equations": [
+      "eq:facet-error"
+    ],
+    "key": "classDefinition",
+    "line": 184,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean#L184",
+    "sha256": "c0720731fb9a66108d3d5b6e549fe5d80e2842b4ec087aaa2cbeb7276b4054a4"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean",
+    "name": "germDiff_formula_smul_braid_mem_LSpan_zero",
+    "equations": [
+      "eq:linear-facet"
+    ],
+    "key": "linearFacet",
+    "line": 96,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean#L96",
+    "sha256": "9f677691bc230f4c8d372ccd919ecb8755c4176f6d953c0b3b4349f860848c60"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Lift.lean",
+    "name": "valueFormula_sub_MAX_mem_LSpan",
+    "equations": [
+      "eq:lifted-induction"
+    ],
+    "key": "liftedInduction",
+    "line": 40,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Lift.lean#L40",
+    "sha256": "78e262d68bc2f08f638925efd77e7f913ff1126dd5e4536e9d22e10eff96111d"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Assembly.lean",
+    "name": "formula_sub_simplex_mem_LSpan_succ_of_recurrence",
+    "equations": [
+      "eq:induction-error-split"
+    ],
+    "key": "inductionErrorSplit",
+    "line": 69,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Assembly.lean#L69",
+    "sha256": "8b8e62921eefd4ab8c132324d223ce9aefb7fe2c2e92fa0bec018610cbf3da79"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean",
+    "name": "rootStarTerm",
+    "equations": [
+      "eq:root-star"
+    ],
+    "key": "rootStar",
+    "line": 25,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean#L25",
+    "sha256": "0d0e99e58c434c7671a796c8b300a6952a53fd354ed59ba49da37c63eed76479"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Words/RootStar.lean",
+    "name": "rootStar_alternating_sum",
+    "equations": [
+      "eq:boolean-cancellation"
+    ],
+    "key": "booleanIdentity",
+    "line": 47,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Words/RootStar.lean#L47",
+    "sha256": "a9f635e6c1b1ea001ee77e73adde84684ff087a61966cc99be9a9defaff1cc40"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Coordinates.lean",
+    "name": "MAX_succ_eq_add_hS_simplexVerts",
+    "equations": [
+      "eq:full-coordinates"
+    ],
+    "key": "fullCoordinates",
+    "line": 27,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Coordinates.lean#L27",
+    "sha256": "722b59889c48c16647d108921250bc0c6a5ddfd770e1d319c3340ca6aa39befa"
+  },
+  {
+    "file": "MaxCaterpillar/Asymptotics.lean",
+    "name": "spineConeTerm_le_pow",
+    "equations": [
+      "eq:head-count-bound"
+    ],
+    "key": "headCountBound",
+    "line": 31,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Asymptotics.lean#L31",
+    "sha256": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946"
+  },
+  {
+    "file": "MaxCaterpillar/Asymptotics.lean",
+    "name": "coneCount_le_pow",
+    "equations": [
+      "eq:cone-growth"
+    ],
+    "key": "coneGrowth",
+    "line": 44,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Asymptotics.lean#L44",
+    "sha256": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946"
+  },
+  {
+    "file": "MaxCaterpillar/Asymptotics.lean",
+    "name": "secondWidth_le_two_mul_pow",
+    "equations": [
+      "eq:second-growth"
+    ],
+    "key": "secondGrowth",
+    "line": 54,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Asymptotics.lean#L54",
+    "sha256": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946"
+  },
+  {
+    "file": "MaxCaterpillar/Asymptotics.lean",
+    "name": "firstWidth_le_four_mul_square",
+    "equations": [
+      "eq:first-growth"
+    ],
+    "key": "firstGrowth",
+    "line": 17,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Asymptotics.lean#L17",
+    "sha256": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean",
+    "name": "hingeKeys",
+    "equations": [
+      "eq:absorbed-pairs"
+    ],
+    "key": "absorbedPairs",
+    "line": 26,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean#L26",
+    "sha256": "1f40af2fa65150b3e3df01e87b9e618dcdaa5f90cb93e114c6e6082391b5db42"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Essential.lean",
+    "name": "compactEssential_twoLayerWidth",
+    "key": "compilationWidths",
+    "line": 60,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Essential.lean#L60",
+    "sha256": "79cbf64cf89ad8b64eafb7c32e2e91e45400baeab3a6aa937b54f3d5b88a6d38"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
+    "name": "compactCoordLin_feat",
+    "equations": [
+      "eq:recover-coordinates"
+    ],
+    "key": "recoverCoordinates",
+    "line": 111,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean#L111",
+    "sha256": "63cc0b70e5f7c13290a77e0ac5f9ec769469ac9d7018ebcd7733474658f2ae8b"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
+    "name": "compactHingeLin_feat",
+    "equations": [],
+    "key": "recoverHinges",
+    "line": 134,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean#L134",
+    "sha256": "63cc0b70e5f7c13290a77e0ac5f9ec769469ac9d7018ebcd7733474658f2ae8b"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
+    "name": "compactWidth_eq",
+    "equations": [
+      "eq:feature-count"
+    ],
+    "key": "featureCount",
+    "line": 21,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean#L21",
+    "sha256": "63cc0b70e5f7c13290a77e0ac5f9ec769469ac9d7018ebcd7733474658f2ae8b"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Normalize.lean",
+    "name": "normalizedKey",
+    "equations": [
+      "eq:normalized-description"
+    ],
+    "key": "normalization",
+    "line": 24,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Normalize.lean#L24",
+    "sha256": "8b46c40712d256ca113fe631f2069859ef0f180ecd6906ae50ea54cc1b522c22"
+  },
+  {
+    "file": "MaxCaterpillar/Lemmas.lean",
+    "name": "facet_completeness",
+    "steps": [
+      "stp:reconstruction"
+    ],
+    "equations": [
+      "eq:facet-reduction"
+    ],
+    "key": "facetCompleteness",
+    "line": 33,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Lemmas.lean#L33",
+    "sha256": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Base.lean",
+    "name": "valueUnit_one",
+    "equations": [
+      "eq:base-unit"
+    ],
+    "key": "baseUnit",
+    "line": 78,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Base.lean#L78",
+    "sha256": "e1eb6f911c87a19694e2974ea0334e7e76dd6c9d5e8b4c276f4552815661b593"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Base.lean",
+    "name": "valueFormula_one",
+    "equations": [
+      "eq:base-formula"
+    ],
+    "key": "baseFormula",
+    "line": 84,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Base.lean#L84",
+    "sha256": "e1eb6f911c87a19694e2974ea0334e7e76dd6c9d5e8b4c276f4552815661b593"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/SimplexGerms.lean",
+    "name": "germDiff_hS_simplexVerts_one",
+    "equations": [
+      "eq:simplex-facet"
+    ],
+    "key": "simplexFacet",
+    "line": 60,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/SimplexGerms.lean#L60",
+    "sha256": "be4d5aa28f6a01fe8dd2537755ac7a872899a47b6f99f1e15b89c1a450f1ffc0"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Kuhn.lean",
+    "name": "kuhnVerts",
+    "equations": [
+      "eq:kuhn-simplices"
+    ],
+    "key": "kuhnVertices",
+    "line": 43,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Kuhn.lean#L43",
+    "sha256": "c7d7104a79d2581bbefeb9ebe5eccccf02ff876ef69450703161cf40e9ca68f0"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Kuhn.lean",
+    "name": "paramidUnit_sub_kuhn_mem_LSpan",
+    "equations": [
+      "eq:kuhn-support-error"
+    ],
+    "key": "kuhnSubdivision",
+    "line": 320,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Kuhn.lean#L320",
+    "sha256": "c7d7104a79d2581bbefeb9ebe5eccccf02ff876ef69450703161cf40e9ca68f0"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Paramid.lean",
+    "name": "caterpillarUnit_eq_dot_add_paramidUnit",
+    "equations": [
+      "eq:apex-maximum"
+    ],
+    "key": "apexMaximum",
+    "line": 43,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Geometry/Paramid.lean#L43",
+    "sha256": "5bccee0ce6dd9895da15bf5702f777580cdb9157e2152ffff5f2101a876e96a3"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/HingeCount.lean",
+    "name": "essentialNormalizedKeys_card_le_sub_orderedHinges",
+    "equations": [
+      "eq:retained-count"
+    ],
+    "steps": [
+      "stp:size-count"
+    ],
+    "key": "retainedCount",
+    "line": 166,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/HingeCount.lean#L166",
+    "sha256": "4c61fc819b20c63e7f415dbcd6df8d45efd5dbb924dfe6100d893abc3ced7ff1"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Flag.lean",
+    "name": "germDiff_mem_LSpan",
+    "equations": [
+      "eq:face-dimension-drop"
+    ],
+    "key": "faceDimensionDrop",
+    "line": 200,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Flag.lean#L200",
+    "sha256": "19ac4d5dcc28250b3400c1e9e1ce00cacd59d04c67c88cb1a8d00fca08bf29a9"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean",
+    "name": "exists_peel_rel",
+    "equations": [
+      "eq:error-peeling"
+    ],
+    "key": "errorPeeling",
+    "line": 38,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean#L38",
+    "sha256": "0cc8bef8fddb1436b4b7da448493fd6216971f1568129900f8b1e692b693fbad"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean",
+    "name": "germDiff_simplexVertDir_hS",
+    "equations": [
+      "eq:simplex-vertex-removal"
+    ],
+    "key": "simplexVertexRemoval",
+    "line": 184,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean#L184",
+    "sha256": "dbe55876d21c44442819bfff72d4764afe557c1eef1eb20765ea0e45cb80c762"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/LocalIdentity.lean",
+    "name": "iterGermDiff_coneSum_sub_mem",
+    "equations": [
+      "eq:initial-simplex-error"
+    ],
+    "key": "initialSimplexError",
+    "line": 205,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/LocalIdentity.lean#L205",
+    "sha256": "4baf531de4d181b53b33d51bb080e697aaa093f6dbe246e5e4b8c13e14dc95e4"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean",
+    "name": "iterGermDiff_simplexVertDir_hS_sub_mem",
+    "equations": [
+      "eq:simplex-deletion-sign"
+    ],
+    "key": "simplexDeletionSign",
+    "line": 195,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean#L195",
+    "sha256": "dbe55876d21c44442819bfff72d4764afe557c1eef1eb20765ea0e45cb80c762"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean",
+    "name": "hS_mem_of_subset_simplexVerts",
+    "equations": [
+      "eq:simplex-induction-use"
+    ],
+    "key": "simplexInductionUse",
+    "line": 40,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean#L40",
+    "sha256": "61385b52393e6a537021d3d50eacb2f9ca5afc9eed514ce351e95eafe76e9ed0"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Faces.lean",
+    "name": "mem_GSpanRel_sup_of_lt_finrank",
+    "equations": [
+      "eq:residual-invariant"
+    ],
+    "key": "residualInvariant",
+    "line": 69,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Faces.lean#L69",
+    "sha256": "ac1ef2e9eb5cb77751002ec4161959d318cf711a6713b228a7c2453420b316d3"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Sweep/Support.lean",
+    "name": "hS_cut_identity",
+    "equations": [
+      "eq:support-cut"
+    ],
+    "key": "supportCut",
+    "line": 142,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Sweep/Support.lean#L142",
+    "sha256": "e468c494aaa712b11e1de4ecbce5dd35b20676ba49a1009471e98ed251c974c4"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Sweep.lean",
+    "name": "sweep_hS_of_nonneg",
+    "equations": [],
+    "key": "sweepSupport",
+    "line": 187,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Sweep.lean#L187",
+    "sha256": "67cc2f76f25cc8335eccd2783bedaa81dbc8b062cfa6b11307a820457989ea02"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Sweep.lean",
+    "name": "sweep_hS_eq_translate",
+    "equations": [],
+    "key": "sweepTranslation",
+    "line": 304,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Sweep.lean#L304",
+    "sha256": "67cc2f76f25cc8335eccd2783bedaa81dbc8b062cfa6b11307a820457989ea02"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean",
+    "name": "column_sweep",
+    "equations": [],
+    "key": "columnReconstruction",
+    "line": 716,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean#L716",
+    "sha256": "9328353931ca6390671a90a5638d59d852241142eb72863e3b35cb523f674e00"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
+    "name": "sweep",
+    "equations": [
+      "eq:sweep-operation"
+    ],
+    "key": "sweepOperation",
+    "line": 106,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Defs.lean#L106",
+    "sha256": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Sweep.lean",
+    "name": "sweep_mem_LSpan",
+    "equations": [
+      "eq:sweep-dimension"
+    ],
+    "key": "sweepDimension",
+    "line": 366,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Sweep.lean#L366",
+    "sha256": "67cc2f76f25cc8335eccd2783bedaa81dbc8b062cfa6b11307a820457989ea02"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct.lean",
+    "name": "simplex_reconstruct_any_height",
+    "equations": [
+      "eq:simplex-reconstruction"
+    ],
+    "key": "simplexReconstruction",
+    "line": 83,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Reconstruct.lean#L83",
+    "sha256": "3fadef3bbdb615920b51ce11501f0e8a4883c4af94e81a999b4cba2d71de6499"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean",
+    "name": "germDiff_hS_simplex_of_facetDir_eq",
+    "equations": [
+      "eq:simplex-isolate-facet"
+    ],
+    "key": "simplexFacetIsolation",
+    "line": 268,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean#L268",
+    "sha256": "4eef6797d6dda44b462c6abe84fb769f45cb4a6000c6d7179d8b38ecce3c1d7c"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean",
+    "name": "facetDir",
+    "equations": [
+      "eq:normalized-facet-normal"
+    ],
+    "key": "normalizedFacetNormal",
+    "line": 185,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean#L185",
+    "sha256": "4eef6797d6dda44b462c6abe84fb769f45cb4a6000c6d7179d8b38ecce3c1d7c"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean",
+    "name": "germDiff_hS_simplex_sub_mem_LSpan",
+    "equations": [
+      "eq:facet-group-bound"
+    ],
+    "key": "facetGrouping",
+    "line": 326,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean#L326",
+    "sha256": "4eef6797d6dda44b462c6abe84fb769f45cb4a6000c6d7179d8b38ecce3c1d7c"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean",
+    "name": "realUnitY_add_const",
+    "equations": [
+      "eq:translation-invariance"
+    ],
+    "key": "translationInvariance",
+    "line": 22,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean#L22",
+    "sha256": "6bc083794ce5a4f1183844be459722f6125625314b601702eadac8f65df8b37a"
+  }
+]

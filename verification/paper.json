@@ -1,0 +1,40 @@
+{
+  "source_commit": null,
+  "source_binding": "Verification preceded the single fresh root commit; the source_files SHA-256 values bind this receipt to the exact checked artifacts without referring to earlier history.",
+  "pages": 13,
+  "lean_hyperlinks_checked": 98,
+  "equation_links_checked": 85,
+  "distinct_declaration_mappings": 102,
+  "overfull_boxes": 0,
+  "command": [
+    "tectonic",
+    "-k",
+    "--keep-logs",
+    "main.tex"
+  ],
+  "working_directory": "paper",
+  "engine": "Tectonic 0.16.9",
+  "author": "Jakob Paul Zimmermann",
+  "reference_source": "https://arxiv.org/src/2610.01728v2",
+  "unchanged_reference_files": {
+    "iclr2027_conference.sty": "75764eb39b41a933ffea270b1c8fcdca42238f416a9ba6193e2ffa01e6e2cf5b",
+    "lean_equation_links.sty": "4c8596ade352a9e907dd2255e738eb19f4e4ba09df150427a38343d5ab423d82"
+  },
+  "reference_lean_command_block_sha256": "5fbb14cc0fa054738d968ded3e9e5a4f599d161cda206df53a60749c85f46b3f",
+  "source_files": {
+    "paper/main.tex": "73b47f4459a35a3c2637c916f8750fd4e51d265b851955ae3b99700ef4ed4f32",
+    "paper/iclr2027_conference.sty": "75764eb39b41a933ffea270b1c8fcdca42238f416a9ba6193e2ffa01e6e2cf5b",
+    "paper/lean_equation_links.sty": "4c8596ade352a9e907dd2255e738eb19f4e4ba09df150427a38343d5ab423d82",
+    "paper/lean-map.json": "9be28ce6fa2f595970276f6eda15f4a10d58e4a30c2bbf466b1ae5dd7907f2a7",
+    "paper/lean-links.tex": "990b6f223cd6718ddc8ff53c0cb3cd98b3c867b0d7917a66899f1437e48d3dba",
+    "paper/lean-links.json": "9f388cc75de4d9926f8042cf2c67bd30c70a2bb23c748196263eea99164be7cc",
+    "paper/link-config.json": "6633d6ae65f452910cab89645e083f16ed0468f3d2ea6b2489ec624316c93e13",
+    "paper/main.pdf": "82d96c6057ddeddd072c3f79d2723a05868645e6518a51a8efb7ff2bc4050b06",
+    "scripts/paper_links.py": "c5849a8bf458ffebef327b43d88c467bc00085c0df4fe8870e60997b15840d73",
+    "paper/proof_commands.tex": "8a4a7577892289145faba84deb3c3612fa93f2bf0d961ac653e2e1c3b1c95742"
+  },
+  "proof_anchors_checked": 3,
+  "reference_proof_command_block_sha256": "4b4126a016bdd2b374d9a3ff975cd6f5660e1f5f2622981eba8450011aad14c3",
+  "proof_step_links_checked": 5,
+  "verified_on": "2026-10-19"
+}

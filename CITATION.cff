@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the paper and its accompanying Lean formalization."
+title: "Caterpillar constructions for MAX with two hidden layers"
+type: software
+authors:
+  - family-names: Zimmermann
+    given-names: Jakob Paul
+    website: "https://jakob-paul-zimmermann.com"
+abstract: "Exact all-arity two-hidden-layer ReLU constructions, with Lean proofs and complete width bounds."

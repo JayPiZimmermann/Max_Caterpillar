@@ -1,0 +1,117 @@
+{
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "claims": [
+    {
+      "declaration": "MaxCaterpillar.maximum_width",
+      "type": "∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), ∀ x, net.eval x = Maximum N x"
+    },
+    {
+      "declaration": "MaxCaterpillar.network_correct",
+      "type": "∀ (r : ℕ), 1 ≤ r → ∀ x, (network r).eval x = Maximum (r + 1 + 1) x"
+    },
+    {
+      "declaration": "MaxCaterpillar.facet_reduction",
+      "type": "∀ {r : ℕ}, 2 ≤ r → (ParamidGeom.germDiff (fun _ : Fin (r + 1) => (1 : ℝ)) (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) ∈ ParamidGeom.LSpan (r + 1) (r - 1)) → ∀ u, ParamidGeom.germDiff u (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) ∈ ParamidGeom.LSpan (r + 1) (r - 1)"
+    },
+    {
+      "declaration": "MaxCaterpillar.facet_completeness",
+      "type": "∀ {r : ℕ}, 1 ≤ r → (∀ u, ParamidGeom.germDiff u (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) ∈ ParamidGeom.LSpan (r + 1) (r - 1)) → Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1)) ∈ ParamidGeom.LSpan (r + 1) r"
+    },
+    {
+      "declaration": "MaxCaterpillar.coordinate_deletion",
+      "type": "∀ {s : ℕ}, 1 ≤ s → ParamidGeom.germDiff (Caterpillar.coordinateOne s) (Caterpillar.formula (s + 1)) - Caterpillar.valueFormula s ∈ ParamidGeom.LSpan (s + 2) s"
+    },
+    {
+      "declaration": "MaxCaterpillar.class_identity",
+      "type": "∀ (r : ℕ), 1 ≤ r → Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1)) ∈ ParamidGeom.LSpan (r + 1) r"
+    },
+    {
+      "declaration": "MaxCaterpillar.maximum_mem_dictionary",
+      "type": "∀ (r : ℕ), 1 ≤ r → Maximum (r + 1 + 1) ∈ Submodule.span ℝ (↑(dictionary r) : Set (Point (r + 1 + 1) → ℝ))"
+    },
+    {
+      "declaration": "MaxCaterpillar.canonical_expansion",
+      "type": "∀ (r : ℕ), 1 ≤ r → ∀ x : Point (r + 1 + 1), ∑ i : Atom r, coefficient r i * atom r i x = Maximum (r + 1 + 1) x"
+    },
+    {
+      "declaration": "MaxCaterpillar.normalized_cone_count",
+      "type": "∀ (r : ℕ), (Caterpillar.Corrections.normalizedWordCones r).card ≤ coneCount (r + 1 + 1)"
+    },
+    {
+      "declaration": "MaxCaterpillar.width_of_cone_count",
+      "type": "∀ (r b : ℕ), 1 ≤ r → (Caterpillar.Corrections.normalizedWordCones r).card ≤ b → ∃ net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (b * 3 ^ r - (r + 1 + 1) * (r + 1) + 2), ∀ x, net.eval x = Maximum (r + 1 + 1) x"
+    },
+    {
+      "declaration": "MaxCaterpillar.construction_width",
+      "type": "∀ (r : ℕ), 1 ≤ r → ∃ net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (secondWidth (r + 1 + 1)), ∀ x, net.eval x = Maximum (r + 1 + 1) x"
+    },
+    {
+      "declaration": "MaxCaterpillar.firstWidth_le_square",
+      "type": "∀ (N : ℕ), firstWidth N ≤ (N + 1) ^ 2"
+    },
+    {
+      "declaration": "MaxCaterpillar.firstWidth_le_four_mul_square",
+      "type": "∀ (N : ℕ), 1 ≤ N → firstWidth N ≤ 4 * N ^ 2"
+    },
+    {
+      "declaration": "MaxCaterpillar.firstWidth_isBigO_square",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : ℕ => (firstWidth N : ℝ)) (fun N => (N : ℝ) ^ 2)"
+    },
+    {
+      "declaration": "MaxCaterpillar.coneCount_le_pow",
+      "type": "∀ (N : ℕ), 3 ≤ N → coneCount N ≤ N ^ (4 * N)"
+    },
+    {
+      "declaration": "MaxCaterpillar.secondWidth_le_two_mul_pow",
+      "type": "∀ (N : ℕ), 3 ≤ N → secondWidth N ≤ 2 * N ^ (5 * N)"
+    },
+    {
+      "declaration": "MaxCaterpillar.secondWidth_isBigO_pow",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : ℕ => (secondWidth N : ℝ)) (fun N => ((N ^ (5 * N) : ℕ) : ℝ))"
+    },
+    {
+      "declaration": "MaxCaterpillar.log_secondWidth_le",
+      "type": "∀ (N : ℕ), 3 ≤ N → Real.log (secondWidth N) ≤ Real.log 2 + ((5 * N : ℕ) : ℝ) * Real.log N"
+    },
+    {
+      "declaration": "MaxCaterpillar.log_secondWidth_le_six_mul",
+      "type": "∀ (N : ℕ), 3 ≤ N → Real.log (secondWidth N) ≤ 6 * ((N : ℝ) * Real.log N)"
+    },
+    {
+      "declaration": "MaxCaterpillar.log_secondWidth_isBigO_mul_log",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : ℕ => Real.log (secondWidth N)) (fun N => (N : ℝ) * Real.log N)"
+    },
+    {
+      "declaration": "MaxCaterpillar.width_asymptotics",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : ℕ => (firstWidth N : ℝ)) (fun N => (N : ℝ) ^ 2) ∧ Asymptotics.IsBigO Filter.atTop (fun N : ℕ => Real.log (secondWidth N)) (fun N => (N : ℝ) * Real.log N)"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.ofLayers_eval",
+      "type": "∀ {N h₁ h₂ : ℕ} (T₁ : Affine N h₁) (T₂ : Affine h₁ h₂) (T₃ : Affine h₂ 1) (x : Point N), (MaxCaterpillar.Internal.ofLayers T₁ T₂ T₃).eval x = (ReLUNet.layer T₁ (ReLUNet.layer T₂ (ReLUNet.affine T₃))).eval x 0"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.toReLUNet_eval",
+      "type": "∀ {N h₁ h₂ : ℕ} (net : Network N h₁ h₂) (x : Point N), (MaxCaterpillar.Internal.toReLUNet net).eval x 0 = net.eval x"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.twoLayerWidth_iff",
+      "type": "∀ {N h₁ h₂ : ℕ} {f : Point N → ℝ}, Width.TwoLayerWidth N h₁ h₂ f ↔ ∃ net : Network N h₁ h₂, ∀ x, net.eval x = f x"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.maximum_eq_MAX",
+      "type": "∀ (N : ℕ) [NeZero N], Maximum N = MAX N"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.coneCount_eq_spineConeBound",
+      "type": "∀ (N : ℕ), coneCount N = Caterpillar.Corrections.spineConeBound N"
+    },
+    {
+      "declaration": "MaxCaterpillar.network_eval_internal",
+      "type": "∀ (r : ℕ) (x : Point (r + 1 + 1)), (network r).eval x = (Caterpillar.compactEssentialNetwork r).eval x 0"
+    }
+  ]
+}

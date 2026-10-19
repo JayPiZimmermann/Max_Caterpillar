@@ -1,0 +1,463 @@
+{
+  "checked_at_utc": "2026-10-19T16:00:20.841709+00:00",
+  "source_commit": null,
+  "source_sha256": "16eae06d5f72bd2b0b0353597a5b3c164b2cf77e1b4993d4398f8d0d0679f8e9",
+  "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
+  "commands": [
+    [
+      "lake",
+      "build",
+      "All",
+      "Verification.Statements"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "Verification/Statements.lean"
+    ]
+  ],
+  "claims": [
+    {
+      "declaration": "MaxCaterpillar.maximum_width",
+      "type": "\u2200 (N : \u2115) [NeZero N], \u2203 net : Network N (firstWidth N) (secondWidth N), \u2200 x, net.eval x = Maximum N x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.network_correct",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2200 x, (network r).eval x = Maximum (r + 1 + 1) x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.facet_reduction",
+      "type": "\u2200 {r : \u2115}, 2 \u2264 r \u2192 (ParamidGeom.germDiff (fun _ : Fin (r + 1) => (1 : \u211d)) (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) \u2208 ParamidGeom.LSpan (r + 1) (r - 1)) \u2192 \u2200 u, ParamidGeom.germDiff u (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) \u2208 ParamidGeom.LSpan (r + 1) (r - 1)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.facet_completeness",
+      "type": "\u2200 {r : \u2115}, 1 \u2264 r \u2192 (\u2200 u, ParamidGeom.germDiff u (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) \u2208 ParamidGeom.LSpan (r + 1) (r - 1)) \u2192 Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1)) \u2208 ParamidGeom.LSpan (r + 1) r",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.coordinate_deletion",
+      "type": "\u2200 {s : \u2115}, 1 \u2264 s \u2192 ParamidGeom.germDiff (Caterpillar.coordinateOne s) (Caterpillar.formula (s + 1)) - Caterpillar.valueFormula s \u2208 ParamidGeom.LSpan (s + 2) s",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.class_identity",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1)) \u2208 ParamidGeom.LSpan (r + 1) r",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.maximum_mem_dictionary",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 Maximum (r + 1 + 1) \u2208 Submodule.span \u211d (\u2191(dictionary r) : Set (Point (r + 1 + 1) \u2192 \u211d))",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.canonical_expansion",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2200 x : Point (r + 1 + 1), \u2211 i : Atom r, coefficient r i * atom r i x = Maximum (r + 1 + 1) x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.normalized_cone_count",
+      "type": "\u2200 (r : \u2115), (Caterpillar.Corrections.normalizedWordCones r).card \u2264 coneCount (r + 1 + 1)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.width_of_cone_count",
+      "type": "\u2200 (r b : \u2115), 1 \u2264 r \u2192 (Caterpillar.Corrections.normalizedWordCones r).card \u2264 b \u2192 \u2203 net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (b * 3 ^ r - (r + 1 + 1) * (r + 1) + 2), \u2200 x, net.eval x = Maximum (r + 1 + 1) x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.construction_width",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2203 net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (secondWidth (r + 1 + 1)), \u2200 x, net.eval x = Maximum (r + 1 + 1) x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.firstWidth_le_square",
+      "type": "\u2200 (N : \u2115), firstWidth N \u2264 (N + 1) ^ 2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.firstWidth_le_four_mul_square",
+      "type": "\u2200 (N : \u2115), 1 \u2264 N \u2192 firstWidth N \u2264 4 * N ^ 2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.firstWidth_isBigO_square",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : \u2115 => (firstWidth N : \u211d)) (fun N => (N : \u211d) ^ 2)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.coneCount_le_pow",
+      "type": "\u2200 (N : \u2115), 3 \u2264 N \u2192 coneCount N \u2264 N ^ (4 * N)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.secondWidth_le_two_mul_pow",
+      "type": "\u2200 (N : \u2115), 3 \u2264 N \u2192 secondWidth N \u2264 2 * N ^ (5 * N)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.secondWidth_isBigO_pow",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : \u2115 => (secondWidth N : \u211d)) (fun N => ((N ^ (5 * N) : \u2115) : \u211d))",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.log_secondWidth_le",
+      "type": "\u2200 (N : \u2115), 3 \u2264 N \u2192 Real.log (secondWidth N) \u2264 Real.log 2 + ((5 * N : \u2115) : \u211d) * Real.log N",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.log_secondWidth_le_six_mul",
+      "type": "\u2200 (N : \u2115), 3 \u2264 N \u2192 Real.log (secondWidth N) \u2264 6 * ((N : \u211d) * Real.log N)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.log_secondWidth_isBigO_mul_log",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : \u2115 => Real.log (secondWidth N)) (fun N => (N : \u211d) * Real.log N)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.width_asymptotics",
+      "type": "Asymptotics.IsBigO Filter.atTop (fun N : \u2115 => (firstWidth N : \u211d)) (fun N => (N : \u211d) ^ 2) \u2227 Asymptotics.IsBigO Filter.atTop (fun N : \u2115 => Real.log (secondWidth N)) (fun N => (N : \u211d) * Real.log N)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.ofLayers_eval",
+      "type": "\u2200 {N h\u2081 h\u2082 : \u2115} (T\u2081 : Affine N h\u2081) (T\u2082 : Affine h\u2081 h\u2082) (T\u2083 : Affine h\u2082 1) (x : Point N), (MaxCaterpillar.Internal.ofLayers T\u2081 T\u2082 T\u2083).eval x = (ReLUNet.layer T\u2081 (ReLUNet.layer T\u2082 (ReLUNet.affine T\u2083))).eval x 0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.toReLUNet_eval",
+      "type": "\u2200 {N h\u2081 h\u2082 : \u2115} (net : Network N h\u2081 h\u2082) (x : Point N), (MaxCaterpillar.Internal.toReLUNet net).eval x 0 = net.eval x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.twoLayerWidth_iff",
+      "type": "\u2200 {N h\u2081 h\u2082 : \u2115} {f : Point N \u2192 \u211d}, Width.TwoLayerWidth N h\u2081 h\u2082 f \u2194 \u2203 net : Network N h\u2081 h\u2082, \u2200 x, net.eval x = f x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.maximum_eq_MAX",
+      "type": "\u2200 (N : \u2115) [NeZero N], Maximum N = MAX N",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Internal.coneCount_eq_spineConeBound",
+      "type": "\u2200 (N : \u2115), coneCount N = Caterpillar.Corrections.spineConeBound N",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.network_eval_internal",
+      "type": "\u2200 (r : \u2115) (x : Point (r + 1 + 1)), (network r).eval x = (Caterpillar.compactEssentialNetwork r).eval x 0",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    }
+  ],
+  "source_files": {
+    "All.lean": "23af380d602a9a3288ed6cae87dcd728ca03fa7bcd86411ffe75f095dc1f1b4b",
+    "MaxCaterpillar/Asymptotics.lean": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946",
+    "MaxCaterpillar/Construction.lean": "d30bbf1b948682a246880b0090f9b714f9492c658790b16a87188eb6c8faf166",
+    "MaxCaterpillar/Definitions.lean": "871e2d5b3ed06c74773c58159a8b0142fc785568f03c84f1b31b958cfebbc1ba",
+    "MaxCaterpillar/Internal/Network.lean": "fa4e14cbbe0ad5b39077e97bb08d52d4cd605b3ab36530b1f345b5f30750a980",
+    "MaxCaterpillar/Lemmas.lean": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72",
+    "MaxCaterpillar/Theorems.lean": "15c537c8ab6aa8b6135c54befcb2b02ea6fe52525368218feaba5e4c0573dc80",
+    "MaxCaterpillar.lean": "a1931244706d24d39d07c008737262d6114652e463618a9d11418b7669fae472",
+    "MaxNN/Constructions/MaxN/Width/Class.lean": "8fcf78e6bf551328f5bdb31aa1eced4fe89e2df9313d73ac5985ac6b69a9b09c",
+    "MaxNN/Constructions/MaxN/Width/Layer/Coeffs.lean": "bab2a55966f763d6da851d25c2dc0e762e743aa2690c6f8feff6baead495d850",
+    "MaxNN/Constructions/MaxN/Width/Layer/Features.lean": "9a06e16ea76f77364fb9991406bd9b3a2f4426fe21af0441033944095e824849",
+    "MaxNN/Constructions/MaxN/Width/Layer/Pairs.lean": "f9831623ea1770d270c358fade362acdb6fd296e1cfbcfe09e5aec26eef88810",
+    "MaxNN/Constructions/MaxN/Width/Paramid/Unit.lean": "90a333f072a20e620e67b9768ab8726c42a5fc8a33b6728525be33ed2883f770",
+    "MaxNN/Constructions/MaxN/Width/Size/OneLayer.lean": "aea4c5f3035274088fb425a92114d7581747c81d120d0366f6045238db0d6b01",
+    "MaxNN/Constructions/MaxN/Width/TwoLayer.lean": "160512633f35b5c317b41f9dcb7d87e199c52a76b59a73059ff3b13849614bb8",
+    "MaxNN/Constructions/Paramid/Caterpillar/AllArities.lean": "f5aa3a9e2c2af3131b81b6c9340dbd65441111ac759519e8af0dbe680aee75a3",
+    "MaxNN/Constructions/Paramid/Caterpillar/Block/Global.lean": "8a62c1eb39d3622644ac139e72771e5357b3195a7ad9776801ed0e6fe4c93613",
+    "MaxNN/Constructions/Paramid/Caterpillar/Block/Index.lean": "b7a8f5daa950bdacaef10b773cb48fe1118614dd2c6375eeb839713927e5329d",
+    "MaxNN/Constructions/Paramid/Caterpillar/Block/Levels.lean": "5288283c493174e9acd5b11bced83b359b50ce8628ba1e67b802e454ebfb4b4b",
+    "MaxNN/Constructions/Paramid/Caterpillar/Block/Pairing.lean": "d8347e89e258e59bdeb3d5f1b6b56ee16a87cef0cf4c1779c1b9092437489bfe",
+    "MaxNN/Constructions/Paramid/Caterpillar/Block/Patterns.lean": "5f1a358c633c08f716889f44c612f4de076f2397e191f85d505853fde0a26dd0",
+    "MaxNN/Constructions/Paramid/Caterpillar/Block/Transform.lean": "b6133d9d892390631e63de54b394bfdb21938bfacb0182da9cc3c5fbb0af967c",
+    "MaxNN/Constructions/Paramid/Caterpillar/Bounds.lean": "4e157930afb0988d8b72e4a3adc86c9ffc34bfddcc1f9a11f6744312fd57033c",
+    "MaxNN/Constructions/Paramid/Caterpillar/Compact.lean": "c9853437c511d1742288a873aa89cea0bdd4aec540b05bc9a63a1740d5fade03",
+    "MaxNN/Constructions/Paramid/Caterpillar/ConeBoundTransport.lean": "a14c0403bbd7bf6ca41b0c5be6ff2e8e6200e7d888dc245998605c49e06d47aa",
+    "MaxNN/Constructions/Paramid/Caterpillar/Construction.lean": "153636718fdd12e4abc4dd49637131ca3349bb104bc9851c230e064631b556e5",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Active.lean": "f0cbda26011926eb75902a55a4696aaa39605e0ea32afdf5fbe6517c9c78c3ad",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Base.lean": "e1eb6f911c87a19694e2974ea0334e7e76dd6c9d5e8b4c276f4552815661b593",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/EndpointCanonical.lean": "045ffc4573f3b88a0e562cd9ca3bd5ff5f5a3740faf8d8fb6059d6adef24676e",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Endpoints.lean": "f60ff7de82ac9a96f094620d0cf88858e78ee4d23635c90cfefa0df6c4c60e39",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/FibreSplit.lean": "3bd2595c3251927252f4c6ffc006a8fc925664919b4459587559a328610644da",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Inactive.lean": "2b330389a2b2ce3697797db43a1edff88b1f1646920d1e0f21e8c22d2715ffa8",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Insertion.lean": "8b1a37d82868491c3e53ab8d909305058b6478af4b06b513f5171c8fcae72c29",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/LinearCombination.lean": "40574573a866c717443509bd68dfe314e61f74d179a77e9b220d88ac29b650a3",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Nonempty.lean": "2db860260937b9c19fb2796511c6c865b42cc0ca3364c1afe83f8968ff6518df",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Permutations.lean": "71fa836b3c9fea8ea2885c04e3f143e0e1d0ffd5194bd4c7629fd527b5876d59",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Recurrence.lean": "85d41d6592a9fa1dbe593738b59d23b1d97dc8333f7d4fe23dda2bb684c33df5",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Reindex.lean": "47dad0338805e807324c9f7d50a36c9cf38d9d08eb9e390ee62da1984ff4d89d",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/ReindexActive.lean": "b0d9e57dfe9b9c77376735e952d95057e10f53f8e7aeb639233e94c3cc4f9552",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/ReindexCuts.lean": "713a7ad0b555c97fcba90cca031db597475c41777c30a9066bf358c77358db25",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean": "0d0e99e58c434c7671a796c8b300a6952a53fd354ed59ba49da37c63eed76479",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean": "945837ed3ecf752ba32afa7ac73a4932edaed71e93e8698dca36b91e80518452",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Unit.lean": "f80a3b3a09c70c4be8bf8b4454bd5bcffab1abb709500d7c7fb2cd981c8e6211",
+    "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Weights.lean": "cc717fd441fd08ed545cb1d2bdb1905af7a1e13abe5a1d52937d3abb0877285d",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean": "1f40af2fa65150b3e3df01e87b9e618dcdaa5f90cb93e114c6e6082391b5db42",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean": "e0d9b3822ac5f81abb8866548ee067dbf15cbca522c8abb9e7747267effeb109",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean": "a7bbf57abf76d6796b815d9752c5113655a1823fb50136bd22b02e5c02c32cd6",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/FiberCompiler.lean": "de5e91704f44bd72aecbb5161ac9da517928742f52eddcde3648a4167b2104a0",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean": "03325420fcf40fa63ff1dabe46192a828457ff1cc4b4c54b96203c8a465c32bc",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Sparse.lean": "dba99928f60fbb828e4109de3c752977cd7ad22d2f4013ecf421605ee22c6579",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean": "7ac84ea338153147b859cd9f9adedf672ca437c3537a111b883007b50cf03efb",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Class.lean": "4528f6e0db4a8c60192776aa4e640e7d16e4d99ca5351693a74ad77bad7065c0",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean": "6bc083794ce5a4f1183844be459722f6125625314b601702eadac8f65df8b37a",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean": "ea584ed3de43bde38d2e3ef217a57da8ab128ad7f7fba57ae7af404717a49ac7",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean": "63cc0b70e5f7c13290a77e0ac5f9ec769469ac9d7018ebcd7733474658f2ae8b",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactTransport.lean": "444f0b88b03cc382c7c949a526271420f51085d7809df9fdcc707a02cbd79ae8",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompareBounds.lean": "18abb404e0ba406216ac9d775b21acab5d194cb03ab8d4f4caf87a325d7b9e1e",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Count.lean": "519a1f0bd36eaafc27e7ce278302fd43a36561ae414e6a19e7117f5c5886dedc",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean": "c0720731fb9a66108d3d5b6e549fe5d80e2842b4ec087aaa2cbeb7276b4054a4",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/FullDim.lean": "29f6ede101692c5463612519d87f62478b2499492237c25b56b21ba880cbf45a",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/HingeCount.lean": "4c61fc819b20c63e7f415dbcd6df8d45efd5dbb924dfe6100d893abc3ced7ff1",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean": "e3a2dea958657163cdea96e5bb0b8f8f08aab465bd9a415331bbb1c3fc22e83c",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Network.lean": "4c191f0d4942ece784d0487749695271cc16639edf7570fa3b17f70dc24905a7",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/NetworkCoefficients.lean": "cfcb921429429e5fa0f12af6097cafedaa7142290961ba65f07ddd0f1ccda23e",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Normalize.lean": "8b46c40712d256ca113fe631f2069859ef0f180ecd6906ae50ea54cc1b522c22",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/NormalizeFaces.lean": "930474a08bade9b682305de2433887b1f35bcb992257263d99e662589bcbebaa",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Reversal.lean": "616a5ee34c9c51c0e3442aaa917d4b94a24bfc575842b13b8752bdc3b56e88ae",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/ReversalBounds.lean": "1caff82c0faeeeb490a9cf30254e3a4a96478d382466e551d2fe8889f0f8217b",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Span.lean": "7c08b175357c7f85a42fb8cc1288b1acc34b336929429c32e7c0f3091b929dac",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/ClosedCount.lean": "1fc56ff6530fc5ee9a7269cb1459b7d404e9f09e7bbe9a4beab73f6e7ee3ca10",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/Count.lean": "a3e590a0cdfdc727ae8428027c27a39d632707f0227c7b6d09856fef173f492a",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/Defs.lean": "7190b415b6e45cd7edfda60514b5b2f6563c8fe4593da945e83db05255092015",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/FiniteCombinatorics.lean": "82726ad5349845e3a536564a1f9952b87284976e9a804d5a57a0125b4877f9e1",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/Global.lean": "4ed98851640641cd35b57980775e0b87b4f9185af57dc142c6259994293aeb12",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/GraphKey.lean": "4cb77914a3af422ab1f0d9eded669399e4b3581e31d3927a44169d22eddbd191",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/HeadEndpoints.lean": "a0bfe6df9cd7ef33cffb84b1ef417fb3b067e3c13dab3994bb841bdc598fa645",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/HeadOrder.lean": "804d37c90938244052d30b1993532198d8f14896eb33c4bef1ab4f4291852dbb",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/Reversal.lean": "433c3ac7f424c85b35d9f86faf1dda36e1342bb83172f13fb651202f180a64b0",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/WordEncoding.lean": "a23b2eaea3138a11a62adb25222d6b57bd4678634bf2e53d8c734af7efa34225",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Table.lean": "8026607557cb0d4d41ea828879dc25e25d450d9db4f701d99ff4eb2dc2acd339",
+    "MaxNN/Constructions/Paramid/Caterpillar/Endpoint.lean": "6ea44351aa125b58450ecb07021fe1113f265eb29f52a93e8e19060a8761dc3f",
+    "MaxNN/Constructions/Paramid/Caterpillar/Essential.lean": "79cbf64cf89ad8b64eafb7c32e2e91e45400baeab3a6aa937b54f3d5b88a6d38",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Assembly.lean": "8b8e62921eefd4ab8c132324d223ce9aefb7fe2c2e92fa0bec018610cbf3da79",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean": "9f677691bc230f4c8d372ccd919ecb8755c4176f6d953c0b3b4349f860848c60",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean": "83c9e6a0806c8dbff83acb615a98333f4871dd209631cbb02cd405b89666c2da",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/CoordinateDirections.lean": "f8a126c77e33f798f37f2865f84cc4a0803289a59e4227078968f6e7f16a5bb1",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Correctness.lean": "0abeebc5b91864406bcaffd0bf850902116c161fa310e143b0bb189ef38a6c09",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Facets.lean": "8488c86d7bf8577c1b6ca50eb484172f686fc21d5c4f4064dab0f807117796dc",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Lift.lean": "78e262d68bc2f08f638925efd77e7f913ff1126dd5e4536e9d22e10eff96111d",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Simplex.lean": "3f2d1160d5a6d12b484bf7e7a0b5d7c94f59f864a30435c7fe8d7735a3f79e37",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/SimplexGerms.lean": "be4d5aa28f6a01fe8dd2537755ac7a872899a47b6f99f1e15b89c1a450f1ffc0",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean": "718497c776e1ef528981e75bbcc822529ffa5da331c8978967c219a421922941",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Adjacent.lean": "0a4825d908a7123a1271f368992b8853e1745c9119a2db99f5ce5ecb88e2b5a5",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/BaseGerm.lean": "7510204dcd6eac14c0f8bfc45d1a8756670cce85070bb2f4b1e3153a55891603",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/BlockRemainder.lean": "fa18f53cbbb7fe6cc24e5335d63d45174e8d3eb7bb1f9bcd77ec753e6c18e3fc",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean": "317715241a1169ac9042b6b5411e8301bf509a50d68e7044edefee30b91e6f72",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Simplex.lean": "34f6a40d25e45c82f52feb45a1643be31cbfe01cc89dfae0b34a5aa5a302de14",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Germ.lean": "240306f9631e7dfa0bffc3bced5fd48ed6cd6988f01d145ce088fe6fc6e385cd",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Join.lean": "c53956cca3b74db7d0d83375e339ac152d8537d298d9ba5ec53325b71204e506",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Pairing.lean": "98baf5f9032e1f775506d57f6b27f5cbaa25db00d8efa2763df8dccce1b5aa78",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Paramid.lean": "5bccee0ce6dd9895da15bf5702f777580cdb9157e2152ffff5f2101a876e96a3",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Toggle.lean": "d8cbcc1afb5d93e268d747c1a62b92ae1fca62aaaa555d33484f7c7dda481f98",
+    "MaxNN/Constructions/Paramid/Caterpillar/HingeBounds.lean": "2f9921cdc6a08099f1e4c99538b52a7ff79b34096cd39a62f0d47825096a08ae",
+    "MaxNN/Constructions/Paramid/Caterpillar/Reduction.lean": "f1fcc49056fe412914a10ad9da88fb62cf5c25ed1ae71b9c5d4a4bb9b4f25cf2",
+    "MaxNN/Constructions/Paramid/Caterpillar/SpineBound.lean": "ce95d610ac5876f2f64b7ec6bfd626ed625a4e9e2b585a245cb96663aa8c7b3d",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Adjacent.lean": "539e3f39d4f28b85e3f96d61dff92194da3ef2030b31f9e387c8b9f29f34d804",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Crossing/Base.lean": "cd7dd6d623dc275900c69ba9376b8976e3d82233b128548ef66196f62b3fe6a4",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Crossing.lean": "5ca0ea5b9a1911e77ab62d39ac16f60d999ba10022503bc49ff18b592cbbeeb2",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Join.lean": "6cb63d1101aaecfb4fc6ea117abb78337845270e543f8119217642f3f4e9ea54",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/RootStar.lean": "a9f635e6c1b1ea001ee77e73adde84684ff087a61966cc99be9a9defaff1cc40",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/SwapFirst.lean": "1b6747f92bd30e99cfd3d37d754076095557ad5564b7b3ebe1f6ddeb79b0c1b4",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Translation.lean": "83a651081ca4fffdcab3c117adb4a419ebc67999acb9edd032ba033c6ab46c86",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words.lean": "95f3b53915233f0987c7d3d069363f383eb48fbc2ce72e28b78ca97a441f1546",
+    "MaxNN/Constructions/Paramid/Chain/Root.lean": "725bc172431d1dd4a57386a89a889a7b67e9451a5ce919bec6dc326a569867bd",
+    "MaxNN/Constructions/Paramid/Geom/Boundary/ConeFaces.lean": "98feabc0105a54f4a7477ed4843b53833ec56689ede5578efd9fa62107d86dd1",
+    "MaxNN/Constructions/Paramid/Geom/Boundary/Facet.lean": "6209e54fe470bf2ac5216ced834384a8a52e75224807aaaa7a303a7045524eb8",
+    "MaxNN/Constructions/Paramid/Geom/Boundary/Sign.lean": "e5a12f3e92faffe777b5b2bd61f2f03ed168062ca0247a0a0cebefcf023b3a05",
+    "MaxNN/Constructions/Paramid/Geom/Complete/Chart.lean": "7ee910cf11278b04188c03c0a404b9fb8c23d7f9c7d0a6b811d4757d69b9ae37",
+    "MaxNN/Constructions/Paramid/Geom/Complete.lean": "9179642484f3b946baf532e62c986d6a618acdcef25ff326f1afe1cfd315d618",
+    "MaxNN/Constructions/Paramid/Geom/Coordinates.lean": "722b59889c48c16647d108921250bc0c6a5ddfd770e1d319c3340ca6aa39befa",
+    "MaxNN/Constructions/Paramid/Geom/Defs.lean": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602",
+    "MaxNN/Constructions/Paramid/Geom/Doubling.lean": "f28f59f1e3176954f53812980b5f6206b8e8059eb5ae63a128d9f8af72d79803",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Cone/Parallelepiped.lean": "cfe5bb0b30655de0421bb7a13ba41814e0a13f81fd6a0632c0c995c2e4c6f167",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Cone.lean": "139ec218a8d2c8bbc4f03524bec8049d10caf1a286fde3d083bb3ff81901255b",
+    "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/LocalIdentity.lean": "4baf531de4d181b53b33d51bb080e697aaa093f6dbe246e5e4b8c13e14dc95e4",
+    "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean": "dbe55876d21c44442819bfff72d4764afe557c1eef1eb20765ea0e45cb80c762",
+    "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean": "61385b52393e6a537021d3d50eacb2f9ca5afc9eed514ce351e95eafe76e9ed0",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Defs.lean": "136864a1cde265acfcd00f11411a381f67f8f8b2fb4aa37924c4cc4a14359cf8",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel/Annihilator.lean": "f2a20727aaf09c19e8e23d95ca9257c673805f24e214cc4cc196832cd6a500f9",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel/Generic.lean": "57aa527bedba5c014ef5264c01ffb48220e3dd155b0511cb8b112f89a18d00b2",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel/Pieces.lean": "f547a7abad923d04a59dc72b4a5aed1fd3951e29d2bf049d58d11d7c479af93f",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean": "0cc8bef8fddb1436b4b7da448493fd6216971f1568129900f8b1e692b693fbad",
+    "MaxNN/Constructions/Paramid/Geom/Faces.lean": "ac1ef2e9eb5cb77751002ec4161959d318cf711a6713b228a7c2453420b316d3",
+    "MaxNN/Constructions/Paramid/Geom/Flag.lean": "19ac4d5dcc28250b3400c1e9e1ce00cacd59d04c67c88cb1a8d00fca08bf29a9",
+    "MaxNN/Constructions/Paramid/Geom/Germ/Radial.lean": "0ab259bf6b644571fb3c05ceeb60989c364c716f0090ed329498fef9cf5203ab",
+    "MaxNN/Constructions/Paramid/Geom/Germ/Reflection.lean": "facdf236914f6c601184a4347006aeb5aeb4da90d431fe8e1ee24581cd93650e",
+    "MaxNN/Constructions/Paramid/Geom/Germ.lean": "bcf411f91b00276e314eb9eb82ed19ff7eccb155de797d7689aed03a3acfd4cd",
+    "MaxNN/Constructions/Paramid/Geom/Induction/FaceMat.lean": "0e901b221caacbb3e8b5c9c1d57df4ec3545413db77cac9eedd1070e10179255",
+    "MaxNN/Constructions/Paramid/Geom/Induction/SimplexFacet.lean": "8f9b771e03b996718958cfd51a87d5126355ad670c3f61b1b0aefcd83e50f900",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn/Chain.lean": "0d7632bcf6df74852bb3cb733d379b63c47b0021812d4bc37c8d5d30b620c614",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn/Hull.lean": "0f17c4b83e0ae138260a097a050fbebb3450ee81f378d839748caf0376748718",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn/Staircase.lean": "06dbe12b8561e8aa8a38d31ea856239580f068c2260016181454f605ee08897f",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn.lean": "c7d7104a79d2581bbefeb9ebe5eccccf02ff876ef69450703161cf40e9ca68f0",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean": "4eef6797d6dda44b462c6abe84fb769f45cb4a6000c6d7179d8b38ecce3c1d7c",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/Facets.lean": "f0f0ae76558b9537163ecbce5585eb8e27a4585c34c2b8401ec2295b850a08bd",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut/Bary.lean": "584cfced9c4d358870da90726e759ebb032163c5093fe28135e824f17e55d77f",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut/CutSets.lean": "a08e67dd269c2d34c786dce8ee90c87f6823bd59315f96c881eb7095d09f9e27",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut/SweepFacts.lean": "73fcf0666333d34ed9bd497d9b28986f2e845fa8bb36fa00caa541b73161da2b",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean": "9328353931ca6390671a90a5638d59d852241142eb72863e3b35cb523f674e00",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct.lean": "3fadef3bbdb615920b51ce11501f0e8a4883c4af94e81a999b4cba2d71de6499",
+    "MaxNN/Constructions/Paramid/Geom/SimplexMod.lean": "38ac53f84a64730f7a2ba21cc6c655ac359844817ea63f7de70f58679959b866",
+    "MaxNN/Constructions/Paramid/Geom/Sweep/Support.lean": "e468c494aaa712b11e1de4ecbce5dd35b20676ba49a1009471e98ed251c974c4",
+    "MaxNN/Constructions/Paramid/Geom/Sweep.lean": "67cc2f76f25cc8335eccd2783bedaa81dbc8b062cfa6b11307a820457989ea02",
+    "MaxNN/Constructions/Paramid/Geom/UnitGerm.lean": "25e587c89b3c8f90db566603f5aafe406126e60e23de7e575c03de3c9c5579cc",
+    "MaxNN/Constructions/Paramid/LowerDim.lean": "43b4ed8abd12982e8248b90588d4811768b356d67bbc091ba8d0d35fc7d86b7f",
+    "MaxNN/Constructions/Paramid/Unit.lean": "931e18c56d42ffcc0f28d8c1a3f7834b29afadba8ee64cc0a25f86255ef8d23e",
+    "MaxNN/Core/Affine.lean": "bb5a854f0b371ecc5b0488314ffb624198f96e870e46aa09c98c9b4986018b3f",
+    "MaxNN/Core/Class.lean": "9091406f7720a5f31c16de5c276d9f5bd2b60db3c842cf65e6876ef9d9794427",
+    "MaxNN/Core/Max.lean": "090dd71f2d73840b87b2c0f15dde2d7ff89fd3bb37d059146cc8076d7622142f",
+    "MaxNN/Core/Network.lean": "6a94e0a978b3660d5ecf42b628d64024c6ed1dc5b60052c2b929cd3417a96805",
+    "MaxNN/Core/Relu.lean": "98acff835fa4f1cc365f5d8f19c0b88eaa5178486c19cea633ca027e9f8d72ea",
+    "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
+    "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
+    "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
+    "Verification/Statements.lean": "68d41a766e68e9a17051829425720a47d8aa1254328a018000e191d82485d92c",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "verification/main.json": "94995510cb751941189c7f7cfc586ec9969f62c8641bcf63fb16749e4b65f7fd"
+  }
+}
