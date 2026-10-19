@@ -620,12 +620,16 @@
   "sweepSupport": {
     "file": "MaxNN/Constructions/Paramid/Geom/Sweep.lean",
     "name": "sweep_hS_of_nonneg",
-    "equations": []
+    "equations": [
+      "eq:sweep-support-high"
+    ]
   },
   "sweepTranslation": {
     "file": "MaxNN/Constructions/Paramid/Geom/Sweep.lean",
     "name": "sweep_hS_eq_translate",
-    "equations": []
+    "equations": [
+      "eq:sweep-support-translate"
+    ]
   },
   "columnReconstruction": {
     "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean",
@@ -832,6 +836,13 @@
     "name": "compactDictionaryNetwork_eval",
     "equations": [
       "eq:signed-remainder"
+    ]
+  },
+  "coordinateRelabel": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/CoordinateDirections.lean",
+    "name": "permutedInputLinearEquiv",
+    "equations": [
+      "eq:coordinate-relabel"
     ]
   }
 }

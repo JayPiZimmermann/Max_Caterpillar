@@ -35,8 +35,8 @@ revision. All 169 recorded files were rehashed after this fresh full gate;
 every current hash matches the receipt and no file is missing. The certificate
 therefore applies directly to the current source tree.
 
-The paper also rebuilt and passed its link and layout checks: 17 pages, 120 Lean
-links, 107 equation links (105 Lean links and two literature links), 124 distinct
+The paper also rebuilt and passed its link and layout checks: 17 pages, 123 Lean
+links, 110 equation links (108 Lean links and two literature links), 125 distinct
 declaration mappings, three proof anchors, five proof-step links, and no
 overfull boxes. The corresponding source hashes are recorded in
 `verification/paper.json`.
