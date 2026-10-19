@@ -156,6 +156,9 @@
   {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean",
     "name": "coordinateStructuredBlock_sub_lower_mem_LSpan_one",
+    "equations": [
+      "eq:insertion-weight-germs"
+    ],
     "key": "insertion",
     "line": 67,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean#L67",
@@ -499,8 +502,7 @@
     "file": "MaxNN/Core/Relu.lean",
     "name": "relu_sub_relu_neg",
     "equations": [
-      "eq:hinge-reversal",
-      "eq:signed-remainder"
+      "eq:hinge-reversal"
     ],
     "key": "signedRelu",
     "line": 33,
@@ -519,15 +521,15 @@
     "sha256": "1f40af2fa65150b3e3df01e87b9e618dcdaa5f90cb93e114c6e6082391b5db42"
   },
   {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactTransport.lean",
-    "name": "compactOfDictionaryNetwork_computes_MAX",
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean",
+    "name": "sum_posCoeff_eq_one",
     "equations": [
       "eq:remainder-translation"
     ],
     "key": "remainderTranslation",
-    "line": 19,
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactTransport.lean#L19",
-    "sha256": "444f0b88b03cc382c7c949a526271420f51085d7809df9fdcc707a02cbd79ae8"
+    "line": 74,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean#L74",
+    "sha256": "ea584ed3de43bde38d2e3ef217a57da8ab128ad7f7fba57ae7af404717a49ac7"
   },
   {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Simplex.lean",
@@ -1072,7 +1074,8 @@
     "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean",
     "name": "germDiff_hS_simplex_sub_mem_LSpan",
     "equations": [
-      "eq:facet-group-bound"
+      "eq:facet-group-bound",
+      "eq:single-facet-group"
     ],
     "key": "facetGrouping",
     "line": 326,
@@ -1088,6 +1091,246 @@
     "key": "translationInvariance",
     "line": 22,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean#L22",
+    "sha256": "6bc083794ce5a4f1183844be459722f6125625314b601702eadac8f65df8b37a"
+  },
+  {
+    "file": "MaxCaterpillar/Construction.lean",
+    "name": "dictionary",
+    "equations": [],
+    "key": "dictionaryDefinition",
+    "line": 68,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Construction.lean#L68",
+    "sha256": "d30bbf1b948682a246880b0090f9b714f9492c658790b16a87188eb6c8faf166"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
+    "name": "atomFunction",
+    "equations": [
+      "eq:tag-family"
+    ],
+    "key": "tagFamily",
+    "line": 93,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean#L93",
+    "sha256": "7ac84ea338153147b859cd9f9adedf672ca437c3537a111b883007b50cf03efb"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
+    "name": "taggedCoeff",
+    "equations": [
+      "eq:tagged-coefficients"
+    ],
+    "key": "taggedCoefficient",
+    "line": 93,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean#L93",
+    "sha256": "a7bbf57abf76d6796b815d9752c5113655a1823fb50136bd22b02e5c02c32cd6"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
+    "name": "sum_taggedCoeff_eq",
+    "equations": [
+      "eq:tagged-expansion"
+    ],
+    "key": "taggedExpansion",
+    "line": 110,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean#L110",
+    "sha256": "a7bbf57abf76d6796b815d9752c5113655a1823fb50136bd22b02e5c02c32cd6"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
+    "name": "canonicalNormalizedCoeff",
+    "equations": [
+      "eq:normalized-tag-coefficients"
+    ],
+    "key": "normalizedTagCoefficients",
+    "line": 166,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean#L166",
+    "sha256": "7ac84ea338153147b859cd9f9adedf672ca437c3537a111b883007b50cf03efb"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
+    "name": "canonicalActiveKeys",
+    "equations": [
+      "eq:active-normalized-descriptions"
+    ],
+    "key": "activeNormalizedDescriptions",
+    "line": 171,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean#L171",
+    "sha256": "7ac84ea338153147b859cd9f9adedf672ca437c3537a111b883007b50cf03efb"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean",
+    "name": "essentialKeys",
+    "equations": [
+      "eq:retained-descriptions"
+    ],
+    "key": "retainedDescriptions",
+    "line": 31,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean#L31",
+    "sha256": "1f40af2fa65150b3e3df01e87b9e618dcdaa5f90cb93e114c6e6082391b5db42"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean",
+    "name": "residual_ridgeCut",
+    "equations": [
+      "eq:ridge-cut-residual"
+    ],
+    "key": "ridgeCutResidual",
+    "line": 613,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean#L613",
+    "sha256": "9328353931ca6390671a90a5638d59d852241142eb72863e3b35cb523f674e00"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean",
+    "name": "formula_sub_simplex_mem_simplexMod",
+    "equations": [
+      "eq:simplex-support-expansion"
+    ],
+    "key": "simplexSupportExpansion",
+    "line": 80,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean#L80",
+    "sha256": "83c9e6a0806c8dbff83acb615a98333f4871dd209631cbb02cd405b89666c2da"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean",
+    "name": "block_or_braid_of_unique_edge_tie",
+    "equations": [
+      "eq:direction-pattern"
+    ],
+    "key": "directionPattern",
+    "line": 64,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean#L64",
+    "sha256": "317715241a1169ac9042b6b5411e8301bf509a50d68e7044edefee30b91e6f72"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean",
+    "name": "reflectAlong_braid_eq_permutedInput",
+    "equations": [
+      "eq:braid-reflection"
+    ],
+    "key": "braidReflection",
+    "line": 66,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean#L66",
+    "sha256": "9f677691bc230f4c8d372ccd919ecb8755c4176f6d953c0b3b4349f860848c60"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Geom/Germ/Reflection.lean",
+    "name": "germDiff_eq_dot_of_reflection_add_linear",
+    "equations": [
+      "eq:braid-germ"
+    ],
+    "key": "braidGerm",
+    "line": 34,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Geom/Germ/Reflection.lean#L34",
+    "sha256": "facdf236914f6c601184a4347006aeb5aeb4da90d431fe8e1ee24581cd93650e"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Toggle.lean",
+    "name": "germDiff_blockUnit_sub_transform_mem_LSpan_one_of_prefix",
+    "equations": [
+      "eq:block-pairing"
+    ],
+    "key": "blockPairing",
+    "line": 42,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Geometry/Toggle.lean#L42",
+    "sha256": "d8cbcc1afb5d93e268d747c1a62b92ae1fca62aaaa555d33484f7c7dda481f98"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Lift.lean",
+    "name": "valueFormula_sub_MAX_eq",
+    "equations": [
+      "eq:lower-arity-translation"
+    ],
+    "key": "lowerArityTranslation",
+    "line": 30,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Lift.lean#L30",
+    "sha256": "78e262d68bc2f08f638925efd77e7f913ff1126dd5e4536e9d22e10eff96111d"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Active.lean",
+    "name": "coordinateActive",
+    "equations": [
+      "eq:coordinate-active"
+    ],
+    "key": "coordinateActive",
+    "line": 20,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Active.lean#L20",
+    "sha256": "f0cbda26011926eb75902a55a4696aaa39605e0ea32afdf5fbe6517c9c78c3ad"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/ReindexActive.lean",
+    "name": "coordinateFibreEquiv",
+    "equations": [
+      "eq:coordinate-fibre-partition"
+    ],
+    "key": "coordinateFibrePartition",
+    "line": 228,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/ReindexActive.lean#L228",
+    "sha256": "b0d9e57dfe9b9c77376735e952d95057e10f53f8e7aeb639233e94c3cc4f9552"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean",
+    "name": "emptyCut_coordinateLowerUnit_sum_mem_LSpan",
+    "equations": [
+      "eq:root-star-average"
+    ],
+    "key": "rootStarAverage",
+    "line": 315,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean#L315",
+    "sha256": "0d0e99e58c434c7671a796c8b300a6952a53fd354ed59ba49da37c63eed76479"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean",
+    "name": "coordinateLowerUnit",
+    "equations": [
+      "eq:lower-caterpillar-summand"
+    ],
+    "key": "lowerCaterpillarSummand",
+    "line": 23,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean#L23",
+    "sha256": "945837ed3ecf752ba32afa7ac73a4932edaed71e93e8698dca36b91e80518452"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean",
+    "name": "sum_pairFeature_blocks",
+    "equations": [
+      "eq:auxiliary-remainder"
+    ],
+    "key": "auxiliaryRemainder",
+    "line": 22,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean#L22",
+    "sha256": "ea584ed3de43bde38d2e3ef217a57da8ab128ad7f7fba57ae7af404717a49ac7"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean",
+    "name": "equivariant_pairLin_formula",
+    "equations": [
+      "eq:compact-remainder"
+    ],
+    "key": "compactRemainder",
+    "line": 89,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean#L89",
+    "sha256": "ea584ed3de43bde38d2e3ef217a57da8ab128ad7f7fba57ae7af404717a49ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Construction.lean",
+    "name": "ofCompact",
+    "equations": [
+      "eq:network-assembly"
+    ],
+    "key": "networkAssembly",
+    "line": 39,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxCaterpillar/Construction.lean#L39",
+    "sha256": "d30bbf1b948682a246880b0090f9b714f9492c658790b16a87188eb6c8faf166"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean",
+    "name": "compactDictionaryNetwork_eval",
+    "equations": [
+      "eq:signed-remainder"
+    ],
+    "key": "compiledNetworkEvaluation",
+    "line": 57,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean#L57",
     "sha256": "6bc083794ce5a4f1183844be459722f6125625314b601702eadac8f65df8b37a"
   }
 ]

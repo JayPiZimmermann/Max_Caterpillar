@@ -29,14 +29,15 @@ is
 
 The receipt records aggregate source digest
 `16eae06d5f72bd2b0b0353597a5b3c164b2cf77e1b4993d4398f8d0d0679f8e9`
-and the SHA-256 of every checked source. Its `source_commit` is `null` because
-verification was run on the completed working tree before creating the single
-fresh root commit. The per-file hashes and aggregate digest bind the receipt to
-that exact tree without referring to the repository history that is being
-removed.
+and the SHA-256 of every checked source and manifest. Its `source_commit` is
+`null` because the gate certified the working tree by content rather than a Git
+revision. All 169 recorded files were rehashed after the gate; every current
+hash matches the receipt and no file is missing. The Lean sources are therefore
+unchanged, so the successful elaboration and axiom audit remain applicable to
+the current tree.
 
-The paper also rebuilt and passed its link and layout checks: 13 pages, 98 Lean
-links, 85 equation links (83 Lean links and two literature links), 102 distinct
+The paper also rebuilt and passed its link and layout checks: 16 pages, 120 Lean
+links, 107 equation links (105 Lean links and two literature links), 124 distinct
 declaration mappings, three proof anchors, five proof-step links, and no
 overfull boxes. The corresponding source hashes are recorded in
 `verification/paper.json`.

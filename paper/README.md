@@ -2,7 +2,8 @@
 
 `main.tex` is the short article on the caterpillar construction for
 $\operatorname{MAX}_N$. Its introduction may cite general representation
-theorems for context, but the Lean links and checked claims in this repository
+theorems for context, and the conclusion cites width lower bounds from the
+literature. These background results are not formalized here. The Lean links and checked claims in this repository
 concern only the maximum construction and the mathematical steps used in the
 paper.
 
@@ -21,9 +22,7 @@ The bibliography is embedded, and no shell escape is required.
 
 Source paths and line numbers are resolved from declaration names in
 `lean-map.json`. The generator updates `main.tex`, `lean-links.tex`, and
-`lean-links.json`. Remote links use the repository's `main` branch so they
-remain valid after the fresh single-commit history is created. Private-repository
-links require repository access.
+`lean-links.json`. Remote links use the repository's `main` branch.
 
 Every displayed formula uses a numbered `align` environment. Equation numbers
 link to the Lean proof, except the Wang--Sun background theorem, whose equations

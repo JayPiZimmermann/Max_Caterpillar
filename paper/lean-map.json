@@ -95,7 +95,10 @@
   },
   "insertion": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean",
-    "name": "coordinateStructuredBlock_sub_lower_mem_LSpan_one"
+    "name": "coordinateStructuredBlock_sub_lower_mem_LSpan_one",
+    "equations": [
+      "eq:insertion-weight-germs"
+    ]
   },
   "star": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean",
@@ -308,8 +311,7 @@
     "file": "MaxNN/Core/Relu.lean",
     "name": "relu_sub_relu_neg",
     "equations": [
-      "eq:hinge-reversal",
-      "eq:signed-remainder"
+      "eq:hinge-reversal"
     ]
   },
   "remainder": {
@@ -320,8 +322,8 @@
     ]
   },
   "remainderTranslation": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactTransport.lean",
-    "name": "compactOfDictionaryNetwork_computes_MAX",
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean",
+    "name": "sum_posCoeff_eq_one",
     "equations": [
       "eq:remainder-translation"
     ]
@@ -669,7 +671,8 @@
     "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean",
     "name": "germDiff_hS_simplex_sub_mem_LSpan",
     "equations": [
-      "eq:facet-group-bound"
+      "eq:facet-group-bound",
+      "eq:single-facet-group"
     ]
   },
   "translationInvariance": {
@@ -677,6 +680,158 @@
     "name": "realUnitY_add_const",
     "equations": [
       "eq:translation-invariance"
+    ]
+  },
+  "dictionaryDefinition": {
+    "file": "MaxCaterpillar/Construction.lean",
+    "name": "dictionary",
+    "equations": []
+  },
+  "tagFamily": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
+    "name": "atomFunction",
+    "equations": [
+      "eq:tag-family"
+    ]
+  },
+  "taggedCoefficient": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
+    "name": "taggedCoeff",
+    "equations": [
+      "eq:tagged-coefficients"
+    ]
+  },
+  "taggedExpansion": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
+    "name": "sum_taggedCoeff_eq",
+    "equations": [
+      "eq:tagged-expansion"
+    ]
+  },
+  "normalizedTagCoefficients": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
+    "name": "canonicalNormalizedCoeff",
+    "equations": [
+      "eq:normalized-tag-coefficients"
+    ]
+  },
+  "activeNormalizedDescriptions": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
+    "name": "canonicalActiveKeys",
+    "equations": [
+      "eq:active-normalized-descriptions"
+    ]
+  },
+  "retainedDescriptions": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean",
+    "name": "essentialKeys",
+    "equations": [
+      "eq:retained-descriptions"
+    ]
+  },
+  "ridgeCutResidual": {
+    "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean",
+    "name": "residual_ridgeCut",
+    "equations": [
+      "eq:ridge-cut-residual"
+    ]
+  },
+  "simplexSupportExpansion": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean",
+    "name": "formula_sub_simplex_mem_simplexMod",
+    "equations": [
+      "eq:simplex-support-expansion"
+    ]
+  },
+  "directionPattern": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean",
+    "name": "block_or_braid_of_unique_edge_tie",
+    "equations": [
+      "eq:direction-pattern"
+    ]
+  },
+  "braidReflection": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean",
+    "name": "reflectAlong_braid_eq_permutedInput",
+    "equations": [
+      "eq:braid-reflection"
+    ]
+  },
+  "braidGerm": {
+    "file": "MaxNN/Constructions/Paramid/Geom/Germ/Reflection.lean",
+    "name": "germDiff_eq_dot_of_reflection_add_linear",
+    "equations": [
+      "eq:braid-germ"
+    ]
+  },
+  "blockPairing": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Toggle.lean",
+    "name": "germDiff_blockUnit_sub_transform_mem_LSpan_one_of_prefix",
+    "equations": [
+      "eq:block-pairing"
+    ]
+  },
+  "lowerArityTranslation": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Lift.lean",
+    "name": "valueFormula_sub_MAX_eq",
+    "equations": [
+      "eq:lower-arity-translation"
+    ]
+  },
+  "coordinateActive": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Active.lean",
+    "name": "coordinateActive",
+    "equations": [
+      "eq:coordinate-active"
+    ]
+  },
+  "coordinateFibrePartition": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/ReindexActive.lean",
+    "name": "coordinateFibreEquiv",
+    "equations": [
+      "eq:coordinate-fibre-partition"
+    ]
+  },
+  "rootStarAverage": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean",
+    "name": "emptyCut_coordinateLowerUnit_sum_mem_LSpan",
+    "equations": [
+      "eq:root-star-average"
+    ]
+  },
+  "lowerCaterpillarSummand": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Structured.lean",
+    "name": "coordinateLowerUnit",
+    "equations": [
+      "eq:lower-caterpillar-summand"
+    ]
+  },
+  "auxiliaryRemainder": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean",
+    "name": "sum_pairFeature_blocks",
+    "equations": [
+      "eq:auxiliary-remainder"
+    ]
+  },
+  "compactRemainder": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean",
+    "name": "equivariant_pairLin_formula",
+    "equations": [
+      "eq:compact-remainder"
+    ]
+  },
+  "networkAssembly": {
+    "file": "MaxCaterpillar/Construction.lean",
+    "name": "ofCompact",
+    "equations": [
+      "eq:network-assembly"
+    ]
+  },
+  "compiledNetworkEvaluation": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean",
+    "name": "compactDictionaryNetwork_eval",
+    "equations": [
+      "eq:signed-remainder"
     ]
   }
 }
