@@ -24,14 +24,14 @@
   },
   "reference_lean_command_block_sha256": "5fbb14cc0fa054738d968ded3e9e5a4f599d161cda206df53a60749c85f46b3f",
   "source_files": {
-    "paper/main.tex": "bfd72d631523f22b9275551ca764a3df79d18848cb3830af03d12adb2b5d2bad",
+    "paper/main.tex": "2b8db7442920b5d1007de544029077423b67c46ec250ba8e701a5bf972b17057",
     "paper/iclr2027_conference.sty": "75764eb39b41a933ffea270b1c8fcdca42238f416a9ba6193e2ffa01e6e2cf5b",
     "paper/lean_equation_links.sty": "4c8596ade352a9e907dd2255e738eb19f4e4ba09df150427a38343d5ab423d82",
     "paper/lean-map.json": "2ee68acc9bc40947f3da7913d012acd74f92bb62fe2369abac3818b6b0dae5d6",
     "paper/lean-links.tex": "e4f3dd452c4e8b5c0ce3cd5d6d7850d43e25c8e51a06132ce56d561867e94b79",
     "paper/lean-links.json": "4b5541625aecc7e6cfbfe899f756f9422846906d80e54bd440cf1eb3dbb26156",
     "paper/link-config.json": "6633d6ae65f452910cab89645e083f16ed0468f3d2ea6b2489ec624316c93e13",
-    "paper/main.pdf": "b5bab1394960588276d7216a3e614bcaa7a42987b902c68d343dbcf36875190e",
+    "paper/main.pdf": "72611819cc1ca824edfb18ff901cf647794928230f5841fa9dd7382c25985930",
     "scripts/paper_links.py": "b7b2f6692a8bec4193bf8994675e60cc256c1fbf92b2231975a08984acae7cc4",
     "paper/proof_commands.tex": "8a4a7577892289145faba84deb3c3612fa93f2bf0d961ac653e2e1c3b1c95742"
   },
