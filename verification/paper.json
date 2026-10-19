@@ -24,14 +24,14 @@
   },
   "reference_lean_command_block_sha256": "5fbb14cc0fa054738d968ded3e9e5a4f599d161cda206df53a60749c85f46b3f",
   "source_files": {
-    "paper/main.tex": "dd999ce9ba91487c8d489f7bc6752d4f9dca2190727d540c39262126abb24e0e",
+    "paper/main.tex": "8b10d65d18a85a7deb3b6419163343f95610ec8dde3482f9c380661970cfe648",
     "paper/iclr2027_conference.sty": "75764eb39b41a933ffea270b1c8fcdca42238f416a9ba6193e2ffa01e6e2cf5b",
     "paper/lean_equation_links.sty": "4c8596ade352a9e907dd2255e738eb19f4e4ba09df150427a38343d5ab423d82",
     "paper/lean-map.json": "2ee68acc9bc40947f3da7913d012acd74f92bb62fe2369abac3818b6b0dae5d6",
     "paper/lean-links.tex": "e4f3dd452c4e8b5c0ce3cd5d6d7850d43e25c8e51a06132ce56d561867e94b79",
     "paper/lean-links.json": "4b5541625aecc7e6cfbfe899f756f9422846906d80e54bd440cf1eb3dbb26156",
     "paper/link-config.json": "6633d6ae65f452910cab89645e083f16ed0468f3d2ea6b2489ec624316c93e13",
-    "paper/main.pdf": "d797b7da93b0ae9ae85f8ddf4ea621df017728da5c4a008855d2ef9da948f61c",
+    "paper/main.pdf": "b20fd2bc1054509a9afe0065bc22b50531b14bcb4af1b10a67555a0e7cfd465c",
     "scripts/paper_links.py": "b7b2f6692a8bec4193bf8994675e60cc256c1fbf92b2231975a08984acae7cc4",
     "paper/proof_commands.tex": "8a4a7577892289145faba84deb3c3612fa93f2bf0d961ac653e2e1c3b1c95742"
   },
@@ -41,5 +41,7 @@
   "verified_on": "2026-10-19",
   "title": "TWO HIDDEN LAYERS SUFFICE: THE CATERPILLAR NET",
   "standalone_equation_links_checked": true,
-  "missing_equation_link_rejected": true
+  "missing_equation_link_rejected": true,
+  "bibliography_entries_cited_in_introduction": 7,
+  "title_single_line_checked": true
 }

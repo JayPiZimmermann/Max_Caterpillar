@@ -171,7 +171,7 @@
 \newcommand{\D}{\mathcal D}
 \newcommand{\B}{\mathcal B}
 \newcommand{\one}{\mathbf 1}
-\title{TWO HIDDEN LAYERS SUFFICE:\\THE CATERPILLAR NET}
+\title{\resizebox{\textwidth}{!}{TWO HIDDEN LAYERS SUFFICE: THE CATERPILLAR NET}}
 \author{Jakob Paul Zimmermann\\
 \normalfont FU Berlin, TU Berlin\\
 \href{mailto:jakob.paul.zimmermann@campus.tu-berlin.de}{jakob.paul.zimmermann@campus.tu-berlin.de}\\
@@ -185,7 +185,7 @@
 \lhead{} % Use ICLR typography without asserting a conference submission.
 \renewcommand{\headrulewidth}{0pt}
 \begin{abstract}
-Every continuous piecewise linear (CPWL) function is a finite signed sum of maxima of affine functions, making maximum representation a central problem in the study of the expressiveness of ReLU networks. A now-disproved conjecture predicted logarithmic depth for maxima. Building on the proof by \citet{BSY} that two hidden layers suffice for general CPWL functions, we give a nonrecursive construction for the maximum of $N$ inputs with two hidden layers of widths $O(N^2)$ and $2^{O(N\log N)}$. The construction has a direct geometric interpretation.\footnote{Our results were obtained through proof search in Lean using Claude Code and Codex. The Lean code is available in the accompanying repository \href{https://github.com/JayPiZimmermann/Max_Caterpillar}{https://github.com/JayPiZimmermann/Max\_Caterpillar}. Links to the Lean formalization appear in theorem titles and equation numbers; equation numbers are clickable.}
+Every continuous piecewise linear (CPWL) function is a finite signed sum of maxima of affine functions, making maximum representation a central problem in the study of the expressiveness of ReLU networks. A now-disproved conjecture predicted logarithmic depth for maxima. Inspired by the proof by \citet{BSY} that two hidden layers suffice for general CPWL functions, we give the \emph{Caterpillar Net}, a nonrecursive construction for the maximum of $N$ inputs with two hidden layers of widths $O(N^2)$ and $2^{O(N\log N)}$. The construction has a direct geometric interpretation.\footnote{Our results were obtained through proof search in Lean using Claude Code and Codex. The Lean code is available in the accompanying repository \href{https://github.com/JayPiZimmermann/Max_Caterpillar}{https://github.com/JayPiZimmermann/Max\_Caterpillar}. Links to the Lean formalization appear in theorem titles and equation numbers; equation numbers are clickable.}
 \end{abstract}
 
 \section{Introduction}
@@ -221,9 +221,8 @@ The case $k=2$ asserts impossibility with two hidden layers. \citet{BakaevEtAl} 
 
 This reduction made the geometry of the maximum a central approach to the
 representation problem well before the work of \citet{BSY}.
-\citet{HertrichEtAl} studied depth through Newton polytopes, using that the maximum is the support function of a simplex, while \citet{GrilloEtAl} obtained depth lower
-bounds under compatibility with the braid fan.
-For width, \citet{SafranDepth} developed an extremal-graph approach to quadratic lower bounds, and \citet{LuClosure} obtained a sharper bound specifically for the first hidden layer.
+Polyhedral approaches to depth include the Newton-polytope framework of \citet{HertrichEtAl}, the simplex subdivisions of \citet{BakaevEtAl}, and the depth lower bounds for braid-fan-compatible networks of \citet{GrilloEtAl}.
+For width, \citet{SafranDepth} used extremal graph theory to prove lower bounds for exact maximum representation, while \citet{LuClosure} studied first-layer width thresholds for approximation and exact representation.
 \citet{BSY} then constructed two-hidden-layer ReLU representations for
 arbitrary CPWL functions in every dimension.
 
@@ -233,7 +232,7 @@ arbitrary CPWL functions in every dimension.
 \end{theorem}
 
 Our contribution is to specialize their general construction to $\maxn_N$
-and simplify it. Taking $2^{\Theta(N^2)}$ as the second-layer width baseline
+and simplify it into the \emph{Caterpillar Net}. Taking $2^{\Theta(N^2)}$ as the second-layer width baseline
 via applying the \citet{BSY} recursive construction, we pursue two aims:
 \begin{enumerate}
 \item Give a nonrecursive construction for $\maxn_N$ with a direct
@@ -260,7 +259,7 @@ The output is affine, there are no skip connections, and equality is required
 on all of $\R^N$.
 
 \Needspace{20\baselineskip}
-\begin{theorem}[\leandecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width}, \leandecl{MaxCaterpillar/Lemmas.lean}{80}{construction_width}, {\hyperref[pf:thm:main]{proof}}]\label{thm:main}
+\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width}, \leandecl{MaxCaterpillar/Lemmas.lean}{80}{construction_width}, {\hyperref[pf:thm:main]{proof}}]\label{thm:main}
 For every $N\geq3$, define
 \begin{align}\label{eq:count}
  C_N=\sum_{m=2}^{N-1}\binom Nm\frac{m!}{2}(N-m)m^{N-m-1}.
@@ -278,7 +277,7 @@ In particular, these widths satisfy, as $N\to\infty$,
 
 \noindent\textit{Remark (small arities).} The linked theorem also covers $N=1$ and $N=2$ by separate networks of widths $(2,2)$ and $(4,2)$. At $N=3$, formula~\eqref{eq:width} gives widths $(7,5)$.
 
-\section{The finite construction}
+\section{The Caterpillar Net}
 
 Two one-line identities drive the construction. For reals $s,t$ and every
 linear function $\ell$ on $\R^N$,
@@ -977,7 +976,7 @@ R(x)=\sum_i p_ix_i+\sum_{i<j}s_{ij}\relu(x_i-x_j).
 \end{align}
 Substitute~\eqref{eq:recover-coordinates} into this expression and collect the coefficients of $\Phi(x)$ into $w_R$. Thus both $w_k$ and $w_R$ are specified by finite sums of the previously defined coefficients.
 
-For any fixed ordering of $K$, the second-layer rows and output weights are
+For any fixed ordering of $K$, the Caterpillar Net has second-layer rows and output weights
 \begin{align}\label{eq:network-assembly}
 W_2=\begin{pmatrix}(w_k^\top)_{k\in K}\\w_R^\top\\-w_R^\top\end{pmatrix},\qquad
 w_3=\begin{pmatrix}(d_k)_{k\in K}\\1\\-1\end{pmatrix},\qquad b_1=b_2=b_3=0.
@@ -1024,20 +1023,20 @@ Claude and Codex assisted with formalization and manuscript preparation.
 The first hidden-layer width is asymptotically sharp. Building on the extremal-graph approach of \citet{SafranDepth}, our separate Lean development extends the bound $h_1\geq\binom N2-\lfloor4N/3\rfloor$ of \citet[Theorem~2.13]{LuClosure}, for $N\geq4$, to networks with arbitrary affine skip connections. When every first-layer weight vector is proportional to some $e_i-e_j$, we sharpen it to $h_1\geq\binom N2-N$. We obtain no growing lower bound for $h_2$; finding smaller exact maximum representations and establishing such lower bounds remain open.
 
 \begin{thebibliography}{7}
-\bibitem[Bakaev et~al.(2025)Bakaev, Brunck, Hertrich, Stade, and Yehudayoff]{BakaevEtAl}
+\bibitem[Bakaev et~al.(2026)Bakaev, Brunck, Hertrich, Stade, and Yehudayoff]{BakaevEtAl}
 Egor Bakaev, Florestan Brunck, Christoph Hertrich, Jack Stade, and Amir Yehudayoff.
 \newblock Better neural network expressivity: Subdividing the simplex.
-\newblock Preprint, 2025.
-\newblock \href{https://arxiv.org/abs/2505.14338}{arXiv:2505.14338}.
+\newblock In \emph{Proceedings of the 58th Annual ACM Symposium on Theory of Computing}, pages 500--507, 2026.
+\newblock \href{https://doi.org/10.1145/3798129.3800768}{doi:10.1145/3798129.3800768}.
 \bibitem[Brunck et~al.(2026)Brunck, Stade, and Yehudayoff]{BSY}
 Florestan Brunck, Jack Stade, and Amir Yehudayoff.
-\newblock \emph{Computing max\_n in Depth 2---Proof Overview}.
+\newblock \emph{Computing $\max_n$ in Depth 2---Proof Overview}.
 \newblock Unpublished draft supplied to the author, October 2026.
 \bibitem[Grillo et~al.(2025)Grillo, Hertrich, and Loho]{GrilloEtAl}
 Moritz Grillo, Christoph Hertrich, and Georg Loho.
 \newblock Depth-bounds for neural networks via the braid arrangement.
-\newblock \emph{Advances in Neural Information Processing Systems}, 2025.
-\newblock \href{https://arxiv.org/abs/2502.09324}{arXiv:2502.09324}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 38:127800--127818, 2025.
+\newblock \href{https://doi.org/10.52202/085713-4257}{doi:10.52202/085713-4257}.
 \bibitem[Hertrich et~al.(2023)Hertrich, Basu, Di Summa, and Skutella]{HertrichEtAl}
 Christoph Hertrich, Amitabh Basu, Marco Di Summa, and Martin Skutella.
 \newblock Towards lower bounds on the depth of ReLU neural networks.
@@ -1046,14 +1045,14 @@ Christoph Hertrich, Amitabh Basu, Marco Di Summa, and Martin Skutella.
 \bibitem[Lu(2026)]{LuClosure}
 Shunqi Lu.
 \newblock Sharp closure thresholds for two-hidden-layer ReLU networks.
-\newblock Preprint, 2026.
+\newblock Preprint, version 1, September 2026.
 \newblock \href{https://doi.org/10.5281/zenodo.22728502}{doi:10.5281/zenodo.22728502}.
 \newblock \href{https://shunqilu.github.io/publications/sharp_closure_thresholds_two_hidden_layer_relu_networks_v1.pdf}{Author's PDF}.
 \bibitem[Safran(2026)]{SafranDepth}
 Itay Safran.
 \newblock A depth hierarchy for computing the maximum in ReLU networks via extremal graph theory.
-\newblock Preprint, 2026.
-\newblock \href{https://arxiv.org/abs/2601.01417}{arXiv:2601.01417}.
+\newblock In \emph{Proceedings of the 39th Conference on Learning Theory}, volume 336 of \emph{Proceedings of Machine Learning Research}, pages 5721--5742, 2026.
+\newblock \href{https://proceedings.mlr.press/v336/safran26a.html}{PMLR 336}.
 \bibitem[Wang and Sun(2005)]{WangSun}
 Shuning Wang and Xusheng Sun.
 \newblock Generalization of hinging hyperplanes.
