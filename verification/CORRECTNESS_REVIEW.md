@@ -109,7 +109,7 @@ Evidence: [Coordinate/Star.lean:111](../MaxNN/Constructions/Paramid/Caterpillar/
 
 **Priority: low to medium. Type: incomplete inference; conclusion true.**
 
-[main.tex:238](https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3295f962bfa66108d570048962457c89c5112926/paper/main.tex#L238) says that the edge vectors are independent, “so” the polytope is a pyramid over a parallelotope. Edge independence proves the parallelotope statement, but does not show that the apex lies outside its affine hull.
+[main.tex:238](https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3295f962bfa66108d570048962457c89c5112926/paper/main.tex#L238) says that the edge vectors are independent, “so” the polytope is a pyramid over a zonotope. Edge independence proves the zonotope statement, but does not show that the apex lies outside its affine hull.
 
 **Repair:** state that the head and all $N-2$ edge functions are jointly linearly independent; equivalently, their restrictions form a basis of $H_0^*$. The edges form a tree on the $N-1$ non-apex labels; adjoining the head edge connects the apex, giving a tree on all $N$ labels. This proves dimension $N-1$ and the pyramid property. The unreduced coefficient vectors lie in the sum-zero hyperplane, which should not be confused with the primal space $H_0=\{x_0=0\}$.
 

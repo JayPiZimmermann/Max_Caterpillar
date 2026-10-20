@@ -1,4 +1,4 @@
-% Structured proof commands copied verbatim from arXiv:2610.01728v2.
+% Structured proof commands adapted from arXiv:2610.01728v2.
 \usepackage{refcount}
 \newcommand{\pfnum}{??}
 \newcounter{pfclaim}\newcounter{pfstep}
@@ -22,13 +22,12 @@
   \begin{proof}[\normalfont\bfseries\phantomsection\label{pf:#2}Proof ideas of #1~\ref{#2}]%
 }{\end{proof}}
 \newcommand{\pfclaim}[2]{\par\medskip\refstepcounter{pfclaim}%
-  \noindent\textbf{Claim \thepfclaim\ (#2).}\label{#1}\enspace\ignorespaces}
+  \noindent\textbf{Claim \thepfclaim\ [#2].}\label{#1}\enspace\ignorespaces}
 \newcommand{\pfstep}[2]{\par\medskip\refstepcounter{pfstep}%
   \noindent\textbf{\LeanLinkIfDeclared{#1}{Step \thepfstep}\ (#2).}\label{#1}\enspace\ignorespaces}
 \newcommand{\finishes}[2]{This finishes the proof of #1~\ref{#2}.}
 \newenvironment{Claim}[2]{%
-  \par\medskip\refstepcounter{pfclaim}%
-  \noindent\textbf{Claim \thepfclaim\ (#2).}\label{#1}\enspace\itshape\ignorespaces}%
+  \pfclaim{#1}{#2}\itshape\ignorespaces}%
  {\par}
 \newenvironment{ProofOf}[2]{%
   \vspace{-0.4\baselineskip}%

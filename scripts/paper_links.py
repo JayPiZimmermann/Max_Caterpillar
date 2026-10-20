@@ -107,6 +107,8 @@ def validate_manuscript(manuscript):
         headings.append((match.start(), balanced_end(match.end() - 1, '[', ']')))
     for match in re.finditer(r'\\paragraph(?:\[[^\]]*\])?\{', body):
         headings.append((match.start(), balanced_end(match.end() - 1, '{', '}')))
+    for match in re.finditer(r'\\pfclaim\{[^}]+\}\{', body):
+        headings.append((match.start(), balanced_end(match.end() - 1, '{', '}')))
     for match in re.finditer(r'\\(?:leanref|leanid|leanlink|lean|leandecl|leanlinkdecl)\b', body):
         if not any(start <= match.start() < end for start, end in headings):
             raise SystemExit('Lean text links belong in statement or paragraph headings, not prose.')
