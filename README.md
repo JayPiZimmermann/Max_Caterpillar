@@ -54,7 +54,7 @@ bound.
 The proof follows the paper: a signed caterpillar sum is compared with the
 support function of a simplex, facet differences reduce the class identity to
 one lower-arity case, exposed faces provide the correction dictionary, and the
-normalized caterpillar descriptions are compiled into the two network layers.
+normalized caterpillar descriptions are compiled into the two hidden layers.
 The underlying geometric construction and its relation to the work of
 Brunck, Stade, and Yehudayoff are stated in the paper.
 

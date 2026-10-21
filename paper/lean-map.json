@@ -751,6 +751,7 @@
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean",
     "name": "block_or_braid_of_unique_edge_tie",
     "equations": [
+      "eq:direction-pattern-spine",
       "eq:direction-pattern"
     ]
   },
@@ -843,6 +844,13 @@
     "name": "permutedInputLinearEquiv",
     "equations": [
       "eq:coordinate-relabel"
+    ]
+  },
+  "lowerArityWeight": {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean",
+    "name": "totalWeight",
+    "equations": [
+      "eq:lower-arity-weight"
     ]
   }
 }

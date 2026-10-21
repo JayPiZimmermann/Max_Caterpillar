@@ -1198,6 +1198,7 @@
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean",
     "name": "block_or_braid_of_unique_edge_tie",
     "equations": [
+      "eq:direction-pattern-spine",
       "eq:direction-pattern"
     ],
     "key": "directionPattern",
@@ -1347,5 +1348,16 @@
     "line": 119,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/CoordinateDirections.lean#L119",
     "sha256": "f8a126c77e33f798f37f2865f84cc4a0803289a59e4227078968f6e7f16a5bb1"
+  },
+  {
+    "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean",
+    "name": "totalWeight",
+    "equations": [
+      "eq:lower-arity-weight"
+    ],
+    "key": "lowerArityWeight",
+    "line": 35,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/main/MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean#L35",
+    "sha256": "718497c776e1ef528981e75bbcc822529ffa5da331c8978967c219a421922941"
   }
 ]
