@@ -14,3 +14,18 @@ paper/*.fdb_latexmk
 verification/build.log
 verification/logs/
 .paper-preview/
+
+# Private conference preparation, downloaded papers, and working analysis.
+/notes/
+
+# Separate full-paper / STOC review build.
+paper_submission/*.aux
+paper_submission/*.log
+paper_submission/*.out
+paper_submission/*.synctex.gz
+paper_submission/*.toc
+paper_submission/*.xdv
+paper_submission/*.fls
+paper_submission/*.fdb_latexmk
+paper_submission/*.bbl
+paper_submission/*.blg
