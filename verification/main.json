@@ -142,8 +142,12 @@
       "type": "∀ (r : ℕ), 1 ≤ r → ∃ K : Finset (Caterpillar.Corrections.RealKey (r + 1)), K ⊆ Caterpillar.Corrections.normalizedKeys r ∧ K.card ≤ quotientDim r ∧ ∃ net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (quotientDim r + 2), (∀ x, net.eval x = Maximum (r + 1 + 1) x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases"
     },
     {
-      "declaration": "MaxCaterpillar.factorial_le_quotientDim",
-      "type": "∀ (r : ℕ), 1 ≤ r → r.factorial ≤ quotientDim r"
+      "declaration": "MaxCaterpillar.maximum_width_one_basis",
+      "type": "∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases"
+    },
+    {
+      "declaration": "MaxCaterpillar.quotientDim_add_two_le_secondWidth",
+      "type": "∀ (r : ℕ), 1 ≤ r → quotientDim r + 2 ≤ secondWidth (r + 1 + 1)"
     },
     {
       "declaration": "MaxCaterpillar.caterpillar_sum_affine",
@@ -156,6 +160,10 @@
     {
       "declaration": "MaxCaterpillar.caterpillar_shared_pieces_min",
       "type": "∀ {d n T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ) (α : Fin T → Fin (r + 1 + 1) → Fin (n + 1)), (∀ t, Function.Injective (α t)) → ∀ (ε : Fin T → ℝ), ∃ net : Network d ((n + 1).choose 2 + (n + 1) + 1) (min T ((n + 1).choose (r + 1 + 1)) * (secondWidth (r + 1 + 1) - 2) + 2), ∀ x, net.eval x = ∑ t, ε t * Maximum (r + 1 + 1) (fun i => pieces Gw Gb x (α t i))"
+    },
+    {
+      "declaration": "MaxCaterpillar.card_imageSets_le_sum_choose",
+      "type": "∀ {N p T : ℕ} (α : Fin T → Fin N → Fin p), (imageSets α).card ≤ ∑ m in Finset.range (N + 1), p.choose m"
     },
     {
       "declaration": "MaxCaterpillar.wang_sun",

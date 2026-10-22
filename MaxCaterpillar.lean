@@ -1,7 +1,7 @@
 import MaxCaterpillar.Definitions
 import MaxCaterpillar.Theorems
 import MaxCaterpillar.Quotient
-import MaxCaterpillar.LowerBound
+import MaxCaterpillar.OneBasis
 import MaxCaterpillar.Sharing
 import MaxCaterpillar.CPWL
 import MaxCaterpillar.SmallArity

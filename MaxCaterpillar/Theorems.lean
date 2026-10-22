@@ -36,7 +36,9 @@ theorem width_asymptotics :
 
 /-- Version 2 of the main theorem: the same widths with rational weights and
 zero biases. For `N ≥ 3` the network is the Version 1 construction `network`,
-whose canonical coefficients are proved rational (`coefficient_rational`). -/
+whose canonical coefficients (an average over all bases) are proved rational
+(`coefficient_rational`). Version 3, `maximum_width_one_basis` in
+`OneBasis.lean`, proves the same statement from one basis. -/
 theorem maximum_width_rational (N : ℕ) [NeZero N] :
     ∃ net : Network N (firstWidth N) (secondWidth N),
       (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases := by

@@ -304,6 +304,23 @@ theorem card_imageSets_le_choose {N p T : ℕ} (α : Fin T → Fin N → Fin p)
   have := Finset.card_le_of_subset hsub
   rwa [Finset.card_powersetCard, Finset.card_univ, Fintype.card_fin] at this
 
+/-- Every argument set has at most `N` elements, so there are at most
+`∑_{m ≤ N} C(p, m)` argument sets, whatever the number `T` of terms. -/
+theorem card_imageSets_le_sum_choose {N p T : ℕ} (α : Fin T → Fin N → Fin p) :
+    (imageSets α).card ≤ ∑ m in Finset.range (N + 1), p.choose m := by
+  classical
+  have hsub : imageSets α ⊆ (Finset.range (N + 1)).biUnion
+      fun m => (Finset.univ : Finset (Fin p)).powersetCard m := by
+    intro S hS
+    obtain ⟨t, _, rfl⟩ := Finset.mem_image.mp hS
+    have hcard : (Finset.univ.image (α t)).card ≤ N :=
+      Finset.card_image_le.trans (by rw [Finset.card_univ, Fintype.card_fin])
+    exact Finset.mem_biUnion.mpr ⟨_, Finset.mem_range.mpr (Nat.lt_succ_of_le hcard),
+      Finset.mem_powersetCard.mpr ⟨Finset.subset_univ _, rfl⟩⟩
+  refine (Finset.card_le_of_subset hsub).trans (Finset.card_biUnion_le.trans ?_)
+  refine (Finset.sum_congr rfl fun m _ => ?_).le
+  rw [Finset.card_powersetCard, Finset.card_univ, Fintype.card_fin]
+
 /-! ## Arbitrary affine maps: one feature block per term -/
 
 theorem sum_block {T : ℕ} {β : Type*} [Fintype β] (F : Fin T × β → ℝ) (t : Fin T)
