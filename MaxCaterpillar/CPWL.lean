@@ -21,8 +21,9 @@ affine function on each piece of a finite closed polyhedral cover of `ℝᵈ`
   distinct argument sets of the terms.
 
 The pieces `g_a` are only the affine functions occurring in the Wang–Sun
-representation; that they can be chosen among the affine constituents of `f`
-(Koutschan–Moser–Ponomarchuk–Schicho) is not formalized here.
+representation. `KMPS.lean` proves the Koutschan–Moser–Ponomarchuk–Schicho
+refinement: the pieces can be taken among the affine functions of any CPWL
+witness of `f` (`kmps_pieces`, `cpwl_two_hidden_layers_pieces`).
 -/
 
 open BigOperators

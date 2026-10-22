@@ -5,3 +5,6 @@ import MaxCaterpillar.OneBasis
 import MaxCaterpillar.Sharing
 import MaxCaterpillar.CPWL
 import MaxCaterpillar.SmallArity
+import MaxCaterpillar.KMPS
+import MaxCaterpillar.SharingRational
+import MaxCaterpillar.CPWLRational

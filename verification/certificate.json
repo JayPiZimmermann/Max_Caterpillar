@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-22T12:05:22.837831+00:00",
+  "checked_at_utc": "2026-10-22T15:22:17.846230+00:00",
   "source_commit": null,
-  "source_sha256": "b734333e8acfcab2be515c22e27af95226c7228560b156d7fe544e5411adc1ae",
+  "source_sha256": "ad9611366a606de4c3949cfdb451789e543fd6e717394d334597901eaad3ff9e",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -359,8 +359,18 @@
       "status": "VERIFIED"
     },
     {
-      "declaration": "MaxCaterpillar.factorial_le_quotientDim",
-      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 r.factorial \u2264 quotientDim r",
+      "declaration": "MaxCaterpillar.maximum_width_one_basis",
+      "type": "\u2200 (N : \u2115) [NeZero N], \u2203 net : Network N (firstWidth N) (secondWidth N), (\u2200 x, net.eval x = Maximum N x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.quotientDim_add_two_le_secondWidth",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 quotientDim r + 2 \u2264 secondWidth (r + 1 + 1)",
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -399,6 +409,16 @@
       "status": "VERIFIED"
     },
     {
+      "declaration": "MaxCaterpillar.card_imageSets_le_sum_choose",
+      "type": "\u2200 {N p T : \u2115} (\u03b1 : Fin T \u2192 Fin N \u2192 Fin p), (imageSets \u03b1).card \u2264 \u2211 m in Finset.range (N + 1), p.choose m",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
       "declaration": "MaxCaterpillar.wang_sun",
       "type": "\u2200 (d : \u2115) (f : Point d \u2192 \u211d), f \u2208 CPWL d \u2192 \u2203 (T : \u2115) (\u03b5 : Fin T \u2192 \u211d) (Aw : Fin T \u2192 Fin (d + 1) \u2192 Fin d \u2192 \u211d) (Ab : Fin T \u2192 Fin (d + 1) \u2192 \u211d), (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 \u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, Aw t i l * x l) + Ab t i)",
       "axioms": [
@@ -421,6 +441,86 @@
     {
       "declaration": "MaxCaterpillar.cpwl_two_hidden_layers_shared",
       "type": "\u2200 (d : \u2115), 2 \u2264 d \u2192 \u2200 (f : Point d \u2192 \u211d), f \u2208 CPWL d \u2192 \u2203 (p T : \u2115) (Gw : Fin p \u2192 Fin d \u2192 \u211d) (Gb : Fin p \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (d + 1) \u2192 Fin p) (\u03b5 : Fin T \u2192 \u211d), Function.Injective (fun a => (Gw a, Gb a)) \u2227 (\u2200 a, \u2203 t i, \u03b1 t i = a) \u2227 (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 (\u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, Gw (\u03b1 t i) l * x l) + Gb (\u03b1 t i))) \u2227 \u2203 s : \u2115, s = (Finset.univ.image fun t => Finset.univ.image (\u03b1 t)).card \u2227 s \u2264 T \u2227 \u2203 net : Network d (p.choose 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2), \u2200 x, net.eval x = f x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.kmps_of_continuous_selection",
+      "type": "\u2200 {d n : \u2115} (g : Fin n \u2192 MaxNN.AffineFn d) (f : Point d \u2192 \u211d), Continuous f \u2192 (\u2200 x, \u2203 i, f x = (g i).eval x) \u2192 \u2203 (T : \u2115) (\u03b5 : Fin T \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (d + 1) \u2192 Fin n), (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 \u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (g (\u03b1 t i)).eval x)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.kmps_pieces",
+      "type": "\u2200 (d : \u2115) (f : Point d \u2192 \u211d), f \u2208 MaxNN.CPWL d \u2192 \u2200 (W : MaxNN.CPWLWitness d f), \u2203 (T : \u2115) (\u03b5 : Fin T \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (d + 1) \u2192 Fin W.n), (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 \u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, (W.g (\u03b1 t i)).a l * x l) + (W.g (\u03b1 t i)).c)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.cpwl_two_hidden_layers_pieces",
+      "type": "\u2200 (d : \u2115), 2 \u2264 d \u2192 \u2200 (f : Point d \u2192 \u211d), f \u2208 MaxNN.CPWL d \u2192 \u2200 (W : MaxNN.CPWLWitness d f), \u2203 (T : \u2115) (\u03b1 : Fin T \u2192 Fin (d + 1) \u2192 Fin W.n) (\u03b5 : Fin T \u2192 \u211d), (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 (\u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, (W.g (\u03b1 t i)).a l * x l) + (W.g (\u03b1 t i)).c)) \u2227 \u2203 s : \u2115, s = (Finset.univ.image fun t => Finset.univ.image (\u03b1 t)).card \u2227 s \u2264 T \u2227 \u2203 net : Network d (W.n.choose 2 + W.n + 1) (s * (secondWidth (d + 1) - 2) + 2), \u2200 x, net.eval x = f x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.exists_rat_caterpillarExpansion",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2203 E : PairExpansion (r + 1 + 1) (caterpillarKeys r) (Fin (MaxNN.Caterpillar.Corrections.compactWidth (r + 1))), E.IsRational",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_sum_affine_rational_pieces",
+      "type": "\u2200 {d T : \u2115} (r : \u2115), 1 \u2264 r \u2192 \u2200 (Aw : Fin T \u2192 Fin (r + 1 + 1) \u2192 Fin d \u2192 \u211d) (Ab : Fin T \u2192 Fin (r + 1 + 1) \u2192 \u211d) (\u03b5 : Fin T \u2192 \u211d), (\u2200 t i l, \u2203 q : \u211a, (q : \u211d) = Aw t i l) \u2192 (\u2200 t i, \u2203 q : \u211a, (q : \u211d) = Ab t i) \u2192 (\u2200 t, \u2203 q : \u211a, (q : \u211d) = \u03b5 t) \u2192 \u2203 net : Network d (T * firstWidth (r + 1 + 1)) (T * (secondWidth (r + 1 + 1) - 2) + 2), (\u2200 x, net.eval x = \u2211 t, \u03b5 t * Maximum (r + 1 + 1) (pieces (Aw t) (Ab t) x)) \u2227 net.HasRationalWeights \u2227 net.HasRationalBiases \u2227 (Ab = 0 \u2192 net.HasZeroBiases)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_shared_pieces_rational_pieces",
+      "type": "\u2200 {d p T : \u2115} (r : \u2115), 1 \u2264 r \u2192 \u2200 (Gw : Fin p \u2192 Fin d \u2192 \u211d) (Gb : Fin p \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (r + 1 + 1) \u2192 Fin p) (\u03b5 : Fin T \u2192 \u211d), (\u2200 a l, \u2203 q : \u211a, (q : \u211d) = Gw a l) \u2192 (\u2200 a, \u2203 q : \u211a, (q : \u211d) = Gb a) \u2192 (\u2200 t, \u2203 q : \u211a, (q : \u211d) = \u03b5 t) \u2192 \u2203 net : Network d (p.choose 2 + p + 1) ((imageSets \u03b1).card * (secondWidth (r + 1 + 1) - 2) + 2), (\u2200 x, net.eval x = \u2211 t, \u03b5 t * Maximum (r + 1 + 1) (fun i => (\u2211 l, Gw (\u03b1 t i) l * x l) + Gb (\u03b1 t i))) \u2227 net.HasRationalWeights \u2227 net.HasRationalBiases \u2227 (Gb = 0 \u2192 net.HasZeroBiases)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.cpwl_two_hidden_layers_shared_rational",
+      "type": "\u2200 (d : \u2115), 2 \u2264 d \u2192 \u2200 (f : Point d \u2192 \u211d), f \u2208 MaxNN.CPWL d \u2192 \u2203 (p T : \u2115) (Gw : Fin p \u2192 Fin d \u2192 \u211d) (Gb : Fin p \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (d + 1) \u2192 Fin p) (\u03b5 : Fin T \u2192 \u211d), Function.Injective (fun a => (Gw a, Gb a)) \u2227 (\u2200 a, \u2203 t i, \u03b1 t i = a) \u2227 (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 (\u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, Gw (\u03b1 t i) l * x l) + Gb (\u03b1 t i))) \u2227 \u2203 s : \u2115, s = (Finset.univ.image fun t => Finset.univ.image (\u03b1 t)).card \u2227 s \u2264 T \u2227 \u2203 net : Network d (p.choose 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2), (\u2200 x, net.eval x = f x) \u2227 net.HasRationalOuterLayers \u2227 \u2200 j, IsPieceRow Gw Gb (net.W\u2081 j) (net.b\u2081 j) \u2228 (net.W\u2081 j = 0 \u2227 net.b\u2081 j = 0)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.cpwl_two_hidden_layers_pieces_rational",
+      "type": "\u2200 (d : \u2115), 2 \u2264 d \u2192 \u2200 (f : Point d \u2192 \u211d), f \u2208 MaxNN.CPWL d \u2192 \u2200 (W : MaxNN.CPWLWitness d f), (\u2200 i l, \u2203 q : \u211a, (q : \u211d) = (W.g i).a l) \u2192 (\u2200 i, \u2203 q : \u211a, (q : \u211d) = (W.g i).c) \u2192 \u2203 (T : \u2115) (\u03b1 : Fin T \u2192 Fin (d + 1) \u2192 Fin W.n) (\u03b5 : Fin T \u2192 \u211d), (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 (\u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, (W.g (\u03b1 t i)).a l * x l) + (W.g (\u03b1 t i)).c)) \u2227 \u2203 s : \u2115, s = (Finset.univ.image fun t => Finset.univ.image (\u03b1 t)).card \u2227 s \u2264 T \u2227 \u2203 net : Network d (W.n.choose 2 + W.n + 1) (s * (secondWidth (d + 1) - 2) + 2), (\u2200 x, net.eval x = f x) \u2227 net.HasRationalWeights \u2227 net.HasRationalBiases \u2227 ((\u2200 i, (W.g i).c = 0) \u2192 net.HasZeroBiases)",
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -462,20 +562,23 @@
   "source_files": {
     "All.lean": "c55c153c4ea209f54e44ed00c0f2898efb00265409230832ce38e8d54628bdcd",
     "MaxCaterpillar/Asymptotics.lean": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946",
-    "MaxCaterpillar/CPWL.lean": "ced7f9cd0535a6932cac7d6514c00be831e8cff8cf4e73819855cfef085e91af",
+    "MaxCaterpillar/CPWL.lean": "ec7dc5253be1142466de4af458ab461b96169a7eff371f3ed4830944dc292d77",
+    "MaxCaterpillar/CPWLRational.lean": "fafa1f2932135d8e880ebfcf4b4b1c228dd61e221f1f0882c79f5679954ef589",
     "MaxCaterpillar/Compilation.lean": "2d2213c4d9e360aa936dd19df492aab7b5907cc76b1a6020a481647c8e2f7cb2",
     "MaxCaterpillar/Construction.lean": "d30bbf1b948682a246880b0090f9b714f9492c658790b16a87188eb6c8faf166",
     "MaxCaterpillar/Definitions.lean": "fdfc857aa8de026c3a1ed300a2c3e8845705f91c639384690c536793c692973f",
     "MaxCaterpillar/Internal/Network.lean": "fa4e14cbbe0ad5b39077e97bb08d52d4cd605b3ab36530b1f345b5f30750a980",
+    "MaxCaterpillar/KMPS.lean": "fb3e708d732809661ab0a16db31e1851d4e3f1505dd16e0547c773d13bd913e7",
     "MaxCaterpillar/Lemmas.lean": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72",
-    "MaxCaterpillar/LowerBound.lean": "2c7cabab3478c11e3c6272c21a161435cbe3fdfe0d4d2a080bbafaab6e75e714",
+    "MaxCaterpillar/OneBasis.lean": "1a2de9bb9969dffb1d53981754059186fdeb62919840824caad0d870eba58770",
     "MaxCaterpillar/Quotient.lean": "0ad0dda3c39d82358aafa5250158dbbc31e8393454717e6c84c9f87c9e7f11a8",
     "MaxCaterpillar/RationalWidth.lean": "582ce625492d36a165dc4bf09f6eaddde28ebc40f4261d07549f5d77b39ad99e",
     "MaxCaterpillar/Rationality.lean": "45b11f39e655632e5977d318617f3b20bd93a9b762a23b2bbbacfce63a5ac2ac",
-    "MaxCaterpillar/Sharing.lean": "6c26473e7ea0dcb53dd5bc5e17055610736abea01e1b1ab228cc7be0712d46cb",
+    "MaxCaterpillar/Sharing.lean": "02c80786642c189a2c95930a5fbb12651ed13ce36288ce02a076e3f68c5fe43e",
+    "MaxCaterpillar/SharingRational.lean": "fdda6c8a7a3862f9471c95180304153573ae9b27324f286080a38a5bba4ebe25",
     "MaxCaterpillar/SmallArity.lean": "ea9d57b776d54e3fc89479af3b5718b7fedd198940c461b17e0a4b707a2083e5",
-    "MaxCaterpillar/Theorems.lean": "7108c8f7125d0eac5efd518844584dfde8015f507f41ef03ed8afe3538e26e26",
-    "MaxCaterpillar.lean": "16febd6a3f4e0b124737492f00cb743612e3e3caf5d15baa048fa36f4adab2e4",
+    "MaxCaterpillar/Theorems.lean": "76e210cd6a02fc9cf182ebb0b657ab1c02a54f6e02eb8e2df514d510c8c81d1d",
+    "MaxCaterpillar.lean": "9b1338063080a12bf7eaee4f13e39e726a0467e08b779024c94c1aa551bf8ccb",
     "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
     "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
     "MaxNN/CPWL/Conditional/Finitary.lean": "23bb8dec03ed56bc703279a21f38a92366bd96410202af1627196fa6c2f187d2",
@@ -659,10 +762,10 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "64f7f0505b5af0ce4f9e61298cd29cb25961fcfabf0a88d1a574f4c64746f6b4",
+    "Verification/Statements.lean": "b8d30a4393bb8165df5fe41496b89d24815fa3b14b365405ec660ce03abe8021",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
-    "verification/main.json": "7c65596e7cca2c06b307658df245621b8ff5e30a0ae1cf1961556336c0bb4943"
+    "verification/main.json": "7311d4f8dca4e71c0403d725312db09da1242957cad83dfaefad1e53bac9c164"
   }
 }

@@ -33,14 +33,19 @@ $h_1=O(N^2)$ and $h_2=2^{O(N\log N)}$, with the latter formalized as
 $\log h_2=O(N\log N)$. The construction data are given by a direct finite
 formula at every arity; its correctness proof uses induction.
 
-## Version 2 results
+## Version 2 and 3 results
 
-Superseded declarations are kept in the sources and commented as Version 1;
-the new ones are commented as Version 2.
+Superseded declarations are kept in the sources and commented as Version 1
+(or Version 2); their replacements are commented as Version 2 (or Version 3).
 
-- `maximum_width_rational` (Version 2 of `maximum_width`): the same widths
-  with rational weights and zero biases. The canonical inverse-Gram
-  coefficients are rational (`coefficient_rational`, `network_rational`).
+- `maximum_width_one_basis` (Version 3, the paper's main theorem): the widths
+  of `maximum_width` with rational weights and zero biases, proved from one
+  basis of the dictionary span via `quotient_compression` and
+  `quotientDim_add_two_le_secondWidth`
+  ([OneBasis.lean](MaxCaterpillar/OneBasis.lean)).
+- `maximum_width_rational` (Version 2): the same statement for the network
+  compiled from the Version 1 coefficients, an inverse-Gram average over all
+  bases (`coefficient_rational`, `network_rational`).
 - `rational_coefficients`: rational coefficients from one basis of the
   dictionary, by an integration-free evaluation argument
   ([Rationality.lean](MaxCaterpillar/Rationality.lean)).
@@ -49,20 +54,27 @@ the new ones are commented as Version 2.
   `|K| + 2` second-layer neurons ([Compilation.lean](MaxCaterpillar/Compilation.lean)).
 - `quotient_compression`: second width `q_N + 2`, where
   `q_N = dim(V_N / A_N)` ([Quotient.lean](MaxCaterpillar/Quotient.lean)).
-- `factorial_le_quotientDim`: `q_N ≥ (N - 2)!`
-  ([LowerBound.lean](MaxCaterpillar/LowerBound.lean)). This bounds the
-  vocabulary dimension only, not the sparsest expansion or general networks.
 - `max_three_network`, `max_four_network`: widths `(7, 3)` and `(11, 5)`
   ([SmallArity.lean](MaxCaterpillar/SmallArity.lean)).
 - `wang_sun`, `cpwl_two_hidden_layers`, `cpwl_two_hidden_layers_shared`:
-  the Wang–Sun theorem and two-hidden-layer networks for all CPWL functions,
-  sharing layers across the maxima ([CPWL.lean](MaxCaterpillar/CPWL.lean),
+  the Wang–Sun theorem and two-hidden-layer networks for all CPWL functions
+  ([CPWL.lean](MaxCaterpillar/CPWL.lean),
   [Sharing.lean](MaxCaterpillar/Sharing.lean)). The general CPWL development
   under `MaxNN/CPWL` was restored for this purpose.
-
-Exact small-arity searches (`scripts/vocabulary_search.py`) certify
-`q_3 = 1`, `q_4 = 65`, `q_5 = 1136`, `s_3 = 1`, `s_4 = 3`; these are
-computational certificates, not Lean proofs.
+- `kmps_of_continuous_selection`, `kmps_pieces`,
+  `cpwl_two_hidden_layers_pieces`: the Koutschan–Moser–Ponomarchuk–Schicho
+  representation, with `±1` signs and the affine functions of any CPWL
+  witness, and the network with one shared first hidden layer
+  ([KMPS.lean](MaxCaterpillar/KMPS.lean)). `card_imageSets_le_sum_choose`
+  bounds the number of distinct maxima by `∑_{m ≤ N} C(p, m)`.
+- `caterpillar_shared_pieces_rational_pieces`,
+  `caterpillar_sum_affine_rational_pieces`,
+  `cpwl_two_hidden_layers_shared_rational`,
+  `cpwl_two_hidden_layers_pieces_rational`: the second hidden layer and output
+  layer have rational weights and zero biases; rational affine data give
+  rational weights and biases, and linear data give zero biases
+  ([SharingRational.lean](MaxCaterpillar/SharingRational.lean),
+  [CPWLRational.lean](MaxCaterpillar/CPWLRational.lean)).
 
 The paper-facing interface begins with
 [Definitions.lean](MaxCaterpillar/Definitions.lean),

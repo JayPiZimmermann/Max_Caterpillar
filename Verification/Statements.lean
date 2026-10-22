@@ -139,9 +139,13 @@ example : ∀ (r : ℕ), 1 ≤ r → ∃ K : Finset (Caterpillar.Corrections.Rea
   @MaxCaterpillar.quotient_compression
 #print axioms MaxCaterpillar.quotient_compression
 
-example : ∀ (r : ℕ), 1 ≤ r → r.factorial ≤ quotientDim r :=
-  @MaxCaterpillar.factorial_le_quotientDim
-#print axioms MaxCaterpillar.factorial_le_quotientDim
+example : ∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.maximum_width_one_basis
+#print axioms MaxCaterpillar.maximum_width_one_basis
+
+example : ∀ (r : ℕ), 1 ≤ r → quotientDim r + 2 ≤ secondWidth (r + 1 + 1) :=
+  @MaxCaterpillar.quotientDim_add_two_le_secondWidth
+#print axioms MaxCaterpillar.quotientDim_add_two_le_secondWidth
 
 example : ∀ {d T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Aw : Fin T → Fin (r + 1 + 1) → Fin d → ℝ) (Ab : Fin T → Fin (r + 1 + 1) → ℝ) (ε : Fin T → ℝ), ∃ net : Network d (T * firstWidth (r + 1 + 1)) (T * (secondWidth (r + 1 + 1) - 2) + 2), ∀ x, net.eval x = ∑ t, ε t * Maximum (r + 1 + 1) (pieces (Aw t) (Ab t) x) :=
   @MaxCaterpillar.caterpillar_sum_affine
@@ -155,6 +159,10 @@ example : ∀ {d n T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Gw : Fin (n + 1) → Fin
   @MaxCaterpillar.caterpillar_shared_pieces_min
 #print axioms MaxCaterpillar.caterpillar_shared_pieces_min
 
+example : ∀ {N p T : ℕ} (α : Fin T → Fin N → Fin p), (imageSets α).card ≤ ∑ m in Finset.range (N + 1), p.choose m :=
+  @MaxCaterpillar.card_imageSets_le_sum_choose
+#print axioms MaxCaterpillar.card_imageSets_le_sum_choose
+
 example : ∀ (d : ℕ) (f : Point d → ℝ), f ∈ CPWL d → ∃ (T : ℕ) (ε : Fin T → ℝ) (Aw : Fin T → Fin (d + 1) → Fin d → ℝ) (Ab : Fin T → Fin (d + 1) → ℝ), (∀ t, ε t = 1 ∨ ε t = -1) ∧ ∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, Aw t i l * x l) + Ab t i) :=
   @MaxCaterpillar.wang_sun
 #print axioms MaxCaterpillar.wang_sun
@@ -166,6 +174,38 @@ example : ∀ (d : ℕ), 2 ≤ d → ∀ (f : Point d → ℝ), f ∈ CPWL d →
 example : ∀ (d : ℕ), 2 ≤ d → ∀ (f : Point d → ℝ), f ∈ CPWL d → ∃ (p T : ℕ) (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ) (α : Fin T → Fin (d + 1) → Fin p) (ε : Fin T → ℝ), Function.Injective (fun a => (Gw a, Gb a)) ∧ (∀ a, ∃ t i, α t i = a) ∧ (∀ t, ε t = 1 ∨ ε t = -1) ∧ (∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, Gw (α t i) l * x l) + Gb (α t i))) ∧ ∃ s : ℕ, s = (Finset.univ.image fun t => Finset.univ.image (α t)).card ∧ s ≤ T ∧ ∃ net : Network d (p.choose 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2), ∀ x, net.eval x = f x :=
   @MaxCaterpillar.cpwl_two_hidden_layers_shared
 #print axioms MaxCaterpillar.cpwl_two_hidden_layers_shared
+
+example : ∀ {d n : ℕ} (g : Fin n → MaxNN.AffineFn d) (f : Point d → ℝ), Continuous f → (∀ x, ∃ i, f x = (g i).eval x) → ∃ (T : ℕ) (ε : Fin T → ℝ) (α : Fin T → Fin (d + 1) → Fin n), (∀ t, ε t = 1 ∨ ε t = -1) ∧ ∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (g (α t i)).eval x) :=
+  @MaxCaterpillar.kmps_of_continuous_selection
+#print axioms MaxCaterpillar.kmps_of_continuous_selection
+
+example : ∀ (d : ℕ) (f : Point d → ℝ), f ∈ MaxNN.CPWL d → ∀ (W : MaxNN.CPWLWitness d f), ∃ (T : ℕ) (ε : Fin T → ℝ) (α : Fin T → Fin (d + 1) → Fin W.n), (∀ t, ε t = 1 ∨ ε t = -1) ∧ ∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, (W.g (α t i)).a l * x l) + (W.g (α t i)).c) :=
+  @MaxCaterpillar.kmps_pieces
+#print axioms MaxCaterpillar.kmps_pieces
+
+example : ∀ (d : ℕ), 2 ≤ d → ∀ (f : Point d → ℝ), f ∈ MaxNN.CPWL d → ∀ (W : MaxNN.CPWLWitness d f), ∃ (T : ℕ) (α : Fin T → Fin (d + 1) → Fin W.n) (ε : Fin T → ℝ), (∀ t, ε t = 1 ∨ ε t = -1) ∧ (∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, (W.g (α t i)).a l * x l) + (W.g (α t i)).c)) ∧ ∃ s : ℕ, s = (Finset.univ.image fun t => Finset.univ.image (α t)).card ∧ s ≤ T ∧ ∃ net : Network d (W.n.choose 2 + W.n + 1) (s * (secondWidth (d + 1) - 2) + 2), ∀ x, net.eval x = f x :=
+  @MaxCaterpillar.cpwl_two_hidden_layers_pieces
+#print axioms MaxCaterpillar.cpwl_two_hidden_layers_pieces
+
+example : ∀ (r : ℕ), 1 ≤ r → ∃ E : PairExpansion (r + 1 + 1) (caterpillarKeys r) (Fin (MaxNN.Caterpillar.Corrections.compactWidth (r + 1))), E.IsRational :=
+  @MaxCaterpillar.exists_rat_caterpillarExpansion
+#print axioms MaxCaterpillar.exists_rat_caterpillarExpansion
+
+example : ∀ {d T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Aw : Fin T → Fin (r + 1 + 1) → Fin d → ℝ) (Ab : Fin T → Fin (r + 1 + 1) → ℝ) (ε : Fin T → ℝ), (∀ t i l, ∃ q : ℚ, (q : ℝ) = Aw t i l) → (∀ t i, ∃ q : ℚ, (q : ℝ) = Ab t i) → (∀ t, ∃ q : ℚ, (q : ℝ) = ε t) → ∃ net : Network d (T * firstWidth (r + 1 + 1)) (T * (secondWidth (r + 1 + 1) - 2) + 2), (∀ x, net.eval x = ∑ t, ε t * Maximum (r + 1 + 1) (pieces (Aw t) (Ab t) x)) ∧ net.HasRationalWeights ∧ net.HasRationalBiases ∧ (Ab = 0 → net.HasZeroBiases) :=
+  @MaxCaterpillar.caterpillar_sum_affine_rational_pieces
+#print axioms MaxCaterpillar.caterpillar_sum_affine_rational_pieces
+
+example : ∀ {d p T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ) (α : Fin T → Fin (r + 1 + 1) → Fin p) (ε : Fin T → ℝ), (∀ a l, ∃ q : ℚ, (q : ℝ) = Gw a l) → (∀ a, ∃ q : ℚ, (q : ℝ) = Gb a) → (∀ t, ∃ q : ℚ, (q : ℝ) = ε t) → ∃ net : Network d (p.choose 2 + p + 1) ((imageSets α).card * (secondWidth (r + 1 + 1) - 2) + 2), (∀ x, net.eval x = ∑ t, ε t * Maximum (r + 1 + 1) (fun i => (∑ l, Gw (α t i) l * x l) + Gb (α t i))) ∧ net.HasRationalWeights ∧ net.HasRationalBiases ∧ (Gb = 0 → net.HasZeroBiases) :=
+  @MaxCaterpillar.caterpillar_shared_pieces_rational_pieces
+#print axioms MaxCaterpillar.caterpillar_shared_pieces_rational_pieces
+
+example : ∀ (d : ℕ), 2 ≤ d → ∀ (f : Point d → ℝ), f ∈ MaxNN.CPWL d → ∃ (p T : ℕ) (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ) (α : Fin T → Fin (d + 1) → Fin p) (ε : Fin T → ℝ), Function.Injective (fun a => (Gw a, Gb a)) ∧ (∀ a, ∃ t i, α t i = a) ∧ (∀ t, ε t = 1 ∨ ε t = -1) ∧ (∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, Gw (α t i) l * x l) + Gb (α t i))) ∧ ∃ s : ℕ, s = (Finset.univ.image fun t => Finset.univ.image (α t)).card ∧ s ≤ T ∧ ∃ net : Network d (p.choose 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2), (∀ x, net.eval x = f x) ∧ net.HasRationalOuterLayers ∧ ∀ j, IsPieceRow Gw Gb (net.W₁ j) (net.b₁ j) ∨ (net.W₁ j = 0 ∧ net.b₁ j = 0) :=
+  @MaxCaterpillar.cpwl_two_hidden_layers_shared_rational
+#print axioms MaxCaterpillar.cpwl_two_hidden_layers_shared_rational
+
+example : ∀ (d : ℕ), 2 ≤ d → ∀ (f : Point d → ℝ), f ∈ MaxNN.CPWL d → ∀ (W : MaxNN.CPWLWitness d f), (∀ i l, ∃ q : ℚ, (q : ℝ) = (W.g i).a l) → (∀ i, ∃ q : ℚ, (q : ℝ) = (W.g i).c) → ∃ (T : ℕ) (α : Fin T → Fin (d + 1) → Fin W.n) (ε : Fin T → ℝ), (∀ t, ε t = 1 ∨ ε t = -1) ∧ (∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, (W.g (α t i)).a l * x l) + (W.g (α t i)).c)) ∧ ∃ s : ℕ, s = (Finset.univ.image fun t => Finset.univ.image (α t)).card ∧ s ≤ T ∧ ∃ net : Network d (W.n.choose 2 + W.n + 1) (s * (secondWidth (d + 1) - 2) + 2), (∀ x, net.eval x = f x) ∧ net.HasRationalWeights ∧ net.HasRationalBiases ∧ ((∀ i, (W.g i).c = 0) → net.HasZeroBiases) :=
+  @MaxCaterpillar.cpwl_two_hidden_layers_pieces_rational
+#print axioms MaxCaterpillar.cpwl_two_hidden_layers_pieces_rational
 
 example : ∃ net : Network 3 (firstWidth 3) 3, (∀ x, net.eval x = Maximum 3 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
   @MaxCaterpillar.max_three_network

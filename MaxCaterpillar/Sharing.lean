@@ -7,7 +7,7 @@ by Koutschan--Moser--Ponomarchuk--Schicho (arXiv:2305.16933, Thm. 2.4) the
 entries of the `Aₜ` can be taken among the affine constituents of `f`, and the
 coefficients are integers. The statements below take the affine data as
 input; the Wang--Sun theorem is formalized in `CPWL.lean`, the KMPS refinement
-is not. Placing
+in `KMPS.lean`. Placing
 `T` copies of a maximum network in parallel gives widths `T h₁` and `T h₂`.
 This file proves that the second width can be reduced.
 
