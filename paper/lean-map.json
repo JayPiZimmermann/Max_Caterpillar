@@ -1,7 +1,7 @@
 {
   "main": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "maximum_width",
+    "name": "maximum_width_rational",
     "equations": [
       "eq:width"
     ]
@@ -195,8 +195,8 @@
     ]
   },
   "wangSun": {
-    "source_url": "https://doi.org/10.1109/TIT.2005.859246",
-    "title": "Wang and Sun, Generalization of hinging hyperplanes",
+    "file": "MaxCaterpillar/CPWL.lean",
+    "name": "wang_sun",
     "equations": [
       "eq:hinging-maps",
       "eq:hinging-representation"
@@ -829,5 +829,179 @@
     "equations": [
       "eq:lower-arity-weight"
     ]
+  },
+  "mainVersion1": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "maximum_width"
+  },
+  "compilation": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "compilation",
+    "equations": [
+      "eq:compilation-hypothesis"
+    ]
+  },
+  "coefficientRational": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "coefficient_rational"
+  },
+  "rationalCoefficients": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "rational_coefficients"
+  },
+  "rationalSpan": {
+    "file": "MaxCaterpillar/Rationality.lean",
+    "name": "exists_rat_coeff_of_mem_span"
+  },
+  "rationalCoordinate": {
+    "file": "MaxCaterpillar/Rationality.lean",
+    "name": "coeff_mem_ratField",
+    "equations": [
+      "eq:rational-coordinate"
+    ]
+  },
+  "quotientDim": {
+    "file": "MaxCaterpillar/Quotient.lean",
+    "name": "quotientDim_eq",
+    "equations": [
+      "eq:quotient-dimension"
+    ]
+  },
+  "quotientCompression": {
+    "file": "MaxCaterpillar/Quotient.lean",
+    "name": "quotient_compression",
+    "equations": [
+      "eq:quotient-width"
+    ]
+  },
+  "quotientLower": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "factorial_le_quotientDim",
+    "equations": [
+      "eq:quotient-lower"
+    ]
+  },
+  "pathUnit": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "pathUnit_apply",
+    "equations": [
+      "eq:path-unit"
+    ]
+  },
+  "testConfiguration": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "testW",
+    "equations": [
+      "eq:test-configuration"
+    ]
+  },
+  "secondDifference": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "pathFunctional",
+    "equations": [
+      "eq:second-difference"
+    ]
+  },
+  "pathFunctional": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "pathFunctional_pathUnit",
+    "equations": [
+      "eq:path-functional"
+    ]
+  },
+  "maxThree": {
+    "file": "MaxCaterpillar/SmallArity.lean",
+    "name": "max_three_identity",
+    "equations": [
+      "eq:max-three"
+    ]
+  },
+  "maxFour": {
+    "file": "MaxCaterpillar/SmallArity.lean",
+    "name": "max_four_identity",
+    "equations": [
+      "eq:max-four"
+    ]
+  },
+  "maxThreeNetwork": {
+    "file": "MaxCaterpillar/SmallArity.lean",
+    "name": "max_three_network"
+  },
+  "maxFourNetwork": {
+    "file": "MaxCaterpillar/SmallArity.lean",
+    "name": "max_four_network"
+  },
+  "sharingAffine": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "caterpillar_sum_affine",
+    "equations": [
+      "eq:sharing-widths-a"
+    ]
+  },
+  "sharingPieces": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "caterpillar_shared_pieces",
+    "equations": [
+      "eq:shared-pieces-sum",
+      "eq:sharing-widths-b"
+    ]
+  },
+  "sharingExpansion": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "exists_caterpillarExpansion",
+    "equations": [
+      "eq:sharing-max",
+      "eq:sharing-pair-form"
+    ],
+    "steps": [
+      "stp:sharing-expansion"
+    ]
+  },
+  "sharingCompile": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "exists_network_sum_maximum",
+    "equations": [
+      "eq:sharing-rows",
+      "eq:sharing-output"
+    ],
+    "steps": [
+      "stp:sharing-compile"
+    ]
+  },
+  "sharingAffineGeneric": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "exists_network_sum_affine_maximum",
+    "steps": [
+      "stp:sharing-a"
+    ]
+  },
+  "sharingFeatures": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "piecesW₁",
+    "equations": [
+      "eq:sharing-features"
+    ]
+  },
+  "sharingGrouped": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "exists_network_shared_pieces",
+    "equations": [
+      "eq:sharing-grouped"
+    ],
+    "steps": [
+      "stp:sharing-b"
+    ]
+  },
+  "cpwlTwo": {
+    "file": "MaxCaterpillar/CPWL.lean",
+    "name": "cpwl_two_hidden_layers"
+  },
+  "cpwlShared": {
+    "file": "MaxCaterpillar/CPWL.lean",
+    "name": "cpwl_two_hidden_layers_shared"
+  },
+  "point": {
+    "file": "MaxCaterpillar/Definitions.lean",
+    "name": "Point"
   }
 }
