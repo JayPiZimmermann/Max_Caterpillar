@@ -1,46 +1,46 @@
 # Verification record
 
-Status: **the reduced MAX-only repository passes the complete verification gate**.
+Status: **the repository passes the complete verification gate**.
 
 The public interface and dependency closure contain the caterpillar
-construction of $\operatorname{MAX}_N$ and the results used in the paper. The
-general CPWL development and archived alternative constructions are absent.
+construction of $\operatorname{MAX}_N$, the Version 2 results added on
+2026-10-22, and the restored Wang–Sun formalization under `MaxNN/CPWL`
+needed for the CPWL network theorems. Superseded declarations are kept in the
+sources and commented as Version 1; their replacements are commented as
+Version 2.
 
-On 2026-10-19, the following command completed successfully on the reserved
-compute allocation after the final Lean comment edit:
+On 2026-10-22 the following command completed successfully on a local
+workstation (Lean 4.4.0, mathlib cache from `lake exe cache get`):
 
 ```sh
-srun --jobid=753647 --overlap --ntasks=1 --nodes=1 --cpu-bind=none --cpus-per-task=1 bash -lc 'cd /home/fe/jzimmermann/code/MaxCaterpillar && ulimit -s unlimited && python3 scripts/verify.py'
+ulimit -s unlimited && python3 scripts/verify.py
 ```
 
-The verifier built `All` and `Verification.Statements`, re-elaborated all 27
+The verifier built `All` and `Verification.Statements`, re-elaborated all 44
 exact theorem statements in `verification/main.json`, rejected `sorry`,
 `admit`, project `axiom` declarations, and `native_decide`, and audited every
-theorem with `#print axioms`. It found 166 Lean source files. Every theorem uses
-only the permitted foundational axioms `propext`, `Classical.choice`, and
+theorem with `#print axioms`. It found 201 Lean source files. Every theorem
+uses only the permitted foundational axioms `propext`, `Classical.choice`, and
 `Quot.sound`.
 
-The machine-readable receipt is `verification/certificate.json`. Its SHA-256
-is
+New checked statements (in addition to the 27 Version 1 statements):
 
-```text
-7ad1e4d547633aca3e08023e32bff3399a8536ca394f7a548f773cdd2f213639
-```
+- `maximum_width_rational`, `coefficient_rational`, `network_rational`,
+  `rational_coefficients`, `compilation`;
+- `quotientDim_eq`, `quotient_compression`, `factorial_le_quotientDim`;
+- `max_three_network`, `max_four_network`, `max_four_identity`;
+- `caterpillar_sum_affine`, `caterpillar_shared_pieces`,
+  `caterpillar_shared_pieces_min`;
+- `wang_sun`, `cpwl_two_hidden_layers`, `cpwl_two_hidden_layers_shared`.
 
-The receipt records aggregate source digest
-`5309e0d5ace2238c88342f271dff6092ab51c265977ae6d741ae91cae0e349ad`
+The machine-readable receipt is `verification/certificate.json`, with
+aggregate source digest
+`b734333e8acfcab2be515c22e27af95226c7228560b156d7fe544e5411adc1ae`
 and the SHA-256 of every checked source and manifest. Its `source_commit` is
-`null` because the gate certified the working tree by content rather than a Git
-revision. All 169 recorded files were rehashed after this fresh full gate;
-every current hash matches the receipt and no file is missing. The certificate
-therefore applies directly to the current source tree.
+`null` because the gate certified the working tree by content; the checked
+Lean sources are identical to those of commit
+`9eff36af7b8d9898bcfb1e2ee70b753c5efbaca6`.
 
-The paper also rebuilt and passed its link and layout checks: 17 pages, 123 Lean
-links, 110 equation links (108 Lean links and two literature links), 125 distinct
-declaration mappings, three proof anchors, five proof-step links, and no
-overfull boxes. The corresponding source hashes are recorded in
-`verification/paper.json`.
-
-An independent build also passed with `lean-links.tex` omitted: the generated
-equation mappings are embedded in `main.tex`. Removing one mapping from a
-temporary copy caused TeX to fail with an explicit missing-source-link error.
+The exact small-arity searches of `scripts/vocabulary_search.py`
+($q_3=1$, $q_4=65$, $q_5=1136$, $s_3=1$, $s_4=3$) are computational
+certificates in Python and are not part of this Lean certificate.
