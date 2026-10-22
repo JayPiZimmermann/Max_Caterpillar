@@ -164,10 +164,7 @@
   },
   "asymptotics": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "width_asymptotics",
-    "equations": [
-      "eq:asymptotics"
-    ]
+    "name": "width_asymptotics"
   },
   "networkParameters": {
     "file": "MaxCaterpillar/Definitions.lean",
@@ -243,8 +240,7 @@
   },
   "unitDefinition": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
-    "name": "paramidOn",
-    "equations": []
+    "name": "paramidOn"
   },
   "fullFeatures": {
     "file": "MaxNN/Constructions/MaxN/Width/Layer/Features.lean",
@@ -297,8 +293,7 @@
   },
   "fiberAverage": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/FiberCompiler.lean",
-    "name": "sum_finiteFiber_average_mul",
-    "equations": []
+    "name": "sum_finiteFiber_average_mul"
   },
   "averageExpansion": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
@@ -330,8 +325,7 @@
   },
   "reducedCoordinates": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Simplex.lean",
-    "name": "simplexValues_zero",
-    "equations": []
+    "name": "simplexValues_zero"
   },
   "simplex": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
@@ -358,7 +352,6 @@
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
     "name": "face",
     "equations": [
-      "eq:face-normal",
       "eq:exposed-face"
     ]
   },
@@ -382,8 +375,7 @@
   },
   "coneVertices": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
-    "name": "coneVertsOn",
-    "equations": []
+    "name": "coneVertsOn"
   },
   "classDefinition": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean",
@@ -482,8 +474,7 @@
   },
   "recoverHinges": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
-    "name": "compactHingeLin_feat",
-    "equations": []
+    "name": "compactHingeLin_feat"
   },
   "featureCount": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
@@ -633,8 +624,7 @@
   },
   "columnReconstruction": {
     "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean",
-    "name": "column_sweep",
-    "equations": []
+    "name": "column_sweep"
   },
   "sweepOperation": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
@@ -688,36 +678,23 @@
   },
   "dictionaryDefinition": {
     "file": "MaxCaterpillar/Construction.lean",
-    "name": "dictionary",
-    "equations": []
+    "name": "dictionary"
   },
   "tagFamily": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
-    "name": "atomFunction",
-    "equations": [
-      "eq:tag-family"
-    ]
+    "name": "atomFunction"
   },
   "taggedCoefficient": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
-    "name": "taggedCoeff",
-    "equations": [
-      "eq:tagged-coefficients"
-    ]
+    "name": "taggedCoeff"
   },
   "taggedExpansion": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
-    "name": "sum_taggedCoeff_eq",
-    "equations": [
-      "eq:tagged-expansion"
-    ]
+    "name": "sum_taggedCoeff_eq"
   },
   "normalizedTagCoefficients": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
-    "name": "canonicalNormalizedCoeff",
-    "equations": [
-      "eq:normalized-tag-coefficients"
-    ]
+    "name": "canonicalNormalizedCoeff"
   },
   "activeNormalizedDescriptions": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",

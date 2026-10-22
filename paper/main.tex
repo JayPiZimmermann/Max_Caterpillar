@@ -1,6 +1,8 @@
-\documentclass{article}
+% STOC 2027 review version: main argument with complete deferred proofs.
+% Preparation notes and remaining editorial work: ../notes/stoc2027/
+\documentclass[11pt,letterpaper]{article}
 \usepackage[T1]{fontenc}
-\usepackage{iclr2027_conference}
+\usepackage[margin=1in]{geometry}
 \usepackage{times}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{dsfont}
@@ -8,7 +10,36 @@
 \raggedbottom
 \usepackage{booktabs,graphicx,xcolor,microtype,tikz,needspace}
 \usepackage{hyperref}
+\usepackage[noabbrev,nameinlink]{cleveref}
 \usepackage{lean_equation_links}
+% Begin lean_listings.tex
+\usepackage{listings}
+\lstdefinestyle{lean}{
+  basicstyle=\ttfamily\normalsize,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,
+  breakindent=1em,
+  showstringspaces=false,
+  aboveskip=\medskipamount,
+  belowskip=\medskipamount,
+  morekeywords={abbrev,def,noncomputable,structure,where,namespace,end,open,theorem},
+  keywordstyle=\bfseries,
+  literate=
+    {ℝ}{{$\mathbb R$}}1
+    {ℕ}{{$\mathbb N$}}1
+    {→}{{$\rightarrow$}}1
+    {∀}{{$\forall$}}1
+    {∃}{{$\exists$}}1
+    {∑}{{$\textstyle\sum$}}1
+    {⟨}{{$\langle$}}1
+    {⟩}{{$\rangle$}}1
+    {₁}{{$_1$}}1
+    {₂}{{$_2$}}1
+    {₃}{{$_3$}}1
+}
+% End lean_listings.tex
 
 \definecolor{leangray}{gray}{0.35}
 \newcommand{\leanref}[3]{\href{\leanbase/#1\#L#2}{\textcolor{leangray}{\texttt{#3}}}}
@@ -23,7 +54,7 @@
 \makeatletter
 \newcommand{\DeclareSourceEquation}[2]{\expandafter\def\csname paper@lean@#1\endcsname{#2}}
 \makeatother
-\newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/main}
+\newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/8bbb7da780f6c10fccb88fa18b3edae5f4679084}
 \DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{18}
 \DeclareLeanEquation{eq:count}{MaxCaterpillar/Definitions.lean}{51}
 \DeclareLeanEquation{eq:word}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}
@@ -43,7 +74,6 @@
 \DeclareLeanEquation{eq:canonical-expansion}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{72}
 \DeclareLeanEquation{eq:compilation-widths}{MaxCaterpillar/Lemmas.lean}{72}
 \DeclareLeanEquation{stp:size-network}{MaxCaterpillar/Lemmas.lean}{72}
-\DeclareLeanEquation{eq:asymptotics}{MaxCaterpillar/Theorems.lean}{28}
 \DeclareLeanEquation{eq:network-parameters}{MaxCaterpillar/Definitions.lean}{26}
 \DeclareLeanEquation{eq:network-evaluation}{MaxCaterpillar/Definitions.lean}{35}
 \DeclareLeanEquation{eq:maximum}{MaxCaterpillar/Definitions.lean}{42}
@@ -70,7 +100,6 @@
 \DeclareLeanEquation{eq:simplex}{MaxNN/Constructions/Paramid/Geom/Defs.lean}{121}
 \DeclareLeanEquation{eq:support-function}{MaxNN/Constructions/Paramid/Geom/Defs.lean}{43}
 \DeclareLeanEquation{eq:unit-polytope}{MaxNN/Constructions/Paramid/Geom/Boundary/ConeFaces.lean}{400}
-\DeclareLeanEquation{eq:face-normal}{MaxNN/Constructions/Paramid/Geom/Defs.lean}{62}
 \DeclareLeanEquation{eq:exposed-face}{MaxNN/Constructions/Paramid/Geom/Defs.lean}{62}
 \DeclareLeanEquation{eq:facet-difference}{MaxNN/Constructions/Paramid/Geom/Germ.lean}{460}
 \DeclareLeanEquation{eq:face-derivative}{MaxNN/Constructions/Paramid/Geom/Germ.lean}{364}
@@ -117,10 +146,6 @@
 \DeclareLeanEquation{eq:facet-group-bound}{MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean}{326}
 \DeclareLeanEquation{eq:single-facet-group}{MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean}{326}
 \DeclareLeanEquation{eq:translation-invariance}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean}{22}
-\DeclareLeanEquation{eq:tag-family}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean}{93}
-\DeclareLeanEquation{eq:tagged-coefficients}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{93}
-\DeclareLeanEquation{eq:tagged-expansion}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{110}
-\DeclareLeanEquation{eq:normalized-tag-coefficients}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean}{166}
 \DeclareLeanEquation{eq:active-normalized-descriptions}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean}{171}
 \DeclareLeanEquation{eq:retained-descriptions}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean}{31}
 \DeclareLeanEquation{eq:ridge-cut-residual}{MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean}{613}
@@ -164,8 +189,58 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
-\input{proof_commands.tex}
-\iclrfinalcopy
+% Begin proof_commands.tex
+% Structured proof commands adapted from arXiv:2610.01728v2.
+\usepackage{refcount}
+\newcommand{\pfnum}{??}
+\newcounter{pfclaim}\newcounter{pfstep}
+\newcounter{pfblock}
+\renewcommand{\thepfclaim}{\pfnum.\arabic{pfclaim}}
+\renewcommand{\thepfstep}{\pfnum.\arabic{pfstep}}
+\providecommand{\theHpfclaim}{}
+\providecommand{\theHpfstep}{}
+\renewcommand{\theHpfclaim}{\arabic{pfblock}.\arabic{pfclaim}}
+\renewcommand{\theHpfstep}{\arabic{pfblock}.\arabic{pfstep}}
+\newenvironment{Proof}[2]{%
+  \stepcounter{pfblock}%
+  \setcounter{pfclaim}{0}\setcounter{pfstep}{0}%
+  \xdef\pfnum{\getrefnumber{#2}}%
+  \par\phantomsection\label[proof]{pf:#2}%
+  \begin{proof}[\normalfont\bfseries Proof of \Cref{#2}]%
+}{\end{proof}}
+\newenvironment{ProofSketch}[2]{%
+  \stepcounter{pfblock}%
+  \setcounter{pfclaim}{0}\setcounter{pfstep}{0}%
+  \xdef\pfnum{\getrefnumber{#2}}%
+  \par\phantomsection\label[proof]{pf:#2}%
+  \begin{proof}[\normalfont\bfseries Proof ideas of \Cref{#2}]%
+}{\end{proof}}
+\newcommand{\pfclaim}[2]{\par\medskip\refstepcounter{pfclaim}%
+  \noindent\textbf{Claim \thepfclaim\ [#2].}\label{#1}\enspace\ignorespaces}
+\newcommand{\pfstep}[2]{\par\medskip\refstepcounter{pfstep}%
+  \noindent\textbf{\LeanLinkIfDeclared{#1}{Step \thepfstep}\ (#2).}\label{#1}\enspace\ignorespaces}
+\newcommand{\finishes}[2]{This finishes the proof of \Cref{#2}.}
+\newenvironment{Claim}[2]{%
+  \pfclaim{#1}{#2}\itshape\ignorespaces}%
+ {\par}
+\newenvironment{ProofOf}[2]{%
+  \vspace{-0.4\baselineskip}%
+  \par\phantomsection\label[proof]{pf:#2}%
+  \begin{proof}[\normalfont\bfseries Proof of \Cref{#2}]}%
+ {\end{proof}}
+
+% Cross-reference names for structured proof counters and proof destinations.
+\crefname{pfclaim}{claim}{claims}
+\Crefname{pfclaim}{Claim}{Claims}
+\crefname{pfstep}{step}{steps}
+\Crefname{pfstep}{Step}{Steps}
+\crefname{proof}{proof}{proofs}
+\Crefname{proof}{Proof}{Proofs}
+\crefformat{proof}{#2proof#3}
+\Crefformat{proof}{#2Proof#3}
+\crefformat{aimethod}{#2AI methodology statement#3}
+\Crefformat{aimethod}{#2AI methodology statement#3}
+% End proof_commands.tex
 \newcommand{\R}{\mathbb R}
 \newcommand{\maxn}{\operatorname{max}}
 \newcommand{\relu}{\sigma}
@@ -174,7 +249,7 @@
 \newcommand{\D}{\mathcal D}
 \newcommand{\B}{\mathcal B}
 \newcommand{\one}{\mathbf 1}
-\title{\resizebox{\textwidth}{!}{TWO HIDDEN LAYERS SUFFICE: THE CATERPILLAR NET}}
+\title{Two Hidden Layers Suffice: The Caterpillar Net}
 \author{Jakob Paul Zimmermann\\
 \normalfont FU Berlin, TU Berlin\\
 \href{mailto:jakob.paul.zimmermann@campus.tu-berlin.de}{jakob.paul.zimmermann@campus.tu-berlin.de}\\
@@ -184,22 +259,35 @@
   pdfauthor={Jakob Paul Zimmermann}}
 
 \begin{document}
+\hypersetup{pageanchor=false}
 \maketitle
-\lhead{} % Use ICLR typography without asserting a conference submission.
-\renewcommand{\headrulewidth}{0pt}
+\thispagestyle{empty}
 \begin{abstract}
-Every continuous piecewise linear (CPWL) function is a finite signed sum of maxima of affine functions, making maximum representation a central problem in the study of the expressiveness of ReLU networks. Earlier work disproved the conjectured base-two depth bound, leaving open whether a constant number of hidden layers suffices. Inspired by the proof by \citet{BSY} that two hidden layers suffice for general CPWL functions, we give the \emph{Caterpillar Net}, a nonrecursive construction for the maximum of $N$ inputs with two hidden layers of widths $O(N^2)$ and $2^{O(N\log N)}$. The construction has a direct geometric interpretation.\footnote{Our results were obtained through proof search in Lean using Claude Code and Codex. The Lean code is available in the accompanying repository \href{https://github.com/JayPiZimmermann/Max_Caterpillar}{https://github.com/JayPiZimmermann/Max\_Caterpillar}. Links to the Lean formalization appear in theorem titles and equation numbers; equation numbers are clickable.}
+\normalsize
+Every continuous piecewise linear (CPWL) function is a finite signed sum of maxima of affine functions, making maximum representation a central problem in the study of the expressiveness of ReLU networks. Earlier work disproved the conjectured base-two depth bound, leaving open whether a constant number of hidden layers suffices to represent the maximum. Independently and concurrently, Brunck, Hertrich, Rue{\ss}, Stade, and Yehudayoff established that two hidden layers suffice for all CPWL functions.
+We give the \emph{Caterpillar Net}, a non-recursive explicit construction representing the maximum of $N$ real inputs exactly with two hidden layers of widths $\binom N2+N+1$ and $2^{O(N\log N)}$.
+\footnote{Our results were obtained over months of proof search in Lean using Claude Code and Codex; the AI methodology statement describes their roles. The Lean code is available in the accompanying repository \href{https://github.com/JayPiZimmermann/Max_Caterpillar}{https://github.com/JayPiZimmermann/Max\_Caterpillar}. Links to the Lean formalization appear in theorem titles and equation numbers; equation numbers are clickable.}
 \end{abstract}
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
 
 \section{Introduction}
 
-In this paper we investigate the representation capabilities of ReLU networks: What functions are representable by such networks of different depth and widths? As ReLU neural networks represent continuous piecewise-linear (CPWL) functions, a sharp question is: given any CPWL function, what is the ReLU network of smallest depth or smallest width representing this function?
-The maximum is a universal building block for such CPWL functions. Write
+In this paper we investigate the representation capabilities of ReLU
+networks: what functions are representable by such networks of different
+depths and widths? ReLU networks represent precisely the continuous
+piecewise-linear (CPWL) functions with finitely many pieces
+\cite{AroraEtAl}. A sharp question is therefore: given a CPWL function,
+what is the smallest depth, or the smallest width at a prescribed depth,
+needed to represent it exactly \cite{HertrichEtAl,SafranDepth}?
+The maximum is a universal building block for such functions:
+every CPWL function is a finite signed sum of maxima of affine
+functions \cite{WangSun}. Write
 \begin{align}\label{eq:maximum}
  \maxn_N(x):=\max_{0\leq i<N}x_i.
 \end{align}
 
-\begin{representationtheorem}[{\citealp{WangSun}}]
+\begin{representationtheorem}[Wang--Sun, \cite{WangSun}]
 Let $d\geq1$ and let $f:\R^d\to\R$ be continuous and affine on each member
 of a finite polyhedral cover. There are $R\in\mathbb N$, affine maps and signs
 \begin{align}\label{eq:hinging-maps}
@@ -217,83 +305,67 @@ Thus a two-hidden-layer representation of $\maxn_{d+1}$ gives one for every
 CPWL function on $\R^d$: precompose with the affine maps and add the networks
 in parallel.
 
-\begin{depthconjecture}[{\citealp[Conjecture~1.5]{HertrichEtAl}, disproved in 2025}]
-For every integer $k\geq1$, the function $x\mapsto\max\{0,x_1,\ldots,x_{2^k}\}$ cannot be represented by a ReLU network with $k$ hidden layers, regardless of their widths.
-\end{depthconjecture}
-The case $k=2$ was already disproved in the May 2025 preprint of \citet{BakaevEtAl}, later published at STOC 2026, by a two-hidden-layer representation of the maximum of five inputs. Their improved general upper bound still grows logarithmically, so this did not settle whether a weaker $\Omega(\log N)$ lower bound holds, or even whether the required depth grows with $N$ at all. Their concluding discussion explicitly left open whether constant depth, perhaps two hidden layers, suffices for all CPWL functions \citep{BakaevEtAl}. Here constant depth means a layer count independent of $N$, with widths allowed to grow.
-
-This reduction made the geometry of the maximum a central approach to the
-representation problem well before the work of \citet{BSY}.
-Polyhedral approaches to depth include the Newton-polytope framework of \citet{HertrichEtAl}, the simplex subdivisions of \citet{BakaevEtAl}, and the depth lower bounds for braid-fan-compatible networks of \citet{GrilloEtAl}.
-For width, \citet{SafranDepth} used extremal graph theory to prove lower bounds for exact maximum representation, while \citet{LuClosure} studied first hidden layer width thresholds for approximation and exact representation.
-\citet{BSY} then constructed two-hidden-layer ReLU representations for
-arbitrary CPWL functions in every dimension.
-
-\begin{theorem}[\citeauthor{BSY}, \citeyear{BSY}]
- \label{thm:bsy}
-    Every continuous piecewise affine function   $f:\mathbb{R}^d\to\mathbb{R}$ with finitely many affine pieces can be represented exactly by a ReLU network with two hidden layers.
-\end{theorem}
-
-Our contribution is to specialize their general construction to $\maxn_N$
-and simplify it into the \emph{Caterpillar Net}. Taking $2^{\Theta(N^2)}$ as the second hidden layer width baseline
-via applying the \citet{BSY} recursive construction, we pursue two aims:
-\begin{enumerate}
-\item Give a nonrecursive construction for $\maxn_N$ with a direct
-geometric interpretation.
-\item Reduce its second hidden layer width.
-\end{enumerate}
+\paragraph{Our contribution.}
+The \emph{Caterpillar Net} gives a nonrecursive two-hidden-layer representation of the maximum with explicit bounds on both hidden-layer widths. The construction uses a finite dictionary of support functions of caterpillar polytopes and their faces. 
+The maximum is the support function of a simplex. We first express this support function as an alternating sum of caterpillar support functions, up to a linear combination of support functions of lower-dimensional polytopes. We then represent the remaining error using faces of the same caterpillar polytopes and elementary ReLU features. Normalizing and merging these descriptions yields a width bound for the complete network, including all correction terms.
 
 \Needspace{8\baselineskip}
 Write $\relu(t):=\max(0,t)$ applied coordinatewise to vectors.
 A network has an input layer of $N$ coordinates, first and second hidden
 layers of widths $h_1$ and $h_2$, respectively, and a scalar output layer.
-Its parameters are
-\begin{align}\label{eq:network-parameters}
- \begin{aligned}
- W_1&\in\R^{h_1\times N},& b_1&\in\R^{h_1},\\
- W_2&\in\R^{h_2\times h_1},& b_2&\in\R^{h_2},\\
- w_3&\in\R^{h_2},& b_3&\in\R,
- \end{aligned}
-\end{align}
-
-and evaluates as the function
+With real weight matrices $W_1,W_2$, output vector $w_3$, and biases
+$b_1,b_2,b_3$ of the corresponding dimensions, it evaluates as
 \begin{align}\label{eq:network-evaluation}
  x\longmapsto w_3^\top\relu\bigl(W_2\relu(W_1x+b_1)+b_2\bigr)+b_3.
 \end{align}
-The first and second hidden layers apply ReLU, and the output layer is affine.
-There are no skip connections, and equality is required
-on all of $\R^N$.
+There are no skip connections; equality is required on all of $\R^N$. For $N=1,2,3$ there are known simple network representations of width $(2,2)$ and $(4,2)$ and $(7,5)$. Our Main Theorem presents such constructions for higher $N$.
 
-\Needspace{20\baselineskip}
-\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width}, \leandecl{MaxCaterpillar/Lemmas.lean}{80}{construction_width}, {\hyperref[pf:thm:main]{proof}}]\label{thm:main}
-For every $N\geq3$, define
-\begin{align}\label{eq:count}
- C_N=\sum_{m=2}^{N-1}\binom Nm\frac{m!}{2}(N-m)m^{N-m-1}.
+\Needspace{10\baselineskip}
+\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width}, \leandecl{MaxCaterpillar/Lemmas.lean}{80}{construction_width}, {\Cref{pf:thm:main}}]\label{thm:main}
+For every $N\geq3$, there is a two-hidden-layer ReLU network with rational weights and zero biases computing $\maxn_N$ with widths
+\begin{align}
+ h_1=\binom N2+N+1,\qquad h_2=3^{N-2}C_N-N(N-1)+2,\label{eq:width},
 \end{align}
-There is a two-hidden-layer ReLU network computing $\maxn_N$ with widths
-\begin{align}\label{eq:width}
- h_1=\binom N2+N+1,\qquad
- h_2=3^{N-2}C_N-N(N-1)+2.
-\end{align}
-In particular, these widths satisfy, as $N\to\infty$,
-\begin{align}\label{eq:asymptotics}
- h_1=O(N^2),\qquad h_2=2^{O(N\log N)}.
-\end{align}
+where $C_N:=\sum_{m=2}^{N-1}\binom Nm\frac{m!}{2}(N-m)m^{N-m-1}$. Thus $h_1=O(N^2)$ and $h_2=2^{O(N\log N)}$ as $N\to\infty$.
 \end{theorem}
 
-\noindent\textit{Remark (small arities).} The linked theorem also covers $N=1$ and $N=2$ by separate networks of widths $(2,2)$ and $(4,2)$. At $N=3$, formula~\eqref{eq:width} gives widths $(7,5)$.
+\section{Related work}\label{sec:related}
 
-\section{The Caterpillar Net}
+The conjecture that $\max\{0,x_1,\ldots,x_{2^k}\}$ requires more than $k$
+hidden layers \cite{HertrichEtAl} was disproved for $k=2$ by the maximum
+of five inputs in \cite{BakaevEtAl}. Exact
+computer-assisted searches subsequently obtained two-hidden-layer
+representations up to $N=12$ in \cite{RuessEtAl} and, independently,
+up to $N=8$ in \cite{WangBasu}. The improved general depth bounds remained
+logarithmic, leaving constant depth open.
 
-Two one-line identities drive the construction. For reals $s,t$ and every
-linear function $\ell$ on $\R^N$,
+Depth lower bounds hold for integer weights \cite{HaaseEtAl} and rational
+weights with restricted denominators \cite{AverkovEtAl}. These restrictions
+do not apply to the unrestricted real weights considered here. Other
+results concern braid-fan-compatible networks \cite{GrilloEtAl} and first
+hidden layer width bounds \cite{SafranDepth,LuClosure}.
+
+\begin{theorem}[Brunck, Hertrich, Rue{\ss}, Stade, and Yehudayoff, \cite{BSY}]\label{thm:bsy}
+Every continuous piecewise affine function $f:\R^d\to\R$ with finitely
+many affine pieces can be represented exactly by a ReLU network with two
+hidden layers.
+\end{theorem}
+Their first proof proceeds by induction on dimension, using homological algebra to construct a linear combination of support functions of pyramids over parallelepipeds that agrees with the simplex support function modulo lower-dimensional terms. Our construction restricts these building blocks to an explicitly specified finite family, the caterpillar polytopes; we deliver a geometric proof of the corresponding identity.
+
+Independently and concurrently, they developed a second proof based on combinatorial cancellation, using the same caterpillar construction. The caterpillar family and coefficients coincide with ours. We establish explicit width bounds for the first and second hidden layers, respectively. These bounds also apply to their combinatorial construction but are not stated in their paper.
+
+
+\section{The Caterpillar Net}\label{sec:construction}
+
+Two identities drive the construction:
 \begin{align}
  \max(s,t)&=t+\relu(s-t),\label{eq:max-hinge}\\
  \relu(\ell(x))&=\relu(-\ell(x))+\ell(x).\label{eq:hinge-reversal}
 \end{align}
-The first suggests computing the maximum along a path with attached leaves.
-Alternating sums of support functions of caterpillar polytopes give the correct support-function class; support functions of their proper faces, together with linear functions, correct the remaining error to pointwise equality.
-The second reverses an inner hinge at the cost of a linear term; it merges equal units in Section~\ref{sec:size}.
+The first suggests a path with attached leaves. A signed sum of the resulting
+caterpillar support functions agrees with the maximum modulo lower-dimensional
+terms; proper faces and linear functions correct the error. The second
+identity reverses hinges to merge units in \Cref{sec:size}.
 
 \Needspace{10\baselineskip}
 Fix $N\geq3$ and write $x=(x_0,\ldots,x_{N-1})\in\R^N$.
@@ -303,13 +375,18 @@ A \emph{caterpillar description} is a permutation--set pair
  \pi\in\operatorname{Sym}\{0,\ldots,N-1\},\qquad
  \varnothing\ne S\subseteq\{1,\ldots,r\},\qquad r:=N-2.
 \end{align}
-Position $j$ carries the label $\pi(j+1)$, for $0\leq j\leq r$, and the label $\pi(0)$ is the \emph{apex}.
-The \emph{spine positions} are $\{0\}\cup S$. We also call $S$ the \emph{cut set}: a cut at $j\in S$ separates positions $j-1$ and $j$ in the ordered list. The last spine position, and the \emph{parent} of a position $j\geq1$, the nearest spine position before it, are
+Position $j$ carries label $\pi(j+1)$, and $\pi(0)$ is the \emph{apex}.
+The \emph{spine positions} are $\{0\}\cup S$. The \emph{cut set} $S$
+separates positions $j-1$ and $j$ whenever $j\in S$.
+The last spine position $q$ and the \emph{parent} $p(j)$, the nearest
+preceding spine position, are
 \begin{align}\label{eq:word-parent}
  q:=\max S,\qquad
  p(j):=\max\bigl(\{0\}\cup\{i\in S:i<j\}\bigr)\qquad(1\leq j\leq r).
 \end{align}
-A graph on the set of labels with an edge from each position $j\geq1$ to its parent gives a directed tree, the \emph{labelled caterpillar}: its spine is the path through the spine positions, and every other label is a leaf attached to the preceding spine vertex (Figure~\ref{fig:caterpillar}). The apex is separate from this tree.
+The parent--child edges form the \emph{labelled caterpillar}: a path through
+the spine positions with each remaining label attached as a leaf to its
+parent (\Cref{fig:caterpillar}). The apex is separate from the tree.
 \end{definition}
 
 \begin{definition}[Caterpillar function and face functions, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}{rawCone}, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}{faceKey}]\label{def:caterpillar-function}\label{def:face-functions}
@@ -324,7 +401,9 @@ For a linear function $h$, a finite set $L$ of linear functions, and a \emph{sta
 \begin{align}
  U^{\tau}_{h,L}(x)&:=\relu\Bigl(h(x)+\sum_{\ell\in L}\tau(\ell)(x)\Bigr).\label{eq:faces}
 \end{align}
-Thus each $\ell\in L$ is omitted, kept linearly, or kept as a hinge. Write $U_{h,L}:=U^{\tau}_{h,L}$ for the all-hinge state $\tau(\ell)=\relu\circ\ell$. We call $(h,L)$ a \emph{function description} of $U_{h,L}$: it records the linear head and the inner hinges. The caterpillar description $(\pi,S)$ specifies the labelled tree from which such functions are generated.
+Each edge is omitted, kept linearly, or kept as a hinge. Write
+$U_{h,L}$ for the all-hinge state, and call $(h,L)$ its \emph{function
+description}, recording the head and inner hinges.
 The \emph{caterpillar function} of $(\pi,S)$ and its \emph{face functions} are
 \begin{align}\label{eq:word}
  U_{\pi,S}:=U_{h_{\pi,S},L_{\pi,S}},\qquad
@@ -336,12 +415,12 @@ The \emph{caterpillar function} of $(\pi,S)$ and its \emph{face functions} are
 \centering
 \begin{tikzpicture}[
  x=1cm,y=1cm,>=stealth,
- every node/.style={font=\small},
+ every node/.style={font=\normalsize},
  vertex/.style={circle,draw=black!55,fill=white,minimum size=9mm,inner sep=1pt},
  spine vertex/.style={vertex,draw=blue!45!black,fill=blue!8,line width=.9pt},
  leaf edge/.style={->,draw=black!65,line width=.65pt},
  spine edge/.style={->,draw=blue!45!black,line width=1.2pt},
- annotation/.style={font=\scriptsize,text=black!70}
+ annotation/.style={font=\normalsize,text=black!70}
 ]
 \node[vertex,dashed] (apex) at (-2,0) {$\pi(0)$};
 \node[annotation] at (-2,-.7) {apex};
@@ -378,11 +457,13 @@ is $h_{\pi,S}(x)=x_{\pi(7)}-x_{\pi(0)}$.}
 \end{figure}
 
 The term \emph{face function} comes from the following geometry.
-Identify a linear function $a(x)=\sum_i a_i x_i$ with its coefficient vector $a=(a_0,\ldots,a_{N-1})$, so that $a(x)=\langle a,x\rangle$.
-In particular, $\ell_{ij}$ is the vector $e_i-e_j$: it can be drawn as an arrow from $e_j$ to $e_i$.
-For a caterpillar, $h=h_{\pi,S}=e_{\pi(q+1)}-e_{\pi(0)}$ points from the apex label to the last spine label, and each $\ell\in L=L_{\pi,S}$ points from a child label to its parent label.
-In the polytope construction these are free vectors: $h$ places one corner of the base, and the vectors $\ell$ generate its edges. The polytope apex is the origin, distinct from the labelled point $e_{\pi(0)}$ used to define the head.
-For a polytope $P$, its \emph{support function}, and the polytope whose support function is $U_{h,L}$, are
+Identify $a(x)=\langle a,x\rangle$ with its coefficient vector. Then
+$\ell_{ij}=e_i-e_j$ points from $e_j$ to $e_i$, and
+$h=h_{\pi,S}=e_{\pi(q+1)}-e_{\pi(0)}$ points from the apex label to the
+last spine label. Each $\ell\in L=L_{\pi,S}$ points from child to parent.
+As free vectors, $h$ places a base corner and the $\ell$ generate its edges.
+The polytope apex is $0$, distinct from the labelled point $e_{\pi(0)}$.
+Define the \emph{support function} and the caterpillar polytope by
 \begin{align}
  h_P(x)&:=\max_{p\in P}\langle p,x\rangle,\label{eq:support-function}\\
  Q_{h,L}&:=\operatorname{conv}\Bigl(\{0\}\cup\Bigl(h+\sum_{\ell\in L}[0,\ell]\Bigr)\Bigr),\qquad
@@ -390,24 +471,26 @@ For a polytope $P$, its \emph{support function}, and the polytope whose support 
 \end{align}
 Indeed, the segment $[0,\ell]$ has support function $\relu\circ\ell$, Minkowski sums add support functions, and adjoining $0$ applies the outer ReLU.
 The base is the translated zonotope $h+\sum_{\ell\in L}[0,\ell]$.
-For a state $\tau$ in~\eqref{eq:faces}, set
+For a state $\tau$ in~\Cref{eq:faces}, set
 $t_\ell=\mathds{1}_{\{\tau(\ell)=\ell\}}$, where $\mathds{1}$ denotes the indicator.
-Thus $t_\ell=1$ for an edge kept linearly and $t_\ell=0$ for an omitted edge or a hinge; the hinges contribute segments separately.
+It is zero for omitted edges and hinges; the latter contribute segments.
 The corresponding polytope is
 $Q^\tau_{h,L}:=\operatorname{conv}\bigl(\{0\}\cup(h+\sum_{\ell\in L}t_\ell\ell+\sum_{\tau(\ell)=\relu\circ\ell}[0,\ell])\bigr)$,
 and $U^\tau_{h,L}=h_{Q^\tau_{h,L}}$.
-Thus a generator drawn between two labelled unit vectors is translated to the base corner $h$ when drawing the zonotope.
-Figure~\ref{fig:polytope-normalization} illustrates this for $N=4$ in the coordinates obtained by restricting to $x_0=0$: a coefficient vector $a$ becomes $(a_1,a_2,a_3)$, so $e_0$ is represented by $0$.
+\Cref{fig:polytope-normalization} illustrates the translated generators
+for $N=4$ on the slice $x_0=0$, where $a$ becomes $(a_1,a_2,a_3)$ and
+$e_0$ is represented by $0$.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{figures/caterpillar-normalization.pdf}
-\caption{Coordinate differences and the caterpillar polytope for $\pi=(0,3,2,1)$ and $S=\{1,2\}$. (a) The head $h=e_1-e_0$ and edge functions $L=\{\ell_{32}=e_3-e_2,\ell_{21}=e_2-e_1\}$ drawn between their labelled endpoints. (b) The same generators translated to the base corner $h$ of $Q_{h,L}$. (c) Normalization (Section~\ref{sec:size}) gives $h^+=h+\ell_{32}+\ell_{21}=e_3-e_0$ and $L^+=\{\ell_{12}=e_1-e_2,\ell_{23}=e_2-e_3\}$, leaving the polytope unchanged. Purple arrows represent the head (the apex--last spine connection before normalization); blue arrows represent the spine edge functions. Orange dots mark the polytope apex and purple dots the chosen head corner. The grey coordinate axes meet at the origin, representing $e_0$ after restriction to $x_0=0$; the positive unit points are labelled $e_1,e_2,e_3$.}
-\label{fig:polytope-normalization}
-\end{figure}
 
-The head and the $N-2$ edge functions are jointly linearly independent: their label edges form a tree on all $N$ labels, since the head connects the apex to the last spine vertex. Thus the base is an $(N-2)$-dimensional zonotope whose affine hull does not contain $0$, and $Q_{h,L}$ is an $(N-1)$-dimensional pyramid.
-A face of $Q_{h,L}$ containing the apex $0$ and another point is the convex hull of $0$ and a face of the base. Since the base is a translated sum of segments, the face exposed by a linear functional is obtained by maximizing on each segment separately, which selects the endpoint $0$, the endpoint $\ell$, or the whole segment. These have support functions $0$, $\ell$, and $\relu\circ\ell$, and the outer ReLU adjoins the apex. Hence the face functions~\eqref{eq:faces} include the support function of every face of $Q_{h,L}$ containing the apex.
+
+The head connects the apex label to the tree, so the head and $N-2$ edge
+functions are linearly independent. Thus the base is an $(N-2)$-dimensional
+zonotope with affine hull avoiding $0$, and $Q_{h,L}$ is an
+$(N-1)$-dimensional pyramid. Each nontrivial face containing $0$ cones over
+a base face. Maximizing on each base segment selects $0$, $\ell$, or
+$[0,\ell]$, with support functions $0$, $\ell$, and $\relu\circ\ell$;
+the outer ReLU adjoins the apex. These are precisely the three states
+in~\Cref{eq:faces}.
 
 \Needspace{8\baselineskip}
 \begin{definition}[Dictionary, \leandecl{MaxCaterpillar/Construction.lean}{68}{dictionary}]\label{def:dictionary}
@@ -425,109 +508,52 @@ Heads and edge functions are coordinate differences, so face functions and the f
 \begin{align}\label{eq:translation-invariance}
  U^{\tau}_{\pi,S}(x+t\one)=U^{\tau}_{\pi,S}(x)\qquad(t\in\R).
 \end{align}
-Only the coordinate features $\relu(\pm x_i)$ change under $x\mapsto x+t\one$.
-Theorem~\ref{thm:dictionary} below proves $\maxn_N\in\spn\D$; the following rule then fixes one real coefficient for each dictionary function.
+Only $\relu(\pm x_i)$ change under this translation.
+\Cref{thm:dictionary} proves that $\D$ spans the maximum.
+\Cref{app:coefficients} gives nonrecursive coefficients by averaging
+inverse-Gram expansions over its bases:
 
-A \emph{tag} is a finite description of a dictionary feature, retaining the data needed to construct it in the network. The tag set is $\mathcal A=\mathcal A_{\mathrm{face}}\sqcup\mathcal A_{\mathrm{aux}}$, with two types:
-a \emph{face tag} records a pair $(h',M)$ representing $\relu(h'+\sum_{\ell\in M}\relu\circ\ell)$, after absorbing linear edges into $h'$ and retaining only hinges in $M$ as in~\eqref{eq:face-description};
-there is one \emph{auxiliary tag} for each indexed feature in~\eqref{eq:aux_functions}.
-The evaluation map sends each description to its function:
-\begin{align}\label{eq:tag-family}
- v:\mathcal A\longrightarrow\D,\qquad \D=v(\mathcal A).
-\end{align}
-Different tags may represent the same function, so $v$ need not be injective.
-
-\paragraph[An exact coefficient rule]{An exact coefficient rule (\leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean}{172}{gramMatrix_isUnit})}
-Let
-\begin{align}\label{eq:bases}
- \B:=\{S\subseteq\D:S\text{ is a basis of }\spn\D\}.
-\end{align}
-This set is nonempty because the finite spanning set $\D$ contains a basis.
-For $S\in\B$, form
-\begin{align}\label{eq:gram-matrix}
- G_S&:=\bigl(\langle g,h\rangle\bigr)_{g,h\in S},\\
- b_S&:=\bigl(\langle g,\maxn_N\rangle\bigr)_{g\in S}.\label{eq:gram-rhs}
-\end{align}
-using the inner product
-\begin{align}\label{eq:inner-product}
- \langle f,g\rangle:=\int_{[-1,1]^N}f(x)g(x)\,dx.
-\end{align}
-Every dictionary function is continuous and positively homogeneous. If a linear combination of the basis functions has zero squared integral, continuity makes it zero throughout the cube, and positive rescaling then makes it zero on all of $\R^N$. Linear independence forces every coefficient to vanish, so $G_S$ is positive definite and invertible. Write $G_S^{-1}$ for its inverse matrix.
-For each $g\in\D$, average over the bases containing $g$:
-\begin{align}\label{eq:coefficients}
- c_g:=\frac{1}{|\B|}
-         \sum_{\substack{S\in\B\\g\in S}}(G_S^{-1}b_S)_{g}.
-\end{align}
-\begin{lemma}[Canonical expansion, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{72}{sum_canonicalCoeff_eq}]\label{lem:coefficients}
-Assuming Theorem~\ref{thm:dictionary}, the coefficients~\eqref{eq:coefficients} satisfy
+\begin{lemma}[Canonical expansion, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{72}{sum_canonicalCoeff_eq}, {\Cref{pf:lem:coefficients}}]\label{lem:coefficients}
+Assuming \Cref{thm:dictionary}, the coefficients~\Cref{eq:coefficients} satisfy
 \begin{align}\label{eq:canonical-expansion}
  \maxn_N=\sum_{g\in\D}c_gg.
 \end{align}
 \end{lemma}
-\begin{Proof}{Lemma}{lem:coefficients}
-Fix $S\in\B$. By Theorem~\ref{thm:dictionary}, there is $d\in\R^S$ such that
-\begin{align}\label{eq:basis-expansion}
- \maxn_N=\sum_{g\in S}d_g g.
-\end{align}
-Taking the inner product with each $h\in S$ gives
-\begin{align}\label{eq:normal-equations}
- \begin{aligned}
- (b_S)_h&=\sum_{g\in S}\langle h,g\rangle d_g=(G_Sd)_h,\\
- d&=G_S^{-1}b_S.
- \end{aligned}
-\end{align}
-Interchanging the finite sums in~\eqref{eq:coefficients} therefore yields
-\begin{align}\label{eq:average-expansion}
- \sum_{g\in\D}c_gg
- =\frac{1}{|\B|}\sum_{S\in\B}\sum_{g\in S}(G_S^{-1}b_S)_g\,g
- =\frac{1}{|\B|}\sum_{S\in\B}\maxn_N
- =\maxn_N.
-\end{align}
-\finishes{Lemma}{lem:coefficients}
-\end{Proof}
-For each tag, split the coefficient of its represented function equally over its nonempty finite fiber:
-\begin{align}\label{eq:tagged-coefficients}
- \widetilde c_a:=\frac{c_{v(a)}}{|\{b\in\mathcal A:v(b)=v(a)\}|}.
-\end{align}
-While computationally intractable to extract explicit weights for large $N$, averaging over all bases avoids arbitrary symmetry-breaking and provides a canonical coefficient map ideal for formal verification.
-Regrouping by the fibers of $v$ gives the literal tagged expansion
-\begin{align}\label{eq:tagged-expansion}
- \maxn_N=\sum_{a\in\mathcal A}\widetilde c_a v(a).
-\end{align}
-Thus duplicate face and auxiliary tags neither duplicate nor lose any coefficient.
 
-\section{Why the dictionary spans the maximum}
+% Begin sections/dictionary.tex
+\section{Why the dictionary spans the maximum}\label{sec:dictionary}
 
-The maximum $\maxn_N$ is the support function of $\operatorname{conv}\{e_0,\ldots,e_{N-1}\}$. To work with a full dimensional polytope, let us do the following substitution. First, let us define
+The maximum is the support function of a simplex. To work in its affine dimension, set
 \begin{align}\label{eq:simplex}
  \Delta:=\operatorname{conv}\{0,e_1,\ldots,e_{N-1}\}\subseteq H_0:=\{x\in\R^N:x_0=0\}.
 \end{align}
-Observe that for arbitrary input $x\in\R^N$
+For every $x\in\R^N$,
 \begin{align}\label{eq:full-coordinates}
  \maxn_N(x)=x_0+h_\Delta(x-x_0\one).
 \end{align}
-Hence, to prove that $\maxn_N\in\spn\D$ it suffices to show that $h_\Delta$ lies in the span of the restrictions of $\D$ to $H_0$. Indeed, $x_0=\relu(x_0)-\relu(-x_0)$ lies in the span of the auxiliary functions~\eqref{eq:aux_functions}, and by~\eqref{eq:translation-invariance} the substitution $x\mapsto x-x_0\one$ fixes every dictionary function except the coordinate features $\relu(\pm x_i)$, which become $\relu(\pm(x_i-x_0))$; by~\eqref{eq:hinge-reversal} these are linear combinations of auxiliary functions. Hence $x\mapsto g(x-x_0\one)$ belongs to $\spn\D$ for every $g\in\D$, and~\eqref{eq:full-coordinates} gives the claimed implication.
+It suffices to prove that $h_\Delta$ lies in the span of the restrictions of
+$\D$ to $H_0$: the substitution $x\mapsto x-x_0\one$ fixes every face
+function, sends coordinate features to $\relu(\pm(x_i-x_0))$, and preserves
+the dictionary span by~\Cref{eq:hinge-reversal}.
 
-All polytopes in the geometric argument below lie in the $(N-1)$-dimensional space $H_0$. We restrict heads and edge functions to $H_0$ and identify them with their coefficient vectors there. Let $\LS_k$ denote the real span of support functions of polytopes in $H_0$ of affine dimension at most $k$. In particular, $\LS_0$ is the space of linear functions.
-For a direction
-\begin{align}\label{eq:face-normal}
-u\in H_0,
-\end{align}
-the exposed face of a polytope $P\subseteq H_0$ with normal $u$ is the set of points of $P$ maximizing
-the linear function $p\mapsto\langle p,u\rangle$:
+Henceforth all polytopes lie in $H_0$, and heads and edge functions are
+identified with their restricted coefficient vectors. Let $\LS_k$ be the
+real span of support functions of polytopes of affine dimension at most
+$k$; thus $\LS_0$ consists of linear functions. The \emph{exposed face}
+of $P$ in direction $u\in H_0$ is
 \begin{align}\label{eq:exposed-face}
  P^u:=\{p\in P:\langle p,u\rangle=h_P(u)\}.
 \end{align}
-The opposite face $P^{-u}$ consists of the minimizers; for $u=0$, both faces are $P$ itself.
-Define the function
+The opposite face $P^{-u}$ consists of the minimizers. Define
 \begin{align}\label{eq:facet-difference}
  D_uh_P(x):=h_{P^u}(x)-h_{P^{-u}}(x)
  \qquad(x\in H_0).
 \end{align}
-Here $u$ selects the two faces, while $x$ is the input to their support functions. In particular, $D_0=0$.
-Geometrically, $D_u$ acts as a derivative that replaces the support function of a polytope by the difference of the support functions of its opposite exposed faces. If $\langle u,\cdot\rangle$ is nonconstant on $P$, these are proper boundary faces of smaller dimension; if it is constant, the two support functions cancel. This removes the full-dimensional contribution and explains the dimension drop in~\eqref{eq:face-dimension-drop}. For a simplex and a facet normal $u$, $D_u$ is a \emph{facet-isolating operator}: it returns that facet's support function minus the linear support function of the opposite vertex. This is the mechanism used in Step~\ref{stp:reconstruction}.
+Here $u$ selects the faces, while $x$ is the support-function input;
+$P^0=P$ gives $D_0=0$. For a simplex facet normal, $D_u$ subtracts the
+opposite vertex's linear support function from that of the facet.
 
-\Needspace{10\baselineskip}
+\Needspace{6\baselineskip}
 For a finite linear combination $g$ of support functions, define its one-sided directional derivative at $u$ by
 \begin{align}\label{eq:face-derivative}
 \begin{aligned}
@@ -535,7 +561,9 @@ For a finite linear combination $g$ of support functions, define its one-sided d
 \partial_u h_P&=h_{P^u},\qquad D_ug=\partial_ug-\partial_{-u}g.
 \end{aligned}
 \end{align}
-Thus the map $h_P\mapsto h_{P^u}$ extends linearly to linear combinations of support functions, independently of their decomposition. If $\dim P\leq k$, either $\langle u,\cdot\rangle$ is constant on $P$, so $D_uh_P=0$, or both selected faces have dimension at most $k-1$. Consequently,
+This makes $D_u$ independent of the support-function decomposition. When
+$\langle u,\cdot\rangle$ is constant on $P$, the exposed faces cancel;
+otherwise both have smaller dimension. Consequently,
 \begin{align}\label{eq:face-dimension-drop}
 D_u\LS_k\subseteq\LS_{k-1}\qquad(k\geq1).
 \end{align}
@@ -553,11 +581,12 @@ the required symmetry
    \sum_{\varnothing\ne S\subseteq\{1,\ldots,r\}}
    (-1)^{N+|S|}\bigl(x_{\pi(0)}+U_{\pi,S}(x)\bigr),
 \end{align}
-where the signs $(-1)^{N+|S|}$ are chosen to cancel the extra contributions from support functions of exposed caterpillar faces, modulo $\LS_{N-3}$. Establishing the required cancellations is a main step of the proof below.
+The signs cancel the extra exposed-face contributions modulo $\LS_{N-3}$,
+as proved below.
 
 \Needspace{8\baselineskip}
-\begin{theorem}[Dictionary sufficiency, \leandecl{MaxCaterpillar/Lemmas.lean}{54}{maximum_mem_dictionary}, {\hyperref[pf:thm:dictionary]{proof}}]\label{thm:dictionary}
-For every $N\geq3$, the dictionary of Definition~\ref{def:dictionary}
+\begin{theorem}[Dictionary sufficiency, \leandecl{MaxCaterpillar/Lemmas.lean}{54}{maximum_mem_dictionary}, {\Cref{pf:thm:dictionary}}]\label{thm:dictionary}
+For every $N\geq3$, the dictionary of \Cref{def:dictionary}
 satisfies
 \begin{align}\label{eq:dictionary-span}
  \maxn_N\in\spn\D.
@@ -565,37 +594,46 @@ satisfies
 \end{theorem}
 
 \begin{Proof}{Theorem}{thm:dictionary}
-Recall from this section's introduction that it suffices to show that $h_\Delta$ lies in the span of the restrictions of $\mathcal D$ to $H_0$.
 Define the error by
 \begin{align}\label{eq:facet-error}
-\begin{aligned}
-f:H_0&\longrightarrow\R,\\
-f(x)&:=F_N(x)-h_\Delta(x)\\
-&=F_N(0,x_1,\ldots,x_{N-1})-\max\{0,x_1,\ldots,x_{N-1}\}.
-\end{aligned}
+f:=F_N|_{H_0}-h_\Delta.
 \end{align}
-Step~\ref{stp:corrections} reduces dictionary membership to $f\in\LS_{N-2}$. Step~\ref{stp:reconstruction} shows that it suffices to prove $D_uf\in\LS_{N-3}$ for every direction $u$. Step~\ref{stp:class} proves these bounds by induction on $N$: dimension bounds and cancellation handle all directions except those with one coordinate different from all the others, which share a common value. In that case, deleting the exceptional coordinate invokes the induction hypothesis.
+\Cref{stp:corrections} reduces dictionary membership to $f\in\LS_{N-2}$;
+\Cref{stp:reconstruction} reduces this to $D_uf\in\LS_{N-3}$ for all $u$.
+\Cref{stp:class} proves these bounds by cancellation, using induction only
+when deleting a single exceptional coordinate.
 
 \pfstep{stp:corrections}{Reduce to a lower-dimensional error}
-In this step we reduce the problem to proving
+Assume temporarily that
 \begin{align}\label{eq:class-identity}
   f=F_N-h_\Delta\in\LS_{N-2}.
 \end{align}
-Assume this relation temporarily, and write $Q_{\pi,S}:=Q_{h_{\pi,S},L_{\pi,S}}$, so that $U_{\pi,S}=h_{Q_{\pi,S}}$ by~\eqref{eq:unit-polytope}. Since the apex terms in~\eqref{eq:signed-word-sum} are linear, the assumed relation gives
+Write $Q_{\pi,S}:=Q_{h_{\pi,S},L_{\pi,S}}$. Removing the linear apex terms
+from~\Cref{eq:signed-word-sum} gives
 \begin{align}\label{eq:geometric-class}
 \frac{1}{N!}\sum_{\pi}\sum_{\varnothing\ne S\subseteq\{1,\ldots,N-2\}}(-1)^{N+|S|}h_{Q_{\pi,S}}-h_\Delta\in\LS_{N-2}.
 \end{align}
 
-We will correct this error by differentiating its support-function terms via $\partial_u$ to lower the residual dimension until the residual is linear. The resulting support functions of proper faces of the $Q_{\pi,S}$ already lie in the dictionary span: the support function of the convex hull of the apex with a base face is a face function from Definition~\ref{def:face-functions}, given by~\eqref{eq:faces}, while the support function of a base face is a linear function plus inner hinges. Coordinate features represent the linear function, and~\eqref{eq:hinge-reversal} puts either orientation of each hinge in the span of~\eqref{eq:aux_functions}. The apex alone has zero support function, and $h_{Q_{\pi,S}}=U_{\pi,S}$ is itself a dictionary function. Differentiating the simplex support-function term also produces support functions of proper simplex faces. Their membership in the dictionary span is supplied by induction on the number of vertices.
+We correct the error by subtracting derivatives $\partial_u$ until it is
+linear. Faces of $Q_{\pi,S}$ already have support functions in the dictionary
+span: apex--base faces give~\Cref{eq:faces}, base faces give linear
+functions plus hinges, and the apex alone gives zero. Coordinate features
+and~\Cref{eq:hinge-reversal} represent the linear terms and either hinge
+orientation. Differentiating $h_\Delta$ also produces simplex faces;
+induction on their vertex count supplies these functions.
 
-\pfclaim{clm:simplex-faces}{Simplex faces, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean}{40}{hS_mem_of_subset_simplexVerts}, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean}{71}{simplex_sub_mem_coneFaceSpan}}
+\pfclaim{clm:simplex-faces}{Simplex faces, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean}{40}{hS_mem_of_subset_simplexVerts}, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean}{71}{simplex_sub_mem_coneFaceSpan}, {\Cref{pf:clm:simplex-faces}}}
 For every nonempty $T\subseteq\{0,e_1,\ldots,e_{N-1}\}$, the support function of $\Delta_T:=\operatorname{conv}T$ lies in the dictionary span.
 
+\phantomsection\label[proof]{pf:clm:simplex-faces}
 \paragraph{Start ($|T|=1$).}
 The support function of a singleton is linear and lies in the dictionary span.
 
 \paragraph{Step ($|T|\geq2$).}
-Fix $T$ and assume that $h_{\Delta_A}\in\spn\D$ for every nonempty vertex set $A$ with $|A|<|T|$, in particular for every nonempty proper subset of $T$. Consider a current vertex set $A\subseteq\{0,e_1,\ldots,e_{N-1}\}$ with $|A|\geq2$. To remove $v\in A$, choose a direction whose value at $v$ is strictly larger than its common value at all other vertices. The positive exposed face is then the singleton $\{v\}$, and the negative exposed face is the simplex on the remaining vertices. Writing $\Delta_A:=\operatorname{conv}A$, we have
+Fix $T$ and assume the claim for all smaller nonempty vertex sets. For any
+current vertex set $A$ with $|A|\geq2$, remove $v\in A$ using a direction
+whose value at $v$ exceeds its common value at the other vertices. Writing
+$\Delta_A:=\operatorname{conv}A$, this gives
 \begin{align}\label{eq:simplex-vertex-removal}
 \begin{aligned}
 u_v&:=\begin{cases}-\sum_{i=1}^{N-1}e_i&v=0,\\v&v\ne0,\end{cases}\\
@@ -603,29 +641,30 @@ u_v&:=\begin{cases}-\sum_{i=1}^{N-1}e_i&v=0,\\v&v\ne0,\end{cases}\\
 D_{u_v}h_{\Delta_A}(x)&=\langle v,x\rangle-h_{\Delta_{A\setminus\{v\}}}(x).
 \end{aligned}
 \end{align}
-Choose an ordering $v_1,\ldots,v_{N-|T|}$ of the vertices outside $T$. Denote the error associated with the remaining vertex set $T$ by
+Order the vertices outside $T$ as $v_1,\ldots,v_{N-|T|}$ and set
 \begin{align}\label{eq:initial-simplex-error}
 \varepsilon_T:=D_{u_{v_{N-|T|}}}\cdots D_{u_{v_1}}\left(\frac{1}{N!}\sum_\pi\sum_{\varnothing\ne S\subseteq\{1,\ldots,N-2\}}(-1)^{N+|S|}h_{Q_{\pi,S}}-h_\Delta\right).
 \end{align}
-The operators act from right to left, removing $v_1$, then $v_2$, and so on. In~\eqref{eq:simplex-vertex-removal}, the support function of the remaining simplex carries a minus sign, while the removed singleton contributes the linear function $x\mapsto\langle v,x\rangle$. Every subsequent $D_u$ annihilates linear functions. Thus the $N-|T|$ deletions give
+Each deletion changes the sign of the remaining simplex term, and subsequent $D_u$ annihilate the linear terms. Hence
 \begin{align}\label{eq:simplex-deletion-sign}
 D_{u_{v_{N-|T|}}}\cdots D_{u_{v_1}}h_\Delta=(-1)^{N-|T|}h_{\Delta_T}+\ell_T,
 \end{align}
-where $\ell_T$ is linear. The original error contains $-h_\Delta$, so the coefficient of $h_{\Delta_T}$ in $\varepsilon_T$ is $-(-1)^{N-|T|}=(-1)^{N-|T|+1}$. All other terms are linear functions or support functions of faces of the $Q_{\pi,S}$, since each $D_u$ replaces a support function by a difference of support functions of exposed faces.
-The coefficient of $h_{\Delta_T}$ in $\varepsilon_T$ is $\pm1$, and all other terms already lie in the dictionary span. Thus proving $\varepsilon_T\in\spn\D$ completes the induction step.
-To prove this membership, we use the additional information $\varepsilon_T\in\LS_{|T|-2}$, obtained by repeated application of~\eqref{eq:face-dimension-drop}. This bound starts the inner induction below: each reduction lowers the dimension bound by one while subtracting a function in the dictionary span, until the remaining error lies in $\LS_0$ and is therefore linear.
-For the full vertex set, the operator composition is empty and means the identity, so $\varepsilon_T$ is exactly the error in~\eqref{eq:geometric-class}.
+where $\ell_T$ is linear. Thus the coefficient of $h_{\Delta_T}$ in
+$\varepsilon_T$ is $(-1)^{N-|T|+1}$; all other terms are linear or
+caterpillar-face support functions and lie in $\spn\D$.
+By~\Cref{eq:face-dimension-drop}, $\varepsilon_T\in\LS_{|T|-2}$.
+For the full vertex set the empty composition is the identity.
 
-For this fixed $T$, define the remaining errors as functions $\varepsilon_T^{(j)}:H_0\to\R$ recursively by
+Lower the residual dimension recursively by
 \begin{align}\label{eq:error-peeling}
 \begin{aligned}
 \varepsilon_T^{(0)}(x)&:=\varepsilon_T(x),\\
 \varepsilon_T^{(j+1)}(x)&:=\varepsilon_T^{(j)}(x)-\sum_{u\in E_{T,j}}\bigl(\partial_u\varepsilon_T^{(j)}\bigr)(x).
 \end{aligned}
 \end{align}
-Here $x\in H_0$ and $0\leq j<|T|-2$. At stage $j$, the finite set of directions $E_{T,j}\subseteq H_0$ is chosen from the current error by the construction below. Thus $\varepsilon_T^{(j)}$ is the error left after $j$ derivative sums have been subtracted from $\varepsilon_T$; the superscript counts stages and is not a power.
+Here $0\leq j<|T|-2$; the next claim chooses each finite $E_{T,j}\subseteq H_0$.
 
-\pfclaim{clm:residual-reduction}{Residual reduction, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces.lean}{69}{mem_GSpanRel_sup_of_lt_finrank}}
+\pfclaim{clm:residual-reduction}{Residual reduction, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces.lean}{69}{mem_GSpanRel_sup_of_lt_finrank}, {\Cref{pf:clm:residual-reduction}}}
 The sets $E_{T,j}$ can be chosen successively so that, for $0\leq j\leq|T|-2$,
 \begin{align}\label{eq:residual-invariant}
 \begin{aligned}
@@ -633,150 +672,94 @@ The sets $E_{T,j}$ can be chosen successively so that, for $0\leq j\leq|T|-2$,
 \varepsilon_T-\varepsilon_T^{(j)}&\in\spn\D.
 \end{aligned}
 \end{align}
-Each remaining error is a linear combination of $h_{\Delta_T}$, support functions of proper faces of $\Delta_T$, support functions of faces of the $Q_{\pi,S}$, and linear functions. The second condition says that the part already removed is represented by the dictionary.
+Each residual remains a linear combination of $h_{\Delta_T}$, support
+functions of its proper faces and of caterpillar faces, and linear functions.
 
-\paragraph{Start ($j=0$).}
-By definition, $\varepsilon_T^{(0)}=\varepsilon_T$. Its dimension bound and support-function expression were established above, and the removed part is zero.
+\noindent The proof in \Cref{app:residual} chooses a direction orthogonal
+to each maximal-dimensional direction space, avoiding orthogonality to
+the simplex and other spaces. The derivative sum preserves each maximal
+term exactly once; subtracting it lowers the dimension.
 
-\paragraph{Step ($j<|T|-2$).}
-Assume the directions for the first $j$ stages have been chosen and the claim holds at stage $j$. Put $k:=|T|-2-j\geq1$. We require each new direction $u$ to be nonorthogonal to the simplex direction space $\operatorname{dir}\Delta_T:=\operatorname{span}\{v-w:v,w\in T\}$. Its values on $T$ are then not all equal, so the maximizing vertices form a nonempty proper subset:
-\begin{align}\label{eq:simplex-induction-use}
-\begin{aligned}
-A_u&:=\{v\in T:\langle u,v\rangle=h_{\Delta_T}(u)\},\qquad \varnothing\ne A_u\subsetneq T,\\
-\partial_u h_{\Delta_T}&=h_{\Delta_{A_u}}\in\spn\D.
-\end{aligned}
-\end{align}
-The last membership uses the outer induction hypothesis, since $|A_u|<|T|$. An orthogonal direction would leave $h_{\Delta_T}$ unchanged and would not allow this use of the hypothesis.
-
-Choose an auxiliary expression for $\varepsilon_T^{(j)}$ by support functions of polytopes of dimension at most $k$, and collect their distinct $k$-dimensional direction spaces. For each such space $V$, choose $u_V\in V^\perp$ not orthogonal to $\operatorname{dir}\Delta_T$ or to any other collected space $V'$. This is possible because $\dim\Delta_T=|T|-1>k$: each of $\operatorname{dir}\Delta_T$ and $V'$ contains a vector outside $V$, whose nonzero projection onto $V^\perp$ is not orthogonal to that vector. Adding sufficiently small multiples of these projections avoids each orthogonality condition in turn while preserving those already avoided. Choose $E_{T,j}:=\{u_V:V\text{ is a collected direction space}\}$, with $E_{T,j}=\varnothing$ if there are none. In the sum of derivatives over $E_{T,j}$, each term coming from a $k$-dimensional polytope is preserved exactly once. Every other derivative of that term is the support function of a proper face, while terms of lower dimension remain in $\LS_{k-1}$. Subtracting this derivative sum therefore cancels all $k$-dimensional terms. By the recursive definition~\eqref{eq:error-peeling}, the resulting error satisfies $\varepsilon_T^{(j+1)}\in\LS_{k-1}=\LS_{|T|-3-j}$.
-
-Now compute these same derivatives using the support-function expression in the claim. The derivative of $h_{\Delta_T}$ lies in the dictionary span by~\eqref{eq:simplex-induction-use}. Differentiating the support function of an already proper simplex face still gives a support function of a proper face of $\Delta_T$, so the same induction hypothesis applies. Differentiating the support function of a face of $Q_{\pi,S}$ gives a support function of a face of the same polytope, whose support functions lie in the dictionary span, and linear functions remain linear. Thus the derivative sum lies in the dictionary span. By~\eqref{eq:error-peeling}, $\varepsilon_T-\varepsilon_T^{(j+1)}$ is the sum of the previously removed part and this derivative sum, so it also lies in the dictionary span. Subtracting the derivative sum preserves the stated types of support-function terms. This completes the proof step.
-
-At stage $j=|T|-2$, the remaining error lies in $\LS_0$ and is linear. Together with~\eqref{eq:residual-invariant}, this gives $\varepsilon_T\in\spn\D$. Its vertex-deletion expression has coefficient $(-1)^{N-|T|+1}\in\{-1,1\}$ on $h_{\Delta_T}$ and all other terms in the dictionary span, so $h_{\Delta_T}\in\spn\D$. This completes the induction step on $|T|$. Taking $T$ to be the full vertex set proves $h_\Delta\in\spn\D$ under the temporary assumption~\eqref{eq:class-identity}.
-\finishes{Step}{stp:corrections}
+At stage $j=|T|-2$, the error is linear, so~\Cref{eq:residual-invariant}
+gives $\varepsilon_T\in\spn\D$. Its simplex coefficient is $\pm1$, and its
+other terms already lie in the span; hence $h_{\Delta_T}\in\spn\D$.
+Taking the full vertex set proves $h_\Delta\in\spn\D$ under
+assumption~\Cref{eq:class-identity}.
 
 \pfstep{stp:reconstruction}{Why the facet bounds imply the class identity}
 For $N\geq4$ and $f=F_N-h_\Delta$, we show that $f\in\LS_{N-2}$ follows from
 \begin{align}\label{eq:facet-reduction}
 D_uf\in\LS_{N-3}\qquad\text{for every }u\in H_0.
 \end{align}
-The idea is to express $f$ modulo $\LS_{N-2}$ using support functions of full-dimensional simplices. The facet bounds \eqref{eq:facet-reduction} then force their weighted contributions to cancel modulo $\LS_{N-2}$.
-
-The base of each $Q_{\pi,S}$ is an affine cube. Order its edge vectors by a bijection $\omega:\{1,\ldots,N-2\}\to L_{\pi,S}$, add them one at a time, and adjoin the apex:
-\begin{align}\label{eq:kuhn-simplices}
-K_{\pi,S,\omega}:=\operatorname{conv}\left(\{0\}\cup\left\{h_{\pi,S}+\sum_{a=1}^k\omega(a):0\leq k\leq N-2\right\}\right).
-\end{align}
-These $(N-2)!$ simplices are obtained by coning the \emph{Freudenthal--Kuhn triangulation} of the base to the apex \citep{Freudenthal1942,Kuhn1960}: in cube coordinates, each base simplex occupies one ordering region $1\geq t_{\omega(1)}\geq\cdots\geq t_{\omega(N-2)}\geq0$. For a hyperplane cut $P=P_+\cup P_-$, the support-function identity
-\begin{align}\label{eq:support-cut}
-h_P+h_{P_+\cap P_-}=h_{P_+}+h_{P_-}
-\end{align}
-shows that subdivision changes the sum of support functions only by support functions of the cutting sections. Hence
-\begin{align}\label{eq:kuhn-support-error}
-h_{Q_{\pi,S}}-\sum_\omega h_{K_{\pi,S,\omega}}\in\LS_{N-2}.
-\end{align}
-Substituting~\eqref{eq:kuhn-support-error} into~\eqref{eq:signed-word-sum} expresses $f$ as a finite linear combination of support functions of $(N-1)$-dimensional simplices in $H_0$, plus a remainder in $\LS_{N-2}$. The simplex $\Delta$ contributes its support function with coefficient $-1$, and the linear apex terms are included in the remainder.
-
-For a simplex $P$, an outward facet normal $\nu_F$ exposes the facet $F$ on one side and its opposite vertex $v_F$ on the other. Thus
-\begin{align}\label{eq:simplex-isolate-facet}
-D_{\nu_F}h_P(x)=h_F(x)-\langle v_F,x\rangle.
-\end{align}
-Directions exposing no facet on either side give support functions of faces of dimension at most $N-3$. Consequently,~\eqref{eq:facet-reduction} says that each weighted, signed sum of parallel-facet support functions belongs to $\LS_{N-3}$.
-
-Our assumption controls the weighted facet contributions, whereas our conclusion concerns $f$. To recover the original sum modulo $\LS_{N-2}$, we use the same linear operator for every simplex, so cancellations between facet contributions survive reconstruction. Define
+The base zonotope admits the Freudenthal--Kuhn triangulation
+\cite{Freudenthal1942,Kuhn1960}; coning it to the apex expresses each
+caterpillar support function as a sum of simplex support functions modulo
+$\LS_{N-2}$. For a simplex, $D_u$ isolates a facet up to the linear support
+function of its opposite vertex. Thus~\Cref{eq:facet-reduction} controls
+the weighted sums of parallel facets. A common linear reconstruction
+operator turns these facet cancellations back into a cancellation of the
+original simplex sum. Define
 \begin{align}\label{eq:sweep-operation}
 (\mathcal Tg)(x):=\begin{cases}g(x)&x_1\geq0,\\g(x-x_1e_1)&x_1<0.\end{cases}
 \end{align}
-The sign in this definition concerns the input $x$. To interpret it geometrically, first suppose that every point $p\in P$ satisfies $p_1\geq0$, and write $\operatorname{pr}(p):=p-p_1e_1$ for projection onto $p_1=0$. Since $\langle p,x\rangle-\langle\operatorname{pr}(p),x\rangle=p_1x_1$, each point dominates its projection when $x_1\geq0$, and its projection dominates when $x_1<0$. Consequently,
-\begin{align}\label{eq:sweep-support-high}
-\mathcal T h_P(x)=\max\{h_P(x),h_{\operatorname{pr}P}(x)\}=h_{\operatorname{conv}(P\cup\operatorname{pr}P)}(x).
-\end{align}
-This convex hull fills the segments with endpoints $p$ and its projection, for $p\in P$, so its dimension is at most $\dim P+1$. For an arbitrary $P$, choose $c\geq0$ such that $P+ce_1$ lies in $p_1\geq0$. Translation adds $cx_1$ to the support function, and $\mathcal T(x_1)=\relu(x_1)$, giving
-\begin{align}\label{eq:sweep-support-translate}
-\mathcal T h_P(x)=h_{\operatorname{conv}((P+ce_1)\cup\operatorname{pr}(P+ce_1))}(x)-c\relu(x_1).
-\end{align}
-The correction $\relu(x_1)$ is the support function of the segment $[0,e_1]$. Thus linearity gives
-\begin{align}\label{eq:sweep-dimension}
-\mathcal T\LS_k\subseteq\LS_{k+1}.
-\end{align}
 
-\pfclaim{clm:simplex-reconstruction}{Simplex reconstruction, \leandecl{MaxNN/Constructions/Paramid/Geom/Reconstruct.lean}{83}{simplex_reconstruct_any_height}}
+\pfclaim{clm:simplex-reconstruction}{Simplex reconstruction, \leandecl{MaxNN/Constructions/Paramid/Geom/Reconstruct.lean}{83}{simplex_reconstruct_any_height}, {\Cref{pf:clm:simplex-reconstruction}}}
 Every $(N-1)$-dimensional simplex $P\subseteq H_0$ satisfies
 \begin{align}\label{eq:simplex-reconstruction}
 h_P-\mathcal T\left(\sum_{F\text{ facet of }P}\operatorname{sgn}\langle\nu_F,e_1\rangle\,h_F\right)\in\LS_{N-2}.
 \end{align}
-Here $\nu_F$ is an outward normal of $F$. Its sign against $e_1$ records whether the facet bounds lines parallel to $e_1$ from above or below; parallel facets contribute zero. Let $k=|\{F\text{ facet of }P:\langle\nu_F,e_1\rangle\ne0\}|$ count facets not parallel to $e_1$. Boundedness ensures both nonzero signs occur, so $k\geq2$.
-
-\paragraph{Start ($k=2$).}
-There is one upper facet $F^+$ and one lower facet $F^-$. Every line parallel to $e_1$ that meets $P$ has its two intersection endpoints on these facets. Thus $h_P(x)=h_{F^+}(x)$ when $x_1\geq0$, and $h_P(x)=h_{F^-}(x)$ when $x_1<0$. When $x_1\geq0$, $\mathcal T$ evaluates at $x$, so subtracting $\mathcal T(h_{F^+}-h_{F^-})$ from $h_P$ leaves $h_{F^-}$. When $x_1<0$, $\mathcal T$ evaluates both facet support functions at $x-x_1e_1$, where they agree because the facets have the same projection. Their difference is therefore zero, again leaving $h_{F^-}$. The reconstruction error is therefore $h_{F^-}\in\LS_{N-2}$, proving the claim for $k=2$.
-
-\paragraph{Step ($k>2$).}
-Assume the claim for $k-1$, and let $P$ have $k$ facets not parallel to $e_1$. Two of them have the same nonzero sign of $\langle \nu_F, e_1 \rangle$. Their intersection is an $(N-3)$-dimensional face $C$. Let $W:=\operatorname{span}\{p-q:p,q\in C\}$, and project orthogonally within $H_0$ onto $W^\perp$. This is a two-dimensional plane, since $\dim H_0=N-1$ and $\dim W=N-3$. All points of $C$ have the same projection $c$, because their differences lie in $W$. There are just two vertices of $P$ outside $C$, so the projected simplex is a triangle with vertices $c$ and the projections of those two vertices. The chosen facets project to its two sides meeting at $c$.
-
-The chosen facet normals are orthogonal to $W$, so their signs against $e_1$ equal their signs against its projection. This projected direction is nonzero, since the chosen facets are not parallel to $e_1$. If both sides are upper, moving from $c$ opposite to this direction enters the triangle; if both are lower, moving in this direction enters it. Continuing meets the interior of the opposite edge. The inverse image of the line through $c$ in this direction is a hyperplane in $H_0$ containing $C$ and parallel to $e_1$. It cuts the edge whose endpoints are the two vertices outside $C$ at an interior point and divides $P$ into two $(N-1)$-dimensional simplices. Each keeps one of the two chosen facets and replaces the other by the new facet parallel to $e_1$. Its other facets retain their normal directions, so each new simplex has exactly $k-1$ facets not parallel to $e_1$.
-
-Write $E(Q)$ for the reconstruction error on the left of~\eqref{eq:simplex-reconstruction}. Let $P_+$ and $P_-$ be the two new simplices, let $R:=P_+\cap P_-$ be their common cutting facet, and write $F_1,F_2$ for the chosen facets and $R_F:=R\cap F$ for every other facet of $P$. With $s_F:=\operatorname{sgn}\langle\nu_F,e_1\rangle$, applying~\eqref{eq:support-cut} to $P$ and to every split facet gives the exact residual identity
-\begin{align}\label{eq:ridge-cut-residual}
-E(P)=E(P_+)+E(P_-)-h_R+\mathcal T\left(\sum_{\substack{F\text{ facet of }P\\F\notin\{F_1,F_2\}}}s_Fh_{R_F}\right).
-\end{align}
-Indeed, the inherited facets retain their signs, while the two copies of $R$ are parallel to $e_1$ and therefore have sign zero. By the induction hypothesis, $E(P_+),E(P_-)\in\LS_{N-2}$; moreover, $\dim R=N-2$ and $\dim R_F\leq N-3$. Equation~\eqref{eq:sweep-dimension} therefore puts every term on the right of~\eqref{eq:ridge-cut-residual} in $\LS_{N-2}$. This proves the claim for $k$ and completes the induction.
-
-\paragraph{Conclusion for $f$.}
-Apply~\eqref{eq:simplex-reconstruction} to every simplex support-function term in the expansion of $f$, keeping its original coefficient. A facet $F$ parallel to $e_1$ has $\langle\nu_F,e_1\rangle=0$, so its term in the reconstruction formula is zero and can be omitted. For each remaining occurrence of a facet, choose $\nu_F$ outward from its simplex and put
-\begin{align}\label{eq:normalized-facet-normal}
-u_F:=\frac{\nu_F}{\langle\nu_F,e_1\rangle},\qquad \langle u_F,e_1\rangle=1.
-\end{align}
-Thus the coordinate with index $1$ is normalized to $1$; the coordinate with index $0$ remains zero because $u_F\in H_0$. Oppositely oriented parallel normals give the same $u_F$. Only the normal is rescaled: the support function and its coefficient are unchanged.
-
-Let $\mathcal U$ be the finite set of vectors $u_F$ obtained this way. For each $u\in\mathcal U$, define $G_u$ by adding all facet support-function terms with $u_F=u$, retaining their signs and weights. An occurrence of $F$ as a facet of $K_{\pi,S,\omega}$ contributes $(-1)^{N+|S|}\operatorname{sgn}\langle\nu_F,e_1\rangle\,h_F/N!$, while an occurrence as a facet of $\Delta$ contributes $-\operatorname{sgn}\langle\nu_F,e_1\rangle\,h_F$. These are precisely the terms with the same normalized normal, including all repetitions.
-
-More explicitly, define $\rho$ to be the sum of the linear apex terms and the weighted subdivision errors in~\eqref{eq:kuhn-support-error}. Then
-\begin{align}\label{eq:simplex-support-expansion}
-f=\frac1{N!}\sum_\pi\sum_{\varnothing\ne S\subseteq\{1,\ldots,N-2\}}(-1)^{N+|S|}\sum_\omega h_{K_{\pi,S,\omega}}-h_\Delta+\rho,
-\qquad \rho\in\LS_{N-2}.
-\end{align}
-For a simplex $P$, collect its facets with normalized normal $u$ as
-\begin{align}\label{eq:single-facet-group}
-B_u(P):=\sum_{\substack{F\text{ facet of }P\\\langle\nu_F,e_1\rangle\ne0,\ u_F=u}}\operatorname{sgn}\langle\nu_F,e_1\rangle h_F.
-\end{align}
-An empty sum is zero. If $\langle\nu_F,e_1\rangle>0$, the direction $u_F$ exposes $F$; if it is negative, $-u_F$ exposes $F$. The opposite face is a single vertex, so~\eqref{eq:simplex-isolate-facet} gives the signed facet term up to a linear function. If neither $u$ nor $-u$ exposes a facet of $P$, both exposed faces have dimension at most $N-3$. Thus $D_uh_P-B_u(P)\in\LS_{N-3}$. Applying this to the full weighted expansion, with the same permutations and nonempty cut sets as in~\eqref{eq:signed-word-sum}, gives
-\begin{align}\label{eq:facet-group-bound}
-\begin{aligned}
-D_uf-G_u&=\sum_{\pi,S\ne\varnothing}\frac{(-1)^{N+|S|}}{N!}\sum_\omega\left(D_uh_{K_{\pi,S,\omega}}-B_u(K_{\pi,S,\omega})\right)\\
-&\quad-\left(D_uh_\Delta-B_u(\Delta)\right)+D_u\rho\in\LS_{N-3}
-\qquad(u\in\mathcal U).
-\end{aligned}
-\end{align}
-Together with~\eqref{eq:facet-reduction}, relation~\eqref{eq:facet-group-bound} puts every $G_u$ in $\LS_{N-3}$. By linearity, the sum of the reconstructed facet terms is $\mathcal T(\sum_{u\in\mathcal U}G_u)$, which lies in $\LS_{N-2}$ by~\eqref{eq:sweep-dimension}. Its difference from $f$ consists of the reconstruction and subdivision remainders, also in $\LS_{N-2}$. Hence $f\in\LS_{N-2}$.
-\finishes{Step}{stp:reconstruction}
+Here $\nu_F$ is an outward normal of $F$. Its sign against $e_1$ records whether the facet bounds lines parallel to $e_1$ from above or below; parallel facets contribute zero. 
+The operator $\mathcal T$ fills the segments between a polytope and its
+projection onto $p_1=0$, up to a segment correction for translation; hence
+$\mathcal T\LS_k\subseteq\LS_{k+1}$. Applying the claim with the same
+operator to every simplex preserves the cancellations between parallel facets. Their sums lie in $\LS_{N-3}$, so their reconstructions lie in
+$\LS_{N-2}$, as required. \Cref{app:reconstruction} proves the claim
+and the subdivision and grouping steps.
 
 \Needspace{5\baselineskip}
-\pfstep{stp:class}{Prove the class identity by induction}
-\pfclaim{clm:class-identity}{Class identity, \leandecl{MaxCaterpillar/Lemmas.lean}{48}{class_identity}}
-The class identity~\eqref{eq:class-identity} holds for every $N\geq3$.
+\pfclaim{clm:class-identity}{Class identity, \leandecl{MaxCaterpillar/Lemmas.lean}{48}{class_identity}, {\Cref{pf:clm:class-identity}}}
+The class identity~\Cref{eq:class-identity} holds for every $N\geq3$.
 
+\pfstep{stp:class}{Prove the class identity by induction}
+\phantomsection\label[proof]{pf:clm:class-identity}
 \paragraph{Start ($N=3$).}
-Here $r=1$, so the nonempty cut set $S$ must be $\{1\}$. The tree has the single edge $\pi(1)\to\pi(2)$, with $q=1$ and $p(1)=0$. Equation~\eqref{eq:apex-maximum} gives
+Here $S=\{1\}$, $q=1$, and $p(1)=0$, so~\Cref{eq:apex-maximum} gives
 \begin{align}\label{eq:base-unit}
 \begin{aligned}
 x_{\pi(0)}+U_{\pi,\{1\}}(x)&=\max\bigl\{x_{\pi(0)},x_{\pi(2)}+\relu(x_{\pi(1)}-x_{\pi(2)})\bigr\}\\
 &=\max\{x_{\pi(0)},x_{\pi(1)},x_{\pi(2)}\}=\maxn_3(x).
 \end{aligned}
 \end{align}
-Each term has coefficient $(-1)^{3+1}/3!=1/6$. For each apex label there are two orders of the remaining labels, and both give $\maxn_3$. Grouping the six positive terms by their apex gives
+All six terms have coefficient $1/6$, so
 \begin{align}\label{eq:base-formula}
-F_3(x)=\frac16\left(\underbrace{2\maxn_3(x)}_{\pi(0)=0}+\underbrace{2\maxn_3(x)}_{\pi(0)=1}+\underbrace{2\maxn_3(x)}_{\pi(0)=2}\right)=\maxn_3(x).
+F_3=\maxn_3.
 \end{align}
-On $H_0$, $x_0=0$ and $\maxn_3(x)=\max\{0,x_1,x_2\}=h_\Delta(x)$. Hence $f=0\in\LS_1$, proving~\eqref{eq:class-identity} for $N=3$.
+On $H_0$, this gives $f=0\in\LS_1$.
 
 \paragraph{Step ($N\geq4$).}
-Assume the class identity for $N-1$. By Step~\ref{stp:reconstruction}, it suffices to prove $D_uf\in\LS_{N-3}$ for every $u\in H_0$. By~\eqref{eq:facet-difference}, applying $D_u$ replaces each support function $h_P$ by $h_{P^u}-h_{P^{-u}}$: we select the maximizing and minimizing faces in direction $u$ and subtract their support functions. The linear apex terms disappear. For $\Delta$, these faces contain exactly the vertices with largest and smallest coordinate values $u_i$, including $u_0=0$. For a caterpillar base, the segment $[0,\ell_{ij}]$ remains free when $u_i=u_j$; its maximizing endpoint is $\ell_{ij}$ when $u_i>u_j$ and $0$ when $u_i<u_j$. The minimizing face uses the opposite choices.
-
-We discard support-function contributions already in $\LS_{N-3}$ and cancel the remaining ones. Induction is needed only when one of $u_0,\ldots,u_{N-1}$ differs from the common value of all the others: the exposed simplex facet and the surviving caterpillar sum then give the same problem with $N-1$ inputs.
+Assume the class identity for $N-1$. By \Cref{stp:reconstruction}, it
+suffices to prove $D_uf\in\LS_{N-3}$ for every $u\in H_0$. The linear apex
+terms disappear. The exposed simplex faces have the largest and smallest
+coordinate values $u_i$, including $u_0=0$. In a caterpillar base,
+$[0,\ell_{ij}]$ remains free when $u_i=u_j$; its maximizing endpoint is
+$\ell_{ij}$ when $u_i>u_j$ and $0$ when $u_i<u_j$. Minimization reverses
+these choices.
 
 \paragraph{Discarding contributions in $\LS_{N-3}$.}
-Fix $u\in H_0\setminus\{0\}$, since $D_0f=0$, and fix a caterpillar polytope $Q_{\pi,S}$ occurring in the signed sum. We first analyze its exposed faces. A face $F$ of $Q_{\pi,S}$ lying entirely in the base zonotope $B_{\pi,S}:=h_{\pi,S}+\sum_{\ell\in L_{\pi,S}}[0,\ell]$, and thus not containing the apex $0$, is itself a translated sum of segments. Its support function is therefore a linear function plus a sum of segment support functions, and belongs to $\LS_1\subseteq\LS_{N-3}$. If the exposed face is the singleton apex $\{0\}$, its support function is identically zero. If at least two tree edges have endpoints whose labels $i,j$ satisfy $u_i\ne u_j$, at most $N-4$ segments remain free, so even adjoining the apex gives dimension at most $N-3$. Thus we need only faces containing the apex and an exposed base face, with at most one tree edge whose endpoint labels $i,j$ satisfy $u_i\ne u_j$.
+Fix $u\in H_0\setminus\{0\}$, since $D_0f=0$, and a summand $Q_{\pi,S}$.
+A face lying entirely in its base
+$B_{\pi,S}:=h_{\pi,S}+\sum_{\ell\in L_{\pi,S}}[0,\ell]$, without the
+apex $0$, is a translated sum of segments; its support function lies in
+$\LS_1\subseteq\LS_{N-3}$. The singleton apex has zero support function.
+If at least two tree edges have endpoint labels $i,j$ with $u_i\ne u_j$,
+at most $N-4$ segments remain free; adjoining the apex gives dimension at
+most $N-3$. Only apex--base faces with at most one tree edge whose endpoint
+coordinate values differ remain.
 
-We consider an exposed face in either direction $u$ or $-u$. For the latter, replace $u$ by $-u$, so that in both cases we analyze the face on which $\langle u,\cdot\rangle$ is maximized. Let $a:=u_{\pi(0)}$ be the coordinate value at the apex label. The exposed face contains both the apex $0$ and points of the base precisely when the maximum of $\langle u,p\rangle$ over the base is zero. There are three cases.
+For a face exposed in direction $-u$, replace $u$ by $-u$; we can then
+always analyze maximizers of $\langle u,\cdot\rangle$. Put
+$a:=u_{\pi(0)}$. The face contains both the apex and base points exactly
+when the maximum over the base is zero. There are three cases.
 
 \paragraph{Case 1: one spine edge with unequal endpoint values.}
 Removing this edge splits the tree into two components with constant coordinate values $c\ne d$. The maximum over the base is $\max\{c,d\}-a$, so the required condition is
@@ -795,7 +778,9 @@ If $d>c$, the apex label has value $c$, giving exactly two distinct coordinate v
 \paragraph{Case 3: equal values at every tree-edge endpoint pair.}
 If $u_i=u_j$ for the endpoint labels of every tree edge, all tree values equal some $c$. The maximum over the base is $c-a$, so we would also need $a=c$, making every coordinate of $u$ equal. Since $u\in H_0$, this would force $u=0$, which we excluded.
 
-Replacing $u$ by $-u$ preserves the two types of pattern from Cases 1 and 2. Therefore every remaining contribution has either exactly two distinct coordinate values or the three-value pattern $(c+t,c-t,c,\ldots,c)$; all other directions have been excluded. Since $Q_{\pi,S}$ was arbitrary, this classification applies to every summand. We now consider their contributions to the full signed sum.
+Negating $u$ preserves these patterns. Since $Q_{\pi,S}$ was arbitrary,
+only directions with two distinct coordinate values or the pattern
+$(c+t,c-t,c,\ldots,c)$ can contribute to the full signed sum.
 
 \paragraph{Cancellation for three distinct values.}
 Let $\alpha,\beta$ be the exceptional labels, with $u_\alpha=c+t$, $u_\beta=c-t$, and $u_i=c$ for every other label, where $t\ne0$. Let $\tau$ exchange $\alpha$ and $\beta$ and fix all other labels. Define the linear map $R:H_0\to H_0$ explicitly by
@@ -804,7 +789,7 @@ Let $\alpha,\beta$ be the exceptional labels, with $u_\alpha=c+t$, $u_\beta=c-t$
 \end{align}
 Thus $R$ first swaps the two exceptional coordinates and then subtracts the new zeroth coordinate from every coordinate; in particular, $(Rx)_0=0$. Since $u_0=0$, this formula also gives $Rx=x-\frac{x_\alpha-x_\beta}{t}u$. With the explicit linear functional $\langle b,x\rangle:=(x_\alpha-x_\beta)/(2t)$, we therefore have $Rx=x-2\langle b,x\rangle u$, $\langle b,u\rangle=1$, and $Ru=-u$. Hence $R$ is a rank-one reflection. Permutation symmetry and the common coordinate shift $-x_{\tau(0)}$ give $F_N(Rx)=F_N(x)+\ell(x)$ for a linear function $\ell$.
 Write $G:=F_N|_{H_0}$. Applying the reflection identity to $u+\varepsilon x$ and to $u$, subtracting, dividing by $\varepsilon>0$, and taking $\varepsilon\downarrow0$ gives $\partial_{-u}G(Rx)=\partial_uG(x)+\ell(x)$, because $R(u+\varepsilon x)=-u+\varepsilon Rx$.
-To remove $R$ from the derivative argument, positive homogeneity gives the identity $\partial_vG(x+\lambda v)=\partial_vG(x)+\lambda G(v)$ for every real $\lambda$. Indeed, for sufficiently small $\varepsilon>0$, write $v+\varepsilon(x+\lambda v)=(1+\varepsilon\lambda)\bigl(v+\frac{\varepsilon}{1+\varepsilon\lambda}x\bigr)$ and apply the definition~\eqref{eq:face-derivative}.
+To remove $R$ from the derivative argument, positive homogeneity gives the identity $\partial_vG(x+\lambda v)=\partial_vG(x)+\lambda G(v)$ for every real $\lambda$. Indeed, for sufficiently small $\varepsilon>0$, write $v+\varepsilon(x+\lambda v)=(1+\varepsilon\lambda)\bigl(v+\frac{\varepsilon}{1+\varepsilon\lambda}x\bigr)$ and apply the definition~\Cref{eq:face-derivative}.
 Using this identity with $v=-u$ and $\lambda=2\langle b,x\rangle$, we obtain
 \begin{align}\label{eq:braid-germ}
 \begin{aligned}
@@ -832,11 +817,16 @@ $u_{\pi(1)}=\cdots=u_{\pi(k)}\ne u_{\pi(k+1)}=\cdots=u_{\pi(r+1)}$ with $k\in S$
 Inactive fixed points of the global transformation are already in $\LS_{N-3}$ by the dimension bound. Summing the active pairs therefore puts $D_uF_N$ in $\LS_{N-3}$. Each exposed simplex face has at most $N-2$ vertices and hence dimension at most $N-3$, so $D_uf\in\LS_{N-3}$ without using induction.
 
 \paragraph{One exceptional coordinate: the induction hypothesis.}
-We are still working in $H_0$, so $u_0=x_0=0$. It remains to consider two values, one occurring only once. Choose a permutation $\tau$ such that $\tau(0)$ is the exceptional label. Relabeling must be followed by subtracting the new zeroth coordinate to stay in $H_0$:
+Suppose one of the two values occurs only once. Choose $\tau$ with
+$\tau(0)$ the exceptional label. To stay in $H_0$, relabel and subtract
+the new zeroth coordinate:
 \begin{align}\label{eq:coordinate-relabel}
 B_\tau:H_0\longrightarrow H_0,\qquad (B_\tau x)_i:=x_{\tau(i)}-x_{\tau(0)}\qquad(0\leq i<N).
 \end{align}
-Its zeroth coordinate is zero, and its inverse is $B_{\tau^{-1}}$. It sends $u$ to $(0,t,\ldots,t)$ with $t\ne0$. This change preserves every $\LS_k$ and changes $f$ only by a linear term, annihilated by $D$; we transform both the input and the direction. Rescaling the direction, and reversing the sign of $D_u$ if necessary, reduces to $u=(0,1,\ldots,1)$ within $H_0$. It remains to show that $D_u f \in \mathcal L_0$.
+Its inverse is $B_{\tau^{-1}}$, and it sends $u$ to $(0,t,\ldots,t)$,
+$t\ne0$. Transforming both input and direction preserves every $\LS_k$
+and changes $f$ only by a linear term, annihilated by $D$. Rescaling,
+and reversing the sign of $D_u$ if needed, reduces to $u=(0,1,\ldots,1)$.
 
 This direction exposes the $(N-2)$-dimensional facet $\Delta':=\operatorname{conv}\{e_1,\ldots,e_{N-1}\}$ and the opposite vertex $0$. Hence
 \begin{align}\label{eq:simplex-facet}
@@ -853,18 +843,266 @@ for
 \begin{align}\label{eq:lower-arity-weight}
     W_{N-1}&:=\sum_{\varnothing\ne T\subseteq\{1,\ldots,N-3\}}(-1)^{N-1+|T|}.
 \end{align}
-The remaining $N-1$ inputs $z$ need not start with zero, but $y$ lies in the lower-arity slice $\{y\in\R^{N-1}:y_0=0\}$, exactly the domain of the induction hypothesis. Apply the $(N-1)$-input class identity to $y$ on the right. Linear precomposition preserves $\LS_{N-3}$, and the last term is linear. Since $(N-1)-2=N-3$, this gives
+Unlike $z$, the vector $y$ has zeroth coordinate zero, so the $(N-1)$-input
+induction hypothesis applies to it. Linear precomposition preserves
+$\LS_{N-3}$, and the last term is linear. Thus
 \begin{align}\label{eq:lifted-induction}
 \bigl(x\mapsto F_{N-1}(x_1,\ldots,x_{N-1})-\max\{x_1,\ldots,x_{N-1}\}\bigr)\in\LS_{N-3}.
 \end{align}
-The remaining task is to match the exposed caterpillar support functions with the lower-arity sum.
-
-\pfclaim{clm:coordinate-deletion}{Coordinate deletion, \leandecl{MaxCaterpillar/Lemmas.lean}{41}{coordinate_deletion}}
+\pfclaim{clm:coordinate-deletion}{Coordinate deletion, \leandecl{MaxCaterpillar/Lemmas.lean}{41}{coordinate_deletion}, {\Cref{pf:clm:coordinate-deletion}}}
 For $N\geq4$,
 \begin{align}\label{eq:coordinate-deletion}
 D_{(0,1,\ldots,1)}(F_N|_{H_0}) -\bigl(x\mapsto F_{N-1}(x_1,\ldots,x_{N-1})\bigr)\in\LS_{N-3}.
 \end{align}
-The proof below checks the surviving terms and their coefficients. Readers may skip it and continue with the \hyperref[par:finish-arity-induction]{completion of the induction}.
+The proof is in \Cref{app:coordinate-deletion}. Its mechanism is that only degree-one tree positions of label $0$ survive. Each nonempty lower cut set has $N$ insertion preimages, each contributing $1/N$ of its lower coefficient. The extra empty-cut star sum lies in $\LS_{N-3}$ by Boolean cancellation.
+
+\paragraph{Completion of the induction.}\phantomsection\label{par:finish-arity-induction}
+Combining~\Cref{eq:simplex-facet}, \Cref{eq:lifted-induction}, and \Cref{clm:coordinate-deletion} gives
+\begin{align}\label{eq:induction-error-split}
+\begin{aligned}
+D_uf(x)={}&\bigl[D_u(F_N|_{H_0})(x)-F_{N-1}(x_1,\ldots,x_{N-1})\bigr]\\
+&+\bigl[F_{N-1}(x_1,\ldots,x_{N-1})-\max\{x_1,\ldots,x_{N-1}\}\bigr].
+\end{aligned}
+\end{align}
+Both brackets lie in $\LS_{N-3}$, the first by
+\Cref{clm:coordinate-deletion} and the second by induction.
+\Cref{stp:reconstruction} now gives $f\in\LS_{N-2}$, and
+\Cref{stp:corrections} gives the dictionary representation.
+\end{Proof}
+% End sections/dictionary.tex
+
+\section{Network size}\label{sec:size}
+
+The widths in \Cref{thm:main} are worst-case upper bounds: we count
+all possible descriptions after collecting linear terms into the head and
+orienting the remaining hinges consistently. Discarding zero aggregate
+coefficients can give a smaller network; zero padding realizes the stated
+widths.
+
+For a face state, first absorb every linear edge into the head:
+\begin{align}\label{eq:face-description}
+ U^{\tau}_{h,L}=U_{h',M},\qquad
+ h':=h+\sum_{\tau(\ell)=\ell}\ell,\qquad
+ M:=\{\ell\in L:\tau(\ell)=\relu\circ\ell\}.
+\end{align}
+By~\Cref{eq:hinge-reversal}, reversing each remaining $\ell_{ij}$ with
+$i>j$ gives the same function with the \emph{normalized description}
+\begin{align}\label{eq:normalized-description}
+\begin{aligned}
+   M^+&:=\{\ell_{\min(i,j),\max(i,j)}:\ell_{ij}\in M\},\\
+   h^+&:=h'+\sum_{\ell_{ij}\in M,\ i>j}\ell_{ij}.
+\end{aligned}
+\end{align}
+Geometrically, $[0,\ell]=\ell+[0,-\ell]$: reversing a generator shifts the
+head by the old generator. Normalization chooses a consistent orientation
+and a corresponding base corner; it does not rescale vectors or change the
+polytope (\Cref{fig:polytope-normalization}).
+
+The resulting caterpillar description depends only on its undirected
+spine, apex, and leaf attachments. For $m$ spine vertices these choices give
+the summand of $C_N$ in~\Cref{eq:count}. Each of the $N-2$ generators has
+three face states, giving at most $3^{N-2}C_N$ descriptions. The $N(N-1)$
+descriptions with no retained hinge and head $x_i-x_j$, $i\ne j$, can be
+combined with the auxiliary functions.
+
+All retained units share the first hidden layer features
+\begin{align}\label{eq:features}
+\Phi(x):=\bigl(\relu(x_0),\ \relu(-x_0),\ (\relu(x_i-x_0))_{i>0},\ (\relu(x_i-x_j))_{i<j}\bigr).
+\end{align}
+These $\binom N2+N+1$ features recover every coordinate and every retained
+inner hinge. The combined auxiliary contribution $R$ satisfies
+$R(x+t\one)=R(x)+t$; translating into the positive orthant shows that it is
+a linear combination of coordinates and the features $\relu(x_i-x_j)$.
+Two additional second hidden layer neurons represent it as
+$\relu(R)-\relu(-R)$, giving \Cref{thm:main} including all corrections.
+\Cref{app:widths} supplies the full proof and network matrices.
+
+\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width}).}
+The theorem and equation links point to the Lean development at a fixed
+repository revision. \Cref{app:lean} prints the network definitions
+and the main theorem, and describes the verification certificate.
+
+\section{Conclusion}
+The first hidden layer width is asymptotically sharp. Building on the extremal-graph approach of Safran \cite{SafranDepth}, our separate Lean development extends the bound $h_1\geq\binom N2-\lfloor4N/3\rfloor$ of Lu~\cite[Theorem~2.13]{LuClosure}, for $N\geq4$, to networks with arbitrary affine skip connections. When every first hidden layer weight vector is proportional to some $e_i-e_j$, we sharpen it to $h_1\geq\binom N2-N$. We obtain no growing lower bound for $h_2$; finding smaller exact maximum representations and establishing such lower bounds remain open.
+\label{main-text-end}
+
+\clearpage
+\appendix
+% Begin appendices/coefficients.tex
+\section{Canonical coefficients}\label{app:coefficients}
+
+\paragraph[An exact coefficient rule]{An exact coefficient rule (\leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean}{172}{gramMatrix_isUnit})}
+Let
+\begin{align}\label{eq:bases}
+ \B:=\{S\subseteq\D:S\text{ is a basis of }\spn\D\}.
+\end{align}
+This set is nonempty because the finite spanning set $\D$ contains a basis.
+For $S\in\B$, form
+\begin{align}\label{eq:gram-matrix}
+ G_S&:=\bigl(\langle g,h\rangle\bigr)_{g,h\in S},\\
+ b_S&:=\bigl(\langle g,\maxn_N\rangle\bigr)_{g\in S}.\label{eq:gram-rhs}
+\end{align}
+using the inner product
+\begin{align}\label{eq:inner-product}
+ \langle f,g\rangle:=\int_{[-1,1]^N}f(x)g(x)\,dx.
+\end{align}
+If a linear combination of basis functions has zero squared integral,
+continuity makes it zero on the cube and positive homogeneity makes it zero
+on $\R^N$. Linear independence forces its coefficients to vanish; hence
+$G_S$ is positive definite and invertible.
+For each $g\in\D$, average over the bases containing $g$:
+\begin{align}\label{eq:coefficients}
+ c_g:=\frac{1}{|\B|}
+         \sum_{\substack{S\in\B\\g\in S}}(G_S^{-1}b_S)_{g}.
+\end{align}
+\begin{Proof}{Lemma}{lem:coefficients}
+Fix $S\in\B$. By \Cref{thm:dictionary}, there is $d\in\R^S$ such that
+\begin{align}\label{eq:basis-expansion}
+ \maxn_N=\sum_{g\in S}d_g g.
+\end{align}
+Taking the inner product with each $h\in S$ gives
+\begin{align}\label{eq:normal-equations}
+ \begin{aligned}
+ (b_S)_h&=\sum_{g\in S}\langle h,g\rangle d_g=(G_Sd)_h,\\
+ d&=G_S^{-1}b_S.
+ \end{aligned}
+\end{align}
+Interchanging the finite sums in~\Cref{eq:coefficients} therefore yields
+\begin{align}\label{eq:average-expansion}
+ \sum_{g\in\D}c_gg
+ =\frac{1}{|\B|}\sum_{S\in\B}\sum_{g\in S}(G_S^{-1}b_S)_g\,g
+ =\frac{1}{|\B|}\sum_{S\in\B}\maxn_N
+ =\maxn_N.
+\end{align}
+\end{Proof}
+Averaging over all bases avoids an arbitrary choice of basis and gives a finite, nonrecursive coefficient prescription. We do not claim an efficient algorithm for evaluating these coefficients or a bound on their bit complexity.
+
+For network construction, use each distinct pair $(h',M)$
+from~\Cref{eq:face-description} once, together with each auxiliary function
+in~\Cref{eq:aux_functions}. Split $c_g$ equally among all pairs and
+auxiliary functions representing $g$. Their total contribution remains
+$c_gg$. Normalization then merges equal pairs by adding their coefficients.
+% End appendices/coefficients.tex
+% Begin appendices/dictionary.tex
+\section{Supporting proofs for the dictionary theorem}\label{app:dictionary}
+
+\subsection{Residual reduction}\label{app:residual}
+We prove the inner induction used in the simplex-face argument of
+\Cref{sec:dictionary}. Fix a nonempty vertex set $T$ with $|T|\geq2$,
+and assume that every proper simplex face on a subset of $T$ is already in
+the dictionary span, as in the outer induction there.
+
+\begin{ProofOf}{Claim}{clm:residual-reduction}
+We argue by induction on $j$.
+\paragraph{Start ($j=0$).}
+By definition, $\varepsilon_T^{(0)}=\varepsilon_T$. Its dimension bound and support-function expression were established above, and the removed part is zero.
+
+\paragraph{Step ($j<|T|-2$).}
+Assume the directions for the first $j$ stages have been chosen and the claim holds at stage $j$. Put $k:=|T|-2-j\geq1$. We require each new direction $u$ to be nonorthogonal to the simplex direction space $\operatorname{dir}\Delta_T:=\operatorname{span}\{v-w:v,w\in T\}$. Its values on $T$ are then not all equal, so the maximizing vertices form a nonempty proper subset:
+\begin{align}\label{eq:simplex-induction-use}
+\begin{aligned}
+A_u&:=\{v\in T:\langle u,v\rangle=h_{\Delta_T}(u)\},\qquad \varnothing\ne A_u\subsetneq T,\\
+\partial_u h_{\Delta_T}&=h_{\Delta_{A_u}}\in\spn\D.
+\end{aligned}
+\end{align}
+The last membership uses the outer induction hypothesis, since $|A_u|<|T|$. An orthogonal direction would leave $h_{\Delta_T}$ unchanged and would not allow this use of the hypothesis.
+
+Choose an auxiliary expression for $\varepsilon_T^{(j)}$ by support functions of polytopes of dimension at most $k$, and collect their distinct $k$-dimensional direction spaces. For each such space $V$, choose $u_V\in V^\perp$ not orthogonal to $\operatorname{dir}\Delta_T$ or to any other collected space $V'$. This is possible because $\dim\Delta_T=|T|-1>k$: each of $\operatorname{dir}\Delta_T$ and $V'$ contains a vector outside $V$, whose nonzero projection onto $V^\perp$ is not orthogonal to that vector. Adding sufficiently small multiples of these projections avoids each orthogonality condition in turn while preserving those already avoided. Choose $E_{T,j}:=\{u_V:V\text{ is a collected direction space}\}$, with $E_{T,j}=\varnothing$ if there are none. In the sum of derivatives over $E_{T,j}$, each term coming from a $k$-dimensional polytope is preserved exactly once. Every other derivative of that term is the support function of a proper face, while terms of lower dimension remain in $\LS_{k-1}$. Subtracting this derivative sum therefore cancels all $k$-dimensional terms. By the recursive definition~\Cref{eq:error-peeling}, the resulting error satisfies $\varepsilon_T^{(j+1)}\in\LS_{k-1}=\LS_{|T|-3-j}$.
+
+Now compute these same derivatives using the support-function expression in the claim. The derivative of $h_{\Delta_T}$ lies in the dictionary span by~\Cref{eq:simplex-induction-use}. Differentiating the support function of an already proper simplex face still gives a support function of a proper face of $\Delta_T$, so the same induction hypothesis applies. Differentiating the support function of a face of $Q_{\pi,S}$ gives a support function of a face of the same polytope, whose support functions lie in the dictionary span, and linear functions remain linear. Thus the derivative sum lies in the dictionary span. By~\Cref{eq:error-peeling}, $\varepsilon_T-\varepsilon_T^{(j+1)}$ is the sum of the previously removed part and this derivative sum, so it also lies in the dictionary span. Subtracting the derivative sum preserves the stated types of support-function terms. This completes the proof step.
+
+\end{ProofOf}
+
+\subsection{Reconstruction from opposite exposed faces}\label{app:reconstruction}
+We justify \Cref{stp:reconstruction}: for $N\geq4$, the bounds
+\Cref{eq:facet-reduction} imply $f\in\LS_{N-2}$. We first subdivide the
+caterpillar polytopes, then prove \Cref{clm:simplex-reconstruction},
+and finally apply it to the resulting weighted simplex sum.
+
+The base of each $Q_{\pi,S}$ is an affine cube. Order its edge vectors by a bijection $\omega:\{1,\ldots,N-2\}\to L_{\pi,S}$, add them one at a time, and adjoin the apex:
+\begin{align}\label{eq:kuhn-simplices}
+K_{\pi,S,\omega}:=\operatorname{conv}\left(\{0\}\cup\left\{h_{\pi,S}+\sum_{a=1}^k\omega(a):0\leq k\leq N-2\right\}\right).
+\end{align}
+These $(N-2)!$ simplices are obtained by coning the \emph{Freudenthal--Kuhn triangulation} of the base to the apex \cite{Freudenthal1942,Kuhn1960}: in cube coordinates, each base simplex occupies one ordering region $1\geq t_{\omega(1)}\geq\cdots\geq t_{\omega(N-2)}\geq0$. For a hyperplane cut $P=P_+\cup P_-$, the support-function identity
+\begin{align}\label{eq:support-cut}
+h_P+h_{P_+\cap P_-}=h_{P_+}+h_{P_-}
+\end{align}
+shows that subdivision changes the sum of support functions only by support functions of the cutting sections. Hence
+\begin{align}\label{eq:kuhn-support-error}
+h_{Q_{\pi,S}}-\sum_\omega h_{K_{\pi,S,\omega}}\in\LS_{N-2}.
+\end{align}
+Substituting~\Cref{eq:kuhn-support-error} into~\Cref{eq:signed-word-sum} expresses $f$ as a finite linear combination of support functions of $(N-1)$-dimensional simplices in $H_0$, plus a remainder in $\LS_{N-2}$. The simplex $\Delta$ contributes its support function with coefficient $-1$, and the linear apex terms are included in the remainder.
+
+For a simplex $P$, an outward facet normal $\nu_F$ exposes the facet $F$ on one side and its opposite vertex $v_F$ on the other. Thus
+\begin{align}\label{eq:simplex-isolate-facet}
+D_{\nu_F}h_P(x)=h_F(x)-\langle v_F,x\rangle.
+\end{align}
+Directions exposing no facet on either side give support functions of faces of dimension at most $N-3$. Consequently,~\Cref{eq:facet-reduction} says that each weighted, signed sum of parallel-facet support functions belongs to $\LS_{N-3}$.
+
+Our assumption controls the weighted facet contributions, whereas our conclusion concerns $f$. To recover the original sum modulo $\LS_{N-2}$, we use the same linear operator for every simplex, so cancellations between facet contributions survive reconstruction. Use the operator $\mathcal T$ defined in~\Cref{eq:sweep-operation}.
+The sign in this definition concerns the input $x$. To interpret it geometrically, first suppose that every point $p\in P$ satisfies $p_1\geq0$, and write $\operatorname{pr}(p):=p-p_1e_1$ for projection onto $p_1=0$. Since $\langle p,x\rangle-\langle\operatorname{pr}(p),x\rangle=p_1x_1$, each point dominates its projection when $x_1\geq0$, and its projection dominates when $x_1<0$. Consequently,
+\begin{align}\label{eq:sweep-support-high}
+\mathcal T h_P(x)=\max\{h_P(x),h_{\operatorname{pr}P}(x)\}=h_{\operatorname{conv}(P\cup\operatorname{pr}P)}(x).
+\end{align}
+This convex hull fills the segments with endpoints $p$ and its projection, for $p\in P$, so its dimension is at most $\dim P+1$. For an arbitrary $P$, choose $c\geq0$ such that $P+ce_1$ lies in $p_1\geq0$. Translation adds $cx_1$ to the support function, and $\mathcal T(x_1)=\relu(x_1)$, giving
+\begin{align}\label{eq:sweep-support-translate}
+\mathcal T h_P(x)=h_{\operatorname{conv}((P+ce_1)\cup\operatorname{pr}(P+ce_1))}(x)-c\relu(x_1).
+\end{align}
+The correction $\relu(x_1)$ is the support function of the segment $[0,e_1]$. Thus linearity gives
+\begin{align}\label{eq:sweep-dimension}
+\mathcal T\LS_k\subseteq\LS_{k+1}.
+\end{align}
+
+\begin{ProofOf}{Claim}{clm:simplex-reconstruction}
+Let $k=|\{F\text{ facet of }P:\langle\nu_F,e_1\rangle\ne0\}|$ count facets not parallel to $e_1$. Boundedness ensures both nonzero signs occur, so $k\geq2$.
+
+\paragraph{Start ($k=2$).}
+There is one upper facet $F^+$ and one lower facet $F^-$. Every line parallel to $e_1$ that meets $P$ has its two intersection endpoints on these facets. Thus $h_P(x)=h_{F^+}(x)$ when $x_1\geq0$, and $h_P(x)=h_{F^-}(x)$ when $x_1<0$. When $x_1\geq0$, $\mathcal T$ evaluates at $x$, so subtracting $\mathcal T(h_{F^+}-h_{F^-})$ from $h_P$ leaves $h_{F^-}$. When $x_1<0$, $\mathcal T$ evaluates both facet support functions at $x-x_1e_1$, where they agree because the facets have the same projection. Their difference is therefore zero, again leaving $h_{F^-}$. The reconstruction error is therefore $h_{F^-}\in\LS_{N-2}$, proving the claim for $k=2$.
+
+\paragraph{Step ($k>2$).}
+Assume the claim for $k-1$, and let $P$ have $k$ facets not parallel to $e_1$. Two of them have the same nonzero sign of $\langle \nu_F, e_1 \rangle$. Their intersection is an $(N-3)$-dimensional face $C$. Let $W:=\operatorname{span}\{p-q:p,q\in C\}$, and project orthogonally within $H_0$ onto $W^\perp$. This is a two-dimensional plane, since $\dim H_0=N-1$ and $\dim W=N-3$. All points of $C$ have the same projection $c$, because their differences lie in $W$. There are just two vertices of $P$ outside $C$, so the projected simplex is a triangle with vertices $c$ and the projections of those two vertices. The chosen facets project to its two sides meeting at $c$.
+
+The chosen facet normals are orthogonal to $W$, so their signs against $e_1$ equal their signs against its projection. This projected direction is nonzero, since the chosen facets are not parallel to $e_1$. If both sides are upper, moving from $c$ opposite to this direction enters the triangle; if both are lower, moving in this direction enters it. Continuing meets the interior of the opposite edge. The inverse image of the line through $c$ in this direction is a hyperplane in $H_0$ containing $C$ and parallel to $e_1$. It cuts the edge whose endpoints are the two vertices outside $C$ at an interior point and divides $P$ into two $(N-1)$-dimensional simplices. Each keeps one of the two chosen facets and replaces the other by the new facet parallel to $e_1$. Its other facets retain their normal directions, so each new simplex has exactly $k-1$ facets not parallel to $e_1$.
+
+Write $E(Q)$ for the reconstruction error on the left of~\Cref{eq:simplex-reconstruction}. Let $P_+$ and $P_-$ be the two new simplices, let $R:=P_+\cap P_-$ be their common cutting facet, and write $F_1,F_2$ for the chosen facets and $R_F:=R\cap F$ for every other facet of $P$. With $s_F:=\operatorname{sgn}\langle\nu_F,e_1\rangle$, applying~\Cref{eq:support-cut} to $P$ and to every split facet gives the exact residual identity
+\begin{align}\label{eq:ridge-cut-residual}
+E(P)=E(P_+)+E(P_-)-h_R+\mathcal T\left(\sum_{\substack{F\text{ facet of }P\\F\notin\{F_1,F_2\}}}s_Fh_{R_F}\right).
+\end{align}
+Indeed, the inherited facets retain their signs, while the two copies of $R$ are parallel to $e_1$ and therefore have sign zero. By the induction hypothesis, $E(P_+),E(P_-)\in\LS_{N-2}$; moreover, $\dim R=N-2$ and $\dim R_F\leq N-3$. Equation~\Cref{eq:sweep-dimension} therefore puts every term on the right of~\Cref{eq:ridge-cut-residual} in $\LS_{N-2}$. This proves the claim for $k$ and completes the induction.
+
+\end{ProofOf}
+
+\paragraph{Conclusion for $f$.}
+Apply~\Cref{eq:simplex-reconstruction} to every simplex support-function term in the expansion of $f$, keeping its original coefficient. A facet $F$ parallel to $e_1$ has $\langle\nu_F,e_1\rangle=0$, so its term in the reconstruction formula is zero and can be omitted. For each remaining occurrence of a facet, choose $\nu_F$ outward from its simplex and put
+\begin{align}\label{eq:normalized-facet-normal}
+u_F:=\frac{\nu_F}{\langle\nu_F,e_1\rangle},\qquad \langle u_F,e_1\rangle=1.
+\end{align}
+Thus the coordinate with index $1$ is normalized to $1$; the coordinate with index $0$ remains zero because $u_F\in H_0$. Oppositely oriented parallel normals give the same $u_F$. Only the normal is rescaled: the support function and its coefficient are unchanged.
+
+Let $\mathcal U$ be the finite set of vectors $u_F$ obtained this way. For each $u\in\mathcal U$, define $G_u$ by adding all facet support-function terms with $u_F=u$, retaining their signs and weights. An occurrence of $F$ as a facet of $K_{\pi,S,\omega}$ contributes $(-1)^{N+|S|}\operatorname{sgn}\langle\nu_F,e_1\rangle\,h_F/N!$, while an occurrence as a facet of $\Delta$ contributes $-\operatorname{sgn}\langle\nu_F,e_1\rangle\,h_F$. These are precisely the terms with the same normalized normal, including all repetitions.
+
+More explicitly, define $\rho$ to be the sum of the linear apex terms and the weighted subdivision errors in~\Cref{eq:kuhn-support-error}. Then
+\begin{align}\label{eq:simplex-support-expansion}
+f=\frac1{N!}\sum_\pi\sum_{\varnothing\ne S\subseteq\{1,\ldots,N-2\}}(-1)^{N+|S|}\sum_\omega h_{K_{\pi,S,\omega}}-h_\Delta+\rho,
+\qquad \rho\in\LS_{N-2}.
+\end{align}
+For a simplex $P$, collect its facets with normalized normal $u$ as
+\begin{align}\label{eq:single-facet-group}
+B_u(P):=\sum_{\substack{F\text{ facet of }P\\\langle\nu_F,e_1\rangle\ne0,\ u_F=u}}\operatorname{sgn}\langle\nu_F,e_1\rangle h_F.
+\end{align}
+An empty sum is zero. If $\langle\nu_F,e_1\rangle>0$, the direction $u_F$ exposes $F$; if it is negative, $-u_F$ exposes $F$. The opposite face is a single vertex, so~\Cref{eq:simplex-isolate-facet} gives the signed facet term up to a linear function. If neither $u$ nor $-u$ exposes a facet of $P$, both exposed faces have dimension at most $N-3$. Thus $D_uh_P-B_u(P)\in\LS_{N-3}$. Applying this to the full weighted expansion, with the same permutations and nonempty cut sets as in~\Cref{eq:signed-word-sum}, gives
+\begin{align}\label{eq:facet-group-bound}
+\begin{aligned}
+D_uf-G_u&=\sum_{\pi,S\ne\varnothing}\frac{(-1)^{N+|S|}}{N!}\sum_\omega\left(D_uh_{K_{\pi,S,\omega}}-B_u(K_{\pi,S,\omega})\right)\\
+&\quad-\left(D_uh_\Delta-B_u(\Delta)\right)+D_u\rho\in\LS_{N-3}
+\qquad(u\in\mathcal U).
+\end{aligned}
+\end{align}
+Together with~\Cref{eq:facet-reduction}, relation~\Cref{eq:facet-group-bound} puts every $G_u$ in $\LS_{N-3}$. By linearity, the sum of the reconstructed facet terms is $\mathcal T(\sum_{u\in\mathcal U}G_u)$, which lies in $\LS_{N-2}$ by~\Cref{eq:sweep-dimension}. Its difference from $f$ consists of the reconstruction and subdivision remainders, also in $\LS_{N-2}$. Hence $f\in\LS_{N-2}$.
+This proves the implication used in \Cref{stp:reconstruction}.
+
+
+\subsection{Coordinate deletion}\label{app:coordinate-deletion}
 
 \begin{ProofOf}{Claim}{clm:coordinate-deletion}
 We now determine which terms of the signed sum must be retained for $u=(0,1,\ldots,1)$. Only label $0$ has a different coordinate value from the others. Consequently, a tree-edge generator is nonorthogonal to $u$ exactly when one of its endpoint labels is $0$.
@@ -891,7 +1129,7 @@ For $0\leq i\leq N-3$, let $\iota_i$ insert a gap at the prospective pendant pos
  \text{last end:}\quad &(p,S)=\left(N-1,T\cup\{N-2\}\right).
 \end{aligned}
 \end{align}
-In every row the upper permutation is uniquely obtained by inserting label $0$ at position $p$ in $\bar\pi$. Conversely, with $t$ restricted to $\{1,\ldots,N-3\}$, the deletion rules are $T=\{t:t+1\in S\}$ for the first end, $T=\{t:\iota_i(t)\in S\}$ for pendant $i$, and $T=S\setminus\{N-2\}$ for the last end. These operations are inverse. The three cases in~\eqref{eq:coordinate-active} correspond respectively to the first-end row, the pendant row with $i=p-2$, and the last-end row. Thus a nonempty $T$ has $N-2$ pendant and two endpoint preimages, whereas $T=\varnothing$ has only the two endpoints because upper cut sets are nonempty.
+In every row the upper permutation is uniquely obtained by inserting label $0$ at position $p$ in $\bar\pi$. Conversely, with $t$ restricted to $\{1,\ldots,N-3\}$, the deletion rules are $T=\{t:t+1\in S\}$ for the first end, $T=\{t:\iota_i(t)\in S\}$ for pendant $i$, and $T=S\setminus\{N-2\}$ for the last end. These operations are inverse. The three cases in~\Cref{eq:coordinate-active} correspond respectively to the first-end row, the pendant row with $i=p-2$, and the last-end row. Thus a nonempty $T$ has $N-2$ pendant and two endpoint preimages, whereas $T=\varnothing$ has only the two endpoints because upper cut sets are nonempty.
 
 Extend the lower caterpillar notation to $T=\varnothing$ by setting its last spine position and every parent equal to $0$, so its head begins at the root $\bar\pi(1)$. For every lower label order $\bar\pi$ put
 \begin{align}\label{eq:lower-caterpillar-summand}
@@ -916,7 +1154,7 @@ For each upper preimage $(\pi,S)$ of $(\bar\pi,T)$, the insertion identities and
 \end{align}
 Thus every one of the $N-2+2=N$ preimages contributes $1/N$ of the lower summand modulo $\LS_{N-3}$, and together they recover its coefficient in $F_{N-1}$.
 
-The extra terms are the two endpoint fibres whose deletion leaves $T=\varnothing$, hence a rooted star. By~\eqref{eq:insertion-weight-germs}, each contributes $1/N$ of the weighted lower summand modulo $\LS_1$. For a fixed lower order $\bar\pi$, the nonroot positions are $J=\{0,2,\ldots,N-2\}$, including the original apex position $0$. For $a\in J$, let $\bar\pi^{(a)}$ exchange positions $0$ and $a$, keeping the root at position $1$; the exchange at $a=0$ is the identity. Put
+The extra terms are the two endpoint fibres whose deletion leaves $T=\varnothing$, hence a rooted star. By~\Cref{eq:insertion-weight-germs}, each contributes $1/N$ of the weighted lower summand modulo $\LS_1$. For a fixed lower order $\bar\pi$, the nonroot positions are $J=\{0,2,\ldots,N-2\}$, including the original apex position $0$. For $a\in J$, let $\bar\pi^{(a)}$ exchange positions $0$ and $a$, keeping the root at position $1$; the exchange at $a=0$ is the identity. Put
 \begin{align}\label{eq:root-star}
 \begin{aligned}
 q&:=|J|=N-2,\qquad d_a:=x_{\bar\pi(1)}-x_{\bar\pi(a)}\quad(a\in J),\\
@@ -936,45 +1174,25 @@ The empty term is a sum of support functions of segments. For $|A|\geq2$, the po
  q\sum_{\bar\pi}C_{\bar\pi,\varnothing}
  =\sum_{\bar\pi}\sum_{a\in J}C_{\bar\pi^{(a)},\varnothing}\in\LS_{q-1}.
 \end{align}
-Since $q>0$, the full empty-cut sum belongs to $\LS_{q-1}=\LS_{N-3}$. The empty-cut coefficient $(-1)^{N-1}/(N-1)!$ and the factor $2/N$ from the two endpoint fibres are scalars, so the extra star sum lies there as well. This proves Claim~\ref{clm:coordinate-deletion}.
+Since $q>0$, the full empty-cut sum belongs to $\LS_{q-1}=\LS_{N-3}$. The empty-cut coefficient $(-1)^{N-1}/(N-1)!$ and the factor $2/N$ from the two endpoint fibres are scalars, so the extra star sum lies there as well. This proves \Cref{clm:coordinate-deletion}.
 \end{ProofOf}
+% End appendices/dictionary.tex
+% Begin appendices/widths.tex
+\section{Network construction and width bounds}\label{app:widths}
 
-\paragraph{Completion of the induction.}\phantomsection\label{par:finish-arity-induction}
-Combining~\eqref{eq:simplex-facet}, \eqref{eq:lifted-induction}, and Claim~\ref{clm:coordinate-deletion} gives
-\begin{align}\label{eq:induction-error-split}
-\begin{aligned}
-D_uf(x)={}&\bigl[D_u(F_N|_{H_0})(x)-F_{N-1}(x_1,\ldots,x_{N-1})\bigr]\\
-&+\bigl[F_{N-1}(x_1,\ldots,x_{N-1})-\max\{x_1,\ldots,x_{N-1}\}\bigr].
-\end{aligned}
-\end{align}
-The first bracket belongs to $\LS_{N-3}$ by coordinate deletion Claim~\ref{clm:coordinate-deletion}, the second by the induction hypothesis. This proves the bound for every direction. Step~\ref{stp:reconstruction} gives $f\in\LS_{N-2}$, completing the induction, and Step~\ref{stp:corrections} gives the dictionary representation.
-\finishes{Theorem}{thm:dictionary}
-\end{Proof}
-
-\section{Network size}\label{sec:size}
-
-The widths in Theorem~\ref{thm:main} are worst-case upper bounds for this construction. To count second hidden layer units, we absorb linear edges into the head, orient each remaining hinge as $x_i-x_j$ with $i<j$, and merge descriptions with the same adjusted head and hinge set. We count all possible resulting descriptions, without relying on any coefficient being zero. We combine the contributions $x\mapsto\relu(x_i-x_j)$ with the auxiliary terms and represent their sum using two additional second hidden layer neurons. The first hidden layer width comes from a fixed set of shared features sufficient for every such description. Discarding zero aggregate coefficients can yield a smaller network; zero padding gives the stated widths. We first count these descriptions, then construct the shared first hidden layer and account for both widths.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/caterpillar-normalization.pdf}
+\caption{Coordinate differences and the caterpillar polytope for $\pi=(0,3,2,1)$ and $S=\{1,2\}$. (a) The head $h=e_1-e_0$ and edge functions $L=\{\ell_{32}=e_3-e_2,\ell_{21}=e_2-e_1\}$ drawn between their labelled endpoints. (b) The same generators translated to the base corner $h$ of $Q_{h,L}$. (c) Normalization (\Cref{sec:size}) gives $h^+=h+\ell_{32}+\ell_{21}=e_3-e_0$ and $L^+=\{\ell_{12}=e_1-e_2,\ell_{23}=e_2-e_3\}$, leaving the polytope unchanged. Purple arrows represent the head (the apex--last spine connection before normalization); blue arrows represent the spine edge functions. Orange dots mark the polytope apex and purple dots the chosen head corner. The grey coordinate axes meet at the origin, representing $e_0$ after restriction to $x_0=0$; the positive unit points are labelled $e_1,e_2,e_3$.}
+\label{fig:polytope-normalization}
+\end{figure}
 
 \begin{Proof}{Theorem}{thm:main}
-Fix $N\geq3$. Theorem~\ref{thm:dictionary} and Lemma~\ref{lem:coefficients}, followed by~\eqref{eq:tagged-expansion}, give the exact tagged expansion of $\maxn_N$.
+Fix $N\geq3$. Start with the canonical expansion~\Cref{eq:canonical-expansion}
+and distribute its coefficients as described in \Cref{app:coefficients}.
 
 \pfstep{stp:size-count}{Count the caterpillar face functions}
-We first rewrite each face function using only its adjusted head and the hinges that remain. This lets us recognize when different face descriptions require the same second hidden layer neuron. An edge kept linearly is added to the head, an omitted edge disappears, and an edge kept as a hinge stays in the set $M$. Thus
-\begin{align}\label{eq:face-description}
- U^{\tau}_{h,L}=U_{h',M},\qquad
- h':=h+\sum_{\tau(\ell)=\ell}\ell,\qquad
- M:=\{\ell\in L:\tau(\ell)=\relu\circ\ell\}.
-\end{align}
-The resulting function description is $(h',M)$ in the sense of Definition~\ref{def:caterpillar-function}: $h'$ is the adjusted head, and $M$ contains precisely the retained hinges. When two resulting pairs have the same adjusted head and the same hinge set, they can use one second hidden layer neuron, with their output coefficients added. Distinct pairs may still represent the same function, so counting these pairs gives an upper bound. The shared first hidden layer is constructed in the next step.
-We next orient the remaining hinges consistently. By~\eqref{eq:hinge-reversal}, applied to each $\ell_{ij}\in M$ with $i>j$, the same face function $U_{h',M}$ has the \emph{normalized description} $(h^+,M^+)$, where
-\begin{align}\label{eq:normalized-description}
-\begin{aligned}
-   M^+&:=\{\ell_{\min(i,j),\max(i,j)}:\ell_{ij}\in M\},\\
-   h^+&:=h'+\sum_{\ell_{ij}\in M,\ i>j}\ell_{ij}.
-\end{aligned}
-\end{align}
-Every remaining hinge now has orientation $x_i-x_j$ with $i<j$, and the additional linear terms have been absorbed into $h^+$. No edge function of a caterpillar is the negative of another one, so $M$ and $M^+$ have the same size.
-Geometrically, $[0,\ell]=\ell+[0,-\ell]$: reversing a generator requires shifting the head by the old generator. Applying this to every reversed edge leaves the translated base, and hence $Q_{h',M}=Q_{h^+,M^+}$, exactly unchanged. Normalization chooses a consistent orientation and a corresponding base corner; it does not rescale vectors or change the shape (Figure~\ref{fig:polytope-normalization}).
+Use the adjusted heads and normalized descriptions from \Cref{sec:size}. Equal descriptions can share a second hidden layer neuron, with their output coefficients added; counting descriptions therefore gives an upper bound.
 
 For a caterpillar description $(\pi,S)$, the spine endpoints are labelled $\pi(1)$ and $\pi(q+1)$, and every label other than $\pi(1)$ and the apex is the child of exactly one edge. Hence the normalized description of $U_{\pi,S}$ is
 \begin{align}\label{eq:graph}
@@ -984,80 +1202,85 @@ h_{\pi,S}^+(x)&=\sum_{\ell_{ij}\in L_{\pi,S}}x_{\max(i,j)}+x_{\pi(1)}+x_{\pi(q+1
 L_{\pi,S}^+&=\{\ell_{\min(i,j),\max(i,j)}:\ell_{ij}\in L_{\pi,S}\}.
 \end{split}
 \end{align}
-It depends only on the undirected tree, the apex, and the unordered pair of spine endpoints, not on the order of the leaves at a spine vertex or on the orientation of the spine. For a spine with $m$ vertices, choose its vertex set in $\binom Nm$ ways, its order up to reversal in $m!/2$ ways, its apex in $N-m$ ways, and the attachment of each of its $N-m-1$ leaves in $m$ ways. Reversal has no fixed point since $m\geq2$. Every caterpillar has such data, so by~\eqref{eq:count}
+This depends only on the undirected tree, apex, and unordered spine
+endpoints. For $m$ spine vertices, choose the vertex set in $\binom Nm$
+ways, its order up to reversal in $m!/2$ ways, the apex in $N-m$ ways,
+and each of the $N-m-1$ leaf attachments in $m$ ways. Reversal has no
+fixed point since $m\geq2$, so~\Cref{eq:count} gives
 \begin{align}\label{eq:cone-count}
  \bigl|\{(h^+_{\pi,S},L^+_{\pi,S}):(\pi,S)\text{ a caterpillar description}\}\bigr|\leq C_N.
 \end{align}
 
-Reversing an edge function swaps its omitted and linear states, so normalizing before or after choosing the states gives the same descriptions. Every face tag therefore has a normalized description obtained from $(h^+_{\pi,S},L^+_{\pi,S})$ by choosing one of three states for each of its $N-2$ edge functions. Let $\mathcal K_0$ be the set of these normalized descriptions and let $\nu:\mathcal A_{\mathrm{face}}\to\mathcal K_0$ be normalization. For $k=(h,M)\in\mathcal K_0$, write $U_k:=U_{h,M}$. With~\eqref{eq:cone-count}, $|\mathcal K_0|\leq3^{N-2}C_N$. Only equal normalized descriptions are merged; distinct members of $\mathcal K_0$ are not identified merely because they represent the same function.
+Reversing an edge swaps its omitted and linear states. Thus choosing
+states before or after normalization gives the same family
+$\mathcal K_0$ of descriptions, with $|\mathcal K_0|\leq3^{N-2}C_N$.
+Write $U_k:=U_{h,M}$ for $k=(h,M)$. We merge equal descriptions;
+distinct descriptions may still represent the same function.
 
 Among them are the descriptions $(\ell_{ij},\varnothing)$ representing $x\mapsto\relu(x_i-x_j)$, with $i\ne j$: for the all-cut path $S=\{1,\ldots,r\}$ with apex $\pi(0)=j$ and last spine vertex $\pi(r+1)=i$, omitting every edge function gives
 \begin{align}\label{eq:absorbed-pairs}
  U^{0}_{\pi,S}=\relu\circ\ell_{ij}\qquad(0\leq i\ne j<N).
 \end{align}
-The linear heads $\ell_{ij}$ are distinct for distinct ordered pairs. The corresponding functions $x\mapsto\relu(x_i-x_j)$ are distinct as well: equality of two such ReLUs makes their positive half-spaces equal, so their heads are positive scalar multiples, and equality on that half-space makes the scalar one. Let $\mathcal P$ be the subset of $\mathcal K_0$ consisting of every normalized description with empty hinge set and head equal to a coordinate difference; we combine their contributions with the auxiliary terms. The descriptions above show that $|\mathcal P|\geq N(N-1)$. Aggregate the tagged coefficients only along equal normalized face descriptions:
-\begin{align}\label{eq:normalized-tag-coefficients}
- d_k:=\sum_{\substack{a\in\mathcal A_{\mathrm{face}}\\\nu(a)=k}}\widetilde c_a.
+Let $\mathcal P\subseteq\mathcal K_0$ consist of descriptions with empty
+hinge set and head a coordinate difference. The distinct heads
+$\ell_{ij}$ give $|\mathcal P|\geq N(N-1)$; their contributions can be
+combined with the auxiliary terms. Let $d_k$ be the sum of coefficients
+assigned to pairs $(h',M)$ whose normalized description is $k$.
+Discard zero coefficients and remove these descriptions:
+\begin{align}
+ \mathcal K_{\mathrm{act}}&:=\{k\in\mathcal K_0:d_k\ne0\},\label{eq:active-normalized-descriptions}\\
+ K&:=\mathcal K_{\mathrm{act}}\setminus\mathcal P.\label{eq:retained-descriptions}
 \end{align}
-Discard zero fiber sums, then remove the absorbable keys:
-\begin{align}\label{eq:active-normalized-descriptions}
- \mathcal K_{\mathrm{act}}:=\{k\in\mathcal K_0:d_k\ne0\}.
-\end{align}
-\begin{align}\label{eq:retained-descriptions}
- K:=\mathcal K_{\mathrm{act}}\setminus\mathcal P.
-\end{align}
-By~\eqref{eq:hinge-reversal}, every unit indexed by $\mathcal P$ lies in the span of the auxiliary functions and needs no separate second hidden layer neuron. Since $K\subseteq\mathcal K_0\setminus\mathcal P$,
+By~\Cref{eq:hinge-reversal}, every unit indexed by $\mathcal P$ lies in the span of the auxiliary functions and needs no separate second hidden layer neuron. Since $K\subseteq\mathcal K_0\setminus\mathcal P$,
 \begin{align}\label{eq:retained-count}
 |K|\leq3^{N-2}C_N-N(N-1).
 \end{align}
-\finishes{Step}{stp:size-count}
 
 \pfstep{stp:size-network}{Compile the network and establish its widths}
-The terms not assigned a retained neuron form the explicitly known remainder
+Let $R$ collect the weighted auxiliary functions and the terms $d_kU_k$
+with $k\in\mathcal K_{\mathrm{act}}\cap\mathcal P$. Then
 \begin{align}\label{eq:remainder}
-R:=\sum_{a\in\mathcal A_{\mathrm{aux}}}\widetilde c_a v(a)+\sum_{k\in\mathcal K_{\mathrm{act}}\cap\mathcal P}d_kU_k.
+\maxn_N=\sum_{k\in K}d_kU_k+R.
 \end{align}
-By~\eqref{eq:tagged-expansion} and~\eqref{eq:normalized-tag-coefficients}--\eqref{eq:retained-descriptions}, $\maxn_N=\sum_{k\in K}d_kU_k+R$. Expand the absorbed functions $x\mapsto\relu(x_i-x_j)$ using~\eqref{eq:hinge-reversal} to write $R$ as a linear combination of the auxiliary functions~\eqref{eq:aux_functions}. The first hidden layer outputs the vector
-\begin{align}\label{eq:features}
-\Phi(x):=\bigl(\relu(x_0),\ \relu(-x_0),\ (\relu(x_i-x_0))_{i>0},\ (\relu(x_i-x_j))_{i<j}\bigr).
-\end{align}
+\Cref{eq:hinge-reversal} puts $R$ in the auxiliary span.
+The first hidden layer outputs $\Phi$ from~\Cref{eq:features}.
 Thus $W_1$ has rows $e_0^\top$ and $-e_0^\top$, then $e_i^\top-e_0^\top$ for $i>0$, then $e_i^\top-e_j^\top$ for $i<j$, using a fixed ordering within each block. Its row count is
 \begin{align}\label{eq:feature-count}
 \binom N2+(N-1)+2=\binom N2+N+1=h_1.
 \end{align}
-By~\eqref{eq:hinge-reversal}, these features recover all coordinates,
+By~\Cref{eq:hinge-reversal}, these features recover all coordinates,
 \begin{align}\label{eq:recover-coordinates}
 \begin{aligned}
 x_0&=\relu(x_0)-\relu(-x_0),\\
 x_i&=x_0+\relu(x_i-x_0)-\relu(x_0-x_i)\qquad(i>0).
 \end{aligned}
 \end{align}
-For each $k=(h,M)\in K$, substitute~\eqref{eq:recover-coordinates} into $h(x)+\sum_{\ell\in M}\relu(\ell(x))$ and collect the coefficients of $\Phi(x)$ into a row vector $w_k^\top$. Every hinge in $M$ already has the orientation $i<j$, so its coefficient is added directly to the corresponding feature.
+For each $k=(h,M)\in K$, substitute~\Cref{eq:recover-coordinates} into $h(x)+\sum_{\ell\in M}\relu(\ell(x))$ and collect the coefficients of $\Phi(x)$ into a row vector $w_k^\top$. Every hinge in $M$ already has the orientation $i<j$, so its coefficient is added directly to the corresponding feature.
 
 To specify the remaining row, collect the auxiliary coefficients of $R$ as
 \begin{align}\label{eq:auxiliary-remainder}
 R(x)=\sum_i p_i\relu(x_i)+\sum_i n_i\relu(-x_i)+\sum_{i<j}s_{ij}\relu(x_i-x_j).
 \end{align}
-Each retained unit is translation invariant by~\eqref{eq:translation-invariance}, so
+Each retained unit is translation invariant by~\Cref{eq:translation-invariance}, so
 \begin{align}\label{eq:remainder-translation}
 R(x+t\one)=R(x)+t,\qquad \sum_i p_i=1.
 \end{align}
-The coefficient sum follows by setting $x=0$ and $t=1$. Now choose $t$ large enough that every $x_i+t$ is nonnegative. Substituting the auxiliary expansion into~\eqref{eq:remainder-translation} cancels $t$ and gives
+The coefficient sum follows by setting $x=0$ and $t=1$. Now choose $t$ large enough that every $x_i+t$ is nonnegative. Substituting the auxiliary expansion into~\Cref{eq:remainder-translation} cancels $t$ and gives
 \begin{align}\label{eq:compact-remainder}
 R(x)=\sum_i p_ix_i+\sum_{i<j}s_{ij}\relu(x_i-x_j).
 \end{align}
-Substitute~\eqref{eq:recover-coordinates} into this expression and collect the coefficients of $\Phi(x)$ into $w_R$. Thus both $w_k$ and $w_R$ are specified by finite sums of the previously defined coefficients.
+Substitute~\Cref{eq:recover-coordinates} into this expression and collect the coefficients of $\Phi(x)$ into $w_R$. Thus both $w_k$ and $w_R$ are specified by finite sums of the previously defined coefficients.
 
-For any fixed ordering of $K$, the Caterpillar Net has weight matrix $W_2$ for the second hidden layer and weight vector $w_3$ for the output layer:
+Order $K$ and set the second hidden layer matrix and output layer vector to
 \begin{align}\label{eq:network-assembly}
 W_2=\begin{pmatrix}(w_k^\top)_{k\in K}\\w_R^\top\\-w_R^\top\end{pmatrix},\qquad
 w_3=\begin{pmatrix}(d_k)_{k\in K}\\1\\-1\end{pmatrix},\qquad b_1=b_2=b_3=0.
 \end{align}
-In the second hidden layer, the first $|K|$ neurons output $U_k(x)$, and the last two output $\relu(R(x))$ and $\relu(-R(x))$. The output layer therefore computes
+The second hidden layer outputs $U_k(x)$ and $\relu(\pm R(x))$, so
 \begin{align}\label{eq:signed-remainder}
 w_3^\top\relu(W_2\Phi(x))=\sum_{k\in K}d_kU_k(x)+\relu(R(x))-\relu(-R(x))=\maxn_N(x).
 \end{align}
-By~\eqref{eq:retained-count}, the second hidden layer width is at most
+By~\Cref{eq:retained-count}, the second hidden layer width is at most
 \begin{align}\label{eq:compilation-widths}
 |K|+2\leq3^{N-2}C_N-N(N-1)+2=h_2.
 \end{align}
@@ -1067,78 +1290,198 @@ For the growth rates, count the ordered choices of $m$ spine labels:
 \begin{align}\label{eq:head-count-bound}
 \binom Nm\frac{m!}{2}=\frac{N!}{2(N-m)!}\leq N^m\qquad(2\leq m\leq N-1).
 \end{align}
-Using $N-m\leq N$ and $m^{N-m-1}\leq N^{N-m-1}$ in each summand of~\eqref{eq:count} gives
+Using $N-m\leq N$ and $m^{N-m-1}\leq N^{N-m-1}$ in each summand of~\Cref{eq:count} gives
 \begin{align}\label{eq:cone-growth}
 \begin{aligned}
 C_N&\leq\sum_{m=2}^{N-1}N^m\,N\,N^{N-m-1}=(N-2)N^N\\
 &\leq N^{N+1}\leq N^{4N}.
 \end{aligned}
 \end{align}
-Thus no Stirling estimate is needed. Since $3^{N-2}\leq N^N$ for $N\geq3$, the widths satisfy
+Since $3^{N-2}\leq N^N$ for $N\geq3$,
 \begin{align}
 h_2&\leq3^{N-2}(N-2)N^N+2\leq2N^{5N},\label{eq:second-growth}\\
 h_1&\leq4N^2.\label{eq:first-growth}
 \end{align}
-Taking logarithms gives~\eqref{eq:asymptotics}.
-\finishes{Theorem}{thm:main}
+Taking logarithms gives the asymptotic bounds in~\Cref{thm:main}.
 \end{Proof}
+% End appendices/widths.tex
+% Begin appendices/lean.tex
+\section{Lean definitions and main theorem}\label{app:lean}
 
-\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width})}
-Linked definitions, lemmas, and theorems are audited against exact types;
-only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}
-are allowed. The repository contains the maximum construction and its proof.
-The general CPWL results in the introduction are cited background results;
-the equation links in the Wang--Sun theorem lead to its published source.
-Claude and Codex assisted with formalization and manuscript preparation.
+The real parameter arrays in~\Cref{eq:network-evaluation} have dimensions
+\begin{align}\label{eq:network-parameters}
+ \begin{aligned}
+ W_1&\in\R^{h_1\times N},& b_1&\in\R^{h_1},\\
+ W_2&\in\R^{h_2\times h_1},& b_2&\in\R^{h_2},\\
+ w_3&\in\R^{h_2},& b_3&\in\R,
+ \end{aligned}
+\end{align}
+The listings specify the network, widths, and correctness for every real
+input. They reproduce declarations from
+\leanlinkdecl{MaxCaterpillar/Definitions.lean}{19}{Point}{Definitions.lean}
+and \leanlinkdecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width}{Theorems.lean}
+at revision \texttt{8bbb7da780f6}, omitting imports, documentation comments,
+and the theorem's proof body; these remain in the linked sources.
 
-\section{Conclusion}
-The first hidden layer width is asymptotically sharp. Building on the extremal-graph approach of \citet{SafranDepth}, our separate Lean development extends the bound $h_1\geq\binom N2-\lfloor4N/3\rfloor$ of \citet[Theorem~2.13]{LuClosure}, for $N\geq4$, to networks with arbitrary affine skip connections. When every first hidden layer weight vector is proportional to some $e_i-e_j$, we sharpen it to $h_1\geq\binom N2-N$. We obtain no growing lower bound for $h_2$; finding smaller exact maximum representations and establishing such lower bounds remain open.
+\subsection{Network and width definitions}
+\begin{lstlisting}[style=lean]
+namespace MaxCaterpillar
+
+open BigOperators
+
+abbrev Point (N : ℕ) := Fin N → ℝ
+
+noncomputable def relu (t : ℝ) : ℝ := max 0 t
+
+structure Network (N h₁ h₂ : ℕ) where
+  W₁ : Fin h₁ → Fin N → ℝ
+  b₁ : Fin h₁ → ℝ
+  W₂ : Fin h₂ → Fin h₁ → ℝ
+  b₂ : Fin h₂ → ℝ
+  w₃ : Fin h₂ → ℝ
+  b₃ : ℝ
+
+noncomputable def Network.eval {N h₁ h₂ : ℕ} (net : Network N h₁ h₂)
+    (x : Point N) : ℝ :=
+  (∑ k, net.w₃ k * relu
+    ((∑ j, net.W₂ k j * relu
+      ((∑ i, net.W₁ j i * x i) + net.b₁ j)) + net.b₂ k))
+    + net.b₃
+
+noncomputable def Maximum (N : ℕ) [NeZero N] (x : Point N) : ℝ :=
+  Finset.univ.sup'
+    ⟨⟨0, Nat.pos_of_ne_zero (NeZero.ne N)⟩,
+      Finset.mem_univ _⟩ x
+
+def firstWidth (N : ℕ) : ℕ := N.choose 2 + N + 1
+
+def coneCount (N : ℕ) : ℕ :=
+  ∑ m in Finset.Icc 2 (N - 1),
+    N.choose m * (m.factorial / 2) * (N - m)
+      * m ^ (N - m - 1)
+
+def secondWidth (N : ℕ) : ℕ :=
+  coneCount N * 3 ^ (N - 2) - N * (N - 1) + 2
+
+end MaxCaterpillar
+\end{lstlisting}
+
+\subsection{The main theorem}
+The assumption \texttt{[NeZero N]} expresses positive arity. For $N\geq3$
+the statement is \Cref{thm:main}; the natural-number width definitions
+also cover $N=1,2$.
+
+\begin{lstlisting}[style=lean]
+theorem maximum_width (N : ℕ) [NeZero N] :
+    ∃ net : Network N (firstWidth N) (secondWidth N),
+      ∀ x, net.eval x = Maximum N x
+\end{lstlisting}
+
+The keyword \texttt{noncomputable} allows classical definitions of real
+quantities. The theorem is an exact representation statement; it does not
+by itself assert an efficient algorithm for extracting numerical weights.
+
+\subsection{Verification scope}
+The repository's verification certificate, dated 19 October 2026, records
+a build with Lean 4.4.0 and checks 27 public statements against their exact
+types. Its permitted axioms are \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}. The checked interface
+includes dictionary sufficiency, the canonical expansion, network
+correctness, and the width bounds. The certificate and its source hashes
+are available in the linked
+\href{\leanbase/verification/certificate.json}{verification record}.
+The mathematical arguments are provided in the main text and
+\Crefrange{app:coefficients}{app:widths}; the formalization is an
+additional certificate of the formal statements.
+% End appendices/lean.tex
+
+\section*{AI methodology statement}
+\phantomsection\label[aimethod]{sec:ai-methodology}
+Claude Code and Codex were used for mathematical exploration and proof
+search, development of the Lean formalization, and drafting and revision
+of the manuscript. Their use materially affected the construction and
+proofs in \Crefrange{sec:construction}{sec:size} and
+\Crefrange{app:coefficients}{app:lean}. The author set the research
+objectives, directed the searches, and revised the mathematical presentation.
+The accompanying Lean certificate checks the formal statements and their
+axiom dependencies; it does not certify the prose exposition, literature
+comparison, or claims of originality. The author is responsible for the
+contents of the paper.
 
 \begin{thebibliography}{9}
-\bibitem[Bakaev et~al.(2026)Bakaev, Brunck, Hertrich, Stade, and Yehudayoff]{BakaevEtAl}
+\bibitem[ABMM18]{AroraEtAl}
+Raman Arora, Amitabh Basu, Poorya Mianjy, and Anirbit Mukherjee.
+\newblock Understanding deep neural networks with rectified linear units.
+\newblock In \emph{International Conference on Learning Representations}, 2018.
+\newblock \href{https://arxiv.org/abs/1611.01491v6}{arXiv:1611.01491v6}.
+\bibitem[AHM25]{AverkovEtAl}
+Gennadiy Averkov, Christopher Hojny, and Maximilian Merkert.
+\newblock On the expressiveness of rational ReLU neural networks with bounded depth.
+\newblock In \emph{International Conference on Learning Representations}, 2025.
+\newblock \href{https://openreview.net/forum?id=uREg3OHjLL}{OpenReview}.
+\bibitem[BBH+26]{BakaevEtAl}
 Egor Bakaev, Florestan Brunck, Christoph Hertrich, Jack Stade, and Amir Yehudayoff.
 \newblock Better neural network expressivity: Subdividing the simplex.
 \newblock In \emph{Proceedings of the 58th Annual ACM Symposium on Theory of Computing}, pages 500--507, 2026.
 \newblock \href{https://doi.org/10.1145/3798129.3800768}{doi:10.1145/3798129.3800768}.
-\bibitem[Brunck et~al.(2026)Brunck, Stade, and Yehudayoff]{BSY}
-Florestan Brunck, Jack Stade, and Amir Yehudayoff.
-\newblock \emph{Computing $\max_n$ in Depth 2---Proof Overview}.
-\newblock Unpublished draft supplied to the author, October 2026.
-\bibitem[Freudenthal(1942)]{Freudenthal1942}
+\bibitem[BHR+26]{BSY}
+Florestan Brunck, Christoph Hertrich, Kilian Rue{\ss}, Jack Stade, and Amir Yehudayoff.
+\newblock Two ReLU layers is all you need.
+\newblock Preprint, arXiv:2610.28587, version 1, October 2026.
+\newblock \href{https://arxiv.org/abs/2610.28587v1}{arXiv:2610.28587v1}.
+\bibitem[Fre42]{Freudenthal1942}
 Hans Freudenthal.
 \newblock Simplizialzerlegungen von beschr\"ankter Flachheit.
 \newblock \emph{Annals of Mathematics}, 43(3):580--582, 1942.
 \newblock \href{https://doi.org/10.2307/1968813}{doi:10.2307/1968813}.
-\bibitem[Grillo et~al.(2025)Grillo, Hertrich, and Loho]{GrilloEtAl}
+\bibitem[GHL25]{GrilloEtAl}
 Moritz Grillo, Christoph Hertrich, and Georg Loho.
 \newblock Depth-bounds for neural networks via the braid arrangement.
 \newblock \emph{Advances in Neural Information Processing Systems}, 38:127800--127818, 2025.
 \newblock \href{https://doi.org/10.52202/085713-4257}{doi:10.52202/085713-4257}.
-\bibitem[Hertrich et~al.(2023)Hertrich, Basu, Di Summa, and Skutella]{HertrichEtAl}
+\bibitem[HHL23]{HaaseEtAl}
+Christian Haase, Christoph Hertrich, and Georg Loho.
+\newblock Lower bounds on the depth of integral ReLU neural networks via lattice polytopes.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+\newblock \href{https://openreview.net/forum?id=2mvALOAWaxY}{OpenReview}.
+\bibitem[HBD+23]{HertrichEtAl}
 Christoph Hertrich, Amitabh Basu, Marco Di Summa, and Martin Skutella.
 \newblock Towards lower bounds on the depth of ReLU neural networks.
 \newblock \emph{SIAM Journal on Discrete Mathematics}, 37(2):997--1029, 2023.
 \newblock \href{https://doi.org/10.1137/22M1489332}{doi:10.1137/22M1489332}.
-\bibitem[Kuhn(1960)]{Kuhn1960}
+\bibitem[Kuh60]{Kuhn1960}
 Harold W. Kuhn.
 \newblock Some combinatorial lemmas in topology.
 \newblock \emph{IBM Journal of Research and Development}, 4(5):518--524, 1960.
 \newblock \href{https://doi.org/10.1147/rd.45.0518}{doi:10.1147/rd.45.0518}.
-\bibitem[Lu(2026)]{LuClosure}
+\bibitem[Lu26]{LuClosure}
 Shunqi Lu.
 \newblock Sharp closure thresholds for two-hidden-layer ReLU networks.
 \newblock Preprint, version 1, September 2026.
 \newblock \href{https://doi.org/10.5281/zenodo.22728502}{doi:10.5281/zenodo.22728502}.
 \newblock \href{https://shunqilu.github.io/publications/sharp_closure_thresholds_two_hidden_layer_relu_networks_v1.pdf}{Author's PDF}.
-\bibitem[Safran(2026)]{SafranDepth}
+\bibitem[RAB+26]{RuessEtAl}
+Kilian Rue{\ss}, Gennadiy Averkov, Florestan Brunck, Moritz Grillo,
+Christoph Hertrich, Georg Loho, Jack Stade, Moritz Stargalla, Matthew Sun,
+and Martin Winter.
+\newblock Shallower ReLU network representations via exact linear algebra.
+\newblock Preprint, arXiv:2607.21651, version 2, September 2026.
+\newblock \href{https://arxiv.org/abs/2607.21651v2}{arXiv:2607.21651v2}.
+\bibitem[Saf26]{SafranDepth}
 Itay Safran.
 \newblock A depth hierarchy for computing the maximum in ReLU networks via extremal graph theory.
 \newblock In \emph{Proceedings of the 39th Conference on Learning Theory}, volume 336 of \emph{Proceedings of Machine Learning Research}, pages 5721--5742, 2026.
 \newblock \href{https://proceedings.mlr.press/v336/safran26a.html}{PMLR 336}.
-\bibitem[Wang and Sun(2005)]{WangSun}
+\bibitem[WB26]{WangBasu}
+Zhimao Wang and Amitabh Basu.
+\newblock Representing MAX functions using two-hidden-layer ReLU networks.
+\newblock Preprint, arXiv:2608.25221, August 2026.
+\newblock \href{https://arxiv.org/abs/2608.25221v1}{arXiv:2608.25221v1}.
+\bibitem[WS05]{WangSun}
 Shuning Wang and Xusheng Sun.
 \newblock Generalization of hinging hyperplanes.
 \newblock \emph{IEEE Transactions on Information Theory}, 51(12):4425--4431, 2005.
 \newblock \href{https://doi.org/10.1109/TIT.2005.859246}{doi:10.1109/TIT.2005.859246}.
 \end{thebibliography}
 \end{document}
+
