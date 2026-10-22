@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-22T18:28:09.127061+00:00",
+  "checked_at_utc": "2026-10-22T19:05:05.265940+00:00",
   "source_commit": null,
-  "source_sha256": "a32a12e9581651724503e7ae1b8180f146c16c0398295adeecc9d3738e2c6727",
+  "source_sha256": "81c8f8060c982c157875d2804ad8d79a27823726f6e129a715a1f588cb91bd1e",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -597,6 +597,16 @@
         "propext"
       ],
       "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.factorial_le_quotientDim",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 r.factorial \u2264 quotientDim r",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
     }
   ],
   "source_files": {
@@ -630,6 +640,7 @@
     "MaxCaterpillar/Internal/Network.lean": "fa4e14cbbe0ad5b39077e97bb08d52d4cd605b3ab36530b1f345b5f30750a980",
     "MaxCaterpillar/KMPS.lean": "fb3e708d732809661ab0a16db31e1851d4e3f1505dd16e0547c773d13bd913e7",
     "MaxCaterpillar/Lemmas.lean": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72",
+    "MaxCaterpillar/LowerBound.lean": "2c7cabab3478c11e3c6272c21a161435cbe3fdfe0d4d2a080bbafaab6e75e714",
     "MaxCaterpillar/OneBasis.lean": "1a2de9bb9969dffb1d53981754059186fdeb62919840824caad0d870eba58770",
     "MaxCaterpillar/Quotient.lean": "0ad0dda3c39d82358aafa5250158dbbc31e8393454717e6c84c9f87c9e7f11a8",
     "MaxCaterpillar/RationalWidth.lean": "582ce625492d36a165dc4bf09f6eaddde28ebc40f4261d07549f5d77b39ad99e",
@@ -638,7 +649,7 @@
     "MaxCaterpillar/SharingRational.lean": "fdda6c8a7a3862f9471c95180304153573ae9b27324f286080a38a5bba4ebe25",
     "MaxCaterpillar/SmallArity.lean": "ea9d57b776d54e3fc89479af3b5718b7fedd198940c461b17e0a4b707a2083e5",
     "MaxCaterpillar/Theorems.lean": "76e210cd6a02fc9cf182ebb0b657ab1c02a54f6e02eb8e2df514d510c8c81d1d",
-    "MaxCaterpillar.lean": "831cdca5161867029eedc8e4c361a6032cd1498bced6e91c6d2413b775ed02fc",
+    "MaxCaterpillar.lean": "b48c2f2a246a49a09529497a259c388e124433d3719146767a76180da5829e7c",
     "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
     "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
     "MaxNN/CPWL/Conditional/Finitary.lean": "23bb8dec03ed56bc703279a21f38a92366bd96410202af1627196fa6c2f187d2",
@@ -822,10 +833,11 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "227bc139c519a795222882116505bbd81d8c0f6e95c66d159ed859069bcf64a8",
+    "Verification/Statements.lean": "cd59727d590cb57ea5c3d39309827d3e048c9cf06e865fb10ab256d79aa30474",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/audit/CheckDim.lean": "b80321b966f1c04ef2f7357571edc11a631f57e2b284cfacc881a1e3d869352c",
     "research/sN/audit/CheckExp.lean": "ccfa7f67a55991a09cc2a2b2f6b54726fc2b98e1c976f342fc51d96e90640473",
     "research/sN/audit/CheckLower.lean": "b8437a2295590f38b7472f0f633676a79094a40f95d89fa1458771a83c1ae485",
     "research/sN/audit/fidelity/NonVacuous.lean": "4cd82b942d7db58e96f8e60122313800e92e30d82d6a30bdaec020f539b6b1d8",
@@ -838,6 +850,6 @@
     "research/sN/rank/Speed.lean": "deacc99537990bfceb917b0b6c6eb2ca632d93c736c1c32bca041c8144012629",
     "research/sN/rank/T1.lean": "eac75cdd10f4e70def1f0a1d31ff55b5b308146b42a428c922c80bb815a88647",
     "research/sN/restricted/Germ.lean": "8e8039ac2d52a5ccd8c947332db7bf908937739a1c73654fac19cf90bb8706dd",
-    "verification/main.json": "16cd325804d666b6810bb6bb9fdc11c69ce7d795d611f96dbe0e312ab6a5562c"
+    "verification/main.json": "ec5b970f990d05a7dd43308fe6a963823bd9f7aad2aa86884136ed37f7abb99e"
   }
 }

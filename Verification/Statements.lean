@@ -234,3 +234,7 @@ example : ∀ (r : ℕ), ∀ (K : Finset (MaxNN.Caterpillar.Corrections.RealKey 
 example : ∀ (r : ℕ), 1 ≤ r → ∀ (K : Finset (MaxNN.Caterpillar.Corrections.RealKey (r + 1))), K ⊆ MaxNN.Caterpillar.Corrections.normalizedKeys r → ∀ (d : MaxNN.Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (MaxNN.Width.W (r + 1 + 1)) → ℝ), (∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * MaxNN.Caterpillar.Corrections.realUnitY k x + auxiliary a x) → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * K.card :=
   @MaxCaterpillar.caterpillar_count_exponential_pow
 #print axioms MaxCaterpillar.caterpillar_count_exponential_pow
+
+example : ∀ (r : ℕ), 1 ≤ r → r.factorial ≤ quotientDim r :=
+  @MaxCaterpillar.factorial_le_quotientDim
+#print axioms MaxCaterpillar.factorial_le_quotientDim
