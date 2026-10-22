@@ -345,7 +345,7 @@ $b_1,b_2,b_3$ of the corresponding dimensions, it evaluates as
 \begin{align}\label{eq:network-evaluation}
  x\longmapsto w_3^\top\relu\bigl(W_2\relu(W_1x+b_1)+b_2\bigr)+b_3.
 \end{align}
-There are no skip connections; equality is required on all of $\R^N$. For $N=1,2,3$ there are known simple network representations of width $(2,2)$ and $(4,2)$ and $(7,5)$. Our Main Theorem presents such constructions for higher $N$.
+There are no skip connections; equality is required on all of $\R^N$. For $N=1,2,3$ there are known simple network representations of width $(2,2)$ and $(4,2)$ and $(5,3)$; the last nests $\max(s,t)=t+\relu(s-t)$. Our Main Theorem presents such constructions for higher $N$.
 A network has \emph{rational weights} if every entry of $W_1$, $W_2$, and $w_3$
 is rational, and \emph{zero biases} if $b_1$, $b_2$, and $b_3$ vanish.
 
@@ -1157,7 +1157,13 @@ $q_N\leq3^{N-2}C_N=2^{O(N\log N)}$ follows from \Cref{thm:main}.
 \Cref{thm:quotient-lower} bounds the dimension of the vocabulary. It does
 not bound $s_N:=\min\{|J|:\maxn_N\in\spn\{U_j:j\in J\}+A_N\}$, the number of
 units in the sparsest expansion of $\maxn_N$, with arbitrary real
-coefficients. Neither bound concerns unrestricted ReLU networks.
+coefficients. In particular, $q_N$ is not a lower bound on the second width
+of the Caterpillar Net: by \Cref{thm:compilation} a network needs only the
+units of one expansion of $\maxn_N$, and $s_N\leq q_N$, with $s_4=3<65=q_4$.
+What \Cref{thm:quotient-lower} shows is that \Cref{thm:quotient-compression}
+cannot give a width below $(N-2)!+2$. Neither bound concerns networks whose
+second hidden layer contains neurons other than face functions, nor
+unrestricted ReLU networks.
 
 \Needspace{8\baselineskip}
 \begin{theorem}[Small arities, \leandecl{MaxCaterpillar/SmallArity.lean}{80}{max_three_network}, \leandecl{MaxCaterpillar/SmallArity.lean}{194}{max_four_network}]\label{thm:small-arity}
@@ -1177,8 +1183,8 @@ biases.
 Each outer unit in~\Cref{eq:max-three,eq:max-four} is a normalized face
 function. Lean proves both identities by exhaustive case analysis of the
 activation pattern on all of $\R^N$. For these arities, smaller networks
-are known: nesting $\max(s,t)=t+\relu(s-t)$ gives widths $(6,3)$ for
-$\maxn_4$. The identities illustrate how sparse the expansion in the
+are known: nesting $\max(s,t)=t+\relu(s-t)$ gives widths $(5,3)$ for
+$\maxn_3$ and $(6,3)$ for $\maxn_4$. The identities illustrate how sparse the expansion in the
 vocabulary can be.
 
 \paragraph{Exact search in small arity.}
