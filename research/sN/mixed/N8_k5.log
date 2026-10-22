@@ -1,0 +1,2 @@
+N=8 k=5: localities 336, max per unit 48 = 8.000 (N-k)!, bound s_N >= 7.000; best ((1, 2, 3, 5, 6), (2, 2, 1, 1, 2, 2))
+EXIT=0

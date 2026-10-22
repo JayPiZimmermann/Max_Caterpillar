@@ -1,8 +1,92 @@
 # Lower bounds on s_N (current note)
 
-**Live claims (2026-10-22).**
+## MAIN ROUTE (current): s_N ≥ C(N,k)/6^k for 3 ≤ k ≤ N, hence s_N ≥ (7/6)^N/(N+1)
 
-- **Q (quadratic, human proof complete, Lean in progress).** If
+Status: complete human proof (below); every finite ingredient checked
+(`spine_F.py`, `check_spine_bound.py`: all 59 104 hinge components of all
+units for N ≤ 8 satisfy G_C(1/6) ≤ F(L_C) ≤ 1). Lean: not started.
+
+Proof. Fix `k ≥ 3`, `x := 1/6`.
+1. *Functional* (E1): for a `k`-locality `L = (T, ρ)` let `Λ_L` be the k-th mixed
+   finite difference in the `T` coordinates at `p_L` (box side `δ` small).
+   `Λ_L` kills every function that near `p_L` is independent of some `y_t`,
+   `t ∈ T`: affine functions, auxiliary functions, hinges inside `T`.
+   `Λ_L max_N = ±δ`.
+2. *Units* (E2): `Λ_L U ≠ 0` ⇒ (a) every `o ∉ T` has exactly `κ_o` hinge
+   neighbours above it, and (s) every `t ∈ T` with no hinge neighbour in `T`
+   has `κ_t ≠ 0`. [Germ `σ(⟨v_T, z⟩ + Σ_{M(T)} σ(z_i − z_j))` with
+   `v_t = κ_t − |N⁺(t) ∩ T|`; base-`B` digits for (a).]
+3. *Structure* (caterpillar keys): the hinge forest `F` has components of three
+   kinds: isolated vertices; and components `C` consisting of a path of spine
+   vertices `s_1 … s_L` (`L ≥ 1`, consecutive spine vertices joined by hinge
+   spine edges) with pendant non-spine vertices ("leaves", hinge edge to their
+   spine vertex, no other hinge, `κ = 0`).
+4. *Admissible sets*: under (a) and (s), for each component `C`, `T ∩ C` is
+   `A ∪ leaves(A)` for some `A ⊆ spine(C)` [a leaf outside `T` has no
+   neighbour above, so its spine vertex is outside; a leaf in `T` without its
+   spine vertex is inactive]. Isolated `o`: `o ∈ T` iff `κ_o ≠ 0`.
+5. *Order count*: all orders of `O = V \ T` satisfying (a) induce the same
+   orientation of `F[O]` (a forest orientation is determined by in-degrees),
+   so they agree on every hinge edge inside `O`. Choose in every maximal run
+   of outside spine vertices of length `n` a set of `⌊n/2⌋` disjoint
+   consecutive pairs (spine edges): `m(T) = Σ ⌊n/2⌋`. Orders with `m` disjoint
+   pairs in prescribed relative order number exactly `(N−k)!/2^m`. Hence
+   `#{orders passing} ≤ (N−k)!/2^{m(T)}`.
+6. *Generating function*: `W_k ≤ (N−k)! Σ_{T admissible, |T|=k} 2^{−m(T)}
+   ≤ (N−k)! x^{−k} Π_C F_C(x)` with
+   `F_C(x) = Σ_{A ⊆ spine(C)} x^{|A|} Π_{runs} 2^{−⌊n/2⌋}` (leaves only lower
+   the weight, `x^{|leaves(A)|} ≤ 1`) and `F_{iso} ≤ max(1, x) = 1`.
+   For `L ≥ 2`: `F_C(1/6) = F(L) ≤ 0.9213 < 1` (max at `L = 3`; for all `L` by
+   a finite check plus the potential `u = (1, 3/5, 4/5)` on the states
+   {after A, odd run, even run}). For `L = 1` (spine vertex with `λ ≥ 1`
+   leaves): orders need the spine vertex below a leaf, `≤ 1/2`, so
+   `F_C ≤ 1/2 + x^{1+λ} < 1`.
+7. *Count*: every k-locality is passed by some unit of any expansion, so
+   `C(N,k)(N−k)! ≤ |K| · 6^k (N−k)!`, i.e. **`|K| ≥ C(N,k)/6^k`**.
+   With `k = ⌈N/7⌉`: `|K| ≥ (7/6)^N/(N+1)` (largest term of
+   `Σ_k C(N,k) 6^{−k} = (7/6)^N`, for `N` large enough that this `k ≥ 3`).
+
+For small N the quadratic/cubic bounds are stronger; the theorem should state
+`|K| ≥ C(N,k)/6^k` for every `3 ≤ k ≤ N`.
+
+**Main live claim E (exponential, 2026-10-22): `s_N ≥ max_{3≤k≤N} C(N,k)/3^k
+≥ (4/3)^N/(N+1)`.** Status: reduction proved on paper (below); one
+combinatorial inequality (E3) verified exactly for every hinge component of
+every unit with N ≤ 8, open in general; Lean not started.
+
+E1. *k-localities.* `L = (T, ρ)`, `|T| = k ≥ 3`, `T` ties at 0, the other
+coordinates at `−B^{ρ(o)}`. Functional: the k-th mixed finite difference in
+the `T` coordinates (box of side `δ` at `p_L`). It vanishes on every function
+that, near `p_L`, does not depend on some coordinate of `T`: affine functions,
+all auxiliary functions (≤ 2 coordinates, k ≥ 3), and hinges inside `T`. On
+`max_N` it equals `±δ` (`max_N = max_k(y_T)` near `p_L`).
+E2. *Units.* As in Q step 3, `Λ U_k ≠ 0` implies (a) [every outside `o` has
+exactly `κ_o` hinge-neighbours above it] and (s) [every `t ∈ T` has a
+hinge-neighbour in `T` or `κ_t − |N⁺(t) ∩ T| ≠ 0`; if `t` has no
+hinge-neighbour in `T` this is `κ_t ≠ 0`]. Hence `s_N ≥ (#k-localities)/
+max_u W_k(u)`, `W_k(u) = #{passing L}`, and `#k-localities = C(N,k)(N−k)!`.
+E3. *Factorization.* Conditions (a), (s) and the order probability factor over
+the components `C` of the hinge forest:
+`W_k(u)/(N−k)! = [x^k] Π_C G_C(x)`,
+`G_C(x) = Σ_{S⊆C, (s)} q_C(S) x^{|S|}`, `q_C(S)` = probability that a random
+order of `C \ S` satisfies (a). For `|C| ≥ 2`, `q_C(∅) ≤ 1/2` (forced
+orientation has an edge); isolated vertices give `G ≤ max(1, x)`.
+**Inequality E3:** `G_C(1/3) ≤ 1` for every hinge component of every unit.
+Then `W_k(u) ≤ 3^k (N−k)! · Π_C G_C(1/3) ≤ 3^k (N−k)!`, so
+`s_N ≥ C(N,k)/3^k` for every `k ≥ 3`.
+Evidence: `component_G.py` gives `max_C G_C(1/3) = 25/27` for N = 5..8 (a
+3-vertex hinge path, all κ = 1). Direct per-unit maxima `W_k/(N−k)!`
+(`mixed_k.py`): k = 3: 2; k = 4: 4; k = 5: 8; k = 6: 8 (N ≤ 8), all ≤ 3^k.
+The abstract inequality (all trees, all κ) is false (star with κ ≡ 1, 4
+vertices: 91/81, `abstract_G.py`); caterpillar property P (each vertex has
+at most two neighbours with κ ≥ 1, since tree-leaves have κ ≤ 0) is needed.
+Mechanism: a spine vertex with hinge leaves enters `S` together with all its
+leaves or not at all (leaves have κ = 0); long arms force chains.
+
+**Earlier claims (2026-10-22).**
+
+- **Q (quadratic) — LEAN VERIFIED** (`MaxCaterpillar.caterpillar_count_lower`,
+  `MaxCaterpillar/CountLower*`, axioms propext/Classical.choice/Quot.sound). If
   `max_N = Σ_{k∈K} d_k U_k + R` with `K` a set of normalized caterpillar face
   descriptions and `R` in the auxiliary span, then `6|K| ≥ N(N−1)`.
   Hence `s_N ≥ N(N−1)/6`.
