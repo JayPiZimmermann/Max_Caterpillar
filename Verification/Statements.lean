@@ -218,3 +218,19 @@ example : ∃ net : Network 4 (firstWidth 4) 5, (∀ x, net.eval x = Maximum 4 x
 example : ∀ (x : Fin 4 → ℝ), MAX 4 x = x 1 - MaxCaterpillar.relu (x 0 - x 2) - MaxCaterpillar.relu (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1)) + MaxCaterpillar.relu (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1) + MaxCaterpillar.relu (x 0 - x 2)) + MaxCaterpillar.relu (x 3 - x 1 + MaxCaterpillar.relu (x 0 - x 2) + MaxCaterpillar.relu (x 2 - x 3)) :=
   @MaxCaterpillar.max_four_identity
 #print axioms MaxCaterpillar.max_four_identity
+
+example : ∀ (r : ℕ), ∀ (K : Finset (MaxNN.Caterpillar.Corrections.RealKey (r + 1))), K ⊆ MaxNN.Caterpillar.Corrections.normalizedKeys r → ∀ (d : MaxNN.Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (MaxNN.Width.W (r + 1 + 1)) → ℝ), (∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * MaxNN.Caterpillar.Corrections.realUnitY k x + auxiliary a x) → (r + 1 + 1).choose 3 ≤ K.card * r :=
+  @MaxCaterpillar.caterpillar_choose_three_le
+#print axioms MaxCaterpillar.caterpillar_choose_three_le
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ (K : Finset (MaxNN.Caterpillar.Corrections.RealKey (r + 1))), K ⊆ MaxNN.Caterpillar.Corrections.normalizedKeys r → ∀ (d : MaxNN.Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (MaxNN.Width.W (r + 1 + 1)) → ℝ), (∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * MaxNN.Caterpillar.Corrections.realUnitY k x + auxiliary a x) → (r + 1 + 1) * (r + 1) ≤ 6 * K.card :=
+  @MaxCaterpillar.caterpillar_count_lower
+#print axioms MaxCaterpillar.caterpillar_count_lower
+
+example : ∀ (r : ℕ), ∀ (K : Finset (MaxNN.Caterpillar.Corrections.RealKey (r + 1))), K ⊆ MaxNN.Caterpillar.Corrections.normalizedKeys r → ∀ (d : MaxNN.Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (MaxNN.Width.W (r + 1 + 1)) → ℝ), (∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * MaxNN.Caterpillar.Corrections.realUnitY k x + auxiliary a x) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → (r + 1 + 1).choose k ≤ 6 ^ k * K.card :=
+  @MaxCaterpillar.caterpillar_count_exponential
+#print axioms MaxCaterpillar.caterpillar_count_exponential
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ (K : Finset (MaxNN.Caterpillar.Corrections.RealKey (r + 1))), K ⊆ MaxNN.Caterpillar.Corrections.normalizedKeys r → ∀ (d : MaxNN.Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (MaxNN.Width.W (r + 1 + 1)) → ℝ), (∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * MaxNN.Caterpillar.Corrections.realUnitY k x + auxiliary a x) → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * K.card :=
+  @MaxCaterpillar.caterpillar_count_exponential_pow
+#print axioms MaxCaterpillar.caterpillar_count_exponential_pow

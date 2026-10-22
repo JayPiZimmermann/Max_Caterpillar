@@ -9,3 +9,4 @@ import MaxCaterpillar.KMPS
 import MaxCaterpillar.SharingRational
 import MaxCaterpillar.CPWLRational
 import MaxCaterpillar.CountLower
+import MaxCaterpillar.CountExp

@@ -2,9 +2,9 @@
 
 ## MAIN ROUTE (current): s_N ≥ C(N,k)/6^k for 3 ≤ k ≤ N, hence s_N ≥ (7/6)^N/(N+1)
 
-Status: complete human proof (below); every finite ingredient checked
+Status: LEAN VERIFIED (`MaxCaterpillar.caterpillar_count_exponential`, `_pow`, certified in verification/certificate.json). Finite ingredients also checked
 (`spine_F.py`, `check_spine_bound.py`: all 59 104 hinge components of all
-units for N ≤ 8 satisfy G_C(1/6) ≤ F(L_C) ≤ 1). Lean: not started.
+units for N ≤ 8 satisfy G_C(1/6) ≤ F(L_C) ≤ 1).
 
 Proof. Fix `k ≥ 3`, `x := 1/6`.
 1. *Functional* (E1): for a `k`-locality `L = (T, ρ)` let `Λ_L` be the k-th mixed
