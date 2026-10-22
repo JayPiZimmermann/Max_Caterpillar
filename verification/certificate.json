@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-19T16:57:29.127164+00:00",
+  "checked_at_utc": "2026-10-22T12:05:22.837831+00:00",
   "source_commit": null,
-  "source_sha256": "5309e0d5ace2238c88342f271dff6092ab51c265977ae6d741ae91cae0e349ad",
+  "source_sha256": "b734333e8acfcab2be515c22e27af95226c7228560b156d7fe544e5411adc1ae",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -287,17 +287,220 @@
         "propext"
       ],
       "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.maximum_width_rational",
+      "type": "\u2200 (N : \u2115) [NeZero N], \u2203 net : Network N (firstWidth N) (secondWidth N), (\u2200 x, net.eval x = Maximum N x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.coefficient_rational",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2200 (i : Atom r), \u2203 q : \u211a, (q : \u211d) = coefficient r i",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.network_rational",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 (network r).HasRationalWeights \u2227 (network r).HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.rational_coefficients",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2203 c : Atom r \u2192 \u211d, (\u2200 i, \u2203 q : \u211a, (q : \u211d) = c i) \u2227 \u2200 x, \u2211 i, c i * atom r i x = Maximum (r + 1 + 1) x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.compilation",
+      "type": "\u2200 (r : \u2115) (K : Finset (Caterpillar.Corrections.RealKey (r + 1))), K \u2286 Caterpillar.Corrections.normalizedKeys r \u2192 \u2200 (d : Caterpillar.Corrections.RealKey (r + 1) \u2192 \u211d) (a : Fin (Width.W (r + 1 + 1)) \u2192 \u211d), (\u2200 x, Maximum (r + 1 + 1) x = \u2211 k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) \u2192 \u2203 net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (K.card + 2), (\u2200 x, net.eval x = Maximum (r + 1 + 1) x) \u2227 net.HasZeroBiases \u2227 ((\u2200 k \u2208 K, \u2203 q : \u211a, (q : \u211d) = d k) \u2192 (\u2200 j, \u2203 q : \u211a, (q : \u211d) = a j) \u2192 net.HasRationalWeights)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.quotientDim_eq",
+      "type": "\u2200 (r : \u2115), quotientDim r = FiniteDimensional.finrank \u211d (vocabularySpan r) - FiniteDimensional.finrank \u211d (auxSpan (r + 1 + 1))",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.quotient_compression",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2203 K : Finset (Caterpillar.Corrections.RealKey (r + 1)), K \u2286 Caterpillar.Corrections.normalizedKeys r \u2227 K.card \u2264 quotientDim r \u2227 \u2203 net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (quotientDim r + 2), (\u2200 x, net.eval x = Maximum (r + 1 + 1) x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.factorial_le_quotientDim",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 r.factorial \u2264 quotientDim r",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_sum_affine",
+      "type": "\u2200 {d T : \u2115} (r : \u2115), 1 \u2264 r \u2192 \u2200 (Aw : Fin T \u2192 Fin (r + 1 + 1) \u2192 Fin d \u2192 \u211d) (Ab : Fin T \u2192 Fin (r + 1 + 1) \u2192 \u211d) (\u03b5 : Fin T \u2192 \u211d), \u2203 net : Network d (T * firstWidth (r + 1 + 1)) (T * (secondWidth (r + 1 + 1) - 2) + 2), \u2200 x, net.eval x = \u2211 t, \u03b5 t * Maximum (r + 1 + 1) (pieces (Aw t) (Ab t) x)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_shared_pieces",
+      "type": "\u2200 {d n T : \u2115} (r : \u2115), 1 \u2264 r \u2192 \u2200 (Gw : Fin (n + 1) \u2192 Fin d \u2192 \u211d) (Gb : Fin (n + 1) \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (r + 1 + 1) \u2192 Fin (n + 1)) (\u03b5 : Fin T \u2192 \u211d), \u2203 net : Network d ((n + 1).choose 2 + (n + 1) + 1) ((imageSets \u03b1).card * (secondWidth (r + 1 + 1) - 2) + 2), \u2200 x, net.eval x = \u2211 t, \u03b5 t * Maximum (r + 1 + 1) (fun i => pieces Gw Gb x (\u03b1 t i))",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_shared_pieces_min",
+      "type": "\u2200 {d n T : \u2115} (r : \u2115), 1 \u2264 r \u2192 \u2200 (Gw : Fin (n + 1) \u2192 Fin d \u2192 \u211d) (Gb : Fin (n + 1) \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (r + 1 + 1) \u2192 Fin (n + 1)), (\u2200 t, Function.Injective (\u03b1 t)) \u2192 \u2200 (\u03b5 : Fin T \u2192 \u211d), \u2203 net : Network d ((n + 1).choose 2 + (n + 1) + 1) (min T ((n + 1).choose (r + 1 + 1)) * (secondWidth (r + 1 + 1) - 2) + 2), \u2200 x, net.eval x = \u2211 t, \u03b5 t * Maximum (r + 1 + 1) (fun i => pieces Gw Gb x (\u03b1 t i))",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.wang_sun",
+      "type": "\u2200 (d : \u2115) (f : Point d \u2192 \u211d), f \u2208 CPWL d \u2192 \u2203 (T : \u2115) (\u03b5 : Fin T \u2192 \u211d) (Aw : Fin T \u2192 Fin (d + 1) \u2192 Fin d \u2192 \u211d) (Ab : Fin T \u2192 Fin (d + 1) \u2192 \u211d), (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 \u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, Aw t i l * x l) + Ab t i)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.cpwl_two_hidden_layers",
+      "type": "\u2200 (d : \u2115), 2 \u2264 d \u2192 \u2200 (f : Point d \u2192 \u211d), f \u2208 CPWL d \u2192 \u2203 (T : \u2115) (\u03b5 : Fin T \u2192 \u211d) (Aw : Fin T \u2192 Fin (d + 1) \u2192 Fin d \u2192 \u211d) (Ab : Fin T \u2192 Fin (d + 1) \u2192 \u211d), (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 (\u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, Aw t i l * x l) + Ab t i)) \u2227 \u2203 net : Network d (T * firstWidth (d + 1)) (T * (secondWidth (d + 1) - 2) + 2), \u2200 x, net.eval x = f x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.cpwl_two_hidden_layers_shared",
+      "type": "\u2200 (d : \u2115), 2 \u2264 d \u2192 \u2200 (f : Point d \u2192 \u211d), f \u2208 CPWL d \u2192 \u2203 (p T : \u2115) (Gw : Fin p \u2192 Fin d \u2192 \u211d) (Gb : Fin p \u2192 \u211d) (\u03b1 : Fin T \u2192 Fin (d + 1) \u2192 Fin p) (\u03b5 : Fin T \u2192 \u211d), Function.Injective (fun a => (Gw a, Gb a)) \u2227 (\u2200 a, \u2203 t i, \u03b1 t i = a) \u2227 (\u2200 t, \u03b5 t = 1 \u2228 \u03b5 t = -1) \u2227 (\u2200 x, f x = \u2211 t, \u03b5 t * Maximum (d + 1) (fun i => (\u2211 l, Gw (\u03b1 t i) l * x l) + Gb (\u03b1 t i))) \u2227 \u2203 s : \u2115, s = (Finset.univ.image fun t => Finset.univ.image (\u03b1 t)).card \u2227 s \u2264 T \u2227 \u2203 net : Network d (p.choose 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2), \u2200 x, net.eval x = f x",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.max_three_network",
+      "type": "\u2203 net : Network 3 (firstWidth 3) 3, (\u2200 x, net.eval x = Maximum 3 x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.max_four_network",
+      "type": "\u2203 net : Network 4 (firstWidth 4) 5, (\u2200 x, net.eval x = Maximum 4 x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.max_four_identity",
+      "type": "\u2200 (x : Fin 4 \u2192 \u211d), MAX 4 x = x 1 - MaxCaterpillar.relu (x 0 - x 2) - MaxCaterpillar.relu (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1)) + MaxCaterpillar.relu (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1) + MaxCaterpillar.relu (x 0 - x 2)) + MaxCaterpillar.relu (x 3 - x 1 + MaxCaterpillar.relu (x 0 - x 2) + MaxCaterpillar.relu (x 2 - x 3))",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
     }
   ],
   "source_files": {
-    "All.lean": "23af380d602a9a3288ed6cae87dcd728ca03fa7bcd86411ffe75f095dc1f1b4b",
+    "All.lean": "c55c153c4ea209f54e44ed00c0f2898efb00265409230832ce38e8d54628bdcd",
     "MaxCaterpillar/Asymptotics.lean": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946",
+    "MaxCaterpillar/CPWL.lean": "ced7f9cd0535a6932cac7d6514c00be831e8cff8cf4e73819855cfef085e91af",
+    "MaxCaterpillar/Compilation.lean": "2d2213c4d9e360aa936dd19df492aab7b5907cc76b1a6020a481647c8e2f7cb2",
     "MaxCaterpillar/Construction.lean": "d30bbf1b948682a246880b0090f9b714f9492c658790b16a87188eb6c8faf166",
-    "MaxCaterpillar/Definitions.lean": "871e2d5b3ed06c74773c58159a8b0142fc785568f03c84f1b31b958cfebbc1ba",
+    "MaxCaterpillar/Definitions.lean": "fdfc857aa8de026c3a1ed300a2c3e8845705f91c639384690c536793c692973f",
     "MaxCaterpillar/Internal/Network.lean": "fa4e14cbbe0ad5b39077e97bb08d52d4cd605b3ab36530b1f345b5f30750a980",
     "MaxCaterpillar/Lemmas.lean": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72",
-    "MaxCaterpillar/Theorems.lean": "15c537c8ab6aa8b6135c54befcb2b02ea6fe52525368218feaba5e4c0573dc80",
-    "MaxCaterpillar.lean": "a1931244706d24d39d07c008737262d6114652e463618a9d11418b7669fae472",
+    "MaxCaterpillar/LowerBound.lean": "2c7cabab3478c11e3c6272c21a161435cbe3fdfe0d4d2a080bbafaab6e75e714",
+    "MaxCaterpillar/Quotient.lean": "0ad0dda3c39d82358aafa5250158dbbc31e8393454717e6c84c9f87c9e7f11a8",
+    "MaxCaterpillar/RationalWidth.lean": "582ce625492d36a165dc4bf09f6eaddde28ebc40f4261d07549f5d77b39ad99e",
+    "MaxCaterpillar/Rationality.lean": "45b11f39e655632e5977d318617f3b20bd93a9b762a23b2bbbacfce63a5ac2ac",
+    "MaxCaterpillar/Sharing.lean": "6c26473e7ea0dcb53dd5bc5e17055610736abea01e1b1ab228cc7be0712d46cb",
+    "MaxCaterpillar/SmallArity.lean": "ea9d57b776d54e3fc89479af3b5718b7fedd198940c461b17e0a4b707a2083e5",
+    "MaxCaterpillar/Theorems.lean": "7108c8f7125d0eac5efd518844584dfde8015f507f41ef03ed8afe3538e26e26",
+    "MaxCaterpillar.lean": "16febd6a3f4e0b124737492f00cb743612e3e3caf5d15baa048fa36f4adab2e4",
+    "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
+    "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
+    "MaxNN/CPWL/Conditional/Finitary.lean": "23bb8dec03ed56bc703279a21f38a92366bd96410202af1627196fa6c2f187d2",
+    "MaxNN/CPWL/Def.lean": "a6db0422b08c37ddea2f58c59ca2df47cba8688749ceebf66f48c39ff931ae00",
+    "MaxNN/CPWL/Hinging/MaxPieces.lean": "d7a5d87800cde99a077d0f0a20ca4e4894fe4faead4744fa86a57146a865bfe4",
+    "MaxNN/CPWL/Hinging.lean": "046858c465b82938076263b6dc26708c7a775372712e69dbcf42cc7136a3e157",
+    "MaxNN/CPWL/Networks.lean": "066a94bacd535577ab161ffa5cc704230f3779affcde942f9130c7401e50b48b",
+    "MaxNN/CPWL/Pieces/Convexity.lean": "7b23acfc87d2a66768447151b24b9d76bc401300da75ba3105d609ccd04cd834",
+    "MaxNN/CPWL/Pieces/Polyhedra.lean": "1aa8e5c40974b65bfd2f015f10291a8f01d6e850f2fe0a4ec4fa71ef94862c2a",
+    "MaxNN/CPWL/Pieces/Topology.lean": "9afd80335bf3f77e2a47aaa4c615696f1b9673dd33b1ebce65048141ade92926",
+    "MaxNN/CPWL/Representation/Arity/Dependence.lean": "11f702999b2e7ff34af4cefed648e0c20d95ff5d2b23f679712d1ccfa97757e3",
+    "MaxNN/CPWL/Representation/Arity/InclusionExclusion.lean": "71673f5923a0fe71231eaa16d1e00f5c90a0afb1a1c7dce28d2a6b847ecdc5cd",
+    "MaxNN/CPWL/Representation/Arity/Lift.lean": "29dc95f5a2b36c73334ad72f2986715fe961ca26249992a3fecf960dd42e6e97",
+    "MaxNN/CPWL/Representation/Arity/MaxOn.lean": "46d224431b529c64fd6292c522999138c83fd1e56f64198fb45cb32ea1f90739",
+    "MaxNN/CPWL/Representation/Arity/Reduce.lean": "1dc31082f1aa1d218de77002a7b5dac5b58b086174c63702e7f0e4a493723b65",
+    "MaxNN/CPWL/Representation/Arity.lean": "137c155c0737ec3f9b5fe4d4cb67ed90d8aa0bb8d13769c8d16278cfce41e42e",
+    "MaxNN/CPWL/Representation/ConvexMax/FullDim.lean": "02bbc75f4576ea2b235c170a42e4de0f4ece1321b3f6b0b076bec03feebd7f33",
+    "MaxNN/CPWL/Representation/ConvexMax/Support.lean": "b858076162501d781305d10a456779b9064139929c6187cc79461793051932ce",
+    "MaxNN/CPWL/Representation/ConvexMax.lean": "5f2024ffe8e12f6ceb7b12d30aa6ebef0423899bd5c8f3bb6e24b077e7e6db23",
+    "MaxNN/CPWL/Representation/DiffConvex/LineData.lean": "2ba950185e3d1db4ad26f98eea37aadf844f81c67341cc21d9ec70b8342c2135",
+    "MaxNN/CPWL/Representation/DiffConvex/OneDim/ConvexBricks.lean": "3f407f3ae494f38734c3d8d8bce9453684e3b8551c187264dbdae66e966a3d7c",
+    "MaxNN/CPWL/Representation/DiffConvex/OneDim/Core.lean": "3ef3ee852f268dd4fdcd61bf7bfad1f6e1a6e4622aa2ddcd58e8ef5dab7eb6c2",
+    "MaxNN/CPWL/Representation/DiffConvex/OneDim/Engine.lean": "831bdfaf9f4bbc78689f2159b6e8e4cd6285b9fdf5b20d7030251c8a5d58d622",
+    "MaxNN/CPWL/Representation/DiffConvex/OneDim/LeftRight.lean": "d753778b26d9dbe40172e4e1b2f181a17159db527388149e69de4e9ea903eba9",
+    "MaxNN/CPWL/Representation/DiffConvex.lean": "3e2a600f20f05bcec5c588346bbc749514414194bd68ef334c81fd92583b6d71",
     "MaxNN/Constructions/MaxN/Width/Class.lean": "8fcf78e6bf551328f5bdb31aa1eced4fe89e2df9313d73ac5985ac6b69a9b09c",
     "MaxNN/Constructions/MaxN/Width/Layer/Coeffs.lean": "bab2a55966f763d6da851d25c2dc0e762e743aa2690c6f8feff6baead495d850",
     "MaxNN/Constructions/MaxN/Width/Layer/Features.lean": "9a06e16ea76f77364fb9991406bd9b3a2f4426fe21af0441033944095e824849",
@@ -449,15 +652,17 @@
     "MaxNN/Core/Affine.lean": "bb5a854f0b371ecc5b0488314ffb624198f96e870e46aa09c98c9b4986018b3f",
     "MaxNN/Core/Class.lean": "9091406f7720a5f31c16de5c276d9f5bd2b60db3c842cf65e6876ef9d9794427",
     "MaxNN/Core/Max.lean": "090dd71f2d73840b87b2c0f15dde2d7ff89fd3bb37d059146cc8076d7622142f",
+    "MaxNN/Core/Monotone.lean": "91d0a5d797e65819686223922b793c9a18e6874c2e94756be27a4fbc0008fd23",
     "MaxNN/Core/Network.lean": "6a94e0a978b3660d5ecf42b628d64024c6ed1dc5b60052c2b929cd3417a96805",
     "MaxNN/Core/Relu.lean": "98acff835fa4f1cc365f5d8f19c0b88eaa5178486c19cea633ca027e9f8d72ea",
+    "MaxNN/GeneralN/Bridge/Links/ArityIterate.lean": "00ac739488a4cd99d5842a26601ca3700b03e3566794f2291c622cc4089d551c",
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "68d41a766e68e9a17051829425720a47d8aa1254328a018000e191d82485d92c",
+    "Verification/Statements.lean": "64f7f0505b5af0ce4f9e61298cd29cb25961fcfabf0a88d1a574f4c64746f6b4",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
-    "verification/main.json": "94995510cb751941189c7f7cfc586ec9969f62c8641bcf63fb16749e4b65f7fd"
+    "verification/main.json": "7c65596e7cca2c06b307658df245621b8ff5e30a0ae1cf1961556336c0bb4943"
   }
 }

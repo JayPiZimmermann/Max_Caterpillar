@@ -110,3 +110,71 @@ example : ∀ (N : ℕ), coneCount N = Caterpillar.Corrections.spineConeBound N 
 example : ∀ (r : ℕ) (x : Point (r + 1 + 1)), (network r).eval x = (Caterpillar.compactEssentialNetwork r).eval x 0 :=
   @MaxCaterpillar.network_eval_internal
 #print axioms MaxCaterpillar.network_eval_internal
+
+example : ∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.maximum_width_rational
+#print axioms MaxCaterpillar.maximum_width_rational
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ (i : Atom r), ∃ q : ℚ, (q : ℝ) = coefficient r i :=
+  @MaxCaterpillar.coefficient_rational
+#print axioms MaxCaterpillar.coefficient_rational
+
+example : ∀ (r : ℕ), 1 ≤ r → (network r).HasRationalWeights ∧ (network r).HasZeroBiases :=
+  @MaxCaterpillar.network_rational
+#print axioms MaxCaterpillar.network_rational
+
+example : ∀ (r : ℕ), 1 ≤ r → ∃ c : Atom r → ℝ, (∀ i, ∃ q : ℚ, (q : ℝ) = c i) ∧ ∀ x, ∑ i, c i * atom r i x = Maximum (r + 1 + 1) x :=
+  @MaxCaterpillar.rational_coefficients
+#print axioms MaxCaterpillar.rational_coefficients
+
+example : ∀ (r : ℕ) (K : Finset (Caterpillar.Corrections.RealKey (r + 1))), K ⊆ Caterpillar.Corrections.normalizedKeys r → ∀ (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ), (∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) → ∃ net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (K.card + 2), (∀ x, net.eval x = Maximum (r + 1 + 1) x) ∧ net.HasZeroBiases ∧ ((∀ k ∈ K, ∃ q : ℚ, (q : ℝ) = d k) → (∀ j, ∃ q : ℚ, (q : ℝ) = a j) → net.HasRationalWeights) :=
+  @MaxCaterpillar.compilation
+#print axioms MaxCaterpillar.compilation
+
+example : ∀ (r : ℕ), quotientDim r = FiniteDimensional.finrank ℝ (vocabularySpan r) - FiniteDimensional.finrank ℝ (auxSpan (r + 1 + 1)) :=
+  @MaxCaterpillar.quotientDim_eq
+#print axioms MaxCaterpillar.quotientDim_eq
+
+example : ∀ (r : ℕ), 1 ≤ r → ∃ K : Finset (Caterpillar.Corrections.RealKey (r + 1)), K ⊆ Caterpillar.Corrections.normalizedKeys r ∧ K.card ≤ quotientDim r ∧ ∃ net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (quotientDim r + 2), (∀ x, net.eval x = Maximum (r + 1 + 1) x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.quotient_compression
+#print axioms MaxCaterpillar.quotient_compression
+
+example : ∀ (r : ℕ), 1 ≤ r → r.factorial ≤ quotientDim r :=
+  @MaxCaterpillar.factorial_le_quotientDim
+#print axioms MaxCaterpillar.factorial_le_quotientDim
+
+example : ∀ {d T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Aw : Fin T → Fin (r + 1 + 1) → Fin d → ℝ) (Ab : Fin T → Fin (r + 1 + 1) → ℝ) (ε : Fin T → ℝ), ∃ net : Network d (T * firstWidth (r + 1 + 1)) (T * (secondWidth (r + 1 + 1) - 2) + 2), ∀ x, net.eval x = ∑ t, ε t * Maximum (r + 1 + 1) (pieces (Aw t) (Ab t) x) :=
+  @MaxCaterpillar.caterpillar_sum_affine
+#print axioms MaxCaterpillar.caterpillar_sum_affine
+
+example : ∀ {d n T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ) (α : Fin T → Fin (r + 1 + 1) → Fin (n + 1)) (ε : Fin T → ℝ), ∃ net : Network d ((n + 1).choose 2 + (n + 1) + 1) ((imageSets α).card * (secondWidth (r + 1 + 1) - 2) + 2), ∀ x, net.eval x = ∑ t, ε t * Maximum (r + 1 + 1) (fun i => pieces Gw Gb x (α t i)) :=
+  @MaxCaterpillar.caterpillar_shared_pieces
+#print axioms MaxCaterpillar.caterpillar_shared_pieces
+
+example : ∀ {d n T : ℕ} (r : ℕ), 1 ≤ r → ∀ (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ) (α : Fin T → Fin (r + 1 + 1) → Fin (n + 1)), (∀ t, Function.Injective (α t)) → ∀ (ε : Fin T → ℝ), ∃ net : Network d ((n + 1).choose 2 + (n + 1) + 1) (min T ((n + 1).choose (r + 1 + 1)) * (secondWidth (r + 1 + 1) - 2) + 2), ∀ x, net.eval x = ∑ t, ε t * Maximum (r + 1 + 1) (fun i => pieces Gw Gb x (α t i)) :=
+  @MaxCaterpillar.caterpillar_shared_pieces_min
+#print axioms MaxCaterpillar.caterpillar_shared_pieces_min
+
+example : ∀ (d : ℕ) (f : Point d → ℝ), f ∈ CPWL d → ∃ (T : ℕ) (ε : Fin T → ℝ) (Aw : Fin T → Fin (d + 1) → Fin d → ℝ) (Ab : Fin T → Fin (d + 1) → ℝ), (∀ t, ε t = 1 ∨ ε t = -1) ∧ ∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, Aw t i l * x l) + Ab t i) :=
+  @MaxCaterpillar.wang_sun
+#print axioms MaxCaterpillar.wang_sun
+
+example : ∀ (d : ℕ), 2 ≤ d → ∀ (f : Point d → ℝ), f ∈ CPWL d → ∃ (T : ℕ) (ε : Fin T → ℝ) (Aw : Fin T → Fin (d + 1) → Fin d → ℝ) (Ab : Fin T → Fin (d + 1) → ℝ), (∀ t, ε t = 1 ∨ ε t = -1) ∧ (∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, Aw t i l * x l) + Ab t i)) ∧ ∃ net : Network d (T * firstWidth (d + 1)) (T * (secondWidth (d + 1) - 2) + 2), ∀ x, net.eval x = f x :=
+  @MaxCaterpillar.cpwl_two_hidden_layers
+#print axioms MaxCaterpillar.cpwl_two_hidden_layers
+
+example : ∀ (d : ℕ), 2 ≤ d → ∀ (f : Point d → ℝ), f ∈ CPWL d → ∃ (p T : ℕ) (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ) (α : Fin T → Fin (d + 1) → Fin p) (ε : Fin T → ℝ), Function.Injective (fun a => (Gw a, Gb a)) ∧ (∀ a, ∃ t i, α t i = a) ∧ (∀ t, ε t = 1 ∨ ε t = -1) ∧ (∀ x, f x = ∑ t, ε t * Maximum (d + 1) (fun i => (∑ l, Gw (α t i) l * x l) + Gb (α t i))) ∧ ∃ s : ℕ, s = (Finset.univ.image fun t => Finset.univ.image (α t)).card ∧ s ≤ T ∧ ∃ net : Network d (p.choose 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2), ∀ x, net.eval x = f x :=
+  @MaxCaterpillar.cpwl_two_hidden_layers_shared
+#print axioms MaxCaterpillar.cpwl_two_hidden_layers_shared
+
+example : ∃ net : Network 3 (firstWidth 3) 3, (∀ x, net.eval x = Maximum 3 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.max_three_network
+#print axioms MaxCaterpillar.max_three_network
+
+example : ∃ net : Network 4 (firstWidth 4) 5, (∀ x, net.eval x = Maximum 4 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.max_four_network
+#print axioms MaxCaterpillar.max_four_network
+
+example : ∀ (x : Fin 4 → ℝ), MAX 4 x = x 1 - MaxCaterpillar.relu (x 0 - x 2) - MaxCaterpillar.relu (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1)) + MaxCaterpillar.relu (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1) + MaxCaterpillar.relu (x 0 - x 2)) + MaxCaterpillar.relu (x 3 - x 1 + MaxCaterpillar.relu (x 0 - x 2) + MaxCaterpillar.relu (x 2 - x 3)) :=
+  @MaxCaterpillar.max_four_identity
+#print axioms MaxCaterpillar.max_four_identity

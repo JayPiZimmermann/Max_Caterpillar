@@ -1,2 +1,7 @@
 import MaxCaterpillar.Definitions
 import MaxCaterpillar.Theorems
+import MaxCaterpillar.Quotient
+import MaxCaterpillar.LowerBound
+import MaxCaterpillar.Sharing
+import MaxCaterpillar.CPWL
+import MaxCaterpillar.SmallArity

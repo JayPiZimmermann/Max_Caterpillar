@@ -1,16 +1,15 @@
 # A caterpillar construction for MAX with two hidden layers
 
 This repository formalizes in Lean 4 an explicit two-hidden-layer ReLU
-representation of
+representation, with rational weights and zero biases, of
 
 $$
 \operatorname{MAX}_N(x)=\max_{0\le i<N}x_i
 $$
 
-for every positive arity. The formalization in this repository is restricted
-to this maximum construction and the mathematics used in the accompanying
-paper. It does not contain a formalization of the general theorem for arbitrary
-continuous piecewise affine functions.
+for every positive arity. It also formalizes the Wang–Sun representation of continuous piecewise
+affine functions by maxima and the resulting two-hidden-layer networks for
+all such functions.
 
 The network model is the ordinary
 affine/ReLU/affine/ReLU/affine architecture with real weights, scalar output,
@@ -33,6 +32,37 @@ absorption, and the two signed-remainder units. It also proves
 $h_1=O(N^2)$ and $h_2=2^{O(N\log N)}$, with the latter formalized as
 $\log h_2=O(N\log N)$. The construction data are given by a direct finite
 formula at every arity; its correctness proof uses induction.
+
+## Version 2 results
+
+Superseded declarations are kept in the sources and commented as Version 1;
+the new ones are commented as Version 2.
+
+- `maximum_width_rational` (Version 2 of `maximum_width`): the same widths
+  with rational weights and zero biases. The canonical inverse-Gram
+  coefficients are rational (`coefficient_rational`, `network_rational`).
+- `rational_coefficients`: rational coefficients from one basis of the
+  dictionary, by an integration-free evaluation argument
+  ([Rationality.lean](MaxCaterpillar/Rationality.lean)).
+- `compilation`: any expansion of the maximum by normalized face functions
+  `K` and an auxiliary remainder compiles with the same first hidden layer and
+  `|K| + 2` second-layer neurons ([Compilation.lean](MaxCaterpillar/Compilation.lean)).
+- `quotient_compression`: second width `q_N + 2`, where
+  `q_N = dim(V_N / A_N)` ([Quotient.lean](MaxCaterpillar/Quotient.lean)).
+- `factorial_le_quotientDim`: `q_N ≥ (N - 2)!`
+  ([LowerBound.lean](MaxCaterpillar/LowerBound.lean)). This bounds the
+  vocabulary dimension only, not the sparsest expansion or general networks.
+- `max_three_network`, `max_four_network`: widths `(7, 3)` and `(11, 5)`
+  ([SmallArity.lean](MaxCaterpillar/SmallArity.lean)).
+- `wang_sun`, `cpwl_two_hidden_layers`, `cpwl_two_hidden_layers_shared`:
+  the Wang–Sun theorem and two-hidden-layer networks for all CPWL functions,
+  sharing layers across the maxima ([CPWL.lean](MaxCaterpillar/CPWL.lean),
+  [Sharing.lean](MaxCaterpillar/Sharing.lean)). The general CPWL development
+  under `MaxNN/CPWL` was restored for this purpose.
+
+Exact small-arity searches (`scripts/vocabulary_search.py`) certify
+`q_3 = 1`, `q_4 = 65`, `q_5 = 1136`, `s_3 = 1`, `s_4 = 3`; these are
+computational certificates, not Lean proofs.
 
 The paper-facing interface begins with
 [Definitions.lean](MaxCaterpillar/Definitions.lean),

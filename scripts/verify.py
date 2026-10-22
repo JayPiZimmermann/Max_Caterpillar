@@ -66,8 +66,7 @@ def main():
                         help='Skip Lake build; exact statements still elaborate afresh.')
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'verification/main.json').read_text())
-    cpwl_sources = sorted((ROOT / 'MaxNN' / 'CPWL').rglob('*.lean'))
-    forbidden_sources = cpwl_sources + [ROOT / 'MaxCaterpillar' / 'Archive.lean']
+    forbidden_sources = [ROOT / 'MaxCaterpillar' / 'Archive.lean']
     remaining = [str(path.relative_to(ROOT)) for path in forbidden_sources if path.is_file()]
     if remaining:
         raise SystemExit('Sources outside the MAX-only scope remain:\n' + '\n'.join(remaining))
