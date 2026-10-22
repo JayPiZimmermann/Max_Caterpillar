@@ -1,7 +1,7 @@
 {
   "main": {
-    "file": "MaxCaterpillar/Theorems.lean",
-    "name": "maximum_width_rational",
+    "file": "MaxCaterpillar/OneBasis.lean",
+    "name": "maximum_width_one_basis",
     "equations": [
       "eq:width"
     ]
@@ -27,17 +27,6 @@
       "eq:faces",
       "eq:face-description"
     ]
-  },
-  "coefficients": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
-    "name": "canonicalCoeff",
-    "equations": [
-      "eq:coefficients"
-    ]
-  },
-  "gram": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
-    "name": "gramMatrix_isUnit"
   },
   "span": {
     "file": "MaxCaterpillar/Lemmas.lean",
@@ -142,8 +131,8 @@
     "name": "construction_width"
   },
   "expansion": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
-    "name": "sum_canonicalCoeff_eq",
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "rational_coefficients",
     "equations": [
       "eq:canonical-expansion"
     ]
@@ -153,8 +142,8 @@
     "name": "facet_reduction"
   },
   "compiler": {
-    "file": "MaxCaterpillar/Lemmas.lean",
-    "name": "width_of_cone_count",
+    "file": "MaxCaterpillar/OneBasis.lean",
+    "name": "maximum_width_one_basis",
     "equations": [
       "eq:compilation-widths"
     ],
@@ -249,71 +238,22 @@
       "eq:aux_functions"
     ]
   },
-  "basisSubsets": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean",
-    "name": "basisSubsets",
-    "equations": [
-      "eq:bases"
-    ]
-  },
-  "gramMatrix": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
-    "name": "gramMatrix",
-    "equations": [
-      "eq:gram-matrix"
-    ]
-  },
-  "gramRhs": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
-    "name": "gramRhs",
-    "equations": [
-      "eq:gram-rhs"
-    ]
-  },
-  "ballInner": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
-    "name": "ballInner",
-    "equations": [
-      "eq:inner-product"
-    ]
-  },
   "basisExpansion": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean",
-    "name": "basisExpansion_eq",
+    "file": "MaxCaterpillar/RationalWidth.lean",
+    "name": "rational_expansion",
     "equations": [
       "eq:basis-expansion"
-    ]
-  },
-  "normalEquations": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean",
-    "name": "lincomb_gramCoeff_eq",
-    "equations": [
-      "eq:normal-equations"
     ]
   },
   "fiberAverage": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/FiberCompiler.lean",
     "name": "sum_finiteFiber_average_mul"
   },
-  "averageExpansion": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
-    "name": "basisAverage_eq_sum_canonicalCoeff",
-    "equations": [
-      "eq:average-expansion"
-    ]
-  },
   "signedRelu": {
     "file": "MaxNN/Core/Relu.lean",
     "name": "relu_sub_relu_neg",
     "equations": [
       "eq:hinge-reversal"
-    ]
-  },
-  "remainder": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean",
-    "name": "sum_essential_add_absorbedRemainder",
-    "equations": [
-      "eq:remainder"
     ]
   },
   "remainderTranslation": {
@@ -543,8 +483,8 @@
     ]
   },
   "retainedCount": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/HingeCount.lean",
-    "name": "essentialNormalizedKeys_card_le_sub_orderedHinges",
+    "file": "MaxCaterpillar/OneBasis.lean",
+    "name": "quotientDim_add_two_le_secondWidth",
     "equations": [
       "eq:retained-count"
     ],
@@ -696,16 +636,9 @@
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
     "name": "canonicalNormalizedCoeff"
   },
-  "activeNormalizedDescriptions": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
-    "name": "canonicalActiveKeys",
-    "equations": [
-      "eq:active-normalized-descriptions"
-    ]
-  },
   "retainedDescriptions": {
-    "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean",
-    "name": "essentialKeys",
+    "file": "MaxCaterpillar/OneBasis.lean",
+    "name": "vocabularySpan_le_essential",
     "equations": [
       "eq:retained-descriptions"
     ]
@@ -874,41 +807,6 @@
       "eq:quotient-width"
     ]
   },
-  "quotientLower": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "factorial_le_quotientDim",
-    "equations": [
-      "eq:quotient-lower"
-    ]
-  },
-  "pathUnit": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "pathUnit_apply",
-    "equations": [
-      "eq:path-unit"
-    ]
-  },
-  "testConfiguration": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "testW",
-    "equations": [
-      "eq:test-configuration"
-    ]
-  },
-  "secondDifference": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "pathFunctional",
-    "equations": [
-      "eq:second-difference"
-    ]
-  },
-  "pathFunctional": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "pathFunctional_pathUnit",
-    "equations": [
-      "eq:path-functional"
-    ]
-  },
   "maxThree": {
     "file": "MaxCaterpillar/SmallArity.lean",
     "name": "max_three_identity",
@@ -931,67 +829,6 @@
     "file": "MaxCaterpillar/SmallArity.lean",
     "name": "max_four_network"
   },
-  "sharingAffine": {
-    "file": "MaxCaterpillar/Sharing.lean",
-    "name": "caterpillar_sum_affine",
-    "equations": [
-      "eq:sharing-widths-a"
-    ]
-  },
-  "sharingPieces": {
-    "file": "MaxCaterpillar/Sharing.lean",
-    "name": "caterpillar_shared_pieces",
-    "equations": [
-      "eq:shared-pieces-sum",
-      "eq:sharing-widths-b"
-    ]
-  },
-  "sharingExpansion": {
-    "file": "MaxCaterpillar/Sharing.lean",
-    "name": "exists_caterpillarExpansion",
-    "equations": [
-      "eq:sharing-max",
-      "eq:sharing-pair-form"
-    ],
-    "steps": [
-      "stp:sharing-expansion"
-    ]
-  },
-  "sharingCompile": {
-    "file": "MaxCaterpillar/Sharing.lean",
-    "name": "exists_network_sum_maximum",
-    "equations": [
-      "eq:sharing-rows",
-      "eq:sharing-output"
-    ],
-    "steps": [
-      "stp:sharing-compile"
-    ]
-  },
-  "sharingAffineGeneric": {
-    "file": "MaxCaterpillar/Sharing.lean",
-    "name": "exists_network_sum_affine_maximum",
-    "steps": [
-      "stp:sharing-a"
-    ]
-  },
-  "sharingFeatures": {
-    "file": "MaxCaterpillar/Sharing.lean",
-    "name": "piecesW₁",
-    "equations": [
-      "eq:sharing-features"
-    ]
-  },
-  "sharingGrouped": {
-    "file": "MaxCaterpillar/Sharing.lean",
-    "name": "exists_network_shared_pieces",
-    "equations": [
-      "eq:sharing-grouped"
-    ],
-    "steps": [
-      "stp:sharing-b"
-    ]
-  },
   "cpwlTwo": {
     "file": "MaxCaterpillar/CPWL.lean",
     "name": "cpwl_two_hidden_layers"
@@ -1003,5 +840,24 @@
   "point": {
     "file": "MaxCaterpillar/Definitions.lean",
     "name": "Point"
+  },
+  "kmps": {
+    "file": "MaxCaterpillar/KMPS.lean",
+    "name": "kmps_of_continuous_selection",
+    "equations": [
+      "eq:kmps"
+    ]
+  },
+  "kmpsPieces": {
+    "file": "MaxCaterpillar/KMPS.lean",
+    "name": "kmps_pieces"
+  },
+  "cpwlPiecesRational": {
+    "file": "MaxCaterpillar/CPWLRational.lean",
+    "name": "cpwl_two_hidden_layers_pieces_rational"
+  },
+  "argumentSets": {
+    "file": "MaxCaterpillar/Sharing.lean",
+    "name": "card_imageSets_le_sum_choose"
   }
 }

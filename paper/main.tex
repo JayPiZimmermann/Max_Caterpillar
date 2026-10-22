@@ -56,13 +56,12 @@
 \makeatletter
 \newcommand{\DeclareSourceEquation}[2]{\expandafter\def\csname paper@lean@#1\endcsname{#2}}
 \makeatother
-\newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/9eff36af7b8d9898bcfb1e2ee70b753c5efbaca6}
-\DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{40}
+\newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/d90bc998ba19a2ee65ec4b24fee7b63aeb2058c9}
+\DeclareLeanEquation{eq:width}{MaxCaterpillar/OneBasis.lean}{98}
 \DeclareLeanEquation{eq:count}{MaxCaterpillar/Definitions.lean}{60}
 \DeclareLeanEquation{eq:word}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}
 \DeclareLeanEquation{eq:faces}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}
 \DeclareLeanEquation{eq:face-description}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}
-\DeclareLeanEquation{eq:coefficients}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{49}
 \DeclareLeanEquation{eq:dictionary-span}{MaxCaterpillar/Lemmas.lean}{54}
 \DeclareLeanEquation{eq:class-identity}{MaxCaterpillar/Lemmas.lean}{48}
 \DeclareLeanEquation{stp:class}{MaxCaterpillar/Lemmas.lean}{48}
@@ -73,15 +72,15 @@
 \DeclareLeanEquation{eq:graph}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/GraphKey.lean}{214}
 \DeclareLeanEquation{eq:cone-count}{MaxCaterpillar/Lemmas.lean}{66}
 \DeclareLeanEquation{eq:features}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean}{63}
-\DeclareLeanEquation{eq:canonical-expansion}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{72}
-\DeclareLeanEquation{eq:compilation-widths}{MaxCaterpillar/Lemmas.lean}{72}
-\DeclareLeanEquation{stp:size-network}{MaxCaterpillar/Lemmas.lean}{72}
+\DeclareLeanEquation{eq:canonical-expansion}{MaxCaterpillar/Theorems.lean}{81}
+\DeclareLeanEquation{eq:compilation-widths}{MaxCaterpillar/OneBasis.lean}{98}
+\DeclareLeanEquation{stp:size-network}{MaxCaterpillar/OneBasis.lean}{98}
 \DeclareLeanEquation{eq:network-parameters}{MaxCaterpillar/Definitions.lean}{26}
 \DeclareLeanEquation{eq:network-evaluation}{MaxCaterpillar/Definitions.lean}{35}
 \DeclareLeanEquation{eq:maximum}{MaxCaterpillar/Definitions.lean}{51}
 \DeclareLeanEquation{eq:signed-word-sum}{MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean}{31}
-\DeclareLeanEquation{eq:hinging-maps}{MaxCaterpillar/CPWL.lean}{34}
-\DeclareLeanEquation{eq:hinging-representation}{MaxCaterpillar/CPWL.lean}{34}
+\DeclareLeanEquation{eq:hinging-maps}{MaxCaterpillar/CPWL.lean}{35}
+\DeclareLeanEquation{eq:hinging-representation}{MaxCaterpillar/CPWL.lean}{35}
 \DeclareLeanEquation{eq:max-hinge}{MaxNN/Core/Relu.lean}{24}
 \DeclareLeanEquation{eq:caterpillar-data}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{24}
 \DeclareLeanEquation{eq:word-parent}{MaxNN/Constructions/Paramid/Caterpillar/Words.lean}{28}
@@ -89,15 +88,8 @@
 \DeclareLeanEquation{eq:edge-functions}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{126}
 \DeclareLeanEquation{eq:edge-comparison}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{126}
 \DeclareLeanEquation{eq:aux_functions}{MaxNN/Constructions/MaxN/Width/Layer/Features.lean}{75}
-\DeclareLeanEquation{eq:bases}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean}{26}
-\DeclareLeanEquation{eq:gram-matrix}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean}{147}
-\DeclareLeanEquation{eq:gram-rhs}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean}{201}
-\DeclareLeanEquation{eq:inner-product}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean}{50}
-\DeclareLeanEquation{eq:basis-expansion}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Average.lean}{61}
-\DeclareLeanEquation{eq:normal-equations}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean}{220}
-\DeclareLeanEquation{eq:average-expansion}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{53}
+\DeclareLeanEquation{eq:basis-expansion}{MaxCaterpillar/RationalWidth.lean}{238}
 \DeclareLeanEquation{eq:hinge-reversal}{MaxNN/Core/Relu.lean}{33}
-\DeclareLeanEquation{eq:remainder}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean}{95}
 \DeclareLeanEquation{eq:remainder-translation}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCovariance.lean}{74}
 \DeclareLeanEquation{eq:simplex}{MaxNN/Constructions/Paramid/Geom/Defs.lean}{121}
 \DeclareLeanEquation{eq:support-function}{MaxNN/Constructions/Paramid/Geom/Defs.lean}{43}
@@ -128,8 +120,8 @@
 \DeclareLeanEquation{eq:kuhn-simplices}{MaxNN/Constructions/Paramid/Geom/Kuhn.lean}{43}
 \DeclareLeanEquation{eq:kuhn-support-error}{MaxNN/Constructions/Paramid/Geom/Kuhn.lean}{320}
 \DeclareLeanEquation{eq:apex-maximum}{MaxNN/Constructions/Paramid/Caterpillar/Geometry/Paramid.lean}{43}
-\DeclareLeanEquation{eq:retained-count}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/HingeCount.lean}{166}
-\DeclareLeanEquation{stp:size-count}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/HingeCount.lean}{166}
+\DeclareLeanEquation{eq:retained-count}{MaxCaterpillar/OneBasis.lean}{82}
+\DeclareLeanEquation{stp:size-count}{MaxCaterpillar/OneBasis.lean}{82}
 \DeclareLeanEquation{eq:face-dimension-drop}{MaxNN/Constructions/Paramid/Geom/Flag.lean}{200}
 \DeclareLeanEquation{eq:error-peeling}{MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean}{38}
 \DeclareLeanEquation{eq:simplex-vertex-removal}{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean}{184}
@@ -148,8 +140,7 @@
 \DeclareLeanEquation{eq:facet-group-bound}{MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean}{326}
 \DeclareLeanEquation{eq:single-facet-group}{MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean}{326}
 \DeclareLeanEquation{eq:translation-invariance}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean}{22}
-\DeclareLeanEquation{eq:active-normalized-descriptions}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean}{171}
-\DeclareLeanEquation{eq:retained-descriptions}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/AbsorbHinges.lean}{31}
+\DeclareLeanEquation{eq:retained-descriptions}{MaxCaterpillar/OneBasis.lean}{33}
 \DeclareLeanEquation{eq:ridge-cut-residual}{MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean}{613}
 \DeclareLeanEquation{eq:simplex-support-expansion}{MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean}{80}
 \DeclareLeanEquation{eq:direction-pattern-spine}{MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean}{64}
@@ -168,30 +159,13 @@
 \DeclareLeanEquation{eq:signed-remainder}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean}{57}
 \DeclareLeanEquation{eq:coordinate-relabel}{MaxNN/Constructions/Paramid/Caterpillar/Formula/CoordinateDirections.lean}{119}
 \DeclareLeanEquation{eq:lower-arity-weight}{MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean}{35}
-\DeclareLeanEquation{eq:compilation-hypothesis}{MaxCaterpillar/Theorems.lean}{63}
+\DeclareLeanEquation{eq:compilation-hypothesis}{MaxCaterpillar/Theorems.lean}{65}
 \DeclareLeanEquation{eq:rational-coordinate}{MaxCaterpillar/Rationality.lean}{115}
 \DeclareLeanEquation{eq:quotient-dimension}{MaxCaterpillar/Quotient.lean}{46}
 \DeclareLeanEquation{eq:quotient-width}{MaxCaterpillar/Quotient.lean}{59}
-\DeclareLeanEquation{eq:quotient-lower}{MaxCaterpillar/LowerBound.lean}{499}
-\DeclareLeanEquation{eq:path-unit}{MaxCaterpillar/LowerBound.lean}{248}
-\DeclareLeanEquation{eq:test-configuration}{MaxCaterpillar/LowerBound.lean}{318}
-\DeclareLeanEquation{eq:second-difference}{MaxCaterpillar/LowerBound.lean}{378}
-\DeclareLeanEquation{eq:path-functional}{MaxCaterpillar/LowerBound.lean}{478}
 \DeclareLeanEquation{eq:max-three}{MaxCaterpillar/SmallArity.lean}{62}
 \DeclareLeanEquation{eq:max-four}{MaxCaterpillar/SmallArity.lean}{117}
-\DeclareLeanEquation{eq:sharing-widths-a}{MaxCaterpillar/Sharing.lean}{486}
-\DeclareLeanEquation{eq:shared-pieces-sum}{MaxCaterpillar/Sharing.lean}{456}
-\DeclareLeanEquation{eq:sharing-widths-b}{MaxCaterpillar/Sharing.lean}{456}
-\DeclareLeanEquation{eq:sharing-max}{MaxCaterpillar/Sharing.lean}{417}
-\DeclareLeanEquation{eq:sharing-pair-form}{MaxCaterpillar/Sharing.lean}{417}
-\DeclareLeanEquation{stp:sharing-expansion}{MaxCaterpillar/Sharing.lean}{417}
-\DeclareLeanEquation{eq:sharing-rows}{MaxCaterpillar/Sharing.lean}{123}
-\DeclareLeanEquation{eq:sharing-output}{MaxCaterpillar/Sharing.lean}{123}
-\DeclareLeanEquation{stp:sharing-compile}{MaxCaterpillar/Sharing.lean}{123}
-\DeclareLeanEquation{stp:sharing-a}{MaxCaterpillar/Sharing.lean}{325}
-\DeclareLeanEquation{eq:sharing-features}{MaxCaterpillar/Sharing.lean}{191}
-\DeclareLeanEquation{eq:sharing-grouped}{MaxCaterpillar/Sharing.lean}{257}
-\DeclareLeanEquation{stp:sharing-b}{MaxCaterpillar/Sharing.lean}{257}
+\DeclareLeanEquation{eq:kmps}{MaxCaterpillar/KMPS.lean}{410}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -291,7 +265,7 @@
 \begin{abstract}
 \normalsize
 Every continuous piecewise linear (CPWL) function is a finite signed sum of maxima of affine functions, making maximum representation a central problem in the study of the expressiveness of ReLU networks. Earlier work disproved the conjectured base-two depth bound, leaving open whether a constant number of hidden layers suffices to represent the maximum. Independently and concurrently, Brunck, Hertrich, Rue{\ss}, Stade, and Yehudayoff established that two hidden layers suffice for all CPWL functions.
-We give the \emph{Caterpillar Net}, a non-recursive explicit construction representing the maximum of $N$ real inputs exactly with two hidden layers of widths $\binom N2+N+1$ and $2^{O(N\log N)}$, rational weights, and zero biases. Every expansion of the maximum in its finite vocabulary compiles with the same first hidden layer, and the vocabulary has dimension $2^{\Theta(N\log N)}$ modulo its auxiliary functions. Sharing these layers across a Wang--Sun representation gives two-hidden-layer networks for all CPWL functions.
+We give the \emph{Caterpillar Net}, a non-recursive explicit construction representing the maximum of $N$ real inputs exactly with two hidden layers of widths $\binom N2+N+1$ and $2^{O(N\log N)}$, rational weights, and zero biases. Every expansion of the maximum in its finite vocabulary compiles with the same first hidden layer. Sharing its first hidden layer across a Wang--Sun representation gives two-hidden-layer networks for all CPWL functions.
 \footnote{Our results were obtained over months of proof search in Lean using Claude Code and Codex; the AI methodology statement describes their roles. The Lean code is available in the accompanying repository \href{https://github.com/JayPiZimmermann/Max_Caterpillar}{https://github.com/JayPiZimmermann/Max\_Caterpillar}. Links to the Lean formalization appear in theorem titles and equation numbers; equation numbers are clickable.}
 \end{abstract}
 \setcounter{page}{1}
@@ -313,7 +287,7 @@ functions \cite{WangSun}. Write
  \maxn_N(x):=\max_{0\leq i<N}x_i.
 \end{align}
 
-\begin{representationtheorem}[Wang--Sun, \cite{WangSun}, \leandecl{MaxCaterpillar/CPWL.lean}{34}{wang_sun}]
+\begin{representationtheorem}[Wang--Sun, \cite{WangSun}, \leandecl{MaxCaterpillar/CPWL.lean}{35}{wang_sun}]
 Let $d\geq1$ and let $f:\R^d\to\R$ be continuous and affine on each member
 of a finite polyhedral cover. There are $R\in\mathbb N$, affine maps and signs
 \begin{align}\label{eq:hinging-maps}
@@ -329,8 +303,8 @@ such that
 
 Thus a two-hidden-layer representation of $\maxn_{d+1}$ gives one for every
 CPWL function on $\R^d$: precompose with the affine maps and add the networks
-in parallel. \Cref{sec:sharing} shares parts of these parallel networks; the
-representation theorem and the resulting network theorems are formalized.
+in parallel. \Cref{sec:sharing} reuses their first hidden layer; the
+representation theorems and the resulting networks are formalized.
 
 \paragraph{Our contribution.}
 The \emph{Caterpillar Net} gives a nonrecursive two-hidden-layer representation of the maximum with explicit bounds on both hidden-layer widths. The construction uses a finite dictionary of support functions of caterpillar polytopes and their faces. 
@@ -350,7 +324,7 @@ A network has \emph{rational weights} if every entry of $W_1$, $W_2$, and $w_3$
 is rational, and \emph{zero biases} if $b_1$, $b_2$, and $b_3$ vanish.
 
 \Needspace{10\baselineskip}
-\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{40}{maximum_width_rational}, \leandecl{MaxCaterpillar/Lemmas.lean}{80}{construction_width}, {\Cref{pf:thm:main}}]\label{thm:main}
+\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/OneBasis.lean}{98}{maximum_width_one_basis}, {\Cref{pf:thm:main}}]\label{thm:main}
 For every $N\geq3$, there is a two-hidden-layer ReLU network with rational weights and zero biases computing $\maxn_N$ with widths
 \begin{align}
  h_1=\binom N2+N+1,\qquad h_2=3^{N-2}C_N-N(N-1)+2,\label{eq:width}
@@ -367,12 +341,13 @@ The network is compiled from an expansion of $\maxn_N$ in a finite vocabulary
 of caterpillar face functions. \Cref{thm:compilation} separates the network
 from the coefficients: any such expansion with $|K|$ retained units compiles
 with the same first hidden layer and $|K|+2$ second hidden layer neurons.
-Rational coefficients exist without any integration (\Cref{app:coefficients}),
-and the canonical coefficients behind \Cref{thm:main} are rational as well.
+The coefficients are the coordinates of $\maxn_N$ in one basis of the
+vocabulary; they are rational, and no integral is needed
+(\Cref{app:coefficients}).
 \Cref{sec:compression} bounds the second width by $q_N+2$, where $q_N$ is the
-dimension of the vocabulary modulo its auxiliary functions, and proves
-$q_N\geq(N-2)!$; hence $\log q_N=\Theta(N\log N)$. For $N=3,4$ an exact search
-finds expansions with one and three units. \Cref{sec:sharing} applies the
+dimension of the vocabulary modulo its auxiliary functions; this bound
+proves \Cref{thm:main}. For $N=3,4$ expansions with one and three units are
+proved in Lean. \Cref{sec:sharing} applies the
 construction to sums of maxima.
 
 \section{Related work}\label{sec:related}
@@ -557,11 +532,11 @@ Heads and edge functions are coordinate differences, so face functions and the f
 \end{align}
 Only $\relu(\pm x_i)$ change under this translation.
 \Cref{thm:dictionary} proves that $\D$ spans the maximum.
-\Cref{app:coefficients} gives nonrecursive coefficients by averaging
-inverse-Gram expansions over its bases:
+The coefficients come from one basis, without integration:
 
-\begin{lemma}[Canonical expansion, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean}{72}{sum_canonicalCoeff_eq}, {\Cref{pf:lem:coefficients}}]\label{lem:coefficients}
-Assuming \Cref{thm:dictionary}, the coefficients~\Cref{eq:coefficients} satisfy
+\begin{lemma}[Rational expansion, \leandecl{MaxCaterpillar/Theorems.lean}{81}{rational_coefficients}, {\Cref{pf:lem:coefficients}}]\label{lem:coefficients}
+Assuming \Cref{thm:dictionary}, there are rational coefficients $c_g$,
+$g\in\D$, with
 \begin{align}\label{eq:canonical-expansion}
  \maxn_N=\sum_{g\in\D}c_gg.
 \end{align}
@@ -641,7 +616,7 @@ zero; the matrices are given in~\Cref{eq:network-assembly}.}
 \end{figure}
 
 \Needspace{8\baselineskip}
-\begin{theorem}[Compilation, \leandecl{MaxCaterpillar/Theorems.lean}{63}{compilation}, {\Cref{pf:thm:compilation}}]\label{thm:compilation}
+\begin{theorem}[Compilation, \leandecl{MaxCaterpillar/Theorems.lean}{65}{compilation}, {\Cref{pf:thm:compilation}}]\label{thm:compilation}
 Let $K\subseteq\mathcal K_0$, $d\in\R^K$, and $R\in A_N$ satisfy
 \begin{align}\label{eq:compilation-hypothesis}
  \maxn_N=\sum_{k\in K}d_kU_k+R.
@@ -692,8 +667,8 @@ w_3^\top\relu(W_2\Phi(x))=\sum_{k\in K}d_kU_k(x)+\relu(R(x))-\relu(-R(x))=\maxn_
 \end{align}
 \end{Proof}
 
-The coefficients of \Cref{lem:coefficients} give such an expansion;
-\Cref{sec:size} counts the retained descriptions.
+\Cref{lem:coefficients} gives such expansions; \Cref{sec:size} counts the
+normalized descriptions that can occur.
 
 % Begin sections/dictionary.tex
 \section{Why the dictionary spans the maximum}\label{sec:dictionary}
@@ -1064,12 +1039,12 @@ combined with the auxiliary functions. By \Cref{thm:compilation}, the
 second width is the number of retained descriptions plus two;
 \Cref{app:widths} gives the complete count.
 
-\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{40}{maximum_width_rational}).}
+\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/OneBasis.lean}{98}{maximum_width_one_basis}).}
 The theorem and equation links point to the Lean development at a fixed
 repository revision. \Cref{app:lean} prints the network definitions
 and the main theorem, and describes the verification certificate.
 
-\section{Compression and lower bounds}\label{sec:compression}
+\section{Compression}\label{sec:compression}
 
 \Cref{thm:compilation} reduces the second width to the number of retained
 units in an expansion. This section bounds that number through the
@@ -1102,68 +1077,12 @@ rational points, so \Cref{lem:rational-coefficients} gives rational
 coefficients. \Cref{thm:compilation} compiles the expansion.
 \end{Proof}
 
-The retained descriptions together with the auxiliary functions span $V_N$,
-so $q_N$ never exceeds the count of \Cref{thm:main}. The following
-lower bound shows that $q_N$ has the same growth.
-
-\Needspace{8\baselineskip}
-\begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/LowerBound.lean}{499}{factorial_le_quotientDim}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
-For every $N\geq3$,
-\begin{align}\label{eq:quotient-lower}
- q_N\geq(N-2)!.
-\end{align}
-Consequently $\log q_N=\Theta(N\log N)$.
-\end{theorem}
-
-\begin{Proof}{Theorem}{thm:quotient-lower}
-Put $b:=N-1$. For every permutation $\pi$ of $\{1,\ldots,N-2\}$, the all-cut
-path with apex $0$, spine $\pi(1),\ldots,\pi(N-2),b$, and all edges kept
-as hinges has the caterpillar function
-\begin{align}\label{eq:path-unit}
- U_\pi(x)=\relu\Bigl(x_b-x_0+\sum_{j=1}^{N-2}\relu\bigl(x_{\pi(j)}-x_{\pi(j+1)}\bigr)\Bigr),
- \qquad\pi(N-1):=b.
-\end{align}
-For a permutation $\rho$, define the \emph{test configuration} $x^\rho(t)$ and
-the \emph{reference configuration} $y(t)$ by
-\begin{align}\label{eq:test-configuration}
- x^\rho_0=y_0=1+t,\qquad x^\rho_{\rho(j)}=\frac{j}{N-1},\qquad x^\rho_b=y_b=1,\qquad y_i=2\quad(1\leq i\leq N-2).
-\end{align}
-Thus the coordinates other than $x_0$ increase along the path of $\rho$ and
-end at $x_b=1$. With $\varepsilon:=1/(2(N-1))$, define the linear functional
-\begin{align}\label{eq:second-difference}
- \Lambda_\rho g:=J g\bigl(x^\rho\bigr)-J g(y),\qquad
- J g(z):=g\bigl(z(\varepsilon)\bigr)+g\bigl(z(-\varepsilon)\bigr)-2g\bigl(z(0)\bigr).
-\end{align}
-The symmetric second difference $J$ vanishes on functions that are affine in
-$t$ on $[-\varepsilon,\varepsilon]$, and $J\relu(a+tc)=\varepsilon|c|$ if $a=0$.
-For an auxiliary function only $\relu(\pm(x_0-x_b))$ has a kink at $t=0$, in
-both configurations alike: the other coordinates differ from $1$ by at least
-$2\varepsilon$. Hence $\Lambda_\rho$ annihilates $A_N$. In $U_\pi$ the
-inner hinges do not involve $x_0$, and $x_b-x_0=-t$ in both configurations.
-At $y$ the last inner hinge equals $\relu(2-1)=1$, so $U_\pi$ is affine
-near $t=0$. At $x^\rho$ the inner sum vanishes exactly when the values
-increase along the path of $\pi$, that is, when $\pi=\rho$; otherwise a
-descent contributes at least $1/(N-1)=2\varepsilon$. Therefore
-\begin{align}\label{eq:path-functional}
- \Lambda_\rho U_\pi=\begin{cases}\varepsilon,&\pi=\rho,\\0,&\pi\neq\rho.\end{cases}
-\end{align}
-If $\sum_\pi c_\pi U_\pi\in A_N$, applying $\Lambda_\rho$ gives
-$c_\rho\varepsilon=0$ for every $\rho$. Thus the $(N-2)!$ path units are
-linearly independent modulo $A_N$. The upper bound
-$q_N\leq3^{N-2}C_N=2^{O(N\log N)}$ follows from \Cref{thm:main}.
-\end{Proof}
-
-\paragraph{Scope.}
-\Cref{thm:quotient-lower} bounds the dimension of the vocabulary. It does
-not bound $s_N:=\min\{|J|:\maxn_N\in\spn\{U_j:j\in J\}+A_N\}$, the number of
-units in the sparsest expansion of $\maxn_N$, with arbitrary real
-coefficients. In particular, $q_N$ is not a lower bound on the second width
-of the Caterpillar Net: by \Cref{thm:compilation} a network needs only the
-units of one expansion of $\maxn_N$, and $s_N\leq q_N$, with $s_4=3<65=q_4$.
-What \Cref{thm:quotient-lower} shows is that \Cref{thm:quotient-compression}
-cannot give a width below $(N-2)!+2$. Neither bound concerns networks whose
-second hidden layer contains neurons other than face functions, nor
-unrestricted ReLU networks.
+Every face function is the unit of a normalized description outside
+$\mathcal P$ or an auxiliary combination (\Cref{app:widths}), so $q_N+2$ never
+exceeds the second width of \Cref{thm:main}. The quotient dimension controls
+only this compression. A network needs only the units of one expansion of
+$\maxn_N$; \Cref{thm:small-arity} gives expansions with one and three units
+for $N=3,4$.
 
 \Needspace{8\baselineskip}
 \begin{theorem}[Small arities, \leandecl{MaxCaterpillar/SmallArity.lean}{80}{max_three_network}, \leandecl{MaxCaterpillar/SmallArity.lean}{194}{max_four_network}]\label{thm:small-arity}
@@ -1187,267 +1106,65 @@ are known: nesting $\max(s,t)=t+\relu(s-t)$ gives widths $(5,3)$ for
 $\maxn_3$ and $(6,3)$ for $\maxn_4$. The identities illustrate how sparse the expansion in the
 vocabulary can be.
 
-\paragraph{Exact search in small arity.}
-The script \texttt{scripts/vocabulary\_search.py} enumerates $\mathcal K_0$ and
-certifies ranks and identities exactly. On each open cell of the order of
-$x_0,\ldots,x_{N-1}$ and $0$, every inner hinge and auxiliary function is
-linear, so every unit has the form $\relu\circ a$ on a simplicial cone. A
-combination of such functions vanishes on the cone exactly when all kink
-coefficients of hyperplanes meeting its interior and the remaining linear
-part vanish. These finitely many integer conditions certify relations and
-exclude supports over $\mathbb Q$, and hence over $\R$. Evaluations at
-random integer points modulo a prime give certified lower bounds on ranks.
-\Cref{tab:small-arity} summarizes the results. They are computational
-certificates, not Lean proofs, except for the two networks of
-\Cref{thm:small-arity}.
 
-\begin{table}[htbp]
-\centering
-\small
-\begin{tabular}{@{}lrrrr@{}}
-\toprule
-$N$ & $3$ & $4$ & $5$ & $6$\\
-\midrule
-$h_2$ of \Cref{thm:main} & $5$ & $314$ & $9702$ & $315902$\\
-distinct normalized descriptions $|\mathcal K_0|$ & $9$ & $138$ & $1830$ & $26780$\\
-$|\mathcal K_0|-N(N-1)+2$ & $5$ & $128$ & $1812$ & $26752$\\
-$q_N$ & $1$ & $65$ & $1136$ & \\
-$s_N$ & $1$ & $3$ & $\leq164$ & \\
-\bottomrule
-\end{tabular}
-\caption{Small-arity data. The counts $|\mathcal K_0|$ are exact
-enumerations, and distinct descriptions give distinct functions. The values
-$q_3,q_4,q_5,s_3,s_4$ are exact: lower bounds by rank certificates and upper
-bounds by relations verified on every cell; $s_4\geq3$ excludes every support
-of at most two units. The bound $s_5\leq164$ is an exact expansion found by a
-mixed-integer search; no matching lower bound is known.}
-\label{tab:small-arity}
-\end{table}
+\section{CPWL functions}\label{sec:sharing}
 
-\section{Sums of maxima with shared parts}\label{sec:sharing}
+By the Wang--Sun theorem, every CPWL function on $\R^d$ is a signed sum of
+maxima of $d+1$ affine functions. These affine functions can be taken from
+any finite family among which the function selects pointwise, without
+rescaling them.
 
-By the Wang--Sun theorem, $f=\sum_{t=1}^T\varepsilon_t\maxn_{d+1}\circ A_t$.
-Placing $T$ copies of the Caterpillar Net in parallel gives a network for $f$
-with widths $T\,h_1$ and $T\,h_2$. Parts of these copies can be shared. The
-remainder neurons $\relu(\pm R)$ of the copies merge into a single pair. When the
-coordinates of the maps $A_t$ are drawn from a fixed finite set of affine functions,
-the first hidden layer is also shared, and so are the retained second hidden layer
-neurons of all terms with the same arguments. Such a finite set always exists:
-
-\begin{representationtheorem}[Koutschan--Moser--Ponomarchuk--Schicho, {\cite[Theorem~2.4]{KoutschanEtAl}}]
-Every CPWL function $f:\R^d\to\R$ is an integral linear combination of maxima of
-at most $d+1$ affine functions. These affine functions can be chosen among the
-\emph{constituents} of $f$, the affine functions that coincide with $f$ on some
-nonempty open set.
+\begin{representationtheorem}[Koutschan--Moser--Ponomarchuk--Schicho, {\cite[Theorem~2.4]{KoutschanEtAl}}, \leandecl{MaxCaterpillar/KMPS.lean}{410}{kmps_of_continuous_selection}, \leandecl{MaxCaterpillar/KMPS.lean}{447}{kmps_pieces}]
+Let $f:\R^d\to\R$ be continuous, and let $g_1,\ldots,g_n:\R^d\to\R$ be affine
+with $f(x)\in\{g_1(x),\ldots,g_n(x)\}$ for every $x$. Then there are $T\in\mathbb N$,
+signs $\varepsilon_t\in\{-1,1\}$, and maps
+$\alpha_t:\{0,\ldots,d\}\to\{1,\ldots,n\}$ with
+\begin{align}\label{eq:kmps}
+ f(x)=\sum_{t=1}^T\varepsilon_t\maxn_{d+1}\bigl(g_{\alpha_t(0)}(x),\ldots,g_{\alpha_t(d)}(x)\bigr)
+ \qquad\text{for every }x\in\R^d.
+\end{align}
 \end{representationtheorem}
+The affine functions of every polyhedral description of a CPWL function
+satisfy the hypothesis. The Lean proof follows Ovchinnikov's max--min form
+$f=\max_S\min_{j\in S}g_j$, expands it by inclusion--exclusion into an integer
+combination of maxima over subsets of $\{g_1,\ldots,g_n\}$, and reduces each
+maximum to subsets of at most $d+1$ functions by an affine dependence among
+$d+2$ gradients.
 
-Throughout, $N\geq3$ and $h_1,h_2$ are the widths~\Cref{eq:width}. The coefficients
-$\varepsilon_t$ are arbitrary real numbers.
-
-\begin{theorem}[Shared Caterpillar Nets, \leandecl{MaxCaterpillar/Sharing.lean}{486}{caterpillar_sum_affine}, \leandecl{MaxCaterpillar/Sharing.lean}{456}{caterpillar_shared_pieces}, {\Cref{pf:thm:sharing}}]\label{thm:sharing}
-Let $\varepsilon_1,\ldots,\varepsilon_T\in\R$.
-\begin{enumerate}
-\item[(a)] For arbitrary affine maps $A_1,\ldots,A_T:\R^d\to\R^N$, the function
-$\sum_{t=1}^T\varepsilon_t\maxn_N\circ A_t$ is computed by a two-hidden-layer ReLU
-network with widths
-\begin{align}\label{eq:sharing-widths-a}
- T\,h_1\qquad\text{and}\qquad T\,(h_2-2)+2.
-\end{align}
-\item[(b)] Let $g_1,\ldots,g_p:\R^d\to\R$ be affine and let
-$\alpha_t:\{0,\ldots,N-1\}\to\{1,\ldots,p\}$ for $1\leq t\leq T$. Put
-$S_t:=\alpha_t(\{0,\ldots,N-1\})$ and $s:=|\{S_1,\ldots,S_T\}|$. Then
-\begin{align}\label{eq:shared-pieces-sum}
- f(x)=\sum_{t=1}^T\varepsilon_t\maxn_N\bigl(g_{\alpha_t(0)}(x),\ldots,g_{\alpha_t(N-1)}(x)\bigr)
-\end{align}
-is computed by a two-hidden-layer ReLU network with widths
-\begin{align}\label{eq:sharing-widths-b}
- \binom p2+p+1\qquad\text{and}\qquad s\,(h_2-2)+2.
-\end{align}
-Here $s\leq\min\bigl(T,\sum_{m=1}^{N}\binom pm\bigr)$, and $s\leq\min\bigl(T,\binom pN\bigr)$
-if every $\alpha_t$ is injective.
-\end{enumerate}
-\end{theorem}
-
-For $T\geq2$, (a) improves the second width of the parallel network by $2(T-1)$,
-and (b) by at least $(T-s)(h_2-2)+2(T-1)$. The first width in (b) does not
-depend on $T$. Combined with the representation theorem above, which is not formalized,
-$p$ can be taken to be at most the number of constituents of $f$, with $N=d+1$; maxima of fewer than $d+1$ constituents
-repeat an argument, which is allowed in~\Cref{eq:shared-pieces-sum}. If $p$ is
-large compared with $T$, the first hidden layer of (a) is smaller.
-
-\begin{Proof}{Theorem}{thm:sharing}
-\pfstep{stp:sharing-expansion}{Write the maximum in pair features}
-By~\Cref{eq:remainder,eq:compact-remainder},
-\begin{align}\label{eq:sharing-max}
- \maxn_N(y)=\sum_{k\in K}d_kU_k(y)+\sum_ip_iy_i+\sum_{i<j}s_{ij}\relu(y_i-y_j),
- \qquad\sum_ip_i=1,
-\end{align}
-with $|K|\leq h_2-2$ by~\Cref{eq:compilation-widths}. Each $U_k=U_{h,M}$ applies
-$\relu$ to the coordinate difference $h(y)$ plus hinges $\relu(y_i-y_j)$. Since
-$\sum_ip_iy_i=y_0+\sum_ip_i(y_i-y_0)$, and
-$y_i-y_j=\relu(y_i-y_j)-\relu(y_j-y_i)$ by~\Cref{eq:hinge-reversal},
-\begin{align}\label{eq:sharing-pair-form}
- \maxn_N(y)=y_0+\sum_{k\in K}d_k\,\relu\bigl(\lambda_k(y)\bigr)+\lambda_R(y),
-\end{align}
-where $\lambda_k$ and $\lambda_R$ are fixed linear combinations of the
-$N(N-1)$ functions $y\mapsto\relu(y_i-y_j)$, $i\neq j$.
-
-\pfstep{stp:sharing-compile}{Merge the remainders}
-Let $y^{(1)},\ldots,y^{(\tau)}:\R^d\to\R^N$, $e_1,\ldots,e_\tau\in\R$, and let a
-first hidden layer $\Psi(x)=\relu(W_1x+b_1)$ be such that every coordinate
-$y^{(u)}_i(x)$ and every hinge $\relu\bigl(y^{(u)}_i(x)-y^{(u)}_j(x)\bigr)$ is a
-fixed linear combination of the entries of $\Psi(x)$. Substituting $y=y^{(u)}(x)$
-into~\Cref{eq:sharing-pair-form} gives row vectors $w_{u,k}$ and $w_R$ with
-\begin{align}\label{eq:sharing-rows}
- w_{u,k}^\top\Psi(x)=\lambda_k\bigl(y^{(u)}(x)\bigr),\qquad
- w_R^\top\Psi(x)=\sum_{u=1}^\tau e_u\Bigl(y^{(u)}_0(x)+\lambda_R\bigl(y^{(u)}(x)\bigr)\Bigr).
-\end{align}
-Take second hidden layer rows $w_{u,k}^\top$ ($1\leq u\leq\tau$, $k\in K$),
-$w_R^\top$, and $-w_R^\top$, output weights $e_ud_k$, $1$, and $-1$, and
-$b_2=0$, $b_3=0$. By~\Cref{eq:hinge-reversal},
-$\relu(w_R^\top\Psi)-\relu(-w_R^\top\Psi)=w_R^\top\Psi$, so the network computes
-\begin{align}\label{eq:sharing-output}
- \sum_{u=1}^\tau e_u\Bigl(y^{(u)}_0+\sum_{k\in K}d_k\relu\bigl(\lambda_k(y^{(u)})\bigr)
- +\lambda_R(y^{(u)})\Bigr)=\sum_{u=1}^\tau e_u\maxn_N\circ y^{(u)}.
-\end{align}
-Its second hidden layer width is $\tau|K|+2\leq\tau(h_2-2)+2$. The remainder
-$\sum_ue_u(y^{(u)}_0+\lambda_R\circ y^{(u)})$ is affine in $x$ plus hinges, and
-it is represented with only two neurons because it is a linear combination of
-first hidden layer outputs. The constant terms of affine maps enter only
-through $b_1$.
-
-\pfstep{stp:sharing-a}{Arbitrary affine maps}
-For (a), take $\tau=T$, $y^{(t)}=A_t$, and $e_t=\varepsilon_t$. Let
-$\Psi(x)$ stack the vectors $\Phi(A_1x),\ldots,\Phi(A_Tx)$, with $\Phi$
-from~\Cref{eq:features}. Then $W_1$ stacks the matrices of $\Phi$ composed with
-the linear parts of $A_t$, and $b_1$ stacks the images of the translation parts.
-By~\Cref{eq:recover-coordinates,eq:hinge-reversal}, each block recovers all
-coordinates and all oriented hinges of its term. This gives the first width
-$T\,h_1$.
-
-\pfstep{stp:sharing-b}{Shared affine pieces}
-For (b), write $g(x):=(g_1(x),\ldots,g_p(x))\in\R^p$ and let $\Psi=\Phi\circ g$, where
-$\Phi$ is~\Cref{eq:features} for $p$ coordinates:
-\begin{align}\label{eq:sharing-features}
-\Psi(x)=\bigl(\relu(g_1),\ \relu(-g_1),\ (\relu(g_a-g_1))_{a>1},\ (\relu(g_a-g_b))_{a<b}\bigr)(x).
-\end{align}
-It has $\binom p2+p+1$ entries and recovers every $g_a$ and every
-$\relu(g_a-g_b)$, $a\neq b$, by~\Cref{eq:recover-coordinates,eq:hinge-reversal}.
-The maximum of a list depends only on the set of its entries, so the summand
-of~\Cref{eq:shared-pieces-sum} for $t$ is $\max_{a\in S_t}g_a$. For each of the $s$
-distinct sets $S$ fix one $t_S$ with $S_{t_S}=S$, and put
-\begin{align}\label{eq:sharing-grouped}
- y^{(S)}:=\bigl(g_{\alpha_{t_S}(0)},\ldots,g_{\alpha_{t_S}(N-1)}\bigr),\qquad
- e_S:=\sum_{t:\,S_t=S}\varepsilon_t,\qquad
- f=\sum_Se_S\maxn_N\circ y^{(S)}.
-\end{align}
-\Cref{stp:sharing-compile} with $\tau=s$ gives~\Cref{eq:sharing-widths-b}.
-The sets $S_t$ are nonempty subsets of $\{1,\ldots,p\}$ with at most $N$
-elements, and with exactly $N$ elements if $\alpha_t$ is injective.
-Zero padding realizes the stated widths exactly.
-\end{Proof}
-
-\paragraph{Further merging.}
-\Cref{thm:sharing}(b) counts at most one neuron for every pair of a set $S$ and a
-retained unit. Units of different sets may coincide. If $P_\alpha:\R^N\to\R^p$
-maps $e_i\mapsto e_{\alpha(i)}$, then
-$U_{h,M}(g_{\alpha(0)},\ldots,g_{\alpha(N-1)})=h_{P_\alpha Q_{h,M}}(g(x))$,
-and $P_\alpha Q_{h,M}$ is the pyramid over the translated zonotope
-$P_\alpha h+\sum_{\ell_{ij}\in M}[0,e_{\alpha(i)}-e_{\alpha(j)}]$. Units with equal
-pushed-forward descriptions are equal functions of $x$; they share one neuron,
-and their output coefficients add. We did not bound this count in closed form,
-and it is not formalized.
-
-\Needspace{8\baselineskip}
-\begin{theorem}[CPWL functions, \leandecl{MaxCaterpillar/CPWL.lean}{46}{cpwl_two_hidden_layers}, \leandecl{MaxCaterpillar/CPWL.lean}{89}{cpwl_two_hidden_layers_shared}]\label{thm:cpwl}
-Let $d\geq2$ and let $f:\R^d\to\R$ be CPWL. Then $f$ has a Wang--Sun
-representation with some number $T$ of terms. Let $p$ be the number of
-distinct affine functions occurring in it, and $s\leq T$ the number of
-distinct argument sets of its terms. Then $f$ is computed by two-hidden-layer
-ReLU networks with widths $\bigl(T\,h_1,\ T(h_2-2)+2\bigr)$ and
-$\bigl(\binom p2+p+1,\ s(h_2-2)+2\bigr)$, where $(h_1,h_2)$ are the widths of
-\Cref{thm:main} for $N=d+1$.
-\end{theorem}
-Here $T$, $p$, and $s$ are those of the representation produced by the
-formal proof of the Wang--Sun theorem; they are not bounded in terms of the
-pieces of $f$. With the representation of
-Koutschan--Moser--Ponomarchuk--Schicho, $p$ is at most the number of
-constituents of $f$; this refinement is not formalized. The networks of this
-section are not claimed to have rational weights; their first hidden layer
-has the biases of the affine maps.
-
-\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Sharing.lean}{123}{exists_network_sum_maximum}).}
-The general statement assumes an arbitrary expansion~\Cref{eq:sharing-pair-form}
-and an arbitrary first hidden layer that spans the required coordinates and hinges.
-It gives second width $\tau|K|+2$. The Caterpillar Net supplies such an expansion
-with $|K|+2\leq h_2$. Part~(b) is formalized with the bound $s$, and with
-$\min\bigl(T,\binom pN\bigr)$ for injective $\alpha_t$; the bound
-$s\leq\sum_{m\leq N}\binom pm$ is not formalized. The Wang--Sun theorem is
-formalized (\Cref{thm:cpwl}); the representation theorem of
-Koutschan--Moser--Ponomarchuk--Schicho is not.
+\paragraph[Reusing the first hidden layer]{Reusing the first hidden layer (\leandecl{MaxCaterpillar/CPWLRational.lean}{21}{cpwl_two_hidden_layers_pieces_rational}, \leandecl{MaxCaterpillar/Sharing.lean}{309}{card_imageSets_le_sum_choose}).}
+Let $d\geq2$, and let $(h_1,h_2)$ be the widths of \Cref{thm:main} for
+$N=d+1$. Substituting the arguments of each term of~\Cref{eq:kmps} into the
+Caterpillar Net computes $f$. All terms use only the features
+$\relu(g_a-g_b)$ for $a<b$, $\relu(\pm g_1)$, and $\relu(g_a-g_1)$, so one
+first hidden layer of width $\binom n2+n+1$ serves every term. Terms with the
+same argument set $\alpha_t(\{0,\ldots,d\})$ compute the same maximum and are
+merged, and the auxiliary remainders of all terms form one pair
+$\relu(\pm R)$. The second hidden layer has width $s(h_2-2)+2$, where $s$ is the
+number of distinct argument sets and
+$s\leq\min\bigl(T,\sum_{m\leq d+1}\binom nm\bigr)$. Thus the second hidden layer
+holds one copy of the Caterpillar Net units for every distinct maximum;
+only the first hidden layer and the remainder pair are genuinely shared.
+The second hidden layer and output layer have rational weights and zero
+biases, and every first hidden layer neuron applies $\relu$ to
+$\pm(g_a-g_b)$ or $\pm g_a$. Hence rational $g_i$ give rational weights and
+biases, and linear $g_i$ give zero biases.
 
 \section{Conclusion}
-Within its vocabulary, the construction is close to optimal in one
-sense: the dimension $q_N$ that controls \Cref{thm:quotient-compression}
-grows as $2^{\Theta(N\log N)}$. This does not bound the sparsest expansion
-$s_N$, which equals $1$ and $3$ for $N=3,4$, nor general networks.
-The first hidden layer width is asymptotically sharp. Building on the extremal-graph approach of Safran \cite{SafranDepth}, our separate Lean development extends the bound $h_1\geq\binom N2-\lfloor4N/3\rfloor$ of Lu~\cite[Theorem~2.13]{LuClosure}, for $N\geq4$, to networks with arbitrary affine skip connections. When every first hidden layer weight vector is proportional to some $e_i-e_j$, we sharpen it to $h_1\geq\binom N2-N$. We obtain no growing lower bound for $h_2$ or for $s_N$; finding smaller exact maximum representations and establishing such lower bounds remain open.
+The second width of the Caterpillar Net is the number of caterpillar
+functions in an expansion of $\maxn_N$ plus two. For $N=3,4$, one and three
+functions suffice (\Cref{thm:small-arity}); for general $N$,
+\Cref{thm:quotient-compression} retains at most $q_N$ of them.
+No growing lower bound on the number of caterpillar functions needed to represent $\maxn_N$ is known; finding smaller exact representations and such lower bounds remains open.
 \label{main-text-end}
 
 \clearpage
 \appendix
 % Begin appendices/coefficients.tex
-\section{Canonical coefficients}\label{app:coefficients}
+\section{Rational coefficients}\label{app:coefficients}
 
-\paragraph[An exact coefficient rule]{An exact coefficient rule (\leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Gram.lean}{172}{gramMatrix_isUnit})}
-Let
-\begin{align}\label{eq:bases}
- \B:=\{S\subseteq\D:S\text{ is a basis of }\spn\D\}.
-\end{align}
-This set is nonempty because the finite spanning set $\D$ contains a basis.
-For $S\in\B$, form
-\begin{align}\label{eq:gram-matrix}
- G_S&:=\bigl(\langle g,h\rangle\bigr)_{g,h\in S},\\
- b_S&:=\bigl(\langle g,\maxn_N\rangle\bigr)_{g\in S}.\label{eq:gram-rhs}
-\end{align}
-using the inner product
-\begin{align}\label{eq:inner-product}
- \langle f,g\rangle:=\int_{[-1,1]^N}f(x)g(x)\,dx.
-\end{align}
-If a linear combination of basis functions has zero squared integral,
-continuity makes it zero on the cube and positive homogeneity makes it zero
-on $\R^N$. Linear independence forces its coefficients to vanish; hence
-$G_S$ is positive definite and invertible.
-For each $g\in\D$, average over the bases containing $g$:
-\begin{align}\label{eq:coefficients}
- c_g:=\frac{1}{|\B|}
-         \sum_{\substack{S\in\B\\g\in S}}(G_S^{-1}b_S)_{g}.
-\end{align}
-\begin{Proof}{Lemma}{lem:coefficients}
-Fix $S\in\B$. By \Cref{thm:dictionary}, there is $d\in\R^S$ such that
-\begin{align}\label{eq:basis-expansion}
- \maxn_N=\sum_{g\in S}d_g g.
-\end{align}
-Taking the inner product with each $h\in S$ gives
-\begin{align}\label{eq:normal-equations}
- \begin{aligned}
- (b_S)_h&=\sum_{g\in S}\langle h,g\rangle d_g=(G_Sd)_h,\\
- d&=G_S^{-1}b_S.
- \end{aligned}
-\end{align}
-Interchanging the finite sums in~\Cref{eq:coefficients} therefore yields
-\begin{align}\label{eq:average-expansion}
- \sum_{g\in\D}c_gg
- =\frac{1}{|\B|}\sum_{S\in\B}\sum_{g\in S}(G_S^{-1}b_S)_g\,g
- =\frac{1}{|\B|}\sum_{S\in\B}\maxn_N
- =\maxn_N.
-\end{align}
-\end{Proof}
-Averaging over all bases avoids an arbitrary choice of basis and gives a finite, nonrecursive coefficient prescription. We do not claim an efficient algorithm for evaluating these coefficients or a bound on their bit complexity.
-
-\paragraph{Rational coefficients without integration.}
-The inner product is used only to name one coefficient vector. Rationality
-follows from evaluations alone.
+Coordinates in a basis are rational as soon as the basis functions and the
+expanded function take rational values at rational points. The argument uses
+evaluations only.
 
 \Needspace{8\baselineskip}
 \begin{lemma}[Rational coefficients, \leandecl{MaxCaterpillar/Rationality.lean}{190}{exists_rat_coeff_of_mem_span}, {\Cref{pf:lem:rational-coefficients}}]\label{lem:rational-coefficients}
@@ -1474,32 +1191,20 @@ For the second statement, choose a basis of the span inside the family and
 apply the first statement to it.
 \end{Proof}
 
-The dictionary functions are continuous and rational on $\mathbb Q^N$: they
-are compositions of $\relu$ with integer combinations of coordinates, and so
-is $\maxn_N$. Two coefficient rules follow.
-
-\paragraph[Version 1]{Version~1: the fixed rule (\leandecl{MaxCaterpillar/Theorems.lean}{50}{coefficient_rational}).}
-The rule~\Cref{eq:coefficients} assigns one coefficient vector to the
-linearly dependent family $\D$ without choices. Its coefficients are
-rational: on each basis $S\in\B$, the vector $G_S^{-1}b_S$ is the unique
-coordinate vector of $\maxn_N$ by~\Cref{eq:normal-equations}, which is
-rational by \Cref{lem:rational-coefficients}, and $c_g$ averages these.
-
-\paragraph[Version 2]{Version~2: one basis (\leandecl{MaxCaterpillar/Theorems.lean}{79}{rational_coefficients}).}
-Select a single basis $S\subseteq\D$ of $\spn\D$ and take the coordinates of
-$\maxn_N$ in $S$. They are rational by \Cref{lem:rational-coefficients}, and
-no integral is needed. The rule depends on the choice of $S$; uniqueness
-holds only for coordinates in a fixed basis, not for representations in all
-of~$\D$.
-
-The network of \Cref{thm:main} uses Version~1; hence its weights are
-rational.
-
-For network construction, use each distinct pair $(h',M)$
-from~\Cref{eq:face-description} once, together with each auxiliary function
-in~\Cref{eq:aux_functions}. Split $c_g$ equally among all pairs and
-auxiliary functions representing $g$. Their total contribution remains
-$c_gg$. Normalization then merges equal pairs by adding their coefficients.
+\begin{Proof}{Lemma}{lem:coefficients}
+Choose a basis $S\subseteq\D$ of $\spn\D$. By \Cref{thm:dictionary},
+\begin{align}\label{eq:basis-expansion}
+ \maxn_N=\sum_{g\in S}c_gg
+\end{align}
+for unique coordinates $c_g$; put $c_g:=0$ for $g\in\D\setminus S$. The
+dictionary functions are continuous and rational on $\mathbb Q^N$: they are
+compositions of $\relu$ with integer combinations of coordinates, and so is
+$\maxn_N$. \Cref{lem:rational-coefficients} makes every $c_g$ rational.
+\end{Proof}
+The coefficients depend on the choice of $S$. Uniqueness holds only for the
+coordinates in a fixed basis, not for representations in all of $\D$, which
+is linearly dependent. \Cref{app:lean} records an earlier, choice-free rule
+that is kept in Lean as Version~1.
 % End appendices/coefficients.tex
 % Begin appendices/dictionary.tex
 \section{Supporting proofs for the dictionary theorem}\label{app:dictionary}
@@ -1706,11 +1411,12 @@ Since $q>0$, the full empty-cut sum belongs to $\LS_{q-1}=\LS_{N-3}$. The empty-
 \end{figure}
 
 \begin{Proof}{Theorem}{thm:main}
-Fix $N\geq3$. Start with the canonical expansion~\Cref{eq:canonical-expansion}
-and distribute its coefficients as described in \Cref{app:coefficients}.
+Fix $N\geq3$. We bound the quotient dimension $q_N$ of \Cref{sec:compression}
+by the count of normalized descriptions and apply
+\Cref{thm:quotient-compression}.
 
 \pfstep{stp:size-count}{Count the caterpillar face functions}
-Use the adjusted heads and normalized descriptions from \Cref{sec:size}. Equal descriptions can share a second hidden layer neuron, with their output coefficients added; counting descriptions therefore gives an upper bound.
+Use the adjusted heads and normalized descriptions from \Cref{sec:size}. Counting distinct normalized descriptions bounds $q_N$.
 
 For a caterpillar description $(\pi,S)$, the spine endpoints are labelled $\pi(1)$ and $\pi(q+1)$, and every label other than $\pi(1)$ and the apex is the child of exactly one edge. Hence the normalized description of $U_{\pi,S}$ is
 \begin{align}\label{eq:graph}
@@ -1741,31 +1447,23 @@ Among them are the descriptions $(\ell_{ij},\varnothing)$ representing $x\mapsto
 \end{align}
 Let $\mathcal P\subseteq\mathcal K_0$ consist of descriptions with empty
 hinge set and head a coordinate difference. The distinct heads
-$\ell_{ij}$ give $|\mathcal P|\geq N(N-1)$; their contributions can be
-combined with the auxiliary terms. Let $d_k$ be the sum of coefficients
-assigned to pairs $(h',M)$ whose normalized description is $k$.
-Discard zero coefficients and remove these descriptions:
-\begin{align}
- \mathcal K_{\mathrm{act}}&:=\{k\in\mathcal K_0:d_k\ne0\},\label{eq:active-normalized-descriptions}\\
- K&:=\mathcal K_{\mathrm{act}}\setminus\mathcal P.\label{eq:retained-descriptions}
+$\ell_{ij}$ give $|\mathcal P|\geq N(N-1)$. Put
+\begin{align}\label{eq:retained-descriptions}
+ K:=\mathcal K_0\setminus\mathcal P.
 \end{align}
-By~\Cref{eq:hinge-reversal}, every unit indexed by $\mathcal P$ lies in the span of the auxiliary functions and needs no separate second hidden layer neuron. Since $K\subseteq\mathcal K_0\setminus\mathcal P$,
+Every face function in $\D$ equals $U_k$ for its normalized description
+$k\in\mathcal K_0$, and by~\Cref{eq:hinge-reversal} every unit indexed by
+$\mathcal P$ lies in the auxiliary span $A_N$. Hence the units $U_k$,
+$k\in K$, span $V_N$ modulo $A_N$, and
 \begin{align}\label{eq:retained-count}
-|K|\leq3^{N-2}C_N-N(N-1).
+q_N\leq|K|\leq3^{N-2}C_N-N(N-1).
 \end{align}
 
 \pfstep{stp:size-network}{Compile the network and establish its widths}
-Let $R$ collect the weighted auxiliary functions and the terms $d_kU_k$
-with $k\in\mathcal K_{\mathrm{act}}\cap\mathcal P$. Then
-\begin{align}\label{eq:remainder}
-\maxn_N=\sum_{k\in K}d_kU_k+R.
-\end{align}
-\Cref{eq:hinge-reversal} puts $R$ in the auxiliary span. \Cref{thm:compilation}
-compiles this expansion; its weights are rational because the coefficients
-are rational (\Cref{lem:rational-coefficients}).
-By~\Cref{eq:retained-count}, the second hidden layer width is at most
+\Cref{thm:quotient-compression} gives a network with rational weights, zero
+biases, first width $h_1$, and second width
 \begin{align}\label{eq:compilation-widths}
-|K|+2\leq3^{N-2}C_N-N(N-1)+2=h_2.
+q_N+2\leq3^{N-2}C_N-N(N-1)+2=h_2.
 \end{align}
 Zero padding realizes the stated widths exactly.
 
@@ -1799,10 +1497,10 @@ The real parameter arrays in~\Cref{eq:network-evaluation} have dimensions
  w_3&\in\R^{h_2},& b_3&\in\R,
  \end{aligned}
 \end{align}
-\paragraph[Sources]{Sources (\leanlinkdecl{MaxCaterpillar/Definitions.lean}{19}{Point}{Definitions.lean}, \leanlinkdecl{MaxCaterpillar/Theorems.lean}{40}{maximum_width_rational}{Theorems.lean}).}
+\paragraph[Sources]{Sources (\leanlinkdecl{MaxCaterpillar/Definitions.lean}{19}{Point}{Definitions.lean}, \leanlinkdecl{MaxCaterpillar/OneBasis.lean}{98}{maximum_width_one_basis}{OneBasis.lean}).}
 The listings specify the network, widths, and correctness for every real
 input. They reproduce declarations from these files at revision
-\texttt{9eff36af7b8d}, omitting imports, documentation comments, and the
+\texttt{d90bc998ba19}, omitting imports, documentation comments, and the
 theorem's proof body; these remain in the linked sources.
 
 \subsection{Network and width definitions}
@@ -1864,33 +1562,40 @@ the statement is \Cref{thm:main}; the natural-number width definitions
 also cover $N=1,2$.
 
 \begin{lstlisting}[style=lean]
-theorem maximum_width_rational (N : ℕ) [NeZero N] :
+theorem maximum_width_one_basis (N : ℕ) [NeZero N] :
     ∃ net : Network N (firstWidth N) (secondWidth N),
       (∀ x, net.eval x = Maximum N x) ∧
         net.HasRationalWeights ∧ net.HasZeroBiases
 \end{lstlisting}
 
-\subsection{Version 1 and Version 2 declarations}
+\subsection{Version 1, 2, and 3 declarations}
 Improvements were added beside the existing development rather than
 replacing it. In the Lean sources, superseded declarations are kept and
-commented as Version~1, and the new ones as Version~2.
+commented as Version~1 (and Version~2), and the new ones as Version~2
+(and Version~3).
 \begingroup\sloppy
 \begin{itemize}
 \item \emph{Main theorem.} Version~1, \texttt{maximum\_width}, asserts a
 real-parameter network of the stated widths. Version~2,
-\texttt{maximum\_width\_rational}, adds rational weights and zero biases.
-For $N\geq3$ both use the same network \texttt{network}.
-\item \emph{Coefficients.} Version~1 is the inverse-Gram average
-\texttt{coefficient}; \texttt{coefficient\_rational} proves it rational.
-Version~2, \texttt{rational\_coefficients}, uses one basis and the
-evaluation argument of \Cref{lem:rational-coefficients}.
+\texttt{maximum\_width\_rational}, adds rational weights and zero biases for
+the network compiled from the Version~1 coefficients. Version~3,
+\texttt{maximum\_width\_one\_basis}, proves the same statement from one basis
+via \texttt{quotient\_compression} and
+\texttt{quotientDim\_add\_two\_le\_secondWidth}; it is the theorem linked
+from \Cref{thm:main}.
+\item \emph{Coefficients.} Version~1, \texttt{coefficient}, averages over all
+bases $S\subseteq\D$ of $\spn\D$ the coordinates $G_S^{-1}b_S$ of $\maxn_N$,
+computed from the Gram matrix $G_S$ and the vector $b_S$ of inner products in
+$L^2([-1,1]^N)$; \texttt{coefficient\_rational} proves it rational. It needs
+no choice of basis. Version~2, \texttt{rational\_coefficients}, uses one basis
+and the evaluation argument of \Cref{lem:rational-coefficients}.
 \item \emph{Compilation and widths.} Version~1 compiles the canonical
 coefficients only (\texttt{network}, \texttt{construction\_width}).
 Version~2 compiles every expansion (\texttt{compilation}), and gives the
-widths of \Cref{thm:quotient-compression,thm:small-arity}.
+widths of \Cref{thm:main,thm:quotient-compression,thm:small-arity}.
 \end{itemize}
 \endgroup
-The Version~1 statements remain checked.
+The Version~1 and Version~2 statements remain checked.
 
 The keyword \texttt{noncomputable} allows classical definitions of real
 quantities. The theorem is an exact representation statement; it does not
@@ -1898,15 +1603,17 @@ by itself assert an efficient algorithm for extracting numerical weights.
 
 \subsection{Verification scope}
 The repository's verification certificate, dated 22 October 2026, records
-a build with Lean 4.4.0 and checks 44 public statements against their exact
+a build with Lean 4.4.0 and checks 54 public statements against their exact
 types. Its permitted axioms are \texttt{propext},
 \texttt{Classical.choice}, and \texttt{Quot.sound}. The checked interface
-includes dictionary sufficiency, the canonical expansion and its
-rationality, network correctness with rational weights and zero biases, the
-width bounds, the compilation and compression theorems, the lower bound
-$q_N\geq(N-2)!$, the small-arity networks, the Wang--Sun theorem, and the
-network theorems for sums of maxima and CPWL functions. The exact searches
-of \Cref{tab:small-arity} are not part of the certificate. The certificate and its source hashes
+includes dictionary sufficiency, rational expansions, network correctness
+with rational weights and zero biases, the width bounds, the compilation and
+compression theorems, the small-arity networks, the Wang--Sun and
+Koutschan--Moser--Ponomarchuk--Schicho representations, and the network
+theorems for sums of maxima and CPWL functions with their rationality and
+bias statements. It covers every theorem, lemma, and numbered equation of
+the paper.
+The certificate and its source hashes
 are available in the linked
 \href{\leanbase/verification/certificate.json}{verification record}.
 The mathematical arguments are provided in the main text and
