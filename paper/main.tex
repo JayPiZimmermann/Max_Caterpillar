@@ -324,9 +324,13 @@ There are no skip connections; equality is required on all of $\R^N$. For $N=1,2
 \begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{18}{maximum_width}, \leandecl{MaxCaterpillar/Lemmas.lean}{80}{construction_width}, {\Cref{pf:thm:main}}]\label{thm:main}
 For every $N\geq3$, there is a two-hidden-layer ReLU network with rational weights and zero biases computing $\maxn_N$ with widths
 \begin{align}
- h_1=\binom N2+N+1,\qquad h_2=3^{N-2}C_N-N(N-1)+2,\label{eq:width},
+ h_1=\binom N2+N+1,\qquad h_2=3^{N-2}C_N-N(N-1)+2,\label{eq:width}
 \end{align}
-where $C_N:=\sum_{m=2}^{N-1}\binom Nm\frac{m!}{2}(N-m)m^{N-m-1}$. Thus $h_1=O(N^2)$ and $h_2=2^{O(N\log N)}$ as $N\to\infty$.
+where
+\begin{align}\label{eq:count}
+ C_N:=\sum_{m=2}^{N-1}\binom Nm\frac{m!}{2}(N-m)m^{N-m-1}.
+\end{align}
+Thus $h_1=O(N^2)$ and $h_2=2^{O(N\log N)}$ as $N\to\infty$.
 \end{theorem}
 
 \section{Related work}\label{sec:related}
