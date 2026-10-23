@@ -264,6 +264,18 @@
     {
       "declaration": "MaxCaterpillar.factorial_le_quotientDim",
       "type": "∀ (r : ℕ), 1 ≤ r → r.factorial ≤ quotientDim r"
+    },
+    {
+      "declaration": "MaxCaterpillar.SmallN.Max5General4.max_network",
+      "type": "∃ net : Network 5 (firstWidth 5) 6, (∀ x, net.eval x = Maximum 5 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases"
+    },
+    {
+      "declaration": "MaxCaterpillar.SmallN.Max5Lns27.max_network",
+      "type": "∃ net : Network 5 (firstWidth 5) 29, (∀ x, net.eval x = Maximum 5 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases"
+    },
+    {
+      "declaration": "MaxCaterpillar.SmallN.Max4Test.max_network",
+      "type": "∃ net : Network 4 (firstWidth 4) 5, (∀ x, net.eval x = Maximum 4 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases"
     }
   ]
 }

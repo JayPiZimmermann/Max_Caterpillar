@@ -1,0 +1,4 @@
+MaxCaterpillar.SmallN.Common exit=0 wall=3.2s maxrss=271384KB
+MaxCaterpillar.SmallN.Max4Test.Defs exit=0 wall=9.6s maxrss=2104416KB
+MaxCaterpillar.SmallN.Max4Test.Cells0 exit=0 wall=46.4s maxrss=2223632KB
+MaxCaterpillar.SmallN.Max4Test exit=0 wall=12.1s maxrss=2121028KB

@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-23T08:02:51.528136+00:00",
+  "checked_at_utc": "2026-10-23T13:49:20.389422+00:00",
   "source_commit": null,
-  "source_sha256": "1e4bae2059e93e22671285562e6ab84281639860b8af32d64367be9d08b78f87",
+  "source_sha256": "459d4e82d45f4fc0c6bd6885f6e167eea027b191546d875d6cda2496a7556640",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -667,6 +667,36 @@
         "propext"
       ],
       "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.SmallN.Max5General4.max_network",
+      "type": "\u2203 net : Network 5 (firstWidth 5) 6, (\u2200 x, net.eval x = Maximum 5 x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.SmallN.Max5Lns27.max_network",
+      "type": "\u2203 net : Network 5 (firstWidth 5) 29, (\u2200 x, net.eval x = Maximum 5 x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.SmallN.Max4Test.max_network",
+      "type": "\u2203 net : Network 4 (firstWidth 4) 5, (\u2200 x, net.eval x = Maximum 4 x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
     }
   ],
   "source_files": {
@@ -709,8 +739,26 @@
     "MaxCaterpillar/Sharing.lean": "02c80786642c189a2c95930a5fbb12651ed13ce36288ce02a076e3f68c5fe43e",
     "MaxCaterpillar/SharingRational.lean": "fdda6c8a7a3862f9471c95180304153573ae9b27324f286080a38a5bba4ebe25",
     "MaxCaterpillar/SmallArity.lean": "ea9d57b776d54e3fc89479af3b5718b7fedd198940c461b17e0a4b707a2083e5",
+    "MaxCaterpillar/SmallN/Common.lean": "804dab1de75a622f672b9ae391d5ca1a5b06d613c228923c241469cdc6498df0",
+    "MaxCaterpillar/SmallN/Max4Test/Cells0.lean": "9ebabac2fade3840db1a77f37aaa9e7d2fe51d7a5ed5a8c71922f7c67443e0f4",
+    "MaxCaterpillar/SmallN/Max4Test/Defs.lean": "37a69c43638854935271c887b78af69cfc91cc66b1c4e253312ba67bdcfe49f6",
+    "MaxCaterpillar/SmallN/Max4Test.lean": "ff3f4919f789c3c1e9ea099aaf32d9e1409677f42b7574780095d7cf5d5e4e0d",
+    "MaxCaterpillar/SmallN/Max5General4/Cells0.lean": "d771c7c9dd8aafb7f4d01301135055fe27a3f31d1eb831fb89ac195cd311fba9",
+    "MaxCaterpillar/SmallN/Max5General4/Cells1.lean": "3aaf70eaaea5fbde8b5114609da9b7450f15909489e480e70074b02e102199bc",
+    "MaxCaterpillar/SmallN/Max5General4/Defs.lean": "487531d34711e5f98111cdad83e5a27f9ef2e146eb0ccd1c45fecf4e20713cc8",
+    "MaxCaterpillar/SmallN/Max5General4.lean": "4f42fba680e93b30a41140920cc52b9933e8fc87a181d83a97ac70c8e55fff0a",
+    "MaxCaterpillar/SmallN/Max5Lns27/Cells0.lean": "9fb42148896994bf8021411d3a1f1e0177633c60eb7c5f60f0930f8f722d9feb",
+    "MaxCaterpillar/SmallN/Max5Lns27/Cells1.lean": "c9f610edbbba610392171c493ba134e6db242819b4faf8a854e35eeb6a9e8d91",
+    "MaxCaterpillar/SmallN/Max5Lns27/Cells2.lean": "6ca6ff98b1c96bee45c6c92e2bbed797a15ac5ce8ff10ec35d392fcb0a257a11",
+    "MaxCaterpillar/SmallN/Max5Lns27/Cells3.lean": "5a9fcd8698e8a91960d7092dc573caa8dc980fadc28878d93019df7bbc83b313",
+    "MaxCaterpillar/SmallN/Max5Lns27/Cells4.lean": "67d875633afd493f66daa89d4b1796132dc89d7682d735b1ae7cbc7372720aa3",
+    "MaxCaterpillar/SmallN/Max5Lns27/Cells5.lean": "4b334e80383a091a457c3b3bccc2bb0e638568d43c4970046f97438d75e50450",
+    "MaxCaterpillar/SmallN/Max5Lns27/Cells6.lean": "58b7049010af9aa0223d22e3df0f6c11c0402f0c70dd0342c01e48cb57c54f2c",
+    "MaxCaterpillar/SmallN/Max5Lns27/Defs.lean": "4a6799a10e4714e0f1d389e7f978703842c9d5ce2e30130590ee1ccd51f686d9",
+    "MaxCaterpillar/SmallN/Max5Lns27.lean": "d95dda6b266618720ff4bd32cad14de65ea8636878539b7e5899a2a2d655f945",
+    "MaxCaterpillar/SmallN.lean": "536f1f27252d783b0635efdee5c8ffa94c9af0b65182ddba6e4fa88b089d9903",
     "MaxCaterpillar/Theorems.lean": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9",
-    "MaxCaterpillar.lean": "0781387a53b8ec1bb9da2eb4d0c1a24ba6113a059b9a4234bd95d983f9791e3c",
+    "MaxCaterpillar.lean": "bb2536370607d93033e5a75625b139497e4bdff892b356c85b3e6141e7099e1d",
     "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
     "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
     "MaxNN/CPWL/Conditional/Finitary.lean": "23bb8dec03ed56bc703279a21f38a92366bd96410202af1627196fa6c2f187d2",
@@ -894,12 +942,13 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "2de56edbe1c4ce8d537815c94b0447c76b4ef14a5ecc4eff70fa5a76ff61ece8",
+    "Verification/Statements.lean": "8bf2a27f74f77a34529cb9bd3828f8a482013248ec418b865a6921da62a560d2",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
     "research/sN/audit/CheckDim.lean": "b80321b966f1c04ef2f7357571edc11a631f57e2b284cfacc881a1e3d869352c",
     "research/sN/audit/CheckExp.lean": "ccfa7f67a55991a09cc2a2b2f6b54726fc2b98e1c976f342fc51d96e90640473",
+    "research/sN/audit/CheckG4.lean": "c0ece9a0414cfc6cf64d36e773da749785df240901cb6eb6176bbbd1589606c3",
     "research/sN/audit/CheckLower.lean": "b8437a2295590f38b7472f0f633676a79094a40f95d89fa1458771a83c1ae485",
     "research/sN/audit/fidelity/NonVacuous.lean": "4cd82b942d7db58e96f8e60122313800e92e30d82d6a30bdaec020f539b6b1d8",
     "research/sN/audit/hygiene/Axioms.lean": "efd8825a9d3187acb400f020a500b3ab1ff9587363a6b4bba4a96ddbb2a035a4",
@@ -911,6 +960,6 @@
     "research/sN/rank/Speed.lean": "deacc99537990bfceb917b0b6c6eb2ca632d93c736c1c32bca041c8144012629",
     "research/sN/rank/T1.lean": "eac75cdd10f4e70def1f0a1d31ff55b5b308146b42a428c922c80bb815a88647",
     "research/sN/restricted/Germ.lean": "8e8039ac2d52a5ccd8c947332db7bf908937739a1c73654fac19cf90bb8706dd",
-    "verification/main.json": "99b278ea8a8e070a9c8e2014afa17d90bd713f1b5851e0ad0d022701c1ef5b7a"
+    "verification/main.json": "6429d39af780a837e14bbc82710125dffe39d29f63dcf67781862d4e51458d17"
   }
 }

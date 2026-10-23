@@ -1,0 +1,14 @@
+MaxCaterpillar.SmallN.Common exit=0 wall=1.5s maxrss=281744KB
+MaxCaterpillar.SmallN.Max5Lns27.Defs exit=0 wall=1.4s maxrss=281752KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells0 exit=143 wall=12.1s maxrss=KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells0 exit=0 wall=343.1s maxrss=4653464KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells1 exit=0 wall=348.1s maxrss=4713152KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells2 exit=0 wall=331.9s maxrss=4710152KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells3 exit=0 wall=349.5s maxrss=4784004KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells4 exit=0 wall=333.1s maxrss=4714276KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells5 exit=0 wall=365.3s maxrss=4899880KB
+MaxCaterpillar.SmallN.Max5Lns27.Cells6 exit=0 wall=36.9s maxrss=2396824KB
+MaxCaterpillar.SmallN.Max5Lns27 exit=1 wall=21.9s maxrss=2206700KB
+error: stdout:
+./././MaxCaterpillar/SmallN/Max5Lns27.lean:401:4: error: no goals to be solved
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 1

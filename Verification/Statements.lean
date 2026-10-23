@@ -262,3 +262,15 @@ example : ∀ (r : ℕ), 1 ≤ r → ∀ (K : Finset (MaxNN.Caterpillar.Correcti
 example : ∀ (r : ℕ), 1 ≤ r → r.factorial ≤ quotientDim r :=
   @MaxCaterpillar.factorial_le_quotientDim
 #print axioms MaxCaterpillar.factorial_le_quotientDim
+
+example : ∃ net : Network 5 (firstWidth 5) 6, (∀ x, net.eval x = Maximum 5 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.SmallN.Max5General4.max_network
+#print axioms MaxCaterpillar.SmallN.Max5General4.max_network
+
+example : ∃ net : Network 5 (firstWidth 5) 29, (∀ x, net.eval x = Maximum 5 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.SmallN.Max5Lns27.max_network
+#print axioms MaxCaterpillar.SmallN.Max5Lns27.max_network
+
+example : ∃ net : Network 4 (firstWidth 4) 5, (∀ x, net.eval x = Maximum 4 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.SmallN.Max4Test.max_network
+#print axioms MaxCaterpillar.SmallN.Max4Test.max_network

@@ -12,3 +12,4 @@ import MaxCaterpillar.CPWLRational
 import MaxCaterpillar.CountLower
 import MaxCaterpillar.CountExp
 import MaxCaterpillar.LowerBound
+import MaxCaterpillar.SmallN
