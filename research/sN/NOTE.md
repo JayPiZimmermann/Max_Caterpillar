@@ -1,5 +1,14 @@
 # Lower bounds on s_N (current note)
 
+## Exact width frontiers for max_3, max_4 (2026-10-23; proved on paper, two refuters found no gap; Lean in progress in MaxCaterpillar/Frontier/)
+Two-hidden-layer ReLU networks on all of R^N (biases allowed, no skip term):
+- max_N needs h2 >= 3 for every N >= 3 and every h1.
+- max_4 is computable iff h1 >= 6 and h2 >= 3: single-point frontier (6,3), nesting network.
+- max_3 is computable iff h1 >= 4 and h2 >= 3: frontier (4,3).
+- For N = 5: h2 >= 3, h1 >= 7 (best5 H1); conjecture h1 >= 8.
+- General CPWL functions can have genuine trade-offs (no pair minimal in both widths), by breakpoint counting.
+Files: research/sN/frontier4/{RESULTS,PROOFS}.md, net_N4_6_3.json, net_N3_4_3.json.
+
 ## General second-layer neurons (2026-10-23, survived two refuters each)
 
 Model: first hidden layer = pair features (x_i, σ(x_i−x_j)); second layer = any σ(w·Φ).
