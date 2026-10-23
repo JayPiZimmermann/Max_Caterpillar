@@ -3,6 +3,9 @@ import Mathlib.Algebra.BigOperators.Basic
 import Mathlib.Data.Finset.Lattice
 import Mathlib.Data.Nat.Choose.Basic
 import Mathlib.Data.Nat.Interval
+import Mathlib.LinearAlgebra.FiniteDimensional
+import MaxNN.Constructions.Paramid.Caterpillar.Corrections.Normalize
+import MaxNN.Constructions.MaxN.Width.Layer.Features
 
 /-! # The mathematical definitions
 
@@ -64,5 +67,53 @@ def coneCount (N : ℕ) : ℕ :=
 of the cones, minus the absorbed pair hinges, plus two remainder units. -/
 def secondWidth (N : ℕ) : ℕ :=
   coneCount N * 3 ^ (N - 2) - N * (N - 1) + 2
+
+/-! ## Caterpillar functions and caterpillar expansions
+
+For `N = r + 2` inputs, a caterpillar face description `k = (h, M)` gives the
+caterpillar function `U_k(x) = σ(h(x) + Σ_{ℓ ∈ M} σ(ℓ(x)))`, where the head `h`
+and the labels `ℓ` are differences `x_i - x_j` of coordinates along a
+caterpillar tree (stored in reduced coordinates). The auxiliary functions are
+the first-hidden-layer features `σ(x_i)`, `σ(-x_i)`, `σ(x_i - x_j)`. -/
+
+/-- A caterpillar face description for `N = r + 2` inputs. -/
+abbrev FaceKey (r : ℕ) := MaxNN.Caterpillar.Corrections.RealKey (r + 1)
+
+/-- The finite set `𝒦₀` of normalized caterpillar face descriptions. -/
+noncomputable def caterpillarDescriptions (r : ℕ) : Finset (FaceKey r) :=
+  MaxNN.Caterpillar.Corrections.normalizedKeys r
+
+/-- The caterpillar function `U_k(x) = σ(h(x) + Σ_{ℓ ∈ M} σ(ℓ(x)))` of `k = (h, M)`. -/
+noncomputable def caterpillarFunction {r : ℕ} (k : FaceKey r) : Point (r + 1 + 1) → ℝ :=
+  MaxNN.Caterpillar.Corrections.realUnitY k
+
+/-- The auxiliary functions `σ(x_i)`, `σ(-x_i)` and `σ(x_i - x_j)` (`i < j`). -/
+noncomputable def auxiliaryFunction (N : ℕ) (j : Fin (MaxNN.Width.W N)) : Point N → ℝ :=
+  fun x => MaxNN.Width.feat N x j
+
+/-- `K` is a caterpillar expansion of the maximum: `K ⊆ 𝒦₀` and
+`max_N = Σ_{k ∈ K} d_k U_k + Σ_j a_j (auxiliary function j)` on all of `ℝ^N`
+for some real coefficients `d` and `a`. Its size `K.card` is the number of
+second-hidden-layer neurons spent on caterpillar functions. -/
+def IsCaterpillarExpansion (r : ℕ) (K : Finset (FaceKey r)) : Prop :=
+  K ⊆ caterpillarDescriptions r ∧
+    ∃ (d : FaceKey r → ℝ) (a : Fin (MaxNN.Width.W (r + 1 + 1)) → ℝ),
+      ∀ x, Maximum (r + 1 + 1) x =
+        ∑ k in K, d k * caterpillarFunction k x + ∑ j, a j * auxiliaryFunction (r + 1 + 1) j x
+
+/-- The auxiliary span `A_N`. -/
+noncomputable def auxiliarySpan (N : ℕ) : Submodule ℝ (Point N → ℝ) :=
+  Submodule.span ℝ (Set.range (auxiliaryFunction N))
+
+/-- The caterpillar span `V_N`: all caterpillar functions and auxiliary functions. -/
+noncomputable def caterpillarSpan (r : ℕ) : Submodule ℝ (Point (r + 1 + 1) → ℝ) :=
+  Submodule.span ℝ ((caterpillarFunction '' ↑(caterpillarDescriptions r)) ∪
+    Set.range (auxiliaryFunction (r + 1 + 1)))
+
+/-- `q_N = dim(V_N / A_N)`: the dimension of the caterpillar span modulo the
+auxiliary functions. -/
+noncomputable def caterpillarDim (r : ℕ) : ℕ :=
+  FiniteDimensional.finrank ℝ (↥(caterpillarSpan r) ⧸
+    (auxiliarySpan (r + 1 + 1)).comap (caterpillarSpan r).subtype)
 
 end MaxCaterpillar

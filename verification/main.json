@@ -6,6 +6,30 @@
   ],
   "claims": [
     {
+      "declaration": "MaxCaterpillar.caterpillar_net",
+      "type": "∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_expansion_choose_le",
+      "type": "∀ (r : ℕ) {K : Finset (FaceKey r)}, IsCaterpillarExpansion r K → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → (r + 1 + 1).choose k ≤ 6 ^ k * K.card"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_expansion_exponential",
+      "type": "∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (FaceKey r)}, IsCaterpillarExpansion r K → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * K.card"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_expansion_quadratic",
+      "type": "∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (FaceKey r)}, IsCaterpillarExpansion r K → (r + 1 + 1) * (r + 1) ≤ 6 * K.card"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillarDim_ge",
+      "type": "∀ (r : ℕ), 1 ≤ r → r.factorial ≤ caterpillarDim r"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillarDim_eq",
+      "type": "∀ (r : ℕ), caterpillarDim r = quotientDim r"
+    },
+    {
       "declaration": "MaxCaterpillar.maximum_width",
       "type": "∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), ∀ x, net.eval x = Maximum N x"
     },

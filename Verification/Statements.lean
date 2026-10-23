@@ -3,6 +3,30 @@ import MaxCaterpillar
 open BigOperators
 open MaxNN MaxCaterpillar
 
+example : ∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.caterpillar_net
+#print axioms MaxCaterpillar.caterpillar_net
+
+example : ∀ (r : ℕ) {K : Finset (FaceKey r)}, IsCaterpillarExpansion r K → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → (r + 1 + 1).choose k ≤ 6 ^ k * K.card :=
+  @MaxCaterpillar.caterpillar_expansion_choose_le
+#print axioms MaxCaterpillar.caterpillar_expansion_choose_le
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (FaceKey r)}, IsCaterpillarExpansion r K → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * K.card :=
+  @MaxCaterpillar.caterpillar_expansion_exponential
+#print axioms MaxCaterpillar.caterpillar_expansion_exponential
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (FaceKey r)}, IsCaterpillarExpansion r K → (r + 1 + 1) * (r + 1) ≤ 6 * K.card :=
+  @MaxCaterpillar.caterpillar_expansion_quadratic
+#print axioms MaxCaterpillar.caterpillar_expansion_quadratic
+
+example : ∀ (r : ℕ), 1 ≤ r → r.factorial ≤ caterpillarDim r :=
+  @MaxCaterpillar.caterpillarDim_ge
+#print axioms MaxCaterpillar.caterpillarDim_ge
+
+example : ∀ (r : ℕ), caterpillarDim r = quotientDim r :=
+  @MaxCaterpillar.caterpillarDim_eq
+#print axioms MaxCaterpillar.caterpillarDim_eq
+
 example : ∀ (N : ℕ) [NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), ∀ x, net.eval x = Maximum N x :=
   @MaxCaterpillar.maximum_width
 #print axioms MaxCaterpillar.maximum_width

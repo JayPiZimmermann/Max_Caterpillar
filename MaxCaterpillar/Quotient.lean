@@ -1,4 +1,4 @@
-import MaxCaterpillar.Theorems
+import MaxCaterpillar.Core
 
 /-! # Quotient-basis compression (Version 2 width)
 

@@ -1,4 +1,5 @@
 import MaxCaterpillar.Definitions
+import MaxCaterpillar.Core
 import MaxCaterpillar.Theorems
 import MaxCaterpillar.Quotient
 import MaxCaterpillar.OneBasis
