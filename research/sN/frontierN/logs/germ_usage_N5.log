@@ -1,0 +1,17 @@
+(0, 1, 2) Z= [4, 5] rank 1 need 1 
+(0, 1, 3) Z= [2, 3, 4, 5] rank 2 need 1 
+(0, 1, 4) Z= [2, 3, 4, 5] rank 2 need 1 
+(0, 2, 3) Z= [2] rank 1 need 1 
+(0, 2, 4) Z= [2] rank 1 need 1 
+(0, 3, 4) Z= [2] rank 1 need 1 
+(1, 2, 3) Z= [2, 3, 4, 5] rank 2 need 1 
+(1, 2, 4) Z= [2, 3, 4, 5] rank 2 need 1 
+(1, 3, 4) Z= [4, 5] rank 1 need 1 
+(2, 3, 4) Z= [0, 1, 2] rank 1 need 1 
+(0, 1, 2, 3) Z= [2, 3, 4, 5] rank 3 need 1 
+(0, 1, 2, 4) Z= [2, 3, 4, 5] rank 3 need 1 
+(0, 1, 3, 4) Z= [2, 3, 4, 5] rank 3 need 1 
+(0, 2, 3, 4) Z= [2, 3, 4, 5] rank 3 need 1 
+(1, 2, 3, 4) Z= [2, 3, 4, 5] rank 3 need 1 
+(0, 1, 2, 3, 4) Z= [2, 3, 4, 5] rank 3 need 2 
+neuron usage counts [1, 1, 14, 10, 12, 12]

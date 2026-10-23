@@ -44,3 +44,17 @@ Lean for Theorem Q: CoverCount.lean (Lemma K), Claw.lean (Lemma C4), FirstWidthN
 - General ⌈N/2⌉+1 (any J±): reduced to the configuration rank δ_R ≥ 1, |J+|+|J−| ≥ 3; open.
 - (a) trade-off: open. (b) superlinear h2: open; analysis in REPORT of this step. (c) gap: open;
   data point: certified nets give h1* ≤ C(N,2) for N = 4 (6) and N = 5 (10), below C(N,2)+N+1.
+
+## Step 6 (2026-10-24, after commit 089ec6a)
+- (1) h2 ≥ ⌈N/2⌉+1 for every first layer: NOT closed. The remaining configuration (P+={n},
+  P−={m}, R ⊆ Z+∩Z−, |R| = ⌈N/2⌉−2, rank δ_R ≥ 1, |J+|+|J−| ≥ 3) contains, for N = 5, 6, the
+  statement "h2 = 3 is impossible", which the N = 5 work (best5) also left open. Tried on paper:
+  cancellation on ker δ_R (gives only rank δ_R ≥ 1), the odd part of the subtraction identity on
+  ker{o±_R} (not linear), averaging the two identities (no gain). No Lean.
+- (2) Test of a "sum over S" germ count (germ_usage.py; logs/germ_usage_N4.log, _N5.log): at every
+  1_S, |S| ≥ 3, list the neurons vanishing there and the rank of their odd germ functionals on the
+  S-directions. In the certified nets ONE neuron serves every S (N = 4: neuron 2 serves all 5 sets;
+  N = 5: neuron 2 serves 14 of 16 sets) and the Lemma-3 rank requirement is met by 1-3 neurons
+  everywhere. So vanishing + odd-germ rank at the points 1_S cannot give more than the ⌈N/2⌉
+  bound; a superlinear argument needs a different invariant (measured, negative).
+- (3) Trade-off: no candidate; no search run.
