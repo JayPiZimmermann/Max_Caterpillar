@@ -16,10 +16,10 @@ workstation (Lean 4.4.0, mathlib cache from `lake exe cache get`):
 ulimit -s unlimited && python3 scripts/verify.py
 ```
 
-The verifier built `All` and `Verification.Statements`, re-elaborated all 54
+The verifier built `All` and `Verification.Statements`, re-elaborated all 65
 exact theorem statements in `verification/main.json`, rejected `sorry`,
 `admit`, project `axiom` declarations, and `native_decide`, and audited every
-theorem with `#print axioms`. It found 204 Lean source files. Every theorem
+theorem with `#print axioms`. It found 239 Lean source files. Every theorem
 uses only the permitted foundational axioms `propext`, `Classical.choice`, and
 `Quot.sound`.
 
@@ -33,6 +33,11 @@ Statements added on 2026-10-22 (in addition to the 27 original ones):
 - `caterpillar_sum_affine`, `caterpillar_shared_pieces`,
   `caterpillar_shared_pieces_min`, `card_imageSets_le_sum_choose`;
 - `wang_sun`, `cpwl_two_hidden_layers`, `cpwl_two_hidden_layers_shared`;
+- public interface (`Theorems.lean`): `caterpillar_net`, `caterpillar_expansion_choose_le`,
+  `caterpillar_expansion_exponential`, `caterpillar_expansion_quadratic`,
+  `caterpillarDim_ge`, `caterpillarDim_eq`; `caterpillar_count_lower`,
+  `caterpillar_choose_three_le`, `caterpillar_count_exponential`,
+  `caterpillar_count_exponential_pow`, `factorial_le_quotientDim`;
 - `kmps_of_continuous_selection`, `kmps_pieces`,
   `cpwl_two_hidden_layers_pieces`;
 - `exists_rat_caterpillarExpansion`, `caterpillar_sum_affine_rational_pieces`,
@@ -42,8 +47,8 @@ Statements added on 2026-10-22 (in addition to the 27 original ones):
 
 The machine-readable receipt is `verification/certificate.json`, with
 aggregate source digest
-`ad9611366a606de4c3949cfdb451789e543fd6e717394d334597901eaad3ff9e`
+`1e4bae2059e93e22671285562e6ab84281639860b8af32d64367be9d08b78f87`
 and the SHA-256 of every checked source and manifest. Its `source_commit` is
 `null` because the gate certified the working tree by content; the checked
 Lean sources are identical to those of commit
-`d90bc998ba19a2ee65ec4b24fee7b63aeb2058c9`.
+`8b4d74ab66f429fc454c8349ade514bc3775f557`.

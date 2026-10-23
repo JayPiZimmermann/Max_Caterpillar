@@ -1,7 +1,7 @@
 {
   "main": {
-    "file": "MaxCaterpillar/OneBasis.lean",
-    "name": "maximum_width_one_basis",
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "caterpillar_net",
     "equations": [
       "eq:width"
     ]
@@ -36,7 +36,7 @@
     ]
   },
   "network": {
-    "file": "MaxCaterpillar/Theorems.lean",
+    "file": "MaxCaterpillar/Core.lean",
     "name": "network_correct"
   },
   "class": {
@@ -130,13 +130,6 @@
     "file": "MaxCaterpillar/Lemmas.lean",
     "name": "construction_width"
   },
-  "expansion": {
-    "file": "MaxCaterpillar/Theorems.lean",
-    "name": "rational_coefficients",
-    "equations": [
-      "eq:canonical-expansion"
-    ]
-  },
   "reduction": {
     "file": "MaxCaterpillar/Lemmas.lean",
     "name": "facet_reduction"
@@ -152,7 +145,7 @@
     ]
   },
   "asymptotics": {
-    "file": "MaxCaterpillar/Theorems.lean",
+    "file": "MaxCaterpillar/Core.lean",
     "name": "width_asymptotics"
   },
   "networkParameters": {
@@ -236,13 +229,6 @@
     "name": "featureLayer",
     "equations": [
       "eq:aux_functions"
-    ]
-  },
-  "basisExpansion": {
-    "file": "MaxCaterpillar/RationalWidth.lean",
-    "name": "rational_expansion",
-    "equations": [
-      "eq:basis-expansion"
     ]
   },
   "fiberAverage": {
@@ -764,22 +750,22 @@
     ]
   },
   "mainVersion1": {
-    "file": "MaxCaterpillar/Theorems.lean",
+    "file": "MaxCaterpillar/Core.lean",
     "name": "maximum_width"
   },
   "compilation": {
-    "file": "MaxCaterpillar/Theorems.lean",
+    "file": "MaxCaterpillar/Core.lean",
     "name": "compilation",
     "equations": [
       "eq:compilation-hypothesis"
     ]
   },
   "coefficientRational": {
-    "file": "MaxCaterpillar/Theorems.lean",
+    "file": "MaxCaterpillar/Core.lean",
     "name": "coefficient_rational"
   },
   "rationalCoefficients": {
-    "file": "MaxCaterpillar/Theorems.lean",
+    "file": "MaxCaterpillar/Core.lean",
     "name": "rational_coefficients"
   },
   "rationalSpan": {
@@ -859,5 +845,217 @@
   "argumentSets": {
     "file": "MaxCaterpillar/Sharing.lean",
     "name": "card_imageSets_le_sum_choose"
+  },
+  "countBinomial": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "caterpillar_expansion_choose_le",
+    "equations": [
+      "eq:count-binomial"
+    ]
+  },
+  "countExponential": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "caterpillar_expansion_exponential",
+    "equations": [
+      "eq:count-exponential"
+    ]
+  },
+  "countQuadratic": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "caterpillar_expansion_quadratic",
+    "equations": [
+      "eq:count-quadratic"
+    ]
+  },
+  "caterpillarExpansion": {
+    "file": "MaxCaterpillar/Definitions.lean",
+    "name": "IsCaterpillarExpansion"
+  },
+  "caterpillarDimGe": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "caterpillarDim_ge"
+  },
+  "draft_countexp-basept": {
+    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "name": "basePt",
+    "equations": [
+      "eq:base-point"
+    ]
+  },
+  "draft_countexp-mixeddiff": {
+    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "name": "mixedDiff",
+    "equations": [
+      "eq:mixed-difference"
+    ]
+  },
+  "draft_countexp-balanced": {
+    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "name": "Balanced",
+    "equations": [
+      "eq:balanced"
+    ]
+  },
+  "draft_countexp-active": {
+    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "name": "Active",
+    "equations": [
+      "eq:active"
+    ]
+  },
+  "draft_countexp-auxiliary": {
+    "file": "MaxCaterpillar/CountExp/W1Functional.lean",
+    "name": "mixedDiff_auxiliary",
+    "equations": [
+      "eq:mixed-auxiliary"
+    ],
+    "steps": [
+      "stp:count-functional"
+    ]
+  },
+  "draft_countexp-maximum": {
+    "file": "MaxCaterpillar/CountExp/W1Functional.lean",
+    "name": "mixedDiff_maximum",
+    "equations": [
+      "eq:mixed-maximum"
+    ]
+  },
+  "draft_countexp-units": {
+    "file": "MaxCaterpillar/CountExp/W1Functional.lean",
+    "name": "pass_of_mixedDiff_unit_ne",
+    "steps": [
+      "stp:count-units"
+    ]
+  },
+  "draft_countexp-digits": {
+    "file": "MaxCaterpillar/CountExp/W2Digits.lean",
+    "name": "balanced_of_realUnitArg_eq_zero",
+    "equations": [
+      "eq:preactivation-digits"
+    ],
+    "steps": [
+      "stp:count-digits"
+    ]
+  },
+  "draft_countexp-cover": {
+    "file": "MaxCaterpillar/CountExp/Main.lean",
+    "name": "exists_passes",
+    "steps": [
+      "stp:count-cover"
+    ]
+  },
+  "draft_countexp-caterpillar": {
+    "file": "MaxCaterpillar/CountExp/W3Structure.lean",
+    "name": "exists_hingeCat",
+    "steps": [
+      "stp:count-caterpillar"
+    ]
+  },
+  "draft_countexp-admissible": {
+    "file": "MaxCaterpillar/CountExp/W3Structure.lean",
+    "name": "admissible_tieSet",
+    "steps": [
+      "stp:count-admissible"
+    ]
+  },
+  "draft_countexp-orders": {
+    "file": "MaxCaterpillar/CountExp/W4Orders.lean",
+    "name": "HingeCat.card_balanced_fiber_mul_le",
+    "equations": [
+      "eq:order-count"
+    ],
+    "steps": [
+      "stp:count-orders"
+    ]
+  },
+  "draft_countexp-potential": {
+    "file": "MaxCaterpillar/CountExp/W5Generating.lean",
+    "name": "pot",
+    "equations": [
+      "eq:potential"
+    ]
+  },
+  "draft_countexp-transfer": {
+    "file": "MaxCaterpillar/CountExp/W5Generating.lean",
+    "name": "pathWeight_le_one",
+    "equations": [
+      "eq:path-weight"
+    ],
+    "steps": [
+      "stp:count-transfer"
+    ]
+  },
+  "draft_countexp-per-unit": {
+    "file": "MaxCaterpillar/CountExp/Main.lean",
+    "name": "card_passSet_le",
+    "steps": [
+      "stp:count-per-unit"
+    ]
+  },
+  "draft_countexp-assembly": {
+    "file": "MaxCaterpillar/CountExp/Main.lean",
+    "name": "choose_le_six_pow_mul_card",
+    "steps": [
+      "stp:count-assembly"
+    ]
+  },
+  "draft_countexp-corollary": {
+    "file": "MaxCaterpillar/CountExp/Main.lean",
+    "name": "seven_pow_le",
+    "equations": [
+      "eq:binomial-sum"
+    ],
+    "steps": [
+      "stp:count-corollary"
+    ]
+  },
+  "draft_quotlower-theorem": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "factorial_le_quotientDim",
+    "equations": [],
+    "steps": [
+      "stp:quotient-independence"
+    ]
+  },
+  "draft_quotlower-path-unit": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "pathUnit_apply",
+    "equations": [
+      "eq:path-unit"
+    ],
+    "steps": [
+      "stp:quotient-path-units"
+    ]
+  },
+  "draft_quotlower-test": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "testW",
+    "equations": [
+      "eq:test-configuration"
+    ]
+  },
+  "draft_quotlower-reference": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "refW",
+    "equations": [
+      "eq:reference-configuration"
+    ]
+  },
+  "draft_quotlower-auxiliary": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "auxSpan_le_ker",
+    "steps": [
+      "stp:quotient-auxiliary"
+    ]
+  },
+  "draft_quotlower-values": {
+    "file": "MaxCaterpillar/LowerBound.lean",
+    "name": "pathFunctional_pathUnit",
+    "equations": [
+      "eq:path-functional"
+    ],
+    "steps": [
+      "stp:quotient-path-values"
+    ]
   }
 }
