@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-23T23:30:43.164886+00:00",
+  "checked_at_utc": "2026-10-23T23:59:16.230530+00:00",
   "source_commit": null,
-  "source_sha256": "e0523d38f6079eb02468e4ba7e7bcfcfa68ec0e4e7a80aaac1a2f48dbb7bb5f5",
+  "source_sha256": "e9d76d04b0a788e1ca051c2bfbf5f69bd066a93e9c3da1ed0a445c99719aa483",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -837,6 +837,16 @@
         "propext"
       ],
       "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Trees.mixed_expansion_exponential",
+      "type": "\u2200 (r : \u2115) {K\u2081 : Finset (FaceKey r)} {K\u2082 : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K\u2081 K\u2082 \u2192 \u2200 {\u0394 : \u2115}, 3 \u2264 \u0394 \u2192 (\u2200 F \u2208 K\u2082, Trees.HubOK F.descr \u0394) \u2192 \u2200 {k : \u2115}, 3 \u2264 k \u2192 (144 * (2 * \u0394 - 1) ^ 2 + 1) * k \u2264 r + 1 + 1 \u2192 (2 : \u211d) ^ k \u2264 2 * (k + 1) ^ 2 * (K\u2081.card + K\u2082.card)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
     }
   ],
   "source_files": {
@@ -915,12 +925,13 @@
     "MaxCaterpillar/Theorems.lean": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9",
     "MaxCaterpillar/Trees/BoundedDegree.lean": "963f9f28c5db4da8e7e5a03c565be31c6529430a336a30eb8cbff1ec2d71a1d2",
     "MaxCaterpillar/Trees/BoundedDegreeMain.lean": "424437991233fbac2b55381ade4b48333ad94dd2657350ad70d6aaad41d3648d",
+    "MaxCaterpillar/Trees/Combined.lean": "a3f10d4d5aa13fe12db7e024b3b2f044a4bf51df27b8f9af839c096fc1d6af8b",
     "MaxCaterpillar/Trees/DescrPass.lean": "b9f606eb00b9eb55299a9d80e21b69602dcd1c9c8fdce98807ed64db83a50a81",
     "MaxCaterpillar/Trees/Hubs.lean": "24c8f74a1be58c735266d810d4208d9aee06011647afb6eb98b52d5e4de19d72",
     "MaxCaterpillar/Trees/HubsMain.lean": "94a7925284f3abf3e8c6cd708c98b1922cea67e2b5ca3025e5221b1092430f23",
     "MaxCaterpillar/Trees/Quadratic.lean": "8b548b7596fd28523b3cd59ffc7dc6670c8289c7e7dfd91ac83695eb2b207ecf",
     "MaxCaterpillar/Trees/RootedStars.lean": "72bcae69b40327c273695eb9b9967639d192b80708cfccea1a42f7d49846943d",
-    "MaxCaterpillar/Trees.lean": "15ddad24e2c0490caf018499cf788bfc5ded7201138d8ce01cc5ca16bccf5cd6",
+    "MaxCaterpillar/Trees.lean": "568b82ed10147f32463c4232ffaba594327e6182e427570b064823ce577040c2",
     "MaxCaterpillar.lean": "cd4575f8229c6e8127f1d247185fdb1b4eb5cb03195c0ab09285102cee57c99b",
     "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
     "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
@@ -1105,7 +1116,7 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "ad3aef6c449d99fcc968f216a48d1757434101cd1a6f90fb4a1f12d7761b8b3b",
+    "Verification/Statements.lean": "6dc1366c37fb084d2b4be6bd1f579e0b33ec3305df2ee22e4a90e41b29b6d299",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
@@ -1124,6 +1135,6 @@
     "research/sN/rank/Speed.lean": "deacc99537990bfceb917b0b6c6eb2ca632d93c736c1c32bca041c8144012629",
     "research/sN/rank/T1.lean": "eac75cdd10f4e70def1f0a1d31ff55b5b308146b42a428c922c80bb815a88647",
     "research/sN/restricted/Germ.lean": "8e8039ac2d52a5ccd8c947332db7bf908937739a1c73654fac19cf90bb8706dd",
-    "verification/main.json": "2d65557f2554e4c90f42abcaaebd251fa907a8486e73584dd2d03803a980ee13"
+    "verification/main.json": "6f70495be27e47b6961f5e7731800feaf01566d7d3cbadb0281f3c04edbca611"
   }
 }

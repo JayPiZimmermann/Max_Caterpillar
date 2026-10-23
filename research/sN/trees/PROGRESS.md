@@ -110,3 +110,30 @@ Here the rooted stars ARE counted in K (unlike rootedStar_expansion_exponential)
 Not covered: caterpillars with long-leaved spines (their hubs have κ>=1 spine neighbours) and
 out-stars (leaves κ = 1). The residual obstruction for arbitrary trees is exactly hubs with many
 κ>=1 neighbours: a tied out-star centre lets all its leaves be untied in every order.
+
+### 9. One theorem: caterpillars + rooted stars + bounded degree — LEAN VERIFIED
+Trees/Combined.lean: exists_passes_mixed, choose_le_mixed
+(C(N,k) <= 6^k |K1| + 2(k+1)(6A)^k S |K2|), IsMixedExpansion, mixed_expansion_exponential:
+K1 caterpillar face descriptions, K2 tree faces with HubOK (rooted stars via starFace_hubOK,
+bounded hinge degree via hubOK_of_hingeDeg_le); Δ >= 3, 3 <= k, (144(2Δ-1)^2+1) k <= N
+⇒ 2^k <= 2(k+1)^2 (|K1|+|K2|). Axioms propext/Quot.sound/Classical.choice.
+(The s-extension of the hub class was not needed for this: caterpillars use their own 6^k bound.)
+
+### 10. (b) Germ-level elimination of out-star germs (proved on paper; checked exactly m = 4..11)
+Out-star unit S+_{a,c} = relu(y_c - y_a + sum_l relu(y_l - y_c)); at an m-tie T containing a, c its
+germ is s_ac = relu(z_c - z_a + sum_{l in T} relu(z_l - z_c)) (untied leaves lie below c), independent
+of the order of the untied coordinates; otherwise its germ is linear or zero.
+Explicit functional (m >= 4): Lambda = sum_{t in T} MD_{delta^(t)} - (m-1) MD_{1}, MD_delta f =
+sum_{S subset T} (-1)^{m-|S|} f(delta_S), delta^(t) = 1 except D = m-2 at t.
+Lambda(max_T) = (-1)^{m-1}; Lambda(s_ac) = 0 for all a != c (paper proof: big step at a gives 0,
+big step at c or a leaf gives (-1)^{m-1}, unit steps give (-1)^{m-1}; outstar_lambda.py exact m=4..11).
+Lambda is a combination of mixed differences, so every non-passing unit is still killed: the
+caterpillar counting C(N,k) <= 6^k |K| survives adding all N(N-1) out-stars (uncounted), k >= 4.
+Lean not done (needs mixed differences with unequal steps / shifted bases in the pass lemmas).
+Stronger, measured: MD combinations kill ALL germs having a vertex with >= 2 out-leaves
+(leaf l, term relu(z_l - z_c), v_l = 0) but not max_m: m=4 (R<=2), m=5 (R<=4)
+(twoleaf_md.py, logs/twoleaf_5.log, logs/twoleaf_more.log). Germs with >= 1 out-leaf span max
+already at m = 3 (outleaf_test.py), so "one out-leaf" cannot be eliminated.
+If the >=2-out-leaf elimination holds for all m, a tied hub contributes at most one tied
+out-leaf per locality, which would remove the out-star obstruction to counting for arbitrary trees.
+m = 6 test needs a symmetry-reduced, vectorized instrument (naive run too large; stopped).

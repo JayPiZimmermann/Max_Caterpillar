@@ -330,3 +330,7 @@ example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1)
 example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {Δ : ℕ}, 3 ≤ Δ → (∀ F ∈ K, (∃ a c, ∃ hac : c ≠ a, F = Trees.starFace a c hac) ∨ ∀ u, F.hingeDeg u ≤ Δ) → ∀ {k : ℕ}, 3 ≤ k → (144 * (2 * Δ - 1) ^ 2 + 1) * k ≤ r + 1 + 1 → (2 : ℝ) ^ k ≤ 2 * (k + 1) ^ 2 * K.card :=
   @MaxCaterpillar.Trees.tree_star_or_bounded_exponential
 #print axioms MaxCaterpillar.Trees.tree_star_or_bounded_exponential
+
+example : ∀ (r : ℕ) {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K₁ K₂ → ∀ {Δ : ℕ}, 3 ≤ Δ → (∀ F ∈ K₂, Trees.HubOK F.descr Δ) → ∀ {k : ℕ}, 3 ≤ k → (144 * (2 * Δ - 1) ^ 2 + 1) * k ≤ r + 1 + 1 → (2 : ℝ) ^ k ≤ 2 * (k + 1) ^ 2 * (K₁.card + K₂.card) :=
+  @MaxCaterpillar.Trees.mixed_expansion_exponential
+#print axioms MaxCaterpillar.Trees.mixed_expansion_exponential
