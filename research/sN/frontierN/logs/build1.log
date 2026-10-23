@@ -1,0 +1,103 @@
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/Frontier/FirstWidthN.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/Frontier/FirstWidthN.olean -i ./.lake/build/lib/MaxCaterpillar/Frontier/FirstWidthN.ilean -c ./.lake/build/ir/MaxCaterpillar/Frontier/FirstWidthN.c
+error: stdout:
+./././MaxCaterpillar/Frontier/FirstWidthN.lean:54:32: error: application type mismatch
+  one_le_pow_of_one_le' ht1
+argument
+  ht1
+has type
+  t ∈ Set.Ici 1 : Prop
+but is expected to have type
+  1 ≤ ?m.44888 : Prop
+./././MaxCaterpillar/Frontier/FirstWidthN.lean:54:10: error: failed to synthesize instance
+  CovariantClass ℝ ℝ (fun x x_1 => x * x_1) fun x x_1 => x ≤ x_1
+./././MaxCaterpillar/Frontier/FirstWidthN.lean:67:4: error: compiler IR check failed at 'List.filterTR.loop._at.MaxCaterpillar.Frontier.ZNet.supp._spec_3', error: unknown declaration 'Real.decidableEq'
+./././MaxCaterpillar/Frontier/FirstWidthN.lean:111:4: error: omega did not find a contradiction:
+[0, 0, 0, 1] ∈ [2, ∞)
+[0, 11, -1, 6] ∈ [12, ∞)
+[0, 0, 0, 1, -1] ∈ (-∞, 0]
+[0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+./././MaxCaterpillar/Frontier/FirstWidthN.lean:112:2: error: omega did not find a contradiction:
+[6, 11, -1] ∈ [0, ∞)
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+[1, 0, 0, -1] ∈ (-∞, -2]
+[1] ∈ [0, ∞)
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 1
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/Frontier/SecondWidthN.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/Frontier/SecondWidthN.olean -i ./.lake/build/lib/MaxCaterpillar/Frontier/SecondWidthN.ilean -c ./.lake/build/ir/MaxCaterpillar/Frontier/SecondWidthN.c
+error: stdout:
+./././MaxCaterpillar/Frontier/SecondWidthN.lean:25:26: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  lin ?c (?a • ?x)
+N h₁ h₂ : ℕ
+c : Point N
+a : ℝ
+x : Point N
+⊢ AddHom.toFun { toFun := lin c, map_add' := (_ : ∀ (x y : Point N), lin c (x + y) = lin c x + lin c y) } (a • x) =
+    (RingHom.id ℝ) a •
+      AddHom.toFun { toFun := lin c, map_add' := (_ : ∀ (x y : Point N), lin c (x + y) = lin c x + lin c y) } x
+./././MaxCaterpillar/Frontier/SecondWidthN.lean:78:21: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  Finset.sup' Finset.univ (_ : Finset.Nonempty Finset.univ) x
+N h₁ h₂ : ℕ
+inst✝ : NeZero N
+net : ZNet N h₁ h₂
+h : ∀ (x : Point N), eval net x = Maximum N x
+c : Fin h₂ → Point N
+hc : ∀ (k : Fin h₂) (x : Point N), Gp net k x - Gp net k (-x) = lin (c k) x
+Z : Finset (Fin h₂) := Finset.filter (fun k => Tp net k = 0) Finset.univ
+Φ : Point N →ₗ[ℝ] { x // x ∈ Z } → ℝ :=
+  {
+    toAddHom :=
+      { toFun := fun x k => lin (c ↑k) x,
+        map_add' :=
+          (_ :
+            ∀ (x y : Point N),
+              (fun x k => lin (c ↑k) x) (x + y) = (fun x k => lin (c ↑k) x) x + (fun x k => lin (c ↑k) x) y) },
+    map_smul' :=
+      (_ :
+        ∀ (a : ℝ) (x : Point N),
+          AddHom.toFun
+              { toFun := fun x k => lin (c ↑k) x,
+                map_add' :=
+                  (_ :
+                    ∀ (x y : Point N),
+                      (fun x k => lin (c ↑k) x) (x + y) = (fun x k => lin (c ↑k) x) x + (fun x k => lin (c ↑k) x) y) }
+              (a • x) =
+            (RingHom.id ℝ) a •
+              AddHom.toFun
+                { toFun := fun x k => lin (c ↑k) x,
+                  map_add' :=
+                    (_ :
+                      ∀ (x y : Point N),
+                        (fun x k => lin (c ↑k) x) (x + y) = (fun x k => lin (c ↑k) x) x + (fun x k => lin (c ↑k) x) y) }
+                x) }
+hmemV : ∀ x ∈ LinearMap.ker Φ, ∀ (k : Fin h₂), Tp net k = 0 → lin (c k) x = 0
+L : Point N →ₗ[ℝ] ℝ := linMap (∑ k : Fin h₂, (if 0 < Tp net k then d net k else 0) • c k)
+x : Point N
+hx : x ∈ LinearMap.ker Φ
+hrest : ∀ (x : Point N), Maximum N x = rest net x
+hM : Maximum N x = Finset.sup' Finset.univ (_ : Finset.Nonempty Finset.univ) x
+hodd : Maximum N x - -Finset.inf' Finset.univ (_ : Finset.Nonempty Finset.univ) x = L x
+⊢ Finset.sup' Finset.univ (_ : Finset.Nonempty Finset.univ) x +
+      Finset.inf' Finset.univ (_ : Finset.Nonempty Finset.univ) x =
+    L x
+./././MaxCaterpillar/Frontier/SecondWidthN.lean:97:2: error: omega did not find a contradiction:
+[0, 0, 0, 0, 1, -1] ∈ (-∞, -1]
+[0, 0, 1] ∈ [0, ∞)
+[1, 0, -1, 1] ∈ [-1, ∞)
+[0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 1] ∈ [0, ∞)
+[2, 0, -1] ∈ [-1, 0]
+[0, 0, 0, 1, -1] ∈ (-∞, 0]
+[0, 0, 1, -1] ∈ [0, ∞)
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 1
+[1845/1867] Building MaxCaterpillar.Frontier.Claw
+[1862/1867] Building MaxCaterpillar.Frontier.CoverCount
+[1862/1867] Building MaxCaterpillar.Frontier.MaxMinSubspace
+stdout:
+./././MaxCaterpillar/Frontier/CoverCount.lean:74:9: warning: unused variable `h6` [linter.unusedVariables]
+[1864/1867] Building MaxCaterpillar.Frontier.FirstWidthN
+stdout:
+./././MaxCaterpillar/Frontier/MaxMinSubspace.lean:76:16: warning: unused variable `hpP` [linter.unusedVariables]
+./././MaxCaterpillar/Frontier/MaxMinSubspace.lean:276:46: warning: unused variable `hma` [linter.unusedVariables]
+[1865/1867] Building MaxCaterpillar.Frontier.SecondWidthN

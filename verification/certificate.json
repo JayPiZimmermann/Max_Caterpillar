@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-23T21:01:17.114211+00:00",
+  "checked_at_utc": "2026-10-23T23:04:03.112641+00:00",
   "source_commit": null,
-  "source_sha256": "d3d0fc5726547ab31bb068a0dbfb4e9dbd9d30ef4d381ffab51de2da26c64dc7",
+  "source_sha256": "13857c22623ae551f635b6e970f76d02b2a96cebb927775e8de5e2ad8610117a",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -729,6 +729,26 @@
       "status": "VERIFIED"
     },
     {
+      "declaration": "MaxCaterpillar.Frontier.first_width_quadratic",
+      "type": "\u2200 {N h\u2081 h\u2082 : \u2115} [NeZero N] (net : Network N h\u2081 h\u2082), (\u2200 x, net.eval x = Maximum N x) \u2192 3 * N * N + 12 \u2264 6 * h\u2081 + 11 * N",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.second_width_half",
+      "type": "\u2200 {N h\u2081 h\u2082 : \u2115} [NeZero N] (net : Network N h\u2081 h\u2082), (\u2200 x, net.eval x = Maximum N x) \u2192 N \u2264 2 * h\u2082",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
       "declaration": "MaxCaterpillar.Trees.rootedStar_expansion_choose_le",
       "type": "\u2200 (r : \u2115) {K : Finset (FaceKey r)}, Trees.IsRootedStarExpansion r K \u2192 \u2200 {k : \u2115}, 3 \u2264 k \u2192 k < r + 1 + 1 \u2192 (r + 1 + 1).choose k \u2264 6 ^ k * K.card",
       "axioms": [
@@ -790,11 +810,17 @@
     "MaxCaterpillar/Definitions.lean": "908439d9b6c5b634bc4c4aa7173beaafd1ad50ace12170b81a32b464a7d85efc",
     "MaxCaterpillar/Frontier/Asymptotics.lean": "74f2c827fef9c776c30ee902a756ef69d3dfa9a39a7272d4119d055032f7dc30",
     "MaxCaterpillar/Frontier/Basic.lean": "47ff6904c8471b8bded4f4d4990de0d60cf23ceea727ffde66b8bfc425a19820",
+    "MaxCaterpillar/Frontier/Claw.lean": "5df047f990f65702990ef7370b8a2d9007285913e46add35eb304ecc8c3e9e94",
     "MaxCaterpillar/Frontier/Constructions.lean": "eca20f8ddcfe966ae4ed531a5858667d141474704fd939207472fa1c4c4121d5",
+    "MaxCaterpillar/Frontier/CoverCount.lean": "2b13de78e5d227401a2b7afb32046a685c951f68da61ab44a88fa40a57971a0d",
     "MaxCaterpillar/Frontier/FirstWidth.lean": "5c719e82c0c61e475128f6c44b3ed2ee34e3c9aab779c043c53734da514b5918",
+    "MaxCaterpillar/Frontier/FirstWidthN.lean": "42e9b57fbc5d1a5312fb070be45f932249925c68b259e2c8d68b615a132d9810",
+    "MaxCaterpillar/Frontier/GeneralN.lean": "59a58d4a6b2b227a07090b17f77e47898aad8fca4dd55f20a8a4251779c6c1f8",
     "MaxCaterpillar/Frontier/Main.lean": "c84f1eadede51cdb53691a4efd2053299b498a3bbdb6942fc9ec81ded5f1a214",
+    "MaxCaterpillar/Frontier/MaxMinSubspace.lean": "a15f183e4ccdf28f8eb70e94f3138af5f60be5a6fec341e7d76f29413a06cdbc",
     "MaxCaterpillar/Frontier/SecondWidth.lean": "6e7419588afbf99371389556e08fc3dc5e35d981b11593a85c3b42bdbf7b3ab6",
-    "MaxCaterpillar/Frontier.lean": "dbdbe3a697c6c1a4be9a45388698772d4bfb92b465a0a4c26e7765b4f118d39c",
+    "MaxCaterpillar/Frontier/SecondWidthN.lean": "8c1a6161a5ebb47561772193d2c69e1d8a38bc600e4c9f57ca4870dc7ce6f0da",
+    "MaxCaterpillar/Frontier.lean": "6f079909335222caa18ca3b19aa7bb8bc0d8b194426f9906df2358b7d79f8f38",
     "MaxCaterpillar/Internal/Network.lean": "fa4e14cbbe0ad5b39077e97bb08d52d4cd605b3ab36530b1f345b5f30750a980",
     "MaxCaterpillar/KMPS.lean": "fb3e708d732809661ab0a16db31e1851d4e3f1505dd16e0547c773d13bd913e7",
     "MaxCaterpillar/Lemmas.lean": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72",
@@ -825,6 +851,9 @@
     "MaxCaterpillar/SmallN/Max5Lns27.lean": "d95dda6b266618720ff4bd32cad14de65ea8636878539b7e5899a2a2d655f945",
     "MaxCaterpillar/SmallN.lean": "536f1f27252d783b0635efdee5c8ffa94c9af0b65182ddba6e4fa88b089d9903",
     "MaxCaterpillar/Theorems.lean": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9",
+    "MaxCaterpillar/Trees/BoundedDegree.lean": "963f9f28c5db4da8e7e5a03c565be31c6529430a336a30eb8cbff1ec2d71a1d2",
+    "MaxCaterpillar/Trees/BoundedDegreeMain.lean": "be3912c0c7f71c3aad66074b5629d5f8c55a2fe4cd67d8ee48e314e7dbc69814",
+    "MaxCaterpillar/Trees/DescrPass.lean": "b9f606eb00b9eb55299a9d80e21b69602dcd1c9c8fdce98807ed64db83a50a81",
     "MaxCaterpillar/Trees/Quadratic.lean": "8b548b7596fd28523b3cd59ffc7dc6670c8289c7e7dfd91ac83695eb2b207ecf",
     "MaxCaterpillar/Trees/RootedStars.lean": "72bcae69b40327c273695eb9b9967639d192b80708cfccea1a42f7d49846943d",
     "MaxCaterpillar/Trees.lean": "7c790e93b67e9852932ff8ea48ea2ef4c587034b7b72b0c7765f3aed2dc4abc7",
@@ -1012,7 +1041,7 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "e1a9c6f2a4a6d488735ca585144c55ebdf65db975683ead897c56e7237af5da3",
+    "Verification/Statements.lean": "6ea81be88c481b927a29bee992df348f7bd0ebd3c4a954fcfe5ff473c4b22ad7",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
@@ -1031,6 +1060,6 @@
     "research/sN/rank/Speed.lean": "deacc99537990bfceb917b0b6c6eb2ca632d93c736c1c32bca041c8144012629",
     "research/sN/rank/T1.lean": "eac75cdd10f4e70def1f0a1d31ff55b5b308146b42a428c922c80bb815a88647",
     "research/sN/restricted/Germ.lean": "8e8039ac2d52a5ccd8c947332db7bf908937739a1c73654fac19cf90bb8706dd",
-    "verification/main.json": "82047d5e7ee20531814d7f159ec1916ec401f0912656c02b2a0e26ed3736bdbe"
+    "verification/main.json": "a7ae6db55e4dc17839b21f6c98a84e263f10be330738ca01aa0d5af3da97d241"
   }
 }

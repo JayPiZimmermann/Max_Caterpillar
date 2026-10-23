@@ -1,0 +1,14 @@
+== MaxMinSubspace
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:76:16: warning: unused variable `hpP` [linter.unusedVariables]
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:269:28: error: unknown identifier 'hs''
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:272:28: error: unknown identifier 'hs''
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:282:30: error: unknown identifier 'hs''
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:285:30: error: unknown identifier 'hs''
+exit 1 time 8
+== CoverCount
+MaxCaterpillar/Frontier/CoverCount.lean:74:9: warning: unused variable `h6` [linter.unusedVariables]
+MaxCaterpillar/Frontier/CoverCount.lean:166:2: error: omega did not find a contradiction:
+[0, 0, 0, 1] ∈ [1, ∞)
+[0, 0, 1] ∈ [0, ∞)
+[0, 0, 1, -1] ∈ (-∞, -1]
+exit 1 time 8

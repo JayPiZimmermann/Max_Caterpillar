@@ -1,0 +1,43 @@
+== CoverCount
+exit 124 time 900
+== Claw
+exit 0 time 8
+== MaxMinSubspace
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:56:2: error: omega did not find a contradiction:
+[0, 0, 0, 0, 1, -1] ∈ [0, ∞)
+[0, 1, -1, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 1, -1, 0, -1, 1] ∈ (-∞, 0]
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 1, -1] ∈ (-∞, 0]
+[0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:69:2: error: omega did not find a contradiction:
+[0, 0, 0, 0, 1, -1] ∈ [0, ∞)
+[0, 1, -1, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 1] ∈ [0, 1]
+[0, 1, -1, 0, -1, 1] ∈ (-∞, 0]
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:76:16: warning: unused variable `hpP` [linter.unusedVariables]
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:201:4: error: omega did not find a contradiction:
+[0, 0, 0, 0, 0, 1, 0, -1] ∈ (-∞, 0]
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 1, 0, -2] ∈ [0, 1]
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 1, 0, 0, 0, -2] ∈ [-1, 0]
+[0, 0, 0, 0, 1, 1, -1] ∈ [-1, ∞)
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:206:6: error: omega did not find a contradiction:
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 1] ∈ [0, ∞)
+[0, 1] ∈ [0, 2]
+[0, 1, 1, -1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:363:2: error: omega did not find a contradiction:
+[1, -1] ∈ [-1, ∞)
+[2, 0, -1] ∈ [-1, 0]
+[0, 0, 1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+exit 1 time 4

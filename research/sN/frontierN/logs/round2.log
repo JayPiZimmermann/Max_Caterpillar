@@ -1,0 +1,158 @@
+== CoverCount
+MaxCaterpillar/Frontier/CoverCount.lean:40:19: error: omega did not find a contradiction:
+[0, 1] ∈ [0, ∞)
+[1, 1] ∈ [1, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:42:19: error: omega did not find a contradiction:
+[0, 1] ∈ [0, ∞)
+[1, 1] ∈ [4, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:44:19: error: omega did not find a contradiction:
+[0, 1] ∈ [0, ∞)
+[1, 1] ∈ [10, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:67:17: error: omega did not find a contradiction:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 1] ∈ [0, ∞)
+[1, 1, -1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 0, 0, 1, -1] ∈ [0, ∞)
+[1, 1, -1, 0, 0] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 1] ∈ [4, ∞)
+[0, 9, 0, 0, 0, 0, -22, 0, 0, 0, 12, 0, -2] ∈ [-28, ∞)
+[0, 1] ∈ [0, ∞)
+[0, 12, 0, 0, 0, 0, 0, -1] ∈ (-∞, 0]
+MaxCaterpillar/Frontier/CoverCount.lean:68:4: error: omega did not find a contradiction:
+[0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, -1] ∈ (-∞, 6]
+[0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 12, -2] ∈ [0, ∞)
+[1, 1, -1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 0, 0, 1, -1] ∈ [0, ∞)
+[1, 1, -1, 0, 0] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 1] ∈ [4, ∞)
+[0, 1] ∈ [0, ∞)
+[0, 12, 0, 0, 0, 0, 0, -1] ∈ (-∞, 0]
+MaxCaterpillar/Frontier/CoverCount.lean:144:4: error: omega did not find a contradiction:
+[0, 0, 0, 1] ∈ [1, ∞)
+[0, 1, 0, -1] ∈ (-∞, -1]
+[0, 1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:156:47: error: unknown constant 'Finset.card_pair'
+MaxCaterpillar/Frontier/CoverCount.lean:196:17: error: omega did not find a contradiction:
+trivial
+MaxCaterpillar/Frontier/CoverCount.lean:230:4: error: omega did not find a contradiction:
+[0, 0, 0, 0, 1, -1] ∈ (-∞, -1]
+[0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+[4, 3, 0, 0, 6, -6] ∈ [-22, ∞)
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 1, -1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+[1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:260:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  N * (6 * N)
+N : ℕ
+ι : Type u_1
+inst✝ : DecidableEq ι
+J : Finset ι
+S : ι → Finset (Fin N)
+hcov : ∀ (I : Finset (Fin N)), card I = 4 → ∀ a ∈ I, ∃ j ∈ J, a ∈ S j ∧ S j ⊆ I ∧ 2 ≤ card (S j)
+D : Fin N → Finset (Fin N) := fun a => filter (fun b => b ≠ a ∧ ∃ j ∈ J, S j = {a, b}) univ
+U : Fin N → Finset (Fin N) := fun a => filter (fun b => b ≠ a ∧ ∀ j ∈ J, S j ≠ {a, b}) univ
+P2 : Fin N → Finset ι := fun a => filter (fun j => a ∈ S j ∧ card (S j) = 2) J
+R3 : Fin N → Finset ι := fun a => filter (fun j => a ∈ S j ∧ card (S j) = 3 ∧ erase (S j) a ⊆ U a) J
+R4 : Fin N → Finset ι := fun a => filter (fun j => a ∈ S j ∧ card (S j) = 4 ∧ erase (S j) a ⊆ U a) J
+hDU : ∀ (a : Fin N), card (D a) + card (U a) + 1 = N
+hD : ∀ (a : Fin N), card (D a) ≤ card (P2 a)
+hR : ∀ (a : Fin N), Nat.choose (card (U a)) 3 ≤ (card (U a) - 2) * card (R3 a) + card (R4 a)
+hvert : ∀ (a : Fin N), 6 * N ≤ 6 * card (P2 a) + 4 * card (R3 a) + 3 * card (R4 a) + 22
+s2 : ∑ a : Fin N, card (filter (fun j => a ∈ S j ∧ card (S j) = 2) J) = 2 * card (filter (fun j => card (S j) = 2) J)
+s3 : ∑ a : Fin N, card (filter (fun j => a ∈ S j ∧ card (S j) = 3) J) = 3 * card (filter (fun j => card (S j) = 3) J)
+s4 : ∑ a : Fin N, card (filter (fun j => a ∈ S j ∧ card (S j) = 4) J) = 4 * card (filter (fun j => card (S j) = 4) J)
+hR3 : ∀ (a : Fin N), card (R3 a) ≤ card (filter (fun j => a ∈ S j ∧ card (S j) = 3) J)
+hR4 : ∀ (a : Fin N), card (R4 a) ≤ card (filter (fun j => a ∈ S j ∧ card (S j) = 4) J)
+hJ :
+  card (filter (fun j => card (S j) = 2) J) + card (filter (fun j => card (S j) = 3) J) +
+      card (filter (fun j => card (S j) = 4) J) ≤
+    card J
+total :
+  6 * (N * N) ≤
+    6 * ∑ x : Fin N, card (filter (fun j => x ∈ S j ∧ card (S j) = 2) J) +
+          4 *
+            ∑ x : Fin N,
+              card
+                (filter
+                  (fun j =>
+                    x ∈ S j ∧ card (S j) = 3 ∧ erase (S j) x ⊆ filter (fun b => b ≠ x ∧ ∀ j ∈ J, S j ≠ {x, b}) univ)
+                  J) +
+        3 *
+          ∑ x : Fin N,
+            card
+              (filter
+                (fun j =>
+                  x ∈ S j ∧ card (S j) = 4 ∧ erase (S j) x ⊆ filter (fun b => b ≠ x ∧ ∀ j ∈ J, S j ≠ {x, b}) univ)
+                J) +
+      N * 22
+t3 : ∑ a : Fin N, card (R3 a) ≤ 3 * card (filter (fun j => card (S j) = 3) J)
+t4 : ∑ a : Fin N, card (R4 a) ≤ 4 * card (filter (fun j => card (S j) = 4) J)
+t2 : ∑ a : Fin N, card (P2 a) = 2 * card (filter (fun j => card (S j) = 2) J)
+hNN : N * (6 * N) = 6 * (N * N)
+h3N : 3 * N * N = 3 * (N * N)
+⊢ 3 * N * N ≤ 6 * card J + 11 * N
+exit 1 time 12
+== Claw
+MaxCaterpillar/Frontier/Claw.lean:385:14: error: typeclass instance problem is stuck, it is often due to metavariables
+  Preorder ?m.108737
+MaxCaterpillar/Frontier/Claw.lean:405:52: error: unsolved goals
+N h₁ h₂ : ℕ
+inst✝ : NeZero N
+I : Finset (Fin N)
+a : Fin N
+haI : a ∈ I
+q : Point N
+hq0 : ∀ i ∈ I, q i = 0
+hq1 : ∀ i ∉ I, q i ≤ -1
+δ : ℝ
+hδ0 : 0 < δ
+hδ1 : δ < 1 / 4
+C : Point N
+hC :
+  ∀ (v : Point N),
+    ∀ᶠ (ε : ℝ) in 𝓝[>] 0,
+      Maximum N (q + (ε • v + δ • unitVec a)) - Maximum N (q + (ε • v + -δ • unitVec a)) -
+          (Maximum N (q + (ε • -v + δ • unitVec a)) - Maximum N (q + (ε • -v + -δ • unitVec a))) =
+        ε * lin C v
+Y : Finset (Fin N) := Finset.erase I a
+hY : 3 ≤ Finset.card Y
+hYdef : Y = Finset.erase I a
+oneY : Point N := fun k => if k ∈ Y then 1 else 0
+hall :
+  ∀ᶠ (ε : ℝ) in 𝓝[>] 0,
+    (∀ i ∈ Y,
+        Maximum N (q + (ε • unitVec i + δ • unitVec a)) - Maximum N (q + (ε • unitVec i + -δ • unitVec a)) -
+            (Maximum N (q + (ε • -unitVec i + δ • unitVec a)) - Maximum N (q + (ε • -unitVec i + -δ • unitVec a))) =
+          ε * lin C (unitVec i)) ∧
+      Maximum N (q + (ε • oneY + δ • unitVec a)) - Maximum N (q + (ε • oneY + -δ • unitVec a)) -
+            (Maximum N (q + (ε • -oneY + δ • unitVec a)) - Maximum N (q + (ε • -oneY + -δ • unitVec a))) =
+          ε * lin C oneY ∧
+        ε ∈ Set.Ioo 0 (δ / 2)
+ε : ℝ
+hi :
+  ∀ i ∈ Y,
+    Maximum N (q + (ε • unitVec i + δ • unitVec a)) - Maximum N (q + (ε • unitVec i + -δ • unitVec a)) -
+        (Maximum N (q + (ε • -unitVec i + δ • unitVec a)) - Maximum N (q + (ε • -unitVec i + -δ • unitVec a))) =
+      ε * lin C (unitVec i)
+hone :
+  Maximum N (q + (ε • oneY + δ • unitVec a)) - Maximum N (q + (ε • oneY + -δ • unitVec a)) -
+      (Maximum N (q + (ε • -oneY + δ • unitVec a)) - Maximum N (q + (ε • -oneY + -δ • unitVec a))) =
+    ε * lin C oneY
+hε0 : 0 < ε
+hε1 : ε < δ / 2
+haY : a ∉ Y
+hYI : ∀ i ∈ Y, i ∈ I
+hia : ∀ i ∈ Y, i ≠ a
+hz : ∀ (w : Point N) (τ : ℝ), (∀ (k : Fin N), |w k| ≤ 1) → |τ| ≤ δ → ∀ (k : Fin N), |(ε • w + τ • unitVec a) k| ≤ 1 / 2
+hδa : |δ| ≤ δ
+hδa' : |(-δ)| ≤ δ
+L1 : ∀ (w : Point N), (∀ (k : Fin N), |w k| ≤ 1) → Maximum N (q + (ε • w + δ • unitVec a)) = δ + ε * w a
+L2 :
+  ∀ (w : Point N),
+    ∀ i0 ∈ Y, (∀ k ∈ Y, w k ≤ w i0) → (∀ (k : Fin N), |w k| ≤ 1) → Maximum N (q + (ε • w + -δ • unitVec a)) = ε * w i0
+⊢ ℕ
+exit 1 time 8

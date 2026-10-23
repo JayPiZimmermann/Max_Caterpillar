@@ -1,0 +1,50 @@
+== MaxMinSubspace
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:76:16: warning: unused variable `hpP` [linter.unusedVariables]
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:232:33: error: typeclass instance problem is stuck, it is often due to metavariables
+  HSub (((i : ι) → ?m.165942 i) →ₗ[?m.165939] ?m.165942 a) (((i : ι) → ?m.166360 i) →ₗ[?m.166357] ?m.166360 b)
+    ((ι → ℝ) →ₗ[ℝ] ℝ)
+exit 1 time 6
+== CoverCount
+MaxCaterpillar/Frontier/CoverCount.lean:41:23: error: omega did not find a contradiction:
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 1, 0, 1] ∈ [1, ∞)
+[0, 1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:44:23: error: omega did not find a contradiction:
+[0, 1] ∈ [0, ∞)
+[2, 1] ∈ [4, ∞)
+[1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:162:12: error: unknown constant 'Finset.card_union_of_disjoint'
+MaxCaterpillar/Frontier/CoverCount.lean:144:57: error: unsolved goals
+N : ℕ
+ι : Type u_1
+inst✝ : DecidableEq ι
+J : Finset ι
+S : ι → Finset (Fin N)
+a : Fin N
+hunion : coverD J S a ∪ coverU J S a = erase univ a
+hdisj : Disjoint (coverD J S a) (coverU J S a)
+⊢ card (coverD J S a) + card (coverU J S a) + 1 = N
+MaxCaterpillar/Frontier/CoverCount.lean:222:14: error: omega did not find a contradiction:
+trivial
+MaxCaterpillar/Frontier/CoverCount.lean:269:4: error: omega did not find a contradiction:
+[0, 0, 0, 0, 1, -1] ∈ (-∞, -1]
+[0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+[4, 3, 0, 0, 6, -6] ∈ [-22, ∞)
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 1, -1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+[1] ∈ [0, ∞)
+MaxCaterpillar/Frontier/CoverCount.lean:304:2: error: omega did not find a contradiction:
+[0, 0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 12, 0, 0, 0, 0, 0, 4, 3, 0, 0, 0, 1, -6] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 1, 0, 1, 0, 1, -1] ∈ (-∞, 0]
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 3, 0, 0, 0, -1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 4, 0, 0, -1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 0, 0, 0, 0, 1] ∈ [0, ∞)
+exit 1 time 6

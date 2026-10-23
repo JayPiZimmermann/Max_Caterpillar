@@ -1,0 +1,7 @@
+== MaxMinSubspace
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:76:16: warning: unused variable `hpP` [linter.unusedVariables]
+MaxCaterpillar/Frontier/MaxMinSubspace.lean:276:46: warning: unused variable `hma` [linter.unusedVariables]
+exit 0
+== CoverCount
+MaxCaterpillar/Frontier/CoverCount.lean:74:9: warning: unused variable `h6` [linter.unusedVariables]
+exit 0

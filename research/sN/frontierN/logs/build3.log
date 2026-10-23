@@ -1,0 +1,11 @@
+[2107/2108] Building MaxCaterpillar.Frontier.GeneralN
+'MaxCaterpillar.Frontier.first_width_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.second_width_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.first_width_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.second_width_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+@MaxCaterpillar.Frontier.first_width_quadratic : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N]
+  (net : MaxCaterpillar.Network N h₁ h₂),
+  (∀ (x : MaxCaterpillar.Point N), MaxCaterpillar.Network.eval net x = MaxCaterpillar.Maximum N x) →
+    3 * N * N + 12 ≤ 6 * h₁ + 11 * N
+@MaxCaterpillar.Frontier.second_width_half : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : MaxCaterpillar.Network N h₁ h₂),
+  (∀ (x : MaxCaterpillar.Point N), MaxCaterpillar.Network.eval net x = MaxCaterpillar.Maximum N x) → N ≤ 2 * h₂

@@ -1,0 +1,200 @@
+== TestArith
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:00.00
+	Maximum resident set size (kbytes): 241012
+exit 0
+== Claw
+MaxCaterpillar/Frontier/Claw.lean:55:17: error: invalid constructor ⟨...⟩, expected type must be an inductive type 
+  Real.lt 0 (lin (A net j) q)
+MaxCaterpillar/Frontier/Claw.lean:55:31: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  if 0 < 0 then ?m.2307 else ?m.2308
+case pos
+N h₁ h₂ : ℕ
+net : ZNet N h₁ h₂
+q z : Point N
+j : Fin h₁
+hz : s net j = 0 → lin (A net j) q ≠ 0 → |lin (A net j) z| < |lin (A net j) q|
+hs : s net j = 0
+hq : lin (A net j) q = 0
+⊢ relu (0 + lin (A net j) z) = relu 0 + lin (A net j) z + if s net j = 0 ∧ 0 = 0 then relu (lin (A net j) z) else 0
+MaxCaterpillar/Frontier/Claw.lean:58:30: error: invalid projection, structure expected
+  h
+has type
+  0 < lin (A net j) q
+MaxCaterpillar/Frontier/Claw.lean:58:30: error: invalid projection, structure expected
+  h
+has type
+  Real.lt 0 (lin (A net j) q)
+MaxCaterpillar/Frontier/Claw.lean:62:12: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  if 0 < lin (A net j) q then ?m.3432 else ?m.3433
+case neg.inl
+N h₁ h₂ : ℕ
+net : ZNet N h₁ h₂
+q z : Point N
+j : Fin h₁
+hz : s net j = 0 → lin (A net j) q ≠ 0 → |lin (A net j) z| < |lin (A net j) q|
+hs : s net j = 0
+hq : ¬lin (A net j) q = 0
+hzz : - -lin (A net j) q < lin (A net j) z ∧ lin (A net j) z < -lin (A net j) q
+hn : lin (A net j) q < 0
+⊢ relu (lin (A net j) q + lin (A net j) z) =
+    relu (lin (A net j) q) + lin 0 z + if s net j = 0 ∧ lin (A net j) q = 0 then relu (lin (A net j) z) else 0
+MaxCaterpillar/Frontier/Claw.lean:66:12: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  if lin (A net j) q > 0 then ?m.3782 else ?m.3783
+case neg.inr
+N h₁ h₂ : ℕ
+net : ZNet N h₁ h₂
+q z : Point N
+j : Fin h₁
+hz : s net j = 0 → lin (A net j) q ≠ 0 → |lin (A net j) z| < |lin (A net j) q|
+hs : s net j = 0
+hq : ¬lin (A net j) q = 0
+hzz : -lin (A net j) q < lin (A net j) z ∧ lin (A net j) z < lin (A net j) q
+hp : lin (A net j) q > 0
+⊢ relu (lin (A net j) q + lin (A net j) z) =
+    relu (lin (A net j) q) + lin 0 z + if s net j = 0 ∧ lin (A net j) q = 0 then relu (lin (A net j) z) else 0
+MaxCaterpillar/Frontier/Claw.lean:177:41: error: unknown identifier 'neg_abs_le'
+MaxCaterpillar/Frontier/Claw.lean:176:37: error: unsolved goals
+N h₁ h₂ : ℕ
+u m δ α β : ℝ
+hδ : 0 < δ
+hu : u = 0 ∨ δ * |m| < |u| / 2
+hp : ∀ (x y : ℝ), pick 0 x y = y
+hm1 : δ * m ≤ δ * |m|
+⊢ -(δ * |m|) ≤ δ * m
+MaxCaterpillar/Frontier/Claw.lean:278:2: error: tactic 'introN' failed, insufficient number of binders
+case h
+N h₁ h₂ : ℕ
+net : ZNet N h₁ h₂
+q : Point N
+a : Fin N
+ha : ∀ (j : Fin h₁), s net j = 0 → lin (A net j) q = 0 → A net j a = 0
+m : Fin h₂ → ℝ := fun k => lin (cv net q k) (unitVec a)
+hm : m = fun k => lin (cv net q k) (unitVec a)
+u : Fin h₂ → ℝ := fun k => Gp net k q
+hu : u = fun k => Gp net k q
+hδev :
+  ∀ᶠ (δ : ℝ) in 𝓝[>] 0,
+    (∀ (j : Fin h₁), s net j = 0 → lin (A net j) q ≠ 0 → |δ * A net j a| < |lin (A net j) q| / 2) ∧
+      (∀ (k : Fin h₂), u k ≠ 0 → |δ * m k| < |u k| / 2) ∧ δ ∈ Set.Ioo 0 (1 / 4)
+δ : ℝ
+hδj : ∀ (j : Fin h₁), s net j = 0 → lin (A net j) q ≠ 0 → |δ * A net j a| < |lin (A net j) q| / 2
+hδk : ∀ (k : Fin h₂), u k ≠ 0 → |δ * m k| < |u k| / 2
+hδ0 : 0 < δ
+hδ1 : δ < 1 / 4
+v : Point N
+hδj' : ∀ (j : Fin h₁), s net j = 0 → lin (A net j) q ≠ 0 → |-δ * A net j a| < |lin (A net j) q| / 2
+hku : ∀ (k : Fin h₂), u k = 0 ∨ δ * |m k| < |u k| / 2
+hev :
+  ∀ᶠ (ε : ℝ) in 𝓝[>] 0,
+    (∀ (j : Fin h₁), s net j = 0 → lin (A net j) q ≠ 0 → |ε * lin (A net j) v| < |lin (A net j) q| / 2) ∧
+      (∀ (k : Fin h₂),
+          pick (Tp net k) (u k + δ * m k + ε * (lin (cv net q k) v + RR net q k v))
+                  (relu (u k + δ * m k + ε * (lin (cv net q k) v + RR net q k v))) -
+                pick (Tp net k) (u k + -δ * m k + ε * (lin (cv net q k) v + RR net q k v))
+                  (relu (u k + -δ * m k + ε * (lin (cv net q k) v + RR net q k v))) -
+              (pick (Tp net k) (u k + δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v)))
+                  (relu (u k + δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v)))) -
+                pick (Tp net k) (u k + -δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v)))
+                  (relu (u k + -δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v))))) =
+            ε *
+              (kap (Tp net k) (u k) (m k) *
+                (lin (cv net q k) v + RR net q k v - (lin (cv net q k) (-v) + RR net q k (-v))))) ∧
+        0 < ε
+ε : ℝ
+hεj :
+  (∀ (j : Fin h₁), s net j = 0 → lin (A net j) q ≠ 0 → |ε * lin (A net j) v| < |lin (A net j) q| / 2) ∧
+    (∀ (k : Fin h₂),
+        pick (Tp net k) (u k + δ * m k + ε * (lin (cv net q k) v + RR net q k v))
+                (relu (u k + δ * m k + ε * (lin (cv net q k) v + RR net q k v))) -
+              pick (Tp net k) (u k + -δ * m k + ε * (lin (cv net q k) v + RR net q k v))
+                (relu (u k + -δ * m k + ε * (lin (cv net q k) v + RR net q k v))) -
+            (pick (Tp net k) (u k + δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v)))
+                (relu (u k + δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v)))) -
+              pick (Tp net k) (u k + -δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v)))
+                (relu (u k + -δ * m k + ε * (lin (cv net q k) (-v) + RR net q k (-v))))) =
+          ε *
+            (kap (Tp net k) (u k) (m k) *
+              (lin (cv net q k) v + RR net q k v - (lin (cv net q k) (-v) + RR net q k (-v))))) ∧
+      0 < ε
+⊢ rest net (q + (ε • v + δ • unitVec a)) - rest net (q + (ε • v + -δ • unitVec a)) -
+      (rest net (q + (ε • -v + δ • unitVec a)) - rest net (q + (ε • -v + -δ • unitVec a))) =
+    ε * lin (∑ k : Fin h₂, (d net k * kap (Tp net k) (u k) (m k)) • (2 • cv net q k + RV net q k)) v
+MaxCaterpillar/Frontier/Claw.lean:337:31: error: unsolved goals
+N h₁ h₂ : ℕ
+inst✝ : NeZero N
+I : Finset (Fin N)
+a : Fin N
+haI : a ∈ I
+q : Point N
+hq0 : ∀ i ∈ I, q i = 0
+hq1 : ∀ i ∉ I, q i ≤ -1
+δ : ℝ
+hδ0 : 0 < δ
+hδ1 : δ < 1 / 4
+C : Point N
+hC :
+  ∀ (v : Point N),
+    ∀ᶠ (ε : ℝ) in 𝓝[>] 0,
+      Maximum N (q + (ε • v + δ • unitVec a)) - Maximum N (q + (ε • v + -δ • unitVec a)) -
+          (Maximum N (q + (ε • -v + δ • unitVec a)) - Maximum N (q + (ε • -v + -δ • unitVec a))) =
+        ε * lin C v
+Y : Finset (Fin N) := Finset.erase I a
+hY : 3 ≤ Finset.card Y
+hYdef : Y = Finset.erase I a
+oneY : Point N := fun k => if k ∈ Y then 1 else 0
+⊢ 0 < δ
+MaxCaterpillar/Frontier/Claw.lean:321:83: error: unsolved goals
+case intro.intro.intro.intro
+N h₁ h₂ : ℕ
+inst✝ : NeZero N
+I : Finset (Fin N)
+a : Fin N
+haI : a ∈ I
+q : Point N
+hq0 : ∀ i ∈ I, q i = 0
+hq1 : ∀ i ∉ I, q i ≤ -1
+δ : ℝ
+hδ0 : 0 < δ
+hδ1 : δ < 1 / 4
+C : Point N
+hC :
+  ∀ (v : Point N),
+    ∀ᶠ (ε : ℝ) in 𝓝[>] 0,
+      Maximum N (q + (ε • v + δ • unitVec a)) - Maximum N (q + (ε • v + -δ • unitVec a)) -
+          (Maximum N (q + (ε • -v + δ • unitVec a)) - Maximum N (q + (ε • -v + -δ • unitVec a))) =
+        ε * lin C v
+Y : Finset (Fin N) := Finset.erase I a
+hY : 3 ≤ Finset.card Y
+hYdef : Y = Finset.erase I a
+oneY : Point N := fun k => if k ∈ Y then 1 else 0
+hall :
+  ∀ᶠ (ε : ℝ) in 𝓝[>] 0,
+    (∀ i ∈ Y,
+        Maximum N (q + (ε • unitVec i + δ • unitVec a)) - Maximum N (q + (ε • unitVec i + -δ • unitVec a)) -
+            (Maximum N (q + (ε • -unitVec i + δ • unitVec a)) - Maximum N (q + (ε • -unitVec i + -δ • unitVec a))) =
+          ε * lin C (unitVec i)) ∧
+      Maximum N (q + (ε • oneY + δ • unitVec a)) - Maximum N (q + (ε • oneY + -δ • unitVec a)) -
+            (Maximum N (q + (ε • -oneY + δ • unitVec a)) - Maximum N (q + (ε • -oneY + -δ • unitVec a))) =
+          ε * lin C oneY ∧
+        ε ∈ Set.Ioo 0 δ
+ε : ℝ
+hi :
+  ∀ i ∈ Y,
+    Maximum N (q + (ε • unitVec i + δ • unitVec a)) - Maximum N (q + (ε • unitVec i + -δ • unitVec a)) -
+        (Maximum N (q + (ε • -unitVec i + δ • unitVec a)) - Maximum N (q + (ε • -unitVec i + -δ • unitVec a))) =
+      ε * lin C (unitVec i)
+hone :
+  Maximum N (q + (ε • oneY + δ • unitVec a)) - Maximum N (q + (ε • oneY + -δ • unitVec a)) -
+      (Maximum N (q + (ε • -oneY + δ • unitVec a)) - Maximum N (q + (ε • -oneY + -δ • unitVec a))) =
+    ε * lin C oneY
+hε0 : 0 < ε
+hε1 : ε < δ
+haY : a ∉ Y
+hYI : ∀ i ∈ Y, i ∈ I
+hia : ∀ i ∈ Y, i ≠ a
+hsmall :
+  ∀ (w : Point N) (τ : ℝ), (∀ (k : Fin N), |w k| ≤ 1) → |τ| ≤ δ → ∀ (k : Fin N), |(ε • w + τ • unitVec a) k| ≤ 1 / 2
+⊢ False
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.61
+	Maximum resident set size (kbytes): 1644248
+exit 0

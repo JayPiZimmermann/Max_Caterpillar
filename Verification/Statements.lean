@@ -287,6 +287,14 @@ example : ∀ {N h₁ h₂ : ℕ} [NeZero N], 3 ≤ N → ∀ (net : Network N h
   @MaxCaterpillar.Frontier.second_width_ge_three
 #print axioms MaxCaterpillar.Frontier.second_width_ge_three
 
+example : ∀ {N h₁ h₂ : ℕ} [NeZero N] (net : Network N h₁ h₂), (∀ x, net.eval x = Maximum N x) → 3 * N * N + 12 ≤ 6 * h₁ + 11 * N :=
+  @MaxCaterpillar.Frontier.first_width_quadratic
+#print axioms MaxCaterpillar.Frontier.first_width_quadratic
+
+example : ∀ {N h₁ h₂ : ℕ} [NeZero N] (net : Network N h₁ h₂), (∀ x, net.eval x = Maximum N x) → N ≤ 2 * h₂ :=
+  @MaxCaterpillar.Frontier.second_width_half
+#print axioms MaxCaterpillar.Frontier.second_width_half
+
 example : ∀ (r : ℕ) {K : Finset (FaceKey r)}, Trees.IsRootedStarExpansion r K → ∀ {k : ℕ}, 3 ≤ k → k < r + 1 + 1 → (r + 1 + 1).choose k ≤ 6 ^ k * K.card :=
   @MaxCaterpillar.Trees.rootedStar_expansion_choose_le
 #print axioms MaxCaterpillar.Trees.rootedStar_expansion_choose_le
