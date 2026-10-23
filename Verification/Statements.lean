@@ -274,3 +274,15 @@ example : ∃ net : Network 5 (firstWidth 5) 29, (∀ x, net.eval x = Maximum 5 
 example : ∃ net : Network 4 (firstWidth 4) 5, (∀ x, net.eval x = Maximum 4 x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
   @MaxCaterpillar.SmallN.Max4Test.max_network
 #print axioms MaxCaterpillar.SmallN.Max4Test.max_network
+
+example : ∀ {h₁ h₂ : ℕ}, (∃ net : Network 4 h₁ h₂, ∀ x, net.eval x = Maximum 4 x) ↔ 6 ≤ h₁ ∧ 3 ≤ h₂ :=
+  @MaxCaterpillar.Frontier.max4_widths_iff
+#print axioms MaxCaterpillar.Frontier.max4_widths_iff
+
+example : ∀ {h₁ h₂ : ℕ}, (∃ net : Network 3 h₁ h₂, ∀ x, net.eval x = Maximum 3 x) ↔ 4 ≤ h₁ ∧ 3 ≤ h₂ :=
+  @MaxCaterpillar.Frontier.max3_widths_iff
+#print axioms MaxCaterpillar.Frontier.max3_widths_iff
+
+example : ∀ {N h₁ h₂ : ℕ} [NeZero N], 3 ≤ N → ∀ (net : Network N h₁ h₂), (∀ x, net.eval x = Maximum N x) → 3 ≤ h₂ :=
+  @MaxCaterpillar.Frontier.second_width_ge_three
+#print axioms MaxCaterpillar.Frontier.second_width_ge_three
