@@ -14,3 +14,4 @@ import MaxCaterpillar.CountExp
 import MaxCaterpillar.LowerBound
 import MaxCaterpillar.SmallN
 import MaxCaterpillar.Frontier
+import MaxCaterpillar.Trees

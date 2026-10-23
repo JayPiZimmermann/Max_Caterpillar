@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-23T18:54:39.875653+00:00",
+  "checked_at_utc": "2026-10-23T21:01:17.114211+00:00",
   "source_commit": null,
-  "source_sha256": "30e5db6cd9a2d0ead8892ff89cf21076217c6e4b837b66cb808125331b3026da",
+  "source_sha256": "d3d0fc5726547ab31bb068a0dbfb4e9dbd9d30ef4d381ffab51de2da26c64dc7",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -727,6 +727,36 @@
         "propext"
       ],
       "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Trees.rootedStar_expansion_choose_le",
+      "type": "\u2200 (r : \u2115) {K : Finset (FaceKey r)}, Trees.IsRootedStarExpansion r K \u2192 \u2200 {k : \u2115}, 3 \u2264 k \u2192 k < r + 1 + 1 \u2192 (r + 1 + 1).choose k \u2264 6 ^ k * K.card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Trees.rootedStar_expansion_exponential",
+      "type": "\u2200 (r : \u2115), 2 \u2264 r \u2192 \u2200 {K : Finset (FaceKey r)}, Trees.IsRootedStarExpansion r K \u2192 7 ^ (r + 1 + 1) \u2264 (r + 1 + 1 + 1) * (r + 1 + 1) ^ 2 * 6 ^ (r + 1 + 1) * K.card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Trees.tree_expansion_quadratic",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2200 {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K \u2192 (r + 1 + 1) * (r + 1) \u2264 6 * K.card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
     }
   ],
   "source_files": {
@@ -795,7 +825,10 @@
     "MaxCaterpillar/SmallN/Max5Lns27.lean": "d95dda6b266618720ff4bd32cad14de65ea8636878539b7e5899a2a2d655f945",
     "MaxCaterpillar/SmallN.lean": "536f1f27252d783b0635efdee5c8ffa94c9af0b65182ddba6e4fa88b089d9903",
     "MaxCaterpillar/Theorems.lean": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9",
-    "MaxCaterpillar.lean": "aa3fa1ba6be70d39c2a71afc71287ba0d0b7b5d068ea5b4b444319d80930a246",
+    "MaxCaterpillar/Trees/Quadratic.lean": "8b548b7596fd28523b3cd59ffc7dc6670c8289c7e7dfd91ac83695eb2b207ecf",
+    "MaxCaterpillar/Trees/RootedStars.lean": "72bcae69b40327c273695eb9b9967639d192b80708cfccea1a42f7d49846943d",
+    "MaxCaterpillar/Trees.lean": "7c790e93b67e9852932ff8ea48ea2ef4c587034b7b72b0c7765f3aed2dc4abc7",
+    "MaxCaterpillar.lean": "cd4575f8229c6e8127f1d247185fdb1b4eb5cb03195c0ab09285102cee57c99b",
     "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
     "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
     "MaxNN/CPWL/Conditional/Finitary.lean": "23bb8dec03ed56bc703279a21f38a92366bd96410202af1627196fa6c2f187d2",
@@ -979,7 +1012,7 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "95beeb7cf3e9c50b86fc82235d4102418be5764c66186ff4c2d857e2bdf6ab5b",
+    "Verification/Statements.lean": "e1a9c6f2a4a6d488735ca585144c55ebdf65db975683ead897c56e7237af5da3",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
@@ -998,6 +1031,6 @@
     "research/sN/rank/Speed.lean": "deacc99537990bfceb917b0b6c6eb2ca632d93c736c1c32bca041c8144012629",
     "research/sN/rank/T1.lean": "eac75cdd10f4e70def1f0a1d31ff55b5b308146b42a428c922c80bb815a88647",
     "research/sN/restricted/Germ.lean": "8e8039ac2d52a5ccd8c947332db7bf908937739a1c73654fac19cf90bb8706dd",
-    "verification/main.json": "312ac3981d6c010bd421c26d4e65d1d2c832855c2ab00744289ae5db18355941"
+    "verification/main.json": "82047d5e7ee20531814d7f159ec1916ec401f0912656c02b2a0e26ed3736bdbe"
   }
 }

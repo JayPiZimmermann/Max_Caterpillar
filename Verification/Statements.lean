@@ -286,3 +286,15 @@ example : ∀ {h₁ h₂ : ℕ}, (∃ net : Network 3 h₁ h₂, ∀ x, net.eval
 example : ∀ {N h₁ h₂ : ℕ} [NeZero N], 3 ≤ N → ∀ (net : Network N h₁ h₂), (∀ x, net.eval x = Maximum N x) → 3 ≤ h₂ :=
   @MaxCaterpillar.Frontier.second_width_ge_three
 #print axioms MaxCaterpillar.Frontier.second_width_ge_three
+
+example : ∀ (r : ℕ) {K : Finset (FaceKey r)}, Trees.IsRootedStarExpansion r K → ∀ {k : ℕ}, 3 ≤ k → k < r + 1 + 1 → (r + 1 + 1).choose k ≤ 6 ^ k * K.card :=
+  @MaxCaterpillar.Trees.rootedStar_expansion_choose_le
+#print axioms MaxCaterpillar.Trees.rootedStar_expansion_choose_le
+
+example : ∀ (r : ℕ), 2 ≤ r → ∀ {K : Finset (FaceKey r)}, Trees.IsRootedStarExpansion r K → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * (r + 1 + 1) ^ 2 * 6 ^ (r + 1 + 1) * K.card :=
+  @MaxCaterpillar.Trees.rootedStar_expansion_exponential
+#print axioms MaxCaterpillar.Trees.rootedStar_expansion_exponential
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → (r + 1 + 1) * (r + 1) ≤ 6 * K.card :=
+  @MaxCaterpillar.Trees.tree_expansion_quadratic
+#print axioms MaxCaterpillar.Trees.tree_expansion_quadratic
