@@ -295,6 +295,18 @@ example : ∀ {N h₁ h₂ : ℕ} [NeZero N] (net : Network N h₁ h₂), (∀ x
   @MaxCaterpillar.Frontier.second_width_half
 #print axioms MaxCaterpillar.Frontier.second_width_half
 
+example : ∀ {N h₁ h₂ : ℕ} [NeZero N] (net : Network N h₁ h₂), (∀ x, net.eval x = Maximum N x) → (Finset.univ.filter fun j => 0 < ∑ i, net.W₁ j i).card = 1 → (Finset.univ.filter fun j => ∑ i, net.W₁ j i < 0).card = 1 → N + 2 ≤ 2 * h₂ :=
+  @MaxCaterpillar.Frontier.second_width_half_succ
+#print axioms MaxCaterpillar.Frontier.second_width_half_succ
+
+example : ∀ {N h₁ h₂ : ℕ} [NeZero N] (net : Network N h₁ h₂), (∀ x, net.eval x = Maximum N x) → 6 * h₁ + 11 * N < 3 * N * N + 18 → N + 2 ≤ 2 * h₂ :=
+  @MaxCaterpillar.Frontier.second_width_joint
+#print axioms MaxCaterpillar.Frontier.second_width_joint
+
+example : ∀ {N : ℕ} [NeZero N] (m K : ℕ) (c : Point N) (a : Fin m → ℝ) (B : Fin m → Point N) (d : Fin K → ℝ) (C : Fin K → Point N) (W : Fin K → Fin m → ℝ), (∀ x, Maximum N x = Frontier.lin c x + ∑ j, a j * MaxCaterpillar.relu (Frontier.lin (B j) x) + ∑ k, d k * MaxCaterpillar.relu (Frontier.lin (C k) x + ∑ j, W k j * MaxCaterpillar.relu (Frontier.lin (B j) x))) → N ≤ 2 * K + 2 :=
+  @MaxCaterpillar.Frontier.free_neurons
+#print axioms MaxCaterpillar.Frontier.free_neurons
+
 example : ∀ (r : ℕ) {K : Finset (FaceKey r)}, Trees.IsRootedStarExpansion r K → ∀ {k : ℕ}, 3 ≤ k → k < r + 1 + 1 → (r + 1 + 1).choose k ≤ 6 ^ k * K.card :=
   @MaxCaterpillar.Trees.rootedStar_expansion_choose_le
 #print axioms MaxCaterpillar.Trees.rootedStar_expansion_choose_le
@@ -314,3 +326,7 @@ example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeE
 example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {Δ : ℕ}, 1 ≤ Δ → (∀ F ∈ K, ∀ u, F.hingeDeg u ≤ Δ) → ((6 * (2 * Δ - 1) + 1 : ℕ) : ℝ) ^ (r + 1 + 1) ≤ 2 * (r + 1 + 1 + 1) * ((6 * (2 * Δ - 1) : ℕ) : ℝ) ^ (r + 1 + 1) * K.card :=
   @MaxCaterpillar.Trees.tree_bounded_exponential
 #print axioms MaxCaterpillar.Trees.tree_bounded_exponential
+
+example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {Δ : ℕ}, 3 ≤ Δ → (∀ F ∈ K, (∃ a c, ∃ hac : c ≠ a, F = Trees.starFace a c hac) ∨ ∀ u, F.hingeDeg u ≤ Δ) → ∀ {k : ℕ}, 3 ≤ k → (144 * (2 * Δ - 1) ^ 2 + 1) * k ≤ r + 1 + 1 → (2 : ℝ) ^ k ≤ 2 * (k + 1) ^ 2 * K.card :=
+  @MaxCaterpillar.Trees.tree_star_or_bounded_exponential
+#print axioms MaxCaterpillar.Trees.tree_star_or_bounded_exponential

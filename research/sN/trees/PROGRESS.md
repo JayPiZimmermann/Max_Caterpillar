@@ -92,3 +92,21 @@ Lean (all build; axioms propext/Quot.sound/Classical.choice):
   (C(N,k) <= 2 (6(2D-1))^k |K|, 3<=k<=N), tree_bounded_exponential
   ((6(2D-1)+1)^N <= 2(N+1)(6(2D-1))^N |K|, N>=3).
 Not added to any aggregator (MaxCaterpillar.lean / Trees.lean untouched).
+
+### 8. Hub class (bounded degree + rooted stars in one statement) — LEAN VERIFIED
+HubOK D Δ: every hinge neighbour of a vertex of hinge degree > Δ has κ ≤ 0.
+Contains trees of hinge degree <= Δ (hubOK_of_hingeDeg_le) and the rooted stars of Brunck et al.
+(starFace a c, starFace_unit = rootedStar, starFace_hubOK).
+Proof: tied hub ⇒ all neighbours tied; non-hub vertices with only hub neighbours are forced
+(tied iff a hub neighbour is tied or κ ≠ 0); (Δ+1)·#tied hubs <= 2k (edges inside T <= k via the
+child map); matching on non-hub edges outside T.
+Lean (axioms propext/Quot.sound/Classical.choice):
+- Trees/Hubs.lean: card_balanced_fiber_of_matching, nbr_mem_of_hub, mem_tie_of_rest,
+  card_tied_hubs, card_passes_le_hub (per unit <= 2(k+1)(6A)^k S k!(N-k)!, S = sum_{i<=2k/(Δ+1)} C(N,i)).
+- Trees/HubsMain.lean: choose_le_of_hubs, tree_hub_choose_le, tree_hub_exponential
+  (Δ >= 3, 3 <= k, (144(2Δ-1)^2+1)k <= N  ⇒  2^k <= 2(k+1)^2 |K|), starFace, starFace_unit,
+  starFace_hubOK, tree_star_or_bounded_exponential (every unit a rooted star or of hinge degree <= Δ).
+Here the rooted stars ARE counted in K (unlike rootedStar_expansion_exponential).
+Not covered: caterpillars with long-leaved spines (their hubs have κ>=1 spine neighbours) and
+out-stars (leaves κ = 1). The residual obstruction for arbitrary trees is exactly hubs with many
+κ>=1 neighbours: a tied out-star centre lets all its leaves be untied in every order.

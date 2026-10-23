@@ -1,0 +1,29 @@
+[2109/2111] Building MaxCaterpillar.Frontier.GeneralN2
+[2110/2111] Building MaxCaterpillar.Frontier
+'MaxCaterpillar.Frontier.second_width_half_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.second_width_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.free_neurons' depends on axioms: [propext, Classical.choice, Quot.sound]
+@MaxCaterpillar.Frontier.free_neurons : ∀ {N : ℕ} [inst : NeZero N] (m K : ℕ) (c : MaxCaterpillar.Point N)
+  (a : Fin m → ℝ) (B : Fin m → MaxCaterpillar.Point N) (d : Fin K → ℝ) (C : Fin K → MaxCaterpillar.Point N)
+  (W : Fin K → Fin m → ℝ),
+  (∀ (x : MaxCaterpillar.Point N),
+      MaxCaterpillar.Maximum N x =
+        (MaxCaterpillar.Frontier.lin c x +
+            Finset.sum Finset.univ fun j => a j * MaxCaterpillar.relu (MaxCaterpillar.Frontier.lin (B j) x)) +
+          Finset.sum Finset.univ fun k =>
+            d k *
+              MaxCaterpillar.relu
+                (MaxCaterpillar.Frontier.lin (C k) x +
+                  Finset.sum Finset.univ fun j => W k j * MaxCaterpillar.relu (MaxCaterpillar.Frontier.lin (B j) x))) →
+    N ≤ 2 * K + 2
+@MaxCaterpillar.Frontier.second_width_half_succ : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N]
+  (net : MaxCaterpillar.Network N h₁ h₂),
+  (∀ (x : MaxCaterpillar.Point N), MaxCaterpillar.Network.eval net x = MaxCaterpillar.Maximum N x) →
+    Finset.card
+          (Finset.filter (fun j => 0 < Finset.sum Finset.univ fun i => MaxCaterpillar.Network.W₁ net j i) Finset.univ) =
+        1 →
+      Finset.card
+            (Finset.filter (fun j => (Finset.sum Finset.univ fun i => MaxCaterpillar.Network.W₁ net j i) < 0)
+              Finset.univ) =
+          1 →
+        N + 2 ≤ 2 * h₂

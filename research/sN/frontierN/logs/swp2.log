@@ -1,0 +1,28 @@
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:213:6: error: unsolved goals
+case pos
+N h₁ h₂ : ℕ
+inst✝ : NeZero N
+net : ZNet N h₁ h₂
+h : ∀ (x : Point N), eval net x = Maximum N x
+hp1 : Finset.card (Finset.filter (fun j => 0 < s net j) Finset.univ) = 1
+hq1 : Finset.card (Finset.filter (fun j => s net j < 0) Finset.univ) = 1
+p : Fin h₁
+hpset : Finset.filter (fun j => 0 < s net j) Finset.univ = {p}
+hsp : 0 < s net p
+hp : ∀ (j : Fin h₁), 0 < s net j → j = p
+q : Fin h₁
+hqset : Finset.filter (fun j => s net j < 0) Finset.univ = {q}
+hsq : s net q < 0
+hq : ∀ (j : Fin h₁), s net j < 0 → j = q
+hTp : ∀ (k : Fin h₂), Tp net k = W net k p * s net p
+hTm : ∀ (k : Fin h₂), Tp (negIn net) k = W net k q * -s net q
+A : Fin h₂ → Point N → ℝ := fun k x => ∑ j : Fin h₁, W net k j * rho net x j
+hGp : ∀ (k : Fin h₂) (x : Point N), Gp net k x = W net k p * lin (MaxCaterpillar.Frontier.ZNet.A net p) x + A k x
+k : Fin h₂
+x : Point N
+hl : lin (MaxCaterpillar.Frontier.ZNet.A (negIn net) q) (-x) = lin (MaxCaterpillar.Frontier.ZNet.A net q) x
+hW : W (negIn net) k q = W net k q
+⊢ 0 ≤ s net q →
+    (if 0 < s net q then 0 else W net k q * relu (lin (MaxCaterpillar.Frontier.ZNet.A net q) x)) =
+      W net k q * lin (MaxCaterpillar.Frontier.ZNet.A net q) x
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:221:69: error: no goals to be solved

@@ -5,6 +5,7 @@ import MaxCaterpillar.Frontier.FirstWidth
 import MaxCaterpillar.Frontier.Constructions
 import MaxCaterpillar.Frontier.Main
 import MaxCaterpillar.Frontier.GeneralN
+import MaxCaterpillar.Frontier.GeneralN2
 
 /-! # Exact width frontiers for `max₃` and `max₄` (two hidden layers)
 

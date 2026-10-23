@@ -1,0 +1,151 @@
+Try this: ring_nf
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:121:73: error: unsolved goals
+case intro.e_a
+N h₁ h₂ : ℕ
+inst✝ : NeZero N
+net : ZNet N h₁ h₂
+h : ∀ (x : Point N), eval net x = Maximum N x
+c₀ : Point N
+hc₀ :
+  ∀ (x : Point N),
+    rest (negIn net) x - rest (negIn net) (-x) =
+      lin c₀ x +
+        ∑ k in Finset.filter (fun k => Tp (negIn net) k = 0) Finset.univ,
+          d (negIn net) k * (relu (Gp (negIn net) k x) - relu (Gp (negIn net) k (-x)))
+hr : ∀ (x : Point N), Maximum N x = rest (negIn net) (-x)
+x : Point N
+e :
+  rest (negIn net) x - rest (negIn net) (-x) =
+    lin c₀ x +
+      ∑ k in Finset.filter (fun k => Tp (negIn net) k = 0) Finset.univ,
+        d (negIn net) k * (relu (Gp (negIn net) k x) - relu (Gp (negIn net) k (-x)))
+e2 : rest (negIn net) (-x) - rest (negIn net) x = -(rest (negIn net) x - rest (negIn net) (-x))
+k : Fin h₂
+x✝ : k ∈ Finset.filter (fun k => Tp (negIn net) k = 0) Finset.univ
+⊢ -(d (negIn net) k * relu (Gp (negIn net) k x)) + d (negIn net) k * relu (Gp (negIn net) k (-x)) =
+    d (negIn net) k * relu (Gp (negIn net) k x) - d (negIn net) k * relu (Gp (negIn net) k (-x))
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:137:38: error: invalid field 'rho', the environment does not contain 'MaxCaterpillar.Frontier.ZNet.rho'
+  net
+has type
+  ZNet N h₁ h₂
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:141:12: error: unknown constant 'MaxCaterpillar.Frontier.ZNet.rho'
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:142:57: error: unknown constant 'MaxCaterpillar.Frontier.ZNet.rho'
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:182:62: error: invalid field 'rho', the environment does not contain 'MaxCaterpillar.Frontier.ZNet.rho'
+  net
+has type
+  ZNet N h₁ h₂
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:186:73: error: invalid field 'rho', the environment does not contain 'MaxCaterpillar.Frontier.ZNet.rho'
+  net
+has type
+  ZNet N h₁ h₂
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:189:30: error: unknown constant 'MaxCaterpillar.Frontier.ZNet.rho'
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:192:20: error: unknown constant 'ZNet.rho'
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:205:73: error: invalid field 'rho', the environment does not contain 'MaxCaterpillar.Frontier.ZNet.rho'
+  net
+has type
+  ZNet N h₁ h₂
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:212:30: error: unknown constant 'MaxCaterpillar.Frontier.ZNet.rho'
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:215:20: error: unknown constant 'ZNet.rho'
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:310:15: error: unknown identifier 'lin_sub_left'
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:341:36: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  relu (A m (-x))
+N h₁ h₂ : ℕ
+inst✝ : NeZero N
+net : ZNet N h₁ h₂
+h : ∀ (x : Point N), eval net x = Maximum N x
+hp1 : Finset.card (Finset.filter (fun j => 0 < s net j) Finset.univ) = 1
+hq1 : Finset.card (Finset.filter (fun j => s net j < 0) Finset.univ) = 1
+p : Fin h₁
+hpset : Finset.filter (fun j => 0 < s net j) Finset.univ = {p}
+hsp : 0 < s net p
+hp : ∀ (j : Fin h₁), 0 < s net j → j = p
+q : Fin h₁
+hqset : Finset.filter (fun j => s net j < 0) Finset.univ = {q}
+hsq : s net q < 0
+hq : ∀ (j : Fin h₁), s net j < 0 → j = q
+hTp : ∀ (k : Fin h₂), Tp net k = W net k p * s net p
+hTm : ∀ (k : Fin h₂), Tp (negIn net) k = W net k q * -s net q
+A : Fin h₂ → Point N → ℝ := fun k x => ∑ j : Fin h₁, W net k j * sorryAx ℝ true
+hGp : ∀ (k : Fin h₂) (x : Point N), Gp net k x = W net k p * lin (MaxCaterpillar.Frontier.ZNet.A net p) x + A k x
+hGm :
+  ∀ (k : Fin h₂) (x : Point N), Gp (negIn net) k (-x) = W net k q * lin (MaxCaterpillar.Frontier.ZNet.A net q) x + A k x
+Zp : Finset (Fin h₂) := Finset.filter (fun k => Tp net k = 0) Finset.univ
+hZp : Zp = Finset.filter (fun k => Tp net k = 0) Finset.univ
+Zm : Finset (Fin h₂) := Finset.filter (fun k => Tp (negIn net) k = 0) Finset.univ
+hZm : Zm = Finset.filter (fun k => Tp (negIn net) k = 0) Finset.univ
+b1 : N ≤ 2 * Finset.card (Finset.filter (fun k => Tp net k = 0) Finset.univ) + 2
+b2 : N ≤ 2 * Finset.card (Finset.filter (fun k => Tp (negIn net) k = 0) Finset.univ) + 2
+hsl : slope net = 1
+hrest : ∀ (x : Point N), Maximum N x = rest net x
+hsl' : slope (negIn net) = -1
+hrest' : ∀ (x : Point N), Maximum N x = rest (negIn net) (-x)
+n : Fin h₂
+hTn : 0 < Tp net n
+hdn : 0 < d net n
+m : Fin h₂
+hTm' : 0 < Tp (negIn net) m
+hdm : d net m < 0
+hnm : n ≠ m
+two : ∀ (Z : Finset (Fin h₂)) (a b : Fin h₂), a ∉ Z → b ∉ Z → a ≠ b → Finset.card Z + 2 ≤ h₂
+c1 : ∀ (k : Fin h₂), k ≠ n → Tp net k = 0
+c2 : ∀ (k : Fin h₂), k ≠ m → Tp (negIn net) k = 0
+hWp : ∀ (k : Fin h₂), k ≠ n → W net k p = 0
+hWq : ∀ (k : Fin h₂), k ≠ m → W net k q = 0
+hTn' : Tp net m = 0
+hTnm : Tp (negIn net) n = 0
+K : Finset (Fin h₂) := Finset.erase (Finset.erase Finset.univ n) m
+hK : K = Finset.erase (Finset.erase Finset.univ n) m
+hmK : m ∈ Finset.erase Finset.univ n
+split : ∀ (f : Fin h₂ → ℝ), ∑ k : Fin h₂, f k = f n + f m + ∑ k in K, f k
+hKn : ∀ k ∈ K, k ≠ n ∧ k ≠ m
+Ep :
+  ∀ (x : Point N),
+    Maximum N x =
+      d net n * (W net n p * lin (MaxCaterpillar.Frontier.ZNet.A net p) x + A n x) + d net m * relu (A m x) +
+        ∑ k in K, d net k * relu (A k x)
+Em :
+  ∀ (x : Point N),
+    Maximum N x =
+      d net n * relu (A n x) + d net m * (W net m q * lin (MaxCaterpillar.Frontier.ZNet.A net q) x + A m x) +
+        ∑ k in K, d net k * relu (A k x)
+hL :
+  ∀ (x : Point N),
+    d net n * relu (-A n x) - d net m * relu (-A m x) =
+      lin
+        (d net n • W net n p • MaxCaterpillar.Frontier.ZNet.A net p -
+          d net m • W net m q • MaxCaterpillar.Frontier.ZNet.A net q)
+        x
+hzero : ∀ (x : Point N), relu (-A m x) = 0
+cn : Point N
+hcn :
+  ∀ (x : Point N),
+    (fun x => ∑ j : Fin h₁, W net n j * sorryAx ℝ true) x - (fun x => ∑ j : Fin h₁, W net n j * sorryAx ℝ true) (-x) =
+      lin cn x
+cm : Point N
+hcm :
+  ∀ (x : Point N),
+    (fun x => ∑ j : Fin h₁, W net m j * sorryAx ℝ true) x - (fun x => ∑ j : Fin h₁, W net m j * sorryAx ℝ true) (-x) =
+      lin cm x
+x : Point N
+hm1 : relu (A m x) = A m x
+hm2 : relu (A m (-x)) = A m (-x)
+en : A n x - A n (-x) = lin cn x
+em : A m x - A m (-x) = lin cm x
+hlp : lin (MaxCaterpillar.Frontier.ZNet.A net p) (-x) = -lin (MaxCaterpillar.Frontier.ZNet.A net p) x
+hsum :
+  ∑ k in K, d net k * (relu (A k x) - relu (A k (-x))) =
+    ∑ k in K, d net k * relu (A k x) - ∑ k in K, d net k * relu (A k (-x))
+⊢ d net n * (W net n p * lin (MaxCaterpillar.Frontier.ZNet.A net p) x + A n x) + d net m * A m x +
+        ∑ k in K, d net k * relu (A k x) -
+      (d net n * (W net n p * lin (MaxCaterpillar.Frontier.ZNet.A net p) (-x) + A n (-x)) + d net m * A m x +
+        ∑ k in K, d net k * relu (A k (-x))) =
+    lin (d net n • (2 • W net n p • MaxCaterpillar.Frontier.ZNet.A net p + cn) + d net m • cm) x +
+      (∑ k in K, d net k * relu (A k x) - ∑ k in K, d net k * relu (A k (-x)))
+MaxCaterpillar/Frontier/SecondWidthPlus.lean:352:2: error: omega did not find a contradiction:
+[0, 0, 0, 0, 0, 0, 0, 1] ∈ [2, ∞)
+[0, 0, 0, 1, -2] ∈ (-∞, 2]
+[0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 2, -1] ∈ [-2, ∞)
+[0, 0, 0, 1] ∈ [0, ∞)
+[0, 0, 0, 1, 0, 0, 0, -2] ∈ (-∞, -2]

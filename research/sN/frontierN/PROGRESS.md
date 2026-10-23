@@ -35,3 +35,12 @@ Lean for Theorem Q: CoverCount.lean (Lemma K), Claw.lean (Lemma C4), FirstWidthN
 - verify.py: PASS, 76 exact statements, only permitted axioms (logs/verify.log).
 - nc_search.py / nc_search.log: sampled search for the one-free-neuron odd-part condition; NOT exact
   (finite samples admit degenerate huge-λ "solutions"); superseded by Lemma 3. No evidence value.
+
+## Step 5 (2026-10-24, after commit b4e7787): LEAN VERIFIED, verify.py pending at time of writing
+- `free_neurons` (Theorem K): any exact `max_N = 1HL + K·σ(1HL)` (skips allowed) needs K ≥ ⌈N/2⌉−1.
+- `second_width_half_succ` (Theorem H⁺): |J+| = |J−| = 1 ⇒ h2 ≥ ⌈N/2⌉ + 1.
+- `second_width_joint`: 6h1 + 11N < 3N² + 18 ⇒ h2 ≥ ⌈N/2⌉ + 1 (first joint h1/h2 bound).
+  Files: Frontier/SecondWidthPlus.lean, Frontier/GeneralN2.lean; 3 entries in verification/main.json.
+- General ⌈N/2⌉+1 (any J±): reduced to the configuration rank δ_R ≥ 1, |J+|+|J−| ≥ 3; open.
+- (a) trade-off: open. (b) superlinear h2: open; analysis in REPORT of this step. (c) gap: open;
+  data point: certified nets give h1* ≤ C(N,2) for N = 4 (6) and N = 5 (10), below C(N,2)+N+1.

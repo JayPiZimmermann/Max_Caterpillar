@@ -135,3 +135,43 @@ connections of any kind allowed), `|Z| ≥ ⌈N/2⌉ - 1`. For N = 3, 4 this is 
 (`V = {x0 + x1 = x2 + x3}`). (b) Combined with Theorem 1: `h2 ≥ max(3, ⌈N/2⌉)`, which improves
 Theorem 1 from N = 7 on. (c) The argument is the "odd part" of Lemma 0′ applied on the subspace
 where all free neurons are even.
+
+---
+
+## Theorem K (free neurons, any first layer, skip connections allowed) — LEAN `free_neurons`
+
+If `max_N = L + Σ_{k<K} d_k σ(G_k)` on `R^N` with `L, G_k` one-hidden-layer (linear part plus
+`Σ c_j σ(b_j·x)`, homogeneous), then `N ≤ 2K + 2`, i.e. `K ≥ ⌈N/2⌉ - 1`.
+Proof: odd parts are linear for `L` and every `G_k`; on `V = ∩ ker(odd G_k)` (codim ≤ K) every
+`σ(G_k)` is even, so `max + min` is linear on V; Lemma 3. (General form `free_bound`.)
+This replaces the old "k(N) ≥ 2 for N ≥ 5 (pair features)" by `k(N) ≥ ⌈N/2⌉ - 1` for every first layer.
+
+## Theorem H⁺ — LEAN `second_width_half_succ`
+
+If exactly one first-layer row `p` has `s_p > 0` and exactly one row `q` has `s_q < 0`, then
+`h2 ≥ ⌈N/2⌉ + 1` (`N + 2 ≤ 2h2`).
+Proof. Let `Z± = {k : T±_k = 0}`; Theorem K applied to `(±∞)` gives `|Z±| ≥ ⌈N/2⌉ - 1`. Some
+neuron `n` has `T+_n > 0`, `d_n > 0`; some `m` has `T-_m > 0`, `d_m < 0`; `n ≠ m`. If a second
+neuron outside `Z+` exists, `h2 ≥ |Z+| + 2` and we are done; same for `Z-`. Otherwise every
+`k ≠ n` has `T+_k = W_kp s_p = 0`, so `W_kp = 0`, and every `k ≠ m` has `W_kq = 0`. Write
+`A_k(x) = Σ_{J0} W_kj σ(a_j·x)`. Then
+`(+∞) max = d_n(W_np a_p·x + A_n) + d_m σ(A_m) + Σ_{k∉{n,m}} d_k σ(A_k)`,
+`(-∞) max = d_n σ(A_n) + d_m(W_mq a_q·x + A_m) + Σ_{k∉{n,m}} d_k σ(A_k)`.
+The free sums agree, so subtracting gives `d_n σ(-A_n) - d_m σ(-A_m) = ` linear form; a nonnegative
+linear form vanishes, so `σ(-A_m) ≡ 0`, `σ(A_m) = A_m`, and `(+∞)` writes `max` with the `h2 - 2`
+free neurons `k ∉ {n, m}`. Theorem K: `N ≤ 2(h2 - 2) + 2`. ∎
+(For `h2 = 2`-type configurations this is Theorem 1's argument; the new point is that neurons with
+`T+ = T- = 0` do not use `p, q` and cancel exactly.)
+
+General configuration (no assumption on `J±`): the same reduction shows that `h2 = ⌈N/2⌉` forces
+`P+ = {n}`, `P- = {m}`, all other neurons `R` in `Z+ ∩ Z-`, and on `U = ∩_R ker δ_k`
+(`δ_k = λ+_k - λ-_k ∈ span(J± rows) ∩ 1^⊥`) the `R` neurons cancel, giving
+`|R| + rank{δ_k} ≥ ⌈N/2⌉ - 1`; with `|R| = ⌈N/2⌉ - 2` this needs `rank δ_R ≥ 1`, hence
+`|J+| + |J-| ≥ 3`. (Paper only; this is what H⁺ formalizes in the case |J+| = |J-| = 1.)
+
+## Joint bound — LEAN `second_width_joint`
+
+If `6h1 + 11N < 3N² + 18`, then `N + 2 ≤ 2h2`. Proof: `h1 = |J+| + |J-| + |J0|` and the covering
+count gives `6|J0| ≥ 3N² - 11N`; if `|J+| + |J-| ≥ 3` then `6h1 ≥ 3N² - 11N + 18`. So
+`|J+| = |J-| = 1` and Theorem H⁺ applies. ∎ (h2*(h1) ≥ ⌈N/2⌉ + 1 for h1 within two of the
+quadratic lower bound; whether such h1 is feasible is open.)
