@@ -1,5 +1,27 @@
 # Lower bounds on s_N (current note)
 
+## General second-layer neurons (2026-10-23, survived two refuters each)
+
+Model: first hidden layer = pair features (x_i, σ(x_i−x_j)); second layer = any σ(w·Φ).
+k(N) := fewest such neurons for max_N.
+- **4-neuron identity for N = 5 (proved on paper, exact on all braid cells):**
+  with m_ij = max(x_i,x_j), (a..e) = (x0..x4):
+  max_5 = m_ab + σ(A) − σ(A+Q) + ½σ(u) + ½σ(v), A = m_de − m_ac,
+  Q = ½(m_ab+m_bc−m_bd−m_be), u = m_bc+m_be−m_ab−m_bd, v = m_bc+m_bd−m_ab−m_be.
+  So k(5) ≤ 4 < 5 ≤ s_5: general neurons beat caterpillar units.
+- k(3) = k(4) = 1; k(N) ≥ 2 for all N ≥ 5 (proved).
+- **Ceiling of the locality method:** (N−2)⌈log2(N−1)⌉ star neurons
+  σ(Σ_o s_o σ(x_o − x_c)) (s = ±1 by binary codes) pass every k-locality for
+  every k ≥ 3 (proved, exact checks N = 4..7). Locality covering can therefore
+  prove at most ~N log N general neurons; an exponential general lower bound
+  needs a different method. The exponential bound is specific to caterpillar
+  units.
+- Refuted: a claimed generic-locality reduction for arbitrary networks fails
+  for even k ≥ 4 (hinges inside T are not killed by the mixed difference).
+- Literature: no published lower bound on the second hidden width for exact
+  max_N (Safran 2026, Lu 2026 bound only first/common width).
+Files: research/sN/dfs/h4-general-neurons/r2_*, research/sN/dfs/h4-any-network/r2_*.
+
 ## MAIN ROUTE (current): s_N ≥ C(N,k)/6^k for 3 ≤ k ≤ N, hence s_N ≥ (7/6)^N/(N+1)
 
 Status: LEAN VERIFIED (`MaxCaterpillar.caterpillar_count_exponential`, `_pow`, certified in verification/certificate.json). Finite ingredients also checked
