@@ -1,0 +1,4 @@
+m=5 R=4 mode=nopath: 26 forests, 602 germ types (apex 0, up to S_(m-1))
+  rank(W+aux+lin) = 376 (cols 604, pts 662); with max: 377  ->  max NOT in span
+m=5 R=5 mode=nopath: 26 forests, 1076 germ types (apex 0, up to S_(m-1))
+  rank(W+aux+lin) = 671 (cols 1078, pts 1136); with max: 671  ->  max IN span

@@ -306,3 +306,11 @@ example : ∀ (r : ℕ), 2 ≤ r → ∀ {K : Finset (FaceKey r)}, Trees.IsRoote
 example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → (r + 1 + 1) * (r + 1) ≤ 6 * K.card :=
   @MaxCaterpillar.Trees.tree_expansion_quadratic
 #print axioms MaxCaterpillar.Trees.tree_expansion_quadratic
+
+example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {Δ : ℕ}, 1 ≤ Δ → (∀ F ∈ K, ∀ u, F.hingeDeg u ≤ Δ) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → ((r + 1 + 1).choose k : ℝ) ≤ 2 * (6 * (2 * Δ - 1 : ℕ)) ^ k * K.card :=
+  @MaxCaterpillar.Trees.tree_bounded_choose_le
+#print axioms MaxCaterpillar.Trees.tree_bounded_choose_le
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {Δ : ℕ}, 1 ≤ Δ → (∀ F ∈ K, ∀ u, F.hingeDeg u ≤ Δ) → ((6 * (2 * Δ - 1) + 1 : ℕ) : ℝ) ^ (r + 1 + 1) ≤ 2 * (r + 1 + 1 + 1) * ((6 * (2 * Δ - 1) : ℕ) : ℝ) ^ (r + 1 + 1) * K.card :=
+  @MaxCaterpillar.Trees.tree_bounded_exponential
+#print axioms MaxCaterpillar.Trees.tree_bounded_exponential
