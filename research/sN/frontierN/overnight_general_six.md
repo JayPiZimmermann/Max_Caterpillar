@@ -1,6 +1,6 @@
 # Every first-width-eight max-five network has the bowtie first layer
 
-**Status (2026-10-24): complete finite real-coefficient classification, independently checked, with the mathematical bridge below. Not Lean verified. Research only: no construction attaining the resulting lower bounds is known.**
+**Status (2026-10-25): complete finite real-coefficient classification, independently checked, with the mathematical bridge below. Not Lean verified. Research only: no construction attaining the resulting lower bounds is known.**
 
 If a two-hidden-layer ReLU network without skip connections computes `max_5` exactly on `R^5` and has first hidden layer width eight, then, after removing biases, permuting inputs/neurons, and positively rescaling individual first-layer rows, its first-layer functions are exactly
 
@@ -12,13 +12,14 @@ sigma(x1-x2), sigma(x3-x4).                                  (B)
 
 Either matching edge may initially have the opposite orientation; swapping its endpoints puts it in the displayed form. This classifies necessary first layers; it does not assert that any second layer over (B) computes the maximum.
 
-Combined with the certified two-free-neuron exclusion in `research/sN/best5/overnight_fixed.md`, this gives
+Combined with the certified four-free-neuron exclusion in
+[`overnight_fixed_natural8.md`](../best5/overnight_fixed_natural8.md), this gives
 
 ```
-h1 = 8  =>  h2 >= 5.
+h1 = 8  =>  h2 >= 7.
 ```
 
-Together with the separately established `h1>=8` and the uniform Lean-verified `h2>=ceil(N/2)+1`, every unrestricted five-input network therefore has total hidden width at least thirteen. This excludes `(8,4)` but does not determine an attained tradeoff or Pareto frontier.
+Together with the separately established `h1>=8` and the uniform Lean-verified `h2>=ceil(N/2)+1`, every unrestricted five-input network therefore has total hidden width at least thirteen. The pairs `(8,4)`, `(8,5)`, and `(8,6)` are excluded, but `(9,4)` is not excluded by these results. The known `(10,6)` construction shows that the minimum second width can depend on the first width; the attained unrestricted tradeoff and Pareto frontier remain open.
 
 ## Reduction to six zero-sum rows
 
@@ -86,11 +87,41 @@ The finite classification forces `ell=e_0`, so `a_p=s_p e_0`. The negative-end a
 
 ## Consequence for the second width
 
-The separate exact certificate in `research/sN/best5/overnight_fixed.md` excludes representations of `max_5` as an arbitrary linear-plus-pair remainder plus two ReLUs of arbitrary translation-invariant linear-plus-pair preactivations.
+Let `W6` be the span of the six zero-sum features in (B), and let `k_W6`
+be the least number of outer ReLUs in a representation
 
-If a width-eight network had `h2=4`, this exclusion at each diagonal end would force at least three zero-slope neurons. There would then be unique distinct passing neurons, one with positive output coefficient and one with negative output coefficient. Every common free neuron ignores both signed singleton carriers, so its positive and negative intercepts agree at the same input. Subtracting the two identities makes the sum of two nonnegative negative parts equal a linear form. That form is zero, the two passing preactivations become nonnegative, and both can be absorbed into the linear-plus-pair remainder. Only two free pair-space neurons remain, contradicting the certificate. Thus `h2>=5`.
+```
+max_5-x0 = R + sum_j d_j sigma(g_j),    R,g_j in W6.
+```
 
-The cited fixed-layer independent checks are `overnight_fixed_coverage.py` and `overnight_fixed_k2_verify.py`, with receipts `overnight_fixed_coverage.json` and `overnight_fixed_k2_check.json`, all in `research/sN/best5/`.
+The two-translation argument in
+[`overnight_fixed_bowtie.md`](../best5/overnight_fixed_bowtie.md#reduction-to-four-free-neurons)
+applies to any invariant span together with the two carriers
+`sigma(x0),sigma(-x0)`. It gives the exact relation `h2*=k_W6+2` for (B).
+In particular, a hypothetical network of width `k_W6+1` would have one
+passing neuron at each translation end. Their output signs are opposite;
+subtracting the two translation identities forces their negative parts
+to vanish. Both passing terms then belong to the remainder, leaving
+only `k_W6-1` free terms, a contradiction. No assumption that `W6`
+contains every linear function is needed.
+
+The natural-eight certificate excludes all four-free-neuron
+representations over `W6`: 3,418 covering flat quadruples and all sixteen
+output-sign choices, for 54,688 cases. Every case has a direct rational
+Farkas separation using fifty necessary locality and ray equations.
+The independent coverage checker enumerates all real-parameter strata;
+the equation checker verifies each rational contradiction without a
+numerical solver. Repeated flats allow padding any representation with
+one to three terms to four; the fifth mixed difference excludes zero
+terms. Thus `k_W6>=5`, hence `h2>=7`.
+
+The independent checks are `overnight_fixed_natural8_coverage.py` and
+`overnight_fixed_natural8_verify.py`, with receipts
+`overnight_fixed_natural8_coverage.json` and
+`overnight_fixed_natural8_check.json`, all in `research/sN/best5/`.
+Together with the classification above, this covers arbitrary real
+weights and all biases in an unrestricted first-width-eight network.
+It does not prove that any finite second width over (B) is sufficient.
 
 ## Independent checker and arithmetic trust boundary
 

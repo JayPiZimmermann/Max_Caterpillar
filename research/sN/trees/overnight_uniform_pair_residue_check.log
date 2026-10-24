@@ -1,0 +1,11 @@
+{
+  "status": "INDEPENDENT_EXACT_PAIRED_RESIDUE_OBSTRUCTION_PASS",
+  "curves": [
+    "(21*z**4 - 18*z**2 + 21)/(z**6 - 2*z**4 + z**2)",
+    "(2*z**4 - 36*z**2 + 2)/(z**6 - 2*z**4 + z**2)"
+  ],
+  "identity": "R0/90 + R1/120 = 1/(4*z^2)",
+  "source_sha256": "c0ec5e8995468170a08f1fcfe86a12995d75dc0967ac9eec09177a6ca6ddf5f1",
+  "seconds": 0.3055279399995925,
+  "scope": "All linear functionals of this fixed-normal first paired-residue curve fail already on two canonical stars; not a failure of general separation."
+}

@@ -1,0 +1,2 @@
+5 {'columns': 10, 'points': 49, 'coefficient_rows': 392, 'ranks': [5, 6], 'ranks_by_exponent': {'-1': [5, 6], '1': [5, 6]}, 'oddness_control': True, 'first_residue_control': True}
+7 {'columns': 258, 'points': 180, 'coefficient_rows': 2160, 'ranks': [112, 113], 'ranks_by_exponent': {'-3': [8, 8], '-1': [105, 105], '1': [112, 113]}, 'oddness_control': True, 'first_residue_control': True}

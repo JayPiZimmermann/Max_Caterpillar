@@ -1,7 +1,7 @@
 {
   "hashes": {
     "overnight_fixed.md": "173dbd273f6ea22d9613f727a649c1dba6534e7ef8d882688108785ae3b031bb",
-    "overnight_fixed_bowtie.md": "c1fa958cfaa5c1bd695f8d2bcf6839c534942e7d436fce9cf0ba8f980e5b20aa",
+    "overnight_fixed_bowtie.md": "bec1a3aaf1c41ef375980a768ae54d1cec613c85ae87c91cfbac36fea4b30764",
     "overnight_fixed_bowtie.py": "35fc1193c68e6b878be69f3366588d91cfa2ed80d24731abcc59c6d701d6af6e",
     "overnight_fixed_bowtie_certify.py": "5eacafd34c3afdcfc4d669c3104078e110c14e50dfe408b3a9bc0b71aea17474",
     "overnight_fixed_bowtie_check.json": "7ab4c1258accd2807a480ac92b75130e86e21860e53de35b2711625eb63536e7",
@@ -27,7 +27,7 @@
     "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
     "overnight_fixed_circuits.py": "584a7b5878efe8eeb0652121161ed590713755fa8ba824ef7cde266a2b6363c4"
   },
-  "note": "Natural8, nine-row, and old search-verdict diagnostics are excluded. Producer needs only these new sources plus already tracked exact LP/K2/flats modules and pickles.",
+  "note": "Natural8, nine-row, and old search-verdict diagnostics are excluded. Producer needs only these new sources plus already tracked exact LP/K2 helper modules and pickles; the fixed10 theorem has no logical dependence on the earlier K2 result.",
   "paths": [
     "research/sN/best5/overnight_fixed.md",
     "research/sN/best5/overnight_fixed_bowtie.md",

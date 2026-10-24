@@ -1,0 +1,11 @@
+{"counts": {"cone": 5000, "cases": 5000}, "seconds": 1.0304663689967128}
+{"counts": {"cone": 10000, "cases": 10000}, "seconds": 2.02868340400164}
+{"counts": {"cone": 15000, "cases": 15000}, "seconds": 2.869053693000751}
+{"counts": {"cone": 20000, "cases": 20000}, "seconds": 3.7526947500009555}
+{"counts": {"cone": 25000, "cases": 25000}, "seconds": 4.437102317002427}
+{"counts": {"cone": 30000, "cases": 30000}, "seconds": 5.269353384996066}
+{"counts": {"cone": 35000, "cases": 35000}, "seconds": 6.008855127998686}
+{"counts": {"cone": 40000, "cases": 40000}, "seconds": 6.612485026998911}
+{"counts": {"cone": 45000, "cases": 45000}, "seconds": 7.132894125999883}
+{"counts": {"cone": 50000, "cases": 50000}, "seconds": 7.6703477569972165}
+{"checker_sha256": "7c9dea04b769a808190d3a624241d7b54e7f6c5e00cb9c2148c0af76e90585c7", "counts": {"cases": 54688, "cone": 54688}, "hashes": {"overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9", "overnight_fixed_natural8_coverage.json": "b7f2fbd2eaf3cfdd1eb7dce93ad8c0a6084ad81270c24e117ec2086cd94d041b", "overnight_fixed_natural8_coverage_quads.json": "a3b077cece6c14d1430471e8fac88669d2370486efbd1152641a526000745d24", "overnight_fixed_natural8_inventory.json": "09d1fc71210ef4ac2bf4a984f220ae31f5a7e37dab7b04123d183b247c849fe2", "overnight_fixed_natural8_proof.jsonl.gz": "394b2f9f139f4b48ee47cfff1df8453c1ca8eeeb6117c7a6ce5d4eb308a56e88"}, "scope": "All real preactivations and remainder in the natural six-feature span; generic-locality/translation bridge; not Lean", "seconds": 8.335698718998174, "status": "INDEPENDENT_EXACT_NATURAL8_K4_EXCLUSION_PASS"}

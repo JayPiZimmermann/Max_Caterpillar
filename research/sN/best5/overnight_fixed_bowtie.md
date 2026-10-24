@@ -113,9 +113,14 @@ used, and irrational coefficients are included.
 The 622 nonzero flats yield 30,041 unordered covering triples. All
 eight output signs are retained, giving 240,328 cases. The six flats
 whose mixed-difference contribution vanishes identically are included.
-Zero preactivations or zero output coefficients reduce to at most two
-free neurons, already excluded in the independently checked certificate
-documented in `overnight_fixed.md`.
+Zero preactivations or zero output coefficients can be discarded. An
+identity with one or two nonzero terms can be padded to three by replacing
+`d sigma(g)` with `d sigma(g/2)+d sigma(g/2)`. Repeated flats are included,
+and the copies have independent parameter blocks. The zero-term case is
+excluded by the fifth mixed difference, which is zero on `W` and one on
+the target. Thus this theorem has no logical dependence on the earlier
+K2 certificate; the latter's hash in the historical receipt is provenance
+metadata only.
 
 ## Independent proof gate
 

@@ -1,0 +1,36 @@
+{
+  "status": "MODULAR_N9_PAIRED_JET_DIAGNOSTIC",
+  "arity": 9,
+  "prime": 1000003,
+  "point_count": 100,
+  "max_exponent": 3,
+  "columns": 3822,
+  "active_rows": 400,
+  "ranks": [
+    400,
+    400
+  ],
+  "ranks_by_exponent": {
+    "-3": [
+      100,
+      100
+    ],
+    "-1": [
+      100,
+      100
+    ],
+    "1": [
+      100,
+      100
+    ],
+    "3": [
+      100,
+      100
+    ]
+  },
+  "evaluation_seconds": 242.47067794800023,
+  "total_seconds": 247.18026770299912,
+  "parity_control": true,
+  "engine_sha256": "6b7ac62e16fb4fa492a820390c77c0cdd013900922fd12a50803148e10989c06",
+  "point_sha256": "fbaec1a514fa531f87eb9fd91f26c88461f6ddef6af10011dc00e6c83b6cb5c4"
+}

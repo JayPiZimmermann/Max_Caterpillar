@@ -1,0 +1,54 @@
+{
+  "status": "MODULAR_FIRST_POSITIVE_JET_DIAGNOSTIC",
+  "prime": 1000003,
+  "results": {
+    "5": {
+      "columns": 10,
+      "points": 49,
+      "coefficient_rows": 392,
+      "ranks": [
+        5,
+        6
+      ],
+      "ranks_by_exponent": {
+        "-1": [
+          5,
+          6
+        ],
+        "1": [
+          5,
+          6
+        ]
+      },
+      "oddness_control": true,
+      "first_residue_control": true
+    },
+    "7": {
+      "columns": 258,
+      "points": 180,
+      "coefficient_rows": 2160,
+      "ranks": [
+        112,
+        113
+      ],
+      "ranks_by_exponent": {
+        "-3": [
+          8,
+          8
+        ],
+        "-1": [
+          105,
+          105
+        ],
+        "1": [
+          112,
+          113
+        ]
+      },
+      "oddness_control": true,
+      "first_residue_control": true
+    }
+  },
+  "seconds": 4.076818432000437,
+  "engine_sha256": "6b7ac62e16fb4fa492a820390c77c0cdd013900922fd12a50803148e10989c06"
+}

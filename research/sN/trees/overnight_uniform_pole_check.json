@@ -1,0 +1,27 @@
+{
+  "status": "FINITE_STRUCTURAL_POLE_CONTROLS_PASS",
+  "counts": {
+    "2": {
+      "tree_shapes": 1,
+      "zero_apex_pairings": 1,
+      "nonzero_apex_assignments": 2
+    },
+    "4": {
+      "tree_shapes": 2,
+      "zero_apex_pairings": 6,
+      "nonzero_apex_assignments": 24
+    },
+    "6": {
+      "tree_shapes": 6,
+      "zero_apex_pairings": 90,
+      "nonzero_apex_assignments": 540
+    },
+    "8": {
+      "tree_shapes": 23,
+      "zero_apex_pairings": 2415,
+      "nonzero_apex_assignments": 19320
+    }
+  },
+  "seconds": 0.19893343699732213,
+  "scope": "Finite controls only; uniform proofs are in overnight_uniform.md."
+}

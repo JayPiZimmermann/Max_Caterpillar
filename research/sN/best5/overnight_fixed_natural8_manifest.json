@@ -1,0 +1,42 @@
+{
+  "hashes": {
+    "overnight_fixed_bowtie_circuit.py": "e3089101db790915a395b6c20e2d1de57e8ad5d06858c7ad6a82a829b75e920c",
+    "overnight_fixed_natural8.md": "42c90453cf065e44cf0391386cf1f048f88ee61645eaaf3f9380f9abb7dbb77c",
+    "overnight_fixed_natural8_certify.py": "c03f5c50c19d9606972efe7b4a8495f3b07b211c0c8aa19ee059808bf2a0162f",
+    "overnight_fixed_natural8_check.json": "59514a98e88a653d965233f1f5837c49c0f6dbf0d02715195b09bbd722ec8c49",
+    "overnight_fixed_natural8_check.log": "4af8b1f7dbf477074095eb114adba4f2f120fbee7be15b89b58183445ed081a4",
+    "overnight_fixed_natural8_coverage.json": "b7f2fbd2eaf3cfdd1eb7dce93ad8c0a6084ad81270c24e117ec2086cd94d041b",
+    "overnight_fixed_natural8_coverage.log": "0ad5c3d8ff04c806438bb2e945ab3752c46ddaa19f03bfddef47094e72cb5ab9",
+    "overnight_fixed_natural8_coverage.py": "2b3245119ffdcf480c8493f52060700986ec22788f7683772828f9169cb12972",
+    "overnight_fixed_natural8_coverage_quads.json": "a3b077cece6c14d1430471e8fac88669d2370486efbd1152641a526000745d24",
+    "overnight_fixed_natural8_inventory.json": "09d1fc71210ef4ac2bf4a984f220ae31f5a7e37dab7b04123d183b247c849fe2",
+    "overnight_fixed_natural8_inventory.log": "3c0d6648844e7a231c035b0128b3eb84763792b252dbd36a4d5ddeeda94b9725",
+    "overnight_fixed_natural8_inventory.py": "e1efb594d56f5229cf9614894abd05795749acc7e62711244fe33178aad5f900",
+    "overnight_fixed_natural8_k4.py": "22f4213eb2a9c0515edbdd1e91e7977c8738712c1b26e49269dd7a11648fa677",
+    "overnight_fixed_natural8_producer.json": "b90fff631cadca6e3b0e1ce3ac3409f3baeb1165edba824583cc99d1cd3ca85a",
+    "overnight_fixed_natural8_producer.log": "75fcabedfcaa1ff897211161d8d5ac08d2d429828675e22da10e8922a7ee15a8",
+    "overnight_fixed_natural8_proof.jsonl.gz": "394b2f9f139f4b48ee47cfff1df8453c1ca8eeeb6117c7a6ce5d4eb308a56e88",
+    "overnight_fixed_natural8_verify.py": "7c9dea04b769a808190d3a624241d7b54e7f6c5e00cb9c2148c0af76e90585c7"
+  },
+  "note": "Independent exact certificate for natural8 h2>=7. No matching construction; research only. Active candidate/dictionary/MIP diagnostics are excluded. Other producer/checker dependencies are already tracked in the fixed10/K2 packages.",
+  "paths": [
+    "research/sN/best5/overnight_fixed_natural8.md",
+    "research/sN/best5/overnight_fixed_natural8_inventory.py",
+    "research/sN/best5/overnight_fixed_natural8_inventory.json",
+    "research/sN/best5/overnight_fixed_natural8_inventory.log",
+    "research/sN/best5/overnight_fixed_natural8_coverage.py",
+    "research/sN/best5/overnight_fixed_natural8_coverage.json",
+    "research/sN/best5/overnight_fixed_natural8_coverage.log",
+    "research/sN/best5/overnight_fixed_natural8_coverage_quads.json",
+    "research/sN/best5/overnight_fixed_natural8_k4.py",
+    "research/sN/best5/overnight_fixed_bowtie_circuit.py",
+    "research/sN/best5/overnight_fixed_natural8_certify.py",
+    "research/sN/best5/overnight_fixed_natural8_producer.json",
+    "research/sN/best5/overnight_fixed_natural8_producer.log",
+    "research/sN/best5/overnight_fixed_natural8_proof.jsonl.gz",
+    "research/sN/best5/overnight_fixed_natural8_verify.py",
+    "research/sN/best5/overnight_fixed_natural8_check.json",
+    "research/sN/best5/overnight_fixed_natural8_check.log"
+  ],
+  "status": "STABLE_NATURAL8_K4_RESEARCH_GATE"
+}
