@@ -1,0 +1,8 @@
+{
+  "counts": {
+    "EXACT_TREE_EXCLUSION": 2
+  },
+  "producer_sha256": "1dc6fbed50782f7aa72ec06c5ddf4aac528eab4f65ac7a9c84649b0985b1306d",
+  "seconds": 57.83048074699764,
+  "status": "SELECTED_PAIR_TREE_BATCH_COMPLETE"
+}

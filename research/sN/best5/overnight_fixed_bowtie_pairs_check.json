@@ -1,0 +1,24 @@
+{
+  "checker_sha256": "9e052c41ab16e856ce54db0b4bf9c381095f9cf97b0ba47c8a4d55eb47329d3b",
+  "counts": {
+    "cases": 240328,
+    "circuit_uses": 18449,
+    "cone": 239996,
+    "constant": 7670,
+    "equation_spaces": 332,
+    "farkas": 119531,
+    "split": 126869,
+    "tree": 332
+  },
+  "hashes": {
+    "netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+    "overnight_fixed_bowtie_coverage.json": "aa98f9e0821edd8c512a3a1a4720822765e79e4823eadbc095498b1c172528ff",
+    "overnight_fixed_bowtie_coverage_triples.json": "f29a6c0c245bdea301f9e049665521a8c46654bd700c98d36a812ddef763e017",
+    "overnight_fixed_bowtie_inventory.json": "21f36c76b052776d5abec7a84409eb82da9e5f758ddb200bfae4996c00ecb5a1",
+    "overnight_fixed_bowtie_pairs_proof.jsonl.gz": "7cca15943ea6e10492771e72873c7ae23adbddd35430303297daa32d25f52483",
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9"
+  },
+  "scope": "Original complete all-real fixed10 K3 domain; only 26 locality and seven singleton/pair-ray equations; mathematical model bridge, not Lean",
+  "seconds": 118.63924468400364,
+  "status": "INDEPENDENT_33_EQUATION_FIXED10_K3_PASS"
+}

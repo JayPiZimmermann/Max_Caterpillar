@@ -1,0 +1,37 @@
+{
+  "checker_sha256": "fb5129cb7d16f1c9df40237d7309e773af441f8c33c2b5830f6ad72399244a21",
+  "counts": {
+    "cases": 54688,
+    "cone": 54688
+  },
+  "hashes": {
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_natural8_compact_proof.jsonl.gz": "d57d7f2501b1f822b2e9032dd2ba9c801f57dda07307d00ddecd1e3dfc96fa48",
+    "overnight_fixed_natural8_coverage.json": "b7f2fbd2eaf3cfdd1eb7dce93ad8c0a6084ad81270c24e117ec2086cd94d041b",
+    "overnight_fixed_natural8_verify.py": "7c9dea04b769a808190d3a624241d7b54e7f6c5e00cb9c2148c0af76e90585c7"
+  },
+  "scope": "Same complete all-real K4 domain; only the 26 locality equations and signed triangle-deficit balance are used",
+  "seconds": 6.9939629700020305,
+  "status": "INDEPENDENT_27_EQUATION_NATURAL8_K4_PASS",
+  "used_equation_indices": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    36
+  ]
+}

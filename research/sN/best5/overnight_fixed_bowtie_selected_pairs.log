@@ -1,0 +1,13 @@
+{"processed": 100, "counts": {"EXACT_EXCLUSION": 57, "CONE_SURVIVOR": 43}, "seconds": 7.758742429999984}
+{"processed": 200, "counts": {"EXACT_EXCLUSION": 120, "CONE_SURVIVOR": 80}, "seconds": 11.577695603002212}
+{"processed": 300, "counts": {"EXACT_EXCLUSION": 191, "CONE_SURVIVOR": 109}, "seconds": 13.870374386002368}
+{"processed": 400, "counts": {"EXACT_EXCLUSION": 278, "CONE_SURVIVOR": 122}, "seconds": 16.1640339709993}
+{"processed": 500, "counts": {"EXACT_EXCLUSION": 348, "CONE_SURVIVOR": 152}, "seconds": 20.389745663000213}
+{"processed": 600, "counts": {"EXACT_EXCLUSION": 421, "CONE_SURVIVOR": 179}, "seconds": 22.183417721003934}
+{"processed": 700, "counts": {"EXACT_EXCLUSION": 513, "CONE_SURVIVOR": 187}, "seconds": 24.52478476500255}
+{"processed": 800, "counts": {"EXACT_EXCLUSION": 586, "CONE_SURVIVOR": 214}, "seconds": 27.83169027099939}
+{"processed": 900, "counts": {"EXACT_EXCLUSION": 660, "CONE_SURVIVOR": 240}, "seconds": 31.85499210600392}
+{"processed": 1000, "counts": {"EXACT_EXCLUSION": 725, "CONE_SURVIVOR": 275}, "seconds": 36.0398854390005}
+{"processed": 1100, "counts": {"EXACT_EXCLUSION": 796, "CONE_SURVIVOR": 304}, "seconds": 38.78457453200099}
+{"processed": 1200, "counts": {"EXACT_EXCLUSION": 875, "CONE_SURVIVOR": 325}, "seconds": 40.47844648400496}
+{"already": 239029, "counts": {"CONE_SURVIVOR": 332, "EXACT_EXCLUSION": 967}, "processed": 1299, "producer_sha256": "67e9bc3e61f4fc64dac5de772356259a30063b74397fefc5ef2df719d214d9d0", "rays": [26, 27, 28, 29, 30, 31, 32], "seconds": 41.52281978799874, "status": "SELECTED_RAY_CONE_BATCH_COMPLETE"}

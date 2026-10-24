@@ -1,0 +1,18 @@
+{
+  "claim": "Every natural8 K4 candidate matching locality forces signed triangle deficit <= -2; exact exhaustive template check, no per-case proof dependency.",
+  "existing_dependencies": {
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_natural8_coverage.json": "b7f2fbd2eaf3cfdd1eb7dce93ad8c0a6084ad81270c24e117ec2086cd94d041b",
+    "overnight_fixed_natural8_coverage.py": "2b3245119ffdcf480c8493f52060700986ec22788f7683772828f9169cb12972",
+    "overnight_fixed_natural8_coverage_quads.json": "a3b077cece6c14d1430471e8fac88669d2370486efbd1152641a526000745d24",
+    "overnight_fixed_natural8_manifest.json": "1d764a5a201af5521aa54e0acd3e5b61a02116adba2d61d6d367f97737fe70b9",
+    "overnight_fixed_natural8_verify.py": "7c9dea04b769a808190d3a624241d7b54e7f6c5e00cb9c2148c0af76e90585c7"
+  },
+  "new_files": {
+    "overnight_fixed_natural8_defect.md": "b37785526b3c35f126e3fab63a71d1b4385362bef5351346f0ce94fc35a84a63",
+    "overnight_fixed_natural8_templates.json": "135cbb4bff4c0941c04835f2b2f678988c11a8496bb13a0d5defbc1032e73ba7",
+    "overnight_fixed_natural8_templates.log": "ad7bf7d0107e6448e4ebe738c0c3efacf558824c3ef54ffba3e5db55fb0499db",
+    "overnight_fixed_natural8_templates.py": "3333367005ae07cf534d4d74e48819c69ad314a39d9bdd78da5b461f5eb21cac"
+  },
+  "status": "CHECKED_21_TEMPLATE_ROUTE"
+}

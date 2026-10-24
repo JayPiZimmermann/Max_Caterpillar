@@ -1,0 +1,7 @@
+{
+  "cases": 54688,
+  "producer_sha256": "8f20cad0ea039425a6ab4f8f0e37f15f74756b1953859dc06c6b908f9921cad3",
+  "proof_sha256": "d57d7f2501b1f822b2e9032dd2ba9c801f57dda07307d00ddecd1e3dfc96fa48",
+  "replaced_cases": 650,
+  "status": "COMPACT_PROOF_MERGED"
+}

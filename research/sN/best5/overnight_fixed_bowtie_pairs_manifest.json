@@ -1,0 +1,35 @@
+{
+  "claim": "The original complete all-real fixed10 K3 domain is excluded using 26 locality and seven singleton/pair-ray equations; matching width-six construction unchanged.",
+  "existing_dependencies": {
+    "netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+    "overnight_fixed_bowtie.md": "bec1a3aaf1c41ef375980a768ae54d1cec613c85ae87c91cfbac36fea4b30764",
+    "overnight_fixed_bowtie_certify.py": "5eacafd34c3afdcfc4d669c3104078e110c14e50dfe408b3a9bc0b71aea17474",
+    "overnight_fixed_bowtie_coverage.json": "aa98f9e0821edd8c512a3a1a4720822765e79e4823eadbc095498b1c172528ff",
+    "overnight_fixed_bowtie_coverage.py": "eee444877fbebb3b54140a1c28f0ab5a78a486f4b422f37ddd61f9fbf9a61775",
+    "overnight_fixed_bowtie_coverage_triples.json": "f29a6c0c245bdea301f9e049665521a8c46654bd700c98d36a812ddef763e017",
+    "overnight_fixed_bowtie_inventory.json": "21f36c76b052776d5abec7a84409eb82da9e5f758ddb200bfae4996c00ecb5a1",
+    "overnight_fixed_bowtie_manifest.json": "88063800d48e4b47268bfc1bf0f1535dd788b876656e0f7fd8652ac63df99b9a",
+    "overnight_fixed_bowtie_ray.py": "134c4851c8f1705d1d76f4f6ab30219129c04d0a9cc6d9d3f9b52ea4d0d755dc",
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9"
+  },
+  "new_files": {
+    "overnight_fixed_bowtie_pairs.md": "e1614dd579d42afe35201824ed5e176e3a85d6cced7e9d6945c87e22a4b25701",
+    "overnight_fixed_bowtie_pairs_check.json": "f98f859d3beea9a8d0ba54167e74d1e126e3324923914b9dfd3b0412de5760c7",
+    "overnight_fixed_bowtie_pairs_check.log": "24676cbd0f58c73509db7af1071390d32bfb00c6124e8e2eb256baa2e07d53f5",
+    "overnight_fixed_bowtie_pairs_merge.py": "d0f2713e1712cc3d4e3390170a91bdf02c7da464d6430435e6a92e27342853ae",
+    "overnight_fixed_bowtie_pairs_producer.json": "0b539228c89bcbe8d4583e8aa0e583c388b24226f6403fb9fbef7a3c6bffdaea",
+    "overnight_fixed_bowtie_pairs_producer.log": "9ee7449b976b9f36dcee1f1a09afd5e257fde0302b8f51a671f462fbbee3085a",
+    "overnight_fixed_bowtie_pairs_proof.jsonl.gz": "7cca15943ea6e10492771e72873c7ae23adbddd35430303297daa32d25f52483",
+    "overnight_fixed_bowtie_pairs_verify.py": "9e052c41ab16e856ce54db0b4bf9c381095f9cf97b0ba47c8a4d55eb47329d3b",
+    "overnight_fixed_bowtie_selected.py": "67e9bc3e61f4fc64dac5de772356259a30063b74397fefc5ef2df719d214d9d0",
+    "overnight_fixed_bowtie_selected_pairs.json": "fc5f0feca76e92e227f798f56cf3701287494d649468b24fe7bffdf0ef773918",
+    "overnight_fixed_bowtie_selected_pairs.jsonl": "d68b605827a0f5a988dd491acb845f6408f39ea865cf62fc86de807360df65e8",
+    "overnight_fixed_bowtie_selected_pairs.log": "15b9e8f642480591a2a5093ecd2d1ddec43d8cc33dfa133bcc660057883efecb",
+    "overnight_fixed_bowtie_selected_pairs_tree.json": "aec01dcf715d0f19d5ee1c6b7eb673af93f84cda3165eb6e142355e95ea8d30f",
+    "overnight_fixed_bowtie_selected_pairs_tree.jsonl.gz": "ae09fa47a85c1ff4b80d75dd358e9c263504dfd1e48d483e85c5160d7a325dcc",
+    "overnight_fixed_bowtie_selected_pairs_tree.log": "c5df33094733e20e99b6a68d16d3423a5e2a6719df1a9af278467a1e9a4a35b7",
+    "overnight_fixed_bowtie_selected_pairs_tree_round2.log": "bc1ac13c506859db92b3cd0baa71d2d9cb14513ca4040e6cae65d4dd7ff4e153",
+    "overnight_fixed_bowtie_selected_tree.py": "1dc6fbed50782f7aa72ec06c5ddf4aac528eab4f65ac7a9c84649b0985b1306d"
+  },
+  "status": "CHECKED_33_EQUATION_FIXED10_ROUTE"
+}

@@ -1,0 +1,20 @@
+{
+  "already": 239029,
+  "counts": {
+    "CONE_SURVIVOR": 332,
+    "EXACT_EXCLUSION": 967
+  },
+  "processed": 1299,
+  "producer_sha256": "67e9bc3e61f4fc64dac5de772356259a30063b74397fefc5ef2df719d214d9d0",
+  "rays": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "seconds": 41.52281978799874,
+  "status": "SELECTED_RAY_CONE_BATCH_COMPLETE"
+}

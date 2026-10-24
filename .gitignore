@@ -51,3 +51,10 @@ verification/logs/
 /research/sN/trees/overnight_lower_exact9_chunks/*.jsonl.gz
 /research/sN/trees/overnight_lower_exact9_chunks/*.points.txt
 
+# Reproducible affine-cycle evaluator caches.
+/research/sN/cycles/overnight_cycle_affine_*.u32
+/research/sN/cycles/overnight_cycle_affine_*.bin
+/research/sN/cycles/overnight_cycle_symmetric_*.u32
+/research/sN/cycles/overnight_cycle_symmetric_*.bin
+/research/sN/cycles/overnight_cycle_symmetric_*.family.json
+
