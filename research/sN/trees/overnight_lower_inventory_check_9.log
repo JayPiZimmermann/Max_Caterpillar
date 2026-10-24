@@ -1,0 +1,4 @@
+PRUFER 262144 trees 23 shapes seconds 5.137
+DONE {"status": "INDEPENDENT_COMPLETE_INVENTORY_CHECK_PASS", "arity": 9, "all_labelled_trees": 262144, "all_shapes": 23, "allowed_shapes": 18, "allowed_labelled_trees": 154624, "raw_allowed_root_orientation_choices": 18432, "function_orbits": 3822, "seconds": 5.55267237299995, "budget_seconds": 120, "inventory_sha256": "7650f12cf96844ba6aa2be1254776458af53160e0c29e80d0f51453a5741c9c9", "checker_sha256": "a5a6d03a3f6e175d2c5f5c4eec33ea7e03b4c5a453b77b02c1f1cab1bb2fd71c", "scope": "Exact finite family coverage only; no rank or separation result"}
+
+EXIT 0

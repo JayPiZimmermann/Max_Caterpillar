@@ -1,0 +1,25 @@
+{
+  "status": "INDEPENDENT_EXACT_MATCHING_SEPARATOR_CHECK_PASS",
+  "arity": 7,
+  "max_matching": 2,
+  "labelled_trees": 1296,
+  "allowed_labelled_trees": 576,
+  "root_orientation_choices": 768,
+  "orbit_columns": 258,
+  "function_orbits": 158,
+  "verified_rows": 113,
+  "target_nonzero": true,
+  "independent_mechanisms": [
+    "Pruefer shape coverage",
+    "brute-force disjoint edge triples",
+    "all roots and orientations",
+    "normalized-head positive-endpoint cuts",
+    "integer separator dot products"
+  ],
+  "rows_sha256": "fa5b0457a8d6de21d2cff1abf97e5194c84054a0e6019719ab4b338a3c728208",
+  "certificate_sha256": "7c9b97537c866741793335993baa7cbe3e7537f874741320c89524db5815b317",
+  "checker_sha256": "e017f123e3c58ea916a382d71aad0f54716d925b39b6787b390f91313644965d",
+  "elapsed_seconds": 230.29575260799902,
+  "budget_seconds": 1200,
+  "trust_boundary": "Exact finite Fourier certificate plus mathematical bridge; not Lean"
+}

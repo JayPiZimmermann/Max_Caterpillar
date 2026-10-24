@@ -1,0 +1,28 @@
+{
+  "checker_sha256": "81664320b7a525fb347ca619777606e351c46939582917884473f354ac083b98",
+  "model": "all real translation-invariant pair-feature neurons",
+  "nonzero_flats": 32752,
+  "rank": 14,
+  "relation": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -3,
+    -3,
+    -3,
+    -3,
+    -3
+  ],
+  "seconds": 0.2829550250025932,
+  "status": "INDEPENDENT_COVERAGE_PASS",
+  "symmetry_orbits": 1193,
+  "unordered_covering_pairs": 97961,
+  "work_sha256": "bf88bf5c8fa4567f678284654b16749078f5f1cfa6cb2f935ec02a76ad16e114"
+}

@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "case": 4772,
+    "constant": 7545,
+    "farkas": 30612,
+    "lp": 63997,
+    "split": 33385
+  },
+  "equations_sha256": "60d0658872f008e9a65292e56a5e549113321d1a055b48f401341d3caf69e8d4",
+  "producer_sha256": "5527322adeb97c0bf1d7931e86f4082b290e6ed0417107cf7ff77d278763d80b",
+  "proof_sha256": "a50eecc2f71eb2772b78a26a47477bbaa4d065bc075da4aa773a4ce60348742d",
+  "seconds": 66.85280366000006,
+  "status": "PROOF_TREES_COMPLETE"
+}

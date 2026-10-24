@@ -1,0 +1,71 @@
+{
+  "arity": 5,
+  "base": [
+    0,
+    1,
+    -1,
+    10,
+    -10
+  ],
+  "slope": [
+    4,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "family_columns": 10,
+  "checked": [
+    {
+      "index": 0,
+      "value": "69407/326700"
+    }
+  ],
+  "target": "1/400",
+  "status": "PAIRED_LIMIT_SEPARATOR_REFUTED",
+  "witness": {
+    "root": 1,
+    "edges": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "cuts": [
+      [
+        [
+          2,
+          3,
+          4
+        ],
+        1
+      ],
+      [
+        [
+          3
+        ],
+        1
+      ],
+      [
+        [
+          4
+        ],
+        1
+      ]
+    ]
+  },
+  "budget_seconds": 120,
+  "elapsed_seconds": 0.006895376998727443,
+  "producer_sha256": "6a7f08048775dedc846b354a798566e55dfe7ea044926aac7a5032048f5331f4",
+  "scope": "Only this coefficient functional at this arity; no uniform claim"
+}
+
+EXIT 0

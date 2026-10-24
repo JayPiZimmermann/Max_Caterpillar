@@ -1,0 +1,13 @@
+{"last_case": 0, "counts": {"lp": 0, "farkas": 0, "constant": 4, "split": 0, "case": 4}, "seconds": 0.03310505500121508}
+{"last_case": 100, "counts": {"lp": 21156, "farkas": 10384, "constant": 792, "split": 10772, "case": 404}, "seconds": 17.004619449999154}
+{"last_case": 200, "counts": {"lp": 36800, "farkas": 17841, "constant": 1922, "split": 18959, "case": 804}, "seconds": 29.786176663001243}
+{"last_case": 300, "counts": {"lp": 41996, "farkas": 20270, "constant": 2660, "split": 21726, "case": 1204}, "seconds": 34.694960221000656}
+{"last_case": 400, "counts": {"lp": 55901, "farkas": 26829, "constant": 3847, "split": 29072, "case": 1604}, "seconds": 46.47547098499854}
+{"last_case": 500, "counts": {"lp": 62507, "farkas": 29943, "constant": 4625, "split": 32564, "case": 2004}, "seconds": 52.80006485999911}
+{"last_case": 600, "counts": {"lp": 63167, "farkas": 30235, "constant": 5101, "split": 32932, "case": 2404}, "seconds": 55.32356263100155}
+{"last_case": 700, "counts": {"lp": 63563, "farkas": 30413, "constant": 5541, "split": 33150, "case": 2804}, "seconds": 57.64900410499831}
+{"last_case": 800, "counts": {"lp": 63673, "farkas": 30469, "constant": 5939, "split": 33204, "case": 3204}, "seconds": 59.538365386000805}
+{"last_case": 900, "counts": {"lp": 63803, "farkas": 30534, "constant": 6339, "split": 33269, "case": 3604}, "seconds": 61.212662031000946}
+{"last_case": 1000, "counts": {"lp": 63997, "farkas": 30612, "constant": 6777, "split": 33385, "case": 4004}, "seconds": 63.41929886100115}
+{"last_case": 1100, "counts": {"lp": 63997, "farkas": 30612, "constant": 7177, "split": 33385, "case": 4404}, "seconds": 65.37522579800134}
+{"counts": {"case": 4772, "constant": 7545, "farkas": 30612, "lp": 63997, "split": 33385}, "equations_sha256": "60d0658872f008e9a65292e56a5e549113321d1a055b48f401341d3caf69e8d4", "producer_sha256": "5527322adeb97c0bf1d7931e86f4082b290e6ed0417107cf7ff77d278763d80b", "proof_sha256": "a50eecc2f71eb2772b78a26a47477bbaa4d065bc075da4aa773a4ce60348742d", "seconds": 66.85280366000006, "status": "PROOF_TREES_COMPLETE"}

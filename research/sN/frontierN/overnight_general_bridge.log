@@ -1,0 +1,4 @@
+'MaxCaterpillar.Frontier.OvernightGeneral.feature_fiber_slope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.OvernightGeneral.component_equation' depends on axioms: [propext, Classical.choice, Quot.sound]

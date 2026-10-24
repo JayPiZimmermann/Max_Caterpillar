@@ -1,0 +1,21 @@
+SHAPE 1 matching 3 orbits 400 seconds 0.066
+SHAPE 2 matching 3 orbits 141 seconds 0.097
+SHAPE 4 matching 3 orbits 400 seconds 0.162
+SHAPE 6 matching 3 orbits 300 seconds 0.218
+SHAPE 7 matching 3 orbits 240 seconds 0.271
+SHAPE 8 matching 3 orbits 400 seconds 0.336
+SHAPE 10 matching 3 orbits 400 seconds 0.403
+SHAPE 11 matching 2 orbits 132 seconds 0.444
+SHAPE 12 matching 2 orbits 164 seconds 0.481
+SHAPE 13 matching 3 orbits 240 seconds 0.525
+SHAPE 14 matching 2 orbits 50 seconds 0.585
+SHAPE 15 matching 3 orbits 147 seconds 0.617
+SHAPE 16 matching 3 orbits 226 seconds 0.658
+SHAPE 17 matching 3 orbits 276 seconds 0.706
+SHAPE 18 matching 2 orbits 89 seconds 0.756
+SHAPE 20 matching 3 orbits 134 seconds 0.788
+SHAPE 21 matching 2 orbits 68 seconds 0.885
+SHAPE 22 matching 1 orbits 15 seconds 4.352
+DONE {'arity': 9, 'max_matching': 3, 'raw_allowed_units': 18432, 'function_orbits': 3822, 'elapsed_seconds': 4.351935856997443, 'budget_seconds': 300, 'status': 'COMPLETE_ENUMERATION_NO_SPAN_CLAIM', 'producer_sha256': 'b73ab2d3ac7698152129dcd1df23516ae873fa8574b7985f1038fb1dde2ee899'}
+
+EXIT 0

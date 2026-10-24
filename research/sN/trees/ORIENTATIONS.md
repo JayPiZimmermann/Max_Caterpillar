@@ -7,6 +7,26 @@ all orientations of stars. The model still has a canonical head
 `x_root-x_apex`, unit edge coefficients, and omitted/linear/hinge states;
 it does not allow arbitrary weighted inner edges or arbitrary heads.
 
+## Overnight improvement: unrestricted quartic bound
+
+The seven-label matching obstruction is now exact and independently
+checked: 113 rational rows separate the maximum from every canonical tree
+with six nonapex vertices and matching number at most two. All shapes,
+roots and orientations are covered. The resulting unrestricted bound is
+`|K| >= binom(N,4)/35` for `N>=7`, including every face state. Each seven-label
+tie forces a perfect matching on its six nonapex labels; a unit can cover
+at most `binom(N-4,3)` such ties by the forest matching recurrence.
+See [the proof and exact gate](overnight_lower.md). This improves the
+polynomial degree from cubic to quartic; the exponential target is open.
+This result is mathematical, not Lean verified.
+
+The same separator also propagates to every arity for the fixed class of
+original trees with matching number at most two. All their orientations
+and face states can therefore be added freely to the exponential mixed
+dictionary, giving `(169/147)^k/(N+1)^6` counted terms for `N>=7`;
+with only the base dictionary and this free class the bound is
+`(7/6)^N/(N+1)^6`. This includes every double star. See the same proof note.
+
 ## Latest structural separator: one-sink units
 
 The [defect review](lower_defect_review.md) now gives an exact seven-input
@@ -73,9 +93,9 @@ The script `orientation_matching_probe.py` tests whether the maximum's top
 class can be spanned using only trees lacking a perfect or near-perfect
 matching. At seven labels, all 258 canonical rooted oriented tree orbits
 with matching number at most two give modular ranks **112/113** on 240
-frequency rows, prime 1000003, in 21.7 seconds (exit 0). This is **only a
-modular diagnostic**. Neither an exact seven-label separator nor a uniform
-separation theorem has been proved by that calculation.
+frequency rows, prime 1000003, in 21.7 seconds (exit 0). That calculation
+was only a modular diagnostic. The overnight exact gate described above
+now certifies the seven-label case; the uniform separation theorem is open.
 
 The [odd-arity refinement](reopen_lower_odd.md) now needs this separator only
 at sufficiently large odd arities. On those ties the nonapex tree must have

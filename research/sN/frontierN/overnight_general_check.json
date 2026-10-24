@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "N": 5,
+  "coefficient_sign_classes": 416,
+  "checked_equations": 955,
+  "contradiction_lengths": {
+    "2": 300,
+    "3": 109,
+    "4": 7
+  },
+  "support_cover_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 102
+  },
+  "support_orbits": 3,
+  "certificate_sha256": "7605750ae5f0de8b70a273ea6b9aadb38437853aefc75da7ac5b5156b37b0fd4",
+  "seconds": 0.025795621000725077,
+  "scope": "Uniform real-coefficient cell-condition exclusion; mathematical model bridge in overnight_general.md; not Lean verified."
+}

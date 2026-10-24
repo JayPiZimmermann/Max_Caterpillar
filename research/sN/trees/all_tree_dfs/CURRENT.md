@@ -5,10 +5,23 @@ exponential lower bound are **not proved**. Two tree-based exponential-size rest
 are now rigorously ruled out: one-descent orders at six inputs, and the
 noncrossing members of the present caterpillar dictionary at eight inputs,
 even with rooted-star faces added. The latter works at six and seven inputs,
-so the eight-input obstruction is a real boundary. The lower search has a new
-unrestricted cubic bound and reduces an exponential bound to uniform canonical
-twin separation. None of these new finite certificates is part of the Lean
-verification receipt.
+so the eight-input obstruction is a real boundary. The lower search now has
+the unrestricted quartic bound `|K| >= binom(N,4)/35` for `N>=7`, from an
+independently checked seven-label matching separator. Uniform odd-arity
+perfect-matching separation would give an exponential bound. None of these
+new finite certificates is part of the Lean verification receipt.
+
+The active overnight search also includes the unrestricted `(h1,h2)` frontier
+at five inputs. A new exact sign-class certificate proves `h1>=8`, and
+the opposite-input argument proves unrestricted `N+2<=2h2` at every
+positive arity; see [the first-width proof](../../frontierN/overnight_general.md)
+and [the uniform second-width proof](../../frontierN/overnight_general_antipodal.md).
+The latter has a complete actual-network Lean proof with standard axioms in
+a research leaf; it is not yet integrated into the public manifest. The
+first-width improvement is a mathematical proof with an exact certificate.
+The user requires a matching construction before small-input results are
+promoted to the paper. They remain research tools while the exact frontier
+and fixed-layer optima are searched.
 
 ## Renewed exponential-size tree families
 
@@ -62,8 +75,10 @@ These are mathematical proofs with exact finite controls, not Lean results.
 The unrestricted gap now includes nonstar trees with sublinear matching
 number. A new matching-deficiency separator would imply exponential base
 `2/phi` for all trees. The seven-label test on all 258 rooted oriented
-tree orbits with matching number at most 2 gives modular ranks 112/113;
-this is diagnostic only. The uniform separator remains open. The upper
+tree orbits with matching number at most 2 originally gave modular ranks
+112/113. The [overnight exact gate](../overnight_lower.md) now certifies those
+ranks over the rationals with independent coverage and arithmetic checks,
+yielding the quartic bound. The uniform separator remains open. The upper
 construction problem is unchanged.
 
 The checkpoint and orientation results were pushed to `origin/main`
@@ -232,6 +247,11 @@ not yet close. The exact factorization and the proposed saturation statement
 are written in the review. No unproved saturation claim is being assumed.
 
 ## Unrestricted all-tree lower bound
+
+The current strongest bound from this route is
+`|K| >= binom(N,4)/35` for `N>=7`; see
+[the seven-label proof and certificate](../overnight_lower.md).
+The earlier cubic proof below remains useful for smaller inputs and constants.
 
 The model is `Trees.TreeFace.unit`: arbitrary original tree shape, arbitrary
 root and edge orientations/states, with head `x_root−x_apex`, plus the paper's
