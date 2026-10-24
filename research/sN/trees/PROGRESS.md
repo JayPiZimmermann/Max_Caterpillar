@@ -161,3 +161,29 @@ Counting sketch if twin elimination holds for all m: a tied centre has at most o
 per signature (orientation, kappa); hub-style forcing for kappa<=0 neighbours; residual loss from
 many signature classes appears to be e^{o(N)} (classes with kappa value K need K-1 further
 neighbours, so <= O(N^{1/3}) classes of size O(N^{1/3})) -- NOT written out, not checked.
+
+### 12. Recursion-on-m route (analysis; no general proof)
+Reductions for a homogeneous germ f on R^T and t in T: L_t f / U_t f = face germ of f in
+direction -e_t / +e_t, restricted to z_t = 0 (limits of the m-th mixed difference with a huge step
+at t: MD = MD'(U_t f) - MD'(f|z_t=0), and with the box anchored at -D e_t: MD'(f|z_t=0) - MD'(L_t f)).
+Proved on paper:
+ (i) L_t, U_t preserve "no wall on H_ij = {z_i = z_j}" for t not in {i,j} (a face germ has lineality
+     e_t, so restricting to z_t = 0 creates no new wall on H_ij);
+ (ii) twin germs (and the generalised class relu(B(z') + phi(z',z_l1) + phi(z',z_l2))) have no wall
+     on H_{l1 l2} and the class is closed under L_t, U_t for t not in {l1,l2} (or becomes linear/0);
+ (iii) Delta_t = L_t - U_t maps max_r to max_{r-1} + linear, kills sigma(z_i - z_j) for t not in {i,j}
+     and maps every auxiliary function to a linear function or 0;
+ (iv) hence for each pair {i,j} and each order of the other coordinates, the chain functional
+     C = (coefficient of relu(z_i - z_j) after applying Delta along the order) satisfies C(max) = 1,
+     C(aux) = C(linear) = 0, and C(G) = 0 for every germ G with twins AT {i,j}.
+Obstruction: C kills twins only at its own pair. Counting with per-pair detectors is provably too
+weak: a "double out-star" unit (two adjacent hubs, each with ~N/2 kappa=1 leaves) has twin pairs
+only inside each half, covers a constant fraction of the pairs at ~C(N/2,m/2)^2 ~ C(N,m)/sqrt(m)
+tie sets, so per-pair counting gives only a polynomial bound. A single functional killing ALL twin
+germs is needed. Sums of chain functionals over pairs do not cancel the contributions of chains whose
+final pair is not the twin pair (twin symmetry pairs chains with EQUAL values, Delta_{l1} G = G minus
+leaf l1). Coordinate-flag (top-degree) invariants do not separate (step 11). The out-star functional
+Lambda kills germs with >= m-2 out-leaves at a centre (lam_r.py: m=5 r=3, m=6 r=4: all zero) but not
+>= m-3 (m=6 r=3: 4320/8640 nonzero).
+Status: general-m twin elimination OPEN (measured true for m <= 6 and m = 7, R = 1); no PROOFS.md entry.
+m=7 R=2 run still in progress (logs/sym_md_7.log; slow canonicalisation).
