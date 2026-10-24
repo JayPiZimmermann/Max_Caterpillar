@@ -47,6 +47,12 @@ def source_root(key):
     return min(marks) >= 0 and sum(marks) == 2
 
 
+def inward(key):
+    head, edges = key
+    vertices = {v for edge in edges for v in edge}
+    return all(head[v] + sum(a == v for a, b in edges) == 1 for v in vertices)
+
+
 def engine(n, orbits):
     keys = [key for orbit in orbits for key in orbit]
     offsets = np.cumsum([0] + [len(orb) for orb in orbits])[:-1]
@@ -85,6 +91,10 @@ def main(n, mode, restriction):
     trees, orbits = family(n, mode)
     if restriction == 'source':
         orbits = [orb for orb in orbits if source_root(orb[0])]
+    elif restriction == 'inward':
+        orbits = [orb for orb in orbits if inward(orb[0])]
+    else:
+        assert restriction == 'full'
     width = len(orbits)
     count = width + 32
     dest = HERE / f'exponential_batch_{mode}_{restriction}_{n}.json'
@@ -145,6 +155,27 @@ def main(n, mode, restriction):
     print('RANKS', data['ranks'], 'SECONDS', round(time.monotonic() - started, 2), flush=True)
     if rank == width + 1:
         data['status'] = 'FULL_COLUMN_MODULAR_RANK_IMPLIES_EXACT_TOP_OBSTRUCTION'
+    elif width in pivots:
+        # Characteristic-zero upper rank requires exact identities. Save every
+        # modular kernel proposal with its distinct free coordinate; a separate
+        # bounded verifier checks them before any impossibility is claimed.
+        free = [j for j in range(width) if j not in pivots]
+        proposals = []
+        for j in free:
+            vector = [(j, '1')]
+            for i, pivot in enumerate(pivots):
+                if pivot == width:
+                    continue
+                value = -int(reduced[i, j]) % PRIME
+                if value:
+                    coefficient = ratrec(value, PRIME)
+                    if coefficient is None:
+                        vector = None
+                        break
+                    vector.append((pivot, str(coefficient)))
+            proposals.append(vector)
+        data.update(kernel_free_columns=free, kernel_proposals=proposals)
+        print('KERNEL PROPOSALS', sum(v is not None for v in proposals), '/', len(proposals), flush=True)
     elif width not in pivots:
         proposed = [Q(0)] * width
         for i, pivot in enumerate(pivots):
