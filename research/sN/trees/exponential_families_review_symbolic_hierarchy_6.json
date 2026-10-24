@@ -1,0 +1,14 @@
+{
+  "status": "SYMBOLIC_IDENTITY_REPLAY_PASS",
+  "n": 6,
+  "family": "hierarchy",
+  "independent_algorithm": false,
+  "nonzero_orbits": 330,
+  "nonzero_full_units": 3960,
+  "symbolic_calls": 3331,
+  "expression_terms": 3961,
+  "source": "exponential_families_hierarchy_6.json",
+  "source_sha256": "1a2ebc2a8dfd568c5de2558759c7aebd8506c767f11852bf6b797044149faa6f",
+  "checker_sha256": "0caeb5b792e21e9fa2518d9f2f87b50872e9420aced68cb0fb9e2cb22da3a2bc",
+  "elapsed_seconds": 8.301542725999752
+}

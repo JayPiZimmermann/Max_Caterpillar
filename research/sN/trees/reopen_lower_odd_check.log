@@ -1,0 +1,65 @@
+checked n 2 total trees 1 vertex identities 0 seconds 0.001
+checked n 3 total trees 2 vertex identities 24 seconds 0.001
+checked n 4 total trees 4 vertex identities 24 seconds 0.001
+checked n 5 total trees 7 vertex identities 744 seconds 0.048
+checked n 6 total trees 13 vertex identities 744 seconds 0.048
+checked n 7 total trees 24 vertex identities 20008 seconds 5.04
+checked n 8 total trees 47 vertex identities 20008 seconds 5.043
+checked n 9 total trees 94 vertex identities 20008 seconds 5.05
+checked n 10 total trees 200 vertex identities 20008 seconds 5.078
+checked n 11 total trees 435 vertex identities 20008 seconds 5.202
+{
+  "status": "EXACT_FINITE_CONTROLS_PASS_UNIFORM_ARGUMENT_IN_NOTE",
+  "tree_count": 435,
+  "matching_count": 28647,
+  "duplicated_leaf_graphs": 54,
+  "vertex_identities": 20008,
+  "per_arity": [
+    {
+      "tree_vertices": 2,
+      "vertex_checks": 0
+    },
+    {
+      "tree_vertices": 3,
+      "vertex_checks": 24
+    },
+    {
+      "tree_vertices": 4,
+      "vertex_checks": 0
+    },
+    {
+      "tree_vertices": 5,
+      "vertex_checks": 720
+    },
+    {
+      "tree_vertices": 6,
+      "vertex_checks": 0
+    },
+    {
+      "tree_vertices": 7,
+      "vertex_checks": 19264
+    },
+    {
+      "tree_vertices": 8,
+      "vertex_checks": 0
+    },
+    {
+      "tree_vertices": 9,
+      "vertex_checks": 0
+    },
+    {
+      "tree_vertices": 10,
+      "vertex_checks": 0
+    },
+    {
+      "tree_vertices": 11,
+      "vertex_checks": 0
+    }
+  ],
+  "budget_seconds": 120,
+  "elapsed_seconds": 5.202499185001216,
+  "producer_sha256": "41c8b86f9e2b59737a96c4779010fe795bcea83619875a0925ff6c9cd4844a56",
+  "meaning": "Checks counting and the fixed-coordinate recursion obstruction; does not prove or refute uniform separation"
+}
+
+EXIT 0

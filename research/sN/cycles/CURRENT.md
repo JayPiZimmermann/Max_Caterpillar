@@ -5,6 +5,26 @@ together with all exposed-face functions and linear functions, contains max_N.
 A fixed cycle on the N-1 nonapex labels, arbitrary edge orientations and states,
 is the first candidate. A self-loop gives sigma(0)=0; "loops" here means cycles.
 
+## Latest continuation
+
+The full-hinge bicentre family `K_(2,N-3)`, with every head root and
+orientation and all five states on its optional centre edge, is exactly
+insufficient at five inputs, also at seven. The independent five-input
+checker verifies seven functional identities giving rank at most 31 and a
+32-by-32 augmented Fourier minor of nonzero determinant. At seven there
+are only 120 orbit columns and an augmented rank of 121. See
+[the derivation and scope](bicenter_review_formula.md). The larger family
+allowing all five states independently on every leaf edge remains open.
+Those formal states need not all be actual exposed faces of a full cyclic
+zonotope; the two families must not be conflated.
+
+The latest upper priority is the [renewed tree-family shortlist](../trees/EXPONENTIAL_FAMILIES.md).
+Breadth-first and balanced-hierarchy trees both have size `poly(N)20^N`
+after all head roots and edge states, and exact top identities at five and
+six inputs. Deque traversals, two-page trees and matching expansions are
+controlled enlargements. Uniform sufficiency is open; finite identities
+and counting alone do not settle the exponential construction question.
+
 Budget: first validate the general-head tree Fourier formula against a separately
 implemented braid-chamber integral on exact rational frequencies, N=4,5.
 Then test fixed-cycle families at increasing N using dihedral orbit sums and

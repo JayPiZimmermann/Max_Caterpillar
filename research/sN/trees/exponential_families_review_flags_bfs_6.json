@@ -1,0 +1,14 @@
+{
+  "status": "INDEPENDENT_COMPLETE_FLAG_IDENTITY_PASS",
+  "n": 6,
+  "family": "bfs",
+  "nonzero_orbits": 146,
+  "nonzero_full_units": 1752,
+  "complete_flag_rows": 127068,
+  "residual_nonzero_rows": 0,
+  "coefficient_perturbation_detected": true,
+  "source": "exponential_families_bfs_6.json",
+  "source_sha256": "ae1c714c36e5de7ec98419a2634a55bc315e3b4541f1e7b1368b1c9377991f3b",
+  "checker_sha256": "0caeb5b792e21e9fa2518d9f2f87b50872e9420aced68cb0fb9e2cb22da3a2bc",
+  "elapsed_seconds": 48.09233663299892
+}

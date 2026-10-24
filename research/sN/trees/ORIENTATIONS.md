@@ -56,17 +56,27 @@ frequency rows, prime 1000003, in 21.7 seconds (exit 0). This is **only a
 modular diagnostic**. Neither an exact seven-label separator nor a uniform
 separation theorem has been proved by that calculation.
 
-A uniform separator of this kind would imply a stronger unrestricted
-all-tree exponential bound: each relevant tie would need an induced tree
-with a matching covering all but at most one vertex. Such a vertex set is
-encoded by a matching and its optional unmatched vertex. A forest on n
-vertices has at most `phi^n` matchings, where `phi=(1+sqrt(5))/2`, by the
-leaf recurrence and `phi^2=phi+1`. Thus a unit could cover at most
-`N phi^(N-1)` ties, giving an asymptotic exponential base `2/phi`, about
-1.236. This is a conditional route, not the established all-tree bound.
-A fixed bounded number of unmatched vertices would give the same base,
-with a larger polynomial denominator. The earlier outward-twin residual
-remains another sufficient route.
+The [odd-arity refinement](reopen_lower_odd.md) now needs this separator only
+at sufficiently large odd arities. On those ties the nonapex tree must have
+a perfect matching, so no unmatched vertex needs to be recorded. A forest
+on `N-1` vertices has at most `F_N` matchings by the leaf recurrence.
+Consequently the hypothesis, starting at an odd threshold `m0`, would give
+`|K| >= (2^(N-1) - sum_(odd j<m0) binom(N,j))/F_N`, with exponential base
+`2/phi`, about 1.236, and no polynomial denominator. This remains conditional.
+
+The same note refutes a tempting induction: one fixed coordinate deletion
+cannot establish the new odd-arity separator. Duplicate a leaf of an
+arbitrary smaller tree as an outward leaf at its hub. The enlarged tree
+has no perfect matching, but deleting that new coordinate recovers the
+arbitrary original unit modulo `L_1`. Thus its image already spans the
+smaller maximum. This is an obstruction to that recursion, not a refutation
+of separation. Exact matching and exposed-face controls accompany the proof.
+The earlier outward-twin residual remains another sufficient route.
+
+For the separate upper problem, see the [renewed exponential tree families](EXPONENTIAL_FAMILIES.md).
+Breadth-first and fixed-hierarchy candidates have exact five- and six-input
+top identities, with all roots and orientations and both traversal directions.
+The all-arity construction is still open.
 
 ## A shortcut refuted for outward twins
 

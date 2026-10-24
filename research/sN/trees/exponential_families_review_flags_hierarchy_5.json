@@ -1,0 +1,14 @@
+{
+  "status": "INDEPENDENT_COMPLETE_FLAG_IDENTITY_PASS",
+  "n": 5,
+  "family": "hierarchy",
+  "nonzero_orbits": 12,
+  "nonzero_full_units": 110,
+  "complete_flag_rows": 1390,
+  "residual_nonzero_rows": 0,
+  "coefficient_perturbation_detected": true,
+  "source": "exponential_families_hierarchy_5.json",
+  "source_sha256": "b1ed1c4cb7560990dff00159b4fecae4f7690be8465d81c0b446f59df06daeb1",
+  "checker_sha256": "0caeb5b792e21e9fa2518d9f2f87b50872e9420aced68cb0fb9e2cb22da3a2bc",
+  "elapsed_seconds": 0.1961197529999481
+}

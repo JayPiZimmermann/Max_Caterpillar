@@ -10,6 +10,31 @@ unrestricted cubic bound and reduces an exponential bound to uniform canonical
 twin separation. None of these new finite certificates is part of the Lean
 verification receipt.
 
+## Renewed exponential-size tree families
+
+See [the current shortlist](../EXPONENTIAL_FAMILIES.md) and its independent
+semantic/complete-flag review. Breadth-first and fixed pruned-dyadic-hierarchy
+trees, allowing cyclic starts and both traversal directions, have candidate
+dictionary counts `poly(N)20^N` including all roots and five edge states.
+Both now have exact top-class identities at five and six inputs. At six,
+the breadth-first family uses 100 of the 125 nonapex labelled trees and its
+certificate selects 1,752 full units; the hierarchy uses 65 trees and selects
+3,960 full units. Counts are before face corrections. These finite identities
+are not uniform constructions or Lean results.
+
+The deque enlargement has count `poly(N)40^N`. Two-page trees, noncrossing
+matching expansions, nonnesting trees, and restricted relabellings of arbitrary
+noncrossing trees are additional precisely counted candidates. The defining
+constraint must control labelings, not just unlabelled shapes. The new
+hierarchy family allows every pair of labels as a possible connecting edge,
+so it is not excluded by the sparse-global-feature-graph obstruction.
+
+The latest lower refinement is [the odd-tie argument](../reopen_lower_odd.md):
+perfect-matching separation only at sufficiently large odd arities would
+yield base `2/phi` with a Fibonacci denominator and no polynomial loss.
+The same note gives a uniform obstruction to proving it by one fixed
+coordinate deletion. The separation theorem itself remains open.
+
 ## Latest arbitrary-orientation extension
 
 See [the orientation ledger](../ORIENTATIONS.md). All orientations and all
@@ -30,8 +55,8 @@ tree orbits with matching number at most 2 gives modular ranks 112/113;
 this is diagnostic only. The uniform separator remains open. The upper
 construction problem is unchanged.
 
-The checkpoint and all preceding local commits were pushed to `origin/main`
-through `9147823`; its Lean links point to source snapshot `039d684`.
+The checkpoint and orientation results were pushed to `origin/main`
+through `3690884`; the paper's Lean links point to source snapshot `039d684`.
 The current paper additionally contains these new orientation results.
 The public theorem interface build passes, but the old global certificate
 is historical and manifest reconciliation is still pending.
