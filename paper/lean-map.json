@@ -1137,7 +1137,7 @@
   },
   "fixed_five_network": {
     "kind": "certificate",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/netB_10_6.json",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/netB_10_6.json",
     "equations": [
       "eq:fixed-five-features",
       "eq:fixed-five-identity",
@@ -1146,7 +1146,7 @@
   },
   "fixed_five_translation": {
     "kind": "certificate",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie.md#reduction-to-four-free-neurons",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight_fixed_bowtie.md#reduction-to-four-free-neurons",
     "equations": [
       "eq:fixed-five-free",
       "eq:fixed-five-translation"
@@ -1154,11 +1154,10 @@
   },
   "fixed_five_differences": {
     "kind": "certificate",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie_verify.py",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight_fixed_bowtie_verify.py",
     "equations": [
       "eq:fixed-five-difference",
-      "eq:fixed-five-locality",
-      "eq:fixed-five-rays"
+      "eq:fixed-five-locality"
     ]
   },
   "weighted_degree_two": {
@@ -1168,6 +1167,21 @@
       "eq:degree-two-unit",
       "eq:degree-two-count",
       "eq:degree-two-capacity"
+    ]
+  },
+  "fixed_five_rays": {
+    "kind": "certificate",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight_fixed_bowtie_pairs.md",
+    "equations": [
+      "eq:fixed-five-rays"
+    ]
+  },
+  "weighted_forests": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/e9cea5db0b78bc02d24e03e5d545c23a61d8a761/research/sN/trees/overnight_bounded_degree.md",
+    "equations": [
+      "eq:weighted-forest-count",
+      "eq:weighted-isolates"
     ]
   }
 }
