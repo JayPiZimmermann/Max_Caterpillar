@@ -1,9 +1,20 @@
-LIVE STATUS (2026-10-24): general-N question for arbitrary trees OPEN; exponential for bounded hinge degree (Lean).
-Proved (Lean): quadratic N(N-1) <= 6|K| for arbitrary tree units; exponential bound for the
-Brunck et al. vocabulary (caterpillars + all rooted-star faces, stars not counted).
-Refuted (measured): path necessity at a 5-tie. Next test: germ functionals that use head
-size / multiplicity jointly (big-head germs need non-leaf outside structure).
-Step 13: no uniform (all-heads) mixed-difference functional kills twin germs at m=5 (spread must be >= R+1); m=4 exact uniform functional; per-R separation measured.
+LIVE STATUS (2026-10-24): the unrestricted exponential lower bound and an
+exponential upper construction remain OPEN. See [the current DFS ledger](all_tree_dfs/CURRENT.md)
+and [the independent review](all_tree_review.md) before using historical conclusions below.
+
+Lean verifies the quadratic bound for arbitrary tree units and the exponential
+bound for forests of bounded reduced degree, including the Brunck et al.
+vocabulary with all units counted. A new exact five-label complete-flag
+certificate, together with the canonical-head reduction, gives the mathematical
+cubic bound C(N,5) <= floor((N-3)^2/4)|K|; this is not yet formalized in Lean.
+Canonical twin separation is certified at five and six labels and measured
+modulo a prime at seven. Uniform separation is the remaining lower-bound lemma.
+
+Corrections to older experiments: connected top germs have canonical root heads,
+so arbitrary large-head tests do not refute their separation. The stronger
+canonical path-separation claim is true at five labels but is refuted at six
+by an exact complete-flag identity. Bounded-grid tests do not prove that no
+finite uniform mixed-difference functional exists.
 
 # Tree units: does the exponential lower bound survive? (research/sN/trees)
 
@@ -39,10 +50,12 @@ of its hinge forest: at most C(N-1, 2) sets T, giving |K| >= C(N,m)/C(N-1,2) (ex
   tau-vectors of star germs, m=5, R<=3). So any proof of PN_5 must use more than coordinate flags.
 Status: measured only; heads unbounded in general -> open (see step 4: refuted at R=5).
 
-### 4. PN_5 REFUTED for larger heads (measured)
+### 4. Historical arbitrary-head PN_5 probe (measured; scope corrected above)
 pn_test.py m=5 nopath: R=4 max NOT in span, R=5 max IN span (logs/pn5_nopath_R45.log).
-So star germs (K_{1,3}) with heads up to 5 plus lower-dim tree germs produce max_5 at a 5-tie:
-"path necessity" fails; any locality-type argument must use head sizes.
+This is evidence within a sampled arbitrary-head model. It does not certify a
+function identity or show realizability as a connected top germ of an original
+tree unit. The newer canonical-head reduction and exact five-label certificate
+supersede the earlier conclusion that actual five-label path necessity fails.
 Flag invariants with subset flags (flag_gen.py) do not separate even at R=1.
 sym_span.py (S_N-orbit families "centre + <=k special vertices + one class of generic
 leaves", polynomial orbits): N=5 k<=2 IN (trivial), N=6 k<=1,2 NOT in span.
@@ -189,7 +202,7 @@ Lambda kills germs with >= m-2 out-leaves at a centre (lam_r.py: m=5 r=3, m=6 r=
 Status: general-m twin elimination OPEN (measured true for m <= 6 and m = 7, R = 1); no PROOFS.md entry.
 m=7 R=2 run still in progress (logs/sym_md_7.log; slow canonicalisation).
 
-### 13. Fresh look at the all-twin functional: reformulations; m = 4 exact; NO finite uniform functional at m = 5
+### 13. Historical all-head twin probes: m = 4 exact; bounded-grid failures at m = 5
 Reformulations (proved on paper, elementary):
  (a) MD functionals = pairings with D = d_1...d_m.  A PL function with all m-th mixed differences zero is a
      sum of PL functions each independent of one coordinate (ANOVA: f(z) = -sum_{S != [m]} (-1)^{m-|S|} f(z_S)).
@@ -208,9 +221,10 @@ m = 5 (measured, twin_wsep.py, anchors normalised min 0, entries <= k): separati
 runs: R=2: k=4 yes (k=2,3 no); R=4: k=5 yes, k=4 no; R=6: k=7 yes, k=5,6 no; R=8: k=9 yes, k=5..8 no;
 R=10: k=11 yes, k=9 no.  For each fixed k the family rank saturates (k=5: rank 106 at R=6 and R=8; k=6: 189)
 with max INSIDE.  Same failure when only the twin leaves' heads are bounded (|kappa| <= 1, others <= R).
-CONSEQUENCE: at m = 5 no finite combination of mixed differences (any rational boxes) kills all twin germs
-for all head sizes; Phi_m must depend on the head bound R (resolution ~ 1/(R+1)) or be a non-finite
-(limit / integral) functional.  Per-R separation still holds (measured R <= 10).
+The measurements suggest that these bounded grids need finer resolution as R
+grows. They do not quantify over all rational boxes and do not prove
+nonexistence of a finite uniform functional. Per-R separation still holds
+in the measured range R <= 10.
 Closure probe (twin_limit.py, generic boxes): adding head-limit functions 1[<l,z> > 0] * L0 (limits of
 twin germs with heads v0 + lambda l, l_apex = 0, l equal on the twin pair) adds 1 dimension and keeps max
 separated (m=5, R <= 4, |l| <= 2): no sign that max lies in the closure, so a continuous (non-finite)
@@ -228,8 +242,39 @@ Decreasing, possibly levelling off; INCONCLUSIVE whether max lies in the closure
 New separation data (generic symmetric tests, sym_generic.py, validated: m=6 R=3 "two" rank 135 as before):
 m=6 twin R=3 (3142 germ reps): rank 849, with max 850 -> SEPARATED (logs/gen_twin_6_3.log).
 m=7 "two" R=2 (old run "not separated" with 6 step values, 792 tests, rank 610): re-test with generic tests
-queued (logs/gen_two_7_2.log; family cache logs/fam_two_7_2.pkl, slow canonicalisation).
-Status: per-R twin elimination measured true (m<=6, m=5 up to R=10); a UNIFORM (all heads) functional of
-mixed-difference type does not exist at m=5 (measured); a short general-m proof via one explicit Phi_m is
-not in sight.  Twin elimination would have to be R-dependent (heads up to N at a locality), so the route
-"one explicit Phi_m" to an exponential bound for arbitrary trees is blocked as stated.
+DONE: SEPARATED (900 generic tests, rank 663, with max 664; logs/gen_two_7_2.log) -> the old m=7 R=2
+"not separated" was an instrument artefact (too few step values).
+Historical status: per-R twin elimination was measured for m<=6, including
+m=5 up to R=10. The all-head uniform question was unresolved. The present
+canonical-head reduction removes arbitrary heads from the top-quotient route,
+so these resolution measurements do not block the current uniform twin lemma.
+
+### 14. Closure question at m = 5: max_5 IS (numerically) in the closure of span(twin germs, all heads) + W_5
+Structural facts (paper):
+ (i) every germ with apex a is g = relu(A(z_{-a}) - z_a) with A = <v',z'> + sum_F relu(z_i - z_j) a PL
+     function of the other coordinates; max = z_0 + relu(max_{T\0} - z_0) has the same form.  Pairing D g with
+     sigma(z_a) tau(z') where sigma = 1 on a long interval reproduces Delta_a (step 12): nothing new.
+ (ii) heads v = v0 + lam u (u in M = {x_apex = 0, sum x = 0, x_l1 = x_l2}, dim M = m-3) give, as lam -> oo,
+     g - lam relu(<u,z>) -> 1[<u,z> > 0] L0 plus distributional terms L0^k delta^(k-2)(<u,z>) lam^(1-k);
+     relu(<u,z>) and 1[u.z>0] * (terms without z_apex) lie in W.  Uniform killing therefore needs the
+     conditions for every real direction u in M.  At m = 4, dim M = 1 (finitely many directions): the uniform
+     finite functional of step 13 exists.  At m = 5, dim M = 2 (a circle of directions): this explains why
+     every finite-spread functional fails once R >= spread (step 13).
+Measurements (twin_l2.py, column-normalised SVD; 5000 chamber points of the symmetrised box-MD transform,
+i.e. pairings of D f with box indicators = a weak (negative-Sobolev-type) norm; logs/twin_l2_5c.log;
+held-out validation twin_l2_holdout.py, logs/twin_l2_holdout_5.log, fit on half, test on the other half):
+   R        2        4        8        12       16
+   train  7.0e-3   4.5e-3   2.2e-3   1.2e-3   7.5e-4   (ranks 36, 102, 330, 686, 1170)
+   test   7.1e-3   4.8e-3   2.7e-3   1.75e-3  1.35e-3
+ m = 4 for comparison: 0.107 (R=2), 0.047 (8), 0.043 (32): stable plateau.
+ (Earlier step-13 numbers for R >= 10 were QR-tolerance artefacts; superseded.)
+First-order limit functions alone (twin_l2lim.py, 1[u.z>0](Phi_F - z_0), 1[u.z>0]<w,z>, real u) barely move
+the residual (8.3e-3 -> 7.4e-3 at R=2): the approximation of max comes from finite-but-large heads.
+CONCLUSION (measured, not proved): the relative distance from max_5 to span(twins, heads <= R) + W_5 decays
+roughly like R^(-0.8) on held-out points, so max_5 lies in the closure: no continuous (head-uniform)
+twin-killing functional exists at m = 5, in addition to no finite one.  Exact per-R separation still holds
+(R <= 10, step 13), so there is no exact identity with heads <= 10; an exact identity max_5 = twins + W would
+need either heads > 10 or would contradict per-R separation.  Closure membership alone gives no exact tree
+expansion (the error must be absorbed by non-twin germs), so it does not by itself yield a subexponential
+construction; it does mean any twin-elimination proof must quantify heads (margin ~ 1/R).
+m = 7 "two" R = 2: SEPARATED with generic tests (step 13 entry updated).

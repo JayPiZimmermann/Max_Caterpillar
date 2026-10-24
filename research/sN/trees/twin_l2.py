@@ -23,12 +23,19 @@ def SF(v, F):
     return s.sum(axis=0)
 b = (Z.max(axis=1).reshape(len(perms), npts, len(cube)) @ sign).sum(axis=0)
 fam = sym_md.family(m, max(Rs))
+allcols = []; Rprev = -1
 for R in Rs:
     t0 = time.time()
-    cols = [SF(v, F) for v, F in fam if max(abs(x) for x in v) <= R]
+    cols = [SF(v, F) for v, F in fam if max(abs(x) for x in v) <= R and max(abs(x) for x in v) > Rprev]
+    allcols.extend(cols); cols = allcols
     A = np.array(cols).T
-    Q, Rr = np.linalg.qr(A)
-    keep = np.abs(np.diag(Rr)) > 1e-9 * np.abs(np.diag(Rr)).max()
-    Q = Q[:, keep]
-    res = b - Q @ (Q.T @ b)
-    print(f'm={m} R={R}: {A.shape[1]} germs, numerical rank {keep.sum()}, relative residual {np.linalg.norm(res)/np.linalg.norm(b):.3e} ({time.time()-t0:.0f}s)', flush=True)
+    nr = np.linalg.norm(A, axis=0); A = A[:, nr > 1e-9 * nr.max()] / nr[nr > 1e-9 * nr.max()]
+    if R == max(Rs): np.save(f'logs/l2A_{m}_{R}.npy', A); np.save(f'logs/l2b_{m}.npy', b)
+    U, sv, _ = np.linalg.svd(A, full_matrices=False)
+    out = []
+    for tol in (1e-6, 1e-8, 1e-10):
+        Uk = U[:, sv > tol * sv[0]]
+        res = b - Uk @ (Uk.T @ b)
+        out.append(f'tol {tol:g}: rank {Uk.shape[1]} resid {np.linalg.norm(res)/np.linalg.norm(b):.3e}')
+    print(f'm={m} R={R}: {A.shape[1]} germs; ' + '; '.join(out) + f' ({time.time()-t0:.0f}s)', flush=True)
+    Rprev = R

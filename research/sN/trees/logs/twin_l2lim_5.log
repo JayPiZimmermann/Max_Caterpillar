@@ -1,0 +1,4 @@
+m=5 npts=4000 R=2: twins only: rank/resid (36, 0.00832553587242574)
+40 types
+  + 1600 limit functions (10 directions/type): rank/resid (436, 0.007738056687236456)
+  + 3200 limit functions (20 directions/type): rank/resid (836, 0.007398559031561489)

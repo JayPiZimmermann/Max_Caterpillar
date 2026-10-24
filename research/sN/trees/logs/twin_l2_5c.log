@@ -1,0 +1,5 @@
+m=5 R=2: 68 germs; tol 1e-06: rank 36 resid 6.999e-03; tol 1e-08: rank 36 resid 6.999e-03; tol 1e-10: rank 36 resid 6.999e-03 (60s)
+m=5 R=4: 232 germs; tol 1e-06: rank 102 resid 4.468e-03; tol 1e-08: rank 102 resid 4.468e-03; tol 1e-10: rank 102 resid 4.468e-03 (145s)
+m=5 R=8: 848 germs; tol 1e-06: rank 330 resid 2.236e-03; tol 1e-08: rank 330 resid 2.236e-03; tol 1e-10: rank 330 resid 2.236e-03 (435s)
+m=5 R=12: 1848 germs; tol 1e-06: rank 686 resid 1.241e-03; tol 1e-08: rank 686 resid 1.241e-03; tol 1e-10: rank 686 resid 1.241e-03 (913s)
+m=5 R=16: 3232 germs; tol 1e-06: rank 1170 resid 7.457e-04; tol 1e-08: rank 1170 resid 7.457e-04; tol 1e-10: rank 1170 resid 7.457e-04 (2711s)
