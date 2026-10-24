@@ -1,0 +1,14 @@
+COMPACT_COVERAGE_AND_MINOR_PASS [126, 127]
+FRESH_KERNEL_PASS 0 OF 12
+FRESH_KERNEL_PASS 1 OF 12
+FRESH_KERNEL_PASS 2 OF 12
+FRESH_KERNEL_PASS 3 OF 12
+FRESH_KERNEL_PASS 4 OF 12
+FRESH_KERNEL_PASS 5 OF 12
+FRESH_KERNEL_PASS 6 OF 12
+FRESH_KERNEL_PASS 7 OF 12
+FRESH_KERNEL_PASS 8 OF 12
+FRESH_KERNEL_PASS 9 OF 12
+FRESH_KERNEL_PASS 10 OF 12
+FRESH_KERNEL_PASS 11 OF 12
+{"status": "FRESH_COMPACT_CYCLE_SYMBOLIC_PROOF_PASS", "n": 7, "path_orbits": 138, "independent_modular_ranks": [126, 127], "exact_independent_kernel_vectors": 12, "symbolic_proof_replayed": true, "fresh_symbolic_receipts": [{"terms": 60480, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 0, "seconds": 28.63379205700039}, {"terms": 110880, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 1, "seconds": 66.5845634569996}, {"terms": 110880, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 2, "seconds": 82.18913481899654}, {"terms": 209160, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 3, "seconds": 128.53485119000106}, {"terms": 153720, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 4, "seconds": 75.45139898499474}, {"terms": 60480, "poles": 805, "pole_orbits": 12, "symbolic_calls": 12, "index": 5, "seconds": 34.05021960900194}, {"terms": 108360, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 6, "seconds": 64.86131099100021}, {"terms": 60480, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 7, "seconds": 29.48244468699704}, {"terms": 161280, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 8, "seconds": 96.57844091599691}, {"terms": 60480, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 9, "seconds": 30.022215396005777}, {"terms": 110880, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 10, "seconds": 56.94171006399847}, {"terms": 60480, "poles": 910, "pole_orbits": 13, "symbolic_calls": 13, "index": 11, "seconds": 31.14636807199713}], "seconds": 725.833155403001, "checker_sha256": "1f5a25405b6f69b725133130d98ec07d1a9f246cc2db4ff8ffbc78f41c35009c", "minor_sha256": "1bbbfd260a61a5d1c9f50b2db8d01c636de8b8411f58ae3d871ddac417283832", "archived_symbolic_proof_sha256": "4b450f9be080d1f07f54e883d052644da7192254a9aad854d00f6a92b026d504"}

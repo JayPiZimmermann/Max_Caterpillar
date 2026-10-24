@@ -1,0 +1,68 @@
+{
+  "status": "EXACT_RAW_ORIENTATION_DELETION_CONTROLS_PASS",
+  "results": [
+    {
+      "n": 4,
+      "surviving_directional_germs": 80,
+      "classification": {
+        "cycle:deleted_root": 12,
+        "cycle:deleted_other": 24,
+        "path:deleted_root": 12,
+        "path:deleted_other": 32
+      }
+    },
+    {
+      "n": 5,
+      "surviving_directional_germs": 248,
+      "classification": {
+        "cycle:deleted_root": 32,
+        "cycle:deleted_other": 96,
+        "path:deleted_root": 24,
+        "path:deleted_other": 96
+      }
+    },
+    {
+      "n": 6,
+      "surviving_directional_germs": 704,
+      "classification": {
+        "cycle:deleted_root": 80,
+        "cycle:deleted_other": 320,
+        "path:deleted_root": 48,
+        "path:deleted_other": 256
+      }
+    },
+    {
+      "n": 7,
+      "surviving_directional_germs": 1888,
+      "classification": {
+        "cycle:deleted_root": 192,
+        "cycle:deleted_other": 960,
+        "path:deleted_root": 96,
+        "path:deleted_other": 640
+      }
+    },
+    {
+      "n": 8,
+      "surviving_directional_germs": 4864,
+      "classification": {
+        "cycle:deleted_root": 448,
+        "cycle:deleted_other": 2688,
+        "path:deleted_root": 192,
+        "path:deleted_other": 1536
+      }
+    },
+    {
+      "n": 9,
+      "surviving_directional_germs": 12160,
+      "classification": {
+        "cycle:deleted_root": 1024,
+        "cycle:deleted_other": 7168,
+        "path:deleted_root": 384,
+        "path:deleted_other": 3584
+      }
+    }
+  ],
+  "producer_sha256": "4976b1a40be19a93d87be1e1add7c4c03b26597b21f7e2eeff282a3e7cb8963b",
+  "seconds": 0.8090625260010711,
+  "scope": "Complete raw root/orientation/endpoint-shift/direction cases at each listed arity; uniform case proof is in the accompanying note."
+}

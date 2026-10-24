@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_cycle_minor.py"
+  ],
+  "started_utc": "2026-10-24T23:24:12.467495+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_cycle_minor.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 3.2495005340024363,
+  "finished_utc": "2026-10-24T23:24:15.716997+00:00"
+}
