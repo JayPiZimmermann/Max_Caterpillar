@@ -137,3 +137,27 @@ already at m = 3 (outleaf_test.py), so "one out-leaf" cannot be eliminated.
 If the >=2-out-leaf elimination holds for all m, a tied hub contributes at most one tied
 out-leaf per locality, which would remove the out-star obstruction to counting for arbitrary trees.
 m = 6 test needs a symmetry-reduced, vectorized instrument (naive run too large; stopped).
+
+### 11. Symmetry-reduced instrument; elimination of >=2-out-leaf / twin-leaf germs (measured)
+sym_md.py: S_m-symmetric origin tests T_p = sum over the orbit of a step multiset p of the mixed
+difference at the full tie; evaluate only orbit representatives (apex 0, canonical form).
+A separating symmetric functional exists iff max's test vector is outside the family's span.
+Family "two" (a vertex with >= 2 out-leaves: leaf l, term relu(z_l - z_c), v_l = 0):
+  m=5: R<=8 SEPARATED; m=6: R=1..5 SEPARATED (R=3 needs >=7 step values; with 5 values the
+  210 tests were insufficient: "not separated" was an instrument artefact, rank 100 < 135 later);
+  m=7 R=1 (5 step values, 330 tests): SEPARATED; m=7 R=2 running (logs/sym_md_7.log).
+  Logs: logs/sym_md_6.log.
+Family "twin" (two leaves of F at a common centre with the same orientation and head entry):
+  m=4,5 (R<=5), m=6 (R<=2): SEPARATED (logs/sym_twin.log).
+Structural fact (proved on paper): a germ with twin leaves l1,l2 has no wall on the hyperplane
+z_l1 = z_l2 (its gradient components on l1,l2 lie in the same set {v, v±1}, which never gives a
+normal parallel to e_l1 - e_l2), while max_T has a wall there. Coordinate-flag (top-degree)
+invariants do NOT separate (twoleaf_flag.py, m=4,5): the separating functionals use boxes with
+comparable step sizes. Explicit functional for general m: NOT FOUND (the m=5 solution
+from sym_extract.py has 12 patterns with irregular rational coefficients).
+The out-star functional Lambda of step 10 does not kill general >=2-out-leaf germs
+(lam_on_family.py: 600/1440 nonzero at m=5).
+Counting sketch if twin elimination holds for all m: a tied centre has at most one tied F(T)-leaf
+per signature (orientation, kappa); hub-style forcing for kappa<=0 neighbours; residual loss from
+many signature classes appears to be e^{o(N)} (classes with kappa value K need K-1 further
+neighbours, so <= O(N^{1/3}) classes of size O(N^{1/3})) -- NOT written out, not checked.

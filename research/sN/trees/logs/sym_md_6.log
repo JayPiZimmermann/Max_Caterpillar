@@ -1,0 +1,8 @@
+m=6 R=1 values=[1, 3, 7, 15, 31]: 60 germ reps, 210 symmetric tests; rank 30, with max 31 -> SEPARATED
+m=6 R=2 values=[1, 3, 7, 15, 31]: 174 germ reps, 210 symmetric tests; rank 72, with max 73 -> SEPARATED
+m=6 R=3 values=[1, 3, 7, 15, 31]: 348 germ reps, 210 symmetric tests; rank 100, with max 100 -> not separated
+m=6 R=3 values=[1, 2, 3, 5, 8, 13, 21]: 348 germ reps, 924 symmetric tests; rank 135, with max 136 -> SEPARATED
+m=6 R=4 values=[1, 2, 3, 5, 8, 13, 21]: 576 germ reps, 924 symmetric tests; rank 213, with max 214 -> SEPARATED
+m=6 R=5 values=[1, 2, 3, 5, 8, 13, 21]: 864 germ reps, 924 symmetric tests; rank 311, with max 312 -> SEPARATED
+m=5 R=6 values=[1, 2, 3, 5, 8, 13, 21, 34]: 36 germ reps, 792 symmetric tests; rank 24, with max 25 -> SEPARATED
+m=5 R=8 values=[1, 2, 3, 5, 8, 13, 21, 34]: 48 germ reps, 792 symmetric tests; rank 32, with max 33 -> SEPARATED
