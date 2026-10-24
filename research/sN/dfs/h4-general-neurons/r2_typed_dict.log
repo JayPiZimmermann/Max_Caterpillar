@@ -1,0 +1,5 @@
+# output of: python r2_typed_dict.py 5 ; python r2_typed_dict.py 6 (2026-10-23)
+N 5 types ['star', 'dmax', 'btype'] dictionary 370 points 12000
+rank 126 of 385 rel residual 1.000e-15
+N 6 types ['star', 'dmax', 'btype'] dictionary 1470 points 12000
+rank 542 of 1491 rel residual 4.983e-03

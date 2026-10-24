@@ -1,0 +1,36 @@
+N=6 TMAX=4 canonical units 653
+  t=3: 73 permuted germs, rank 7, 10 projective classes (0.3s)
+  t=4: 927 permuted germs, rank 113, 197 projective classes (14.2s)
+ iter 1: columns 8, LP value 10.000000000, dual support 1
+   + column (4,(1, 1)) MILP cost 0.000000, |inside| 176
+   + column (4,(2,)) MILP cost 0.000000, |inside| 176
+ iter 2: columns 10, LP value 13.750000000, dual support 2
+   + column (4,(1, 1)) MILP cost 0.333333, |inside| 159
+   + column (4,(2,)) MILP cost 0.333333, |inside| 159
+ iter 3: columns 12, LP value 13.750000000, dual support 2
+   + column (4,(1, 1)) MILP cost 0.333333, |inside| 162
+   + column (4,(2,)) MILP cost 0.458333, |inside| 161
+ iter 4: columns 14, LP value 17.014925373, dual support 4
+   + column (3,(1, 1, 1)) MILP cost 0.597015, |inside| 9
+   + column (3,(1, 2)) MILP cost 0.805970, |inside| 9
+   + column (3,(2, 1)) MILP cost 0.805970, |inside| 9
+   + column (4,(1, 1)) MILP cost 0.417910, |inside| 162
+   + column (4,(2,)) MILP cost 0.597015, |inside| 170
+ iter 5: columns 19, LP value 19.687500000, dual support 3
+RESULT N=6 TMAX=4: LP over generated columns: exact primal 315/16 = 19.687500, exact dual 315/16 = 19.687500 (CERTIFIED EQUAL); C(N,3)/2 = 10
+  primal weights:
+    4 (1, 1) flat |inside|=176 15/4
+    4 (1, 1) flat |inside|=159 15/8
+    4 (1, 1) flat |inside|=162 75/8
+    4 (1, 1) flat |inside|=162 75/16
+  dual support:
+    h= (-1, 0, 0, 0, 0, 1) M= [(1, 2), (2, 3), (3, 4), (4, 5)] y= 225/16
+    h= (-1, 0, 0, 0, 0, 1) M= [(1, 2), (3, 4), (4, 5)] y= 15/4
+    h= (-1, 0, 1, -1, 0, 1) M= [(1, 2), (4, 5)] y= 15/8
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+HighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();
+
+real	4m57.762s
+user	1m45.375s
+sys	0m0.954s
+EXIT=0

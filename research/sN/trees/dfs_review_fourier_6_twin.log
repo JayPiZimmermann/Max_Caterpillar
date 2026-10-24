@@ -1,0 +1,41 @@
+domain 6 twin orbits 37 points 75
+row 0 elapsed 0.16
+row 5 elapsed 1.02
+row 10 elapsed 1.87
+row 15 elapsed 2.69
+row 20 elapsed 3.51
+row 25 elapsed 4.35
+row 30 elapsed 5.17
+row 35 elapsed 5.99
+row 40 elapsed 6.81
+row 45 elapsed 7.62
+row 50 elapsed 8.44
+row 55 elapsed 9.26
+row 60 elapsed 10.07
+row 65 elapsed 10.91
+row 70 elapsed 11.72
+modular ranks [20, 21]
+exact row 0 elapsed 12.46
+exact row 1 elapsed 12.54
+exact row 2 elapsed 12.62
+exact row 3 elapsed 12.71
+exact row 4 elapsed 12.81
+exact row 5 elapsed 12.9
+exact row 6 elapsed 13.0
+exact row 7 elapsed 13.11
+exact row 8 elapsed 13.22
+exact row 9 elapsed 13.34
+exact row 10 elapsed 13.43
+exact row 11 elapsed 13.52
+exact row 12 elapsed 13.61
+exact row 13 elapsed 13.71
+exact row 14 elapsed 13.8
+exact row 15 elapsed 13.9
+exact row 16 elapsed 14.0
+exact row 17 elapsed 14.09
+exact row 18 elapsed 14.18
+exact row 19 elapsed 14.28
+exact row 20 elapsed 14.37
+exact nullspace starting (21, 38)
+EXACT_SEPARATOR 21 rows elapsed 15.02
+DONE EXACT_RATIONAL_SEPARATOR

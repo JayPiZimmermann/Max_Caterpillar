@@ -1,0 +1,23 @@
+N=5 TMAX=4 canonical units 114
+  t=3: 37 permuted germs, rank 7, 10 projective classes (0.1s)
+  t=4: 166 permuted germs, rank 89, 131 projective classes (4.4s)
+ iter 1: columns 4, LP value 5.000000000, dual support 1
+   + column (4,(1,)) MILP cost 0.000000, |inside| 116
+ iter 2: columns 5, LP value 6.875000000, dual support 2
+   + column (4,(1,)) MILP cost 0.437500, |inside| 119
+ iter 3: columns 6, LP value 7.142857143, dual support 3
+   + column (3,(1, 1)) MILP cost 0.785714, |inside| 9
+   + column (4,(1,)) MILP cost 0.714286, |inside| 119
+ iter 4: columns 8, LP value 7.500000000, dual support 2
+RESULT N=5 TMAX=4: LP over generated columns: exact primal 15/2 = 7.500000, exact dual 15/2 = 7.500000 (CERTIFIED EQUAL); C(N,3)/2 = 5
+  primal weights:
+    4 (1,) flat |inside|=116 5/2
+    4 (1,) flat |inside|=119 15/4
+    4 (1,) flat |inside|=119 5/4
+  dual support:
+    h= (-1, 0, 0, 0, 1) M= [(1, 2), (2, 3), (3, 4)] y= 5
+    h= (-1, 0, 0, 0, 1) M= [(1, 2), (3, 4)] y= 5/2
+
+real	1m4.503s
+user	0m18.772s
+sys	0m0.515s

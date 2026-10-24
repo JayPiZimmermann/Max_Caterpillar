@@ -1,0 +1,18 @@
+N 4 k 3 neurons 4 localities 4 covered 4
+N 4 k 4 neurons 4 localities 1 covered 1
+control D(pair hinge, k=3) = 0
+N 5 k 3 neurons 6 localities 20 covered 20
+N 5 k 4 neurons 6 localities 5 covered 5
+N 5 k 5 neurons 6 localities 1 covered 1
+control D(pair hinge, k=3) = 0
+N 6 k 3 neurons 12 localities 120 covered 120
+N 6 k 4 neurons 12 localities 30 covered 30
+N 6 k 5 neurons 12 localities 6 covered 6
+N 6 k 6 neurons 12 localities 1 covered 1
+control D(pair hinge, k=3) = 0
+N 7 k 3 neurons 15 localities 840 covered 840
+N 7 k 4 neurons 15 localities 210 covered 210
+N 7 k 5 neurons 15 localities 42 covered 42
+N 7 k 6 neurons 15 localities 7 covered 7
+N 7 k 7 neurons 15 localities 1 covered 1
+control D(pair hinge, k=3) = 0

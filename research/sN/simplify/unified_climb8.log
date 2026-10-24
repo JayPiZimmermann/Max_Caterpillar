@@ -1,0 +1,4 @@
+Delta=2 max Wq=0.0957  [1, 5, 4, None, 7, 7, 5, None] [1, 1, 0, 0, 2, 1, 1, 1]
+Delta=3 max Wq=0.0586  [1, 3, 1, 6, 5, None, 4, None] [1, 1, 1, 2, 1, 1, 1, 0]
+all checks passed
+exit 0

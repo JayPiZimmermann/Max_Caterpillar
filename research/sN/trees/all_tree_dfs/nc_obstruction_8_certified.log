@@ -1,0 +1,33 @@
+{
+  "n": 8,
+  "status": "EXACT_RANK_OBSTRUCTION",
+  "labelled_full_units": 66416,
+  "dihedral_columns": 4165,
+  "independent_exact_relations": 68,
+  "rational_rank_upper": 4097,
+  "modular_augmented_rank": 4098,
+  "including_rooted_stars": {
+    "columns": 4169,
+    "independent_exact_relations": 69,
+    "rational_rank_upper": 4100,
+    "modular_augmented_rank": 4101
+  },
+  "scope": "All real coefficients and all face states of the fixed-circle original caterpillar dictionary; optionally all rooted-star face functions.",
+  "input_sha256": {
+    "nc_obstruction_8_short.json": "b8fd849ee732c9056a95c82827ff9f5594e8789d6bd941db4cfe2c5889602a83",
+    "nc_obstruction_8_short.log": "41c83903b30416afc4da92607942b6ca147df9c9c3f48cea6e66dd60bda8257d",
+    "nc_short_relations_8.json": "db981b277ee4764f3bc1e91f002efb445567a2dc89813ea913c4d958a0661f26",
+    "nc_refined_8.json": "d4f807092551474cef626dca8fbaf467acbe0d860d30c8d543e9b5ae7b225583",
+    "star_obstruction_8.json": "da72f3a48fd4451be225690a7a04a81394d805bc452ddf779aa4321c06dcdc09",
+    "nc_obstruction_8_identity_66.json": "0ec568f3711caf617c4aee98a10cf96db8a75b790f1ef59a75b2cf41aa3f5185",
+    "nc_obstruction_8_identity_67.json": "a123cc798c40c200d392b41ef21f70897ce68b1ead1cb920437ff91364069118",
+    "nc_fast_8.compression.json": "365a52e5c2f08ec79a09a4fa6b99a1a08657e20505165546de900862109ce8db",
+    "rational_identity.py": "d65665bbc8399194d96da0fc47bfe7929a1eba7dfd9d7005a9116a716c2d1f2c",
+    "nc_obstruction.py": "52e5c346b8c235d83580af27a03537983c69457706bea67e380b1143a21baf89",
+    "nc_obstruction_chunk.py": "65aa56b1da9844c926a1fad9199bb1f5df6ea9031dea103f0657ccd7599290d6",
+    "nc_refine.py": "59e98e7871ec76b44097e8b24cb4b6b3f172fd1e1e85a87511e35b6a532390a6",
+    "nc_short_relations.py": "d1d4ae917c84383307d2562d4959883b16c03a9438a8aacc81fd7496546c49e9",
+    "../dfs_review_nc8_coverage.json": "80560ecbda76b5689410387f23bb938fe03a3500a14e86ce179c12b0e39b334a"
+  },
+  "producer_sha256": "d7a1fbb2ce76de01e9b36229e7a10c788d823d7a17b35f2be7db3597f8937460"
+}

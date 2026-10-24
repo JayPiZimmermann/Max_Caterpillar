@@ -1,0 +1,14 @@
+domain 5 nopath orbits 10 points 15
+row 0 elapsed 0.01
+row 5 elapsed 0.04
+row 10 elapsed 0.08
+modular ranks [5, 6]
+exact row 0 elapsed 0.12
+exact row 1 elapsed 0.12
+exact row 2 elapsed 0.12
+exact row 3 elapsed 0.13
+exact row 4 elapsed 0.13
+exact row 5 elapsed 0.13
+exact nullspace starting (6, 11)
+EXACT_SEPARATOR 6 rows elapsed 0.14
+DONE EXACT_RATIONAL_SEPARATOR

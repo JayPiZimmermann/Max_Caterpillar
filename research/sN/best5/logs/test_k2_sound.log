@@ -1,0 +1,4 @@
+pair (0, 1) d [1, -1] solutions found with d patterns [(1, -1), (1, 1)]
+pair (2, 3) d [Fraction(1, 2), Fraction(1, 2)] solutions found with d patterns [(1, 1)]
+pair (0, 2) d [1, Fraction(1, 2)] solutions found with d patterns [(1, 1)]
+[363097, 244466, 118631, 0] 229.51840376853943

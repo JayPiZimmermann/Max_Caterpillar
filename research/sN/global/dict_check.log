@@ -1,0 +1,10 @@
+N=4 m=3: localities 4; keys 138; max passes per key = 2 = 2 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=4 m=4: localities 1; keys 138; max passes per key = 1 = 1 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=5 m=3: localities 20; keys 1830; max passes per key = 4 = 2 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=5 m=4: localities 5; keys 1830; max passes per key = 3 = 3 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=5 m=5: localities 1; keys 1830; max passes per key = 1 = 1 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=6 m=3: localities 120; keys 26780; max passes per key = 12 = 2 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=6 m=4: localities 30; keys 26780; max passes per key = 8 = 4 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=6 m=5: localities 6; keys 26780; max passes per key = 4 = 4 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+N=6 m=6: localities 1; keys 26780; max passes per key = 1 = 1 (N-m)!; D(max) != 0 and D(aux) = 0 at all localities
+EXIT=0

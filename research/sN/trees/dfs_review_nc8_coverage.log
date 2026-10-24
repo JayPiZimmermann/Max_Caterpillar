@@ -1,0 +1,13 @@
+{
+  "status": "EXACT_NC8_COVERAGE_PASS",
+  "saved_units": 66416,
+  "independent_units": 66416,
+  "missing": 0,
+  "extra": 0,
+  "dihedral_orbits": 4165,
+  "noncrossing_trees_on_7": 1428,
+  "noncrossing_caterpillars_on_7": 1372,
+  "noncrossing_subdivided_claws_on_7": 56,
+  "newshape_out_arborescence_units": 9408,
+  "elapsed": 4.008606910705566
+}

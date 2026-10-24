@@ -1,0 +1,11 @@
+{"N": 6, "lam": [6], "G2": "C", "|G2|": 1, "grades": [-1, 0, 1, 2, 3, 4], "ncols": 102, "npts": 700, "mult_prefix": [3, 11, 28, 55, 74, 82], "saturated": false, "secs": [2.3, 1.3, 0.1]}
+{"N": 6, "lam": [5, 1], "G2": "C", "|G2|": 2, "grades": [-1, 0, 1, 2, 3, 4], "ncols": 435, "npts": 700, "mult_prefix": [3, 16, 67, 153, 228, 253], "saturated": false, "secs": [5.7, 1.2, 0.8]}
+{"N": 6, "lam": [4, 2], "G2": "C", "|G2|": 4, "grades": [-1, 0, 1, 2, 3, 4], "ncols": 898, "npts": 700, "mult_prefix": [1, 14, 70, 192, 300, 339], "saturated": false, "secs": [2.4, 1.9, 3.3]}
+{"N": 6, "lam": [4, 1, 1], "G2": "C", "|G2|": 6, "grades": [-1, 0, 1, 2, 3, 4], "ncols": 1663, "npts": 700, "mult_prefix": [0, 7, 59, 163, 268, 304], "saturated": false, "secs": [4.1, 3.1, 4.8]}
+{"N": 6, "lam": [3, 3], "G2": "C", "|G2|": 8, "grades": [-1, 0, 1, 2, 3, 4], "ncols": 1124, "npts": 700, "mult_prefix": [0, 3, 29, 84, 143, 162], "saturated": false, "secs": [4.6, 3.2, 2.6]}
+{"N": 6, "lam": [3, 2, 1], "G2": "C", "|G2|": 12, "grades": [-1, 0, 1, 2, 3, 4], "ncols": 2930, "npts": 700, "mult_prefix": [0, 5, 56, 195, 340, 392], "saturated": false, "secs": [6.7, 3.3, 8.5]}
+{"N": 6, "lam": [3, 1, 1, 1], "G2": "R", "|G2|": 6, "grades": [0, 1, 2, 3, 4], "ncols": 722, "npts": 700, "mult_prefix": [1, 21, 81, 147, 173], "saturated": false, "secs": [5.0, 1.8, 0.5]}
+{"N": 6, "lam": [2, 2, 2], "G2": "R", "|G2|": 8, "grades": [0, 1, 2, 3, 4], "ncols": 494, "npts": 700, "mult_prefix": [1, 9, 45, 82, 97], "saturated": false, "secs": [1.3, 1.9, 0.2]}
+{"N": 6, "lam": [2, 2, 1, 1], "G2": "R", "|G2|": 4, "grades": [1, 2, 3, 4], "ncols": 342, "npts": 700, "mult_prefix": [12, 57, 114, 135], "saturated": false, "secs": [6.5, 1.3, 0.5]}
+{"N": 6, "lam": [2, 1, 1, 1, 1], "G2": "R", "|G2|": 2, "grades": [1, 2, 3, 4], "ncols": 112, "npts": 700, "mult_prefix": [2, 17, 36, 44], "saturated": false, "secs": [2.3, 1.0, 0.1]}
+{"N": 6, "lam": [1, 1, 1, 1, 1, 1], "G2": "R", "|G2|": 1, "grades": [2, 3, 4], "ncols": 15, "npts": 700, "mult_prefix": [1, 3, 4], "saturated": false, "secs": [6.0, 0.8, 0.0]}

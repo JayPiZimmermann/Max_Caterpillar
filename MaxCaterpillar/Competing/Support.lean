@@ -283,10 +283,10 @@ end Dictionary
 
 /-- **`M = ∅`.** The support function is `y_v` plus the rooted star `S_{v,π₁}`. -/
 theorem paramidSupport_empty (y : Fin (r + 1 + 1) → ℝ) :
-    paramidSupport v π ∅ y = y v + Trees.rootedStar v (π.pos 1) y := by
+    paramidSupport v π ∅ y = y v + rootedStar v (π.pos 1) y := by
   classical
   rw [paramidSupport_empty_eq]
-  unfold Trees.rootedStar
+  unfold rootedStar
   congr 2
   have himage : (Finset.Icc 2 (r + 1)).image π.pos =
       (Finset.univ.erase v).erase (π.pos 1) := by
@@ -453,14 +453,14 @@ no caterpillar function equals the rooted star `S_{a,c}`: at `y = e_c` the star 
 value `N - 1`, every caterpillar function at most `N - 2`. -/
 theorem rootedStar_ne_caterpillarFunction {a c : Fin (r + 1 + 1)} (hac : a ≠ c)
     {k : FaceKey r} (hk : k ∈ caterpillarDescriptions r) :
-    Trees.rootedStar a c ≠ caterpillarFunction k := by
+    rootedStar a c ≠ caterpillarFunction k := by
   classical
   intro h
   obtain ⟨σ, S, hS, hle⟩ := caterpillarFunction_le_word hk (Pi.single c 1)
   have hb := caterpillarWord_single_le σ hS c
   rw [← h] at hle
-  have hval : Trees.rootedStar a c (Pi.single c 1) = r + 1 := by
-    unfold Trees.rootedStar
+  have hval : rootedStar a c (Pi.single c 1) = r + 1 := by
+    unfold rootedStar
     rw [Pi.single_eq_same, Pi.single_eq_of_ne hac]
     have hsum : ∑ l in (Finset.univ.erase a).erase c,
         MaxNN.relu (1 - (Pi.single c (1 : ℝ) : Fin (r + 1 + 1) → ℝ) l) = r := by

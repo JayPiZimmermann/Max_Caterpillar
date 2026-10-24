@@ -1,0 +1,8 @@
+N=7 W=3 samples=2000 seed=13 R=2 : max sum_T Pr = 5.000000 (N-2=5)
+  ratio=5 edges: 06(3) 14(3) 16(3) 26(3) 36(1) 56(1) Gam: 3 6 3 1 -2 1 2
+  floor(ratio)=0 : 846 graphs
+  floor(ratio)=1 : 537 graphs
+  floor(ratio)=2 : 518 graphs
+  floor(ratio)=3 : 84 graphs
+  floor(ratio)=4 : 13 graphs
+  floor(ratio)=5 : 2 graphs

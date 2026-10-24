@@ -1,0 +1,15 @@
+N=5 m=5 mode=relaxed: units 1810, groups 4200, D-active 540, orbit reps 12
+ rep 0 (unit 1): none; nodes 8 closed 0 t=0s
+ rep 1 (unit 15): none; nodes 30 closed 0 t=0s
+ rep 2 (unit 16): none; nodes 46 closed 0 t=0s
+ rep 3 (unit 20): none; nodes 52 closed 0 t=0s
+ rep 4 (unit 26): none; nodes 62 closed 0 t=0s
+ rep 5 (unit 29): none; nodes 67 closed 0 t=0s
+ rep 6 (unit 33): none; nodes 69 closed 0 t=0s
+ rep 7 (unit 108): none; nodes 144 closed 0 t=0s
+ rep 8 (unit 127): none; nodes 8901 closed 265 t=17s
+ rep 9 (unit 128): none; nodes 11357 closed 265 t=24s
+ rep 10 (unit 129): none; nodes 14035 closed 277 t=27s
+ rep 11 (unit 144): none; nodes 15093 closed 278 t=29s
+EXHAUSTED: no feasible K with |K| <= 5 (mode relaxed); nodes 15093
+EXIT=0

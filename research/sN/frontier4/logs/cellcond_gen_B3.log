@@ -1,0 +1,6 @@
+F2 B=3: instances 288, rank 4: 288, passing Cell: 0
+F3 B=3: instances 2592, rank 4: 2592, passing Cell: 0
+
+real	3m52.242s
+user	3m52.058s
+sys	0m0.027s

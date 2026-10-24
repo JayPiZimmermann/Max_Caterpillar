@@ -1,0 +1,12 @@
+{
+  "status": "MODULAR_RANK_RECHECK_PASS",
+  "ranks": [
+    5315,
+    5316
+  ],
+  "rows": 5543,
+  "columns": 5514,
+  "seconds": 33.84689784049988,
+  "matrix_sha256": "fd1e809e28f7ff6d4e53cdf9547e2a93899dbc190099c3f3c355851a6a25a355",
+  "family_sha256": "52fb7daddd44758e456eae63c4fef424a61073d5dfa321ecfc0c7939b50ff176"
+}

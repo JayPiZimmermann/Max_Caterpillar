@@ -1,0 +1,4 @@
+symbolic calls 1000 depth 3 terms 41 elapsed 107.65426182746887
+symbolic calls 7000 depth 3 terms 47 elapsed 188.71029567718506
+{'index': 66, 'status': 'EXACT_RATIONAL_IDENTITY', 'terms': 21840, 'elapsed_seconds': 228.70017957687378, 'relation_sha256': '4fe91a5186dcc5b2bcc0038086d12a279ec7c8ce167e1f4a4e4d745042ba8b9d', 'units_sha256': 'b2509ddd8600c04e5edf722ba05443af184124ce0908e8299f7362dc7333b33e'}
+{'index': 67, 'status': 'EXACT_RATIONAL_IDENTITY', 'terms': 9280, 'elapsed_seconds': 316.49003410339355, 'relation_sha256': 'b2a171d04a939b578a209f84efc7dd330488e1684bd831807bfa3e9b396cba91', 'units_sha256': '5f415187cd4a6ec944266a945355f98d527ec8db9fbedfc01e23423cbb91915f'}

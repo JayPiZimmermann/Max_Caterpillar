@@ -1,0 +1,5 @@
+N=7 k=4: 106 local units (orbit closure), 241 boxes
+  distinct nonzero D-columns up to scale: 91
+  size 1: infeasible (rigorous) 
+  size 2: infeasible (rigorous) 
+  size 3: FEASIBLE on samples [((-1, -1, 1, 1), ((0, 2),)), ((-1, -1, 1, 1), ((0, 2), (0, 3))), ((0, 0, -1, 1), ((0, 3), (1, 3)))]

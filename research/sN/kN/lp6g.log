@@ -1,0 +1,6 @@
+dictionary 1425 0s
+after 0 pruning rounds alive 1425, class rows 18000, 0s
+groups 1425 (sizes: max 1, mean 1.00), multi rows 1680, 0s
+lsqr residual 1.260e-01
+LP status 2 The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+EXIT 0

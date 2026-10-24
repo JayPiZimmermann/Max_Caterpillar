@@ -1,11 +1,9 @@
 import MaxCaterpillar.Construction
 import MaxCaterpillar.Rationality
 
-/-! # Coefficient-parametric compilation (Version 2)
+/-! # Coefficient-parametric compilation
 
-Version 1 compiles the network only for the canonical inverse-Gram
-coefficients (`network` in `Construction.lean`).  Version 2 separates the
-network from its coefficients: any valid expansion
+The network is separated from its coefficients: any valid expansion
 
   `MAX = ∑_{k ∈ K} d_k U_k + R`,   `R` in the auxiliary span,
 
@@ -231,7 +229,7 @@ theorem auxiliary_diagonalEquivariant {K : Finset (RealKey n)} {d : RealKey n �
   rw [hcorr] at hshift
   linarith
 
-/-- Version 2 compilation: any expansion with units `K` and an auxiliary
+/-- Compilation: any expansion with units `K` and an auxiliary
 remainder is computed by `ofCompact K d a`, of second width `|K| + 2`. -/
 theorem ofCompact_eval_of_expansion (K : Finset (RealKey n)) (d : RealKey n → ℝ)
     (a : Fin (W (n + 1)) → ℝ) (hK : ∀ k ∈ K, ∀ v ∈ k.2, IsSimplexDifference v)
@@ -320,7 +318,7 @@ end Widths
 theorem compactWidth_eq_firstWidth (n : ℕ) : compactWidth n = firstWidth (n + 1) := by
   rw [compactWidth_eq]; rfl
 
-/-- **Compilation theorem (Version 2).** Any expansion of the maximum by units
+/-- **Compilation theorem.** Any expansion of the maximum by units
 `K` with coordinate-difference inner hinges and an auxiliary remainder with
 coefficient vector `a` is computed by a network with the first hidden layer of
 `firstWidth` and `|K| + 2` second-layer neurons, zero biases, and rational

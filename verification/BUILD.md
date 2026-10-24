@@ -1,6 +1,14 @@
 # Verification record
 
-Status: **the working tree passes the complete verification gate**.
+Status: **historical verification receipt; the current cleanup needs a new gate**.
+
+The 122-statement receipt below predates the consolidation into
+`MaxCaterpillar/Count/`, `MaxCaterpillar/Dimension.lean`, and
+`MaxCaterpillar/Retained.lean`. Its source hashes do not certify the current
+sources. The cleanup and research checkpoint preserves this receipt as
+historical evidence; its public manifest and exact-statement gate still need
+to be reconciled with the surviving declarations. See
+`research/sN/cleanup/PROGRESS.md` for the current build status.
 
 The public interface and dependency closure contain the caterpillar
 construction of $\operatorname{MAX}_N$, the Version 2–4 proofs,
@@ -16,10 +24,10 @@ workstation (Lean 4.4.0, mathlib cache from `lake exe cache get`):
 ulimit -s unlimited && python3 scripts/verify.py
 ```
 
-The verifier built `All` and `Verification.Statements`, re-elaborated all 112
+The verifier built `All` and `Verification.Statements`, re-elaborated all 122
 exact theorem statements in `verification/main.json`, rejected `sorry`,
 `admit`, project `axiom` declarations, and `native_decide`, and audited every
-theorem with `#print axioms`. It found 302 Lean source files. Every theorem
+theorem with `#print axioms`. It found 303 Lean source files. Every theorem
 uses only the permitted foundational axioms `propext`, `Classical.choice`, and
 `Quot.sound`.
 
@@ -53,7 +61,7 @@ Statements added on 2026-10-22 (historical list, in addition to the 27 original 
 
 The machine-readable receipt is `verification/certificate.json`, with
 aggregate source digest
-`1aeb284ad96c2a461d5b97f0d8e2d1531a93b6bb8a6e26266a5f4447d685dbee`
+`98964bb97528391ed2b499ac7f971b21651e55f91a0cc9a7f699ec2b649fac33`
 and the SHA-256 of every checked source and manifest. Its `source_commit` is
 `null` because the gate certified the working tree by content. This receipt
 does not assert that the checked sources have been committed or pushed.

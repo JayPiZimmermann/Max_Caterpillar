@@ -1,0 +1,10 @@
+N=11 mode=a+b' units=10058013 (N-3)!=40320
+max total=80640  W=2.000000  at S=3 stcode=8
+|Neg|=1: max W=2.000000, units with some valid T=430725
+|Neg|=2: max W=1.000000, units with some valid T=300972
+|Neg|=3: max W=0.000000, units with some valid T=0
+|Neg|=4: max W=0.000000, units with some valid T=0
+violations: Neg not in T=0, CaseI T shape=0, CaseI one-comp/tau=0, CaseII >1 triple=0, CaseII x!=parent(z)=0
+267.06user 0.85system 6:07.08elapsed 72%CPU (0avgtext+0avgdata 1636maxresident)k
+16inputs+8outputs (1major+78minor)pagefaults 0swaps
+EXIT=0

@@ -1,0 +1,10 @@
+6 desc1 units 11846
+chambers 100 rows 16964 nnz 4145798
+chambers 200 rows 33802 nnz 8232106
+chambers 300 rows 50266 nnz 12306921
+chambers 400 rows 66660 nnz 16406325
+chambers 500 rows 83170 nnz 20496089
+chambers 600 rows 99882 nnz 24569231
+chambers 700 rows 116716 nnz 28611883
+MATRIX (120120, 11867) 29426608
+LP 1 Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)

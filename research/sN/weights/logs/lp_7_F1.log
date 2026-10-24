@@ -1,0 +1,11 @@
+N=7 family=F1: units(canonical)=3560 columns=16 germ info={3: ('exact', 7, 13, 31), 4: ('exact', 88, 136, 196), 5: ('conservative', None, 1121, 1121), 6: ('conservative', None, 712, 712), 7: ('conservative', None, 3560, 3560)}
+  LP optimum tau* = 35/2 = 17.500000   (C(N,3)/2 = 35/2)
+  optimal weights x (column: value):
+    (3, (1, 1, 1, 1), None) 35/2
+  dual support: 1 canonical units; y values: [Fraction(35, 2)]
+    unit h= (-1, 0, 0, 0, 0, 0, 1) M= [(1, 2), (2, 3), (3, 6)] y= 35/2
+
+real	0m21.950s
+user	0m5.613s
+sys	0m0.390s
+EXIT=0

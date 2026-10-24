@@ -1,5 +1,4 @@
 import MaxCaterpillar.Competing.Defs
-import MaxCaterpillar.Trees.RootedStars
 
 /-! # The pyramids of Brunck et al., Sec. 7.1, are caterpillar polytopes or rooted stars
 

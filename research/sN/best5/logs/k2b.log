@@ -1,0 +1,94 @@
+progress 0 1193 nodes 12 LP [460, 317, 143, 0] new survivors 0 0s
+progress 20 1193 nodes 7552 LP [48852, 31865, 16987, 0] new survivors 0 62s
+progress 40 1193 nodes 8637 LP [66087, 42949, 23138, 0] new survivors 0 82s
+progress 60 1193 nodes 8930 LP [68949, 45082, 23867, 0] new survivors 0 86s
+progress 80 1193 nodes 9338 LP [73165, 48011, 25154, 0] new survivors 0 91s
+SURVIVOR 87 7247 31736 6 3 [(1, 1), (-1, 1)]
+SURVIVOR 88 7759 31736 5 3 [(1, 1), (-1, 1)]
+progress 100 1193 nodes 11936 LP [96308, 64138, 32170, 0] new survivors 2 116s
+progress 120 1193 nodes 13093 LP [106004, 70661, 35343, 0] new survivors 2 127s
+SURVIVOR 125 7263 31736 5 3 [(1, 1)]
+SURVIVOR 126 7775 31736 4 3 [(1, 1)]
+progress 140 1193 nodes 14786 LP [122632, 81881, 40751, 0] new survivors 4 145s
+progress 160 1193 nodes 16666 LP [137391, 91507, 45884, 0] new survivors 4 163s
+progress 180 1193 nodes 17674 LP [146220, 97226, 48994, 0] new survivors 4 173s
+SURVIVOR 191 7391 29688 4 4 [(1, 1), (1, -1), (-1, 1), (-1, -1)]
+SURVIVOR 192 7391 29689 4 3 [(1, -1), (-1, -1)]
+SURVIVOR 193 7903 29689 3 3 [(-1, -1)]
+progress 200 1193 nodes 21952 LP [197487, 131700, 65787, 0] new survivors 7 229s
+progress 220 1193 nodes 23600 LP [210622, 140212, 70410, 0] new survivors 7 243s
+SURVIVOR 230 7407 31736 4 3 [(1, 1)]
+SURVIVOR 231 7919 31736 3 3 [(1, 1)]
+progress 240 1193 nodes 24748 LP [219436, 145860, 73576, 0] new survivors 9 254s
+progress 260 1193 nodes 25586 LP [226331, 150318, 76013, 0] new survivors 9 261s
+progress 280 1193 nodes 26167 LP [230959, 153363, 77596, 0] new survivors 9 267s
+progress 300 1193 nodes 26994 LP [236605, 157112, 79493, 0] new survivors 9 272s
+progress 320 1193 nodes 27412 LP [242468, 161184, 81284, 0] new survivors 9 279s
+progress 340 1193 nodes 27751 LP [248190, 165186, 83004, 0] new survivors 9 286s
+progress 360 1193 nodes 28226 LP [253584, 168827, 84757, 0] new survivors 9 292s
+progress 380 1193 nodes 41134 LP [338362, 225053, 113309, 0] new survivors 9 399s
+SURVIVOR 392 15439 31728 5 4 [(1, 1)]
+progress 400 1193 nodes 50076 LP [410768, 276167, 134601, 0] new survivors 10 471s
+progress 420 1193 nodes 51789 LP [421902, 284132, 137770, 0] new survivors 10 483s
+progress 440 1193 nodes 55269 LP [468138, 314942, 153196, 0] new survivors 10 539s
+progress 460 1193 nodes 69750 LP [602097, 408837, 193260, 0] new survivors 10 674s
+progress 480 1193 nodes 70353 LP [612372, 415863, 196509, 0] new survivors 10 686s
+progress 500 1193 nodes 70611 LP [616933, 418909, 198024, 0] new survivors 10 691s
+progress 520 1193 nodes 72170 LP [627281, 425763, 201518, 0] new survivors 10 704s
+progress 540 1193 nodes 73146 LP [634526, 430686, 203840, 0] new survivors 10 712s
+progress 560 1193 nodes 75233 LP [647070, 439367, 207703, 0] new survivors 10 725s
+progress 580 1193 nodes 76123 LP [654739, 444404, 210335, 0] new survivors 10 734s
+progress 600 1193 nodes 76484 LP [658340, 446785, 211555, 0] new survivors 10 738s
+progress 620 1193 nodes 77219 LP [667527, 452905, 214622, 0] new survivors 10 749s
+progress 640 1193 nodes 80268 LP [691321, 469129, 222192, 0] new survivors 10 777s
+progress 660 1193 nodes 81597 LP [709992, 481053, 228939, 0] new survivors 10 798s
+progress 680 1193 nodes 85581 LP [726729, 493440, 233289, 0] new survivors 10 815s
+progress 700 1193 nodes 86280 LP [736471, 499671, 236800, 0] new survivors 10 826s
+progress 720 1193 nodes 86471 LP [740191, 502146, 238045, 0] new survivors 10 830s
+progress 740 1193 nodes 86543 LP [740865, 502572, 238293, 0] new survivors 10 831s
+progress 760 1193 nodes 87210 LP [745968, 505922, 240046, 0] new survivors 10 838s
+progress 780 1193 nodes 88968 LP [762208, 516315, 245893, 0] new survivors 10 859s
+progress 800 1193 nodes 91365 LP [777241, 526543, 250698, 0] new survivors 10 876s
+progress 820 1193 nodes 93168 LP [794343, 537369, 256974, 0] new survivors 10 897s
+progress 840 1193 nodes 93506 LP [798545, 540043, 258502, 0] new survivors 10 901s
+progress 860 1193 nodes 95359 LP [811074, 548579, 262495, 0] new survivors 10 916s
+progress 880 1193 nodes 95685 LP [815864, 551639, 264225, 0] new survivors 10 921s
+progress 900 1193 nodes 95796 LP [817109, 552426, 264683, 0] new survivors 10 922s
+progress 920 1193 nodes 96545 LP [826827, 558664, 268163, 0] new survivors 10 934s
+progress 940 1193 nodes 96774 LP [831673, 561864, 269809, 0] new survivors 10 940s
+progress 960 1193 nodes 97335 LP [839694, 567222, 272472, 0] new survivors 10 949s
+progress 980 1193 nodes 97937 LP [850817, 574471, 276346, 0] new survivors 10 962s
+progress 1000 1193 nodes 98254 LP [857664, 579080, 278584, 0] new survivors 10 970s
+progress 1020 1193 nodes 98615 LP [863235, 582696, 280539, 0] new survivors 10 976s
+progress 1040 1193 nodes 100604 LP [905345, 610354, 294991, 0] new survivors 10 1031s
+progress 1060 1193 nodes 101226 LP [921774, 621236, 300538, 0] new survivors 10 1051s
+progress 1080 1193 nodes 101433 LP [926170, 624132, 302038, 0] new survivors 10 1056s
+progress 1100 1193 nodes 101648 LP [930663, 627022, 303641, 0] new survivors 10 1061s
+progress 1120 1193 nodes 102018 LP [936743, 630992, 305751, 0] new survivors 10 1068s
+progress 1140 1193 nodes 102531 LP [949623, 639290, 310333, 0] new survivors 10 1083s
+progress 1160 1193 nodes 102846 LP [957248, 644172, 313076, 0] new survivors 10 1091s
+progress 1180 1193 nodes 102980 LP [960836, 646514, 314322, 0] new survivors 10 1095s
+DONE 1193 nodes 103017 LP [961519, 646952, 314567, 0] 1096s
+	Command being timed: "/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h4-general-neurons/venv/bin/python -u k2b.py"
+	User time (seconds): 1071.41
+	System time (seconds): 26.38
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 18:16.85
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 98460
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23943
+	Voluntary context switches: 29
+	Involuntary context switches: 16487
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 480
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

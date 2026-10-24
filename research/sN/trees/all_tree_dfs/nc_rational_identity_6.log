@@ -1,0 +1,2 @@
+n 6 terms 529 budget 150
+{'n': 6, 'status': 'EXACT_RATIONAL_IDENTITY', 'calls': 321, 'memoized_identities': 36, 'max_depth': 3, 'elapsed_seconds': 0.7342674732208252}

@@ -1,0 +1,9 @@
+N=7 m=4: W_m(N) = max_k sum_T p_T = 4 (4.0000); C(N,m) = 35; bound s_N >= 8.7500
+  argmax (S, states): ((1, 2, 4), (2, 1, 1, 2, 0))
+  units with W>0: 2609  top of histogram: [(Fraction(4, 1), 32), (Fraction(10, 3), 1), (Fraction(3, 1), 37), (Fraction(5, 2), 32), (Fraction(7, 3), 4), (Fraction(13, 6), 4)]
+N=7 m=5: W_m(N) = max_k sum_T p_T = 6 (6.0000); C(N,m) = 21; bound s_N >= 3.5000
+  argmax (S, states): ((1, 2, 3, 5), (2, 2, 1, 1, 2))
+  units with W>0: 2313  top of histogram: [(Fraction(6, 1), 6), (Fraction(5, 1), 1), (Fraction(4, 1), 28), (Fraction(3, 1), 16), (Fraction(5, 2), 22), (Fraction(2, 1), 299)]
+N=8 m=4: W_m(N) = max_k sum_T p_T = 4 (4.0000); C(N,m) = 70; bound s_N >= 17.5000
+  argmax (S, states): ((1, 2, 4), (2, 1, 1, 2, 0, 0))
+  units with W>0: 13937  top of histogram: [(Fraction(4, 1), 198), (Fraction(10, 3), 8), (Fraction(3, 1), 132), (Fraction(8, 3), 6), (Fraction(5, 2), 156), (Fraction(7, 3), 36)]

@@ -1,0 +1,8 @@
+symbolic calls 5000 depth 2 terms 6 elapsed 21.293837308883667
+{
+  "status": "EXACT_NC7_IDENTITY_RECHECK_PASS",
+  "support_units": 6909,
+  "normalized_terms": 6910,
+  "calls": 5202,
+  "elapsed": 23.160821676254272
+}

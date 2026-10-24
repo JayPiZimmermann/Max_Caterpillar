@@ -1,0 +1,6 @@
+N 4 pm1 stars 32 localities 5 rho-dependent stars 0 rank 4 rank+target 5 NOT in span
+N 4 pm1_0 stars 104 localities 5 rho-dependent stars 0 rank 5 rank+target 5 IN SPAN
+N 5 pm1 stars 80 localities 26 rho-dependent stars 0 rank 15 rank+target 16 NOT in span
+N 5 pm1_0 stars 400 localities 26 rho-dependent stars 0 rank 16 rank+target 16 IN SPAN
+N 6 pm1 stars 192 localities 157 rho-dependent stars 120 rank 50 rank+target 51 NOT in span
+N 6 pm1_0 stars 1452 localities 157 rho-dependent stars 120 rank 57 rank+target 57 IN SPAN

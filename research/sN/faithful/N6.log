@@ -1,0 +1,5 @@
+N 6 raw correctionKeys 65855 lean normalizedKeys 26780 python K0 26780 equal True
+fact failures (counted over word-face incidences): {'childless vertex kappa notin {0,-1} (spine=True,last=True)': 311040}
+raw-key realUnitY vs python normalized eval mismatches: 0
+head coefficient range [-1, 0, 1, 2, 3, 4]
+exit 0

@@ -1,0 +1,4 @@
+dictionary 4575 0s
+after 1 pruning rounds alive 4185, class rows 18000, 3s
+LP status 2 The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+EXIT 0

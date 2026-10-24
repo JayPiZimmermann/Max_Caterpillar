@@ -1,0 +1,13 @@
+N=5 m=6 mode=full: units 1810, groups 4200, D-active 540, orbit reps 12
+ rep 0 (unit 1): none; nodes 10 closed 0 t=0s
+ rep 1 (unit 15): none; nodes 74 closed 0 t=1s
+ rep 2 (unit 16): none; nodes 110 closed 0 t=1s
+ rep 3 (unit 20): none; nodes 121 closed 0 t=1s
+ rep 4 (unit 26): none; nodes 131 closed 0 t=1s
+ rep 5 (unit 29): none; nodes 136 closed 0 t=1s
+ rep 6 (unit 33): none; nodes 138 closed 0 t=1s
+ rep 7 (unit 108): none; nodes 504 closed 0 t=2s
+  nodes 200000 closed 7265 t=403s
+ rep 8 (unit 127): none; nodes 245862 closed 8959 t=470s
+ rep 9 (unit 128): none; nodes 263475 closed 8959 t=531s
+ rep 10 (unit 129): none; nodes 300465 closed 9528 t=599s

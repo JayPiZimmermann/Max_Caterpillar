@@ -1,0 +1,5 @@
+N=4: components checked 15, mismatches 0, max Q_C(1/4) = 9/16 (0.5625)
+N=5: components checked 141, mismatches 0, max Q_C(1/4) = 9/16 (0.5625)
+N=6: components checked 1119, mismatches 0, max Q_C(1/4) = 9/16 (0.5625)
+N=7: components checked 8205, mismatches 0, max Q_C(1/4) = 9/16 (0.5625)
+N=8: components checked 57639, mismatches 0, max Q_C(1/4) = 9/16 (0.5625)

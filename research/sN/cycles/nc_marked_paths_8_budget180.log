@@ -1,0 +1,6 @@
+paths 112 units 87920 added 21504 orbits 5513 sec 46.33764338493347
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/cycles/nc_marked_paths.py", line 52, in <module>
+    if time.time()-start>180:raise TimeoutError('generation budget')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: generation budget

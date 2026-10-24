@@ -1,0 +1,4 @@
+exact integer check: condition rows violated by V generators: 0
+conditions 3120 types {((0, 0, 0, 1, 1), (0, 1, 1, 1, 3), (0, 1, 1, 1, 3)), ((0, 0, 0, 1, 1), (0, 0, 1, 1, 2), (0, 0, 1, 1, 2))} 632.0s
+N=5 nvars=4680 dimW<= 1820  dimLambda<= 1210  dimV>= 1150 850.7s
+NOT EQUAL

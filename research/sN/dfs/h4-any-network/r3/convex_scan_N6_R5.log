@@ -1,0 +1,4 @@
+N=6 m=3 max W/(N-m)! = 4.000000  (all localities: C(N,m)=20)  pow=1.5874  W=24 edges: 01(1) 02(1) 03(1) 04(1) gam: 1 0 0 0 0 -5
+N=6 m=4 max W/(N-m)! = 6.000000  (all localities: C(N,m)=15)  pow=1.5651  W=12 edges: 01(1) 02(1) 03(1) 04(1) gam: -3 0 0 0 0 -1
+N=6 m=5 max W/(N-m)! = 4.000000  (all localities: C(N,m)=6)  pow=1.3195  W=4 edges: 01(1) 02(1) 03(1) 04(1) gam: -2 0 0 0 0 -2
+N=6 m=6 max W/(N-m)! = 1.000000  (all localities: C(N,m)=1)  pow=1.0000  W=1 edges: gam: -5 -5 5 5 5 -5

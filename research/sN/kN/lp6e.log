@@ -1,0 +1,9 @@
+dictionary 17715 0s
+after 0 pruning rounds alive 17715, class rows 25200, 3s
+groups 17715 (sizes: max 1, mean 1.00), multi rows 16680, 5s
+lsqr residual 2.165e-11
+iter 0 support groups 323 neurons 323 64s
+iter 1 support groups 284 neurons 284 72s
+saved 284 neurons to sup6e.json
+MAXRSS_KB 1154264
+EXIT 0

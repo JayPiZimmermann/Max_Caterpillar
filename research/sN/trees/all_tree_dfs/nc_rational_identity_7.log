@@ -1,0 +1,3 @@
+n 7 terms 6910 budget 150
+symbolic calls 5000 depth 2 terms 6 elapsed 21.027186155319214
+{'n': 7, 'status': 'EXACT_RATIONAL_IDENTITY', 'calls': 5202, 'memoized_identities': 626, 'max_depth': 4, 'elapsed_seconds': 21.375473737716675}

@@ -3,8 +3,7 @@ import MaxCaterpillar.SharingRational
 
 /-! # CPWL networks with rational parameters
 
-Version 2 of `cpwl_two_hidden_layers_pieces` (Version 1, in `KMPS.lean`):
-the KMPS representation uses the affine functions of the given witness
+Rational refinement of `cpwl_two_hidden_layers_pieces` (`KMPS.lean`): the KMPS representation uses the affine functions of the given witness
 unchanged, so rational witness data give a network with rational weights and
 biases, and linear witness functions give zero biases.
 -/
@@ -13,11 +12,10 @@ open BigOperators
 
 namespace MaxCaterpillar
 
-/-- Version 2: for `d ≥ 2` and a CPWL witness whose affine functions have
+/-- For `d ≥ 2` and a CPWL witness whose affine functions have
 rational coefficients and offsets, the network of
 `cpwl_two_hidden_layers_pieces` has rational weights and biases; if every
-witness function is linear, it has zero biases. Version 1 is
-`cpwl_two_hidden_layers_pieces`. -/
+witness function is linear, it has zero biases. -/
 theorem cpwl_two_hidden_layers_pieces_rational (d : ℕ) (hd : 2 ≤ d) (f : Point d → ℝ)
     (hf : f ∈ MaxNN.CPWL d) (W : MaxNN.CPWLWitness d f)
     (ha : ∀ i l, ∃ q : ℚ, (q : ℝ) = (W.g i).a l) (hc : ∀ i, ∃ q : ℚ, (q : ℝ) = (W.g i).c) :

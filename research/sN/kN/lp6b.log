@@ -1,0 +1,17 @@
+dictionary 137478 8s
+after 9 pruning rounds alive 128019, class rows 563156, 361s
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/kN/chainlp.py", line 170, in <module>
+    Aeq_d = vstack([csr_matrix(Bool.astype(float)), Crow.tocsr()])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h5-growth/venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 1200, in vstack
+    return _block([[b] for b in blocks], format, dtype, return_spmatrix=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h5-growth/venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 1332, in _block
+    A = _compressed_sparse_stack(blocks[:, 0], 0, return_spmatrix)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h5-growth/venv/lib/python3.12/site-packages/scipy/sparse/_construct.py", line 1015, in _compressed_sparse_stack
+    data = np.concatenate([b.data for b in blocks])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 169. MiB for an array with shape (22088220,) and data type float64
+EXIT 1

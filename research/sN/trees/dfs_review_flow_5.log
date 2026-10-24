@@ -1,0 +1,11 @@
+/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/dfs_review_flow_check.py:2: SyntaxWarning: invalid escape sequence '\{'
+  """Exact exhaustive small-N validation of connected-germ root-head reduction.
+{
+  "N": 5,
+  "base": 7,
+  "cases": 52000,
+  "zero_preactivations": 8216,
+  "connected_germs": 1160,
+  "root_outside": 432,
+  "status": "ALL_EXACT_CHECKS_PASS"
+}

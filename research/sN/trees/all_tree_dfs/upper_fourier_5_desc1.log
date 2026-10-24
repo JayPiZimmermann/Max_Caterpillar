@@ -1,0 +1,5 @@
+n 5 descents 1 units 146
+rows 50 ranks 50 50 elapsed 0.023268699645996094
+rows 100 ranks 100 100 elapsed 0.05583071708679199
+rows 150 ranks 138 138 elapsed 0.09890437126159668
+DONE ranks [138, 138] elapsed 0.1255173683166504

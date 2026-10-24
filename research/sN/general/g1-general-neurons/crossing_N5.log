@@ -1,0 +1,5 @@
+chambers 120 with sign-changing neurons 32 neuron-chamber crossings 64 cancellation holds True
+neuron 0 d 1 crosses 0 chambers
+neuron 1 d -1 crosses 32 chambers
+neuron 2 d 1/2 crosses 16 chambers
+neuron 3 d 1/2 crosses 16 chambers

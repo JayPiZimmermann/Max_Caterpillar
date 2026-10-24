@@ -1,0 +1,9 @@
+N=4: caterpillar keys 138, P1 fails on 0
+      pc keys (apex 0) 37, P1 fails on 0
+      G keys (apex 0) 45, P1 fails on 8
+N=5: caterpillar keys 1830, P1 fails on 0
+      pc keys (apex 0) 252, P1 fails on 0
+      G keys (apex 0) 428, P1 fails on 156
+N=6: caterpillar keys 26780, P1 fails on 0
+      pc keys (apex 0) 1585, P1 fails on 0
+      G keys (apex 0) 3753, P1 fails on 1830

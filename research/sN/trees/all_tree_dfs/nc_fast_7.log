@@ -1,0 +1,19 @@
+n 7 units 11403 dihedral orbits 823 generation sec 1.070270299911499
+rows 50 rank_aug 50 elapsed 0.07004618644714355
+rows 100 rank_aug 100 elapsed 0.14455604553222656
+rows 150 rank_aug 150 elapsed 0.2333052158355713
+rows 200 rank_aug 200 elapsed 0.3331735134124756
+rows 250 rank_aug 250 elapsed 0.4527311325073242
+rows 300 rank_aug 300 elapsed 0.582890510559082
+rows 350 rank_aug 350 elapsed 0.7150847911834717
+rows 400 rank_aug 400 elapsed 0.8544564247131348
+rows 450 rank_aug 450 elapsed 1.012756109237671
+rows 500 rank_aug 500 elapsed 1.1833171844482422
+rows 550 rank_aug 550 elapsed 1.3650696277618408
+rows 600 rank_aug 600 elapsed 1.5665905475616455
+rows 650 rank_aug 650 elapsed 1.775280237197876
+rows 700 rank_aug 700 elapsed 1.998086929321289
+rows 750 rank_aug 750 elapsed 2.239652156829834
+rows 800 rank_aug 777 elapsed 2.4771158695220947
+rows 850 rank_aug 777 elapsed 2.738950490951538
+DONE ranks [777, 777] rows 853 proposal True elapsed 4.649290084838867

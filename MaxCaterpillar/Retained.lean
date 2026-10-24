@@ -1,12 +1,10 @@
 import MaxCaterpillar.Quotient
 
-/-! # The main theorem from one basis (Version 3)
+/-! # Retained descriptions
 
-Version 2 of the main theorem (`maximum_width_rational`) compiles the
-canonical coefficients, an average of inverse-Gram expansions over all bases
-of the dictionary span. This file proves the same statement without that
-average: one basis, chosen by `quotient_compression`, gives an expansion by at
-most `q_N` units, and `q_N + 2` never exceeds `secondWidth N`.
+The essential normalized descriptions `K` and the auxiliary functions span the
+dictionary (`vocabularySpan_le_essential`); hence `q_N ≤ |K|`, and
+`q_N + 2` never exceeds `secondWidth N` (`quotientDim_add_two_le_secondWidth`).
 
 The bound `q_N ≤ |essential normalized descriptions|` holds because every
 dictionary unit equals the unit of its normalized description, and the
@@ -78,7 +76,7 @@ theorem quotientDim_le_essential (r : ℕ) :
   rw [quotientDim_eq]
   exact Nat.sub_le_iff_le_add.mpr (h1.trans (h2.trans (Nat.add_le_add_right h3 _)))
 
-/-- The quotient width never exceeds the Version 1 width. -/
+/-- The quotient width never exceeds the width `secondWidth` of the main theorem. -/
 theorem quotientDim_add_two_le_secondWidth (r : ℕ) (hr : 1 ≤ r) :
     quotientDim r + 2 ≤ secondWidth (r + 1 + 1) := by
   have h5 : (normalizedKeys r).card ≤ coneCount (r + 1 + 1) * 3 ^ r :=
@@ -90,21 +88,5 @@ theorem quotientDim_add_two_le_secondWidth (r : ℕ) (hr : 1 ≤ r) :
   exact Nat.add_le_add_right ((quotientDim_le_essential r).trans
     ((essentialNormalizedKeys_card_le_sub_orderedHinges hr).trans
       (Nat.sub_le_sub_right h5 _))) 2
-
-/-- Version 3 of the main theorem: the widths of `maximum_width` with
-rational weights and zero biases, proved from one basis of the dictionary
-span (`quotient_compression`) instead of the Version 2 average over all
-bases. -/
-theorem maximum_width_one_basis (N : ℕ) [NeZero N] :
-    ∃ net : Network N (firstWidth N) (secondWidth N),
-      (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases := by
-  rcases N with _ | _ | _ | r
-  · exact absurd rfl (NeZero.ne 0)
-  · exact maximum_width_rational_one
-  · exact maximum_width_rational_two
-  · obtain ⟨_, _, _, net, heval, hrat, hz⟩ := quotient_compression (r + 1) (Nat.le_add_left 1 r)
-    obtain ⟨net', h', hr', hz'⟩ :=
-      net.exists_widen (quotientDim_add_two_le_secondWidth (r + 1) (Nat.le_add_left 1 r)) heval
-    exact ⟨net', h', hr' hrat, hz' hz⟩
 
 end MaxCaterpillar

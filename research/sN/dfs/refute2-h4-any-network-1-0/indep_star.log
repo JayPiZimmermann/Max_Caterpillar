@@ -1,0 +1,9 @@
+N 4 k 3 stars 4 loc 4 cov_corner 4 cov_centered 4 max_bad 0
+N 4 k 4 stars 4 loc 1 cov_corner 1 cov_centered 1 max_bad 0
+N 5 k 3 stars 6 loc 20 cov_corner 20 cov_centered 20 max_bad 0
+N 5 k 4 stars 6 loc 5 cov_corner 5 cov_centered 5 max_bad 0
+N 5 k 5 stars 6 loc 1 cov_corner 1 cov_centered 1 max_bad 0
+N 6 k 3 stars 12 loc 120 cov_corner 120 cov_centered 120 max_bad 0
+N 6 k 4 stars 12 loc 30 cov_corner 30 cov_centered 30 max_bad 0
+N 6 k 5 stars 12 loc 6 cov_corner 6 cov_centered 6 max_bad 0
+N 6 k 6 stars 12 loc 1 cov_corner 1 cov_centered 1 max_bad 0

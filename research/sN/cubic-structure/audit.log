@@ -1,0 +1,57 @@
+@kappa_wordFaceKey : ∀ {r : ℕ} (w : MaxNN.Caterpillar.Corrections.WordIndex r)
+  (τ : { x // x ∈ MaxNN.Caterpillar.Corrections.wordLabels w } → Fin 3) (o : Fin (r + 1 + 1)),
+  kappa (wordFaceKey w τ) o =
+    ((↑(Finset.card (Finset.filter (fun j => edgeState w τ j ≠ 0 ∧ parV w j = o) Finset.univ)) +
+          if lastV w = o then 1 else 0) -
+        if apexV w = o then 1 else 0) -
+      ↑(Finset.card (Finset.filter (fun j => edgeState w τ j = 1 ∧ childV w j = o) Finset.univ))
+@normalizedKey_kappa_formula : ∀ {r : ℕ} {k : MaxNN.Caterpillar.Corrections.RealKey (r + 1)},
+  k ∈ MaxNN.Caterpillar.Corrections.normalizedKeys r →
+    ∃ w τ,
+      k = wordFaceKey w τ ∧
+        ∀ (o : Fin (r + 1 + 1)),
+          kappa k o =
+            ((↑(Finset.card (Finset.filter (fun j => edgeState w τ j ≠ 0 ∧ parV w j = o) Finset.univ)) +
+                  if lastV w = o then 1 else 0) -
+                if apexV w = o then 1 else 0) -
+              ↑(Finset.card (Finset.filter (fun j => edgeState w τ j = 1 ∧ childV w j = o) Finset.univ))
+@card_spine_hingeNbr_le_two : ∀ {r : ℕ} (w : MaxNN.Caterpillar.Corrections.WordIndex r)
+  (τ : { x // x ∈ MaxNN.Caterpillar.Corrections.wordLabels w } → Fin 3) (o : Fin (r + 1 + 1)),
+  Finset.card (Finset.filter (fun x => HingeNbr (wordFaceKey w τ) o x) (spineV w)) ≤ 2
+@kappa_pendant_wordFaceKey : ∀ {r : ℕ} (w : MaxNN.Caterpillar.Corrections.WordIndex r)
+  (τ : { x // x ∈ MaxNN.Caterpillar.Corrections.wordLabels w } → Fin 3) (j : Fin r),
+  Fin.succ j ∉ ↑w.2 → kappa (wordFaceKey w τ) (childV w j) = if edgeState w τ j = 1 then -1 else 0
+@sum_kappa : ∀ {r : ℕ} (k : MaxNN.Caterpillar.Corrections.RealKey (r + 1)),
+  (Finset.sum Finset.univ fun o => kappa k o) = ↑(Finset.card (pairSet k))
+@keyHead_wordFaceKey : ∀ {r : ℕ} (w : MaxNN.Caterpillar.Corrections.WordIndex r)
+  (τ : { x // x ∈ MaxNN.Caterpillar.Corrections.wordLabels w } → Fin 3) (o : Fin (r + 1 + 1)),
+  keyHead (wordFaceKey w τ) o =
+    (((if lastV w = o then 1 else 0) - if apexV w = o then 1 else 0) +
+        Finset.sum Finset.univ fun j =>
+          if edgeState w τ j = 1 then (if parV w j = o then 1 else 0) - if childV w j = o then 1 else 0 else 0) +
+      Finset.sum Finset.univ fun j =>
+        if edgeState w τ j = 2 ∧ childV w j < parV w j then
+          (if parV w j = o then 1 else 0) - if childV w j = o then 1 else 0
+        else 0
+@hasPair_wordFaceKey_iff : ∀ {r : ℕ} (w : MaxNN.Caterpillar.Corrections.WordIndex r)
+  (τ : { x // x ∈ MaxNN.Caterpillar.Corrections.wordLabels w } → Fin 3) (a b : Fin (r + 1 + 1)),
+  HasPair (wordFaceKey w τ) a b ↔ ∃ j, edgeState w τ j = 2 ∧ lowV w j = a ∧ highV w j = b
+@dot_coordT_eq_fullVec : ∀ {n : ℕ} (v : Fin n → ℝ) (y : Fin (n + 1) → ℝ),
+  MaxNN.dot v (Matrix.mulVec (MaxNN.ParamidGeom.CoordAux.coordT n) y) =
+    Finset.sum Finset.univ fun o => fullVec v o * y o
+'MaxCaterpillar.CountCubic.kappa_wordFaceKey' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.normalizedKey_kappa_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.normalizedKey_neg_one_le_kappa' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.normalizedKey_exists_apex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.normalizedKey_card_pairSet_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.card_spine_hingeNbr_le_two' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.kappa_pendant_mem' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.kappa_mem_of_no_active_child' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.sum_kappa_wordFaceKey' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.sum_kappa' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.dot_coordT_eq_fullVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.childV_not_mem_spineV' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.normalizedKey_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.normalizedKey_sum_kappa' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.keyHead_wordFaceKey' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.hasPair_wordFaceKey_iff' depends on axioms: [propext, Quot.sound, Classical.choice]

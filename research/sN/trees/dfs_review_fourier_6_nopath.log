@@ -1,0 +1,20 @@
+domain 6 nopath orbits 65 points 85
+row 0 elapsed 0.42
+row 5 elapsed 2.61
+row 10 elapsed 4.79
+row 15 elapsed 6.91
+row 20 elapsed 8.98
+row 25 elapsed 11.17
+row 30 elapsed 13.69
+row 35 elapsed 16.11
+row 40 elapsed 18.21
+row 45 elapsed 20.31
+row 50 elapsed 22.37
+row 55 elapsed 24.45
+row 60 elapsed 26.68
+row 65 elapsed 28.55
+row 70 elapsed 30.35
+row 75 elapsed 32.14
+row 80 elapsed 33.98
+modular ranks [35, 35]
+DONE NO_SEPARATION_IN_TESTED_ROWS

@@ -1,0 +1,87 @@
+[1693/2192] Building MaxCaterpillar.Rationality
+[2073/2192] Building MaxCaterpillar.Definitions
+[2147/2192] Building MaxCaterpillar.Asymptotics
+[2147/2192] Building MaxCaterpillar.Internal.Network
+[2147/2192] Building MaxCaterpillar.Frontier.Basic
+[2147/2192] Building MaxCaterpillar.Competing.Defs
+[2148/2192] Building MaxCaterpillar.Construction
+[2150/2192] Building MaxCaterpillar.Compilation
+[2150/2192] Building MaxCaterpillar.Lemmas
+[2152/2192] Building MaxCaterpillar.Sharing
+[2153/2192] Building MaxCaterpillar.CountLower
+[2153/2192] Building MaxCaterpillar.RationalWidth
+[2153/2192] Building MaxCaterpillar.CountExp.Defs
+[2155/2192] Building MaxCaterpillar.CountExp.W2Digits
+[2155/2192] Building MaxCaterpillar.CountExp.W4Orders
+[2155/2192] Building MaxCaterpillar.CountExp.W3Structure
+[2155/2192] Building MaxCaterpillar.CountExp.W1Functional
+[2155/2192] Building MaxCaterpillar.CountExp.W5Generating
+[2156/2192] Building MaxCaterpillar.Core
+[2157/2192] Building MaxCaterpillar.SmallArity
+[2158/2192] Building MaxCaterpillar.Trees.Quadratic
+[2159/2192] Building MaxCaterpillar.Quotient
+[2160/2192] Building MaxCaterpillar.Audit.Expansion
+stdout:
+./././MaxCaterpillar/CountExp/W1Functional.lean:227:80: warning: unused variable `hB` [linter.unusedVariables]
+[2161/2192] Building MaxCaterpillar.CPWL
+[2163/2192] Building MaxCaterpillar.LowerBound
+[2163/2192] Building MaxCaterpillar.Simplify.Dimension
+[2164/2192] Building MaxCaterpillar.Retained
+[2165/2192] Building MaxCaterpillar.KMPS
+[2166/2192] Building MaxCaterpillar.SharingRational
+[2170/2192] Building MaxCaterpillar.CPWLRational
+[2174/2192] Building MaxCaterpillar.CountExp.Main
+[2175/2192] Building MaxCaterpillar.Trees.RootedStars
+[2175/2192] Building MaxCaterpillar.CountExp
+[2177/2192] Building MaxCaterpillar.Trees.DescrPass
+[2177/2192] Building MaxCaterpillar.Competing.Relation
+[2178/2192] Building MaxCaterpillar.Competing.Support
+[2179/2192] Building MaxCaterpillar.Trees.BoundedDegree
+stdout:
+./././MaxCaterpillar/Trees/BoundedDegree.lean:36:7: warning: unused variable `hA'` [linter.unusedVariables]
+./././MaxCaterpillar/Trees/BoundedDegree.lean:110:35: warning: unused variable `hΔ` [linter.unusedVariables]
+[2181/2192] Building MaxCaterpillar.Trees.BoundedDegreeMain
+stdout:
+./././MaxCaterpillar/Trees/BoundedDegreeMain.lean:125:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Trees/BoundedDegreeMain.lean:130:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Trees/BoundedDegreeMain.lean:169:7: warning: unused variable `hvEV` [linter.unusedVariables]
+[2182/2192] Building MaxCaterpillar.Trees.Hubs
+[2184/2192] Building MaxCaterpillar.Trees.HubsMain
+[2184/2192] Building MaxCaterpillar.Simplify.Reduced
+stdout:
+./././MaxCaterpillar/Simplify/Reduced.lean:181:26: warning: unused variable `hΦdef` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/Reduced.lean:188:53: warning: unused variable `hI` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/Reduced.lean:207:12: warning: unused variable `hi` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/Reduced.lean:207:17: warning: unused variable `hj` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/Reduced.lean:241:12: warning: unused variable `hi` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/Reduced.lean:307:92: warning: unused variable `hμ` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/Reduced.lean:443:7: warning: unused variable `hb0` [linter.unusedVariables]
+[2185/2192] Building MaxCaterpillar.Simplify.TreeUnits
+stdout:
+./././MaxCaterpillar/Trees/HubsMain.lean:38:76: warning: unused variable `hC` [linter.unusedVariables]
+./././MaxCaterpillar/Trees/HubsMain.lean:225:7: warning: unused variable `hApos` [linter.unusedVariables]
+./././MaxCaterpillar/Trees/HubsMain.lean:232:9: warning: unused variable `hK0` [linter.unusedVariables]
+./././MaxCaterpillar/Trees/HubsMain.lean:294:17: warning: unused variable `hw` [linter.unusedVariables]
+[2186/2192] Building MaxCaterpillarerror: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/Theorems.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/Theorems.olean -i ./.lake/build/lib/MaxCaterpillar/Theorems.ilean -c ./.lake/build/ir/MaxCaterpillar/Theorems.c
+error: stdout:
+./././MaxCaterpillar/Theorems.lean:42:41: error: unexpected token 'open'; expected '#guard_msgs', 'abbrev', 'add_decl_doc', 'alias', 'axiom', 'binder_predicate', 'builtin_initialize', 'class', 'declare_config_elab', 'declare_simp_like_tactic', 'declare_syntax_cat', 'def', 'elab', 'elab_rules', 'example', 'inductive', 'infix', 'infixl', 'infixr', 'initialize', 'instance', 'irreducible_def', 'lemma', 'macro', 'macro_rules', 'notation', 'notation3', 'opaque', 'postfix', 'prefix', 'proof_wanted', 'register_builtin_option', 'register_label_attr', 'register_option', 'register_simp_attr', 'scoped', 'structure', 'syntax', 'theorem' or 'unif_hint'
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 1
+.Trees.Combined
+stdout:
+./././MaxCaterpillar/Simplify/TreeUnits.lean:62:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Simplify/TreeUnits.lean:62:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Simplify/TreeUnits.lean:179:9: warning: unused variable `hp` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/TreeUnits.lean:304:13: warning: unused variable `hrP` [linter.unusedVariables]
+./././MaxCaterpillar/Simplify/TreeUnits.lean:304:18: warning: unused variable `haP` [linter.unusedVariables]
+stdout:
+./././MaxCaterpillar/Trees/Combined.lean:62:7: warning: unused variable `hApos` [linter.unusedVariables]
+./././MaxCaterpillar/Trees/Combined.lean:67:9: warning: unused variable `hK0` [linter.unusedVariables]
+./././MaxCaterpillar/Trees/Combined.lean:184:76: warning: unused variable `hX` [linter.unusedVariables]
+[2188/2192] Building MaxCaterpillar.Trees
+[2189/2192] Building MaxCaterpillar.Audit.CaterpillarTree
+stdout:
+./././MaxCaterpillar/Audit/CaterpillarTree.lean:267:10: warning: this tactic is never executed [linter.unreachableTactic]
+./././MaxCaterpillar/Audit/CaterpillarTree.lean:268:10: warning: this tactic is never executed [linter.unreachableTactic]
+[2190/2192] Building MaxCaterpillar.Simplify.Brunck
+[2191/2192] Building MaxCaterpillar.Theorems
+EXIT 1

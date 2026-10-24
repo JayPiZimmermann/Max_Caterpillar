@@ -1,0 +1,15 @@
+10 flags: rank 2; with max 2
+20 flags: rank 2; with max 2
+30 flags: rank 3; with max 3
+40 flags: rank 3; with max 3
+50 flags: rank 3; with max 3
+60 flags: rank 3; with max 3
+70 flags: rank 3; with max 3
+80 flags: rank 3; with max 3
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/all_tree_dfs/flag_probe.py", line 75, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/all_tree_dfs/flag_probe.py", line 66, in main
+    import sympy as sp
+ModuleNotFoundError: No module named 'sympy'

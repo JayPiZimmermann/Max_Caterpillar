@@ -1,0 +1,9 @@
+dictionary 19005 0s
+after 0 pruning rounds alive 19005, class rows 32400, 2s
+groups 19005 (sizes: max 1, mean 1.00), multi rows 17340, 4s
+lsqr residual 2.227e-11
+iter 0 support groups 154 neurons 154 42s
+iter 1 support groups 154 neurons 154 46s
+iter 2 support groups 154 neurons 154 50s
+saved 154 neurons to sup6h.json
+EXIT 0

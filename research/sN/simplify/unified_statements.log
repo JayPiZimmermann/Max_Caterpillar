@@ -1,0 +1,84 @@
+@card_passes_le_cover : ∀ {N : ℕ} (D : MaxCaterpillar.CountLower.Descr N),
+  (∀ m ∈ D.M, m.1 < m.2) →
+    MaxCaterpillar.Trees.LeafProp D.M →
+      ∀ {Δ : ℕ},
+        2 ≤ Δ →
+          ∀ (R : Fin N → Fin N → Prop),
+            (∀ (u v : Fin N), R u v → R v u) →
+              (∀ (u v : Fin N), R u v → RAdj D u v) →
+                (∀ (v : Fin N), Finset.card (Finset.filter (R v) Finset.univ) ≤ Δ) →
+                  (∀ v ∈ freeSet D,
+                      (∃ w, R v w) ∨ (∃ p, MaxCaterpillar.Trees.DAdj D v p ∧ IsPend D p) ∨ IsFixLeaf D v) →
+                    ∀ {k : ℕ},
+                      k ≤ N →
+                        ↑(Finset.card (Finset.filter (MaxCaterpillar.Trees.DPasses D k) Finset.univ)) ≤
+                          ↑(Nat.factorial k * Nat.factorial (N - k)) * (2 * ↑Δ + 2) ^ k
+@card_passes_le_unified : ∀ {N : ℕ} (D : MaxCaterpillar.CountLower.Descr N),
+  (∀ m ∈ D.M, m.1 < m.2) →
+    MaxCaterpillar.Trees.LeafProp D.M →
+      ∀ (child : Fin N × Fin N → Fin N),
+        (∀ m ∈ D.M, child m = m.1 ∨ child m = m.2) →
+          Set.InjOn child ↑D.M →
+            ∀ {Δ : ℕ},
+              2 ≤ Δ →
+                OmegaLe D Δ →
+                  ∀ {k : ℕ},
+                    k ≤ N →
+                      ↑(Finset.card (Finset.filter (MaxCaterpillar.Trees.DPasses D k) Finset.univ)) ≤
+                        ↑(Nat.factorial k * Nat.factorial (N - k)) * (2 * ↑Δ + 2) ^ k
+@unified_choose_le : ∀ {r : ℕ} {K₁ : Finset (MaxCaterpillar.FaceKey r)}
+  {K₂ : Finset (MaxCaterpillar.Trees.TreeFace (r + 1 + 1))},
+  MaxCaterpillar.Trees.IsMixedExpansion r K₁ K₂ →
+    ∀ {Δ : ℕ},
+      2 ≤ Δ →
+        (∀ F ∈ K₂, OmegaLe (MaxCaterpillar.Trees.TreeFace.descr F) Δ) →
+          ∀ {m : ℕ},
+            3 ≤ m → m ≤ r + 1 + 1 → Nat.choose (r + 1 + 1) m ≤ (2 * Δ + 2) ^ m * (Finset.card K₁ + Finset.card K₂)
+@unified_exponential : ∀ {r : ℕ},
+  1 ≤ r →
+    ∀ {K₁ : Finset (MaxCaterpillar.FaceKey r)} {K₂ : Finset (MaxCaterpillar.Trees.TreeFace (r + 1 + 1))},
+      MaxCaterpillar.Trees.IsMixedExpansion r K₁ K₂ →
+        ∀ {Δ : ℕ},
+          2 ≤ Δ →
+            (∀ F ∈ K₂, OmegaLe (MaxCaterpillar.Trees.TreeFace.descr F) Δ) →
+              (2 * Δ + 3) ^ (r + 1 + 1) ≤
+                (r + 1 + 1 + 1) * (2 * Δ + 2) ^ (r + 1 + 1) * (Finset.card K₁ + Finset.card K₂)
+@caterpillar_unified_exponential : ∀ {r : ℕ},
+  1 ≤ r →
+    ∀ {K : Finset (MaxCaterpillar.FaceKey r)},
+      MaxCaterpillar.IsCaterpillarExpansion r K → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * Finset.card K
+@brunck_unified_exponential : ∀ {r : ℕ},
+  1 ≤ r →
+    ∀ {K₁ : Finset (MaxCaterpillar.FaceKey r)} {K₂ : Finset (MaxCaterpillar.Trees.TreeFace (r + 1 + 1))},
+      IsBrunckExpansion r K₁ K₂ →
+        7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * (Finset.card K₁ + Finset.card K₂)
+@hingeDeg_unified_exponential : ∀ {r : ℕ},
+  1 ≤ r →
+    ∀ {K₁ : Finset (MaxCaterpillar.FaceKey r)} {K₂ : Finset (MaxCaterpillar.Trees.TreeFace (r + 1 + 1))},
+      MaxCaterpillar.Trees.IsMixedExpansion r K₁ K₂ →
+        ∀ {Δ : ℕ},
+          2 ≤ Δ →
+            (∀ F ∈ K₂, ∀ (u : Fin (r + 1 + 1)), MaxCaterpillar.Trees.TreeFace.hingeDeg F u ≤ Δ) →
+              (2 * Δ + 3) ^ (r + 1 + 1) ≤
+                (r + 1 + 1 + 1) * (2 * Δ + 2) ^ (r + 1 + 1) * (Finset.card K₁ + Finset.card K₂)
+@outLeaf_unified_exponential : ∀ {r : ℕ},
+  1 ≤ r →
+    ∀ {K₁ : Finset (MaxCaterpillar.FaceKey r)} {K₂ : Finset (MaxCaterpillar.Trees.TreeFace (r + 1 + 1))},
+      MaxCaterpillar.Trees.IsMixedExpansion r K₁ K₂ →
+        ∀ {s : ℕ},
+          1 ≤ s →
+            (∀ F ∈ K₂, OutLeafBound (MaxCaterpillar.Trees.TreeFace.descr F) s) →
+              (2 * s + 5) ^ (r + 1 + 1) ≤
+                (r + 1 + 1 + 1) * (2 * s + 4) ^ (r + 1 + 1) * (Finset.card K₁ + Finset.card K₂)
+@omegaLe_of_redDeg : ∀ {N : ℕ} {D : MaxCaterpillar.CountLower.Descr N} {Δ : ℕ}, 1 ≤ Δ → RedDeg D Δ → OmegaLe D Δ
+@omegaLe_of_outLeafBound : ∀ {N : ℕ} {D : MaxCaterpillar.CountLower.Descr N},
+  (∀ m ∈ D.M, m.1 < m.2) → ∀ {s : ℕ}, OutLeafBound D s → OmegaLe D (s + 1)
+'MaxCaterpillar.Simplify.card_passes_le_unified' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.unified_choose_le' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.unified_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.caterpillar_unified_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.brunck_unified_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.hingeDeg_unified_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.outLeaf_unified_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.omegaLe_of_redDeg' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.omegaLe_of_outLeafBound' depends on axioms: [propext, Quot.sound, Classical.choice]

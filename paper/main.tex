@@ -71,8 +71,8 @@
 \makeatletter
 \newcommand{\DeclareSourceEquation}[2]{\expandafter\def\csname paper@lean@#1\endcsname{#2}}
 \makeatother
-\newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/f312cc5e0065a5e9976465f4a12aedd9571c719b}
-\DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{39}
+\newcommand{\leanbase}{..}
+\DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{41}
 \DeclareLeanEquation{eq:count}{MaxCaterpillar/Definitions.lean}{63}
 \DeclareLeanEquation{eq:word}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}
 \DeclareLeanEquation{eq:faces}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}
@@ -87,8 +87,8 @@
 \DeclareLeanEquation{eq:graph}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/GraphKey.lean}{214}
 \DeclareLeanEquation{eq:cone-count}{MaxCaterpillar/Lemmas.lean}{66}
 \DeclareLeanEquation{eq:features}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean}{63}
-\DeclareLeanEquation{eq:compilation-widths}{MaxCaterpillar/OneBasis.lean}{98}
-\DeclareLeanEquation{stp:size-network}{MaxCaterpillar/OneBasis.lean}{98}
+\DeclareLeanEquation{eq:compilation-widths}{MaxCaterpillar/Retained.lean}{80}
+\DeclareLeanEquation{stp:size-network}{MaxCaterpillar/Retained.lean}{80}
 \DeclareLeanEquation{eq:network-parameters}{MaxCaterpillar/Definitions.lean}{29}
 \DeclareLeanEquation{eq:network-evaluation}{MaxCaterpillar/Definitions.lean}{38}
 \DeclareLeanEquation{eq:maximum}{MaxCaterpillar/Definitions.lean}{54}
@@ -133,8 +133,8 @@
 \DeclareLeanEquation{eq:kuhn-simplices}{MaxNN/Constructions/Paramid/Geom/Kuhn.lean}{43}
 \DeclareLeanEquation{eq:kuhn-support-error}{MaxNN/Constructions/Paramid/Geom/Kuhn.lean}{320}
 \DeclareLeanEquation{eq:apex-maximum}{MaxNN/Constructions/Paramid/Caterpillar/Geometry/Paramid.lean}{43}
-\DeclareLeanEquation{eq:retained-count}{MaxCaterpillar/OneBasis.lean}{82}
-\DeclareLeanEquation{stp:size-count}{MaxCaterpillar/OneBasis.lean}{82}
+\DeclareLeanEquation{eq:retained-count}{MaxCaterpillar/Retained.lean}{80}
+\DeclareLeanEquation{stp:size-count}{MaxCaterpillar/Retained.lean}{80}
 \DeclareLeanEquation{eq:face-dimension-drop}{MaxNN/Constructions/Paramid/Geom/Flag.lean}{200}
 \DeclareLeanEquation{eq:error-peeling}{MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean}{38}
 \DeclareLeanEquation{eq:simplex-vertex-removal}{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean}{184}
@@ -153,7 +153,7 @@
 \DeclareLeanEquation{eq:facet-group-bound}{MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean}{326}
 \DeclareLeanEquation{eq:single-facet-group}{MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean}{326}
 \DeclareLeanEquation{eq:translation-invariance}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean}{22}
-\DeclareLeanEquation{eq:retained-descriptions}{MaxCaterpillar/OneBasis.lean}{33}
+\DeclareLeanEquation{eq:retained-descriptions}{MaxCaterpillar/Retained.lean}{31}
 \DeclareLeanEquation{eq:ridge-cut-residual}{MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean}{613}
 \DeclareLeanEquation{eq:simplex-support-expansion}{MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean}{80}
 \DeclareLeanEquation{eq:direction-pattern-spine}{MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean}{64}
@@ -171,60 +171,55 @@
 \DeclareLeanEquation{eq:network-assembly}{MaxCaterpillar/Construction.lean}{39}
 \DeclareLeanEquation{eq:signed-remainder}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactCanonical.lean}{57}
 \DeclareLeanEquation{eq:coordinate-relabel}{MaxNN/Constructions/Paramid/Caterpillar/Formula/CoordinateDirections.lean}{119}
-\DeclareLeanEquation{eq:lower-arity-weight}{MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean}{35}
-\DeclareLeanEquation{eq:compilation-hypothesis}{MaxCaterpillar/Core.lean}{65}
-\DeclareLeanEquation{eq:rational-coordinate}{MaxCaterpillar/Rationality.lean}{115}
-\DeclareLeanEquation{eq:quotient-dimension}{MaxCaterpillar/Quotient.lean}{46}
-\DeclareLeanEquation{eq:quotient-width}{MaxCaterpillar/Quotient.lean}{59}
+\DeclareLeanEquation{eq:compilation-hypothesis}{MaxCaterpillar/Core.lean}{30}
+\DeclareLeanEquation{eq:rational-coordinate}{MaxCaterpillar/Rationality.lean}{64}
+\DeclareLeanEquation{eq:quotient-dimension}{MaxCaterpillar/Quotient.lean}{44}
+\DeclareLeanEquation{eq:quotient-width}{MaxCaterpillar/Quotient.lean}{57}
 \DeclareLeanEquation{eq:max-three}{MaxCaterpillar/SmallArity.lean}{62}
 \DeclareLeanEquation{eq:max-four}{MaxCaterpillar/SmallArity.lean}{117}
 \DeclareLeanEquation{eq:kmps}{MaxCaterpillar/KMPS.lean}{410}
-\DeclareLeanEquation{eq:count-binomial}{MaxCaterpillar/Theorems.lean}{55}
-\DeclareLeanEquation{eq:count-exponential}{MaxCaterpillar/Theorems.lean}{63}
-\DeclareLeanEquation{eq:count-quadratic}{MaxCaterpillar/Theorems.lean}{71}
-\DeclareLeanEquation{eq:base-point}{MaxCaterpillar/CountExp/Defs.lean}{72}
-\DeclareLeanEquation{eq:mixed-difference}{MaxCaterpillar/CountExp/Defs.lean}{86}
-\DeclareLeanEquation{eq:balanced}{MaxCaterpillar/CountExp/Defs.lean}{115}
-\DeclareLeanEquation{eq:active}{MaxCaterpillar/CountExp/Defs.lean}{121}
-\DeclareLeanEquation{eq:mixed-auxiliary}{MaxCaterpillar/CountExp/W1Functional.lean}{210}
-\DeclareLeanEquation{stp:count-functional}{MaxCaterpillar/CountExp/W1Functional.lean}{210}
-\DeclareLeanEquation{eq:mixed-maximum}{MaxCaterpillar/CountExp/W1Functional.lean}{227}
-\DeclareLeanEquation{stp:count-units}{MaxCaterpillar/CountExp/W1Functional.lean}{437}
-\DeclareLeanEquation{eq:preactivation-digits}{MaxCaterpillar/CountExp/W2Digits.lean}{102}
-\DeclareLeanEquation{stp:count-digits}{MaxCaterpillar/CountExp/W2Digits.lean}{102}
-\DeclareLeanEquation{stp:count-cover}{MaxCaterpillar/CountExp/Main.lean}{106}
-\DeclareLeanEquation{stp:count-caterpillar}{MaxCaterpillar/CountExp/W3Structure.lean}{416}
-\DeclareLeanEquation{stp:count-admissible}{MaxCaterpillar/CountExp/W3Structure.lean}{70}
-\DeclareLeanEquation{eq:order-count}{MaxCaterpillar/CountExp/W4Orders.lean}{520}
-\DeclareLeanEquation{stp:count-orders}{MaxCaterpillar/CountExp/W4Orders.lean}{520}
-\DeclareLeanEquation{eq:potential}{MaxCaterpillar/CountExp/W5Generating.lean}{95}
-\DeclareLeanEquation{eq:path-weight}{MaxCaterpillar/CountExp/W5Generating.lean}{191}
-\DeclareLeanEquation{stp:count-transfer}{MaxCaterpillar/CountExp/W5Generating.lean}{191}
-\DeclareLeanEquation{stp:count-per-unit}{MaxCaterpillar/CountExp/Main.lean}{28}
-\DeclareLeanEquation{stp:count-assembly}{MaxCaterpillar/CountExp/Main.lean}{160}
-\DeclareLeanEquation{eq:binomial-sum}{MaxCaterpillar/CountExp/Main.lean}{221}
-\DeclareLeanEquation{stp:count-corollary}{MaxCaterpillar/CountExp/Main.lean}{221}
-\DeclareLeanEquation{stp:quotient-independence}{MaxCaterpillar/LowerBound.lean}{499}
-\DeclareLeanEquation{eq:path-unit}{MaxCaterpillar/LowerBound.lean}{248}
-\DeclareLeanEquation{stp:quotient-path-units}{MaxCaterpillar/LowerBound.lean}{248}
-\DeclareLeanEquation{eq:test-configuration}{MaxCaterpillar/LowerBound.lean}{318}
-\DeclareLeanEquation{eq:reference-configuration}{MaxCaterpillar/LowerBound.lean}{322}
-\DeclareLeanEquation{stp:quotient-auxiliary}{MaxCaterpillar/LowerBound.lean}{384}
-\DeclareLeanEquation{eq:path-functional}{MaxCaterpillar/LowerBound.lean}{478}
-\DeclareLeanEquation{stp:quotient-path-values}{MaxCaterpillar/LowerBound.lean}{478}
+\DeclareLeanEquation{eq:count-binomial}{MaxCaterpillar/Theorems.lean}{113}
+\DeclareLeanEquation{eq:count-exponential}{MaxCaterpillar/Theorems.lean}{121}
+\DeclareLeanEquation{eq:count-quadratic}{MaxCaterpillar/Theorems.lean}{155}
+\DeclareLeanEquation{eq:base-point}{MaxCaterpillar/Count/Locality.lean}{39}
+\DeclareLeanEquation{eq:mixed-difference}{MaxCaterpillar/Count/Locality.lean}{53}
+\DeclareLeanEquation{eq:balanced}{MaxCaterpillar/Count/Locality.lean}{82}
+\DeclareLeanEquation{eq:active}{MaxCaterpillar/Count/Locality.lean}{88}
+\DeclareLeanEquation{eq:mixed-auxiliary}{MaxCaterpillar/Count/Locality.lean}{263}
+\DeclareLeanEquation{stp:count-functional}{MaxCaterpillar/Count/Locality.lean}{263}
+\DeclareLeanEquation{eq:mixed-maximum}{MaxCaterpillar/Count/Locality.lean}{280}
+\DeclareLeanEquation{eq:preactivation-digits}{MaxCaterpillar/Count/Passing.lean}{198}
+\DeclareLeanEquation{stp:count-digits}{MaxCaterpillar/Count/Passing.lean}{198}
+\DeclareLeanEquation{stp:count-admissible}{MaxCaterpillar/Count/PerUnit.lean}{172}
+\DeclareLeanEquation{eq:order-count}{MaxCaterpillar/Count/Passing.lean}{541}
+\DeclareLeanEquation{stp:count-orders}{MaxCaterpillar/Count/Passing.lean}{541}
+\DeclareLeanEquation{eq:path-weight}{MaxCaterpillar/Count/PerUnit.lean}{211}
+\DeclareLeanEquation{stp:count-transfer}{MaxCaterpillar/Count/PerUnit.lean}{211}
+\DeclareLeanEquation{eq:binomial-sum}{MaxCaterpillar/Count/Main.lean}{69}
+\DeclareLeanEquation{stp:count-corollary}{MaxCaterpillar/Count/Main.lean}{69}
+\DeclareLeanEquation{stp:quotient-independence}{MaxCaterpillar/Dimension.lean}{379}
+\DeclareLeanEquation{eq:path-unit}{MaxCaterpillar/Dimension.lean}{177}
+\DeclareLeanEquation{stp:quotient-path-units}{MaxCaterpillar/Dimension.lean}{177}
+\DeclareLeanEquation{eq:test-configuration}{MaxCaterpillar/Dimension.lean}{241}
+\DeclareLeanEquation{stp:quotient-auxiliary}{MaxCaterpillar/Dimension.lean}{92}
+\DeclareLeanEquation{eq:path-functional}{MaxCaterpillar/Dimension.lean}{278}
+\DeclareLeanEquation{stp:quotient-path-values}{MaxCaterpillar/Dimension.lean}{278}
 \DeclareLeanEquation{eq:bsy-hyperplane}{MaxCaterpillar/Competing/Defs.lean}{68}
 \DeclareLeanEquation{eq:bsy-parallelepiped}{MaxCaterpillar/Competing/Defs.lean}{78}
 \DeclareLeanEquation{eq:bsy-marked}{MaxCaterpillar/Competing/Defs.lean}{99}
-\DeclareLeanEquation{eq:rooted-star}{MaxCaterpillar/Trees/RootedStars.lean}{34}
-\DeclareLeanEquation{eq:bsy-zonotope}{MaxCaterpillar/Theorems.lean}{119}
-\DeclareLeanEquation{eq:bsy-support}{MaxCaterpillar/Theorems.lean}{147}
-\DeclareLeanEquation{eq:bsy-word}{MaxCaterpillar/Theorems.lean}{156}
-\DeclareLeanEquation{stp:bsy-coordinates}{MaxCaterpillar/Competing/Relation.lean}{321}
-\DeclareLeanEquation{stp:bsy-injective}{MaxCaterpillar/Competing/Relation.lean}{332}
-\DeclareLeanEquation{stp:bsy-zonotope}{MaxCaterpillar/Competing/Relation.lean}{392}
+\DeclareLeanEquation{eq:rooted-star}{MaxCaterpillar/Competing/Defs.lean}{121}
+\DeclareLeanEquation{eq:bsy-zonotope}{MaxCaterpillar/Theorems.lean}{203}
+\DeclareLeanEquation{eq:bsy-support}{MaxCaterpillar/Theorems.lean}{231}
+\DeclareLeanEquation{eq:bsy-word}{MaxCaterpillar/Theorems.lean}{240}
+\DeclareLeanEquation{stp:bsy-coordinates}{MaxCaterpillar/Competing/Relation.lean}{320}
+\DeclareLeanEquation{stp:bsy-injective}{MaxCaterpillar/Competing/Relation.lean}{331}
+\DeclareLeanEquation{stp:bsy-zonotope}{MaxCaterpillar/Competing/Relation.lean}{391}
 \DeclareLeanEquation{stp:bsy-support}{MaxCaterpillar/Competing/Support.lean}{55}
 \DeclareLeanEquation{stp:bsy-word}{MaxCaterpillar/Competing/Support.lean}{238}
 \DeclareLeanEquation{stp:bsy-star}{MaxCaterpillar/Competing/Support.lean}{454}
+\DeclareLeanEquation{eq:forest-count}{MaxCaterpillar/Count/Main.lean}{26}
+\DeclareLeanEquation{stp:count-assembly}{MaxCaterpillar/Count/Main.lean}{26}
+\DeclareLeanEquation{eq:block-weight}{MaxCaterpillar/Count/BlockSum.lean}{95}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -383,7 +378,7 @@ A network has \emph{rational weights} if every entry of $W_1$, $W_2$, and $w_3$
 is rational, and \emph{zero biases} if $b_1$, $b_2$, and $b_3$ vanish.
 
 \Needspace{10\baselineskip}
-\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{39}{caterpillar_net}, {\Cref{pf:thm:main}}]\label{thm:main}
+\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{41}{caterpillar_net}, {\Cref{pf:thm:main}}]\label{thm:main}
 For every $N\geq3$, there is a two-hidden-layer ReLU network with rational weights and zero biases computing $\maxn_N$ with widths
 \begin{align}
  h_1=\binom N2+N+1,\qquad h_2=3^{N-2}C_N-N(N-1)+2,\label{eq:width}
@@ -438,7 +433,7 @@ Every continuous piecewise affine function $f:\R^d\to\R$ with finitely
 many affine pieces can be represented exactly by a ReLU network with two
 hidden layers.
 \end{theorem}
-Their first proof proceeds by induction on dimension, using homological algebra to construct a linear combination of support functions of pyramids over parallelepipeds that agrees with the simplex support function modulo lower-dimensional terms. Our construction restricts these building blocks to an explicitly specified finite family, the caterpillar polytopes; we deliver a geometric proof of the corresponding identity.
+Their first proof proceeds by induction on dimension, using homological algebra to construct a linear combination of support functions of pyramids over zonotopes that agrees with the simplex support function modulo lower-dimensional terms. Our construction restricts these building blocks to an explicitly specified finite family, the caterpillar polytopes; we deliver a geometric proof of the corresponding identity.
 
 Independently and concurrently, they developed a second proof based on combinatorial cancellation, with building blocks closely related to ours. \Cref{app:bsy} identifies them exactly: for nonempty marked sets their pyramids are translated caterpillar polytopes, and the remaining pyramids are rooted stars, which are not caterpillar functions. We do not claim that their coefficients agree with ours. We establish explicit width bounds for the first and second hidden layers; their paper states no widths.
 
@@ -675,7 +670,7 @@ zero; the matrices are given in~\Cref{eq:network-assembly}.}
 \end{figure}
 
 \Needspace{8\baselineskip}
-\begin{theorem}[Compilation, \leandecl{MaxCaterpillar/Core.lean}{65}{compilation}, {\Cref{pf:thm:compilation}}]\label{thm:compilation}
+\begin{theorem}[Compilation, \leandecl{MaxCaterpillar/Core.lean}{30}{compilation}, {\Cref{pf:thm:compilation}}]\label{thm:compilation}
 Let $K\subseteq\mathcal K_0$, $d\in\R^K$, and $R\in A_N$ satisfy
 \begin{align}\label{eq:compilation-hypothesis}
  \maxn_N=\sum_{k\in K}d_kU_k+R.
@@ -745,7 +740,7 @@ with $\maxn_N=\sum_{k\in K}d_kU_k+R$ on $\R^N$. Its \emph{size} is $|K|$.
 \end{definition}
 
 \Needspace{10\baselineskip}
-\begin{theorem}[Exponential count, \leandecl{MaxCaterpillar/Theorems.lean}{55}{caterpillar_expansion_choose_le}, \leandecl{MaxCaterpillar/Theorems.lean}{63}{caterpillar_expansion_exponential}, \leandecl{MaxCaterpillar/Theorems.lean}{71}{caterpillar_expansion_quadratic}, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
+\begin{theorem}[Exponential count, \leandecl{MaxCaterpillar/Theorems.lean}{113}{caterpillar_expansion_choose_le}, \leandecl{MaxCaterpillar/Theorems.lean}{121}{caterpillar_expansion_exponential}, \leandecl{MaxCaterpillar/Theorems.lean}{155}{caterpillar_expansion_quadratic}, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
 Let $N\geq3$ and let $K$ be a caterpillar expansion of $\maxn_N$. Then
 \begin{align}
  \binom Nm&\leq6^m\,|K|\qquad(3\leq m\leq N),\label{eq:count-binomial}\\
@@ -762,23 +757,83 @@ by summing over all $m$ with the binomial theorem; it exceeds
 the quadratic bound~\Cref{eq:count-quadratic} only for $N$ of order $70$.
 The idea of the proof (\Cref{app:lower}) is local. At a point where
 $m\geq3$ coordinates tie at the top and the others lie strictly below in a
-fixed order, the $k$-th mixed difference in the tied coordinates annihilates
+fixed order, the $m$-th mixed difference in the tied coordinates annihilates
 every auxiliary function, which depends on at most two coordinates, and does
 not annihilate $\maxn_N$. Hence some $U_k$ with $k\in K$ is nonlinear in all
 tied coordinates there. The caterpillar structure allows a single $U_k$ to
 do so only at a fraction $6^m/\binom Nm$ of these points.
 
+The same bound applies to a larger vocabulary. For an integer head $h$ and
+a set $M$ of oriented edges of a forest, write
+$U(x)=\relu(\sum_i h_ix_i+\sum_{(i,j)\in M}\relu(x_i-x_j))$ and
+$\kappa_i=h_i+|\{j:(i,j)\in M\}|$.
+Delete, simultaneously, all degree-one vertices with $\kappa_i=0$ from
+the forest; call the result its \emph{reduced forest}.
+
+\begin{theorem}[Forest expansions, \leandecl{MaxCaterpillar/Count/Main.lean}{26}{choose_le_of_unit_bound}, {\Cref{pf:thm:forest-count}}]\label{thm:forest-count}
+Let $\Delta\geq2$ be an integer. Suppose
+$\maxn_N=\sum_{k\in K}d_kU_k+R$, where $R\in A_N$ and every $U_k$ has an
+integer head and a forest of functions $\relu(x_i-x_j)$ whose reduced
+forest has maximum degree at most $\Delta$. Put $b=2\Delta+2$. Then
+\begin{align}\label{eq:forest-count}
+ \binom Nm\leq b^m|K|\qquad(3\leq m\leq N).
+\end{align}
+Consequently $|K|\geq(1+1/b)^N/(N+1)$ for $N\geq3b+2$.
+For $\Delta=2$, the latter bound holds for every $N\geq3$.
+\end{theorem}
+
+Caterpillar functions have reduced degree at most $2$: their retained leaf
+edges have $\kappa_i=0$ at the leaf, and their remaining edges lie on a path.
+The rooted stars
+$\relu(x_c-x_a+\sum_{l\ne a,c}\relu(x_c-x_l))$
+and all their face functions have reduced degree $0$.
+Thus the bound $(7/6)^N/(N+1)$ counts all functions in any mixture of these
+families, including the building blocks of the direct combinatorial
+construction of Brunck et al.\ \cite{BSY}; see \Cref{app:bsy}.
+More generally, \Cref{thm:forest-count} covers every tree of bounded degree,
+with arbitrary edge orientations, and permits unboundedly many deleted
+leaves at each vertex.
+
+\paragraph[Trees with few out-leaves]{Trees with few out-leaves (\leandecl{MaxCaterpillar/Count/Main.lean}{228}{outLeaf_unified_exponential}).}
+There is also an exponential bound without restricting internal branching.
+In the normalized description of a tree face function, call a vertex an
+\emph{out-leaf} if it has degree one in the retained forest and $\kappa_i=1$.
+If every vertex of every tree function is adjacent to at most $s\geq1$
+out-leaves, then any expansion by these functions together with caterpillar
+functions satisfies
+$|K|\geq(1+1/(2s+4))^N/(N+1)$ for $N\geq3$,
+where $K$ counts both families.
+Thus the relevant restriction concerns the oriented edges and head of each
+function, rather than just the shape of its original tree.
+
+For example, take \emph{any} tree $T$ on the labels other than an apex $a$,
+choose vertices $s,r$ of $T$, orient every edge away from $s$, and retain
+all the functions $\relu(x_p-x_q)$ on those oriented edges. The resulting
+function is
+$U_{a,s,r,T}(x)=\relu(x_r-x_a+
+       \sum_{p\to q\text{ in }T}\relu(x_p-x_q))$.
+At a tree vertex $v$, normalization gives
+$\kappa_v=\deg_T(v)-1+\mathbf1_{v=s}+\mathbf1_{v=r}$.
+Only $s$ and $r$ can therefore be out-leaves. A degree-two covering forest
+improves the bound in this case to $(7/6)^N/(N+1)$, even when these functions
+are added to the caterpillar and rooted-star face dictionaries; the argument
+is given at the end of \Cref{app:count-exponential}.
+This includes every underlying tree shape.
+It does not include arbitrary face functions of those added trees:
+replacing edges by linear terms can create many out-leaves at one vertex.
+A uniform exponential bound allowing arbitrary orientations and all face
+states of arbitrary trees remains open.
+
 \Needspace{6\baselineskip}
-\begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/Theorems.lean}{108}{caterpillarDim_ge}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
+\begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/Theorems.lean}{192}{caterpillarDim_ge}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
 For every $N\geq3$, the span $V_N:=\spn\D$ of the dictionary satisfies
 $q_N:=\dim(V_N/A_N)\geq(N-2)!$.
 \end{theorem}
 
 Thus \Cref{thm:quotient-compression} cannot give a second width below
 $(N-2)!+2$; together with \Cref{thm:main}, $\log q_N=\Theta(N\log N)$.
-Neither theorem concerns networks whose second hidden layer uses other
-functions than caterpillar functions, and neither is a lower bound for
-general two-hidden-layer networks.
+These bounds concern the stated dictionaries; they do not give a width
+lower bound for general two-hidden-layer networks.
 
 % Begin sections/dictionary.tex
 \section{Why the dictionary spans the maximum}\label{sec:dictionary}
@@ -1005,67 +1060,52 @@ $[0,\ell_{ij}]$ remains free when $u_i=u_j$; its maximizing endpoint is
 $\ell_{ij}$ when $u_i>u_j$ and $0$ when $u_i<u_j$. Minimization reverses
 these choices.
 
-\paragraph{Discarding contributions in $\LS_{N-3}$.}
-Fix $u\in H_0\setminus\{0\}$, since $D_0f=0$, and a summand $Q_{\pi,S}$.
-A face lying entirely in its base
-$B_{\pi,S}:=h_{\pi,S}+\sum_{\ell\in L_{\pi,S}}[0,\ell]$, without the
-apex $0$, is a translated sum of segments; its support function lies in
-$\LS_1\subseteq\LS_{N-3}$. The singleton apex has zero support function.
-If at least two tree edges have endpoint labels $i,j$ with $u_i\ne u_j$,
-at most $N-4$ segments remain free; adjoining the apex gives dimension at
-most $N-3$. Only apex--base faces with at most one tree edge whose endpoint
-coordinate values differ remain.
+\paragraph{Which faces can survive?}
+Fix $u\in H_0\setminus\{0\}$; the direction $0$ gives $D_0f=0$.
+A base face is a zonotope, whose support function is linear plus a sum of
+segment support functions, hence belongs to $\LS_1\subseteq\LS_{N-3}$.
+The apex alone contributes zero. If $j$ tree edges have unequal endpoint
+values under $u$, an apex--base face has at most $N-2-j$ free segments and
+therefore dimension at most $N-1-j$. Thus only $j\leq1$ needs attention.
 
-For a face exposed in direction $-u$, replace $u$ by $-u$; we can then
-always analyze maximizers of $\langle u,\cdot\rangle$. Put
-$a:=u_{\pi(0)}$. The face contains both the apex and base points exactly
-when the maximum over the base is zero. There are three cases.
-
-\paragraph{Case 1: one spine edge with unequal endpoint values.}
-Removing this edge splits the tree into two components with constant coordinate values $c\ne d$. The maximum over the base is $\max\{c,d\}-a$, so the required condition is
-\begin{align}\label{eq:direction-pattern-spine}
- a=\max\{c,d\}.
+Write $a=u_{\pi(0)}$. An apex--base face requires the maximum over the base
+to be zero. For $j=0$, all tree values equal $c$, so this condition is
+$c-a=0$, forcing $u=0$. For $j=1$, deleting the unequal edge leaves constant
+values $c\ne d$ on its two components. The zero-maximum condition is
+\begin{align}
+ a&=\max\{c,d\}&&\text{for a spine edge},\label{eq:direction-pattern-spine}\\
+ a&=c+\relu(c-d)&&\text{for a leaf edge, with leaf value }d.\label{eq:direction-pattern}
 \end{align}
-The apex label therefore adds no new coordinate value, and $u$ has exactly two distinct coordinate values.
+The spine case gives two coordinate values. The leaf case does too when
+$d>c$; when $d<c$, it gives the values $c+t,c-t,c,\ldots,c$, where
+$t=c-d>0$. Replacing $u$ by $-u$ treats the opposite face. Consequently,
+only two-value directions and these symmetric three-value directions can
+contribute modulo $\LS_{N-3}$.
 
-\paragraph{Case 2: one leaf edge with unequal endpoint values.}
-Let $d$ be the leaf's coordinate value and $c\ne d$ the common value at all other tree vertices. The maximum over the base is $c+\relu(c-d)-a$, so the required condition is
-\begin{align}\label{eq:direction-pattern}
- a=c+\relu(c-d)=\begin{cases}c,&d>c,\\2c-d,&d<c.\end{cases}
-\end{align}
-If $d>c$, the apex label has value $c$, giving exactly two distinct coordinate values. If $d<c$, put $t:=c-d>0$. The leaf has value $c-t$, the apex label has value $c+t$, and all other $N-2$ labels have value $c$. Up to a permutation of labels, this gives the three-value pattern $(c+t,c-t,c,\ldots,c)$.
-
-\paragraph{Case 3: equal values at every tree-edge endpoint pair.}
-If $u_i=u_j$ for the endpoint labels of every tree edge, all tree values equal some $c$. The maximum over the base is $c-a$, so we would also need $a=c$, making every coordinate of $u$ equal. Since $u\in H_0$, this would force $u=0$, which we excluded.
-
-Negating $u$ preserves these patterns. Since $Q_{\pi,S}$ was arbitrary,
-only directions with two distinct coordinate values or the pattern
-$(c+t,c-t,c,\ldots,c)$ can contribute to the full signed sum.
-
-\paragraph{Cancellation for three distinct values.}
-Let $\alpha,\beta$ be the exceptional labels, with $u_\alpha=c+t$, $u_\beta=c-t$, and $u_i=c$ for every other label, where $t\ne0$. Let $\tau$ exchange $\alpha$ and $\beta$ and fix all other labels. Define the linear map $R:H_0\to H_0$ explicitly by
+\paragraph{Three values: reflection symmetry.}
+Suppose $u_\alpha=c+t$, $u_\beta=c-t$, and all other coordinates equal $c$.
+Let $\tau$ exchange $\alpha$ and $\beta$. On $H_0$, its coordinate action is
 \begin{align}\label{eq:braid-reflection}
- (Rx)_i:=x_{\tau(i)}-x_{\tau(0)}\qquad(0\leq i<N,\ x\in H_0).
+ (Rx)_i=x_{\tau(i)}-x_{\tau(0)},\qquad
+ Rx=x-\lambda(x)u,\qquad
+ \lambda(x):=\frac{x_\alpha-x_\beta}{t}.
 \end{align}
-Thus $R$ first swaps the two exceptional coordinates and then subtracts the new zeroth coordinate from every coordinate; in particular, $(Rx)_0=0$. Since $u_0=0$, this formula also gives $Rx=x-\frac{x_\alpha-x_\beta}{t}u$. With the explicit linear functional $\langle b,x\rangle:=(x_\alpha-x_\beta)/(2t)$, we therefore have $Rx=x-2\langle b,x\rangle u$, $\langle b,u\rangle=1$, and $Ru=-u$. Hence $R$ is a rank-one reflection. Permutation symmetry and the common coordinate shift $-x_{\tau(0)}$ give $F_N(Rx)=F_N(x)+\ell(x)$ for a linear function $\ell$.
-Write $G:=F_N|_{H_0}$. Applying the reflection identity to $u+\varepsilon x$ and to $u$, subtracting, dividing by $\varepsilon>0$, and taking $\varepsilon\downarrow0$ gives $\partial_{-u}G(Rx)=\partial_uG(x)+\ell(x)$, because $R(u+\varepsilon x)=-u+\varepsilon Rx$.
-To remove $R$ from the derivative argument, positive homogeneity gives the identity $\partial_vG(x+\lambda v)=\partial_vG(x)+\lambda G(v)$ for every real $\lambda$. Indeed, for sufficiently small $\varepsilon>0$, write $v+\varepsilon(x+\lambda v)=(1+\varepsilon\lambda)\bigl(v+\frac{\varepsilon}{1+\varepsilon\lambda}x\bigr)$ and apply the definition~\Cref{eq:face-derivative}.
-Using this identity with $v=-u$ and $\lambda=2\langle b,x\rangle$, we obtain
+In particular $Ru=-u$. For $G=F_N|_{H_0}$, permutation symmetry and a common
+coordinate shift give $G\circ R=G+\ell$ with $\ell$ linear.
+Every exposed face in direction $v$ lies in the hyperplane
+$\langle v,p\rangle=h_P(v)$; hence
+$\partial_vG(x+sv)=\partial_vG(x)+sG(v)$.
+Applying this to the derivative of $G\circ R=G+\ell$ at $u$ gives
 \begin{align}\label{eq:braid-germ}
-\begin{aligned}
  \partial_uG(x)+\ell(x)
- &=\partial_{-u}G(Rx)\\
- &=\partial_{-u}G\bigl(x+2\langle b,x\rangle(-u)\bigr)\\
- &=\partial_{-u}G(x)+2\langle b,x\rangle G(-u),\\
- D_uG(x)&=\partial_uG(x)-\partial_{-u}G(x)
- =2F_N(-u)\langle b,x\rangle-\ell(x).
-\end{aligned}
+ =\partial_{-u}G(Rx)
+ =\partial_{-u}G(x)+\lambda(x)G(-u).
 \end{align}
-The right-hand side is linear in $x$, so
+Therefore
 \begin{align}\label{eq:linear-facet}
-D_u(F_N|_{H_0})\in\LS_0.
+ D_uG=\lambda\,G(-u)-\ell\in\LS_0.
 \end{align}
-The two exposed simplex faces are vertices, so their support functions are linear as well.
+The two exposed simplex faces are vertices, so $D_uf\in\LS_0$ as well.
 
 \paragraph{Handling two distinct values.}
 First suppose that each value occurs at least twice. After the preceding dimension bound, every term still requiring cancellation has a unique split
@@ -1092,22 +1132,18 @@ This direction exposes the $(N-2)$-dimensional facet $\Delta':=\operatorname{con
 \begin{align}\label{eq:simplex-facet}
 D_uh_\Delta(x)=h_{\Delta'}(x)=\max\{x_1,\ldots,x_{N-1}\}\qquad(x\in H_0).
 \end{align}
-Here is the exact use of the induction hypothesis. Set $z:=(x_1,\ldots,x_{N-1})$ and $y:=z-x_1\one=(0,x_2-x_1,\ldots,x_{N-1}-x_1)$, where $\one\in\R^{N-1}$ has every coordinate equal to $1$. Every caterpillar maximum increases by a common added constant. Averaging over the $(N-1)!$ lower label orders cancels the factorial in the total signed coefficient, giving
+The induction hypothesis also applies to unrestricted lower-arity inputs
+modulo linear functions. Indeed, put
+$z=(x_1,\ldots,x_{N-1})$ and $y=z-x_1\one$.
+Each summand of $F_{N-1}$ increases by the common shift, so
 \begin{align}\label{eq:lower-arity-translation}
-\begin{aligned}
-F_{N-1}(z)-\maxn_{N-1}(z)
-&=F_{N-1}(y)-\maxn_{N-1}(y)+(W_{N-1}-1)x_1
-\end{aligned}
+ F_{N-1}(z)-\maxn_{N-1}(z)
+ \equiv F_{N-1}(y)-\maxn_{N-1}(y)\pmod{\LS_0}.
 \end{align}
-for
-\begin{align}\label{eq:lower-arity-weight}
-    W_{N-1}&:=\sum_{\varnothing\ne T\subseteq\{1,\ldots,N-3\}}(-1)^{N-1+|T|}.
-\end{align}
-Unlike $z$, the vector $y$ has zeroth coordinate zero, so the $(N-1)$-input
-induction hypothesis applies to it. Linear precomposition preserves
-$\LS_{N-3}$, and the last term is linear. Thus
+The first coordinate of $y$ is zero. Induction and linear precomposition
+therefore give
 \begin{align}\label{eq:lifted-induction}
-\bigl(x\mapsto F_{N-1}(x_1,\ldots,x_{N-1})-\max\{x_1,\ldots,x_{N-1}\}\bigr)\in\LS_{N-3}.
+ \bigl(x\mapsto F_{N-1}(x_1,\ldots,x_{N-1})-\max\{x_1,\ldots,x_{N-1}\}\bigr)\in\LS_{N-3}.
 \end{align}
 \pfclaim{clm:coordinate-deletion}{Coordinate deletion, \leandecl{MaxCaterpillar/Lemmas.lean}{41}{coordinate_deletion}, {\Cref{pf:clm:coordinate-deletion}}}
 For $N\geq4$,
@@ -1149,9 +1185,9 @@ combined with the auxiliary functions. By \Cref{thm:compilation}, the
 second width is the number of retained descriptions plus two;
 \Cref{app:widths} gives the complete count.
 
-\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{39}{caterpillar_net}).}
-The theorem and equation links point to the Lean development at a fixed
-repository revision. \Cref{app:lean} prints the network definitions
+\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{41}{caterpillar_net}).}
+In this working draft, the theorem and equation links point to the local
+Lean sources. \Cref{app:lean} prints the network definitions
 and the main theorem, and describes the verification certificate.
 
 \section{Compression}\label{sec:compression}
@@ -1165,7 +1201,7 @@ be the span of the auxiliary functions~\Cref{eq:aux_functions}. Put
 \end{align}
 
 \Needspace{8\baselineskip}
-\begin{theorem}[Quotient compression, \leandecl{MaxCaterpillar/Quotient.lean}{59}{quotient_compression}, {\Cref{pf:thm:quotient-compression}}]\label{thm:quotient-compression}
+\begin{theorem}[Quotient compression, \leandecl{MaxCaterpillar/Quotient.lean}{57}{quotient_compression}, {\Cref{pf:thm:quotient-compression}}]\label{thm:quotient-compression}
 For every $N\geq3$ there are a set $K\subseteq\mathcal K_0$ with $|K|\leq q_N$,
 rational coefficients $d_k$, and $R\in A_N$ with rational auxiliary
 coefficients such that $\maxn_N=\sum_{k\in K}d_kU_k+R$. Hence $\maxn_N$ is
@@ -1184,19 +1220,19 @@ this gives $K$ with $|K|\leq q_N$. Let $S=\{g_1,\ldots,g_m\}$ be the resulting
 basis of $V_N$. By \Cref{thm:dictionary}, $\maxn_N\in V_N$, so
 $\maxn_N=\sum_ic_ig_i$ with unique real coordinates $c_i$.
 
-The coordinates are rational. Every $g_i$ and $\maxn_N$ is continuous and
-takes rational values on $\mathbb Q^N$, being built from $\relu$ and integer
-combinations of coordinates. A combination of the $g_i$ that vanishes on the
-dense set $\mathbb Q^N$ vanishes everywhere, so the rational rows
-$(g_i(y))_i$, $y\in\mathbb Q^N$, span $\mathbb Q^m$; otherwise a nonzero
-rational vector would be orthogonal to all of them. Hence there are points
-$y_1,\ldots,y_r\in\mathbb Q^N$ and rationals $a_{jk}$ with
-$\sum_ka_{jk}g_i(y_k)=\delta_{ij}$, and
+The coefficients can be made rational without changing the support.
+Choose a $\mathbb Q$-linear map $P:\R\to\mathbb Q$ fixing $\mathbb Q$
+by extending $\{1\}$ to a $\mathbb Q$-basis of $\R$.
+Every $g_i$ and $\maxn_N$ is continuous and rational-valued on $\mathbb Q^N$.
+For $y\in\mathbb Q^N$, applying $P$ to the expansion gives
 \begin{align}\label{eq:rational-coordinate}
- c_j=\sum_ic_i\sum_ka_{jk}g_i(y_k)=\sum_ka_{jk}\maxn_N(y_k)\in\mathbb Q.
+ \maxn_N(y)=P\!\left(\sum_i c_i g_i(y)\right)
+           =\sum_i P(c_i)g_i(y).
 \end{align}
+Continuity extends the equality to all of $\R^N$, with rational
+coefficients $P(c_i)$.
 \Cref{thm:compilation} compiles the expansion; its weights are rational
-because the $c_j$ are.
+because the new coefficients are rational.
 \end{Proof}
 
 Every face function is the unit of a normalized description outside
@@ -1253,7 +1289,7 @@ combination of maxima over subsets of $\{g_1,\ldots,g_n\}$, and reduces each
 maximum to subsets of at most $d+1$ functions by an affine dependence among
 $d+2$ gradients.
 
-\paragraph[Reusing the first hidden layer]{Reusing the first hidden layer (\leandecl{MaxCaterpillar/CPWLRational.lean}{21}{cpwl_two_hidden_layers_pieces_rational}, \leandecl{MaxCaterpillar/Sharing.lean}{309}{card_imageSets_le_sum_choose}).}
+\paragraph[Reusing the first hidden layer]{Reusing the first hidden layer (\leandecl{MaxCaterpillar/CPWLRational.lean}{19}{cpwl_two_hidden_layers_pieces_rational}, \leandecl{MaxCaterpillar/Sharing.lean}{309}{card_imageSets_le_sum_choose}).}
 Let $d\geq2$, and let $(h_1,h_2)$ be the widths of \Cref{thm:main} for
 $N=d+1$. Substituting the arguments of each term of~\Cref{eq:kmps} into the
 Caterpillar Net computes $f$. All terms use only the features
@@ -1278,7 +1314,11 @@ functions suffice (\Cref{thm:small-arity}); for general $N$,
 \Cref{thm:quotient-compression} retains at most $q_N$ of them.
 Conversely, every such expansion needs at least $(7/6)^N/(N+1)$ caterpillar
 functions (\Cref{thm:count-exponential}), so caterpillar building blocks
-cannot give subexponential second widths. Whether the maximum has
+cannot give subexponential second widths. Reducing our upper bound
+$2^{O(N\log N)}$ to $2^{O(N)}$ remains open. The factorial dimension bound
+in \Cref{thm:quotient-lower} limits compression by a basis of the entire
+dictionary; it does not give a factorial lower bound for representing the
+single function $\maxn_N$. Whether the maximum has
 two-hidden-layer representations of subexponential width with other
 second-layer functions remains open.
 \label{main-text-end}
@@ -1571,299 +1611,227 @@ Taking logarithms gives the asymptotic bounds in~\Cref{thm:main}.
 
 \subsection{Proof of the exponential count bound}\label{app:count-exponential}
 
-\paragraph{Idea.}
-Fix a tie size $m$ with $3\leq m\leq N$. A \emph{locality} is a point at which
-$m$ coordinates tie at the top value $0$, while the remaining coordinates lie
-far below, at heights $-B^{e}$ for distinct exponents $e$. The $m$-th mixed
-finite difference in the tied coordinates kills every function that depends
-on at most two coordinates. Hence it kills the auxiliary span $A_N$, whereas
-it does not vanish on $\maxn_N$. Applying it to an expansion shows that some
-face function $U_k$, $k\in K$, is \emph{seen} at every locality. A face
-function is seen only if its preactivation vanishes at the locality. Reading
-the preactivation in base $B$, this forces a rigid balance between the
-heights of the coordinates and the functions $\relu(x_i-x_j)$ inside $U_k$.
-These functions lie on a caterpillar, so the balance leaves few tie sets and
-few orders. Counting shows that each face function is seen at no more than
-a fraction $6^m/\tbinom Nm$ of the localities.
-
-\paragraph{Notation.}
-Let $k=(h,M)\in\mathcal K_0$ be a normalized description, so that
-$U_k=\relu(A_k)$ with preactivation
-$A_k(x)=h(x)+\sum_{\ell_{ij}\in M}\relu(x_i-x_j)$, where $i<j$ for every
-$\ell_{ij}\in M$ and $h(x)=\sum_oh_ox_o$ has integer coefficients. The
-\emph{hinge graph} of $k$ has the labels $0,\ldots,N-1$ as vertices and an
-edge $\{i,j\}$ for every $\ell_{ij}\in M$; vertices joined by an edge are
-\emph{hinge neighbours}. For every label $o$ put
-$\kappa_o:=h_o+\bigl|\{j:\ell_{oj}\in M\}\bigr|$. This is the slope of $A_k$
-in the direction $x_o$ at points where $x_o$ exceeds the coordinates of all
-hinge neighbours of $o$. By~\Cref{eq:hinge-reversal}, the normalization
-in~\Cref{eq:normalized-description} does not change $A_k$, so $\kappa_o$ equals
-the coefficient of $x_o$ in the head $h'$ of~\Cref{eq:face-description} plus
-the number of hinges $\relu(x_o-x_j)$ in $M$ before reorientation.
-
-Encode a locality by a permutation $\rho$ of $\{0,\ldots,N-1\}$, read as an
-assignment of \emph{positions}: label $o$ sits at position $\rho(o)$, and a
-smaller position means a higher coordinate. The \emph{tie set} is
-$T_\rho:=\{o:\rho(o)<m\}$, so $|T_\rho|=m$. For integers $B\geq1$ and a real
-$\delta>0$, chosen below, define the base point $p^\rho\in\R^N$ and the mixed
-difference $\Delta_\rho$ by
-\begin{align}
- p^\rho_o&:=\begin{cases}0,&\rho(o)<m,\\-B^{\rho(o)},&\rho(o)\geq m,\end{cases}\label{eq:base-point}\\
- \Delta_\rho g&:=\sum_{S\subseteq T_\rho}(-1)^{|T_\rho\setminus S|}\,g\bigl(p^\rho+\delta\one_S\bigr),\label{eq:mixed-difference}
-\end{align}
-where $\one_S$ is the indicator vector of $S$. Thus $\Delta_\rho$ evaluates $g$
-at the $2^m$ corners of a cube of side $\delta$ in the tied coordinates. Each
-locality $(T,\text{order of the other labels})$ arises from exactly $m!$
-permutations $\rho$, so we count permutations. For $o\notin T_\rho$ let
-$u_\rho(o)$ be the number of hinge neighbours of $o$ at a smaller position.
-Say that $k$ \emph{passes} $\rho$ if
-\begin{align}
- u_\rho(o)&=\kappa_o\qquad\text{for every }o\notin T_\rho,\label{eq:balanced}\\
- \kappa_t&\neq0\qquad\text{for every }t\in T_\rho\text{ without hinge neighbours in }T_\rho.\label{eq:active}
-\end{align}
+We prove \Cref{thm:forest-count} and obtain
+\Crefrange{eq:count-binomial}{eq:count-exponential} by taking $\Delta=2$.
+The proof uses one mixed difference and a product over disjoint star blocks.
 
 \begin{Proof}{Theorem}{thm:count-exponential}
-Fix an expansion $\maxn_N=\sum_{k\in K}d_kU_k+R$ as
-in~\Cref{eq:compilation-hypothesis}, and a tie size $3\leq m\leq N$. Put
-$c_k:=\sum_o|h_o|+2|M|$ for $k=(h,M)$, $C:=\sum_{k\in K}c_k$,
-$\delta:=1/(C+1)$, and $B:=\lceil C\rceil+1$. Then $\delta c_k<1$ and
-$\sum_o|h_o|+|M|<B$ for every $k\in K$.
-\Cref{stp:count-functional,stp:count-units,stp:count-digits,stp:count-cover}
-show that every $\rho$ is passed by some $k\in K$.
-\Cref{stp:count-caterpillar,stp:count-admissible,stp:count-orders,stp:count-transfer,stp:count-per-unit}
-show that each $k$ passes at most $m!\,(N-m)!\,6^m$ permutations.
+\phantomsection\label[proof]{pf:thm:forest-count}
+Fix an expansion as in \Cref{thm:forest-count}, and $3\leq m\leq N$.
+Write $U_k=\relu(A_k)$ with
+$A_k(x)=\sum_o h_{k,o}x_o+\sum_{(i,j)\in M_k}\relu(x_i-x_j)$.
+Reorienting edges by \Cref{eq:hinge-reversal} preserves $A_k$ and
+$\kappa_{k,o}$, so we may assume $i<j$ in $M_k$.
+Choose an integer $B>1$ and $\delta>0$ such that, for every $k$,
+$B>\sum_o|h_{k,o}|+|M_k|$ and
+$\delta(\sum_o|h_{k,o}|+2|M_k|)<1$.
 
-\pfstep{stp:count-functional}{The mixed difference kills the auxiliary span}
-If $g$ does not depend on some tied coordinate $x_t$ on the cube, then
-$\Delta_\rho g=0$: the corners $S$ and $S\cup\{t\}$, $t\notin S$, carry the
-same value with opposite signs. Since $m\geq3$, every function of at most two
-coordinates misses some tied coordinate. This applies to the auxiliary
-functions~\Cref{eq:aux_functions}, to the coordinates $x_o$, and to every
-$\relu(x_i-x_j)$. On the cube the coordinates outside $T_\rho$ are at most
-$-1$, so $\maxn_N(p^\rho+\delta\one_S)=\delta$ for $S\neq\varnothing$ and $0$
-for $S=\varnothing$. As the signs sum to zero,
+\pfstep{stp:count-functional}{A mixed difference detects every top tie}
+A permutation $\rho$ assigns positions to labels, with smaller positions
+higher. Put $T_\rho=\{o:\rho(o)<m\}$ and define
+\begin{align}
+ p^\rho_o&=\begin{cases}0,&o\in T_\rho,\\-B^{\rho(o)},&o\notin T_\rho,\end{cases}\label{eq:base-point}\\
+ \Delta_\rho g&=\sum_{S\subseteq T_\rho}(-1)^{m-|S|}
+                 g(p^\rho+\delta\one_S).\label{eq:mixed-difference}
+\end{align}
+Pairing corners along a missing coordinate shows that $\Delta_\rho$
+annihilates every function of at most two coordinates. On this cube the
+maximum is $\delta$ at every nonempty corner and $0$ at the empty corner.
+Thus
 \begin{align}
  \Delta_\rho R&=0\qquad(R\in A_N),\label{eq:mixed-auxiliary}\\
- \Delta_\rho\maxn_N&=-(-1)^m\delta.\label{eq:mixed-maximum}
+ \Delta_\rho\maxn_N&=(-1)^{m+1}\delta\ne0.\label{eq:mixed-maximum}
 \end{align}
+Some $U_k$ in the expansion therefore satisfies $\Delta_\rho U_k\ne0$.
 
-\pfstep{stp:count-units}{A face function is seen only where its preactivation vanishes}
-Let $k=(h,M)\in K$. The base point has integer coordinates, so $A_k(p^\rho)$
-is an integer. On the cube every coordinate moves by at most $\delta$, so
-$h$ changes by at most $\delta\sum_o|h_o|$ and each $\relu(x_i-x_j)$ by at
-most $2\delta$. Hence $A_k$ stays within $\delta c_k<1$ of $A_k(p^\rho)$. If $A_k(p^\rho)\leq-1$,
-then $U_k=0$ on the cube. If $A_k(p^\rho)\geq1$, then $U_k=A_k$ on the cube,
-and $A_k$ is a sum of functions of at most two coordinates. In both cases
-$\Delta_\rho U_k=0$ by \Cref{stp:count-functional}. Now let
-$A_k(p^\rho)=0$, and let $t\in T_\rho$ have no hinge neighbour in $T_\rho$.
-Raising $x_t$ from $0$ to $\delta$ activates no new function: every
-$\relu(x_t-x_o)$ in $M$ has $x_o\leq-1$ and stays active with slope $1$,
-and every $\relu(x_o-x_t)$ stays $0$. So $A_k$ changes by $\delta\kappa_t$. If
-$\kappa_t=0$, then $U_k$ does not depend on $x_t$ on the cube and
-$\Delta_\rho U_k=0$. Hence $\Delta_\rho U_k\neq0$ implies $A_k(p^\rho)=0$
-and~\Cref{eq:active}.
-
-\pfstep{stp:count-digits}{A vanishing preactivation balances the heights}
-At $p^\rho$, the function $\relu(x_i-x_j)$ equals $p^\rho_i-p^\rho_j$ when
-$i$ is at a smaller position than $j$, and $0$ otherwise. Collecting the
-coefficient of each $p^\rho_o$ and using $p^\rho_t=0$ on $T_\rho$ gives
+\pfstep{stp:count-digits}{Detection forces balance}
+Fix one such unit and suppress its index. Its preactivation at $p^\rho$
+is an integer and changes by less than $1$ on the cube. Unless $A(p^\rho)=0$,
+its outer ReLU is either zero or redundant throughout the cube, and
+$\Delta_\rho U=0$.
+For $o\notin T_\rho$, let $u_\rho(o)$ count its neighbours at smaller
+positions. Collecting coefficients gives
 \begin{align}\label{eq:preactivation-digits}
- A_k(p^\rho)=-\sum_{o\notin T_\rho}\bigl(\kappa_o-u_\rho(o)\bigr)B^{\rho(o)}.
+ A(p^\rho)=-\sum_{o\notin T_\rho}(\kappa_o-u_\rho(o))B^{\rho(o)}.
 \end{align}
-The integer digits satisfy
-$|\kappa_o-u_\rho(o)|\leq|h_o|+|M|<B$, and the exponents $\rho(o)$ are
-distinct. If the sum vanishes, the digit with the smallest exponent is
-divisible by $B$, hence zero, and induction makes every digit zero. Thus
-$A_k(p^\rho)=0$ implies~\Cref{eq:balanced}.
-
-\pfstep{stp:count-cover}{Every locality is passed}
-Apply $\Delta_\rho$ to the expansion. The remainder contributes nothing
-by~\Cref{eq:mixed-auxiliary}, and the maximum contributes $-(-1)^m\delta$
-by~\Cref{eq:mixed-maximum}. Hence
-$\sum_{k\in K}d_k\Delta_\rho U_k\neq0$, and some $k\in K$ has
-$\Delta_\rho U_k\neq0$. By \Cref{stp:count-units,stp:count-digits}, this
-$k$ passes $\rho$.
-
-\pfstep{stp:count-caterpillar}{The hinge graph lies on a caterpillar}
-Let $k$ be a normalized description of the face function $U^\tau_{\pi,S}$.
-Every $\ell_{ij}\in M$ comes from an edge of the labelled caterpillar of
-\Cref{def:caterpillar} with state $\relu\circ\ell$. Let
-$s_0,\ldots,s_n$, $n:=|S|$, be the labels at the spine positions in order.
-The hinge graph has two kinds of edges: \emph{links}
-$\{s_i,s_{i+1}\}$, for spine edges kept as hinges, and \emph{pendant edges}
-$\{s_i,u\}$, for leaves $u$ whose parent edge to $s_i$ is kept as a hinge.
-A pendant vertex $u$ has no other hinge neighbour, and $\kappa_u=0$: the
-head $h'$ of~\Cref{eq:face-description} does not involve $u$, since $u$ is
-neither the apex nor the last spine label and its only edge is a hinge, and
-$u$ is the subtracted end of its hinge $\relu(x_{s_i}-x_u)$. Every other
-label is \emph{isolated}, that is, without hinge neighbours.
-
-\pfstep{stp:count-admissible}{Passed tie sets are determined by their spine part}
-Let $k$ pass $\rho$ and put $T:=T_\rho$. A pendant $u$ at $s_i$ lies in $T$
-exactly when $s_i$ does. If $u\in T$ and $s_i\notin T$, then $u$ has no
-hinge neighbour in $T$ and $\kappa_u=0$, contradicting~\Cref{eq:active}.
-If $u\notin T$ and $s_i\in T$, then $u_\rho(u)=1\neq0=\kappa_u$,
-contradicting~\Cref{eq:balanced}. An isolated label $o$ lies in $T$ exactly
-when $\kappa_o\neq0$, by~\Cref{eq:active} for $o\in T$ and
-by~\Cref{eq:balanced}, which reads $0=\kappa_o$, for $o\notin T$. Hence $T$
-is determined by its \emph{spine part} $A_T:=\{i:s_i\in T\}$, and
-$|A_T|\leq|T|=m$. Moreover $A_T$ lies in the family $\mathcal A$ of sets
-$A\subseteq\{0,\ldots,n\}$ with $i\in A\Leftrightarrow\kappa_{s_i}\neq0$ for
-every isolated spine label $s_i$.
-
-\pfstep{stp:count-orders}{Few orders balance a given tie set}
-Fix $T$ as in \Cref{stp:count-admissible}. Among the permutations $\rho$
-with $T_\rho=T$, consider those satisfying~\Cref{eq:balanced}. For $o\notin
-T$, all hinge neighbours of $o$ in $T$ lie above $o$, so~\Cref{eq:balanced}
-prescribes how many hinge neighbours of $o$ outside $T$ lie above $o$.
-The hinge edges outside $T$ form a forest, by \Cref{stp:count-caterpillar}.
-Orient each of them towards its higher end. Then the out-degrees of this
-orientation are prescribed, and a forest
-orientation is determined by its out-degrees: the edge at a leaf is
-oriented by the leaf's out-degree, and one removes the leaf and repeats.
-Hence all these $\rho$ orient each hinge edge outside $T$ in the same way.
-Now choose disjoint hinge edges outside $T$ greedily: link $i$ is chosen
-when $i,i+1\notin A_T$ and link $i-1$ was not chosen, and a pendant edge is
-chosen at every $s_i$, $i\notin A_T$, that has a pendant but no link. Its
-pendant lies outside $T$ by \Cref{stp:count-admissible}. Let $\mu(A_T)$ be
-the number of chosen edges. Swapping the two ends of one chosen edge
-preserves $T_\rho$, so exactly a $2^{-\mu(A_T)}$ fraction of the
-$m!\,(N-m)!$ permutations with tie set $T$ orients all chosen edges in a
-prescribed way. Therefore
-\begin{align}\label{eq:order-count}
- \bigl|\{\rho:T_\rho=T,\ \rho\text{ satisfies~\Cref{eq:balanced}}\}\bigr|\cdot2^{\mu(A_T)}\leq m!\,(N-m)!.
-\end{align}
-
-\pfstep{stp:count-transfer}{The generating function along the spine}
-For $0\leq j\leq n$ and $A\subseteq\{0,\ldots,j\}$, let $\mu_j(A)$ count the
-links chosen among $0,\ldots,j-1$ and the pendant edges chosen at
-$s_0,\ldots,s_j$. Call $s_j$ \emph{free} if $j\notin A$ and link $j-1$ was not
-chosen, and define the potential
+The integer digits have absolute value less than $B$. Successively reducing
+modulo $B$ forces each digit to vanish.
+Moreover, if a tied label $t$ has no tied neighbour, the slope in $x_t$ on
+the cube is $\kappa_t$; if this is zero, the mixed difference vanishes.
+Call $U$ \emph{passing} $\rho$ when these two necessary conditions hold:
 \begin{align}
- \phi_j(A)&:=\begin{cases}7/9,&\text{link }j\text{ exists and }s_j\text{ is free},\\7/6,&\text{link }j\text{ exists and }s_j\text{ is not free},\\1,&\text{there is no link }j.\end{cases}\label{eq:potential}
+ u_\rho(o)&=\kappa_o&&\text{for }o\notin T_\rho,\label{eq:balanced}\\
+ \kappa_t&\ne0&&\text{for }t\in T_\rho\text{ with no neighbour in }T_\rho.\label{eq:active}
 \end{align}
-Let $P_j:=\sum_A2^{-\mu_j(A)}6^{-|A|}\phi_j(A)$ over the sets
-$A\subseteq\{0,\ldots,j\}$ obeying the rule of $\mathcal A$ for isolated
-$s_i$, $i\leq j$. Then $\mu_n=\mu$. We show $P_j\leq1$ by induction on
-$j$. Write the term of $A$ as $\psi\,\phi_j(A)$ with
-$\psi:=2^{-\mu_j(A)}6^{-|A|}$. Each set for $j+1$ arises from a set $A$ for
-$j$ by omitting or inserting $j+1$, and it suffices that the allowed
-extensions of $A$ have terms summing to at most $\psi\,\phi_j(A)$. Inserting
-$j+1$ multiplies $\psi$ by $1/6$ and leaves $s_{j+1}$ not free, so it
-contributes $\psi\lambda/6$ with $\lambda=7/6$ if link $j+1$ exists and $\lambda=1$
-otherwise. If link $j$ exists and $s_j$ is free, omitting $j+1$ chooses link
-$j$, which contributes $\psi\lambda/2$, and $\lambda/2+\lambda/6\leq7/9$. If
-link $j$ exists and $s_j$ is not free, the two terms are at most
-$\psi$ times $7/9+7/36$ or $1+1/6$, both at most $7/6$. If there is no
-link $j$, the two terms are at most $\psi$ times $7/9+7/36$ if link $j+1$ exists, $1/2+1/6$ if $s_{j+1}$
-has a pendant but no link, and $\max(1,1/6)$ if $s_{j+1}$ is isolated,
-because then only one extension is allowed. The case $j=0$ is the last
-case started from the empty set. Since no link leaves $s_n$, $\phi_n=1$,
-and $P_n\leq1$ reads
+Every permutation is passed by some unit in the expansion.
+
+\pfstep{stp:count-admissible}{Only the reduced forest chooses the tie set}
+Fix a unit, let $F$ be its forest, and call the deleted degree-one vertices
+\emph{pendants}. Let $\Phi$ contain the vertices that are neither pendants
+nor isolated in $F$. For a passed tie set $T$, an isolated vertex belongs
+to $T$ exactly when its $\kappa$ is nonzero. A pendant belongs to $T$ exactly
+when its neighbour does: either mismatch contradicts
+\Cref{eq:balanced,eq:active}. A component consisting of two pendants must
+lie entirely in $T$, since otherwise its lower vertex violates balance.
+Consequently $T$ is determined by $A=T\cap\Phi$, and $|A|\leq m$.
+
+\pfstep{stp:count-orders}{Each disjoint edge halves the possible orders}
+For fixed $T$, balance prescribes the out-degree of each vertex of $F-T$
+when edges point towards the higher endpoint. A forest orientation is
+uniquely determined by its out-degrees: orient the edge at a leaf, delete
+the leaf, and repeat. Hence every passed permutation with this $T$ induces
+the same orientation of $F-T$.
+If we select a matching of $\mu(A)$ edges of $F-T$, independently swapping
+their endpoints gives
+\begin{align}\label{eq:order-count}
+ |\{\rho:U\text{ passes }\rho,\ T_\rho=T\}|
+ \leq m!\,(N-m)!\,2^{-\mu(A)}.
+\end{align}
+
+\pfstep{stp:count-transfer}{Partition into blocks and multiply their weights}
+Partition $\Phi$ into stars of the reduced forest and singletons isolated
+in that forest. Such a star partition exists: an inclusion-minimal edge
+cover of the non-isolated vertices contains no three-edge path, since its
+middle edge could be removed. As it is a forest, its components are stars.
+Every star has $1\leq s\leq\Delta$ leaves. A singleton has a pendant
+neighbour in $F$; fix one.
+
+For $A\subseteq\Phi$, select one edge in a star block whenever its centre
+and some leaf are outside $A$. At a singleton outside $A$, select its fixed
+pendant edge. For a passed tie set these are disjoint edges of $F-T$.
+Let $\mu(A)$ count them and put $y=1/(2\Delta+2)=1/b$.
+The sum of $y^{|A|}2^{-\mu(A)}$ factorizes over blocks. A singleton has
+weight $1/2+y$; a star with $s$ leaves has weight
+\begin{align}\label{eq:block-weight}
+ W_s(y)=y(1+y)^s+\tfrac12\bigl((1+y)^s-y^s\bigr)+y^s
+       =(\tfrac12+y)(1+y)^s+\tfrac12y^s.
+\end{align}
+The three terms distinguish a selected centre, an unselected centre with
+an unselected leaf, and an unselected centre with all leaves selected.
+All block weights are at most $1$. For $\Delta=2$, the singleton, one-leaf,
+and two-leaf weights at $y=1/6$ are respectively
+$2/3$, $31/36$, and $199/216$.
+In general $y\leq1/6$; the one-leaf case is bounded by $31/36$, and for
+$2\leq s\leq\Delta$,
+$W_s(y)\leq(1/2+y)e^{1/2-y}+y^2/2
+\leq(2/3)e^{1/3}+1/72<1$.
+Thus
 \begin{align}\label{eq:path-weight}
- \sum_{A\in\mathcal A}2^{-\mu(A)}\,6^{-|A|}\leq1.
+ \sum_{A\subseteq\Phi}y^{|A|}2^{-\mu(A)}
+ =\prod_{\text{blocks}}W_{\text{block}}(y)\leq1.
 \end{align}
 
-\pfstep{stp:count-per-unit}{Each face function passes few permutations}
-By \Cref{stp:count-admissible}, the permutations passed by $k$ have
-admissible tie sets of size $m$. Each passed $\rho$ satisfies~\Cref{eq:balanced},
-so it is counted in~\Cref{eq:order-count} for $T=T_\rho$. Summing~\Cref{eq:order-count}
-over these tie sets, the number of permutations passed by $k$ is at most
-$m!\,(N-m)!\sum_T2^{-\mu(A_T)}$. Distinct tie sets have distinct spine parts
-in $\mathcal A$, and $|A_T|\leq m$ gives $1\leq6^{m-|A_T|}$. Hence the sum
-is at most $6^m\sum_{A\in\mathcal A}2^{-\mu(A)}6^{-|A|}$, which is at most
-$6^m$ by~\Cref{eq:path-weight}. So $k$ passes at most
-$m!\,(N-m)!\,6^m$ permutations.
+\pfstep{stp:count-assembly}{Count all permutations}
+Distinct passed tie sets have distinct $A=T\cap\Phi$, and $|A|\leq m$.
+Summing \Cref{eq:order-count} and inserting the factor
+$1\leq b^m y^{|A|}$ bounds the number of permutations passed by one unit by
+$m!\,(N-m)!\,b^m$ using \Cref{eq:path-weight}.
+The units cover all $N!$ permutations, so
+$N!\leq |K|\,m!\,(N-m)!\,b^m$, proving \Cref{eq:forest-count}.
+Caterpillar functions have reduced degree at most $2$, giving
+\Cref{eq:count-binomial}.
 
-\pfstep{stp:count-assembly}{Count all localities}
-By \Cref{stp:count-cover}, the $N!$ permutations are covered by the sets of
-permutations passed by the $k\in K$. By \Cref{stp:count-per-unit},
-$N!\leq|K|\,m!\,(N-m)!\,6^m$, that is, $\binom Nm\leq6^m|K|$. This
-is~\Cref{eq:count-binomial}.
-
-\pfstep{stp:count-corollary}{Sum over all tie sizes}
-For $m\leq2$ the quadratic bound~\Cref{eq:count-quadratic} gives
-$\binom Nm\leq6^m|K|$, using $N(N-1)\geq6$ for $m=0$. The quadratic bound is proved like
-\Cref{stp:count-assembly}, with three-element tie sets, a six-point second
-difference in two of the tied coordinates, and the finer count of at most
-$N-2$ tie sets per face function. Together with~\Cref{eq:count-binomial},
-the binomial theorem gives
+\pfstep{stp:count-corollary}{Extract the exponential bound}
+Put $t_m=\binom Nm b^{-m}$. If $N\geq3b+2$, then
+$t_0\leq t_1\leq t_2\leq t_3$, so every $t_m$ is at most $|K|$.
+The binomial theorem gives
 \begin{align}\label{eq:binomial-sum}
- 7^N=\sum_{m=0}^N\binom Nm6^{N-m}\leq\sum_{m=0}^N6^{N-m}\,6^m|K|=(N+1)\,6^N|K|.
+ (1+1/b)^N=\sum_{m=0}^N t_m\leq(N+1)|K|.
 \end{align}
-This is~\Cref{eq:count-exponential}.
+For $b=6$ and $3\leq N<20$, the same conclusion follows from
+$|K|\geq1$ and $(7/6)^N\leq N+1$.
+This proves \Cref{eq:count-exponential} and the remaining assertions of
+\Cref{thm:forest-count}.
+\paragraph[Quadratic refinement]{Quadratic refinement (\leandecl{MaxCaterpillar/CountLower.lean}{124}{caterpillar_count_lower}).}
+The bound \Cref{eq:count-quadratic} uses
+three-element tie sets, a six-point second difference, and the sharper
+count of at most $N-2$ tie sets per caterpillar function.
 \end{Proof}
+
+\paragraph{Arbitrary tree shapes with a source orientation.}
+The block argument also works with a subforest $R$ of the reduced forest:
+its maximum degree must be at most two, and each vertex of $\Phi$ isolated
+in $R$ must either have a pendant neighbour or belong to every passed tie
+set. Use the same star partition of $R$. The first kind of singleton has
+weight $1/2+y$; the second has weight $y$, since it must be selected.
+All weights are at most one at $y=1/6$, so the same counting argument applies.
+A leaf with $\kappa\notin\{0,1\}$ is always tied: otherwise balance would
+require its unique edge to give an out-degree other than zero or one.
+
+For $U_{a,s,r,T}$, root the underlying tree at the head root $r$.
+Call a nonleaf \emph{poor} if it has neither a pendant nor an out-leaf
+neighbour. Choose one child of each poor vertex; such a child exists, and
+no child is chosen by two parents. Let $R$ contain these chosen edges,
+together with every edge from an out-leaf to a nonpendant neighbour.
+These edges belong to the reduced forest. An isolated vertex of $R$ in $\Phi$ is
+either adjacent to a pendant or a leaf with $\kappa\notin\{0,1\}$, so it
+satisfies the required condition.
+
+Leaves have degree at most one in $R$. A nonleaf with at most one out-leaf
+neighbour has degree at most two in $R$:
+a poor vertex contributes one chosen child edge and can receive one, whereas
+any other vertex receives at most one chosen child edge. The only remaining
+case is a common neighbour $v$ of the two out-leaves $s$ and $r$.
+It is not poor. Its parent is the leaf $r$, which is not poor either, so
+no chosen child edge ends at $v$. Its only $R$-edges are the two out-leaf
+edges. Thus $R$ has maximum degree two. This gives the per-unit factor $6^m$
+for every $U_{a,s,r,T}$, and hence the stated $(7/6)^N/(N+1)$ bound for mixtures
+with the existing caterpillar and rooted-star face dictionaries.
 
 \subsection{Proof of the dimension bound}\label{app:quotient-lower}
 
-\paragraph{Idea.}
-For each order of the $N-2$ middle labels we take one caterpillar function
-whose caterpillar is a path. A second difference in the direction $x_0$
-detects the kink of a face function along a line. We place two lines, a test
-line and a reference line, so that every auxiliary function has the same
-kinks on both. The difference of the two second differences then kills
-$A_N$, and on the test line of one path only the unit of that path has a
-kink.
-
 \begin{Proof}{Theorem}{thm:quotient-lower}
-Put $b:=N-1$ and $\varepsilon:=1/(2(N-1))$.
+Put $r=N-2$ and $b=N-1$. We exhibit $r!$ dictionary functions and linear
+functionals whose evaluation matrix is the identity and which annihilate
+$A_N$.
 
-\pfstep{stp:quotient-path-units}{Path units}
-Let $\pi$ be a permutation of $\{0,\ldots,N-1\}$ fixing $0$ and $b$; there
-are $(N-2)!$ of them. The caterpillar description $(\pi,\{1,\ldots,N-2\})$
-cuts at every position, so its caterpillar is the path
-$\pi(1),\ldots,\pi(N-1)=b$ with apex $0$. Keeping all edges as hinges gives
-the face function $U_\pi:=U_{\pi,\{1,\ldots,N-2\}}\in V_N$ with
+\pfstep{stp:quotient-path-units}{One path for each order}
+For every permutation $\pi$ fixing $0$ and $b$, use the path
+$\pi(1),\ldots,\pi(r),b$ with apex $0$ and keep every edge as a hinge:
 \begin{align}\label{eq:path-unit}
- U_\pi(x)=\relu\Bigl(x_b-x_0+\sum_{j=1}^{N-2}\relu\bigl(x_{\pi(j)}-x_{\pi(j+1)}\bigr)\Bigr).
+ U_\pi(x)=\relu\Bigl(x_b-x_0+
+   \sum_{j=1}^{r}\relu(x_{\pi(j)}-x_{\pi(j+1)})\Bigr)\in V_N.
 \end{align}
+There are $r!$ such paths.
 
-\pfstep{stp:quotient-auxiliary}{A functional that kills the auxiliary span}
-For a permutation $\rho$ fixing $0$ and $b$ and for $t\in\R$, define the
-\emph{test configuration} $x^\rho(t)$ and the \emph{reference
-configuration} $y(t)$ by $x^\rho_0(t)=y_0(t)=1+t$ and
-\begin{align}
- x^\rho_{\rho(j)}(t)&=\frac j{N-1}\qquad(1\leq j\leq N-1),\label{eq:test-configuration}\\
- y_b(t)&=1,\qquad y_i(t)=2\qquad(1\leq i\leq N-2).\label{eq:reference-configuration}
+\pfstep{stp:quotient-auxiliary}{One mixed difference}
+For an order $\rho$, set $c=\rho(r)$ and
+\begin{align}\label{eq:test-configuration}
+ z^\rho_0=z^\rho_b=2r,\qquad z^\rho_{\rho(j)}=2j\quad(1\leq j\leq r).
 \end{align}
-Only $x_0$ moves, and in both configurations $x_b=1$ while every other
-coordinate except $x_0$ differs from $1$ by at least $2\varepsilon$. Define
-the symmetric second difference $J$ and the functional $\Lambda_\rho$ by
-$Jg(z):=g(z(\varepsilon))+g(z(-\varepsilon))-2g(z(0))$ and
-$\Lambda_\rho g:=Jg(x^\rho)-Jg(y)$. The second difference vanishes on
-functions that are affine in $t$ on $[-\varepsilon,\varepsilon]$, and
-$J\relu(a-t)=\varepsilon$ if $a=0$. Among the auxiliary
-functions~\Cref{eq:aux_functions}, only $\relu(x_0-x_b)$ has a kink in
-$[-\varepsilon,\varepsilon]$, in both configurations alike: $\relu(\pm x_0)$
-is affine since $|t|<1$, functions not involving $x_0$ are constant, and
-$\relu(x_0-x_j)=\relu(1+t-z_j)$ kinks at $t=z_j-1$. Hence
-$\Lambda_\rho R=0$ for every $R\in A_N$.
+Thus $0,b,c$ tie at the top. Let
+$\Lambda_\rho g=\sum_{S\subseteq\{0,b,c\}}(-1)^{3-|S|}g(z^\rho+\one_S)$.
+This third mixed difference annihilates every function of at most two
+coordinates, by pairing corners along a missing coordinate. In particular,
+$\Lambda_\rho A_N=0$.
 
-\pfstep{stp:quotient-path-values}{The functional on path units}
-Let $z$ be either configuration, and let $\Sigma_\pi(z)\geq0$ be the inner
-sum in~\Cref{eq:path-unit}, which does not involve $x_0$. Since $z_b=1$,
-$U_\pi(z(t))=\relu(\Sigma_\pi(z)-t)$. Its second difference is
-$\varepsilon$ if $\Sigma_\pi(z)=0$ and $0$ if $\Sigma_\pi(z)\geq\varepsilon$.
-At $y$ the last inner term is $\relu(2-1)=1$, so $JU_\pi(y)=0$. At $x^\rho$
-the inner sum vanishes when the values increase along the path of $\pi$,
-that is, when $\pi=\rho$. Otherwise $\rho^{-1}\circ\pi$ is not the identity
-and has a descent at two consecutive path positions, which contributes at
-least $1/(N-1)=2\varepsilon$, so $JU_\pi(x^\rho)=0$. Therefore
+\pfstep{stp:quotient-path-values}{The evaluation matrix is the identity}
+On the cube of $\Lambda_\rho$, every inner function of $U_\rho$ except the
+last is zero: adjacent base heights differ by $2$, while a coordinate moves
+by at most $1$. Writing $v=x-z^\rho$, we obtain
+$U_\rho=\relu(v_b-v_0+\relu(v_c-v_b))$.
+At the eight corners this is $1$ exactly when $v_0=0$ and
+$(v_b,v_c)\ne(0,0)$, so its mixed difference is $1+1-1=1$.
+
+If $\pi\ne\rho$, the middle labels in the $\pi$-order have a descent in
+$\rho$-height. The corresponding inner function is at least $1$ everywhere
+on the cube, whereas $x_b-x_0\geq-1$. The outer ReLU can therefore be removed
+there. The resulting sum depends on at most two coordinates term by term,
+so its third mixed difference is zero. Hence
 \begin{align}\label{eq:path-functional}
- \Lambda_\rho U_\pi=\begin{cases}\varepsilon,&\pi=\rho,\\0,&\pi\neq\rho.\end{cases}
+ \Lambda_\rho U_\pi=\begin{cases}1,&\pi=\rho,\\0,&\pi\ne\rho.\end{cases}
 \end{align}
 
 \pfstep{stp:quotient-independence}{Independence modulo the auxiliary span}
-If $\sum_\pi c_\pi U_\pi\in A_N$, then applying $\Lambda_\rho$ and
-\Cref{stp:quotient-auxiliary,stp:quotient-path-values} gives
-$c_\rho\varepsilon=0$ for every $\rho$. Thus the $(N-2)!$ path units are
-linearly independent modulo $A_N$, and $q_N=\dim(V_N/A_N)\geq(N-2)!$.
+Applying $\Lambda_\rho$ to $\sum_\pi c_\pi U_\pi\in A_N$ gives $c_\rho=0$.
+Thus these $r!$ functions are independent modulo $A_N$, proving
+$q_N\geq(N-2)!$.
 \end{Proof}
 % End appendices/lower.tex
 % Begin appendices/lean.tex
 \section{Relation to the construction of Brunck et al.}\label{app:bsy}
 
-The combinatorial proof of \cite[Part~2]{BSY} cones parallelepipeds
+The combinatorial proof of \cite[Part~2]{BSY} cones zonotopes
 $B_{v,\pi,M}$ to pyramids and expresses the simplex support function as a
 signed sum of their support functions modulo lower-dimensional terms
 \cite[Lemma~22]{BSY}. This appendix identifies these building blocks. For a
@@ -1875,7 +1843,7 @@ their $n$ written as $N$ and $[N]$ identified with our label set
 $\{0,\ldots,N-1\}$. Positions of an ordering are numbered from $1$.
 
 \Needspace{12\baselineskip}
-\begin{definition}[Parallelepipeds of Brunck et al., \leandecl{MaxCaterpillar/Competing/Defs.lean}{78}{parallelepiped}, \leandecl{MaxCaterpillar/Competing/Defs.lean}{88}{paramidSupport}]\label{def:bsy}
+\begin{definition}[Zonotopes of Brunck et al., \leandecl{MaxCaterpillar/Competing/Defs.lean}{78}{parallelepiped}, \leandecl{MaxCaterpillar/Competing/Defs.lean}{88}{paramidSupport}]\label{def:bsy}
 Let $N\geq3$, let $v$ be a label, let $\pi=(\pi_1,\ldots,\pi_{N-1})$ be an
 ordering of the remaining labels, and let $M\subseteq\{2,\ldots,N-1\}$.
 For $p\in\R^N$ put $u_i(p):=\sum_{1\leq j<i}p_{\pi_j}$. Following
@@ -1905,11 +1873,11 @@ star} with apex $a$ and root $c$ is
 \end{definition}
 
 \Needspace{12\baselineskip}
-\begin{theorem}[Relation to Brunck et al., \leandecl{MaxCaterpillar/Theorems.lean}{119}{bhrsy_parallelepiped_eq_zonotope}, \leandecl{MaxCaterpillar/Theorems.lean}{147}{bhrsy_support_eq}, \leandecl{MaxCaterpillar/Theorems.lean}{156}{bhrsy_support_eq_word}, \leandecl{MaxCaterpillar/Theorems.lean}{165}{bhrsy_support_mem_caterpillar}, \leandecl{MaxCaterpillar/Theorems.lean}{174}{bhrsy_word_mem}, \leandecl{MaxCaterpillar/Theorems.lean}{185}{bhrsy_support_empty}, \leandecl{MaxCaterpillar/Theorems.lean}{191}{rootedStar_ne_caterpillarFunction}, \leandecl{MaxCaterpillar/Theorems.lean}{205}{bhrsy_family}, {\Cref{pf:thm:bsy-relation}}]\label{thm:bsy-relation}
+\begin{theorem}[Relation to Brunck et al., \leandecl{MaxCaterpillar/Theorems.lean}{203}{bhrsy_parallelepiped_eq_zonotope}, \leandecl{MaxCaterpillar/Theorems.lean}{231}{bhrsy_support_eq}, \leandecl{MaxCaterpillar/Theorems.lean}{240}{bhrsy_support_eq_word}, \leandecl{MaxCaterpillar/Theorems.lean}{249}{bhrsy_support_mem_caterpillar}, \leandecl{MaxCaterpillar/Theorems.lean}{258}{bhrsy_word_mem}, \leandecl{MaxCaterpillar/Theorems.lean}{269}{bhrsy_support_empty}, \leandecl{MaxCaterpillar/Theorems.lean}{275}{rootedStar_ne_caterpillarFunction}, \leandecl{MaxCaterpillar/Theorems.lean}{289}{bhrsy_family}, {\Cref{pf:thm:bsy-relation}}]\label{thm:bsy-relation}
 Let $v$, $\pi$, and $M$ be as in~\Cref{def:bsy}, and let $q$ and $r(i)$ be as
 in~\Cref{eq:bsy-marked}.
 \begin{enumerate}
-\item[(a)] The parallelepiped is the zonotope
+\item[(a)] The base is the zonotope
 \begin{align}\label{eq:bsy-zonotope}
  B_{v,\pi,M}=e_{\pi_q}+\sum_{i=2}^{N-1}\bigl[0,e_{\pi_{r(i)}}-e_{\pi_i}\bigr].
 \end{align}
@@ -2035,7 +2003,7 @@ The real parameter arrays in~\Cref{eq:network-evaluation} have dimensions
  w_3&\in\R^{h_2},& b_3&\in\R,
  \end{aligned}
 \end{align}
-\paragraph[Sources]{Sources (\leanlinkdecl{MaxCaterpillar/Definitions.lean}{22}{Point}{Definitions.lean}, \leanlinkdecl{MaxCaterpillar/Theorems.lean}{39}{caterpillar_net}{Theorems.lean}).}
+\paragraph[Sources]{Sources (\leanlinkdecl{MaxCaterpillar/Definitions.lean}{22}{Point}{Definitions.lean}, \leanlinkdecl{MaxCaterpillar/Theorems.lean}{41}{caterpillar_net}{Theorems.lean}).}
 The listings specify the network, widths, and correctness for every real
 input. They reproduce declarations from these files at revision
 \texttt{8b4d74ab66f4}, omitting imports, documentation comments, and the
@@ -2234,7 +2202,7 @@ The dictionary uses the word $\pi'=(v,\pi_1,\ldots,\pi_{N-1})$
 (\texttt{Ordering.word}), the cut set $S=M-1$ (\texttt{cutSet}), and the
 description $(h_{\pi',S},L_{\pi',S})$ of a word
 (\texttt{caterpillarWordDescription}). The rooted star is
-\texttt{Trees.rootedStar}. With $N=r+2$, \texttt{Theorems.lean} states
+\texttt{BHRSY.rootedStar}. With $N=r+2$, \texttt{Theorems.lean} states
 \Cref{thm:bsy-relation} as follows.
 
 \begin{lstlisting}[style=lean]
@@ -2274,12 +2242,12 @@ theorem bhrsy_support_mem_caterpillar {r : ℕ}
 theorem bhrsy_support_empty {r : ℕ} {v : Fin (r + 1 + 1)}
     (π : BHRSY.Ordering (r + 1 + 1) v) (y : Point (r + 1 + 1)) :
     BHRSY.paramidSupport v π ∅ y =
-      y v + Trees.rootedStar v (π.pos 1) y
+      y v + BHRSY.rootedStar v (π.pos 1) y
 
 theorem rootedStar_ne_caterpillarFunction {r : ℕ}
     {a c : Fin (r + 1 + 1)} (hac : a ≠ c) {k : FaceKey r}
     (hk : k ∈ caterpillarDescriptions r) :
-    Trees.rootedStar a c ≠ caterpillarFunction k
+    BHRSY.rootedStar a c ≠ caterpillarFunction k
 \end{lstlisting}
 \begingroup\sloppy
 The same file contains the converse \texttt{bhrsy\_word\_mem}, the
@@ -2290,42 +2258,27 @@ special cases
 \texttt{bhrsy\_family}.
 \par\endgroup
 
-\subsection{Version 1, 2, and 3 declarations}
-Improvements were added beside the existing development rather than
-replacing it. In the Lean sources, superseded declarations are kept and
-commented as Version~1 (and Version~2), and the new ones as Version~2
-(and Version~3).
-\begingroup\sloppy
-\begin{itemize}
-\item \emph{Main theorem.} Version~1, \texttt{maximum\_width}, asserts a
-real-parameter network of the stated widths. Version~2,
-\texttt{maximum\_width\_rational}, adds rational weights and zero biases for
-the network compiled from the Version~1 coefficients. Version~3,
-\texttt{maximum\_width\_one\_basis}, proves the same statement from one basis
-via \texttt{quotient\_compression} and
-\texttt{quotientDim\_add\_two\_le\_secondWidth}; the public
-\texttt{caterpillar\_net} restates it and is linked from \Cref{thm:main}.
-\item \emph{Coefficients.} Version~1, \texttt{coefficient}, averages over all
-bases $S\subseteq\D$ of $\spn\D$ the coordinates $G_S^{-1}b_S$ of $\maxn_N$,
-computed from the Gram matrix $G_S$ and the vector $b_S$ of inner products in
-$L^2([-1,1]^N)$; \texttt{coefficient\_rational} proves it rational. It needs
-no choice of basis. Version~2, \texttt{rational\_coefficients}, uses one basis
-and the evaluation argument in the proof of \Cref{thm:quotient-compression}.
-\item \emph{Compilation and widths.} Version~1 compiles the canonical
-coefficients only (\texttt{network}, \texttt{construction\_width}).
-Version~2 compiles every expansion (\texttt{compilation}), and gives the
-widths of \Cref{thm:main,thm:quotient-compression,thm:small-arity}.
-\end{itemize}
-\endgroup
-The Version~1 and Version~2 statements remain checked.
+\subsection{Proof routes in the formalization}
+The public theorem \texttt{caterpillar\_net} uses the rational projection
+argument directly. The essential normalized descriptions and auxiliary
+functions span the maximum; applying a $\mathbb Q$-linear projection gives
+rational coefficients on the same support, and the compilation theorem
+produces the network with rational weights and zero biases.
+The separate compression theorem first chooses a basis modulo the auxiliary
+span, giving the second width $q_N+2$.
+
+The count argument factors over stars of a reduced forest, and the
+vocabulary-dimension argument separates path functions by a third mixed
+difference. These are the arguments presented in
+\Crefrange{app:count-exponential}{app:quotient-lower}.
 
 The keyword \texttt{noncomputable} allows classical definitions of real
 quantities. The theorem is an exact representation statement; it does not
 by itself assert an efficient algorithm for extracting numerical weights.
 
 \subsection{Verification scope}
-The repository's verification certificate, dated 22 October 2026, records
-a build with Lean 4.4.0 and checks 102 public statements against their exact
+The repository's historical verification certificate, dated 24 October 2026, records
+a build with Lean 4.4.0 and checks 122 public statements against their exact
 types. Its permitted axioms are \texttt{propext},
 \texttt{Classical.choice}, and \texttt{Quot.sound}. The checked interface
 includes dictionary sufficiency, rational expansions, network correctness
@@ -2333,11 +2286,16 @@ with rational weights and zero biases, the width bounds, the compilation and
 compression theorems, the small-arity networks, the Wang--Sun and
 Koutschan--Moser--Ponomarchuk--Schicho representations, and the network
 theorems for sums of maxima and CPWL functions with their rationality and
-bias statements. It covers every theorem, lemma, and numbered equation of
-the paper.
+bias statements. The equation and theorem links identify supporting declarations for the
+mathematical arguments in the paper.
 The certificate and its source hashes
 are available in the linked
 \href{\leanbase/verification/certificate.json}{verification record}.
+The subsequent consolidation of the Lean modules is not covered by that
+certificate: the current sources require an updated exact-statement manifest
+and a fresh verification run. In particular, the arbitrary-tree-shape
+source-orientation extension is a mathematical argument in this paper,
+not a claim checked by the historical certificate.
 The mathematical arguments are provided in the main text and
 \Crefrange{app:dictionary}{app:lower}; the formalization is an
 additional certificate of the formal statements.

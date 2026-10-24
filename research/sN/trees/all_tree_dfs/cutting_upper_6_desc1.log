@@ -1,0 +1,2 @@
+ITER 0 rows 4820 elapsed 2.86102294921875e-06
+LP 1 Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)

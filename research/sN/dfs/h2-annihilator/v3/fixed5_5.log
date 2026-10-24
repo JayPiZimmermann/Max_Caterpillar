@@ -1,0 +1,7 @@
+N=5 mu=[5] reps=1 nvars=39 0s
+dim P^H = 39  dim Lambda2^H <= 26  (#straight rows 28) 1s
+dim V^H >= 23   max in V^H: True  5s
+straight rows violated by sym V (exact): 0
+ray (0, -2, -2, -2, -1) germ keys 66 rV 26 gain 1 224s
+ray (0, -2, -1, -1, -1) germ keys 138 rV 86 gain 1 227s
+ray (0, -2, -1, 0, 0) germ keys 66 rV 26 gain 1 229s

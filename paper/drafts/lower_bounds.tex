@@ -1,0 +1,345 @@
+% =====================================================================
+% Draft: appendix proofs of the two lower bounds.
+% Lean map for every display label and \pfstep label: lower_bounds_map.json
+% (same directory).  Intended to be \input into the appendix of main.tex.
+%
+% ---------------------------------------------------------------------
+% PROPOSED MAIN-TEXT STATEMENTS (for \Cref{sec:compression}, after
+% \Cref{thm:quotient-compression}).  The tie size is called m, because
+% k already denotes a normalized description k=(h,M) in the paper.
+% ---------------------------------------------------------------------
+%
+% \Needspace{8\baselineskip}
+% \begin{definition}[Caterpillar expansion]\label{def:caterpillar-expansion}
+% A \emph{caterpillar expansion} of $\maxn_N$ is a finite set
+% $K\subseteq\mathcal K_0$ of normalized descriptions together with real
+% coefficients $d_k$, $k\in K$, and a function $R\in A_N$ such
+% that~\Cref{eq:compilation-hypothesis} holds. Its \emph{size} is $|K|$,
+% the number of units in the second hidden layer of the network of
+% \Cref{thm:compilation} other than $\relu(\pm R)$. Let $s_N$ be the
+% smallest size of a caterpillar expansion of $\maxn_N$.
+% \end{definition}
+%
+% By \Cref{thm:quotient-compression}, $s_N\leq q_N$.
+%
+% \Needspace{8\baselineskip}
+% \begin{theorem}[Exponential count, \leandecl{MaxCaterpillar/CountExp.lean}{34}{caterpillar_count_exponential}, \leandecl{MaxCaterpillar/CountExp.lean}{47}{caterpillar_count_exponential_pow}, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
+% Every caterpillar expansion of $\maxn_N$, $N\geq3$, satisfies
+% \begin{align}
+%  \binom Nm&\leq6^m|K|\qquad(3\leq m\leq N),\label{eq:count-binomial}\\
+%  7^N&\leq(N+1)\,6^N|K|.\label{eq:count-exponential}
+% \end{align}
+% Hence $s_N\geq(7/6)^N/(N+1)$.
+% \end{theorem}
+%
+% \Needspace{8\baselineskip}
+% \begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/LowerBound.lean}{499}{factorial_le_quotientDim}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
+% For every $N\geq3$,
+% \begin{align}\label{eq:quotient-lower}
+%  q_N\geq(N-2)!.
+% \end{align}
+% \end{theorem}
+%
+% Suggested sentence after the theorems: \Cref{thm:quotient-lower} bounds
+% the dimension of the vocabulary, not the size of an expansion;
+% \Cref{thm:count-exponential} bounds the size. Neither bound concerns
+% unrestricted ReLU networks.
+%
+% NOTE (dependency): \Cref{eq:count-exponential} uses, for m <= 2, the
+% quadratic bound N(N-1) <= 6|K| (Lean: MaxCaterpillar/CountLower.lean,
+% caterpillar_count_lower).  It is not yet stated in main.tex; see the
+% last step of the first proof.
+% =====================================================================
+
+\subsection{Proof of the exponential count bound}\label{app:count-exponential}
+
+\paragraph{Idea.}
+Fix a tie size $m$ with $3\leq m\leq N$. A \emph{locality} is a point at which
+$m$ coordinates tie at the top value $0$, while the remaining coordinates lie
+far below, at heights $-B^{e}$ for distinct exponents $e$. The $m$-th mixed
+finite difference in the tied coordinates kills every function that depends
+on at most two coordinates. Hence it kills the auxiliary span $A_N$, whereas
+it does not vanish on $\maxn_N$. Applying it to an expansion shows that some
+face function $U_k$, $k\in K$, is \emph{seen} at every locality. A face
+function is seen only if its preactivation vanishes at the locality. Reading
+the preactivation in base $B$, this forces a rigid balance between the
+heights of the coordinates and the functions $\relu(x_i-x_j)$ inside $U_k$.
+These functions lie on a caterpillar, so the balance leaves few tie sets and
+few orders. Counting shows that each face function is seen at no more than
+a fraction $6^m/\tbinom Nm$ of the localities.
+
+\paragraph{Notation.}
+Let $k=(h,M)\in\mathcal K_0$ be a normalized description, so that
+$U_k=\relu(A_k)$ with preactivation
+$A_k(x)=h(x)+\sum_{\ell_{ij}\in M}\relu(x_i-x_j)$, where $i<j$ for every
+$\ell_{ij}\in M$ and $h(x)=\sum_oh_ox_o$ has integer coefficients. The
+\emph{hinge graph} of $k$ has the labels $0,\ldots,N-1$ as vertices and an
+edge $\{i,j\}$ for every $\ell_{ij}\in M$; vertices joined by an edge are
+\emph{hinge neighbours}. For every label $o$ put
+$\kappa_o:=h_o+\bigl|\{j:\ell_{oj}\in M\}\bigr|$. This is the slope of $A_k$
+in the direction $x_o$ at points where $x_o$ exceeds the coordinates of all
+hinge neighbours of $o$. By~\Cref{eq:hinge-reversal}, the normalization
+in~\Cref{eq:normalized-description} does not change $A_k$, so $\kappa_o$ equals
+the coefficient of $x_o$ in the head $h'$ of~\Cref{eq:face-description} plus
+the number of hinges $\relu(x_o-x_j)$ in $M$ before reorientation.
+
+Encode a locality by a permutation $\rho$ of $\{0,\ldots,N-1\}$, read as an
+assignment of \emph{positions}: label $o$ sits at position $\rho(o)$, and a
+smaller position means a higher coordinate. The \emph{tie set} is
+$T_\rho:=\{o:\rho(o)<m\}$, so $|T_\rho|=m$. For integers $B\geq1$ and a real
+$\delta>0$, chosen below, define the base point $p^\rho\in\R^N$ and the mixed
+difference $\Delta_\rho$ by
+\begin{align}
+ p^\rho_o&:=\begin{cases}0,&\rho(o)<m,\\-B^{\rho(o)},&\rho(o)\geq m,\end{cases}\label{eq:base-point}\\
+ \Delta_\rho g&:=\sum_{S\subseteq T_\rho}(-1)^{|T_\rho\setminus S|}\,g\bigl(p^\rho+\delta\one_S\bigr),\label{eq:mixed-difference}
+\end{align}
+where $\one_S$ is the indicator vector of $S$. Thus $\Delta_\rho$ evaluates $g$
+at the $2^m$ corners of a cube of side $\delta$ in the tied coordinates. Each
+locality $(T,\text{order of the other labels})$ arises from exactly $m!$
+permutations $\rho$, so we count permutations. For $o\notin T_\rho$ let
+$u_\rho(o)$ be the number of hinge neighbours of $o$ at a smaller position.
+Say that $k$ \emph{passes} $\rho$ if
+\begin{align}
+ u_\rho(o)&=\kappa_o\qquad\text{for every }o\notin T_\rho,\label{eq:balanced}\\
+ \kappa_t&\neq0\qquad\text{for every }t\in T_\rho\text{ without hinge neighbours in }T_\rho.\label{eq:active}
+\end{align}
+
+\begin{Proof}{Theorem}{thm:count-exponential}
+Fix an expansion $\maxn_N=\sum_{k\in K}d_kU_k+R$ as
+in~\Cref{eq:compilation-hypothesis}, and a tie size $3\leq m\leq N$. Put
+$c_k:=\sum_o|h_o|+2|M|$ for $k=(h,M)$, $C:=\sum_{k\in K}c_k$,
+$\delta:=1/(C+1)$, and $B:=\lceil C\rceil+1$. Then $\delta c_k<1$ and
+$\sum_o|h_o|+|M|<B$ for every $k\in K$.
+\Cref{stp:count-functional,stp:count-units,stp:count-digits,stp:count-cover}
+show that every $\rho$ is passed by some $k\in K$.
+\Cref{stp:count-caterpillar,stp:count-admissible,stp:count-orders,stp:count-transfer,stp:count-per-unit}
+show that each $k$ passes at most $m!\,(N-m)!\,6^m$ permutations.
+
+\pfstep{stp:count-functional}{The mixed difference kills the auxiliary span}
+If $g$ does not depend on some tied coordinate $x_t$ on the cube, then
+$\Delta_\rho g=0$: the corners $S$ and $S\cup\{t\}$, $t\notin S$, carry the
+same value with opposite signs. Since $m\geq3$, every function of at most two
+coordinates misses some tied coordinate. This applies to the auxiliary
+functions~\Cref{eq:aux_functions}, to the coordinates $x_o$, and to every
+$\relu(x_i-x_j)$. On the cube the coordinates outside $T_\rho$ are at most
+$-1$, so $\maxn_N(p^\rho+\delta\one_S)=\delta$ for $S\neq\varnothing$ and $0$
+for $S=\varnothing$. As the signs sum to zero,
+\begin{align}
+ \Delta_\rho R&=0\qquad(R\in A_N),\label{eq:mixed-auxiliary}\\
+ \Delta_\rho\maxn_N&=-(-1)^m\delta.\label{eq:mixed-maximum}
+\end{align}
+
+\pfstep{stp:count-units}{A face function is seen only where its preactivation vanishes}
+Let $k=(h,M)\in K$. The base point has integer coordinates, so $A_k(p^\rho)$
+is an integer. On the cube every coordinate moves by at most $\delta$, so
+$h$ changes by at most $\delta\sum_o|h_o|$ and each $\relu(x_i-x_j)$ by at
+most $2\delta$. Hence $A_k$ stays within $\delta c_k<1$ of $A_k(p^\rho)$. If $A_k(p^\rho)\leq-1$,
+then $U_k=0$ on the cube. If $A_k(p^\rho)\geq1$, then $U_k=A_k$ on the cube,
+and $A_k$ is a sum of functions of at most two coordinates. In both cases
+$\Delta_\rho U_k=0$ by \Cref{stp:count-functional}. Now let
+$A_k(p^\rho)=0$, and let $t\in T_\rho$ have no hinge neighbour in $T_\rho$.
+Raising $x_t$ from $0$ to $\delta$ activates no new function: every
+$\relu(x_t-x_o)$ in $M$ has $x_o\leq-1$ and stays active with slope $1$,
+and every $\relu(x_o-x_t)$ stays $0$. So $A_k$ changes by $\delta\kappa_t$. If
+$\kappa_t=0$, then $U_k$ does not depend on $x_t$ on the cube and
+$\Delta_\rho U_k=0$. Hence $\Delta_\rho U_k\neq0$ implies $A_k(p^\rho)=0$
+and~\Cref{eq:active}.
+
+\pfstep{stp:count-digits}{A vanishing preactivation balances the heights}
+At $p^\rho$, the function $\relu(x_i-x_j)$ equals $p^\rho_i-p^\rho_j$ when
+$i$ is at a smaller position than $j$, and $0$ otherwise. Collecting the
+coefficient of each $p^\rho_o$ and using $p^\rho_t=0$ on $T_\rho$ gives
+\begin{align}\label{eq:preactivation-digits}
+ A_k(p^\rho)=-\sum_{o\notin T_\rho}\bigl(\kappa_o-u_\rho(o)\bigr)B^{\rho(o)}.
+\end{align}
+The integer digits satisfy
+$|\kappa_o-u_\rho(o)|\leq|h_o|+|M|<B$, and the exponents $\rho(o)$ are
+distinct. If the sum vanishes, the digit with the smallest exponent is
+divisible by $B$, hence zero, and induction makes every digit zero. Thus
+$A_k(p^\rho)=0$ implies~\Cref{eq:balanced}.
+
+\pfstep{stp:count-cover}{Every locality is passed}
+Apply $\Delta_\rho$ to the expansion. The remainder contributes nothing
+by~\Cref{eq:mixed-auxiliary}, and the maximum contributes $-(-1)^m\delta$
+by~\Cref{eq:mixed-maximum}. Hence
+$\sum_{k\in K}d_k\Delta_\rho U_k\neq0$, and some $k\in K$ has
+$\Delta_\rho U_k\neq0$. By \Cref{stp:count-units,stp:count-digits}, this
+$k$ passes $\rho$.
+
+\pfstep{stp:count-caterpillar}{The hinge graph lies on a caterpillar}
+Let $k$ be a normalized description of the face function $U^\tau_{\pi,S}$.
+Every $\ell_{ij}\in M$ comes from an edge of the labelled caterpillar of
+\Cref{def:caterpillar} with state $\relu\circ\ell$. Let
+$s_0,\ldots,s_n$, $n:=|S|$, be the labels at the spine positions in order.
+The hinge graph has two kinds of edges: \emph{links}
+$\{s_i,s_{i+1}\}$, for spine edges kept as hinges, and \emph{pendant edges}
+$\{s_i,u\}$, for leaves $u$ whose parent edge to $s_i$ is kept as a hinge.
+A pendant vertex $u$ has no other hinge neighbour, and $\kappa_u=0$: the
+head $h'$ of~\Cref{eq:face-description} does not involve $u$, since $u$ is
+neither the apex nor the last spine label and its only edge is a hinge, and
+$u$ is the subtracted end of its hinge $\relu(x_{s_i}-x_u)$. Every other
+label is \emph{isolated}, that is, without hinge neighbours.
+
+\pfstep{stp:count-admissible}{Passed tie sets are determined by their spine part}
+Let $k$ pass $\rho$ and put $T:=T_\rho$. A pendant $u$ at $s_i$ lies in $T$
+exactly when $s_i$ does. If $u\in T$ and $s_i\notin T$, then $u$ has no
+hinge neighbour in $T$ and $\kappa_u=0$, contradicting~\Cref{eq:active}.
+If $u\notin T$ and $s_i\in T$, then $u_\rho(u)=1\neq0=\kappa_u$,
+contradicting~\Cref{eq:balanced}. An isolated label $o$ lies in $T$ exactly
+when $\kappa_o\neq0$, by~\Cref{eq:active} for $o\in T$ and
+by~\Cref{eq:balanced}, which reads $0=\kappa_o$, for $o\notin T$. Hence $T$
+is determined by its \emph{spine part} $A_T:=\{i:s_i\in T\}$, and
+$|A_T|\leq|T|=m$. Moreover $A_T$ lies in the family $\mathcal A$ of sets
+$A\subseteq\{0,\ldots,n\}$ with $i\in A\Leftrightarrow\kappa_{s_i}\neq0$ for
+every isolated spine label $s_i$.
+
+\pfstep{stp:count-orders}{Few orders balance a given tie set}
+Fix $T$ as in \Cref{stp:count-admissible}. Among the permutations $\rho$
+with $T_\rho=T$, consider those satisfying~\Cref{eq:balanced}. For $o\notin
+T$, all hinge neighbours of $o$ in $T$ lie above $o$, so~\Cref{eq:balanced}
+prescribes how many hinge neighbours of $o$ outside $T$ lie above $o$.
+The hinge edges outside $T$ form a forest, by \Cref{stp:count-caterpillar}.
+Orient each of them towards its higher end. Then the out-degrees of this
+orientation are prescribed, and a forest
+orientation is determined by its out-degrees: the edge at a leaf is
+oriented by the leaf's out-degree, and one removes the leaf and repeats.
+Hence all these $\rho$ orient each hinge edge outside $T$ in the same way.
+Now choose disjoint hinge edges outside $T$ greedily: link $i$ is chosen
+when $i,i+1\notin A_T$ and link $i-1$ was not chosen, and a pendant edge is
+chosen at every $s_i$, $i\notin A_T$, that has a pendant but no link. Its
+pendant lies outside $T$ by \Cref{stp:count-admissible}. Let $\mu(A_T)$ be
+the number of chosen edges. Swapping the two ends of one chosen edge
+preserves $T_\rho$, so exactly a $2^{-\mu(A_T)}$ fraction of the
+$m!\,(N-m)!$ permutations with tie set $T$ orients all chosen edges in a
+prescribed way. Therefore
+\begin{align}\label{eq:order-count}
+ \bigl|\{\rho:T_\rho=T,\ \rho\text{ satisfies~\Cref{eq:balanced}}\}\bigr|\cdot2^{\mu(A_T)}\leq m!\,(N-m)!.
+\end{align}
+
+\pfstep{stp:count-transfer}{The generating function along the spine}
+For $0\leq j\leq n$ and $A\subseteq\{0,\ldots,j\}$, let $\mu_j(A)$ count the
+links chosen among $0,\ldots,j-1$ and the pendant edges chosen at
+$s_0,\ldots,s_j$. Call $s_j$ \emph{free} if $j\notin A$ and link $j-1$ was not
+chosen, and define the potential
+\begin{align}
+ \phi_j(A)&:=\begin{cases}7/9,&\text{link }j\text{ exists and }s_j\text{ is free},\\7/6,&\text{link }j\text{ exists and }s_j\text{ is not free},\\1,&\text{there is no link }j.\end{cases}\label{eq:potential}
+\end{align}
+Let $P_j:=\sum_A2^{-\mu_j(A)}6^{-|A|}\phi_j(A)$ over the sets
+$A\subseteq\{0,\ldots,j\}$ obeying the rule of $\mathcal A$ for isolated
+$s_i$, $i\leq j$. Then $\mu_n=\mu$. We show $P_j\leq1$ by induction on
+$j$. Write the term of $A$ as $\psi\,\phi_j(A)$ with
+$\psi:=2^{-\mu_j(A)}6^{-|A|}$. Each set for $j+1$ arises from a set $A$ for
+$j$ by omitting or inserting $j+1$, and it suffices that the allowed
+extensions of $A$ have terms summing to at most $\psi\,\phi_j(A)$. Inserting
+$j+1$ multiplies $\psi$ by $1/6$ and leaves $s_{j+1}$ not free, so it
+contributes $\psi\lambda/6$ with $\lambda=7/6$ if link $j+1$ exists and $\lambda=1$
+otherwise. If link $j$ exists and $s_j$ is free, omitting $j+1$ chooses link
+$j$, which contributes $\psi\lambda/2$, and $\lambda/2+\lambda/6\leq7/9$. If
+link $j$ exists and $s_j$ is not free, the two terms are at most
+$\psi$ times $7/9+7/36$ or $1+1/6$, both at most $7/6$. If there is no
+link $j$, the two terms are at most $\psi$ times $7/9+7/36$ if link $j+1$ exists, $1/2+1/6$ if $s_{j+1}$
+has a pendant but no link, and $\max(1,1/6)$ if $s_{j+1}$ is isolated,
+because then only one extension is allowed. The case $j=0$ is the last
+case started from the empty set. Since no link leaves $s_n$, $\phi_n=1$,
+and $P_n\leq1$ reads
+\begin{align}\label{eq:path-weight}
+ \sum_{A\in\mathcal A}2^{-\mu(A)}\,6^{-|A|}\leq1.
+\end{align}
+
+\pfstep{stp:count-per-unit}{Each face function passes few permutations}
+By \Cref{stp:count-admissible}, the permutations passed by $k$ have
+admissible tie sets of size $m$. Each passed $\rho$ satisfies~\Cref{eq:balanced},
+so it is counted in~\Cref{eq:order-count} for $T=T_\rho$. Summing~\Cref{eq:order-count}
+over these tie sets, the number of permutations passed by $k$ is at most
+$m!\,(N-m)!\sum_T2^{-\mu(A_T)}$. Distinct tie sets have distinct spine parts
+in $\mathcal A$, and $|A_T|\leq m$ gives $1\leq6^{m-|A_T|}$. Hence the sum
+is at most $6^m\sum_{A\in\mathcal A}2^{-\mu(A)}6^{-|A|}$, which is at most
+$6^m$ by~\Cref{eq:path-weight}. So $k$ passes at most
+$m!\,(N-m)!\,6^m$ permutations.
+
+\pfstep{stp:count-assembly}{Count all localities}
+By \Cref{stp:count-cover}, the $N!$ permutations are covered by the sets of
+permutations passed by the $k\in K$. By \Cref{stp:count-per-unit},
+$N!\leq|K|\,m!\,(N-m)!\,6^m$, that is, $\binom Nm\leq6^m|K|$. This
+is~\Cref{eq:count-binomial}.
+
+\pfstep{stp:count-corollary}{Sum over all tie sizes}
+For $m\leq2$ the quadratic bound $N(N-1)\leq6|K|$ gives
+$\binom Nm\leq6^m|K|$, using $N(N-1)\geq6$ for $m=0$. It is proved like
+\Cref{stp:count-assembly}, with three-element tie sets, a six-point second
+difference in two of the tied coordinates, and the finer count of at most
+$N-2$ tie sets per face function. Together with~\Cref{eq:count-binomial},
+the binomial theorem gives
+\begin{align}\label{eq:binomial-sum}
+ 7^N=\sum_{m=0}^N\binom Nm6^{N-m}\leq\sum_{m=0}^N6^{N-m}\,6^m|K|=(N+1)\,6^N|K|.
+\end{align}
+This is~\Cref{eq:count-exponential}, and $s_N\geq(7/6)^N/(N+1)$ follows by
+applying it to an expansion of size $s_N$.
+\end{Proof}
+
+\subsection{Proof of the dimension bound}\label{app:quotient-lower}
+
+\paragraph{Idea.}
+For each order of the $N-2$ middle labels we take one caterpillar function
+whose caterpillar is a path. A second difference in the direction $x_0$
+detects the kink of a face function along a line. We place two lines, a test
+line and a reference line, so that every auxiliary function has the same
+kinks on both. The difference of the two second differences then kills
+$A_N$, and on the test line of one path only the unit of that path has a
+kink.
+
+\begin{Proof}{Theorem}{thm:quotient-lower}
+Put $b:=N-1$ and $\varepsilon:=1/(2(N-1))$.
+
+\pfstep{stp:quotient-path-units}{Path units}
+Let $\pi$ be a permutation of $\{0,\ldots,N-1\}$ fixing $0$ and $b$; there
+are $(N-2)!$ of them. The caterpillar description $(\pi,\{1,\ldots,N-2\})$
+cuts at every position, so its caterpillar is the path
+$\pi(1),\ldots,\pi(N-1)=b$ with apex $0$. Keeping all edges as hinges gives
+the face function $U_\pi:=U_{\pi,\{1,\ldots,N-2\}}\in V_N$ with
+\begin{align}\label{eq:path-unit}
+ U_\pi(x)=\relu\Bigl(x_b-x_0+\sum_{j=1}^{N-2}\relu\bigl(x_{\pi(j)}-x_{\pi(j+1)}\bigr)\Bigr).
+\end{align}
+
+\pfstep{stp:quotient-auxiliary}{A functional that kills the auxiliary span}
+For a permutation $\rho$ fixing $0$ and $b$ and for $t\in\R$, define the
+\emph{test configuration} $x^\rho(t)$ and the \emph{reference
+configuration} $y(t)$ by $x^\rho_0(t)=y_0(t)=1+t$ and
+\begin{align}
+ x^\rho_{\rho(j)}(t)&=\frac j{N-1}\qquad(1\leq j\leq N-1),\label{eq:test-configuration}\\
+ y_b(t)&=1,\qquad y_i(t)=2\qquad(1\leq i\leq N-2).\label{eq:reference-configuration}
+\end{align}
+Only $x_0$ moves, and in both configurations $x_b=1$ while every other
+coordinate except $x_0$ differs from $1$ by at least $2\varepsilon$. Define
+the symmetric second difference $J$ and the functional $\Lambda_\rho$ by
+$Jg(z):=g(z(\varepsilon))+g(z(-\varepsilon))-2g(z(0))$ and
+$\Lambda_\rho g:=Jg(x^\rho)-Jg(y)$. The second difference vanishes on
+functions that are affine in $t$ on $[-\varepsilon,\varepsilon]$, and
+$J\relu(a-t)=\varepsilon$ if $a=0$. Among the auxiliary
+functions~\Cref{eq:aux_functions}, only $\relu(x_0-x_b)$ has a kink in
+$[-\varepsilon,\varepsilon]$, in both configurations alike: $\relu(\pm x_0)$
+is affine since $|t|<1$, functions not involving $x_0$ are constant, and
+$\relu(x_0-x_j)=\relu(1+t-z_j)$ kinks at $t=z_j-1$. Hence
+$\Lambda_\rho R=0$ for every $R\in A_N$.
+
+\pfstep{stp:quotient-path-values}{The functional on path units}
+Let $z$ be either configuration, and let $\Sigma_\pi(z)\geq0$ be the inner
+sum in~\Cref{eq:path-unit}, which does not involve $x_0$. Since $z_b=1$,
+$U_\pi(z(t))=\relu(\Sigma_\pi(z)-t)$. Its second difference is
+$\varepsilon$ if $\Sigma_\pi(z)=0$ and $0$ if $\Sigma_\pi(z)\geq\varepsilon$.
+At $y$ the last inner term is $\relu(2-1)=1$, so $JU_\pi(y)=0$. At $x^\rho$
+the inner sum vanishes when the values increase along the path of $\pi$,
+that is, when $\pi=\rho$. Otherwise $\rho^{-1}\circ\pi$ is not the identity
+and has a descent at two consecutive path positions, which contributes at
+least $1/(N-1)=2\varepsilon$, so $JU_\pi(x^\rho)=0$. Therefore
+\begin{align}\label{eq:path-functional}
+ \Lambda_\rho U_\pi=\begin{cases}\varepsilon,&\pi=\rho,\\0,&\pi\neq\rho.\end{cases}
+\end{align}
+
+\pfstep{stp:quotient-independence}{Independence modulo the auxiliary span}
+If $\sum_\pi c_\pi U_\pi\in A_N$, then applying $\Lambda_\rho$ and
+\Cref{stp:quotient-auxiliary,stp:quotient-path-values} gives
+$c_\rho\varepsilon=0$ for every $\rho$. Thus the $(N-2)!$ path units are
+linearly independent modulo $A_N$, and $q_N=\dim(V_N/A_N)\geq(N-2)!$,
+which is~\Cref{eq:quotient-lower}.
+\end{Proof}

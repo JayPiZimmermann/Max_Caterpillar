@@ -1,0 +1,90 @@
+dimW 1820 dimV 1150 codim 670 140.7s
+rays 23180 classes 236 177.1s
+classes with local conditions: 46 268.3s
+   (0, -9, -9, -6, -5) germ dims W,V = (9, 8) orbit 60
+   (0, -9, -4, -3, 0) germ dims W,V = (9, 8) orbit 60
+   (0, -8, -8, -7, -5) germ dims W,V = (9, 8) orbit 60
+   (0, -8, -3, -1, 0) germ dims W,V = (9, 8) orbit 60
+   (0, -7, -7, -5, -4) germ dims W,V = (9, 8) orbit 60
+   (0, -7, -5, -5, -4) germ dims W,V = (9, 8) orbit 60
+   (0, -7, -3, -2, -2) germ dims W,V = (9, 8) orbit 60
+   (0, -7, -3, -2, 0) germ dims W,V = (9, 8) orbit 60
+   (0, -6, -6, -5, -4) germ dims W,V = (9, 8) orbit 60
+   (0, -6, -6, -5, -3) germ dims W,V = (9, 8) orbit 60
+   (0, -6, -6, -4, -3) germ dims W,V = (9, 8) orbit 60
+   (0, -6, -3, -2, 0) germ dims W,V = (9, 8) orbit 60
+   (0, -6, -3, -1, 0) germ dims W,V = (9, 8) orbit 60
+   (0, -6, -2, -1, 0) germ dims W,V = (9, 8) orbit 60
+   (0, -5, -5, -4, -3) germ dims W,V = (12, 10) orbit 60
+   (0, -5, -5, -2, -1) germ dims W,V = (13, 12) orbit 60
+   (0, -5, -4, -4, -3) germ dims W,V = (17, 16) orbit 60
+   (0, -5, -4, -4, -2) germ dims W,V = (9, 8) orbit 60
+   (0, -5, -4, -3, -3) germ dims W,V = (16, 15) orbit 60
+   (0, -5, -4, -3, 0) germ dims W,V = (13, 12) orbit 60
+   (0, -5, -3, -1, -1) germ dims W,V = (9, 8) orbit 60
+   (0, -5, -2, -2, -1) germ dims W,V = (16, 15) orbit 60
+   (0, -5, -2, -1, -1) germ dims W,V = (17, 16) orbit 60
+   (0, -5, -2, -1, 0) germ dims W,V = (12, 10) orbit 60
+   (0, -4, -4, -3, -2) germ dims W,V = (12, 10) orbit 60
+   (0, -4, -4, -2, -1) germ dims W,V = (13, 12) orbit 60
+   (0, -4, -3, -2, -2) germ dims W,V = (17, 16) orbit 60
+   (0, -4, -3, -2, 0) germ dims W,V = (13, 12) orbit 60
+   (0, -4, -2, -2, -1) germ dims W,V = (17, 16) orbit 60
+   (0, -4, -2, -1, 0) germ dims W,V = (12, 10) orbit 60
+   (0, -3, -3, -3, -2) germ dims W,V = (21, 17) orbit 20
+   (0, -3, -3, -2, -1) germ dims W,V = (21, 20) orbit 60
+   (0, -3, -3, -2, 0) germ dims W,V = (13, 12) orbit 30
+   (0, -3, -3, -1, 0) germ dims W,V = (13, 12) orbit 30
+   (0, -3, -2, -2, -1) germ dims W,V = (24, 23) orbit 60
+   (0, -3, -2, -1, -1) germ dims W,V = (24, 23) orbit 60
+   (0, -3, -2, -1, 0) germ dims W,V = (21, 20) orbit 60
+   (0, -3, -1, 0, 0) germ dims W,V = (21, 17) orbit 20
+   (0, -2, -2, -2, -1) germ dims W,V = (33, 26) orbit 20
+   (0, -2, -2, -1, -1) germ dims W,V = (41, 33) orbit 30
+   (0, -2, -2, -1, 0) germ dims W,V = (19, 14) orbit 30
+   (0, -2, -1, -1, -1) germ dims W,V = (91, 86) orbit 20
+   (0, -2, -1, -1, 0) germ dims W,V = (41, 33) orbit 30
+   (0, -2, -1, 0, 0) germ dims W,V = (31, 26) orbit 20
+   (0, -1, -1, -1, -1) germ dims W,V = (123, 99) orbit 5
+   (0, -1, 0, 0, 0) germ dims W,V = (121, 99) orbit 5
+  after class (0, -9, -9, -6, -5) rank 60
+  after class (0, -9, -4, -3, 0) rank 120
+  after class (0, -8, -8, -7, -5) rank 120
+  after class (0, -8, -3, -1, 0) rank 120
+  after class (0, -7, -7, -5, -4) rank 120
+  after class (0, -7, -5, -5, -4) rank 140
+  after class (0, -7, -3, -2, -2) rank 160
+  after class (0, -7, -3, -2, 0) rank 160
+  after class (0, -6, -6, -5, -4) rank 220
+  after class (0, -6, -6, -5, -3) rank 280
+  after class (0, -6, -6, -4, -3) rank 280
+  after class (0, -6, -3, -2, 0) rank 340
+  after class (0, -6, -3, -1, 0) rank 340
+  after class (0, -6, -2, -1, 0) rank 400
+  after class (0, -5, -5, -4, -3) rank 400
+  after class (0, -5, -5, -2, -1) rank 430
+  after class (0, -5, -4, -4, -3) rank 430
+  after class (0, -5, -4, -4, -2) rank 490
+  after class (0, -5, -4, -3, -3) rank 550
+  after class (0, -5, -4, -3, 0) rank 580
+  after class (0, -5, -3, -1, -1) rank 580
+  after class (0, -5, -2, -2, -1) rank 580
+  after class (0, -5, -2, -1, -1) rank 580
+  after class (0, -5, -2, -1, 0) rank 580
+  after class (0, -4, -4, -3, -2) rank 580
+  after class (0, -4, -4, -2, -1) rank 610
+  after class (0, -4, -3, -2, -2) rank 610
+  after class (0, -4, -3, -2, 0) rank 610
+  after class (0, -4, -2, -2, -1) rank 610
+  after class (0, -4, -2, -1, 0) rank 610
+  after class (0, -3, -3, -3, -2) rank 610
+  after class (0, -3, -3, -2, -1) rank 610
+  after class (0, -3, -3, -2, 0) rank 610
+  after class (0, -3, -3, -1, 0) rank 610
+  after class (0, -3, -2, -2, -1) rank 610
+  after class (0, -3, -2, -1, -1) rank 610
+  after class (0, -3, -2, -1, 0) rank 610
+  after class (0, -3, -1, 0, 0) rank 610
+  after class (0, -2, -2, -2, -1) rank 630
+  after class (0, -2, -2, -1, -1) rank 630
+  after class (0, -2, -2, -1, 0) rank 630

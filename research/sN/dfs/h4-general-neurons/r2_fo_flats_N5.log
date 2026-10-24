@@ -1,0 +1,4 @@
+# output of: python r2_fo_flats.py 5 (2026-10-23), tail
+N 5 T-count 10 flats 1024 maximal 8 max |P| 9
+no cover with 1
+min cover: 2

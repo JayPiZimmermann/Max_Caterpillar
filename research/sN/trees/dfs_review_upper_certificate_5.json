@@ -1,0 +1,14 @@
+{
+  "status": "EXACT_SUPPORT_RECHECK_PASS",
+  "n": 5,
+  "units": 270,
+  "auxiliary_channels": 2,
+  "second_width": 272,
+  "chamber_count": 120,
+  "exact_equations": 1970,
+  "equation_failures": [],
+  "grid_points": 3125,
+  "point_failures": [],
+  "aux_nonzero": 3,
+  "elapsed": 3.0598032474517822
+}

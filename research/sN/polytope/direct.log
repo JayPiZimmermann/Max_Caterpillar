@@ -1,0 +1,9 @@
+N=4 m=3: localities 4, units 126, max passes 2 = 2.0 (N-m)!, 4^m bound 64: OK; implied s_N >= 2.000
+N=4 m=4: localities 1, units 126, max passes 1 = 1.0 (N-m)!, 4^m bound 256: OK; implied s_N >= 1.000
+N=5 m=3: localities 20, units 1810, max passes 4 = 2.0 (N-m)!, 4^m bound 64: OK; implied s_N >= 5.000
+N=5 m=4: localities 5, units 1810, max passes 3 = 3.0 (N-m)!, 4^m bound 256: OK; implied s_N >= 1.667
+N=5 m=5: localities 1, units 1810, max passes 1 = 1.0 (N-m)!, 4^m bound 1024: OK; implied s_N >= 1.000
+N=6 m=3: localities 120, units 26750, max passes 12 = 2.0 (N-m)!, 4^m bound 64: OK; implied s_N >= 10.000
+N=6 m=4: localities 30, units 26750, max passes 8 = 4.0 (N-m)!, 4^m bound 256: OK; implied s_N >= 3.750
+
+[exited with code 0]

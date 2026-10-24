@@ -1,12 +1,12 @@
 import MaxCaterpillar.CPWL
 import MaxCaterpillar.RationalWidth
 
-/-! # Rational outer layers for signed sums of maxima (Version 2)
+/-! # Rational outer layers for signed sums of maxima
 
-Version 1 (`Sharing.lean`, `CPWL.lean`) only asserts that the networks for
+`Sharing.lean` and `CPWL.lean` only assert that the networks for
 `∑ₜ εₜ max_N(…)` exist. For arbitrary affine pieces the first-layer weights
 are the piece slopes, which can be irrational, and the constant terms of the
-pieces need first-layer biases. The honest Version 2 refinement is:
+pieces need first-layer biases. The rational refinement is:
 
 * the second hidden layer and the output layer have rational weights and zero
   biases (`Network.HasRationalOuterLayers`), provided the signs `εₜ` are
@@ -17,7 +17,9 @@ pieces need first-layer biases. The honest Version 2 refinement is:
   (`Gb = 0`) give zero biases.
 
 The key input is `exists_rat_caterpillarExpansion`: the Caterpillar Net
-expansion of `max_{r+2}` used in `Sharing.lean` has rational coefficients.
+expansion of `max_{r+2}` used in `Sharing.lean` can be chosen with rational
+coefficients (`PairExpansion.exists_isRational`, by the ℚ-linear projection of
+`Rationality.lean`).
 -/
 
 open BigOperators
@@ -26,14 +28,14 @@ namespace MaxCaterpillar
 
 /-! ## Predicates -/
 
-/-- Version 2 refinement: the second hidden layer and the output layer have
+/-- The second hidden layer and the output layer have
 rational weights and zero biases. Nothing is asserted about the first hidden
 layer. -/
 def Network.HasRationalOuterLayers {N h₁ h₂ : ℕ} (net : Network N h₁ h₂) : Prop :=
   (∀ k j, ∃ q : ℚ, (q : ℝ) = net.W₂ k j) ∧ (∀ k, ∃ q : ℚ, (q : ℝ) = net.w₃ k) ∧
     net.b₂ = 0 ∧ net.b₃ = 0
 
-/-- Version 2 refinement: all three bias arrays are rational. -/
+/-- All three bias arrays are rational. -/
 def Network.HasRationalBiases {N h₁ h₂ : ℕ} (net : Network N h₁ h₂) : Prop :=
   (∀ j, ∃ q : ℚ, (q : ℝ) = net.b₁ j) ∧ (∀ k, ∃ q : ℚ, (q : ℝ) = net.b₂ k) ∧
     ∃ q : ℚ, (q : ℝ) = net.b₃
@@ -141,8 +143,7 @@ def PairExpansion.IsRational {N : ℕ} [NeZero N] {ι φ : Type*} [Fintype ι] [
 /-- **Merged remainder, rational version.** As `exists_network_sum_maximum`,
 for a rational expansion, rational coefficients `e`, and rational readouts of
 the coordinates and pair hinges. The first hidden layer is the given one, and
-the outer layers are rational with zero biases. Version 2; Version 1 is
-`exists_network_sum_maximum`. -/
+the outer layers are rational with zero biases. Rational refinement of `exists_network_sum_maximum`. -/
 theorem exists_network_sum_maximum_rational {d N : ℕ} [NeZero N]
     {ι φ ι₁ τ : Type*} [Fintype ι] [Fintype φ] [Fintype ι₁] [Fintype τ]
     (E : PairExpansion N ι φ) (hE : E.IsRational)
@@ -303,7 +304,7 @@ open MaxNN.Caterpillar.Corrections in
 /-- **Shared pieces, rational version.** As `exists_network_shared_pieces`, for
 a rational expansion and rational coefficients `ε`: the outer layers are
 rational with zero biases, and every first-layer neuron computes `g_a - g_b`,
-`g_a`, or `-g_a`. Version 2; Version 1 is `exists_network_shared_pieces`. -/
+`g_a`, or `-g_a`. Rational refinement of `exists_network_shared_pieces`. -/
 theorem exists_network_shared_pieces_rational {d N n T : ℕ} [NeZero N]
     {ι φ : Type*} [Fintype ι] [Fintype φ] (E : PairExpansion N ι φ) (hE : E.IsRational)
     (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ)
@@ -347,8 +348,7 @@ open MaxNN.Caterpillar.Corrections in
 /-- **Merged remainder, no shared pieces, rational version.** As
 `exists_network_sum_affine_maximum`: the outer layers are rational with zero
 biases, and every first-layer neuron computes `g - g'`, `g`, or `-g` for two
-affine components `g, g'` of one map `Aₜ`. Version 2; Version 1 is
-`exists_network_sum_affine_maximum`. -/
+affine components `g, g'` of one map `Aₜ`. Rational refinement of `exists_network_sum_affine_maximum`. -/
 theorem exists_network_sum_affine_maximum_rational {d n T : ℕ}
     {ι φ : Type*} [Fintype ι] [Fintype φ] (E : PairExpansion (n + 1) ι φ)
     (hE : E.IsRational)
@@ -394,10 +394,47 @@ section Caterpillar
 
 open MaxNN.Caterpillar MaxNN.Caterpillar.Corrections MaxNN.Width
 
+/-- A pair-hinge expansion with rational inner weights `V` has a rational version with the
+same `i₀`, `u`, `v`, `V`: the outer coefficients `c`, `q` are rationalized by the ℚ-linear
+projection (`exists_rat_coeff_of_mem_span`). -/
+theorem PairExpansion.exists_isRational {N : ℕ} [NeZero N] {ι φ : Type*} [Fintype ι]
+    [Fintype φ] (E : PairExpansion N ι φ) (hV : ∀ k j, E.V k j ∈ ratField) :
+    ∃ E' : PairExpansion N ι φ, E'.IsRational := by
+  classical
+  let hinge : φ → Point N → ℝ := fun j y => relu (y (E.u j) - y (E.v j))
+  let w : ι ⊕ φ → Point N → ℝ :=
+    Sum.elim (fun k y => relu (∑ j, E.V k j * hinge j y)) hinge
+  have hrelu : Continuous relu := continuous_const.max continuous_id
+  have hhinge : ∀ j, Continuous (hinge j) := fun j =>
+    hrelu.comp ((continuous_apply _).sub (continuous_apply _))
+  have hcont : ∀ i, Continuous (w i) := by
+    rintro (k | j)
+    · exact hrelu.comp (continuous_finset_sum _ fun j _ => continuous_const.mul (hhinge j))
+    · exact hhinge j
+  have hhr : ∀ j, ∀ y ∈ ratPoints N, hinge j y ∈ ratField := fun j y hy =>
+    relu_mem_ratField (Subfield.sub_mem _ (hy _) (hy _))
+  have hrat : ∀ i, ∀ y ∈ ratPoints N, w i y ∈ ratField := by
+    rintro (k | j) y hy
+    · exact relu_mem_ratField (sum_mem_ratField _ fun j _ =>
+        Subfield.mul_mem _ (hV k j) (hhr j y hy))
+    · exact hhr j y hy
+  have hf : (fun y => Maximum N y - y E.i₀) ∈ Submodule.span ℝ (Set.range w) := by
+    rw [mem_span_range_iff_exists_fun]
+    refine ⟨Sum.elim E.c E.q, funext fun y => ?_⟩
+    simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul, Fintype.sum_sum_type,
+      Sum.elim_inl, Sum.elim_inr, E.spec y]
+    ring
+  obtain ⟨c, hc, hcx⟩ := exists_rat_coeff_of_mem_span w hcont hrat hf fun y hy =>
+    Subfield.sub_mem _ (MAX_mem_ratField hy) (hy _)
+  refine ⟨⟨E.i₀, E.u, E.v, E.V, fun k => c (Sum.inl k), fun j => c (Sum.inr j), fun y => ?_⟩,
+    hV, fun k => hc _, fun j => hc _⟩
+  have h := hcx y
+  simp only [Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr] at h
+  linarith
+
 /-- The Caterpillar Net expansion of `max_{r+2}` of `exists_caterpillarExpansion`
-has rational coefficients: its heads are integer vectors and its key and
-remainder coefficients are rational (`canonicalNormalizedCoeff_mem_ratField`).
-Version 2; Version 1 is `exists_caterpillarExpansion`. -/
+can be chosen with rational coefficients: its heads are integer vectors, and the
+outer coefficients are rationalized by `PairExpansion.exists_isRational`. -/
 theorem exists_rat_caterpillarExpansion (r : ℕ) (hr : 1 ≤ r) :
     ∃ E : PairExpansion (r + 1 + 1) (caterpillarKeys r) (Fin (compactWidth (r + 1))),
       E.IsRational := by
@@ -413,13 +450,10 @@ theorem exists_rat_caterpillarExpansion (r : ℕ) (hr : 1 ≤ r) :
       ∑ k in K, c k * realUnitY k x + ∑ j, q j * compactFeat (r + 1) x j := fun x =>
     (compactEssentialNetwork_computes r hr x).symm.trans
       (compactDictionaryNetwork_eval K c q hK x)
-  have ha : RatVec a := (ratVec_canonicalRemainderCoeff hr).add (ratVec_sum _ fun k _ =>
-    RatVec.smul (canonicalNormalizedCoeff_mem_ratField hr k) (ratVec_rootHingeCoeff _))
-  refine ⟨⟨0, fun j => (featurePair (r + 1) j).1, fun j => (featurePair (r + 1) j).2,
-    fun k j => compactRealUnitCoeff k.1 j, fun k => c k.1, q, fun y => ?_⟩,
-    fun k j => ratVec_compactRealUnitCoeff
-      (ratVec_normalizedKey (Finset.mem_filter.mp (essentialKeys_subset _ k.2)).1) j,
-    fun k => canonicalNormalizedCoeff_mem_ratField hr k.1, ratVec_compactOfPairCoeff ha⟩
+  refine PairExpansion.exists_isRational ⟨0, fun j => (featurePair (r + 1) j).1,
+    fun j => (featurePair (r + 1) j).2, fun k j => compactRealUnitCoeff k.1 j, fun k => c k.1, q,
+    fun y => ?_⟩ fun k j => ratVec_compactRealUnitCoeff
+      (ratVec_normalizedKey (Finset.mem_filter.mp (essentialKeys_subset _ k.2)).1) j
   have hz := hmax (fun i => y i - y 0)
   have hshift := MaxNN.MAX_add_const (fun i => y i - y 0) (y 0)
   simp only [sub_add_cancel] at hshift
@@ -438,7 +472,7 @@ theorem exists_rat_caterpillarExpansion (r : ℕ) (hr : 1 ≤ r) :
 network of `caterpillar_shared_pieces` can be chosen so that, for rational
 `εₜ`, its second hidden layer and output layer have rational weights and zero
 biases, and every neuron of its first hidden layer computes `g_a - g_b`, `g_a`,
-or `-g_a`. Version 2; Version 1 is `caterpillar_shared_pieces`. -/
+or `-g_a`. Rational refinement of `caterpillar_shared_pieces`. -/
 theorem caterpillar_shared_pieces_rational {d n T : ℕ} (r : ℕ) (hr : 1 ≤ r)
     (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ)
     (α : Fin T → Fin (r + 1 + 1) → Fin (n + 1)) (ε : Fin T → ℝ)
@@ -460,8 +494,8 @@ theorem caterpillar_shared_pieces_rational {d n T : ℕ} (r : ℕ) (hr : 1 ≤ r
     fun j => by rw [hW, hb]; exact hrow j⟩
 
 /-- `caterpillar_shared_pieces_rational` with exactly `r + 2` distinct pieces
-in every term: second width `min(T, C(n+1, r+2)) (h₂ - 2) + 2`. Version 2;
-Version 1 is `caterpillar_shared_pieces_min`. -/
+in every term: second width `min(T, C(n+1, r+2)) (h₂ - 2) + 2`. Rational refinement of
+`caterpillar_shared_pieces_min`. -/
 theorem caterpillar_shared_pieces_min_rational {d n T : ℕ} (r : ℕ) (hr : 1 ≤ r)
     (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ)
     (α : Fin T → Fin (r + 1 + 1) → Fin (n + 1)) (hα : ∀ t, Function.Injective (α t))
@@ -481,7 +515,7 @@ theorem caterpillar_shared_pieces_min_rational {d n T : ℕ} (r : ℕ) (hr : 1 �
 network of `caterpillar_sum_affine` can be chosen so that, for rational `εₜ`,
 its outer layers are rational with zero biases, and every neuron of its first
 hidden layer computes `g - g'`, `g`, or `-g` for components `g, g'` of one
-`Aₜ`. Version 2; Version 1 is `caterpillar_sum_affine`. -/
+`Aₜ`. Rational refinement of `caterpillar_sum_affine`. -/
 theorem caterpillar_sum_affine_rational {d T : ℕ} (r : ℕ) (hr : 1 ≤ r)
     (Aw : Fin T → Fin (r + 1 + 1) → Fin d → ℝ) (Ab : Fin T → Fin (r + 1 + 1) → ℝ)
     (ε : Fin T → ℝ) (hε : ∀ t, ∃ q : ℚ, (q : ℝ) = ε t) :
@@ -507,7 +541,7 @@ end Caterpillar
 
 /-- `caterpillar_shared_pieces_rational` for any number `p` of pieces. For
 `p = 0` there are no terms and the network is zero; its single first-layer
-neuron is the zero row. Version 2; Version 1 is `caterpillar_shared_pieces_any`. -/
+neuron is the zero row. Rational refinement of `caterpillar_shared_pieces_any`. -/
 theorem caterpillar_shared_pieces_any_rational {d p T : ℕ} (r : ℕ) (hr : 1 ≤ r)
     (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ)
     (α : Fin T → Fin (r + 1 + 1) → Fin p) (ε : Fin T → ℝ)
@@ -537,8 +571,7 @@ theorem caterpillar_shared_pieces_any_rational {d p T : ℕ} (r : ℕ) (hr : 1 �
 /-- **Rational pieces.** If the pieces `g_a` and the coefficients `εₜ` are
 rational, the network of `caterpillar_shared_pieces_any` can be chosen with
 rational weights and rational biases; if moreover every piece is linear
-(`Gb = 0`), all its biases vanish. Version 2; Version 1 is
-`caterpillar_shared_pieces_any`. -/
+(`Gb = 0`), all its biases vanish. Rational refinement of `caterpillar_shared_pieces_any`. -/
 theorem caterpillar_shared_pieces_rational_pieces {d p T : ℕ} (r : ℕ) (hr : 1 ≤ r)
     (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ)
     (α : Fin T → Fin (r + 1 + 1) → Fin p) (ε : Fin T → ℝ)
@@ -569,7 +602,7 @@ theorem caterpillar_shared_pieces_rational_pieces {d p T : ℕ} (r : ℕ) (hr : 
 /-- **Rational affine maps.** If all `Aₜ` and `εₜ` are rational, the network of
 `caterpillar_sum_affine` can be chosen with rational weights and rational
 biases; if moreover every `Aₜ` is linear (`Ab = 0`), all its biases vanish.
-Version 2; Version 1 is `caterpillar_sum_affine`. -/
+Rational refinement of `caterpillar_sum_affine`. -/
 theorem caterpillar_sum_affine_rational_pieces {d T : ℕ} (r : ℕ) (hr : 1 ≤ r)
     (Aw : Fin T → Fin (r + 1 + 1) → Fin d → ℝ) (Ab : Fin T → Fin (r + 1 + 1) → ℝ)
     (ε : Fin T → ℝ) (hAw : ∀ t i l, ∃ q : ℚ, (q : ℝ) = Aw t i l)
@@ -598,7 +631,7 @@ pieces `g_a` that all occur, and `f` is computed by a network of widths
 `C(p,2) + p + 1` and `s · (secondWidth (d+1) - 2) + 2` whose second hidden
 layer and output layer have rational weights and zero biases, and each of
 whose first-layer neurons computes `g_a - g_b`, `g_a`, `-g_a`, or (only when
-`p = 0`) zero. Version 2; Version 1 is `cpwl_two_hidden_layers_shared`. -/
+`p = 0`) zero. Rational refinement of `cpwl_two_hidden_layers_shared`. -/
 theorem cpwl_two_hidden_layers_shared_rational (d : ℕ) (hd : 2 ≤ d) (f : Point d → ℝ)
     (hf : f ∈ MaxNN.CPWL d) :
     ∃ (p T : ℕ) (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ)

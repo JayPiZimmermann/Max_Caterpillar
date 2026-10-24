@@ -1,0 +1,10 @@
+cover cuts 60 from /home/jzimmermann/code/Max_Caterpillar/research/sN/upper/data/passsets_5_d3.pkl
+Running HiGHS 1.12.0 (git hash: 4f96ee8): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP has 6652 rows; 3640 cols; 1058464 nonzeros; 3620 integer variables (1810 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 4e+00]
+  Cost    [1e+00, 1e+00]
+  Bound   [1e+00, 1e+04]
+  RHS     [1e+00, 2e+00]
+Presolving model
+6532 rows, 3520 cols, 991876 nonzeros  5s

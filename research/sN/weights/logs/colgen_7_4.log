@@ -1,0 +1,7 @@
+N=7 TMAX=4 canonical units 3560
+  t=3: 37 permuted germs, rank 7, 10 projective classes (0.1s)
+  t=4: 369 permuted germs, rank 113, 197 projective classes (6.0s)
+ iter 1: columns 16, LP value 17.500000000, dual support 1
+   + column (4,(1, 1, 1)) MILP cost 0.000000, |inside| 176
+   + column (4,(1, 2)) MILP cost 0.000000, |inside| 176
+   + column (4,(2, 1)) MILP cost 0.000000, |inside| 176

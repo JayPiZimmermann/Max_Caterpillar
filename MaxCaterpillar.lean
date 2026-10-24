@@ -2,7 +2,7 @@ import MaxCaterpillar.Definitions
 import MaxCaterpillar.Core
 import MaxCaterpillar.Theorems
 import MaxCaterpillar.Quotient
-import MaxCaterpillar.OneBasis
+import MaxCaterpillar.Retained
 import MaxCaterpillar.Sharing
 import MaxCaterpillar.CPWL
 import MaxCaterpillar.SmallArity
@@ -10,11 +10,8 @@ import MaxCaterpillar.KMPS
 import MaxCaterpillar.SharingRational
 import MaxCaterpillar.CPWLRational
 import MaxCaterpillar.CountLower
-import MaxCaterpillar.CountExp
-import MaxCaterpillar.LowerBound
+import MaxCaterpillar.Count.Main
+import MaxCaterpillar.Dimension
 import MaxCaterpillar.SmallN
 import MaxCaterpillar.Frontier
-import MaxCaterpillar.Trees
-import MaxCaterpillar.Simplify.Rational
-import MaxCaterpillar.Simplify.CoverageMain
 import MaxCaterpillar.Audit

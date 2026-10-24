@@ -1,0 +1,5 @@
+87 dims 6 3 with 4-ties: [] with 4- and 5-tie: [] nodes 112652 LP [699248, 456080, 243168, 0] 579s
+88 dims 5 3 with 4-ties: [] with 4- and 5-tie: [] nodes 225116 LP [1285716, 848900, 436816, 0] 1014s
+125 dims 5 3 with 4-ties: [] with 4- and 5-tie: [] nodes 265672 LP [1516228, 1006492, 509736, 0] 1156s
+126 dims 4 3 with 4-ties: [] with 4- and 5-tie: [] nodes 305220 LP [1730108, 1152588, 577520, 0] 1285s
+191 dims 4 4 with 4-ties: [] with 4- and 5-tie: [] nodes 1305168 LP [4164740, 2962236, 1202504, 0] 3583s

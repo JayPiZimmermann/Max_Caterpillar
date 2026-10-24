@@ -1,0 +1,4 @@
+# output of: python r2_k1.py N for N=3,4,5 (2026-10-23)
+N=3: dim W_all = 5
+N=4: dim W_all = 5
+N=5: dim W_all = 0

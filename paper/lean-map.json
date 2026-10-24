@@ -135,8 +135,8 @@
     "name": "facet_reduction"
   },
   "compiler": {
-    "file": "MaxCaterpillar/OneBasis.lean",
-    "name": "maximum_width_one_basis",
+    "file": "MaxCaterpillar/Retained.lean",
+    "name": "quotientDim_add_two_le_secondWidth",
     "equations": [
       "eq:compilation-widths"
     ],
@@ -469,7 +469,7 @@
     ]
   },
   "retainedCount": {
-    "file": "MaxCaterpillar/OneBasis.lean",
+    "file": "MaxCaterpillar/Retained.lean",
     "name": "quotientDim_add_two_le_secondWidth",
     "equations": [
       "eq:retained-count"
@@ -623,7 +623,7 @@
     "name": "canonicalNormalizedCoeff"
   },
   "retainedDescriptions": {
-    "file": "MaxCaterpillar/OneBasis.lean",
+    "file": "MaxCaterpillar/Retained.lean",
     "name": "vocabularySpan_le_essential",
     "equations": [
       "eq:retained-descriptions"
@@ -745,13 +745,7 @@
   "lowerArityWeight": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean",
     "name": "totalWeight",
-    "equations": [
-      "eq:lower-arity-weight"
-    ]
-  },
-  "mainVersion1": {
-    "file": "MaxCaterpillar/Core.lean",
-    "name": "maximum_width"
+    "equations": []
   },
   "compilation": {
     "file": "MaxCaterpillar/Core.lean",
@@ -760,21 +754,13 @@
       "eq:compilation-hypothesis"
     ]
   },
-  "coefficientRational": {
-    "file": "MaxCaterpillar/Core.lean",
-    "name": "coefficient_rational"
-  },
-  "rationalCoefficients": {
-    "file": "MaxCaterpillar/Core.lean",
-    "name": "rational_coefficients"
-  },
   "rationalSpan": {
     "file": "MaxCaterpillar/Rationality.lean",
     "name": "exists_rat_coeff_of_mem_span"
   },
   "rationalCoordinate": {
     "file": "MaxCaterpillar/Rationality.lean",
-    "name": "coeff_mem_ratField",
+    "name": "exists_rat_coeff_of_mem_span",
     "equations": [
       "eq:rational-coordinate"
     ]
@@ -876,35 +862,35 @@
     "name": "caterpillarDim_ge"
   },
   "draft_countexp-basept": {
-    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "basePt",
     "equations": [
       "eq:base-point"
     ]
   },
   "draft_countexp-mixeddiff": {
-    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "mixedDiff",
     "equations": [
       "eq:mixed-difference"
     ]
   },
   "draft_countexp-balanced": {
-    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "Balanced",
     "equations": [
       "eq:balanced"
     ]
   },
   "draft_countexp-active": {
-    "file": "MaxCaterpillar/CountExp/Defs.lean",
+    "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "Active",
     "equations": [
       "eq:active"
     ]
   },
   "draft_countexp-auxiliary": {
-    "file": "MaxCaterpillar/CountExp/W1Functional.lean",
+    "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "mixedDiff_auxiliary",
     "equations": [
       "eq:mixed-auxiliary"
@@ -914,22 +900,15 @@
     ]
   },
   "draft_countexp-maximum": {
-    "file": "MaxCaterpillar/CountExp/W1Functional.lean",
+    "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "mixedDiff_maximum",
     "equations": [
       "eq:mixed-maximum"
     ]
   },
-  "draft_countexp-units": {
-    "file": "MaxCaterpillar/CountExp/W1Functional.lean",
-    "name": "pass_of_mixedDiff_unit_ne",
-    "steps": [
-      "stp:count-units"
-    ]
-  },
   "draft_countexp-digits": {
-    "file": "MaxCaterpillar/CountExp/W2Digits.lean",
-    "name": "balanced_of_realUnitArg_eq_zero",
+    "file": "MaxCaterpillar/Count/Passing.lean",
+    "name": "descr_balanced_of_arg_eq_zero",
     "equations": [
       "eq:preactivation-digits"
     ],
@@ -937,30 +916,16 @@
       "stp:count-digits"
     ]
   },
-  "draft_countexp-cover": {
-    "file": "MaxCaterpillar/CountExp/Main.lean",
-    "name": "exists_passes",
-    "steps": [
-      "stp:count-cover"
-    ]
-  },
-  "draft_countexp-caterpillar": {
-    "file": "MaxCaterpillar/CountExp/W3Structure.lean",
-    "name": "exists_hingeCat",
-    "steps": [
-      "stp:count-caterpillar"
-    ]
-  },
   "draft_countexp-admissible": {
-    "file": "MaxCaterpillar/CountExp/W3Structure.lean",
-    "name": "admissible_tieSet",
+    "file": "MaxCaterpillar/Count/PerUnit.lean",
+    "name": "tie_eq_of_inter_block",
     "steps": [
       "stp:count-admissible"
     ]
   },
   "draft_countexp-orders": {
-    "file": "MaxCaterpillar/CountExp/W4Orders.lean",
-    "name": "HingeCat.card_balanced_fiber_mul_le",
+    "file": "MaxCaterpillar/Count/Passing.lean",
+    "name": "card_balanced_fiber_of_matching",
     "equations": [
       "eq:order-count"
     ],
@@ -968,16 +933,9 @@
       "stp:count-orders"
     ]
   },
-  "draft_countexp-potential": {
-    "file": "MaxCaterpillar/CountExp/W5Generating.lean",
-    "name": "pot",
-    "equations": [
-      "eq:potential"
-    ]
-  },
   "draft_countexp-transfer": {
-    "file": "MaxCaterpillar/CountExp/W5Generating.lean",
-    "name": "pathWeight_le_one",
+    "file": "MaxCaterpillar/Count/PerUnit.lean",
+    "name": "card_passes_le_cover",
     "equations": [
       "eq:path-weight"
     ],
@@ -985,23 +943,9 @@
       "stp:count-transfer"
     ]
   },
-  "draft_countexp-per-unit": {
-    "file": "MaxCaterpillar/CountExp/Main.lean",
-    "name": "card_passSet_le",
-    "steps": [
-      "stp:count-per-unit"
-    ]
-  },
-  "draft_countexp-assembly": {
-    "file": "MaxCaterpillar/CountExp/Main.lean",
-    "name": "choose_le_six_pow_mul_card",
-    "steps": [
-      "stp:count-assembly"
-    ]
-  },
   "draft_countexp-corollary": {
-    "file": "MaxCaterpillar/CountExp/Main.lean",
-    "name": "seven_pow_le",
+    "file": "MaxCaterpillar/Count/Main.lean",
+    "name": "pow_le_of_choose_le",
     "equations": [
       "eq:binomial-sum"
     ],
@@ -1010,7 +954,7 @@
     ]
   },
   "draft_quotlower-theorem": {
-    "file": "MaxCaterpillar/LowerBound.lean",
+    "file": "MaxCaterpillar/Dimension.lean",
     "name": "factorial_le_quotientDim",
     "equations": [],
     "steps": [
@@ -1018,7 +962,7 @@
     ]
   },
   "draft_quotlower-path-unit": {
-    "file": "MaxCaterpillar/LowerBound.lean",
+    "file": "MaxCaterpillar/Dimension.lean",
     "name": "pathUnit_apply",
     "equations": [
       "eq:path-unit"
@@ -1028,29 +972,22 @@
     ]
   },
   "draft_quotlower-test": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "testW",
+    "file": "MaxCaterpillar/Dimension.lean",
+    "name": "testZ",
     "equations": [
       "eq:test-configuration"
     ]
   },
-  "draft_quotlower-reference": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "refW",
-    "equations": [
-      "eq:reference-configuration"
-    ]
-  },
   "draft_quotlower-auxiliary": {
-    "file": "MaxCaterpillar/LowerBound.lean",
+    "file": "MaxCaterpillar/Dimension.lean",
     "name": "auxSpan_le_ker",
     "steps": [
       "stp:quotient-auxiliary"
     ]
   },
   "draft_quotlower-values": {
-    "file": "MaxCaterpillar/LowerBound.lean",
-    "name": "pathFunctional_pathUnit",
+    "file": "MaxCaterpillar/Dimension.lean",
+    "name": "detector_self",
     "equations": [
       "eq:path-functional"
     ],
@@ -1084,7 +1021,7 @@
     ]
   },
   "rooted-star": {
-    "file": "MaxCaterpillar/Trees/RootedStars.lean",
+    "file": "MaxCaterpillar/Competing/Defs.lean",
     "name": "rootedStar",
     "equations": [
       "eq:rooted-star"
@@ -1172,5 +1109,30 @@
     "steps": [
       "stp:bsy-star"
     ]
+  },
+  "forestCount": {
+    "file": "MaxCaterpillar/Count/Main.lean",
+    "name": "choose_le_of_unit_bound",
+    "equations": [
+      "eq:forest-count"
+    ],
+    "steps": [
+      "stp:count-assembly"
+    ]
+  },
+  "blockWeight": {
+    "file": "MaxCaterpillar/Count/BlockSum.lean",
+    "name": "star_sum",
+    "equations": [
+      "eq:block-weight"
+    ]
+  },
+  "quadraticRefinement": {
+    "file": "MaxCaterpillar/CountLower.lean",
+    "name": "caterpillar_count_lower"
+  },
+  "out-leaf-count": {
+    "file": "MaxCaterpillar/Count/Main.lean",
+    "name": "outLeaf_unified_exponential"
   }
 }

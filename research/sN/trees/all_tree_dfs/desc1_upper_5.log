@@ -1,0 +1,4 @@
+5 mode desc1 units 1174
+rows 4420 variables 1189 seconds 2.2586586475372314
+LP 0 Optimization terminated successfully. (HiGHS Status 7: Optimal)
+EXACT validation failures 0 support 270

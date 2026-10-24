@@ -1,0 +1,7 @@
+N 3 grid [-1, 0, 1] dict 24 rank 7 rel resid 2.5320799325632323e-15
+N 4 grid [-1, 0, 1] dict 104 rank 26 rel resid 0.01851765163707456
+N 5 grid [-1, 0, 1] dict 400 rank 120 rel resid 0.023342172880068575
+N 4 grid [-2, -1, 0, 1, 2] dict 496 rank 122 rel resid 0.00753899751238623
+N 5 grid [-2, -1, 0, 1, 2] dict 3120 rank 1029 rel resid 0.007726212048288267
+
+[exited with code 0]

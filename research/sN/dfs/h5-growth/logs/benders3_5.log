@@ -1,0 +1,6 @@
+N 5 units 1810 rows 4216 rank[A|t] 1136
+it 0: |K| 0 LP 3.333 lb 4 cuts 480 H-sizes [186, 175, 122, 94] t=27s
+it 1: |K| 8 LP 3.377 lb 4 cuts 960 H-sizes [226, 262, 186, 240] t=108s
+it 2: |K| 101 LP 4.933 lb 5 cuts 1440 H-sizes [251, 433, 274, 466] t=202s
+it 3: |K| 148 LP 5.179 lb 6 cuts 1920 H-sizes [231, 74, 240, 82] t=288s
+it 4: |K| 269 LP 5.698 lb 6 cuts 2400 H-sizes [442, 475, 441, 515] t=392s

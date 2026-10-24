@@ -1,31 +1,27 @@
-import MaxCaterpillar.OneBasis
-import MaxCaterpillar.CountLower
-import MaxCaterpillar.CountExp
-import MaxCaterpillar.LowerBound
+import MaxCaterpillar.Retained
+import MaxCaterpillar.Count.Main
 import MaxCaterpillar.Competing.Support
-import MaxCaterpillar.Simplify.Rational
-import MaxCaterpillar.Simplify.Dimension
-import MaxCaterpillar.Simplify.Brunck
+import MaxCaterpillar.Dimension
 
 /-! # The public theorem interface
 
-The objects are defined in `Definitions.lean`. The supporting development, the
-Version 1 and Version 2 statements (`maximum_width`, `maximum_width_rational`,
-`compilation`, …), and the internal names are in `Core.lean` and the files it
-imports.
+The objects are defined in `Definitions.lean`, `Count/Defs.lean` (tree face functions and
+the class `ω ≤ Δ`) and `Competing/Defs.lean` (the construction of Brunck et al.).
 
 * `caterpillar_net`: the Caterpillar Net computes `max_N` with two hidden
   layers of widths `firstWidth N` and `secondWidth N`, rational weights, and
   zero biases.
-* `caterpillar_expansion_choose_le`, `caterpillar_expansion_exponential`,
-  `caterpillar_expansion_quadratic`: every caterpillar expansion of `max_N`
-  uses at least `C(N,k)/6^k` (`3 ≤ k ≤ N`), hence `(7/6)^N/(N+1)`, and at least
-  `N(N-1)/6` caterpillar functions.
+* `unified_choose_le`, `unified_exponential`: every expansion of `max_N` by caterpillar
+  functions and tree face functions with `ω ≤ Δ` (`Δ ≥ 2`) uses at least
+  `C(N,m)/(2Δ+2)^m` (`3 ≤ m ≤ N`), hence `(1 + 1/(2Δ+2))^N/(N+1)`, units.  Corollaries:
+  `caterpillar_expansion_choose_le`, `caterpillar_expansion_exponential` (base `7/6`),
+  `brunck_expansion_exponential` (the building blocks of Brunck et al., base `7/6`),
+  `hingeDeg_expansion_exponential`, `outLeaf_expansion_exponential`.
+* `caterpillar_expansion_quadratic`: at least `N(N-1)/6` caterpillar functions.
 * `caterpillarDim_ge`: `dim(V_N/A_N) ≥ (N-2)!`.
 * `bhrsy_*`, `rootedStar_ne_caterpillarFunction`: the pyramids `pyr_{e_v}(B_{v,π,M})` of
-  Brunck et al. (arXiv:2610.28587v1, Sec. 7.1; definitions in `Competing/Defs.lean`) are
-  translated caterpillar polytopes for `M ≠ ∅` and rooted stars for `M = ∅`; rooted stars
-  are not caterpillar functions.
+  Brunck et al. (arXiv:2610.28587v1, Sec. 7.1) are translated caterpillar polytopes for
+  `M ≠ ∅` and rooted stars for `M = ∅`; rooted stars are not caterpillar functions.
 -/
 
 open BigOperators
@@ -34,15 +30,54 @@ namespace MaxCaterpillar
 
 open MaxNN MaxNN.Caterpillar
 
+open Corrections MaxNN.Width in
 /-- **Caterpillar Net.** For every positive arity `N` there is a two-hidden-layer
 ReLU network of widths `firstWidth N` and `secondWidth N` with rational weights
-and zero biases computing `max_N` on all of `ℝ^N`. (Version 4 of
-`maximum_width`; rational coefficients follow by applying a ℚ-linear
-projection at rational input points, `Simplify/Rational.lean`.) -/
+and zero biases computing `max_N` on all of `ℝ^N`. For `N ≥ 3`, `max_N` lies in
+the span of the essential normalized caterpillar functions and the auxiliary
+functions (`vocabularySpan_le_essential`); the ℚ-linear projection
+(`exists_rat_coeff_of_mem_span`) makes the coefficients rational, and the
+compilation theorem gives the network. -/
 theorem caterpillar_net (N : ℕ) [NeZero N] :
     ∃ net : Network N (firstWidth N) (secondWidth N),
-      (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
-  caterpillar_net_v4 N
+      (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases := by
+  classical
+  rcases N with _ | _ | _ | r
+  · exact absurd rfl (NeZero.ne 0)
+  · exact caterpillar_net_one
+  · exact caterpillar_net_two
+  have hr : 1 ≤ r + 1 := Nat.le_add_left 1 r
+  set K := essentialKeys (normalizedKeys (r + 1))
+  have hKsub : K ⊆ normalizedKeys (r + 1) := essentialKeys_subset _
+  let v : (↥K ⊕ Fin (W (r + 1 + 1 + 1))) → Point (r + 1 + 1 + 1) → ℝ :=
+    Sum.elim (fun k => realUnitY k.1) fun j x => feat _ x j
+  have hmax : MAX (r + 1 + 1 + 1) ∈ Submodule.span ℝ (Set.range v) := by
+    rw [Set.Sum.elim_range, Submodule.span_union]
+    exact vocabularySpan_le_essential (r + 1) (maximum_mem_dictionary (r + 1) hr)
+  obtain ⟨c, hc, hcx⟩ := exists_rat_coeff_of_mem_span v
+    (Sum.rec (fun k => (Canonical.realUnitY_posHomContinuous k.1
+      (normalizedKeys_simplexDifference k.1 (hKsub k.2))).1)
+      fun j => (Canonical.feat_posHomContinuous _ j).1)
+    (Sum.rec (fun k _ hy => realUnitY_mem_ratField (ratVec_normalizedKey (hKsub k.2))
+      (normalizedKeys_simplexDifference k.1 (hKsub k.2)) hy)
+      fun j _ hy => feat_mem_ratField hy j)
+    hmax fun y hy => MAX_mem_ratField hy
+  let d : RealKey (r + 1 + 1) → ℝ := fun k => if h : k ∈ K then c (Sum.inl ⟨k, h⟩) else 0
+  have hd : ∀ k (hk : k ∈ K), d k = c (Sum.inl ⟨k, hk⟩) := fun k hk => dif_pos hk
+  have hle : K.card + 2 ≤ secondWidth (r + 1 + 1 + 1) := by
+    have h5 := card_normalizedKeys_le_normalizedWordCones.trans
+      (Nat.mul_le_mul_right (3 ^ (r + 1)) (normalized_cone_count (r + 1)))
+    show K.card + 2 ≤ coneCount (r + 1 + 1 + 1) * 3 ^ (r + 1 + 1 + 1 - 2) -
+      (r + 1 + 1 + 1) * (r + 1 + 1 + 1 - 1) + 2
+    rw [show r + 1 + 1 + 1 - 2 = r + 1 by omega, show r + 1 + 1 + 1 - 1 = r + 1 + 1 by omega]
+    exact Nat.add_le_add_right ((essentialNormalizedKeys_card_le_sub_orderedHinges hr).trans
+      (Nat.sub_le_sub_right h5 _)) 2
+  refine compile_expansion_width K d (fun j => c (Sum.inr j))
+    (fun k hk => normalizedKeys_simplexDifference k (hKsub hk))
+    (fun k hk => ratVec_normalizedKey (hKsub hk)) (fun k hk => (hd k hk).symm ▸ hc _)
+    (fun j => hc _) (fun x => ?_) hle
+  rw [hcx x, Fintype.sum_sum_type, ← Finset.sum_coe_sort K]
+  exact congrArg₂ (· + ·) (Finset.sum_congr rfl fun k _ => by rw [hd k.1 k.2]; rfl) rfl
 
 /-- Unfold a caterpillar expansion into the internal hypotheses. -/
 theorem IsCaterpillarExpansion.unfold {r : ℕ} {K : Finset (FaceKey r)}
@@ -53,27 +88,67 @@ theorem IsCaterpillarExpansion.unfold {r : ℕ} {K : Finset (FaceKey r)}
           ∑ k in K, d k * Corrections.realUnitY k x + auxiliary a x :=
   hK
 
-/-- **Exponential count, binomial form.** Every caterpillar expansion `K` of
-`max_N`, `N = r + 2`, satisfies `C(N, k) ≤ 6^k |K|` for every `3 ≤ k ≤ N`. -/
+/-- **Exponential count, binomial form.** Let `N = r + 2`. If `max_N` is a linear
+combination of the caterpillar functions of `K₁`, the tree face functions of `K₂` and the
+auxiliary functions, and every unit of `K₂` has `ω ≤ Δ` (`Δ ≥ 2`), then
+`C(N, m) ≤ (2Δ+2)^m (|K₁| + |K₂|)` for every `3 ≤ m ≤ N`. -/
+theorem unified_choose_le (r : ℕ) {K₁ : Finset (FaceKey r)}
+    {K₂ : Finset (Trees.TreeFace (r + 1 + 1))} (hK : Trees.IsMixedExpansion r K₁ K₂) {Δ : ℕ}
+    (hΔ : 2 ≤ Δ) (hω : ∀ F ∈ K₂, Count.OmegaLe F.descr Δ) {m : ℕ} (hm : 3 ≤ m)
+    (hmN : m ≤ r + 1 + 1) :
+    (r + 1 + 1).choose m ≤ (2 * Δ + 2) ^ m * (K₁.card + K₂.card) :=
+  Count.unified_choose_le hK hΔ hω hm hmN
+
+/-- **Exponential count.** Under the hypotheses of `unified_choose_le`, for `N = r + 2 ≥ 3`:
+`(2Δ+3)^N ≤ (N+1) (2Δ+2)^N (|K₁| + |K₂|)`. -/
+theorem unified_exponential (r : ℕ) (hr : 1 ≤ r) {K₁ : Finset (FaceKey r)}
+    {K₂ : Finset (Trees.TreeFace (r + 1 + 1))} (hK : Trees.IsMixedExpansion r K₁ K₂) {Δ : ℕ}
+    (hΔ : 2 ≤ Δ) (hω : ∀ F ∈ K₂, Count.OmegaLe F.descr Δ) :
+    (2 * Δ + 3) ^ (r + 1 + 1) ≤
+      (r + 1 + 1 + 1) * (2 * Δ + 2) ^ (r + 1 + 1) * (K₁.card + K₂.card) :=
+  Count.unified_exponential hr hK hΔ hω
+
+/-- **Exponential count for caterpillars, binomial form.** Every caterpillar expansion `K`
+of `max_N`, `N = r + 2`, satisfies `C(N, m) ≤ 6^m |K|` for every `3 ≤ m ≤ N`. -/
 theorem caterpillar_expansion_choose_le (r : ℕ) {K : Finset (FaceKey r)}
-    (hK : IsCaterpillarExpansion r K) {k : ℕ} (hk : 3 ≤ k) (hkN : k ≤ r + 1 + 1) :
-    (r + 1 + 1).choose k ≤ 6 ^ k * K.card := by
-  have h : Simplify.IsBrunckExpansion r K ∅ := by
-    obtain ⟨hsub, d, a, hexp⟩ := hK.unfold
-    refine ⟨hsub, by simp, d, 0, a, ?_⟩
-    intro x
-    simpa [caterpillarFunction, auxiliary, auxiliaryFunction] using hexp x
-  simpa using Simplify.brunck_expansion_choose_le h hk hkN
+    (hK : IsCaterpillarExpansion r K) {m : ℕ} (hm : 3 ≤ m) (hmN : m ≤ r + 1 + 1) :
+    (r + 1 + 1).choose m ≤ 6 ^ m * K.card := by
+  simpa using unified_choose_le r (Audit.isMixedExpansion_of_isCaterpillarExpansion r hK)
+    le_rfl (fun F hF => absurd hF (Finset.not_mem_empty F)) hm hmN
 
-
-/-- **Exponential count.** Every caterpillar expansion `K` of `max_N`,
+/-- **Exponential count for caterpillars.** Every caterpillar expansion `K` of `max_N`,
 `N = r + 2 ≥ 3`, satisfies `7^N ≤ (N + 1) 6^N |K|`, i.e. `|K| ≥ (7/6)^N/(N+1)`. -/
 theorem caterpillar_expansion_exponential (r : ℕ) (hr : 1 ≤ r) {K : Finset (FaceKey r)}
     (hK : IsCaterpillarExpansion r K) :
     7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * K.card := by
-  exact Simplify.seven_pow_le_of_choose_le' (by omega)
-    (fun _k hk hkN => caterpillar_expansion_choose_le r hK hk hkN)
+  simpa using unified_exponential r hr (Audit.isMixedExpansion_of_isCaterpillarExpansion r hK)
+    le_rfl (fun F hF => absurd hF (Finset.not_mem_empty F))
 
+/-- **The building blocks of Brunck et al.** Every expansion of `max_N` by caterpillar
+functions (`K₁`) and faces of the rooted stars (`K₂`), `N = r + 2 ≥ 3`, satisfies
+`7^N ≤ (N+1) 6^N (|K₁| + |K₂|)`. -/
+theorem brunck_expansion_exponential (r : ℕ) (hr : 1 ≤ r) {K₁ : Finset (FaceKey r)}
+    {K₂ : Finset (Trees.TreeFace (r + 1 + 1))} (hK : Count.IsBrunckExpansion r K₁ K₂) :
+    7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * (K₁.card + K₂.card) :=
+  Count.brunck_unified_exponential hr hK
+
+/-- **Bounded hinge degree.** If every tree unit of `K₂` has at most `Δ ≥ 2` hinge edges
+at each vertex: `(2Δ+3)^N ≤ (N+1) (2Δ+2)^N (|K₁| + |K₂|)` for `N = r + 2 ≥ 3`. -/
+theorem hingeDeg_expansion_exponential (r : ℕ) (hr : 1 ≤ r) {K₁ : Finset (FaceKey r)}
+    {K₂ : Finset (Trees.TreeFace (r + 1 + 1))} (hK : Trees.IsMixedExpansion r K₁ K₂) {Δ : ℕ}
+    (hΔ : 2 ≤ Δ) (hdeg : ∀ F ∈ K₂, ∀ u, F.hingeDeg u ≤ Δ) :
+    (2 * Δ + 3) ^ (r + 1 + 1) ≤
+      (r + 1 + 1 + 1) * (2 * Δ + 2) ^ (r + 1 + 1) * (K₁.card + K₂.card) :=
+  Count.hingeDeg_unified_exponential hr hK hΔ hdeg
+
+/-- **Few out-leaves.** If every tree unit of `K₂` has at most `s ≥ 1` out-leaves at each
+vertex: `(2s+5)^N ≤ (N+1) (2s+4)^N (|K₁| + |K₂|)` for `N = r + 2 ≥ 3`. -/
+theorem outLeaf_expansion_exponential (r : ℕ) (hr : 1 ≤ r) {K₁ : Finset (FaceKey r)}
+    {K₂ : Finset (Trees.TreeFace (r + 1 + 1))} (hK : Trees.IsMixedExpansion r K₁ K₂) {s : ℕ}
+    (hs : 1 ≤ s) (hout : ∀ F ∈ K₂, Count.OutLeafBound F.descr s) :
+    (2 * s + 5) ^ (r + 1 + 1) ≤
+      (r + 1 + 1 + 1) * (2 * s + 4) ^ (r + 1 + 1) * (K₁.card + K₂.card) :=
+  Count.outLeaf_unified_exponential hr hK hs hout
 
 /-- **Quadratic count.** Every caterpillar expansion `K` of `max_N`,
 `N = r + 2 ≥ 3`, satisfies `N(N - 1) ≤ 6 |K|`. -/
@@ -116,7 +191,7 @@ theorem caterpillarDim_eq (r : ℕ) : caterpillarDim r = quotientDim r := by
 `dim(V_N / A_N) ≥ (N - 2)!`. -/
 theorem caterpillarDim_ge (r : ℕ) (hr : 1 ≤ r) : r.factorial ≤ caterpillarDim r := by
   rw [caterpillarDim_eq]
-  exact Simplify.factorial_le_quotientDim r hr
+  exact Dimension.factorial_le_quotientDim r hr
 
 /-! ## Relation to the construction of Brunck et al.
 
@@ -193,13 +268,13 @@ theorem bhrsy_word_mem {r : ℕ} (σ : Equiv.Perm (Fin (r + 1 + 1))) {S : Finset
 /-- **(d) `M = ∅`: rooted stars.** `h_{pyr_{e_v}(B_{v,π,∅})}(y) = y_v + S_{v,π₁}(y)`. -/
 theorem bhrsy_support_empty {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
     (y : Point (r + 1 + 1)) :
-    BHRSY.paramidSupport v π ∅ y = y v + Trees.rootedStar v (π.pos 1) y :=
+    BHRSY.paramidSupport v π ∅ y = y v + BHRSY.rootedStar v (π.pos 1) y :=
   BHRSY.paramidSupport_empty π y
 
 /-- **(d) Rooted stars are not caterpillar functions** (`N = r + 2`, `a ≠ c`). -/
 theorem rootedStar_ne_caterpillarFunction {r : ℕ} {a c : Fin (r + 1 + 1)} (hac : a ≠ c)
     {k : FaceKey r} (hk : k ∈ caterpillarDescriptions r) :
-    Trees.rootedStar a c ≠ caterpillarFunction k :=
+    BHRSY.rootedStar a c ≠ caterpillarFunction k :=
   BHRSY.rootedStar_ne_caterpillarFunction hac hk
 
 /-- **(d)** For `M = ∅` the support function is not `y_v` plus any caterpillar function. -/
@@ -215,7 +290,7 @@ theorem bhrsy_family {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1
     {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1)) :
     (M.Nonempty ∧ ∃ k ∈ caterpillarDescriptions r,
         ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y) ∨
-      (M = ∅ ∧ (∀ y, BHRSY.paramidSupport v π M y = y v + Trees.rootedStar v (π.pos 1) y) ∧
+      (M = ∅ ∧ (∀ y, BHRSY.paramidSupport v π M y = y v + BHRSY.rootedStar v (π.pos 1) y) ∧
         ¬ ∃ k ∈ caterpillarDescriptions r,
           ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y) := by
   rcases M.eq_empty_or_nonempty with h | h

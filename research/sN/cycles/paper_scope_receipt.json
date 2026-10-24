@@ -1,0 +1,12 @@
+{
+  "status": "PAPER_BUILD_AND_LINK_CHECK_PASS",
+  "pages": 36,
+  "source_links": 175,
+  "global_Lean_verification": "Concurrent cleanup; no new global certificate claimed by this continuation",
+  "sha256": {
+    "paper/main.tex": "9a24eab2d56e1b6012dc8e63916e962365f17e00bf7a4833f4353c308386ee3a",
+    "paper/main.pdf": "3a902ca7e6f3cb3b80e2bd30d8e45d836f94d5af0afb79863f3124a413ff989d",
+    "paper/lean-map.json": "9df0d0fddb66f4c2d5f5d447e53dad3a188478bef835c4ff1a21e9e16f36a23d",
+    "paper/lean-links.json": "c15ccbced69cfd06d2c23e71278dc75d58ee50ad624d017d1e2e23049b63b2b1"
+  }
+}

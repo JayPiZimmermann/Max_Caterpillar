@@ -1,0 +1,9 @@
+N 4 cover stars 4 rows(T) 5 rank 3 rank+target 4 NOT in span
+N 4 pm1 stars 32 rows(T) 5 rank 4 rank+target 5 NOT in span
+N 4 pm1_0 stars 108 rows(T) 5 rank 5 rank+target 5 IN SPAN
+N 5 cover stars 6 rows(T) 16 rank 6 rank+target 7 NOT in span
+N 5 pm1 stars 80 rows(T) 16 rank 11 rank+target 12 NOT in span
+N 5 pm1_0 stars 405 rows(T) 16 rank 16 rank+target 16 IN SPAN
+N 6 cover stars 12 rows(T) 42 rank 11 rank+target 12 NOT in span
+N 6 pm1 stars 192 rows(T) 42 rank 26 rank+target 27 NOT in span
+N 6 pm1_0 stars 1458 rows(T) 42 rank 42 rank+target 42 IN SPAN

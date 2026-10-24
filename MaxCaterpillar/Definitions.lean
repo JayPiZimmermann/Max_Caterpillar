@@ -41,12 +41,12 @@ noncomputable def Network.eval {N h₁ h₂ : ℕ} (net : Network N h₁ h₂)
     ((∑ j, net.W₂ k j * relu ((∑ i, net.W₁ j i * x i) + net.b₁ j)) + net.b₂ k))
     + net.b₃
 
-/-- Version 2 refinement: all weight entries `W₁`, `W₂`, `w₃` are rational. -/
+/-- All weight entries `W₁`, `W₂`, `w₃` are rational. -/
 def Network.HasRationalWeights {N h₁ h₂ : ℕ} (net : Network N h₁ h₂) : Prop :=
   (∀ j i, ∃ q : ℚ, (q : ℝ) = net.W₁ j i) ∧ (∀ k j, ∃ q : ℚ, (q : ℝ) = net.W₂ k j) ∧
     ∀ k, ∃ q : ℚ, (q : ℝ) = net.w₃ k
 
-/-- Version 2 refinement: all three bias arrays vanish. -/
+/-- All three bias arrays vanish. -/
 def Network.HasZeroBiases {N h₁ h₂ : ℕ} (net : Network N h₁ h₂) : Prop :=
   net.b₁ = 0 ∧ net.b₂ = 0 ∧ net.b₃ = 0
 

@@ -1,0 +1,75 @@
+@orient_eq_of_upCount_eq : ∀ {V : Type u_2} {β : Type u_1} [inst : Fintype V] [inst_1 : LinearOrder β]
+  (parent : V → Option V) (μ : V → ℕ),
+  (∀ (v p : V), parent v = some p → μ v < μ p) →
+    ∀ (r₁ r₂ : V → β) (S : Set V),
+      (∀ (v p : V), parent v = some p → r₁ v ≠ r₁ p) →
+        (∀ (v p : V), parent v = some p → r₂ v ≠ r₂ p) →
+          (∀ w ∈ S, upCount parent r₁ w = upCount parent r₂ w) →
+            ∀ (v p : V), parent v = some p → (∀ (d : V), InSubtree parent d v → d ∈ S) → (r₁ v < r₁ p ↔ r₂ v < r₂ p)
+@orient_eq_of_upCount_eq_all : ∀ {V : Type u_2} {β : Type u_1} [inst : Fintype V] [inst_1 : LinearOrder β]
+  (parent : V → Option V) (μ : V → ℕ),
+  (∀ (v p : V), parent v = some p → μ v < μ p) →
+    ∀ (r₁ r₂ : V → β),
+      (∀ (v p : V), parent v = some p → r₁ v ≠ r₁ p) →
+        (∀ (v p : V), parent v = some p → r₂ v ≠ r₂ p) →
+          (∀ (w : V), upCount parent r₁ w = upCount parent r₂ w) →
+            ∀ (v p : V), parent v = some p → (r₁ v < r₁ p ↔ r₂ v < r₂ p)
+@card_chainsOrdered_mul_le : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {a b : ℕ} (x : Fin a ↪ V)
+  (y : Fin b ↪ V),
+  Disjoint (Set.range ⇑x) (Set.range ⇑y) →
+    ∀ [inst_2 : DecidablePred (ChainsOrdered x y)],
+      Finset.card (Finset.filter (ChainsOrdered x y) Finset.univ) * Nat.factorial a * Nat.factorial b ≤
+        Nat.factorial (Fintype.card V)
+@card_chainsOrdered_div_le : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {a b : ℕ} (x : Fin a ↪ V)
+  (y : Fin b ↪ V),
+  Disjoint (Set.range ⇑x) (Set.range ⇑y) →
+    ∀ [inst_2 : DecidablePred (ChainsOrdered x y)],
+      ↑(Finset.card (Finset.filter (ChainsOrdered x y) Finset.univ)) / ↑(Nat.factorial (Fintype.card V)) ≤
+        1 / (↑(Nat.factorial a) * ↑(Nat.factorial b))
+stretchEdgeSum_le_two : ∀ (k : ℕ) (c : ℕ → ℕ), stretchEdgeSum k c ≤ 2
+stretchVertexSum_le_two : ∀ (k : ℕ) (c : ℕ → ℕ), stretchVertexSum k c ≤ 2
+sum_leafWeight : ∀ (k : ℕ),
+  1 ≤ k → (Finset.sum (Finset.Icc 1 k) fun j => leafWeight k j) = 2 ^ (k - 1) / ↑(Nat.factorial (k - 1))
+sum_spineWeight : ∀ (k : ℕ),
+  2 ≤ k → (Finset.sum (Finset.Ico 1 k) fun j => spineWeight k j) = 2 ^ (k - 2) / ↑(Nat.factorial (k - 2))
+core_le_two : ∀ (n : ℕ) (b z : ℕ → Prop) [inst : DecidablePred b] [inst_1 : DecidablePred z],
+  (∀ (i : ℕ), b i → ¬z i) →
+    ((Finset.sum (Finset.range (n + 1)) fun i =>
+          if b i then 1 / (↑(Nat.factorial i) * ↑(Nat.factorial (n - i))) else 0) +
+        Finset.sum (Finset.range n) fun i =>
+          if z i ∧ z (i + 1) then 1 / (↑(Nat.factorial i) * ↑(Nat.factorial (n - 1 - i))) else 0) ≤
+      2
+@pathUp_eq_zero_iff : ∀ {β : Type u_1} [inst : LinearOrder β] {L : ℕ} {r : ℕ → β},
+  PathSep L r → ∀ l ≤ L, pathUp L r l = 0 ↔ (0 < l → r (l - 1) < r l) ∧ (l < L → r (l + 1) < r l)
+@pathUp_eq_two_iff : ∀ {β : Type u_1} [inst : LinearOrder β] {L : ℕ} {r : ℕ → β} (l : ℕ),
+  pathUp L r l = 2 ↔ 0 < l ∧ l < L ∧ r l < r (l - 1) ∧ r l < r (l + 1)
+@pathUp_eq_one_iff : ∀ {β : Type u_1} [inst : LinearOrder β] {L : ℕ} {r : ℕ → β},
+  PathSep L r →
+    ∀ (l : ℕ),
+      0 < l → l < L → (pathUp L r l = 1 ↔ r (l - 1) < r l ∧ r l < r (l + 1) ∨ r (l + 1) < r l ∧ r l < r (l - 1))
+@exists_bottom_between_tops : ∀ {β : Type u_1} [inst : LinearOrder β] {L : ℕ} {r : ℕ → β},
+  PathSep L r → ∀ {i j : ℕ}, i < j → j ≤ L → pathUp L r i = 0 → pathUp L r j = 0 → ∃ l, i < l ∧ l < j ∧ pathUp L r l = 2
+@exists_top_between_bottoms : ∀ {β : Type u_1} [inst : LinearOrder β] {L : ℕ} {r : ℕ → β},
+  PathSep L r → ∀ {i j : ℕ}, i < j → pathUp L r i = 2 → pathUp L r j = 2 → ∃ l, i < l ∧ l < j ∧ pathUp L r l = 0
+@monotone_of_run : ∀ {β : Type u_1} [inst : LinearOrder β] {L : ℕ} {r : ℕ → β},
+  PathSep L r →
+    ∀ {i j : ℕ},
+      j ≤ L →
+        (∀ (l : ℕ), i < l → l < j → pathUp L r l = 1) → StrictMonoOn r (Set.Icc i j) ∨ StrictAntiOn r (Set.Icc i j)
+@top_unique_of_run : ∀ {β : Type u_1} [inst : LinearOrder β] {L : ℕ} {r : ℕ → β},
+  PathSep L r →
+    ∀ {i j : ℕ},
+      j ≤ L →
+        (∀ (l : ℕ), i < l → l < j → pathUp L r l = 1) →
+          ∀ {a b : ℕ}, a ∈ Set.Icc i j → b ∈ Set.Icc i j → pathUp L r a = 0 → pathUp L r b = 0 → a = b
+'MaxCaterpillar.CountCubic.orient_eq_of_upCount_eq_all' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.orient_eq_of_upCount_eq' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.card_chainsOrdered_div_le' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.stretchEdgeSum_le_two' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.stretchVertexSum_le_two' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.sum_spineWeight' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.top_unique_of_run' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.monotone_of_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.CountCubic.exists_top_between_bottoms' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.CountCubic.pathUp_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+research/sN/cubic-orders/Check.lean:31:62: error: unknown constant 'Finset.sum_Icc_succ_top'

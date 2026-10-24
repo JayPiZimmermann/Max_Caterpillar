@@ -1,0 +1,2768 @@
+     SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU
+                         NETWORKS
+
+
+                                                    SHUNQI LU
+
+
+          Abstract. We determine the minimum first hidden width needed to approximate the
+          coordinate maximum by a fixed two-hidden-layer ReLU architecture with unrestricted
+          parameters in 𝐿2 . In dimension 𝑑 ≥ 14, the threshold is 𝜅𝑑 = 𝑑2 − ⌊𝑑 2 /4⌋. The same
+                                                                                 
+
+          value holds for ordered 𝐿-statistics whose weights have a nonzero discrete second difference.
+          A fan-localization theorem assembles cellwise ridge formulas across a finite hyperplane
+          arrangement, using a fixed finite second layer and output map. A complementary pair-
+          transversal bound turns stable triple junctions into first-layer lower bounds. Its quantitative
+          form is uniform over all weights, biases, and coefficients. The threshold proof is analytic
+          for 𝑑 ≥ 40. Smaller dimensions use stored tournament masks for block sizes 7 ≤ 𝑛 ≤ 13
+          and exact integer existence bounds for 14 ≤ 𝑛 ≤ 19. For the maximum, the critical
+          construction has second width exp(𝑂 (𝑑 log 𝑑) ) and converges in every finite 𝐿 𝑝 , with an
+          explicit parameter–error rate. The common closure width is asymptotic to 𝑑 2 /4, whereas
+          exact realization requires first width at least (1/2 − 𝑜 (1) ) 𝑑 2 . At the critical first width,
+          the constructed architecture therefore has zero approximation-error infimum with no finite-
+          parameter minimizer.
+
+
+
+
+                                              1. Introduction
+   A fixed neural-network architecture can approximate a function arbitrarily well without
+representing it at any finite parameter vector. Its realization set need not be closed [22, 14].
+We ask how this distinction affects the hidden widths needed to approximate a continuous
+piecewise-linear function. Throughout the approximation limit, both widths stay fixed;
+only the parameters vary.
+   Our principal example is the coordinate maximum
+                               MAX𝑑 (𝑥) = max 𝑥𝑖 ,                  𝑥 ∈ [0, 1] 𝑑 .
+                                                    1≤𝑖 ≤𝑑
+
+Let 𝑟 cl (𝑑) be the minimum first hidden width for which some fixed finite second width per-
+mits convergence to MAX𝑑 in 𝐿 2 ( [0, 1] 𝑑 ). For standard two-hidden-layer ReLU networks,
+without affine input skips, we prove
+                                                 2
+                                               𝑑      𝑑
+                      𝑟 cl (𝑑) = 𝜅 𝑑 , 𝜅𝑑 =       −       ,     𝑑 ≥ 14.
+                                               2      4
+The proof is analytic for 𝑑 ≥ 40. For smaller dimensions, the balanced blocks use stored
+tournament masks at sizes 7 ≤ 𝑛 ≤ 13 and exact integer existence bounds at sizes 14 ≤ 𝑛 ≤
+19, together with the analytic size-20 block when 𝑑 = 39. The constructed approximating
+sequence converges in every finite 𝐿 𝑝 ; the distinction between this upper bound and an 𝐿 𝑝
+threshold is made in remark 2.7. Below the 𝐿 2 threshold, each fixed finite second width
+𝑚 2 satisfies the parameter-uniform bound
+                           ∥𝑁 − MAX𝑑 ∥ 2𝐿 ( [0,1] 𝑑 ) ≥ 𝑐 0 𝑑 −13 (𝑚 2 + 1) −10 .
+                                                2
+
+
+
+    2020 Mathematics Subject Classification. Primary 68T07; Secondary 41A46, 41A63, 52B11.
+    Key words and phrases. ReLU networks, fixed-architecture closure, nonlinear approximation, ordered aggre-
+gation, width complexity, polyhedral fans.
+                                                             1
+2                                                  SHUNQI LU
+
+
+This lower bound also holds when the second layer and output have affine access to the
+input.
+   Two geometric results underlie the threshold. A bounded fan-localization theorem as-
+sembles cellwise ridge formulas on a finite hyperplane arrangement. If every activation cell
+has at least 𝑑 active rows, a common perturbation makes the local coordinates recoverable;
+capped Möbius sums then select the correct formula. The complementary lower bound
+uses stable triple junctions of the target. Each first-layer row selects a coordinate pair. A
+junction on a triple missed by all selected pairs reduces to shallow approximation of an
+equilateral three-ray fan. A compact tensor probe gives an error bound uniform over the
+shallow network’s directions, biases, and coefficients. Integrating this local obstruction
+over a family of transverse disks yields the global lower bound. For exact representation, a
+separate normalization removes affine channels from the nonlinear count, after which a
+support graph charges missing coordinate pairs to the remaining neurons. This last step
+gives the larger width required for exact equality. Figure 1 shows how these three routes
+combine.
+
+           Upper bound                             Lower bound                                  Exact width
+
+           Bounded fan                           Fixed equilateral                               Paired-core
+           localization                            three-ray fan                                  reduction
+
+
+
+        Balanced tournament                      Triple-junction                              Missing-pair graph
+          blocks: 𝜅𝑑 rows                       pair transversal 𝜏2                           and claw charging
+
+
+
+                                                 Mantel: 𝜏2 = 𝜅𝑑
+           𝑟cl (𝑑) ≤ 𝜅𝑑                                                                         𝑟ex (𝑑) ≥ ℓ𝑑
+                                                  𝑟cl (𝑑) ≥ 𝜅𝑑
+
+
+
+
+                                 𝑟cl (𝑑) = 𝜅𝑑 < ℓ𝑑 ≤ 𝑟ex (𝑑)             for 𝑑 ≥ 14
+                          zero infimal risk at the critical width, with no finite minimizer
+
+
+
+         Figure 1. The three routes of the argument and the statement they
+         combine into. The left column produces the approximating sequence, the
+         middle column the parameter-uniform obstruction, and the right column
+         the larger width needed for exact equality. Here ℓ𝑑 = 𝑑2 − ⌊4𝑑/3⌋.
+
+   The maximum is affine on each cell of the braid arrangement {𝑥𝑖 = 𝑥 𝑗 }𝑖< 𝑗 . Its nonsmooth
+set is the smaller subcomplex
+                               Ø
+                                  {𝑥 : 𝑥𝑖 = 𝑥 𝑗 = max 𝑥 𝑘 }.
+                                                                     𝑘
+                                      𝑖< 𝑗
+
+Balanced tournament blocks supply the upper construction, while Mantel’s theorem supplies
+a missed triple whenever the first width is below 𝜅 𝑑 . The same argument applies to ordered
+statistics
+                                   𝑑
+                                  ∑︁
+                      𝐿 𝛼 (𝑥) =      𝛼𝑗𝑥( 𝑗),      𝑥 (1) ≥ · · · ≥ 𝑥 (𝑑) .
+                                        𝑗=1
+If some discrete second difference of 𝛼 is nonzero, the first-layer closure threshold is again
+𝜅 𝑑 for 𝑑 ≥ 14. This includes individual order statistics, proper contiguous trimmed sums,
+and top-𝑘 sums. The last are support functions of the hypersimplices Δ(𝑑, 𝑘). Arithmetic
+weight sequences instead give affine functions plus pairwise absolute-value ridges.
+                                            SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                                        3
+
+
+                                      (a)                                                                       (b)
+                                                                                                          100
+                                                                                 1
+                               0.50                                              2
+ Hidden width divided by 𝑑 2
+
+
+                                                                                                           75
+
+
+
+
+                                                                                     First hidden width
+                               0.40
+                                                     𝑟cl (𝑑) = 𝜅𝑑
+                                                     𝜅𝑑 ≤ 𝑤cl (𝑑) ≤ 𝜅𝑑 + 𝑑 − 1                             50
+                                                     ℓ𝑑 ≤ 𝑟ex (𝑑)
+                               0.30
+
+                                                                                 1                         25                       𝑟cl = 𝜅𝑑
+                               0.25                                              4
+                                                                                                                                    open window
+                               0.20                                                                                                 𝑤cl ≤ 6, 10
+                                                                                                           0
+                                        20          40              60      80                                    5   10       15         20
+                                                   Dimension 𝑑                                                        Dimension 𝑑
+
+
+                                      Figure 2. Width bounds for the maximum. (a) Normalized widths for
+                                      14 ≤ 𝑑 ≤ 80. Solid: 𝑟 cl (𝑑) = 𝜅 𝑑 . Shaded band:           𝜅 𝑑 ≤ 𝑤cl (𝑑) ≤
+                                      𝜅 𝑑 + 𝑑 − 1. Dashed: the necessary bound ℓ𝑑 = 𝑑2 − ⌊4𝑑/3⌋ ≤ 𝑟 ex (𝑑).
+                                                                                              
+                                      Dotted horizontal lines mark the limiting scales 1/4 and 1/2. (b) The first
+                                      hidden width itself for 5 ≤ 𝑑 ≤ 20. Vertical bars and open circles give
+                                      the interval max{𝑑, 𝜅 𝑑 } ≤ 𝑟 cl (𝑑) ≤ 𝜅 𝑑 + 𝑑 − 1 left open for 5 ≤ 𝑑 ≤ 13;
+                                      filled circles give the determined value 𝜅 𝑑 for 𝑑 ≥ 14. The two squares
+                                      are the improved common-width bounds 𝑤cl (5) ≤ 6 and 𝑤cl (6) ≤ 10.
+
+
+   The common closure width 𝑤cl (𝑑) bounds both hidden layers. A separate construction
+gives
+                 max{𝑑, 𝜅 𝑑 } ≤ 𝑤cl (𝑑) ≤ 𝜅 𝑑 + 𝑑 − 1    (𝑑 ≥ 5),
+so 𝑤cl (𝑑)/𝑑 2 → 1/4. In contrast, every exact finite realization requires
+                                         4𝑑        1
+                                                        
+                                   𝑑
+                          𝑚1 ≥        −       =      − 𝑜(1) 𝑑 2 .
+                                   2      3        2
+This is a necessary bound; general exact realizability remains open. For 𝑑 ≥ 14, it exceeds
+the closure threshold. The critical architecture therefore has a zero, unattained squared-loss
+infimum under the uniform distribution on the cube. Figure 2 compares the width bounds.
+    The closest approximation results are due to Safran, Reichman, and Valiant [30], whose
+lower-bound proof uses top-two supports, Mantel’s theorem, and coordinate freezing under
+parameter bounds. We remove those bounds and determine the first-layer closure threshold.
+Petersen, Raslan, and Voigtlaender study nonclosed realization sets [22]; Dutta, Safran,
+and Valiant study approximation of rank statistics [7]. Recent work on exact maximum
+representations addresses different width and depth resources [28, 1, 27, 38]. Section 8
+gives the quantitative comparisons.
+    The decoder is the second hidden layer together with the affine output map; its width
+is the second hidden width. At the critical first width, its size bound is exp(𝑂 (𝑑 log 𝑑)).
+At 𝑑 = 14, the certificate gives widths (42, 16,355,852,100); the result does not provide
+an efficient decoder. Decoder size, conditioning, and the sharp closure threshold for
+5 ≤ 𝑑 ≤ 13 remain open within the interval max{𝑑, 𝜅 𝑑 } ≤ 𝑟 cl (𝑑) ≤ 𝜅 𝑑 + 𝑑 − 1, with the
+smaller upper bounds 6 and 10 in dimensions five and six. The cases 𝑑 = 3, 4 are settled
+by Proposition 2.1. The appendices contain the tensor proof, finite certificates, small-width
+constructions, and reproducibility details.
+4                                            SHUNQI LU
+
+
+                                         2. Main results
+   Write 𝜌(𝑡) = max{𝑡, 0}, applied coordinatewise. A standard two-hidden-layer ReLU
+network with input dimension 𝑑 and hidden widths (𝑚 1 , 𝑚 2 ) has the form
+(2.1)                        𝑁 (𝑥) = 𝑐⊤ 𝜌(𝐵𝜌( 𝐴𝑥 + 𝑎) + 𝑏) + 𝑐 0 ,
+where 𝐴 ∈ R𝑚1 ×𝑑 and 𝐵 ∈ R𝑚2 ×𝑚1 . There are no affine input skips into the second hidden
+layer or the output. We denote the resulting realization class by N𝑚(𝑑)1 ,𝑚2
+                                                                             . We call the second
+hidden layer together with the affine output map the decoder; its width is 𝑚 2 . Unless stated
+otherwise, exact equality and function-space closure refer to the restriction to [0, 1] 𝑑 . For
+the displayed realization, let ∥𝜃 (𝑁) ∥ ∞ be the largest absolute entry among 𝐴, 𝑎, 𝐵, 𝑏, 𝑐, 𝑐 0 ,
+and write N𝑚(𝑑)1 ,𝑚2
+                     (𝑅) for networks admitting such a realization with ∥𝜃 (𝑁) ∥ ∞ ≤ 𝑅. This
+is an existence convention: ReLU rescaling means that a function need not have a unique
+parameter norm.
+    The closure in this paper is the function-space closure of one fixed architecture. The
+widths remain fixed while the parameters may diverge. Whenever we use the phrase
+population risk, it means squared loss under the uniform probability distribution on [0, 1] 𝑑 ;
+because the cube has unit volume, this is exactly the squared 𝐿 2 ( [0, 1] 𝑑 ) norm used below.
+Define
+                                (                                             𝑑
+                                                                                )
+                                                                        𝐿2 ( [0,1] )
+(2.2)           𝑟 cl (𝑑) = min 𝑚 1 : ∃𝑚 2 < ∞, MAX𝑑 ∈ N𝑚(𝑑)
+                                                         1 ,𝑚2
+                                                                                            ,
+                               (                                                        )
+                                                                       𝐿2 ( [0,1] 𝑑 )
+(2.3)          𝑤cl (𝑑) = min       max(𝑚 1 , 𝑚 2 ) : MAX𝑑 ∈ N𝑚(𝑑)
+                                                               1 ,𝑚2
+                                                                                            ,
+                              n                                o
+(2.4)           𝑟 ex (𝑑) = inf 𝑚 1 : ∃𝑚 2 < ∞, MAX𝑑 ∈ N𝑚(𝑑)
+                                                         1 ,𝑚2
+                                                                 .
+
+The value in Equation (2.4) is +∞ if exact finite representation does not exist. The quantity
+𝑟 cl permits an arbitrary finite second layer; 𝑤cl constrains both hidden widths by the same
+bound. For a general target 𝑓 ∈ 𝐿 2 ( [0, 1] 𝑑 ), we also write
+                                   (                                   𝑑
+                                                                         )
+                                                                    𝐿2 ( [0,1] )
+(2.5)              𝑟 cl(𝑑) ( 𝑓 ) = inf 𝑚 : ∃𝑊 < ∞,            (𝑑)
+                                                         𝑓 ∈ N𝑚,𝑊                   .
+
+We set the infimum of the empty set to +∞. Thus 𝑟 cl (𝑑) = 𝑟 cl(𝑑) (MAX𝑑 ).
+   For the lower bound it is useful to enlarge the model. Let
+                         
+                                  𝑊                   𝑟                        
+                                                                                
+                  (𝑑)
+                                  ∑︁                  ∑︁
+(2.6)                                                             ⊤
+                         
+                                                                              ª
+                                                                                
+                 S𝑟 ,𝑊 = ℓ0 (𝑥) +     𝑐 𝑠 𝜌 ­ℓ𝑠 (𝑥) +     𝐵𝑠 𝑗 𝜌(𝑤 𝑗 𝑥 + 𝑏 𝑗 ) ® ,
+                                            ©
+                                                                               
+                         
+                                 𝑠=1       «         𝑗=1                       
+                                                                               ¬
+where each ℓ𝑠 is affine. This class gives the second hidden layer and output free affine
+access to the input. A lower bound for S𝑟(𝑑),𝑊 therefore applies to the standard network with
+the same first width.
+
+2.1. Input dimension. For completeness, we give a proof of the input-dimension obstruc-
+tion for the maximum; see also [30].
+Proposition 2.1 (Input dimension). For every 𝑑 ≥ 1, the standard architecture satisfies
+𝑟 cl (𝑑) ≥ 𝑑. In particular,
+                        𝑟 cl (3) = 𝑟 ex (3) = 3,     𝑟 cl (4) = 𝑟 ex (4) = 4.
+                             (𝑑)
+Proof. Suppose that 𝑁 𝑛 ∈ N𝑚,𝑊    converges to MAX𝑑 in 𝐿 2 ( [0, 1] 𝑑 ), with 𝑚 < 𝑑. Choose
+a unit vector 𝑣𝑛 ∈ ker 𝐴𝑛 . After passing to a subsequence, 𝑣𝑛 → 𝑣 with ∥𝑣∥ 2 = 1. Since
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                      5
+
+
+𝑁 𝑛 (𝑥 + 𝑡𝑣𝑛 ) = 𝑁 𝑛 (𝑥), every 𝜑 ∈ 𝐶𝑐∞ ((0, 1) 𝑑 ) satisfies
+                                  ∫
+                                     𝑁 𝑛 (𝑥) 𝑣𝑛 · ∇𝜑(𝑥) 𝑑𝑥 = 0.
+
+Passing to the limit gives 𝜕𝑣 MAX𝑑 = 0 in distributions. On the nonempty open set where
+coordinate 𝑖 is the unique maximum, this derivative is the constant 𝑣𝑖 . Hence 𝑣𝑖 = 0 for
+every 𝑖, contradicting ∥𝑣∥ 2 = 1.
+   For 𝑑 = 3, use the first-layer outputs
+                    ℎ1 = 𝜌(𝑥1 − 𝑥2 ),              ℎ2 = 𝜌(𝑥2 ),       ℎ3 = 𝜌(𝑥3 )
+and output 𝜌(ℎ1 + ℎ2 − ℎ3 ) + 𝜌(ℎ3 ). This is a standard network of widths (3, 2) equal to
+MAX3 on the cube. For 𝑑 = 4, use
+             ℎ1 = 𝜌(𝑥1 − 𝑥2 ),        ℎ2 = 𝜌(𝑥2 ),       ℎ3 = 𝜌(𝑥3 − 𝑥 4 ),     ℎ4 = 𝜌(𝑥4 )
+and output 𝜌(ℎ1 + ℎ2 − ℎ3 − ℎ4 ) + 𝜌(ℎ3 + ℎ4 ). This gives an exact standard network of
+widths (4, 2). The lower bound and 𝑟 cl (𝑑) ≤ 𝑟 ex (𝑑) prove the equalities.         □
+
+2.2. The critical width. Let
+                                                    2
+                                                  𝑑   𝑑
+(2.7)                                     𝜅𝑑 =      −     .
+                                                  2    4
+For even 𝑑 = 2𝑛, this is 𝑛(𝑛 − 1); for odd 𝑑 = 2𝑛 + 1, it is 𝑛2 .
+
+2.3. Arrangement principles. We first state the two results that transfer beyond the braid
+arrangement. The first assembles local ridge formulas across the cells of a finite activation
+arrangement. Let 𝐾 ⊂ R𝑑 be compact, Lebesgue measurable, and of positive 𝑑-dimensional
+measure. Let ℓ1 , . . . , ℓ𝑚 be nonzero homogeneous linear forms. Away from their zero
+hyperplanes, define the nominal active pattern
+(2.8)                              𝑆(𝑥) = {𝑒 ∈ [𝑚] : ℓ𝑒 (𝑥) > 0}.
+Let Ω be the finite set of patterns attained on full-dimensional cells meeting 𝐾. Functions
+are Lebesgue measurable and identified up to equality almost everywhere on 𝐾.
+   A target 𝑓 has a finite ridge formula on 𝐾 for this arrangement if, for each 𝑆 ∈ Ω, there
+are affine forms 𝑝 𝑆,𝑟 and coefficients 𝑎 𝑆,𝑟 , 1 ≤ 𝑟 ≤ 𝑅𝑆 , such that
+                          𝑅𝑆
+                          ∑︁
+(2.9)           𝑓 (𝑥) =         𝑎 𝑆,𝑟 𝜌( 𝑝 𝑆,𝑟 (𝑥))     for a.e. 𝑥 ∈ 𝐾 with 𝑆(𝑥) = 𝑆.
+                          𝑟=1
+Piecewise-affine targets subordinate to the arrangement satisfy this condition because an
+affine form is the difference of two ReLUs. On the compact set 𝐾, the formulas define a
+bounded representative after assigning arbitrary bounded values on the arrangement walls.
+Hence such a target belongs to every finite 𝐿 𝑝 (𝐾).
+    For 𝑆 ∈ Ω, a set 𝐶𝑆 ⊆ 𝑆 is a downward teaching set if
+(2.10)                     𝐶𝑆 ⊆ 𝑆 ′ ⊆ 𝑆,         𝑆′ ∈ Ω       =⇒     𝑆 ′ = 𝑆.
+The choice 𝐶𝑆 = 𝑆 always works. The teaching set identifies the cell and need not coincide
+with the 𝑑-row subset used to recover affine coordinates.
+Theorem 2.2 (Bounded fan localization). Assume that
+(2.11)                                   |𝑆| ≥ 𝑑         (𝑆 ∈ Ω).
+If 𝑓 has a finite ridge formula on 𝐾 for the arrangement, then there is a finite 𝑀 such that
+                                             𝐿 𝑝 (𝐾 )
+                                     (𝑑)
+(2.12)                          𝑓 ∈ N𝑚,𝑀                   (1 ≤ 𝑝 < ∞).
+6                                                      SHUNQI LU
+
+
+One may take
+                                                        ∑︁
+(2.13)                                       𝑀=2               𝑅𝑆 2 |𝐶𝑆 | .
+                                                        𝑆 ∈Ω
+There are constants 𝑅0 , 𝐶 𝑝 < ∞, depending on the fixed instance, such that for every
+                                                        (𝑑)
+𝑅 ≥ 𝑅0 the same architecture contains a network 𝑁 𝑅 ∈ N𝑚,𝑀  (𝑅) satisfying
+(2.14)                                ∥𝑁 𝑅 − 𝑓 ∥ 𝐿𝑝 𝑝 (𝐾 ) ≤ 𝐶 𝑝 𝑅 −1/(𝑑+1) .
+
+    Here 𝐿 𝑝 (𝐾) uses 𝑑-dimensional Lebesgue measure restricted to 𝐾; no surface measure
+is implicit. The finite union of arrangement hyperplanes has zero 𝑑-dimensional measure.
+Section 3 proves the theorem and records a support-function application for a general finite
+point configuration.
+    The second principle extracts lower bounds from stable target junctions. Its transverse
+model is the equilateral three-ray fan. Let 𝑢 0 , 𝑢 1 , 𝑢 2 ∈ R2 be unit vectors separated by
+angles 2𝜋/3, and set
+(2.15)                                       𝐹△ (𝑦) = max 𝑢 ⊤𝑗 𝑦.
+                                                          𝑗=0,1,2
+                                                        (2)
+Figure 3 shows this model and its cell structure. Let R 𝑊   be the affine-plus-𝑊-ridge class
+                          
+                                        𝑊
+                                        ∑︁                     
+                                                               
+                                   ⊤               ⊤
+                          
+                                                              
+                                                               
+                            𝑎0 + 𝑎 𝑦 +      𝑐 𝑗 𝜌(𝑣 𝑗 𝑦 + 𝑏 𝑗 ) .
+                                                              
+                          
+                                       𝑗=1                    
+                                                               
+Theorem 2.3 (Fixed equilateral three-ray fan). There is an absolute constant 𝑐 △ > 0 such
+that
+                         ∫
+(2.16)              inf       |𝑔(𝑦) − 𝐹△ (𝑦)| 2 𝑑𝑦 ≥ 𝑐 △ (𝑊 + 1) −10 .
+                        𝑔∈ R 𝑊
+                                (2)
+                                      B2
+
+The directions, biases, and coefficients in 𝑔 are arbitrary real numbers.
+
+
+    (a)                                                           (b)
+                                                                                                𝑢0
+                                              crease
+                  level curve
+                                                                                         𝐶0
+
+
+                                                                                                             𝐶2
+
+
+                      vertex                                                   𝑢1                                 𝑢2
+                                                                                          𝐶1
+
+
+
+                graph of 𝐹4 over B2                                           cells 𝐶 𝑗 , creases (dashed), level sets
+
+
+
+          Figure 3. The transverse model 𝐹△ = max 𝑗 𝑢 ⊤𝑗 𝑦 of Equation (2.15).
+          (a) Its graph over the unit disk: three planar pieces meeting along the
+          creases, with the vertex at the origin, two level curves on the surface, and
+          dotted drop lines to the base. (b) The same function in the plane. The
+          three shaded cells are the regions where the corresponding 𝑢 𝑗 attains the
+          maximum, the dashed rays are the creases where two of them tie, and the
+          nested triangles are level sets. Theorem 2.3 bounds the distance from
+          𝐹△ to every affine-plus-𝑊-ridge function on this disk.
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                      7
+
+              [𝑞] 
+   For T ⊆     3 , define its pair-transversal number
+
+                                        [𝑞]
+                                                                           
+                                                          𝑇
+(2.17)         𝜏2 (T ) = min |𝐸 | : 𝐸 ⊆       ,       𝐸∩     ≠ ∅ for every 𝑇 ∈ T .
+                                         2                2
+Call a coordinate triple 𝑇 an 𝑠-stable triple junction of 𝑓 if there exist a product 𝑈 of
+positive-length intervals for the coordinates outside 𝑇, a positive-length interval 𝐼 ⊂ (0, 1),
+ℎ0 > 0, an isometry 𝑄 : R2 → 1⊥ ⊂ R3 , an orthogonal map 𝑅 on R2 , and 𝛾 ≠ 0 with the
+following property. For every 𝑧 ∈ 𝑈, 𝑎 ∈ 𝐼, 0 < ℎ ≤ ℎ0 , and 𝑦 ∈ B2 , the point determined
+by 𝑥𝑇 𝑐 = 𝑧 and 𝑥𝑇 = 𝑎1 + ℎ𝑄𝑦 lies in the cube and
+
+(2.18)        𝑓 (𝑧, 𝑎1 + ℎ𝑄𝑦) = 𝐴 𝑧,𝑎,ℎ (𝑦) + ℎ𝛾𝐹△ (𝑅𝑦),         𝐴 𝑧,𝑎,ℎ ∈ R 𝑠(2) .
+For 𝑇 𝑐 = ∅, the product 𝑈 is a singleton. Let J𝑠 ( 𝑓 ) be the set of 𝑠-stable triple junctions
+of 𝑓 .
+Proposition 2.4 (Triple-junction transversal obstruction). Let 𝑞 ≥ 3, 𝑠 ≥ 0 be an integer,
+and 𝑓 ∈ 𝐿 2 ( [0, 1] 𝑞 ). For every finite T ⊆ J𝑠 ( 𝑓 ),
+
+(2.19)                               𝑟 cl(𝑞) ( 𝑓 ) ≥ 𝜏2 (T ).
+The same lower bound holds for the enlarged architecture with affine input skips in Equa-
+tion (2.6). Since the ambient set of coordinate triples is finite, one may take T = J𝑠 ( 𝑓 ).
+   For the complete triple hypergraph, Mantel’s theorem gives
+                                                      2
+                        [𝑞]
+                         
+                                  𝑞                 𝑞     𝑞
+(2.20)             𝜏2         =     − ex(𝑞, 𝐾3 ) =     −      = 𝜅𝑞 .
+                         3        2                 2      4
+Section 4 proves the proposition. Section 5 shows that every non-arithmetic ordered 𝐿-
+statistic exposes the complete triple hypergraph. Theorem 2.3 also gives the following local
+exact-representation obstruction.
+Corollary 2.5 (Shallow MAX3 obstruction). No finite shallow ReLU network represents
+MAX3 exactly on R3 , or on a neighborhood of an interior diagonal point.
+Proof. Translate the diagonal point to the origin and restrict to the plane 1⊥ . After a fixed
+orthogonal
+        √︁ change of transverse coordinates, the restriction of MAX3 ,(2)  modulo an affine
+term, is 2/3 𝐹△ . A finite shallow network restricts to an element of R 𝑊     for some finite
+𝑊. Exact equality on a transverse disk would make the left-hand side of Equation (2.16)
+zero, contrary to Theorem 2.3.                                                               □
+
+2.4. Closure thresholds.
+Theorem 2.6 (First-layer closure threshold). For every 𝑑 ≥ 40,
+(2.21)                                   𝑟 cl (𝑑) = 𝜅 𝑑 .
+The same conclusion holds for every 𝑑 ≥ 14 using the stored tournament masks and exact
+integer existence bounds in Section 3.3. For the upper bound, one fixed standard architecture
+with first width 𝜅 𝑑 and a finite second width has a parameter sequence converging to MAX𝑑
+in 𝐿 𝑝 ( [0, 1] 𝑑 ) for every 1 ≤ 𝑝 < ∞.
+   The three proof methods differ only in how they obtain a finite tournament for each
+block: stored masks for 7 ≤ 𝑛 ≤ 13, exact integer existence bounds for 14 ≤ 𝑛 ≤ 19, and
+an analytic estimate for 𝑛 ≥ 20. The network construction and its limiting identities are the
+same in all three cases. At 𝑑 = 27 the blocks have sizes 13, 14, and at 𝑑 = 39 they have
+sizes 19, 20, so these dimensions combine adjacent methods.
+8                                            SHUNQI LU
+
+
+Remark 2.7 (Dependence on the approximation norm). All closure widths in this paper
+are defined using 𝐿 2 . On the unit-volume cube, ∥𝑔∥ 2 ≤ ∥𝑔∥ 𝑝 for 2 ≤ 𝑝 < ∞. Thus the 𝐿 2
+lower bounds, together with convergence of the constructed networks in every finite 𝐿 𝑝 ,
+also identify the first-layer threshold as 𝜅 𝑑 in every 𝐿 𝑝 with 2 ≤ 𝑝 < ∞, for 𝑑 ≥ 14. For
+1 ≤ 𝑝 < 2, the construction proves the upper bound 𝜅 𝑑 , but the three-ray fan lower bound
+proved here does not establish a matching 𝐿 𝑝 obstruction. The same distinction applies to
+the ordered statistics in Theorem 2.8.
+   The same threshold holds for ordered 𝐿-statistics. For 𝑥 ∈ R𝑞 , let 𝑥 (1) ≥ · · · ≥ 𝑥 (𝑞) be
+the decreasing rearrangement and define
+                                                   𝑞
+                                                  ∑︁
+(2.22)                                𝐿 𝛼 (𝑥) =          𝛼𝑗𝑥( 𝑗) .
+                                                   𝑗=1
+
+Theorem 2.8 (Ordered-aggregation closure threshold). Let 𝑞 ≥ 3 and 𝛼 ∈ R𝑞 . Suppose
+that for some 𝑟 ∈ {1, . . . , 𝑞 − 2},
+(2.23)                             𝛿𝑟 = 𝛼𝑟 − 2𝛼𝑟+1 + 𝛼𝑟+2 ≠ 0.
+                                                                                          (𝑞)
+There is an absolute constant 𝑐 ord > 0 such that, for every 𝑚 < 𝜅 𝑞 , finite 𝑊, and 𝑁 ∈ S𝑚,𝑊 ,
+(2.24)               ∥𝑁 − 𝐿 𝛼 ∥ 2𝐿2 ( [0,1] 𝑞 ) ≥ 𝑐 ord 𝛿𝑟2 4−𝑞 𝑞 −8 (𝑊 + 4) −10 .
+Parameter size, sign, bias, and bit complexity are unrestricted.
+   If 𝑞 ≥ 40, then the matching upper bound holds analytically and
+(2.25)                                   𝑟 cl(𝑞) (𝐿 𝛼 ) = 𝜅 𝑞 .
+The same equality holds for every 𝑞 ≥ 14 using the stored masks and exact integer existence
+bounds in Section 3.3. The approximating sequence converges in every finite 𝐿 𝑝 , with one
+fixed finite decoder width.
+Corollary 2.9 (Rank statistics). For 1 ≤ 𝑘 ≤ 𝑞 − 1, put
+                                                      𝑘
+                                                     ∑︁
+(2.26)                                 𝑇𝑞,𝑘 (𝑥) =           𝑥( 𝑗) .
+                                                      𝑗=1
+
+For every 𝑞 ≥ 14,
+(2.27)                                   𝑟 cl(𝑞) 𝑇𝑞,𝑘 = 𝜅 𝑞 .
+                                                     
+
+The same threshold holds for every individual order statistic and every proper trimmed
+sum 𝑏𝑗=𝑎 𝑥 ( 𝑗 ) , where 1 ≤ 𝑎 ≤ 𝑏 ≤ 𝑞 and (𝑎, 𝑏) ≠ (1, 𝑞). In even dimension this includes
+     Í
+each of the two middle order statistics 𝑥 (𝑞/2) and 𝑥 (𝑞/2+1) , as well as their arithmetic mean.
+In addition,
+(2.28)         𝑇𝑞,𝑘 = ℎΔ(𝑞,𝑘 ) ,       Δ(𝑞, 𝑘) = conv{1𝑆 : 𝑆 ⊆ [𝑞], |𝑆| = 𝑘 } ,
+so Equation (2.27) covers the support functions of all nontrivial hypersimplices. For
+2 ≤ 𝑘 ≤ 𝑞 − 2, these are nonsimplicial polytopes with 𝑞𝑘 vertices.
+   The construction also gives the following finite-parameter rate. Let
+                   &              𝑑−2 '
+                                 3
+(2.29)       𝑀𝑑 = 16| 𝐴|!|𝐵|!             ,     | 𝐴| = ⌈𝑑/2⌉, |𝐵| = ⌊𝑑/2⌋.
+                                 2
+
+Corollary 2.10 (Finite-parameter critical-width rate). For every 𝑑 ≥ 40, every 1 ≤ 𝑝 < ∞,
+and all sufficiently large 𝑅, there is an 𝑁 𝑅 ∈ N𝜅(𝑑)
+                                                   𝑑 ,𝑀𝑑
+                                                         (𝑅) such that
+
+(2.30)                  ∥𝑁 𝑅 − MAX𝑑 ∥ 𝐿𝑝 ( [0,1] 𝑑 ) ≤ 𝐶𝑑, 𝑝 𝑅 −1/(𝑑+1) .
+                                             𝑝
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                      9
+
+
+The same statement holds for 14 ≤ 𝑑 < 40 using the finite tournament inputs described
+above. In particular, the squared 𝐿 2 error is at most 𝐶𝑑,2 𝑅 −1/(𝑑+1) .
+   The constants may depend on the dimension. The descent-compressed decoder in
+Equation (2.29) is exp(𝑂 (𝑑 log 𝑑)), so no polynomial-size decoder is proved here. Hence
+Corollary 2.10 quantifies parameter escape in a fixed architecture. Efficient training and rate
+optimality remain open. The more general arrangement-level statement and proof appear
+in Section 3. Table 1 summarizes the three widths established in this section, including the
+two bounds stated next.
+
+                    Quantity      Lower bound    Upper bound      Range
+                    𝑟 cl (𝑑)      𝜅𝑑             𝜅𝑑               𝑑 ≥ 14
+                    𝑟 cl (𝑑)      max{𝑑, 𝜅 𝑑 }   𝜅𝑑 + 𝑑 − 1       5 ≤ 𝑑 ≤ 13
+                      (𝑑)
+                    𝑟 cl (𝐿 𝛼 )   𝜅𝑑             𝜅𝑑               𝑑 ≥ 14
+                    𝑤cl (𝑑)       max{𝑑, 𝜅 𝑑 }   𝜅𝑑 + 𝑑 − 1       𝑑≥5
+                                   𝑑
+                    𝑟 ex (𝑑)       2 − ⌊4𝑑/3⌋    —                𝑑≥4
+
+         Table 1. Width bounds for standard two-hidden-layer networks. The
+         ordered statistic has Δ2 𝛼 ≠ 0. The sharp closure upper bounds use stored
+         masks for block sizes 7 ≤ 𝑛 ≤ 13, exact integer existence bounds for
+         14 ≤ 𝑛 ≤ 19, and analytic estimates for 𝑛 ≥ 20. The remaining bounds
+         are explicit or analytic. At 𝑑 = 5, 6, the common upper bounds improve
+         to 6, 10, respectively, and also bound 𝑟 cl . The exact-width row gives a
+         necessary bound, without asserting existence.
+
+
+Theorem 2.11 (Quantitative subcritical obstruction). An absolute constant 𝑐 0 > 0 can be
+chosen so that the following holds. For every 𝑑 ≥ 3, every 𝑟 < 𝜅 𝑑 , every finite 𝑊, and
+every 𝑁 ∈ S𝑟(𝑑)
+             ,𝑊 ,
+
+(2.31)                 ∥𝑁 − MAX𝑑 ∥ 2𝐿 ( [0,1] 𝑑 ) ≥ 𝑐 0 𝑑 −13 (𝑊 + 1) −10 .
+                                        2
+
+No restriction is imposed on parameter norms, signs, biases, or bit complexity.
+   Together, Theorems 2.6 and 2.11 give Equation (2.21). They also give an inverse-
+polynomial lower bound when the second width is polynomial in 𝑑. If 𝑊 ≤ 𝑑 𝐶 with 𝐶 ≥ 0,
+then 𝑊 + 1 ≤ 2𝑑 𝐶 , so Equation (2.31) is at least 𝑐 1 𝑑 − (13+10𝐶 ) , where 𝑐 1 = 2−10 𝑐 0 .
+Theorem 2.12 (Common-width bound). For every 𝑑 ≥ 5,
+(2.32)                 max{𝑑, 𝜅 𝑑 } ≤ 𝑟 cl (𝑑) ≤ 𝑤cl (𝑑) ≤ 𝜅 𝑑 + 𝑑 − 1.
+Consequently,
+                                             𝑤cl (𝑑) 1
+(2.33)                                 lim          = .
+                                       𝑑→∞     𝑑2    4
+In dimension five, the explicit bound improves to 𝑤cl (5) ≤ 6; in dimension six, it improves
+to 𝑤cl (6) ≤ 10.
+   In particular, Equation (2.32) records the known interval for the unresolved dimensions
+5 ≤ 𝑑 ≤ 13. For 𝑑 = 5, the lower bound is 5, from Proposition 2.1, whereas 𝜅5 = 4; the
+explicit construction gives 5 ≤ 𝑟 cl (5) ≤ 𝑤cl (5) ≤ 6. For 𝑑 = 6, the corresponding interval
+is 6 ≤ 𝑟 cl (6) ≤ 𝑤cl (6) ≤ 10; the actual widths (8, 10) also give the sharper first-layer
+bound 𝑟 cl (6) ≤ 8.
+10                                             SHUNQI LU
+
+
+Theorem 2.13 (Exact-width bound). For every 𝑑 ≥ 4,
+
+                                                        4𝑑
+                                                      
+                                                    𝑑
+(2.34)                                  𝑟 ex (𝑑) ≥    −    .
+                                                    2    3
+
+We use 𝑟 ex (𝑑) = +∞ when no finite exact realization exists, so the inequality also covers
+that case.
+
+   For 𝑑 ≥ 14, Theorems 2.6 and 2.13 show that zero infimal risk at the critical first width
+is not attained by any finite parameter vector in a fixed architecture. They also give the
+asymptotic separation
+
+                                   1                                    1
+                                                                             
+(2.35)            𝑟 cl (𝑑) =         + 𝑜(1) 𝑑 2 ,      𝑟 ex (𝑑) ≥         − 𝑜(1) 𝑑 2 .
+                                   4                                    2
+
+The second relation is a necessary bound; general exact realizability is not established here.
+Table 1 collects the three widths.
+
+
+
+
+                                        3. Fan localization
+   This section proves Theorem 2.2 and applies it to tournament-oriented comparison
+arrangements. The latter application gives the upper half of Theorem 2.6.
+
+
+
+3.1. Localization. The theorem applies to general finite arrangements. For example, let
+𝑣1 , . . . , 𝑣𝑞 be pairwise distinct and take
+
+
+            𝑃 = conv{𝑣1 , . . . , 𝑣𝑞 } ⊂ R𝑑 ,        ℓ𝑖±𝑗 (𝑥) = ±(𝑣𝑖 − 𝑣 𝑗 ) ⊤ 𝑥    (𝑖 < 𝑗),
+
+
+include both oriented forms, and assume 𝑞2 ≥ 𝑑. Off the comparison walls, exactly one
+                                            
+
+orientation of each pair is active, so every cell has 𝑞2 active rows. Since the support
+                                                        
+function
+
+                                          ℎ 𝑃 (𝑥) = max 𝑣⊤𝑗 𝑥
+                                                    1≤ 𝑗 ≤𝑞
+
+
+is affine on each cell, Theorem 2.2 places ℎ 𝑃 , for every fixed compact    𝐾 ⊂ R𝑑 and
+1 ≤ 𝑝 < ∞, in the fixed-architecture 𝐿 𝑝 (𝐾) closure with first width 2 2 and some finite
+                                                                        𝑞
+
+decoder width. Thus the result assembles cellwise affine or finite-ridge rules on a finite
+activation arrangement. The coordinate simplex used later is one optimized instance.
+    The hypothesis uses the number of active rows; nominal independence is unneces-
+sary. The proof makes these forms simultaneously invertible by a common infinitesimal
+perturbation.
+    Figure 4 summarizes the construction. The first layer stores the critical comparison
+ridges and applies one common full-spark perturbation. Each activation cell then admits a
+left inverse; a bounded cap and downward Möbius sum retain its local ridge formula.
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                                             11
+
+
+  (a)                                   (b)                                                (c)
+                                                                                                             𝜌( 𝑝) 1𝑆
+         sweep 𝜃                                      ℓ𝑒 + 𝜂𝑞𝑒
+                                          𝜂𝑞𝑒                                                                𝜂 = 0.12
+                       𝐾
+                                                                                                             𝜂 = 0.03
+
+                                                                                 0.8
+
+
+
+
+                                                                           L 𝑆, 𝑝, 𝜂
+                   𝑆
+                                                               ℓ𝑒1 , ℓ𝑒2
+                                                                                 0.4
+
+                                                  det 𝐿 𝐼 = 0
+        𝑈𝜂                                    det(𝐿 𝐼 + 𝜂𝑄 𝐼 ) ≠ 0                     0
+                                                                                                 0    45      90
+                                                                                            sweep angle 𝜃 (degrees)
+
+
+          Figure 4. Fan localization, drawn in the plane. (a) Three walls of the
+          arrangement cut the compact set 𝐾 into cells. The shaded sector is one cell
+          𝑆; the shaded strips are the wall neighborhood 𝑈 𝜂 defined below, whose
+          measure is 𝑂 (𝜂). (b) The common tilt applied below: two selected rows
+          ℓ𝑒1 , ℓ𝑒2 that are parallel, hence useless for recovery, become independent
+          after adding 𝜂𝑞 𝑒 , so the corresponding minor is nonzero. The tilt is
+          exaggerated. (c) The Möbius localizer L 𝑆, 𝑝, 𝜂 constructed below, along
+          the circular sweep marked in panel (a), for two values of 𝜂. Outside the
+          shaded wall strips it already equals its limit 𝜌( 𝑝)1𝑆 .
+
+Proof of Theorem 2.2. We first perturb the shared first layer so that each cell can recover
+its local affine forms. We then use bounded caps and a Möbius sum to retain exactly the
+formula of that cell; a final wall-neighborhood estimate quantifies the resulting convergence.
+    Choose distinct rational numbers 𝑡1 , . . . , 𝑡 𝑚 , for instance 𝑡 𝑒 = 𝑒, and define the full-spark
+forms
+(3.1)                            𝑞 𝑒 (𝑥) = 𝑥1 + 𝑡 𝑒 𝑥 2 + · · · + 𝑡 𝑒𝑑−1 𝑥 𝑑 .
+For 𝜂 > 0, the first hidden layer consists of
+(3.2)                      ℎ𝑒, 𝜂 (𝑥) = 𝜌(ℓ𝑒 (𝑥) + 𝜂𝑞 𝑒 (𝑥)),               𝑒 ∈ [𝑚].
+   Fix 𝑆 ∈ Ω and select any 𝑑-element subset 𝐼 ⊆ 𝑆. Let 𝐿 𝐼 and 𝑄 𝐼 be the matrices whose
+rows are the coefficients of ℓ𝑒 and 𝑞 𝑒 , respectively. The polynomial
+(3.3)                                         det(𝐿 𝐼 + 𝜂𝑄 𝐼 )
+is nonzero: its coefficient of 𝜂 𝑑 is the nonzero Vandermonde determinant det 𝑄 𝐼 . A nonzero
+polynomial has no positive roots in a sufficiently small punctured interval around zero.
+Since Ω is finite, one interval works for a selected minor of every pattern.
+    Consequently, fix an off-wall point 𝑥 whose nominal activation pattern is 𝑆. Every affine
+form 𝑝(𝑥) = 𝑢 ⊤ 𝑥 + 𝑏 can be recovered as a second-layer preactivation
+                                        ∑︁
+(3.4)                   𝑃𝑆, 𝑝, 𝜂 (𝑥) =      𝑐 𝑆, 𝑝,𝑒 (𝜂)ℎ𝑒, 𝜂 (𝑥) + 𝑏 = 𝑝(𝑥).
+                                         𝑒∈𝐼
+Because all ℓ𝑒 and 𝑞 𝑒 are homogeneous, the bias 𝑏 here is exactly the constant term of 𝑝,
+independent of 𝜂. For each such fixed 𝑥, there is a threshold 𝜂 𝑥 > 0 such that the equality
+holds for 0 < 𝜂 < 𝜂 𝑥 , once the signs at 𝑥 agree with the nominal signs. This pointwise
+sign-stabilization threshold is distinct from the common punctured interval on which all
+selected minors are nonsingular. Cramer’s rule shows, uniformly over the finite set of
+selected minors, that
+(3.5)                                   |𝑐 𝑆, 𝑝,𝑒 (𝜂)| = 𝑂 (𝜂 −𝑑 ).
+12                                                 SHUNQI LU
+
+
+The exponent 𝑑 suffices for the estimate below.
+  It remains to select the correct cell without exposing the input to the second layer. For
+𝐵 > 0, define the bounded cap
+(3.6)                    𝜒𝐵 (𝑡) = 𝜌(𝑡) − 𝜌(𝑡 − 𝐵),                 0 ≤ 𝜒𝐵 (𝑡) ≤ 𝐵.
+Choose 𝐵 > 0 with 𝐵 ≥ max𝑆,𝑟 sup 𝑥 ∈𝐾 𝑝 𝑆,𝑟 (𝑥). Then 𝜒𝐵 ( 𝑝 𝑆,𝑟 ) = 𝜌( 𝑝 𝑆,𝑟 ) on 𝐾.
+   For 𝑇 ⊆ 𝐶𝑆 , set
+                                 ∑︁
+(3.7)             𝑔𝑆,𝑇 , 𝜂 (𝑥) =         ℎ𝑒, 𝜂 (𝑥),    𝑀 𝜂 = 𝜂 − (𝑑+1) ,
+                                      𝑒∈ ( [𝑚]\𝑆)∪𝑇
+
+and form
+                                     ∑︁
+(3.8)             L 𝑆, 𝑝, 𝜂 (𝑥) =           (−1) |𝑇 | 𝜒𝐵 𝑃𝑆, 𝑝, 𝜂 (𝑥) − 𝑀 𝜂 𝑔𝑆,𝑇 , 𝜂 (𝑥) .
+                                                                                        
+                                    𝑇 ⊆𝐶𝑆
+
+Each summand in Equation (3.8) uses two ordinary second-layer ReLUs. It reads only the
+first-layer outputs and a bias.
+    Fix 𝑥 ∈ 𝐾 outside the arrangement walls and let 𝑆 ′ = 𝑆(𝑥). Its perturbed signs equal
+its nominal signs for all sufficiently small 𝜂. If 𝑆 ′ ⊈ 𝑆, an index in 𝑆 ′ \ 𝑆 appears in
+every gate in Equation (3.7), and its first-layer output tends to a fixed positive number.
+Thus the gate penalty, which grows as 𝜂 − (𝑑+1) , dominates the reconstructed preactivation
+𝑃𝑆, 𝑝, 𝜂 (𝑥) = 𝑂 (𝜂 −𝑑 ), so every capped term is eventually zero.
+    It remains to consider 𝑆 ′ ⊆ 𝑆. A gate is zero if and only if 𝑇 ∩ 𝑆 ′ = ∅. For every suffi-
+ciently small fixed 𝜂, all zero-gate terms have the same capped preactivation 𝜒𝐵 (𝑃𝑆, 𝑝, 𝜂 (𝑥)),
+independently of 𝑇. Their total coefficient is
+                                          (−1) |𝑇 | = 1 {𝐶𝑆 ⊆𝑆 ′ } .
+                                     ∑︁
+(3.9)
+                                      𝑇 ⊆𝐶𝑆 \𝑆 ′
+
+If it is zero, the terms cancel for each sufficiently small 𝜂. If it is one, Equation (2.10) forces
+𝑆 ′ = 𝑆. Then only 𝑇 = ∅ is unsuppressed, the selected active rows recover 𝑃𝑆, 𝑝, 𝜂 (𝑥) =
+𝑝(𝑥), and the surviving cap is 𝜒𝐵 ( 𝑝(𝑥)) = 𝜌( 𝑝(𝑥)). Combining the three cases gives
+(3.10)                              L 𝑆, 𝑝, 𝜂 (𝑥) −→ 1 {𝑆 ′ =𝑆 } 𝜌( 𝑝(𝑥)).
+     Now define
+                                                  𝑅𝑆
+                                               ∑︁ ∑︁
+(3.11)                         𝑁 𝜂 (𝑥) =                 𝑎 𝑆,𝑟 L 𝑆, 𝑝𝑆,𝑟 , 𝜂 (𝑥).
+                                              𝑆 ∈Ω 𝑟=1
+Equation (3.10) and the cellwise ridge formulas give 𝑁 𝜂 (𝑥) → 𝑓 (𝑥) for almost every 𝑥 ∈ 𝐾.
+The function 𝑁 𝜂 is a fixed finite sum of caps bounded by 𝐵. Dominated convergence already
+proves Equation (2.12). The number of second-layer ReLUs is
+                                             ∑︁
+(3.12)                                𝑀=2        𝑅𝑆 2 |𝐶𝑆 | .
+                                                    𝑆 ∈Ω
+  We quantify this convergence. Finiteness of the selected minors, Cramer’s rule, and
+compactness of 𝐾 give constants 𝑄, 𝐶 𝑃 < ∞ such that, for all sufficiently small 𝜂,
+(3.13)              max |𝑞 𝑒 (𝑥)| ≤ 𝑄,                max |𝑃𝑆, 𝑝, 𝜂 (𝑥)| ≤ 𝐶 𝑃 𝜂 −𝑑 .
+                   𝑒, 𝑥 ∈𝐾                          𝑆, 𝑝,𝑥 ∈𝐾
+
+Enlarge 𝐶 𝑃 to absorb the finitely many fixed biases and the cap height, choose Γ > 𝑄+𝐶 𝑃 +1,
+and set
+                                     𝑚
+                                     Ø
+(3.14)                         𝑈𝜂 =     {𝑥 ∈ 𝐾 : |ℓ𝑒 (𝑥)| ≤ Γ𝜂}.
+                                            𝑒=1
+Outside 𝑈 𝜂 , perturbed and nominal signs agree, and every active row obeys
+                                            ℎ𝑒, 𝜂 (𝑥) ≥ (Γ − 𝑄)𝜂.
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                         13
+
+
+Consequently every nonzero gate in Equation (3.8) satisfies
+                            𝑀 𝜂 𝑔𝑆,𝑇 , 𝜂 (𝑥) ≥ (Γ − 𝑄)𝜂 −𝑑 > 𝐶 𝑃 𝜂 −𝑑 .
+All terms intended to be suppressed are therefore exactly zero. The target cell retains its
+recovered ridge, and every proper-subpattern contribution cancels by the same Möbius sum
+used above. Hence the stronger finite-𝜂 identity
+(3.15)                      𝑁 𝜂 (𝑥) = 𝑓 (𝑥)        for a.e. 𝑥 ∈ 𝐾 \ 𝑈 𝜂
+holds for all sufficiently small 𝜂.
+   The union in Equation (3.14) has volume at most 𝐶𝑈 𝜂. To see this, enclose 𝐾 in a fixed box    √
+and, for each nonzero ℓ𝑒 (𝑥) = 𝑎 ⊤𝑒 𝑥, integrate in a coordinate satisfying |𝑎 𝑒, 𝑗 | ≥ ∥𝑎 𝑒 ∥ 2 / 𝑑.
+Fubini’s theorem bounds the permitted interval in that coordinate by 2Γ𝜂/|𝑎 𝑒, 𝑗 |. Since
+both the network and target have a fixed bounded envelope, it follows that
+(3.16)                              ∥𝑁 𝜂 − 𝑓 ∥ 𝐿𝑝 𝑝 (𝐾 ) ≤ 𝐶 ′𝑝 𝜂.
+   Finally, direct inspection of the realization shows
+(3.17)                              ∥𝜃 (𝑁 𝜂 ) ∥ ∞ ≤ 𝐶0 𝜂 − (𝑑+1) .
+The first-layer weights remain bounded; a second-layer coefficient is a sum of an 𝑂 (𝜂 −𝑑 )
+active-frame coefficient and a gate coefficient of magnitude 𝑀 𝜂 = 𝜂 − (𝑑+1) ; all cap shifts
+and output coefficients are fixed. Given sufficiently large 𝑅, choose 𝜂 = (𝐶0 /𝑅) 1/(𝑑+1) .
+Then Equations (3.16) and (3.17) give Equation (2.14). Applying this result to the two
+tournament blocks proves Corollary 2.10.                                                   □
+   Capped ReLU differences appear in fixed-width nonclosedness constructions [22], and
+active-frame reconstruction appears in injective and convex ReLU architectures [25, 11].
+Theorem 2.2 combines these ingredients with an exact-support Möbius gate while sharing
+one first layer across all cells.
+3.2. Tournament blocks. Split [𝑑] = 𝐴 ∪¤ 𝐵 with | 𝐴| = ⌈𝑑/2⌉ and |𝐵| = ⌊𝑑/2⌋. Orient
+every edge of each complete block. For an arrow 𝑒 = (𝑢, 𝑣), put
+(3.18)                                   ℓ𝑒 (𝑥) = 𝑥𝑢 − 𝑥 𝑣 .
+The total number of first-layer rows is
+                                         | 𝐴|     |𝐵|
+                                               
+(3.19)                             |𝐸 | =      +       = 𝜅𝑑 .
+                                           2       2
+    List a total order from the smallest to the largest coordinate, and call an arrow active
+if its tail has the larger coordinate. A sufficient blockwise condition is that every order
+of a tournament on 𝑛 vertices has at least 𝑛 active arrows. Choose such a tournament
+independently on 𝐴 and 𝐵. Every product order cell then has at least
+(3.20)                                      | 𝐴| + |𝐵| = 𝑑
+active rows, so Theorem 2.2 applies.
+   The cell selector can be much smaller than its full active set. For a tournament 𝑇 and an
+order 𝜋 = (𝜋1 , . . . , 𝜋 𝑛 ) from smallest to largest, let
+(3.21)         𝐷 𝑇 (𝜋) = {𝜋 𝑘 , 𝜋 𝑘+1 } : 1 ≤ 𝑘 < 𝑛, the arrow on this pair is active
+                              
+
+and define the weighted descent count
+                                                ∑︁
+(3.22)                               𝑍 (𝑇) =            2 | 𝐷𝑇 ( 𝜋 ) | .
+                                                𝜋 ∈𝑆𝑛
+
+For a product order 𝜋 = (𝜋 𝐴, 𝜋 𝐵 ), take 𝐶 𝜋 = 𝐷 𝑇𝐴 (𝜋 𝐴) ∪¤ 𝐷 𝑇𝐵 (𝜋 𝐵 ). This is a downward
+teaching set: if another product-order pattern 𝑆 𝜏 satisfies 𝐶 𝜋 ⊆ 𝑆 𝜏 ⊆ 𝑆 𝜋 , then every pair
+consecutive in 𝜋 𝐴 and 𝜋 𝐵 has the same order in 𝜏: reversing an active consecutive pair
+14                                                SHUNQI LU
+
+
+violates the first inclusion, while reversing an inactive one violates the second. Consecutive
+comparisons determine a total order, so 𝜏 = 𝜋. In particular,
+
+(3.23)                                          |𝐶 𝜋 | ≤ 𝑑 − 2.
+
+   On a product order cell, let 𝑖 𝑆 and 𝑗 𝑆 be the largest coordinates in 𝐴 and 𝐵. Since the
+input lies in the unit cube,
+
+(3.24)                          MAX𝑑 (𝑥) = 𝜌(𝑥 𝑗𝑆 ) + 𝜌(𝑥𝑖𝑆 − 𝑥 𝑗𝑆 ).
+
+Thus 𝑅𝑆 = 2 and 𝐵 = 1 suffice in the localization theorem. We obtain a standard network
+with first width 𝜅 𝑑 and
+
+(3.25)                                      𝑚 2 ≤ 4𝑍 (𝑇𝐴)𝑍 (𝑇𝐵 ).
+
+This separates the 𝑑-row extraction frame from the smaller teaching set used by the Möbius
+gate.
+
+
+3.3. Tournament existence. For a random tournament on 𝑛 vertices
+                                                               and a fixed order, the
+number of active arrows is 𝑋 ∼ Binomial(𝑁, 1/2), where 𝑁 = 𝑛2 . A union bound over
+the 𝑛! orders gives
+
+                                                                               𝑛−1  
+                                                                               ∑︁   𝑁
+(3.26)      Pr{some order has fewer than 𝑛 active arrows} ≤ 𝑛!2− 𝑁                       .
+                                                                               𝑘=0
+                                                                                     𝑘
+
+For the same random tournament and a fixed order, the 𝑛 − 1 adjacent orientations are
+independent fair bits. Therefore
+                                              𝑛−1                       𝑛−1
+                                             3                           3
+(3.27)              E𝑇 2   | 𝐷𝑇 ( 𝜋 ) |
+                                          =         ,     E𝑇 𝑍 (𝑇) = 𝑛!         .
+                                             2                           2
+
+Markov’s inequality makes the probability that 𝑍 (𝑇) ≥ 2𝑛!(3/2) 𝑛−1 at most 1/2.
+  For 𝑛 ≥ 20, Hoeffding’s inequality and 𝑛! ≤ 𝑛𝑛 bound the right-hand side by
+
+                                              (𝑛 − 1) (𝑛 − 4) 2
+                                                               
+(3.28)                          exp 𝑛 log 𝑛 −                     < 1.
+                                                    4𝑛
+
+At 𝑛 = 20, the exponent in Equation (3.28) is less than −4/5. Its derivative is negative for
+𝑛 ≥ 20, and its second derivative is negative there, so a suitable tournament exists for every
+𝑛 ≥ 20. Balanced blocks now prove the upper bound in Theorem 2.6 for 𝑑 ≥ 40 without a
+finite search certificate.
+    For 14 ≤ 𝑛 ≤ 19, the right-hand side of Equation (3.26) is compared with 1/2 using
+exact integers and is strictly smaller. The analytic bound is below 𝑒 −4/5 < 1/2 for 𝑛 ≥
+20. Combining either estimate with Equation (3.27) shows that, for every 𝑛 ≥ 14, one
+tournament simultaneously has at least 𝑛 active arrows in every order and
+                                                           𝑛−1
+                                                          3
+(3.29)                                       𝑍 (𝑇) < 2𝑛!         .
+                                                          2
+
+For 7 ≤ 𝑛 ≤ 13, the archive supplies explicit tournaments. Their exact statistics are
+summarized below; Appendix A lists the orientations.
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                    15
+
+
+                          𝑛   Minimum active arrows              𝑍 (𝑇)
+                       7                          7            63,945
+                       8                          8           756,123
+                       9                         10        10,125,785
+                       10                        12       150,772,041
+                       11                        16     2,508,092,749
+                       12                        18    43,971,740,613
+                       13                        25   891,525,490,669
+
+         Table 2. Exact statistics for the archived tournament certificates. The
+         quantity 𝑍 (𝑇) = 𝜋 ∈𝑆𝑛 2 | 𝐷𝑇 ( 𝜋 ) | is the weighted adjacent-descent sum.
+                         Í
+
+
+
+
+   The minimum is verified without sampling. If 𝐷 (𝑈) is the minimum active-arrow
+count over orders of the subtournament induced by 𝑈 ⊆ [𝑛], placing 𝑣 last gives the exact
+recurrence
+
+
+
+
+(3.30)       𝐷 (∅) = 0,        𝐷 (𝑈) = min (𝐷 (𝑈 \ {𝑣}) + |{𝑢 ∈ 𝑈 \ {𝑣} : 𝑣 → 𝑢}|) .
+                                       𝑣∈𝑈
+
+
+
+
+It uses 𝑂 (𝑛2𝑛 ) integer operations. For 𝑛 = 7, a separate enumeration of all 7! orders gives
+the same minimum. The masks, recurrence, exact binomial comparisons, and analytic tail
+establish existence for every block size 𝑛 ≥ 7, hence every 𝑑 ≥ 14. The proof uses stored
+masks for 7 ≤ 𝑛 ≤ 13, exact integer existence inequalities for 14 ≤ 𝑛 ≤ 19, and the analytic
+estimate for 𝑛 ≥ 20. In dimension terms, both blocks use stored masks for 14 ≤ 𝑑 ≤ 26;
+𝑑 = 27 combines a stored mask and an integer existence bound; 28 ≤ 𝑑 ≤ 38 uses two
+integer existence bounds; 𝑑 = 39 combines an integer bound and the analytic estimate; and
+𝑑 ≥ 40 is entirely analytic. The values of 𝑍 (𝑇) are independently obtained by the weighted
+Hamilton-path recurrence
+(3.31)
+                                          𝐻 (𝑈 \ {𝑣}, 𝑢) 21{𝑣→𝑢} ,
+                                    ∑︁                                        ∑︁
+ 𝐻 ({𝑣}, 𝑣) = 1,      𝐻 (𝑈, 𝑣) =                                     𝑍 (𝑇) =      𝐻 ( [𝑛], 𝑣).
+                                 𝑢∈𝑈\{𝑣}                                       𝑣
+
+
+
+
+The table values all satisfy Equation (3.29). Figure 5 displays the certificates and the three
+regimes of the existence argument.
+16                                                                          SHUNQI LU
+
+
+                                  (a)                                                   (b)
+     Minimum active arrows                       stored certificates                                  mixed                          mixed
+
+                             20
+                                                                                              stored masks        integer bounds     analytic
+
+                             10
+                                        𝛼𝑛 < 𝑛                                          14                   27                    39 40
+                                                                                 𝑛
+
+                                                                                                             Dimension 𝑑
+                              0
+                                  2       4         6          8       10   12
+                                                    Block size 𝑛
+
+
+                                  Figure 5. Tournament certificates and the regimes of the existence proof.
+                                  (a) Minimum active-arrow count against block size. Open circles are
+                                  the optimal values 𝛼𝑛 for 2 ≤ 𝑛 ≤ 7; below the diagonal 𝛼𝑛 < 𝑛, so
+                                  no balanced two-block arrangement qualifies there. Filled markers are
+                                  the archived certificates of Table 2, all on or above the diagonal. (b)
+                                  Which argument supplies the certificate in each range of 𝑑: stored masks
+                                  for 14 ≤ 𝑑 ≤ 26, exact integer existence inequalities for 28 ≤ 𝑑 ≤ 38,
+                                  the analytic estimate of Equation (3.28) for 𝑑 ≥ 40, and mixed pairs at
+                                  𝑑 = 27 and 𝑑 = 39.
+
+
+   The lower endpoint 𝑑 = 14 reflects a limitation of this application of the active-row
+hypothesis, rather than a limit on the finite search. Indeed, let 𝛼𝑛 be the largest possible
+minimum active-arrow count among all 𝑛-vertex tournaments. Exhaustive integer checks
+give 𝛼3 , 𝛼4 , 𝛼5 , 𝛼6 = 1, 1, 3, 4, and 𝛼2 = 0, 𝛼7 = 7; details appear in Appendix A.1. Since
+the two block orders vary independently, their best possible minimum total is 𝛼 ⌈𝑑/2⌉ +𝛼 ⌊𝑑/2⌋ ,
+which is strictly less than 𝑑 for every 5 ≤ 𝑑 ≤ 13. In particular, at 𝑑 = 13 even the optimal
+total is 7 + 4 = 11, so one block cannot compensate for the other. This excludes the present
+balanced two-block arrangement from Theorem 2.2 in that range; it does not exclude other
+localization arguments or architectures.
+   Combining Equations (3.25) and (3.29) gives the uniform decoder bound
+                                                           &          𝑑−2 ' &           𝑑'
+                                                                     3         64 3(𝑑 + 1)
+(3.32)                                            𝑚 2 ≤ 16| 𝐴|!|𝐵|!          ≤                 .
+                                                                     2          9    4
+
+This improves the full-active-set exponent from 𝑂 (𝑑 2 ) to 𝑂 (𝑑 log 𝑑). For the displayed
+seven-vertex certificate, 𝑑 = 14 gives the sharper exact count
+
+(3.33)                                                             4𝑍 (𝑇7 ) 2 = 16,355,852,100.
+
+
+
+                                                                   4. Triple-junction bounds
+    The proof of Theorem 2.11 selects a coordinate triple missed by every first-layer row
+and freezes the network on a positive-measure family of transverse disks. On each disk the
+first hidden layer becomes affine, while the target retains an equilateral three-ray junction.
+Applying Theorem 2.3 on the disks and integrating over their base gives a bound independent
+of all network parameters. Figure 6 shows the three steps.
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                                             17
+
+
+ (a)                                 (b)                                       (c)
+               𝑖                           three-ray fan   1
+                                                                                                  unsafe: |𝑐 | ≤ Δ
+
+
+
+
+                                      𝐼                                         𝐼
+                                                                       ℎ
+
+  𝑗                        𝑘
+                                                                                                 Z
+                                                                                        | G | ≥ 15
+                                                                                                16 | Z | | 𝐼 |
+
+
+
+
+         Figure 6. The subcritical reduction. (a) The graph of selected top-two
+         coordinate pairs. It has seven vertices and eight edges, fewer than 𝜅 7 = 9,
+         so some triple {𝑖, 𝑗, 𝑘 } carries no selected pair. (b) The oblique cylinder
+         built below over that triple: transverse disks of radius ℎ with axis 1,
+         swept as the common shift ranges over 𝐼. On each disk the target is the
+         equilateral three-ray fan, whose creases are drawn on the middle disk.
+         (c) The base Z × 𝐼. Each first-layer row is unsafe only on a thin slab
+         |𝑐| ≤ Δ; the union of the 𝑚 1 slabs leaves the safe set G, on which the
+         network restricts to a shallow ridge sum.
+
+4.1. Three-ray bound. The proof of Theorem 2.3 is in Appendix B. We record the steps
+that make its parameter quantifiers explicit.
+   For a large odd order 𝑘, a compactly supported smooth distributional probe maps a ridge
+𝜌(𝑣⊤ 𝑦+𝑏) to a scalar multiple of the pure symmetric tensor 𝑣 ⊗𝑘 . A width-𝑊 shallow network
+therefore has probe tensor of symmetric rank at most 𝑊, regardless of its coefficients and
+biases. For the equilateral fan, the same probe has an explicit folded-binomial catalecticant.
+Choosing 𝑘 ≍ 𝑊 2 , an exact central sign minor and the Eckart–Young theorem give a
+Frobenius tail of order 𝑊 −3 . The compact radial probe agrees with the Gaussian near
+the fan vertex, and therefore has the same jet through order 𝑘 − 3, while its normalized
+order-𝑘 derivative energy remains controlled. Its jet is still sensitive to the three half-rays.
+Duality and Parseval then yield the squared-error rate (𝑊 + 1) −10 . Writing 𝑀𝑘 for the
+matrix obtained by grouping the tensor slots, the choices and losses form the chain
+(4.1) 𝑘 ≍ (𝑊 + 1) 2 ,          inf         ∥𝑀𝑘 − 𝑅∥ 𝐹 ≳ (𝑊 + 1) −3 ,                 𝜎 ≍ 𝑘 −1/2 ≍ (𝑊 + 1) −1 ,
+                          rank 𝑅≤𝑊
+and the scaled compact probe gives
+(4.2)      ∥𝑔 − 𝐹△ ∥ 2 ≳ 𝜎 2 (𝑊 + 1) −3 ≍ (𝑊 + 1) −5 ,                     ∥𝑔 − 𝐹△ ∥ 22 ≳ (𝑊 + 1) −10 .
+   The argument estimates distance to a matrix-rank variety uniformly over the noncompact
+shallow parameter set, and hence remains valid along sequences with diverging directions
+or output weights. Hermite rank and matricization methods also occur in approximation
+and learning problems [36, 21, 3]; Appendix B supplies the target-specific growing-order
+spectrum and the compact localization used here.
+Lemma 4.1 (One-dimensional slab estimate). Let 𝐽 ⊂ R be an interval of length 𝐿 > 0,
+let 𝜆 ≠ 0, let ℎ ≥ 0 and 𝐵 ≥ 0, and suppose
+                    Φ(𝑡, 𝑦) = 𝜆𝑡 + 𝑐 + ℎ𝜓(𝑦),                  sup |𝜓(𝑦)| ≤ 𝐵|𝜆|.
+                                                               𝑦 ∈B2
+
+The set of 𝑡 ∈ 𝐽 for which Φ(𝑡, ·) takes both nonpositive and nonnegative values has length
+at most 2𝐵ℎ, and therefore occupies at most a fraction 2𝐵ℎ/𝐿 of 𝐽.
+18                                          SHUNQI LU
+
+
+Proof. Such a sign change implies |𝜆𝑡 + 𝑐| ≤ ℎ sup 𝑦 |𝜓(𝑦)| ≤ 𝐵ℎ|𝜆|. The resulting interval
+in 𝑡 has length at most 2𝐵ℎ.                                                             □
+
+4.2. Transversals.
+
+Proof of Proposition 2.4. We first find a witnessed triple missed by the selected coordinate
+pairs. A slab estimate then leaves a common family of disks on which every first-layer
+activation is affine, so the fixed-fan theorem applies after subtracting the shallow part of
+the witness. For each nonzero first-layer row, select the two coordinates carrying its largest
+absolute coefficients, with a fixed tie rule. The resulting simple graph has at most 𝑚 edges.
+If 𝑚 < 𝜏2 (T ), some witnessed triple 𝑇 ∈ T contains no selected edge. Fix one set of
+witness data (𝑈𝑇 , 𝐼𝑇 , ℎ𝑇 , 𝑄 𝑇 , 𝑅𝑇 , 𝛾𝑇 ) for each 𝑇 ∈ T . The argument below produces an
+error 𝜀𝑇 > 0 that depends on these data and on 𝑚, 𝑊, 𝑠, while remaining independent of
+all network parameters. Since T is finite, min𝑇 ∈ T 𝜀𝑇 > 0.
+    If 𝑞 = 3, a nonempty junction hypergraph has pair-transversal number one, so 𝑚 < 𝜏2 (T )
+means 𝑚 = 0. Fix 0 < ℎ ≤ ℎ𝑇 . On each witnessed disk, subtracting 𝐴 𝑎,ℎ from the network
+leaves at most 𝑊 + 𝑠 shallow ridges. Applying Theorem 2.3 to ℎ𝛾𝑇 𝐹△√gives squared error at
+least 𝑐 △ ℎ2 𝛾𝑇2 (𝑊 + 𝑠 + 1) −10 . Integration over 𝑎 ∈ 𝐼𝑇 , with Jacobian 3ℎ2 , gives a positive
+ambient 𝐿 2 lower bound. Assume 𝑞 ≥ 4.
+    Fix the witness cylinder for 𝑇. Write a first-row weight as 𝑤 = (𝑣, 𝑢), where 𝑣 ∈ R3 is
+on 𝑇, and let 𝑀 = ∥𝑣∥ ∞ , 𝑈 = ∥𝑢∥ ∞ , and 𝜎 = 1⊤ 𝑣. At most one coordinate of 𝑣 exceeds 𝑈
+in magnitude, and hence
+(4.3)                           𝑀 > 4𝑈       =⇒      |𝜎| > 𝑀/2.
+If 𝑀 = 𝑈 = 0, the transverse slope is zero and the row is safe on every fiber. Otherwise, on
+a transverse disk the preactivation has the form
+                                  𝑢 ⊤ 𝑧 + 𝜎𝑎 + 𝑏 + ℎ(𝑄 ⊤ 𝑣) ⊤ 𝑦.
+If 𝑀 ≤ 4𝑈, condition on an outside coordinate with coefficient     √ 𝑈. If√𝑀 > 4𝑈, condition
+on 𝑎 and use √  Equation
+                       √ (4.3).   In  the  first case,  ∥𝑄 ⊤ 𝑣∥ ≤ 3𝑀 ≤ 4 3𝑈; in the second,
+                                                               2
+∥𝑄 ⊤ 𝑣∥ 2 ≤ 3𝑀 < 2 3|𝜎|. Applying Lemma 4.1 on the selected witness interval shows
+that the fraction of base points on which this affine form changes sign across the disk is
+at most 𝐶𝑇 ℎ, uniformly in the row parameters. The constant depends only on the fixed
+witness intervals.
+    Choose
+                                                          1
+                                                                  
+                               ℎ = min ℎ𝑇 ,                          .
+                                                  2𝐶𝑇 max{1, 𝑚}
+A union bound leaves at least half the witness-base volume on which every first-layer ReLU
+is affine or zero throughout the disk. On each such fiber, a two-hidden-layer network with
+                                                    (2)
+second width 𝑊 reduces to an element of R 𝑊             . After subtracting 𝐴 𝑧,𝑎,ℎ , at most 𝑊 + 𝑠
+                                                                           √
+shallow ridges remain. Theorem 2.3 and integration with Jacobian 3ℎ2 give the squared
+ambient error bound
+                           √
+                             3
+                               𝑐 △ 𝛾𝑇2 ℎ4 |𝑈𝑇 ||𝐼𝑇 |(𝑊 + 𝑠 + 1) −10 > 0,
+                            2
+independent of all network parameters. Thus no fixed architecture with 𝑚 < 𝜏2 (T ) can
+converge to 𝑓 in 𝐿 2 . Affine skips remain affine on every fiber.                                □
+
+4.3. Missed triples. Consider 𝑁 ∈ S𝑚(𝑑)  1 ,𝑚2
+                                               as in Equation (2.6). For each nonzero first-layer
+vector 𝑤 𝑗 , choose the two coordinates of largest absolute weight, with a fixed deterministic
+tie rule. Add the resulting unordered pair to a simple graph 𝐺 on [𝑑]. Duplicates are
+discarded, so |𝐸 (𝐺)| ≤ 𝑚 1 .
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                    19
+
+
+   If every triple contains a selected pair, then the complement 𝐺 is triangle-free. Mantel’s
+theorem [19, 2] gives |𝐸 (𝐺)| ≤ ⌊𝑑 2 /4⌋, and therefore
+                                                2
+                                              𝑑      𝑑
+(4.4)                            |𝐸 (𝐺)| ≥       −       = 𝜅𝑑 .
+                                              2       4
+When 𝑚 1 < 𝜅 𝑑 , there is consequently a triple 𝑇 containing no selected pair. Relabel so that
+𝑇 = {1, 2, 3}.
+   For one first-layer row write 𝑤 = (𝑣, 𝑢), where 𝑣 ∈ R3 is supported on 𝑇, and set
+(4.5)             𝑀 = max |𝑣𝑖 |,      𝑈 = max |𝑢 𝑗 |,         𝑠 = 𝑣1 + 𝑣2 + 𝑣3 .
+                        𝑖 ∈𝑇                𝑗∉𝑇
+
+Because the two largest coordinates of 𝑤 are not both in 𝑇, at most one coordinate of 𝑣
+exceeds 𝑈 in magnitude. Hence
+(4.6)                    𝑀 > 4𝑈      =⇒      |𝑠| ≥ 𝑀 − 2𝑈 > 𝑀/2.
+
+4.4. Oblique cylinders. Let 𝑄 : R2 → 1⊥ ⊂ R3 be an isometry. For 𝑑 ≥ 4, define
+                                                   1       1
+                                                            
+                 Z = [0, 1 − 1/𝑑] 𝑑−3 ,    𝐼 = 1−    ,1−       ,
+                                                  2𝑑      4𝑑
+(4.7)
+                      𝑑 −3
+                  ℎ= √ ,                𝑥𝑇 𝑐 = 𝑧,   𝑥𝑇 = 𝑎1 + ℎ𝑄𝑦,
+                     64 3
+where (𝑧, 𝑎, 𝑦) ∈ Z × 𝐼 × B2 . The cylinder lies in the unit cube, and its three distinguished
+coordinates exceed all the others. Thus
+(4.8)              MAX𝑑 (𝑥) = 𝑎 + ℎ𝐹𝑄 (𝑦),          𝐹𝑄 (𝑦) = max (𝑄𝑦)𝑖 .
+                                                                  𝑖 ≤3
+
+The three rows of 𝑄 form an equilateral triple of radius 2/3. Up to an orthogonal map 𝑅0 ,
+                                                         √︁
+
+                                               2
+                                            √︂
+(4.9)                             𝐹𝑄 (𝑦) =       𝐹△ (𝑅0 𝑦).
+                                               3
+                                                  √
+The absolute Jacobian of (𝑎, 𝑦) ↦→ 𝑎1 + ℎ𝑄𝑦 is 3ℎ2 .
+   On the cylinder, one first-layer preactivation is
+(4.10)                𝑐(𝑧, 𝑎) + ℎ 𝑣⊤ 𝑄𝑦,    𝑐(𝑧, 𝑎) = 𝑢 ⊤ 𝑧 + 𝑠𝑎 + 𝑏.
+                        √
+Put Δ = ℎ∥𝑄 ⊤ 𝑣∥ 2 ≤ 3ℎ𝑀. A base point (𝑧, 𝑎) is safe for this neuron if Δ = 0 or
+|𝑐(𝑧, 𝑎)| > Δ. At a safe point, the row’s ReLU is affine or zero as a function of 𝑦 on the
+entire disk.
+Lemma 4.2 (One-row slab estimate). Under the uniform distribution on Z × 𝐼, each
+first-layer row satisfies
+                                             √
+(4.11)                      Pr{not safe} ≤ 16 3 𝑑ℎ.
+Proof. There is nothing to prove when Δ = 0. Suppose first that 𝑀 ≤ 4𝑈, so 𝑈 > 0.
+Condition on 𝑎 and on all outside coordinates except a coordinate 𝑧 𝑗 whose coefficient has
+magnitude 𝑈. Its interval has length at least 1/2, and therefore
+                                                       2Δ            √
+(4.12)          Pr{|𝑐| ≤ Δ | other variables} ≤                 ≤ 16 3ℎ.
+                                                   𝑈 (1 − 1/𝑑)
+If 𝑀 > 4𝑈, condition on 𝑧, use Equation (4.6), and recall that |𝐼 | = 1/(4𝑑):
+                                             2Δ         √
+(4.13)                   Pr{|𝑐| ≤ Δ | 𝑧} ≤          ≤ 16 3 𝑑ℎ.
+                                            |𝑠||𝐼 |
+The case 𝑀 = 𝑈 = 0 belongs to Δ = 0.                                                        □
+20                                        SHUNQI LU
+
+
+    Let G ⊂ Z × 𝐼 be the set safe for all first-layer rows. Since 𝑚 1 < 𝜅 𝑑 < 𝑑 2 /4, the union
+bound and the chosen value of ℎ give
+                            |G|              √                  𝑚1     15
+(4.14)                             ≥ 1 − 16 3𝑚 1 𝑑ℎ = 1 − 2 >             .
+                           |Z||𝐼 |                             4𝑑      16
+    Fix (𝑧, 𝑎) ∈ G. Every first-layer ReLU is affine or zero in 𝑦 throughout the disk. After
+substitution, the second hidden layer becomes a shallow ridge sum of width at most 𝑚 2 . Free
+affine skips in Equation (2.6) restrict to affine terms and preserve the reduction. Subtracting
+𝑎, rescaling by ℎ, and applying Theorem 2.3 and Equation (4.9) yields
+                                                                2
+               ∫
+(4.15)               |𝑁 (𝑥(𝑧, 𝑎, 𝑦)) − (𝑎 + ℎ𝐹𝑄 (𝑦))| 2 𝑑𝑦 ≥ 𝑐 △ ℎ2 (𝑚 2 + 1) −10 .
+                 B2                                             3
+Integrating over G and inserting the Jacobian gives
+                                                   √
+                                    2            2 3
+                    ∥𝑁 − MAX𝑑 ∥ 𝐿 ( [0,1] 𝑑 ) ≥       𝑐 △ ℎ4 |G|(𝑚 2 + 1) −10
+                                      2            3
+                                                   √
+                                                 5 3
+(4.16)                                         ≥      𝑐 △ ℎ4 |Z||𝐼 |(𝑚 2 + 1) −10 .
+                                                   8
+                                                                        √
+Now |Z| = (1 − 1/𝑑) 𝑑−3 ≥ 1/4, |𝐼 | = 1/(4𝑑), and ℎ = 𝑑 −3 /(64 3). Thus Equation (2.31)
+holds for every 𝑑 ≥ 4 with the explicit choice
+                                                  √
+                                                 5 3
+(4.17)                                  𝑐0 =        √      𝑐△ .
+                                             128(64 3) 4
+The exponent 13 comes from the factor ℎ4 , which contributes 𝑑 −12 , and the length of the
+common-shift interval, which contributes 𝑑 −1 .
+   When 𝑑 = 3, 𝑚 1 < 𝜅3 = 1 means 𝑚 1 = 0, so the skip network is a width-𝑚 2 shallow
+ridge sum on R3 . Around 𝑥∗ = (1/2, 1/2, 1/2), write
+                          1
+          𝑥 = 𝑥∗ + 𝑎𝑒 0 + 𝑈𝑦,       𝑒 0 = 3−1/2 1,     𝑎 ∈ [−1/8, 1/8], 𝑦 ∈ B2 ,
+                          8
+where 𝑈 : R2 → 𝑒 ⊥      0 is an isometry. Every coordinate differs from 1/2 by at most
+     √
+1/(8 3) + 1/8 < 1/2, so the cylinder lies inside the cube. The interval has length 1/4, and
+the absolute Jacobian of (𝑎, 𝑦) ↦→ 𝑥 is (1/8) 2 = 1/64, since (𝑒 0 , 𝑈) is orthogonal. After a
+fixed transverse rotation 𝑅0 ,
+                                        1          1 2
+                                                    √︂
+                                             𝑎
+                           MAX3 (𝑥) = + √ +              𝐹△ (𝑅0 𝑦).
+                                        2     3 8 3
+At each fixed 𝑎, restriction leaves a two-dimensional shallow ridge sum of width at most
+𝑚 2 . Subtracting the affine term and applying Theorem 2.3, followed by integration, gives
+                                           2
+                                        2 1 1 1                      𝑐△
+(4.18) ∥𝑁 − MAX3 ∥ 2𝐿 ( [0,1] 3 ) ≥ 𝑐 △             (𝑚 2 + 1) −10 =       (𝑚 2 + 1) −10 .
+                           2            3 8 4 64                    24576
+The choice in Equation (4.17) satisfies 𝑐 0 3−13 ≤ 𝑐 △ /24576, so the same constant works
+for 𝑑 = 3. This completes the proof of Theorem 2.11.
+4.5. Boundary rigidity. The equality case of Mantel’s theorem also records what a critical-
+width sequence must look like; see Figure 7.
+Corollary 4.3 (Critical comparison graph). Fix 𝑑 ≥ 3 and finite 𝑊. Suppose 𝑁 𝑛 ∈ S𝜅(𝑑)
+                                                                                    𝑑 ,𝑊
+and ∥𝑁 𝑛 − MAX𝑑 ∥ 2 → 0. After removing constant first rows, the selected top-two pairs
+are eventually all distinct, and their graph is
+(4.19)                  𝐾 𝐴 ∪¤ 𝐾 𝐵 ,    {| 𝐴|, |𝐵|} = {⌊𝑑/2⌋, ⌈𝑑/2⌉},
+after passage to a subsequence with a fixed bipartition.
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                             21
+
+
+ (a)                                                       (b)
+              𝐴                      𝐵                                  𝐴                    𝐵
+
+
+
+
+         selected pairs 𝐾 𝐴 ∪¤ 𝐾 𝐵 : 𝜅9 = 16                       missing pairs 𝐾5,4 : b81/4c = 20
+
+
+
+         Figure 7. The rigid shape of a critical-width sequence at 𝑑 = 9, by
+         Corollary 4.3. (a) The selected top-two pairs must eventually form the
+         disjoint union of two complete graphs on a balanced bipartition, here
+         𝐾5 ∪¤ 𝐾4 with 𝜅 9 = 16 edges. (b) Its complement is the complete bipartite
+         graph 𝐾5,4 , which has ⌊81/4⌋ = 20 edges and is the unique extremal
+         graph in Mantel’s theorem. No other configuration of 𝜅 𝑑 rows admits an
+         approximating sequence.
+
+
+Proof. For 𝑑 = 3, the critical first width is one. A constant first row reduces the network
+to a shallow sum, which has a uniform positive error by Theorem 2.11 with first width
+zero. Thus the row is eventually nonconstant; its selected pair gives 𝐾2 ∪¤ 𝐾1 . Assume
+𝑑 ≥ 4. If a row is constant or two rows select the same pair, the simple selected graph
+has fewer than 𝜅 𝑑 edges, so Mantel’s theorem supplies a missing triple. In the proof of
+Theorem 2.11, the hypothesis 𝑟 < 𝜅 𝑑 is used only to produce such a triple. Once    √ the
+triple is given, the√same cylinder argument applies at 𝑟 = 𝜅 𝑑 : with ℎ = 𝑑 /(64 3), its
+                                                                             −3
+
+union bound is 16 3 𝜅 𝑑 𝑑ℎ = 𝜅 𝑑 /(4𝑑 2 ) < 1/16. The fixed-fan lower bound therefore gives
+a uniform positive error. Thus all 𝜅 𝑑 pairs are eventually distinct and every triple is hit.
+The complement is a triangle-free graph with exactly ⌊𝑑 2 /4⌋ edges. Equality in Mantel’s
+theorem makes it a balanced complete bipartite graph, proving Equation (4.19).            □
+
+
+                                         5. Ordered statistics
+   The general lower bound is Proposition 2.4, proved in Section 4. We identify the stable-
+junction hypergraph of an ordered 𝐿-statistic and then construct the matching fan-localized
+approximating sequence. A nonzero second difference of the rank weights isolates a three-
+ray fan after subtraction of three shallow ridges. For the upper bound, merging two sorted
+chains gives the required local ridge formulas.
+
+5.1. Weight curvature. Fix 𝑟 satisfying Equation (2.23) and a coordinate triple 𝑇. Place
+𝑟 − 1 outside coordinates in [3/4, 1], the remaining 𝑞 − 𝑟 − 2 outside coordinates in [0, 1/4],
+and set
+(5.1)                    𝑥𝑇 = 𝑎1 + ℎ𝑄𝑦,               𝑎 ∈ [3/8, 5/8],       𝑦 ∈ B2 .
+For sufficiently small ℎ, the three coordinates in 𝑇 occupy global ranks 𝑟, 𝑟 + 1, 𝑟 + 2. For
+three numbers 𝑦 (1) ≥ 𝑦 (2) ≥ 𝑦 (3) , the exact identity
+        𝜆1 𝑦 (1) + 𝜆2 𝑦 (2) + 𝜆3 𝑦 (3) = 𝜆2 (𝑦 1 + 𝑦 2 + 𝑦 3 ) + (𝜆2 − 𝜆3 ) (max 𝑦 𝑖 − min 𝑦 𝑖 )
+                                                                                  𝑖           𝑖
+(5.2)                                          + (𝜆1 − 2𝜆2 + 𝜆3 ) max 𝑦 𝑖
+                                                                   𝑖
+22                                           SHUNQI LU
+
+
+holds on every order cone. The range term is shallow because
+                                               1 ∑︁
+(5.3)                      max 𝑦 𝑖 − min 𝑦 𝑖 =        |𝑦 𝑖 − 𝑦 𝑗 |.
+                            𝑖         𝑖        2 𝑖< 𝑗
+Each absolute value is twice a ReLU plus an affine term, so the range uses three ReLU ridges
+when affine terms are free. Taking (𝜆1 , 𝜆2 , 𝜆3 ) = (𝛼𝑟 , 𝛼𝑟+1 , 𝛼𝑟+2 ), the last coefficient is 𝛿𝑟 .
+Since the rows of 𝑄 form
+                      √︁ an equilateral triple, Equations (5.2) and (5.3) give Equation (2.18)
+with 𝑠 = 3 and |𝛾| = 2/3|𝛿𝑟 |. The construction works for every 𝑇, so
+                                                    [𝑞]
+                                                    
+(5.4)                                J3 (𝐿 𝛼 ) =         .
+                                                     3
+Combining Proposition 2.4 and Equation (2.20) proves the qualitative lower bound in
+Theorem 2.8.                                                     √
+   For the displayed quantitative bound, take ℎ = (128 3 𝑞 2 ) −1 , which keeps the middle
+three coordinates strictly between 1/4 and 3/4. For 𝑞 ≥ 4, select a missed triple as in
+Section 4. All base intervals in Equation (5.1) have length 1/4.        √ If 𝑀 ≤ 4𝑈, conditioning
+                                                                                         √
+on an outside coordinate bounds the unsafe fraction by 2ℎ 3𝑀/(𝑈/4) ≤ 32                √ 3ℎ. If
+𝑀 > 4𝑈, conditioning on 𝑎 and using |𝑠| > 𝑀/2 gives the smaller bound 16 3ℎ. The
+union over 𝑚 < 𝜅 𝑞 < 𝑞 2 /4 rows has fraction below 1/16. The safe base volume is at least
+(15/16)4− (𝑞−2) . When 𝑞 = 3, the hypothesis forces 𝑚 = 0, so every base point is safe and
+the same volume bound holds.√
+   The cylinder Jacobian is 3ℎ2 , and the squared transverse amplitude is (2/3)ℎ2 𝛿𝑟2 .
+Applying Theorem 2.3 after subtracting the three range ridges therefore gives, for all 𝑞 ≥ 3,
+                                               √
+                           2                2 3               15
+                ∥𝑁 − 𝐿 𝛼 ∥ 𝐿2 ( [0,1] 𝑞 ) ≥         𝑐 △ 𝛿𝑟2 ℎ4 4− (𝑞−2) (𝑊 + 4) −10
+                                               3              16
+(5.5)                                     = 𝑐 ord 𝛿𝑟2 4−𝑞 𝑞 −8 (𝑊 + 4) −10 ,
+where an explicit absolute constant is
+                                            √
+                                         10 3
+(5.6)                             𝑐 ord =    √    𝑐 △ = 16𝑐 0 .
+                                       (128 3) 4
+Here 𝑐 0 is the choice in Equation (4.17); thus both quantitative bounds use fixed multiples
+of the same disk constant 𝑐 △ , with all dependence on dimension and weights displayed
+separately. This proves Equation (2.24).
+5.2. Chain merging. It remains to prove the upper bound. Split the coordinates into
+the two tournament blocks from Section 3.2. On one product order cell, write the two
+decreasing chains as
+(5.7)                𝑎1 ≥ · · · ≥ 𝑎 𝑝 ,      𝑏1 ≥ · · · ≥ 𝑏 𝑠 ,          𝑝 + 𝑠 = 𝑞.
+For the top-𝑘 sum, set
+                                                                   𝑡
+                                                                  ∑︁           𝑘−𝑡
+                                                                               ∑︁
+        ℓ = max(0, 𝑘 − 𝑠),       𝑢 = min(𝑘, 𝑝),          𝐹𝑡 =           𝑎𝑖 +         𝑏𝑗   (ℓ ≤ 𝑡 ≤ 𝑢).
+                                                                  𝑖=1          𝑗=1
+
+Choosing the top 𝑘 elements from the union of the chains gives 𝑇𝑞,𝑘 = max𝑡 𝐹𝑡 , and
+(5.8)                                𝐹𝑡+1 − 𝐹𝑡 = 𝑎 𝑡+1 − 𝑏 𝑘−𝑡
+is nonincreasing in 𝑡. Figure 8 illustrates the split. A discrete concave sequence increases
+exactly through its positive increments, hence
+                                              𝑢−1
+                                              ∑︁
+(5.9)                           𝑇𝑞,𝑘 = 𝐹ℓ +         𝜌(𝑎 𝑡+1 − 𝑏 𝑘−𝑡 ).
+                                              𝑡=ℓ
+                   SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                                             23
+
+
+         (a)                                                                (b)
+                𝑡∗ = 3        𝑘 − 𝑡∗ = 2                                      𝐹𝑡+1 − 𝐹𝑡 = 𝑎𝑡+1 − 𝑏 𝑘−𝑡
+  1.0
+                                                                      4.0                                   𝑇𝑞,𝑘
+
+                                            𝑘th largest               3.6
+  0.6
+
+
+
+
+                                                                 𝐹𝑡
+                                                                      3.2
+
+  0.2                                                                 2.8
+
+                chain 𝑎        chain 𝑏                                        0       1      2          3          4   5
+                                                                                                  𝑡
+
+
+               Figure 8. Merging two sorted chains on one tournament product cell, for
+               𝑝 = 6, 𝑠 = 5, and 𝑘 = 5. (a) The two decreasing chains of Equation (5.7).
+               Heavy marks are the entries chosen by the optimal split 𝑡 ∗ ; the dashed
+               line is the 𝑘th largest entry of the union. (b) The partial sums 𝐹𝑡 . Their
+               increments Equation (5.8) are nonincreasing, so the sequence is discretely
+               concave and its maximum 𝑇𝑞,𝑘 , circled, is reached through the positive
+               increments only. This is Equation (5.9), a finite ridge formula on the cell.
+
+   Thus every top-𝑘 sum has a finite ridge formula on every tournament product cell. Every
+ordered 𝐿-statistic then telescopes as
+                                            𝑞−1
+                                            ∑︁                                             ∑︁
+(5.10)                    𝐿 𝛼 = 𝛼𝑞 𝑇𝑞,𝑞 +          (𝛼 𝑘 − 𝛼 𝑘+1 )𝑇𝑞,𝑘 ,           𝑇𝑞,𝑞 =         𝑥𝑖 .
+                                             𝑘=1                                            𝑖
+The active-row count and tournament ranges are unchanged from the maximum case.
+Applying Theorem 2.2 proves the upper half of Theorem 2.8. For each fixed (𝑞, 𝛼), the
+finitely many local ridge formulas share one finite second hidden-layer width 𝑊𝑞, 𝛼 , fixed
+throughout the approximating sequence. The optimal such width and practical conditioning
+remain open.
+    Finally, if every discrete second difference of 𝛼 vanishes, then 𝛼 𝑗 = 𝐴 + 𝐵 𝑗 is an
+arithmetic progression. The identity
+                             ∑︁                 𝑞
+                                               ∑︁
+(5.11)                           |𝑥𝑖 − 𝑥 𝑗 | =    (𝑞 + 1 − 2 𝑗)𝑥 ( 𝑗 )
+                                     𝑖< 𝑗                 𝑗=1
+
+shows that 𝐿 𝛼 is already affine plus pairwise ReLU ridges. The non-arithmetic hypothesis
+is therefore a structural boundary of the triple-junction mechanism; no 𝜅 𝑞 lower bound is
+claimed for the arithmetic subspace.
+    For 𝑇𝑞,𝑘 , the rank-weight vector is a nonconstant step and therefore has a nonzero
+second difference whenever 𝑘 < 𝑞. Individual order statistics and proper trimmed sums
+have the same
+          Í property. The support identity in Equation (2.28) follows from 𝑇𝑞,𝑘 (𝑥) =
+max |𝑆 |=𝑘 𝑖 ∈𝑆 𝑥𝑖 , completing the proof of Corollary 2.9.
+
+                                               6. Common width
+   The common-width upper bound in Theorem 2.12 uses a quadratic-width construction
+based on the one-sided tangent gate below.
+Lemma 6.1 (Tangent gate). For 𝜀 > 0, let
+                                                                                  𝐿 − ℎ 𝜀 (𝐿, 𝑞)
+(6.1)                     ℎ 𝜀 (𝐿, 𝑞) = 𝜌(𝐿 − 𝜀𝑞),               𝐶 𝜀 (𝐿, 𝑞) =                     .
+                                                                                        𝜀
+ 24                                                                     SHUNQI LU
+
+
+Then 𝐶 𝜀 (𝐿, 𝑞) ≤ 𝑞 for all 𝐿, 𝑞, and for fixed 𝐿 ≠ 0,
+                                               (
+                                                 𝑞,    𝐿 > 0,
+(6.2)                          𝐶 𝜀 (𝐿, 𝑞) −→
+                                                 −∞, 𝐿 < 0.
+ Proof. If 𝐿 − 𝜀𝑞 ≥ 0, then 𝐶 𝜀 = 𝑞. Otherwise 𝐶 𝜀 = 𝐿/𝜀 < 𝑞. The limit follows
+ directly.                                                                    □
+     Figure 9 illustrates the gate, the two-block selector that the next subsection builds from
+ it, and the diagonal defect that confines the convergence to 𝐿 𝑝 .
+
+                         (a)                                      (b)                                           (c)
+                               𝐶𝜀 ≤ 𝑞                       1.0                        block tie
+                                                      𝑞                                                     1
+                                                                                                                    MAX𝑑 (𝑡1) = 𝑡
+𝐶 𝜀 (𝐿, 𝑞), 𝑞 = 1
+
+
+
+
+                    0
+                                                            0.8
+
+                                                                                                         0.5
+              −2                                                                                                                       𝑡
+                                                            0.6
+                                            𝜀 = 0.40                    MAX6
+                                            𝜀 = 0.16                    Λ = 20                                          𝑁Λ (𝑡1) = 0
+              −4
+                                            𝜀 = 0.05                    Λ = 80                              0
+                        −0.5            0       0.5               0              0.5               1            0              0.5         1
+                                        𝐿                                         𝑡                                                𝑡
+
+
+                           Figure 9. The tangent gate and the two-block selector at 𝑑 = 6. (a)
+                           The gate 𝐶 𝜀 (𝐿, 𝑞) of Equation (6.1) at 𝑞 = 1. It never exceeds 𝑞, and
+                           as 𝜀 ↓ 0 it tends to 𝑞 for 𝐿 > 0 and diverges to −∞ for 𝐿 < 0, which is
+                           Equation (6.2). (b) The two-block selector 𝑁Λ assembled below, along
+                           a segment on which the block winners change. It approaches MAX𝑑
+                           off the block tie, and the gap concentrates near the tie as Λ grows. (c)
+                           The diagonal 𝑥 = 𝑡1. Every unit vanishes there, so 𝑁Λ (𝑡1) = 0 for all Λ
+                           while MAX𝑑 (𝑡1) = 𝑡; the convergence is therefore in 𝐿 𝑝 only, not
+                           uniform.
+
+    When 𝐿 is a linear combination of first-layer outputs, Equation (6.1) is a legal second-
+ layer preactivation. A small tilt of one first-layer hyperplane supplies the affine quantity
+ 𝑞.
+6.1. Construction. We retain relative-coordinate channels so that every within-block
+comparison remains available to the second layer. Tilting selected cycle hinges then
+recovers the two block offsets, while loser penalties ensure that only the units for the block
+winners survive in the limit.
+   Split [𝑑] = 𝐴 ∪¤ 𝐵, with | 𝐴| = 𝑎 ≥ 3 and |𝐵| = 𝑏 ≥ 3. Choose anchors 𝑎 0 ∈ 𝐴, 𝑏 0 ∈ 𝐵,
+and write
+(6.3)                            𝛼 = 𝑥 𝑎0 ,    𝛽 = 𝑥 𝑏0 ,      𝑦 𝑖 = 𝑥 𝑖 − 𝛼,           𝑧 𝑗 = 𝑥 𝑗 − 𝛽,      𝛿 = 𝛼 − 𝛽.
+The first layer contains 𝑑 − 2 always-active relative-coordinate channels
+(6.4)                           𝜌(𝑦 𝑖 + 1) = 𝑦 𝑖 + 1        (𝑖 ≠ 𝑎 0 ),           𝜌(𝑧 𝑗 + 1) = 𝑧 𝑗 + 1              ( 𝑗 ≠ 𝑏 0 ),
+ and one oriented comparison hinge for every unordered pair within a block. All within-block
+ differences are therefore linear combinations of the first outputs and biases.
+    Choose a directed Hamiltonian cycle in each block. If 𝑠 𝐴, 𝑠 𝐵 are the successor maps, set
+(6.5)                                           𝐿 𝑖 = 𝑥𝑖 − 𝑥 𝑠 𝐴 (𝑖) ,           𝑀 𝑗 = 𝑥 𝑗 − 𝑥 𝑠𝐵 ( 𝑗 ) .
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                                25
+
+
+Tilt the corresponding cycle hinges by
+(6.6)                     𝐻𝑖, 𝜀 = 𝜌(𝐿 𝑖 − 𝜀𝛿),                𝐾 𝑗, 𝜀 = 𝜌(𝑀 𝑗 − 𝜀𝛽).
+All other comparison hinges remain untilted.
+   For a vertex 𝑣, use the stored orientation of every incident edge to reconstruct the
+blockwise loser penalty
+                                 ∑︁            ∑︁
+(6.7)                   𝐷 𝑣, 𝜀 =       ℎ𝑒, 𝜀 +       ℎ𝑒, 𝜀 − ℓ𝑒 .
+                                                               
+                                        𝑒=( 𝑝,𝑣)              𝑒=(𝑣,𝑞)
+
+At 𝜀 = 0, this is
+                                                    ∑︁
+(6.8)                                        𝐷𝑣 =         𝜌(𝑥 𝑤 − 𝑥 𝑣 ).
+                                                    𝑤≠𝑣
+Only two incident cycle edges move, and the tilt forms are bounded by one on the cube.
+Hence
+(6.9)                          |𝐷 𝑣, 𝜀 − 𝐷 𝑣 | ≤ 2𝜀,                 𝐷 𝑣, 𝜀 ≥ −2𝜀.
+   Set 𝜀 = Λ−2 . For 𝑗 ∈ 𝐵 and (𝑖, 𝑗) ∈ 𝐴 × 𝐵, use the second-layer units
+                                  𝑀 𝑗 − 𝐾 𝑗, 𝜀
+                                                              
+(6.10)                𝐺 𝑗,Λ = 𝜌                 + 𝑧 𝑗 − Λ𝐷 𝑗, 𝜀 ,
+                                       𝜀
+                                  𝐿 𝑖 − 𝐻𝑖, 𝜀
+                                                                               
+(6.11)               𝑅𝑖 𝑗,Λ = 𝜌                + 𝑦 𝑖 − 𝑧 𝑗 − Λ(𝐷 𝑖, 𝜀 + 𝐷 𝑗, 𝜀 ) .
+                                       𝜀
+All displayed affine differences are shorthand for legal linear combinations of Equation (6.4);
+there is no input skip.
+   At a point with unique block winners 𝑖∗ and 𝑗∗ , their unperturbed penalties vanish, every
+loser penalty is positive, and the winner’s outgoing cycle edge has positive comparison value.
+Also, 𝐷 𝑖∗ , 𝜀 , 𝐷 𝑗∗ , 𝜀 = 𝑂 (𝜀), so the choice 𝜀 = Λ−2 gives Λ𝐷 𝑖∗ , 𝜀 , Λ𝐷 𝑗∗ , 𝜀 = 𝑂 (Λ−1 ) → 0.
+By Lemma 6.1 and Equation (6.9),
+(6.12)          𝐺 𝑗,Λ → 1 { 𝑗= 𝑗∗ } 𝑥 𝑗∗ ,          𝑅𝑖 𝑗,Λ → 1 { (𝑖, 𝑗 )=(𝑖∗ , 𝑗∗ ) } 𝜌(𝑥 𝑖∗ − 𝑥 𝑗∗ ).
+Thus
+                                   ∑︁                   ∑︁
+(6.13)                     𝑁Λ =           𝐺 𝑗,Λ +                   𝑅𝑖 𝑗,Λ −→ MAX𝑑
+                                    𝑗∈𝐵              𝑖 ∈ 𝐴, 𝑗 ∈ 𝐵
+
+away from block ties. The inequality 𝐶 𝜀 (𝐿, 𝑞) ≤ 𝑞, together with Equation (6.9), bounds
+every 𝐺 𝑗,Λ and 𝑅𝑖 𝑗,Λ by an absolute constant. Dominated convergence proves the 𝐿 2 limit.
+    For this two-block tangent-gate sequence, used when 𝑑 ≥ 7, convergence is not uniform.
+If 𝑥 = 𝑡1 with 𝑡 ∈ (0, 1], then
+             𝛿 = 𝑦 𝑖 = 𝑧 𝑗 = 𝐿 𝑖 = 𝑀 𝑗 = 0,                𝐻𝑖, 𝜀 = 𝐾 𝑗, 𝜀 = 𝐷 𝑖, 𝜀 = 𝐷 𝑗, 𝜀 = 0.
+Consequently, every unit in Equations (6.10) and (6.11) vanishes, so 𝑁Λ (𝑡1) = 0 for every
+Λ, whereas MAX𝑑 (𝑡1) = 𝑡. Hence
+                                      sup       |𝑁Λ (𝑥) − MAX𝑑 (𝑥)| ≥ 𝑡
+                                  𝑥 ∈ [0,1] 𝑑
+
+for every Λ. This sequence establishes convergence in every finite 𝐿 𝑝 ; it does not furnish
+an exact finite-parameter realization. This defect is panel (c) of Figure 9.
+   The widths are
+                                
+                              𝑎      𝑏
+(6.14)                𝑚1 =       +      + 𝑑 − 2,      𝑚 2 = 𝑏(𝑎 + 1).
+                              2      2
+For odd 𝑑 = 2𝑛 + 1 ≥ 7, take (𝑎, 𝑏) = (𝑛 + 1, 𝑛) to obtain
+(6.15)                         (𝑚 1 , 𝑚 2 ) = (𝜅 𝑑 + 𝑑 − 2, 𝜅 𝑑 + 𝑑 − 1).
+26                                         SHUNQI LU
+
+
+For even 𝑑 = 2𝑛 ≥ 8, the slightly unbalanced split (𝑎, 𝑏) = (𝑛 + 1, 𝑛 − 1) gives
+(6.16)                      (𝑚 1 , 𝑚 2 ) = (𝜅 𝑑 + 𝑑 − 1, 𝜅 𝑑 + 𝑑 − 2).
+   In the two smallest remaining dimensions, explicit switching formulas give widths (6, 4)
+for 𝑑 = 5 and (8, 10) for 𝑑 = 6. Appendix C gives explicit network formulas and verifies
+their chamberwise limits. This proves the upper bound in Equation (2.32); the lower bound
+follows from Proposition 2.1 and Theorem 2.11.
+
+                                   7. Exact realization
+   We explain the support constraints behind Theorem 2.13. Appendix D gives the full
+proof.
+7.1. Nonlinear cores. A pair 𝜌(𝑟), 𝜌(−𝑟) with opposite coefficients in every next-layer
+preactivation transmits 𝜌(𝑟) − 𝜌(−𝑟) = 𝑟. Call such units paired channels; all unpaired
+units are cores. Paired channels contribute a linear form to every receiving preactivation,
+so only cores are counted as nonlinear first-layer resources. The support of a first core
+𝜌(𝑤⊤ 𝑥) is supp(𝑤) = {𝑖 : 𝑤𝑖 ≠ 0}.
+Proposition 7.1 (Paired-core reduction). If a standard two-hidden-layer network computes
+MAX𝑑 exactly on the cube, then there is a homogeneous paired-core network with two
+hidden layers computing MAX𝑑 on R𝑑 , with at most the original first width in first-layer
+cores. Every first-core normal 𝑤 satisfies
+(7.1)                          1⊤ 𝑤 = 0,        | supp(𝑤)| ≥ 2.
+For each 𝐼 ⊆ [𝑑] with |𝐼 | ≥ 3, restricting to the coordinates in 𝐼 produces an exact
+representation of MAX | 𝐼 | whose first cores are among those with support contained in 𝐼.
+   Proposition D.2 and Lemma D.3 prove the reduction by local homogenization at an
+interior diagonal point, followed by freezing external coordinates at separated negative
+values. Paired channels can increase the physical row count. Each retained first core
+nevertheless descends from a distinct original row, so its count satisfies 𝑚 ≤ 𝑚 1 .
+   In particular, every three-coordinate set contains the support of a first core. Otherwise the
+restriction would leave no nonlinear first layer and would give a finite shallow representation
+of MAX3 , contradicting Corollary 2.5.
+
+7.2. Missing comparisons. Let 𝑃 ⊆ [𝑑2 ] be the set of distinct two-coordinate core
+                                                
+supports. Define the missing-pair graph
+(7.2)                 𝐻 = 𝐾 𝑑 \ 𝑃,        𝑒 = |𝐸 (𝐻)|,        𝑠 = 𝑚 − |𝑃|,
+where 𝑚 is the number of first cores. The surplus 𝑠 counts support-three-or-larger cores
+and duplicate pair supports. Since
+                                         
+                                         𝑑
+(7.3)                               𝑚=      − 𝑒 + 𝑠,
+                                         2
+it is enough to charge missing edges to surplus cores.
+    Every triangle of 𝐻 forces a core supported on exactly that triangle: triple coverage
+supplies a support inside its three vertices, admissibility excludes singleton supports, and
+the definition of 𝐻 excludes all three pair supports. Paired channels cannot supply this
+core because their combined contribution is linear. An induced claw with center 𝑣 also
+forces a core supported on three or four of its vertices and containing 𝑣 (Lemma D.6). The
+latter constraint follows by differentiating in 𝑥 𝑣 : the first moment of the resulting signed
+atomic measure would otherwise express the maximum of the three leaf coordinates as
+a shallow ReLU sum. Lemma D.5 justifies this step without any sign restriction on the
+network coefficients. Figure 10 shows the two forced configurations.
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                                    27
+
+
+    (a)                                                       (b)
+                            𝑢                                                         𝑝
+
+
+
+                                                                                          𝑣
+
+               𝑣                        𝑤                               𝑞                          𝑟
+
+
+            triangle of 𝐻: a core on {𝑢, 𝑣, 𝑤}                      induced claw at 𝑣: a core containing 𝑣
+
+
+
+          Figure 10. The two configurations in the missing-pair graph 𝐻 of Equa-
+          tion (7.2) that force a surplus core. (a) A triangle {𝑢, 𝑣, 𝑤}: triple coverage
+          supplies a core inside these three vertices, and no pair among them is
+          a core support, so the core is supported on exactly the triangle. (b) An
+          induced claw centered at 𝑣: differentiating in 𝑥 𝑣 forces a core containing
+          𝑣 and supported on three or four of the four vertices. Counting these
+          witnesses without repetition bounds the surplus 𝑠 from below.
+
+
+   Let 𝑑 𝑣 be the degree of 𝑣 in 𝐻, let 𝜏(𝐻) be the number of triangles, and let 𝜅 𝑣 count
+induced claws centered at 𝑣. Triangle cores and claw witnesses are disjoint. A witness for
+a claw centered at 𝑣 cannot serve another center, and serves at most 𝑑 𝑣 − 2 claws at that
+center. Proposition D.7 therefore gives
+                                                        ∑︁     𝜅𝑣
+(7.4)                                  𝑠 ≥ 𝜏(𝐻) +                 .
+                                                             𝑑 −2
+                                                       𝑣:𝑑 ≥3 𝑣
+                                                          𝑣
+
+
+
+   Applying the local graph inequality in Lemma D.8 to each neighbor graph 𝐻 [𝑁 𝐻 (𝑣)]
+and summing gives
+                                                 ∑︁      𝜅𝑣     4𝑑
+(7.5)                              𝜏(𝐻) +                   ≥𝑒−    .
+                                                       𝑑 −2
+                                                 𝑣:𝑑 ≥3 𝑣
+                                                                 3
+                                                  𝑣
+
+
+Combining Equations (7.3) to (7.5) yields
+
+                                                            4𝑑
+                                                       
+                                                       𝑑
+(7.6)                                            𝑚≥       −    .
+                                                       2     3
+
+Integer rounding and 𝑚 ≤ 𝑚 1 prove Theorem 2.13.
+
+
+7.3. Nonattainment.
+
+Corollary 7.2 (Nonattainment). For every 𝑑 ≥ 14, there is a fixed standard architecture
+with first width 𝜅 𝑑 , finite second width, and zero infimal 𝐿 2 risk for MAX𝑑 , but no finite
+parameter vector in that architecture attains the infimum. Every minimizing parameter
+sequence has unbounded Euclidean norm.
+
+   Figure 11 summarizes the resulting picture.
+28                                                                        SHUNQI LU
+
+
+                                 (a)                                                                            (b)
+                                                                                                          1
+                                                                                                                                          𝑑 = 40
+ Infimal squared 𝐿2 error
+
+
+
+
+                                                                                Normalized error bound
+                                  bounded       zero infimum,    exact case
+                                   below        never attained     open
+                                                                                                                              𝑑 = 14
+                            𝜀𝑑                                                                           0.5
+
+
+
+                                                                                                         0.3
+
+                             0
+                                                                                                         0.2
+                                       𝜅𝑑 = 42               ℓ𝑑 = 73                                           102             106                 1010
+                                            First hidden width 𝑚1                                                       Parameter bound 𝑅
+
+
+                                 Figure 11. Nonattainment at the critical width, drawn at 𝑑 = 14. (a)
+                                 The infimal squared 𝐿 2 risk as a function of the first hidden width. Below
+                                 𝜅 𝑑 it is bounded away from zero by Theorem 2.11. At 𝜅 𝑑 it drops to zero
+                                 but is not attained, by Corollary 7.2; the open     circle marks this jump.
+                                 Attainment is possible only above ℓ𝑑 = 2 − ⌊4𝑑/3⌋, where the exact
+                                                                             𝑑
+
+                                 question remains open. (b) The rate 𝑅 −1/(𝑑+1) of Equation (2.14): a
+                                 minimizing sequence must send its parameter bound 𝑅 to infinity, and
+                                 does so slowly in high dimension.
+
+Proof. The upper construction in Section 3 gives zero infimal risk. For 𝑑 ≥ 14, the lower
+bound in Equation (2.34) is strictly larger than 𝜅 𝑑 , so no network with that first width
+represents MAX𝑑 exactly. If a minimizing parameter sequence had a bounded subsequence,
+that subsequence would remain minimizing, and finite-dimensional compactness would give
+a further convergent subsequence. The realization map is continuous at finite parameters
+on the compact cube, so the limit parameter would realize MAX𝑑 , a contradiction. Thus
+every minimizing sequence eventually leaves every bounded parameter set.                 □
+   Thus the proven exact first-width lower bound is asymptotically twice the first-layer
+closure threshold. The exact minimum and all-dimensional exact two-hidden-layer existence
+remain open.
+
+                                                                       8. Discussion
+8.1. Related bounds. Table 1 fixes the width conventions. Table 3 records the closest
+numerical results; the paragraphs below state the differences in model and target.
+
+                                       Reference        Target         Notion                                  Bound
+                                       [30]             Maximum        Approximation                           𝑤 ≤ 𝑑 (𝑑 + 1)
+                                       [28]             Maximum        Exact                                   𝑤 ≥ ⌊𝑑 2 /8 − 𝑑/4 − 1/2⌋
+                                       [7]              Sorting        Approximation                           𝑤 ≤ 4𝑑 2
+                                       This paper       Maximum        Closure                                 𝑟 cl = 𝜅 𝑑
+
+                                 Table 3. Related width bounds for two-hidden-layer ReLU networks.
+                                 Here 𝑤 denotes common width; the final row minimizes the first width,
+                                 allowing one fixed finite second width, and applies for 𝑑 ≥ 14. Parameter
+                                 restrictions for the associated lower bounds are stated below.
+
+   The upper selectors and lower-bound geometry of Safran, Reichman, and Valiant [30]
+are direct antecedents: top-two supports, Mantel’s theorem, and coordinate freezing. Their
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                    29
+
+
+approximation lower bound applies below common width 𝑑 2 /5 with exponentially bounded
+parameters. We add a coefficient-free rate for the fixed equilateral three-ray fan and
+an oblique cylinder, giving 𝑐 0 𝑑 −13 (𝑚 2 + 1) −10 with the same absolute constant 𝑐 0 as in
+Equation (2.31) and unrestricted parameters. The upper theorem optimizes first-layer
+closure width with one fixed decoder.
+    Exact MAX representation has been studied through extremal graph theory and polyhe-
+dral identities [12, 28, 1, 27, 38]. Rueß et al. give exact two-hidden-layer identities through
+𝑛 = 12. Our exact result is an all-dimensional first-layer lower bound with unrestricted
+finite decoder width.
+    For ordered aggregation, Dutta, Safran, and Valiant [7] give arbitrary-accuracy median
+and rank-statistic networks, including a quadratic-width sorter. For the median, they prove
+a positive error lower bound when the first width is at most 𝑑 − 1, at arbitrary depth. Their
+sorter is exact on separated inputs away from the boundary; controlling the exceptional set
+gives cube approximation. For 𝑞 ≥ 14, we determine the minimum first width in a fixed
+two-hidden-layer closure and prove a parameter-uniform subcritical law. Approximation
+rates for deep networks and differentiable top-𝑘 maps concern complementary resources
+[34, 32].
+    Broader approximation theory gives depth–width separations for natural target families
+[31], dimension-scale width thresholds when depth may grow [16], and wide-to-narrow
+conversions that spend additional depth [35]. A related unrestricted-parameter depth result
+is Safran [29]. Its theorems use constructed Lipschitz or CPWL targets, special absolutely
+continuous distributions, or exact cube equality. Our target is the coordinate maximum or
+an ordered 𝐿-statistic, the distribution is uniform on the cube, and, for 𝑑 ≥ 14, the quantity
+is the sharp first-layer 𝐿 2 -closure threshold of one depth-three class.
+
+8.2. Related methods. Nonclosed realization sets and nonattained objectives have been
+established for fixed architectures [22, 14]. Fixed-architecture nonclosedness also occurs
+in Sobolev topologies under activation-dependent hypotheses [17]. Finite-sample ReLU
+empirical risk can force parameter escape [15], while optimal shallow-ReLU approximants
+exist under the assumptions of Dereich and Kassing [6]. Maxout units place finite maxima
+inside the activation [9]; here the maximum remains the target of a standard ReLU network.
+Paired ReLUs and their symmetries are studied in earlier work [33, 23, 26], while hinging-
+hyperplane, ridge-function, and braid-arrangement methods provide the geometric setting
+[37, 24, 10, 5]. Classical arbitrary-ridge approximation gives sharp worst-case 𝐿 2 rates for
+Sobolev classes [18].
+    General CPWL functions admit modern dimension-independent neuron bounds in the
+number of pieces [4]. Finite-cost infinite-width shallow CPWL representations reduce to
+finite width [20], and two-hidden-layer networks weakly represent piecewise-linear finite
+elements with mesh-dependent widths [13].
+    The upper proof combines capped ReLU differences, gate penalties, active frame re-
+construction, and a downward Möbius localizer [22, 30, 25, 11]. The shallow lower bound
+uses Hermite probes, tensor rank, and matricization; related tensor methods appear in
+approximation and learning problems [36, 21, 3]. Appendix B derives the growing-order
+folded catalecticant and compact localization for the equilateral three-ray fan. The final
+matrix estimate uses Eckart–Young [8].
+
+8.3. Open questions. The critical construction has a nonpolynomial decoder bound.
+Gradient-based training, finite-precision behavior, and decoder optimality remain open. Fan
+localization applies to finite-ridge CPWL rules, including max-linear predictors, when each
+cell exposes enough active rows. Its width and conditioning depend on the arrangement. A
+related norm-controlled setting exhibits dimension-dependent shallow-network parameter
+growth that an additional hidden layer can reduce [39].
+30                                            SHUNQI LU
+
+
+    For the maximum in 5 ≤ 𝑑 ≤ 13, the known interval is max{𝑑, 𝜅 𝑑 } ≤ 𝑟 cl (𝑑) ≤ 𝑤cl (𝑑) ≤
+𝜅 𝑑 + 𝑑 − 1, with the improved upper bounds 6 at 𝑑 = 5 and 10 at 𝑑 = 6. The exact first-layer
+closure threshold within this interval remains open, as does that of general non-arithmetic
+ordered statistics in dimensions three through thirteen. The finite values of 𝑤cl (𝑑), the best
+critical decoder, and the norm–width tradeoff are also unknown. The exact theorem supplies
+an all-dimensional lower bound; general existence remains unresolved. In particular, the
+finite-dimensional exact constructions cited above do not establish an asymptotic upper
+bound on 𝑟 ex (𝑑). For 1 ≤ 𝑝 < 2, the matching first-layer 𝐿 𝑝 lower bound also remains
+unproved here; for 2 ≤ 𝑝 < ∞, remark 2.7 already gives the sharp threshold. Uniform
+approximation and norm-bounded closure provide further directions.
+
+
+                          Appendix A. Tournament certificates
+   This appendix records the explicit orientations and the finite checks behind Section 3.3.
+An arc is active when its tail is later in the coordinate order; reversing this convention
+reverses every order and leaves the minimum unchanged. Vertices are numbered 0, . . . , 𝑛−1,
+and bit 𝑢 of row 𝑣’s hexadecimal mask is one precisely when 𝑣 → 𝑢; Table 4 stores the
+seven orientations. The resulting minimum active counts and weighted sums are listed in
+Table 2.
+
+𝑛    Out-neighbor masks for rows 0, . . . , 𝑛 − 1
+ 7   16, 2c, 58, 31, 62, 45, 0b
+ 8   32, 8c, c9, 71, c6, 16, a3, 29
+ 9   03a, 1b0, 0a3, 156, 184, 1d8, 017, 049, 0c5
+10   214, 21d, 328, 3c1, 18c, 21b, 137, 067, 0a3, 1d0
+11   0cc, 255, 5e0, 476, 485, 153, 790, 22a, 29b, 43d, 1a3
+12   e52, 0ec, c81, 985, 54e, 05d, c0c, 671, 8e7, 97e, 32a, 4b2
+13   170a, 095c, 14e9, 0d70, 0aa5, 1443, 1991, 0a2b, 06b4, 106e, 1ad2, 1325,
+     019a
+
+         Table 4. Stored orientations for the seven tournament certificates. Exact
+         statistics appear in Table 2.
+
+
+   The verifier checks that each unordered pair has exactly one orientation, then evaluates
+the integer recurrences Equations (3.30) and (3.31). For 𝑛 = 7, independent enumeration
+of all 7! = 5040 orders confirms the minimum of seven. All seven stored masks satisfy
+both required inequalities.
+   For 14 ≤ 𝑛 ≤ 19, the proof instead uses an exact integer existence bound. With 𝑁 = 𝑛2 ,
+                                                                                          
+each of the six comparisons is
+                                                 𝑛−1  
+                                                 ∑︁   𝑁        1
+(A.1)                                  𝑛! 2− 𝑁             <
+                                                 𝑘=0
+                                                       𝑘       2
+
+checked as 2𝑛! 𝑘=0 𝑘 < 2 𝑁 , without floating-point arithmetic. Combining this strict
+                 Í𝑛−1 𝑁 
+failure bound with the Markov estimate from Equation (3.27) proves existence of an
+orientation satisfying both desired properties. The argument does not select an orientation
+in this block-size range.
+    For 𝑛 ≥ 20, Hoeffding’s inequality and 𝑛! ≤ 𝑛𝑛 give
+                                                      (𝑛 − 1) (𝑛 − 4) 2
+                                                                       
+(A.2)           Pr{min 𝑋𝑇 (𝜋) < 𝑛} ≤ exp 𝑛 log 𝑛 −                        < 1.
+                     𝜋                                      4𝑛
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                         31
+
+
+At 𝑛 = 20, use log 20 < 3 to bound the exponent by −4/5, so the right-hand side is strictly
+less than 1/2. Writing the exponent as 𝐻 (𝑛) = 𝑛 log 𝑛 − 𝑛2 /4 + 9𝑛/4 − 6 + 4/𝑛, one has
+        𝐻 ′ (𝑛) = log 𝑛 + 13/4 − 𝑛/2 − 4/𝑛2 < 0,                𝐻 ′′ (𝑛) = 1/𝑛 − 1/2 + 8/𝑛3 < 0
+for 𝑛 ≥ 20. Thus Equation (A.2) holds for the entire analytic range. Combining it with the
+same Markov bound gives both simultaneous properties for 𝑛 ≥ 20. The exact table values
+satisfy the same 𝑍 (𝑇) bound for 7 ≤ 𝑛 ≤ 13. Thus the explicit masks, exact binomial
+comparisons, and monotonicity argument together cover every block size 𝑛 ≥ 7, including
+the compressed-decoder requirement.
+A.1. The small-block obstruction. Write 𝛼𝑛 = max𝑇 min 𝜋 𝑋𝑇 (𝜋), where the maximum
+runs over all tournaments on 𝑛 vertices. Enumerating all 2 ( 2 ) labelled orientations gives
+                                                             𝑛
+
+
+
+                                       𝑛    2     3    4    5     6
+                                       𝛼𝑛   0     1    1    3     4
+The verifier code/verify small tournament obstruction.py checks every orienta-
+tion twice: by Equation (3.30), and independently by comparing its edge bits with those of
+all transitive orientations. For a fixed order, the number of differing bits is exactly its active
+count. Thus both checks are exhaustive integer computations.
+    Every tournament on seven vertices has a vertex with outdegree at most three. Placing
+it after an optimal order of the remaining six gives 𝛼7 ≤ 𝛼6 + 3 = 7, while the stored
+seven-vertex mask attains seven, so 𝛼7 = 7. Independent block orders imply that the
+maximum achievable minimum total active count is 𝛼 ⌈𝑑/2⌉ + 𝛼 ⌊𝑑/2⌋ . Its values are
+                           𝑑            5   6     7    8    9     10   11    12   13
+                   𝛼 ⌈𝑑/2⌉ + 𝛼 ⌊𝑑/2⌋    1   2     2    2    4      6    7     8   11
+Each is smaller than 𝑑, proving the stated obstruction to the active-row hypothesis for this
+balanced two-block arrangement.
+
+                             Appendix B. Three-ray estimate
+   We prove Theorem 2.3 for the fan in Equation (2.15). The argument has three steps: a
+compact probe turns each ridge into a rank-one tensor; an explicit matrix minor separates
+the target tensor from all tensors of rank at most 𝑊; and rescaling the probe into the unit
+disk converts this separation into the claimed 𝐿 2 estimate. Tracking the derivative order
+through the last step is what produces the exponent 10.
+B.1. Tensor localization. Throughout this proof, 𝑐, 𝐶 > 0 denote absolute auxiliary
+constants that may change between estimates. The resulting fixed constant in Equation (2.16)
+is denoted by 𝑐 △ .
+B.1.1. A compact probe. Let 𝐹 = 𝐹△ from Equation (2.15). Its three fan rays are denoted
+by 𝑡 𝑗 , and 𝑛 𝑗 is the corresponding unit normal. The distributional Hessian is
+                                       2
+                                    √ ∑︁
+                                  2
+(B.1)                           𝐷 𝐹= 3   𝑛 𝑗 𝑛⊤𝑗 H 1 ↾R+ 𝑡 𝑗 .
+                                                𝑗=0
+
+For a compactly supported 𝐶 𝑘 function 𝜓 on R2 , define
+                                1
+                                   ∫
+(B.2)             L 𝑘, 𝜓 (ℎ) = √       ℎ(𝑦)𝐷 𝑘 𝜓(𝑦) 𝑑𝑦 ∈ Sym 𝑘 (R2 ).
+                                 𝑘! R2
+Lemma B.1 (Tensor probes). Let 𝑘 ≥ 2. For ℎ ∈ 𝐿 2 ,
+                                                ∥𝐷 𝑘 𝜓∥ 𝐿2 (R2 ;Sym𝑘 )
+(B.3)                     ∥L 𝑘, 𝜓 (ℎ) ∥ 𝐹 ≤            √               ∥ℎ∥ 2 .
+                                                         𝑘!
+32                                               SHUNQI LU
+
+
+For every affine ridge 𝑟 (𝑦) = 𝜌(𝑤 · 𝑦 + 𝑏),
+(B.4)                                 L 𝑘, 𝜓 (𝑟) = 𝜆(𝑤, 𝑏)𝑤 ⊗𝑘
+                                                                               (2)
+for a scalar 𝜆(𝑤, 𝑏). Hence every matricization of the tensor of a member of R 𝑊   has rank
+at most 𝑊.
+Proof. The norm estimate is componentwise Cauchy–Schwarz. If 𝑤 = 0, the ridge is
+constant and its probe vanishes. For 𝑤 ≠ 0, distributionally,
+                            𝐷 𝑘 𝜌(𝑤 · 𝑦 + 𝑏) = 𝑤 ⊗𝑘 𝜌 (𝑘 ) (𝑤 · 𝑦 + 𝑏).
+Pairing the scalar distribution with 𝜓 leaves only a scalar. Affine terms vanish for 𝑘 ≥ 2.
+No parameter bound is used.                                                              □
+   We use odd orders 𝑘 = 2𝑞 + 3. If 𝑢 = 𝑎 𝑗 𝑡 𝑗 + 𝑏 𝑗 𝑛 𝑗 , then
+                              √ ∑︁ 2 ∫ ∞
+(B.5)          ⟨𝐷 𝑢𝑘 𝐹, 𝜓⟩ = − 3     𝑏𝑗        (𝑎 𝑗 𝜕𝑡 + 𝑏 𝑗 𝜕𝑠 ) 2𝑞+1 𝜓(𝑡, 0) 𝑑𝑡.
+                                         𝑗        0
+
+                                                                                     2
+Lemma B.2 (Radial finite-jet localization). Let 𝛾(𝑦) = (2𝜋) −1 𝑒 − ∥ 𝑦 ∥ /2 . If 𝜓 ∈ 𝐶𝑐∞ (R2 ) is
+radial and equals 𝛾 near zero, then
+(B.6)                                  ⟨𝐷 𝑘 𝐹, 𝜓⟩ = ⟨𝐷 𝑘 𝐹, 𝛾⟩
+for every odd 𝑘 ≥ 3.
+Proof. Expand one summand in Equation (B.5) as
+                                      𝑘−2 
+                                            𝑘 − 2 𝑘−2− 𝑗 𝑗 𝑘−2− 𝑗 𝑗
+                                      ∑︁         
+           (𝑎𝜕𝑡 + 𝑏𝜕𝑠 ) 𝑘−2 𝜓(𝑡, 0) =              𝑎    𝑏 𝜕𝑡     𝜕𝑠 𝜓(𝑡, 0).
+                                      𝑗=0
+                                              𝑗
+Radiality makes the terms with odd 𝑗 vanish on 𝑠 = 0. Since 𝑘 − 2 is odd, every surviving
+term has the positive odd tangential order 𝑚 = 𝑘 − 2 − 𝑗. Compact support (and Gaussian
+decay for 𝛾) removes the boundary at infinity, so
+                        ∫ ∞
+                                    𝑗                      𝑗
+                              𝜕𝑡𝑚 𝜕𝑠 𝜓(𝑡, 0) 𝑑𝑡 = −𝜕𝑡𝑚−1 𝜕𝑠 𝜓(0, 0).
+                            0
+The derivative on the right has total order (𝑚 − 1) + 𝑗 = 𝑘 − 3. Hence the pairing depends
+only on the order- at-most-𝑘 − 3 jet at the origin. Because 𝜓 = 𝛾 on a neighborhood of
+zero, these jets agree term by term, proving Equation (B.6).                            □
+B.1.2. The folded tensor. Define
+                                 1
+(B.7)                     𝑇𝑘 = √ ⟨𝐷 𝑘 𝐹, 𝛾⟩ ∈ Sym 𝑘 (R2 ).
+                                 𝑘!
+                                                         √                       √
+Work in the complexification and set 𝑒 + = (𝑒 1 − 𝑖𝑒 2 )/ 2, 𝑒 − = (𝑒 1 + 𝑖𝑒 2 )/ 2. For
+0 ≤ 𝑝 ≤ 𝑘, the normalized symmetric basis vector is
+                         −1/2 ∑︁ Ì 𝑘
+                  (𝑘 )  𝑘
+(B.8)           𝐸𝑝 =                     𝑓1{𝑎∈ 𝐴} , 𝑓1 = 𝑒 + , 𝑓0 = 𝑒 − .
+                        𝑝
+                                      𝐴⊆ [ 𝑘 ]
+                                    𝑎=1
+                                      | 𝐴|= 𝑝
+We use the Hermitian inner product that is conjugate-linear in its first
+                                                                   √ slot and linear in
+its second. These vectors are orthonormal. Put 𝑍 = (𝑋1 + 𝑖𝑋2 )/ 2, whose density is
+              2
+𝜋 −1 𝑒 − | 𝑧 | , and use the complex Hermite convention
+                                                               2       𝑗       2
+(B.9)                       𝐻 𝑝, 𝑗 (𝑧, 𝑧¯) = (−1) 𝑝+ 𝑗 𝑒 | 𝑧 | 𝜕𝑧¯𝑝 𝜕𝑧 𝑒 − | 𝑧 | .
+It satisfies
+                                   ¯ 𝑝′ , 𝑗 ′ (𝑍, 𝑍)
+                                                  ¯ = 𝑝! 𝑗! 1 { 𝑝= 𝑝′ , 𝑗= 𝑗 ′ } .
+                       h                             i
+(B.10)                E 𝐻 𝑝, 𝑗 (𝑍, 𝑍)𝐻
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                     33
+
+
+Gaussian integration by parts and Equation (B.8) give, for 𝑗 = 𝑘 − 𝑝,
+                                                                    ¯
+                                                  E[𝐹 (𝑋)𝐻 𝑝, 𝑗 (𝑍, 𝑍)]
+(B.11)                (𝑇𝑘 ) 𝑝 = ⟨𝐸 𝑝(𝑘 ) , 𝑇𝑘 ⟩ =       √︁              .
+                                                           𝑝! 𝑗!
+Lemma B.3 (Folded-binomial coordinates). For 𝑘 = 2𝑞 + 3, after a unitary basis rotation
+and one common phase,
+                                        √︄  
+                                            𝑘
+(B.12)                (𝑇𝑘 ) 𝑝 = 𝐵 𝑘 𝜖 𝑝        1 {2 𝑝−𝑘≡0 (mod 3) } ,
+                                            𝑝
+where
+                         √
+                        3 6      𝑞!
+(B.13)             𝐵𝑘 =                   ,      𝜖 𝑝 = (−1) min{ 𝑝,𝑘− 𝑝} .
+                         8𝜋 (2𝑞 + 3)!
+                             √︁
+
+                             √
+Proof. Write 𝑍 = (𝑋1 + 𝑖𝑋2 )/ 2 = 𝑟𝑒 𝑖 𝜃 for a standard Gaussian 𝑋 ∈ R2 . Then
+                   √       √
+(B.14)          𝐹 ( 2𝑍) = 2𝑟 ℎ(𝜃),          ℎ(𝜃) = max cos(𝜃 − 2𝜋 𝑗/3).
+                                                           𝑗
+
+For nonzero 𝑚, direct sector integration gives
+                                                     √
+                          ∫ 2𝜋                      3 3 (−1) 𝑚/3
+                      1                                          , 𝑚 ∈ 3Z,
+                                                  
+                                                  
+(B.15)                          ℎ(𝜃)𝑒 −𝑖𝑚𝜃 𝑑𝜃 = 2𝜋 1 − 𝑚 2
+                                                  
+                                                  
+                ℎ𝑚 =
+                     2𝜋    0
+                                                   0,             𝑚 ∉ 3Z.
+                                                  
+                                                  
+The profile ℎ is real and even, so ℎ −𝑚 = ℎ 𝑚 . For 𝑝 ≥ 𝑗, 𝑚 = 𝑝 − 𝑗, use
+                                                                   2
+                             𝐻 𝑝, 𝑗 (𝑧, 𝑧¯) = (−1) 𝑗 𝑗!𝑧 𝑚 𝐿 𝑚
+                                                             𝑗 (|𝑧| ).
+When 𝑝 + 𝑗 = 𝑘 = 2𝑞 + 3,
+                                                    𝑚 2 − 1 𝑞!
+                       ∫ ∞
+                                     2      2
+(B.16)                     𝑟 𝑚+2 𝑒 −𝑟 𝐿 𝑚
+                                        𝑗 (𝑟 ) 𝑑𝑟 =            .
+                         0                             8    𝑗!
+After 𝑥 = 𝑟 2 , Rodrigues’ formula and 𝑗 integrations by parts give
+                                                               𝑗 
+                 1 ∞ (𝑚+1)/2 − 𝑥 𝑚              (−1) 𝑗 1 − 𝑚        𝑚+3
+                  ∫                                                    
+(B.17)                 𝑥       𝑒 𝐿 𝑗 (𝑥) 𝑑𝑥 =                     Γ       .
+                 2 0                              2 𝑗!     2         2
+All boundary terms vanish: at infinity this follows from the exponential factor, while at
+zero the relevant primitive is 𝑂 (𝑥 (𝑚+3)/2 ). This also covers the endpoint 𝑚 = 1. Here
+𝑚 + 2 𝑗 = 2𝑞 + 3. Writing 𝑚 = 2𝑎 + 1, so 𝑎 = 𝑞 − 𝑗 + 1, reduces the right-hand side
+to 𝑎(𝑎 + 1)𝑞!/(2 𝑗!) = (𝑚 2 − 1)𝑞!/(8 𝑗!), proving Equation (B.16). This cancels the
+denominator in Equation (B.15). With the Gaussian and Hermite normalizations,
+                                                  √
+                                       ¯
+                     E[𝐹 (𝑋)𝐻 𝑝, 𝑗 (𝑍, 𝑍)]      3 6 𝑞!
+(B.18)                                       =−             (−1) 𝑗+𝑚/3
+                                                 8𝜋 𝑝! 𝑗!
+                            √︁                        √︁
+                               𝑝! 𝑗!
+when 𝑚 ∈ 3Z, and√︃ it is√zero otherwise. A rotation by 𝜋/3 removes (−1) . Finally,
+                                                                          𝑚/3
+
+1/ 𝑝!(𝑘 − 𝑝)! =     𝑝 / 𝑘!; folding the two sides of the center yields Equations (B.12)
+                    𝑘
+  √︁
+
+and (B.13).                                                                          □
+    As a low-order normalization check, the coordinate vectors in the orthonormal basis
+(𝐸 𝑝(𝑘 ) ) 𝑘𝑝=0 , after the same rotation and common phase as in Lemma B.3, are
+(B.19)
+ 𝑇3                           𝑇5         √          √         𝑇7          √         √
+     = (1, 0, 0, 1),              = (0, − 5, 0, 0, − 5, 0),       = (0, 0, 21, 0, 0, 21, 0, 0).
+ 𝐵3                           𝐵5                              𝐵7
+Thus the phase, support congruence, and square-root binomial factor can be checked directly
+at 𝑘 = 3, 5, 7. With 𝑟 = 𝑞 + 1 and 𝑠 = 𝑞 + 2, for each supported coordinate 𝑝, the squared
+34                                          SHUNQI LU
+
+                                                            −1 Í
+coefficients in its image under Equation (B.20) sum to 𝑝𝑘         𝑖+ 𝑗= 𝑝 𝑖 𝑗 = 1, which
+                                                                          𝑟  𝑠
+
+independently checks that the catalecticant map below is isometric on these examples.
+
+B.1.3. A central minor. Put 𝑟 = 𝑞 + 1, 𝑠 = 𝑞 + 2, so 𝑟 + 𝑠 = 𝑘. In normalized symmetric
+bases, grouping the first 𝑟 and last 𝑠 tensor slots defines the comultiplication Δ𝑟 ,𝑠 : Sym 𝑘 →
+Sym𝑟 ⊗ Sym𝑠 . With the normalization in Equation (B.8), one has exactly
+                                                   v
+                                                   u 𝑟  𝑠
+                                                   t
+                               (𝑘 )                     𝑖 𝑗
+                                                              𝐸 𝑖(𝑟 ) ⊗ 𝐸 (𝑠)
+                                          ∑︁
+(B.20)                 Δ𝑟 ,𝑠 𝐸 𝑝 =                       𝑘               𝑗 .
+                                   0≤𝑖 ≤𝑟 , 0≤ 𝑗 ≤𝑠     𝑝
+                                       𝑖+ 𝑗= 𝑝
+
+The coefficient counts the binary strings of weight 𝑝 having weights 𝑖 and 𝑗 in the two
+blocks. Vandermonde’s identity says that the squared coefficients in Equation (B.20) sum
+to one; images corresponding to distinct 𝑝 are orthogonal. Thus Δ𝑟 ,𝑠 is an isometry for the
+Frobenius norms, with no omitted factorial or binomial rescaling. Direct expansion in the
+normalized bases gives Δ𝑟 ,𝑠 (𝑣 ⊗𝑘 ) = 𝑣 ⊗𝑟 ⊗ 𝑣 ⊗𝑠 . Consequently, the matrix of Δ𝑟 ,𝑠 𝑇𝑘 is
+                                                    v
+                                                    u 𝑟  𝑠
+                                                    t
+                                                        𝑖    𝑗
+(B.21)                             𝑀𝑖 𝑗 = (𝑇𝑘 )𝑖+ 𝑗      𝑘 
+                                                               .
+                                                        𝑖+ 𝑗
+
+In particular, the normalized Hermite coordinates in Equations (B.11) and (B.12) pass to
+this catalecticant without a change of norm. By Equation (B.12),
+                                         √︄    
+                                             𝑟 𝑠
+(B.22)                  𝑀𝑖 𝑗 = 𝐵 𝑘 𝜖𝑖+ 𝑗            1 {𝑖+ 𝑗≡𝑟 −1 (mod 3) } .
+                                             𝑖 𝑗
+
+Lemma B.4 (Catalecticant tail). For every 𝑊 ≥ 1, one can choose 𝑞 ≍ 𝑊 2 so that
+(B.23)                             inf     ∥𝑀 − 𝑅∥ 𝐹 ≥ 𝑐𝑊 −3 .
+                                rank 𝑅≤𝑊
+
+Proof. We select a central square minor whose sign pattern has all singular values bounded
+below, and then control the two binomial weight factors. Take 𝑛 = 2𝑊 + 2, fix 𝐶0 = 64,
+choose 𝑞 = ⌈𝐶0 𝑛2 ⌉, and let
+                  𝐿 = 𝑟 − 1 − 3(𝑛 − 1),         𝑖0 = ⌊𝐿/2⌋,        𝑗0 = 𝐿 − 𝑖0 .
+Select rows 𝑖 𝑝 = 𝑖0 + 3𝑝 and columns 𝑗ℓ = 𝑗 0 + 3ℓ, 0 ≤ 𝑝, ℓ < 𝑛. Since 𝑛 ≥ 4 and 𝑞 = 64𝑛2 ,
+these indices lie in [0, 𝑟] and [0, 𝑠], respectively, and are within 2𝑛 of their respective
+centers. They satisfy the congruence in Equation (B.22), and 𝑖 𝑝 + 𝑗ℓ ≤ 𝑟 exactly when
+𝑝 + ℓ ≤ 𝑛 − 1. Writing 𝑢 = 𝑝 + ℓ, the selected sign is
+                                               (
+                                                 1,    𝑢 ≤ 𝑛 − 1,
+                             𝜖 𝐿+3𝑢 = (−1) 𝐿+𝑢
+                                                 −1, 𝑢 > 𝑛 − 1,
+
+because the definition of 𝜖 𝑡 = (−1) min(𝑡 ,𝑘−𝑡 ) switches at 𝑡 = 𝑟, and 𝑘 is odd. Multiplying
+row 𝑝 by (−1) 𝐿+ 𝑝 and column ℓ by (−1) ℓ therefore leaves +1 on 𝑝 + ℓ ≤ 𝑛 − 1 and −1 on
+its complement. Reversing the columns, ℓ ↦→ 𝑛 − 1 − ℓ, turns the first condition into 𝑝 ≤ ℓ.
+Thus the sign matrix is
+                                            (
+                                              1,     𝑝 ≤ ℓ,
+(B.24)                             𝑆 𝑝ℓ =
+                                              −1, 𝑝 > ℓ.
+
+Writing 𝑆 = 𝐼 + 𝐾 gives 𝐾 ∗ = −𝐾, hence 𝑆 ∗ 𝑆 = 𝐼 − 𝐾 2 ⪰ 𝐼. Every singular value of 𝑆 is at
+least one.
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                   35
+
+
+   All selected binomial indices are within 𝑂 (𝑛) of their centers. Thus, for 𝑁 ∈ {𝑟, 𝑠} and
+every selected index 𝑢, a local Stirling bound gives
+                              2𝑁            (𝑢 − 𝑁/2) 2
+                                                     
+                      𝑁
+(B.25)                    ≥ 𝑐 √ exp −𝐶                    ≥ 𝑐2 𝑁 𝑞 −1/2 ,
+                      𝑢         𝑁               𝑁
+                                 √
+because |𝑢 − 𝑁/2| = 𝑂 (𝑛) = 𝑂 ( 𝑞). Also 𝑞!2𝑞 / (2𝑞)! ≍ 𝑞 1/4 , while
+                                                  √︁
+
+                        (2𝑞 + 3)! = (2𝑞)!(2𝑞 + 1) (2𝑞 + 2) (2𝑞 + 3).
+Together with Equation (B.13), these estimates imply
+                  √︄    
+                       𝑟 𝑠
+(B.26)        min            ≥ 𝑐2 𝑘/2 𝑞 −1/2 ,   |𝐵 𝑘 |2 𝑘/2 𝑞 −1/2 ≥ 𝑐𝑞 −7/4 .
+              𝑝,ℓ     𝑖 𝑝 𝑗ℓ
+Thus the selected minor is 𝐵 𝑘 𝐷 1 𝑆𝐷 2 , up to signs, and each of its 𝑛 singular values is at
+least 𝑐𝑞 −7/4 . Restriction preserves a rank-𝑊 upper bound. Eckart–Young [8] therefore
+yields                                          √
+                          inf ∥ 𝑀 − 𝑅∥ 𝐹 ≥ 𝑐 𝑛 − 𝑊 𝑞 −7/4 ≥ 𝑐𝑊 −3 ,
+                      rank 𝑅≤𝑊
+because 𝑞 ≍ 𝑊 2 .                                                                           □
+   Complexification is a relaxation: every real rank-𝑊 tensor is a complex rank-𝑊 tensor,
+and all basis changes above are unitary.
+B.1.4. Compact localization.
+Lemma B.5 (Radial cutoff).√For every 𝑘 ≥ 3, there is a radial 𝐶𝑐∞ function 𝜒𝑘 and absolute
+constants 𝐴, 𝐶, with 𝑅 = 𝐴 𝑘, such that
+                            𝜒𝑘 = 1 on 𝐵 𝑅 ,     supp( 𝜒𝑘 ) ⊂ 𝐵2𝑅 ,
+(B.27)                   𝑗                 𝑗
+                      ∥𝐷 𝜒𝑘 ∥ ∞ ≤ (𝐶 𝑘/𝑅)     (0 ≤ 𝑗 ≤ 𝑘).
+For 𝜓 𝑘 = 𝛾 𝜒𝑘 ,
+                                  1
+                                       ∫
+(B.28)                                     ∥𝐷 𝑘 𝜓 𝑘 (𝑦) ∥ 2𝐹 𝑑𝑦 ≤ 𝐶.
+                                  𝑘!
+Proof. We first construct a cutoff with controlled derivatives through order 𝑘. Gaussian
+decay then
+         √ bounds every term introduced by the cutoff, including the full Leibniz sum, on
+the scale 𝑘!. Let 𝜌 𝜖 = |𝐵 𝜖 | −1 1 𝐵 𝜖 , take 𝑚 = 2𝑘 + 2, 𝜖 = 𝑅/(16𝑚), and set
+(B.29)                      𝛽 = 𝜌 ∗𝑚
+                                  𝜖 ∗ 𝜁𝜖 ,           𝜒𝑘 = 1 𝐵3𝑅/2 ∗ 𝛽,
+where 𝜁 𝜖 is a radial smooth probability density supported in 𝐵 𝜖 . The support of 𝛽 lies in
+𝐵 𝑅/8 , proving the plateau and support assertions. For a unit direction 𝑣, 𝐷 𝑣 𝜌 𝜖 is a signed
+boundary measure of total variation at most 2/𝜖. Put the 𝑗 ordered derivatives on 𝑗 distinct
+disk factors in Equation (B.29); Young’s inequality gives ∥𝐷 𝑗 𝜒𝑘 ∥ ∞ ≤ (2/𝜖) 𝑗 ≤ (𝐶 𝑘/𝑅) 𝑗 .
+Passing from ordered directional derivatives to the Frobenius tensor norm in dimension
+two costs at most another factor 𝐶 𝑗 , absorbed into the same absolute constant.
+   For the uncut Gaussian, Parseval gives
+                                         1                              𝑘!
+                      ∫                      ∫
+                                                                  2
+(B.30)                    ∥𝐷 𝑘 𝛾∥ 2𝐹 =           ∥𝜉 ∥ 2𝑘 𝑒 − ∥ 𝜉 ∥ 𝑑𝜉 =    .
+                       R2
+                                           2
+                                       (2𝜋) R2                          4𝜋
+We next prove the derivative-tail estimate, including its dependence on the derivative order.
+Define the probabilists’ multivariate Hermite tensor
+                                 H 𝑗 (𝑦) = (−1) 𝑗 𝛾(𝑦) −1 𝐷 𝑗 𝛾(𝑦).
+If 𝐺 is a standard Gaussian vector in R2 , then, in the complexification of Sym 𝑗 (R2 ),
+(B.31)                          H 𝑗 (𝑦) = E (𝑦 + 𝑖𝐺) ⊗ 𝑗 .
+                                                         
+36                                          SHUNQI LU
+
+
+To verify this normalization, contract both sides against 𝑢 ⊗ 𝑗 . The exponential generating
+function of the left-hand side is
+                            𝛾(𝑦 − 𝑡𝑢)                  𝑡 2 ∥𝑢∥ 2
+                                                                
+                                      = exp 𝑡⟨𝑦, 𝑢⟩ −              ,
+                              𝛾(𝑦)                          2
+which is also E exp(𝑡⟨𝑦 + 𝑖𝐺, 𝑢⟩); equality of the homogeneous coefficients and polarization
+give Equation (B.31).
+   The complexified Frobenius norm is a cross norm on pure tensors. Hence, for 𝑗 ≥ 1,
+Minkowski’s inequality gives
+                   ∥H 𝑗 (𝑦) ∥ 𝐹 ≤ E∥𝑦 + 𝑖𝐺 ∥ 𝑗 ≤ E(∥𝑦∥ + ∥𝐺 ∥) 𝑗
+                                                 1/ 𝑗  𝑗
+(B.32)                          ≤ ∥𝑦∥ + E∥𝐺 ∥ 𝑗             ≤ (∥𝑦∥ + 𝐶 𝑗) 𝑗 .
+                                                                      √︁
+
+
+Here the last inequality   √ is elementary    in dimension two: polar integration gives E∥𝐺 ∥ 𝑗 =
+2 Γ(1 + 𝑗/2) ≤ (𝐶 𝑗) . The case 𝑗 = 0 is immediate. Multiplication by 𝛾(𝑦) now
+ 𝑗/2                            𝑗
+
+proves, uniformly for 0 ≤ 𝑗 ≤ 𝑘,
+                                                                               2
+(B.33)                       ∥𝐷 𝑗 𝛾(𝑦) ∥ 𝐹 ≤ 𝐶 𝑗+1 (∥𝑦∥ + 𝑗) 𝑗 𝑒 − ∥ 𝑦 ∥ /2 .
+                                                                  √︁
+
+           √                               √                                     √
+Take 𝐴 ≥ 2. On ∥𝑦∥ ≥ 𝑅 = 𝐴 𝑘 and for 𝑗 ≤ 𝑘, one has 𝑗 ≤ ∥𝑦∥/𝐴. Squaring
+Equation (B.33) and using polar coordinates therefore gives
+                                                         ∫ ∞
+                                                                          2
+               ∥1 { ∥ 𝑦 ∥ ≥ 𝑅} 𝐷 𝑗 𝛾∥ 22 ≤ 𝐶 (𝐶 ′ ) 2 𝑗       𝑟 2 𝑗+1 𝑒 −𝑟 𝑑𝑟,
+(B.34)                                                    𝑅
+                                           1
+               ∫ ∞                                   ∫ ∞
+                                  2               2                                         2
+                      𝑟 2 𝑗+1 𝑒 −𝑟 𝑑𝑟 = 𝑒 −𝑅                (𝑅 2 + 𝑠) 𝑗 𝑒 −𝑠 𝑑𝑠 ≤ 𝑅 2 𝑗 𝑒 −𝑅 .
+                 𝑅                         2            0
+                               2
+Here (𝑅 2 + 𝑠) 𝑗 ≤ 𝑅 2 𝑗 𝑒 𝑗𝑠/𝑅 and 𝑗/𝑅 2 ≤ 𝐴 −2 ≤ 1/2, so the last integral is at most
+2𝑅 2 𝑗 , which cancels the prefactor 1/2. Taking square roots yields, with absolute constants
+independent of 𝑗, 𝑘,
+                                                                     2
+(B.35)                      ∥1 { ∥ 𝑦 ∥ ≥ 𝑅} 𝐷 𝑗 𝛾∥ 2 ≤ 𝐶 (𝐶 𝑅) 𝑗 𝑒 −𝑅 /2 .
+For completeness, the norms in Equations (B.33) and (B.35) are the Frobenius norms of
+the full ordered derivative tensors; thus no multi-index count is suppressed.
+   It remains to track the Leibniz sum. Since 0 ≤ 𝜒𝑘 ≤ 1, 𝜒𝑘 − 1 vanishes on 𝐵 𝑅 , and
+every positive-order derivative of 𝜒𝑘 also vanishes there. Symmetrization is an orthogonal
+projection for the Frobenius norm, so tensor Leibniz, Equation (B.27), and Equation (B.35)
+give
+                                     𝑘        ℓ
+                                    ∑︁   𝑘 𝐶𝑘                       2
+            ∥𝐷 (( 𝜒𝑘 − 1)𝛾) ∥ 2 ≤
+               𝑘
+                                                    𝐶 (𝐶 𝑅) 𝑘−ℓ 𝑒 −𝑅 /2
+                                    ℓ=0
+                                         ℓ     𝑅
+                                                    𝑘    2             √     2
+(B.36)                            ≤ 𝐶 𝐶 (𝑅 + 𝑘/𝑅) 𝑒 −𝑅 /2 ≤ 𝐶 (𝐶 𝐴 𝑘) 𝑘 𝑒 − 𝐴 𝑘/2 .
+                                                                                    √
+For ℓ = 0, the displayed cutoff factor means    √ the bound ∥ 𝜒𝑘 − 1∥ ∞ ≤ 1. Because 𝑘! ≥
+(𝑘/𝑒) 𝑘/2 , the ratio of the last expression to 𝑘! is at most
+                                              √      2 𝑘
+                                       𝐶 𝐶 𝐴 𝑒 𝑒 − 𝐴 /2 .
+Fixing one sufficiently large absolute 𝐴 makes this uniformly bounded for all 𝑘 ≥ 3. Thus
+                                                         √
+(B.37)                          ∥𝐷 𝑘 (( 𝜒𝑘 − 1)𝛾) ∥ 2 ≤ 𝐶 𝑘!.
+The triangle inequality and Equation (B.30) now prove Equation (B.28).                         □
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                   37
+
+
+Completion of Theorem 2.3. By Lemma B.2, the cut and uncut Gaussian pairings agree.
+Distributional integration by parts therefore gives
+(B.38)                              L 𝑘, 𝜓𝑘 (𝐹) = (−1) 𝑘 𝑇𝑘 .
+This global sign has no effect on any singular value. Choose a fixed 0 < 𝛿 < 1, put
+                                     𝛿
+(B.39)                       𝜎=        ,      e𝑘 (𝑦) = 𝜓 𝑘 (𝑦/𝜎),
+                                              𝜓
+                                    2𝑅
+Then supp( 𝜓 e𝑘 ) ⊂ 𝐵 𝛿 ⋐ B2 , so the probe remains centered at the fan vertex and no
+translation is used. Consequently, the final Cauchy–Schwarz step below uses only 𝐿 2 (𝐵 𝛿 ):
+no global ridge is assumed to belong to 𝐿 2 (R2 ). Scaling in two dimensions gives
+                     ∥𝐷 𝑘 𝜓
+                          e𝑘 ∥ 2                   ⟨𝐷 𝑘 𝐹, 𝜓
+                                                           e𝑘 ⟩
+(B.40)                 √         ≤ 𝐶𝜎 1−𝑘 ,           √         = 𝜎 3−𝑘 𝑇𝑘 .
+                          𝑘!                             𝑘!
+For 𝑊 ≥ 1, take the same 𝑞 = ⌈𝐶0 (2𝑊 + 2) 2 ⌉ as in Lemma B.4, set 𝑘 = 2𝑞 + 3, and use the
+corresponding probe above. Combining Lemmas B.1 and B.4 and Equation (B.40) gives,
+                (2)
+for every 𝑔 ∈ R 𝑊   ,
+
+(B.41)                          ∥𝑔 − 𝐹 ∥ 2 ≥ 𝑐𝜎 2 (𝑊 + 1) −3 .
+Here 𝑅 ≍ 𝑊 + 1, hence 𝜎 ≍ (𝑊 + 1) −1 , and ∥𝑔 − 𝐹 ∥ 2 ≥ 𝑐(𝑊 + 1) −5 . Squaring proves
+Equation (2.16). Since R 0(2) ⊆ R 1(2) , the case 𝑊 = 0 follows from the width-one bound
+after decreasing the absolute constant.                                                □
+
+                             Appendix C. Small dimensions
+   The construction in Section 6 gives the general upper bound. Here we give the smaller
+standard networks used in dimensions five and six. All displayed linear channels are
+nonnegative on the cube and are therefore valid ReLU outputs.
+
+C.1. Dimension five. On [0, 1] 5 , use the six first outputs
+                            𝑢3 = 𝑥3 ,              𝑢5 = 𝑥5 ,
+                           ℎ12 = 𝜌(𝑥 1 − 𝑥2 ),   ℎ13 = 𝜌(𝑥1 − 𝑥3 ),
+                           ℎ23 = 𝜌(𝑥 2 − 𝑥3 ),   ℎ45 = 𝜌(𝑥4 − 𝑥5 ).
+Define the following linear combinations of those outputs:
+         𝐵 = 𝑢 5 + ℎ45 ,   𝑃1 = 𝑢 3 − 𝑢 5 + ℎ13 − ℎ45 ,     𝑃2 = 𝑢 3 − 𝑢 5 + ℎ23 − ℎ45 .
+Then the four-neuron second layer and affine output
+(C.1)             𝑁Λ = 𝜌(𝐵) + 𝜌(𝑃1 ) + 𝜌(𝑃2 − Λℎ12 ) − 𝜌(𝑃1 − Λℎ12 )
+equal MAX𝑑 when 𝑥1 ≤ 𝑥 2 . When 𝑥1 > 𝑥2 , the last two terms vanish in the limit and the
+first two terms give MAX𝑑 . The gated terms are dominated by their ungated ReLUs, so
+convergence holds in every finite 𝐿 𝑝 . This proves 𝑤cl (5) ≤ 6.
+
+C.2. Dimension six. Use 𝑢 3 = 𝑥3 , 𝑢 6 = 𝑥6 and all three within-triple comparison hinges
+in each of {1, 2, 3} and {4, 5, 6}. Thus the first width is eight. Set
+                ℎ = 𝜌(𝑥1 − 𝑥2 ),     𝐴1 = max(𝑥 1 , 𝑥3 ),      𝐴0 = max(𝑥 2 , 𝑥3 ),
+
+                𝑘 = 𝜌(𝑥4 − 𝑥 5 ),    𝐵1 = max(𝑥4 , 𝑥6 ),       𝐵0 = max(𝑥5 , 𝑥6 ),
+38                                         SHUNQI LU
+
+
+where every 𝐴𝑟 , 𝐵𝑟 is linear in the eight first outputs. Abbreviate [𝑃] 𝐷,Λ = 𝜌(𝑃 − Λ𝐷).
+The ten second neurons enter as
+        𝑁Λ = 𝐴1 + 𝜌(𝐵1 − 𝐴1 ) − [ 𝐴1 − 𝐵1 ] ℎ,Λ + [ 𝐴0 − 𝐵1 ] ℎ,Λ
+               − [𝐵1 − 𝐴1 ] 𝑘,Λ + [𝐵0 − 𝐴1 ] 𝑘,Λ + [𝐵1 − 𝐴1 ] ℎ+𝑘,Λ − [𝐵1 − 𝐴0 ] ℎ+𝑘,Λ
+(C.2)          − [𝐵0 − 𝐴1 ] ℎ+𝑘,Λ + [𝐵0 − 𝐴0 ] ℎ+𝑘,Λ .
+The apparently affine term 𝐴1 is the output of the legal neuron 𝜌( 𝐴1 ) = 𝐴1 . In the four
+states determined by ℎ = 0 or ℎ > 0 and 𝑘 = 0 or 𝑘 > 0, the limit of Equation (C.2) is
+respectively the maximum of the selected pair among 𝐴0 , 𝐴1 and 𝐵0 , 𝐵1 , hence MAX6 .
+Every second output lies in [0, 1], so dominated convergence applies and 𝑤cl (6) ≤ 10.
+   Combining the small constructions with Equation (2.32) for the general construction
+proves Theorem 2.12.
+
+                                Appendix D. Exact width
+    This section proves Theorem 2.13.
+    We use the following elementary obstruction. A finite one-hidden-layer ReLU function
+in three variables is affine off a finite union of complete affine hyperplanes. After terms
+with the same supporting hyperplane are combined, its distributional Hessian has one
+constant matrix-valued density on each complete hyperplane, away from its intersections
+with the other hyperplanes. For distinct 𝑖, 𝑗, 𝑘, the Hessian density of MAX3 on {𝑥𝑖 = 𝑥 𝑗 }
+is nonzero on the open half
+                                          𝑥𝑖 = 𝑥 𝑗 > 𝑥 𝑘
+and zero on the opposite open half 𝑥 𝑖 = 𝑥 𝑗 < 𝑥 𝑘 . To compare the two measures, choose one
+point in each half outside the finitely many intersections with the other ridge hyperplanes,
+and test in sufficiently small neighborhoods of those points. Ridge hyperplanes distinct from
+{𝑥𝑖 = 𝑥 𝑗 } make no contribution there. The coincident ridge terms would therefore need the
+same constant density to be both nonzero and zero, which is impossible. Consequently
+                               
+                                           𝑊
+                                            ∑︁                             
+                                                                           
+(D.1)               MAX3 ∉ 𝑎 0 + 𝑎 𝑥 +⊤
+                                                𝑐 𝑗 𝜌(𝑣 𝑗 𝑥 + 𝑏 𝑗 ) : 𝑊 < ∞ .
+                                                       ⊤
+                               
+                                                                          
+                                                                           
+                                                                          
+                               
+                                           𝑗=1                            
+                                                                           
+This argument permits arbitrary real coefficients, directions, and biases.
+   The proof first pairs affine channels without charging them as nonlinear cores, then
+charges missing pair supports to support-three and support-four cores through triangles
+and centered induced claws. The next two subsections give the normalization and counting
+arguments.
+
+D.1. Paired normalization. An arbitrary exact network need not be homogeneous, and a
+ReLU that is strictly active near a diagonal point passes its preactivation there. A literal row
+count after local homogenization can therefore overstate the number of nonlinear resources
+by a factor of two. We isolate this degeneracy exactly.
+Definition D.1 (Paired-core network). At hidden layer ℓ, a paired channel consists of
+(D.2)                               𝜌(𝑟 ℓ𝑏 ),     𝜌(−𝑟 ℓ𝑏 )
+whose two coefficients in every preactivation of the next layer are (𝑣, −𝑣). The pair con-
+tributes
+(D.3)                           𝑣𝜌(𝑟 ℓ𝑏 ) − 𝑣𝜌(−𝑟 ℓ𝑏 ) = 𝑣𝑟 ℓ𝑏 .
+Every unpaired hidden neuron is called a core. The effective width is 𝑤eff = maxℓ |𝐶ℓ |,
+where 𝐶ℓ is the set of cores at layer ℓ.
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                    39
+
+
+   The pair in Equation (D.2) is a standard CReLU object and Equation (D.3) is classical
+[33, 23, 26]. What matters here is the downstream opposite-column invariant: complete-row
+duplication at a later layer preserves every earlier pair simultaneously.
+   Call a global homogeneous paired-core network admissible for MAX𝑑 if every first-core
+normal 𝑤 satisfies
+(D.4)                          1 · 𝑤 = 0,      | supp(𝑤)| ≥ 2.
+Proposition D.2 (Paired normalization). Suppose an ordinary depth-𝑘 ReLU network of
+width 𝑊 agrees with MAX𝑑 on [0, 1] 𝑑 . Then there is an admissible global homogeneous
+paired-core network of the same depth, computing MAX𝑑 , with effective width at most 𝑊.
+For 𝑘 = 3, the number 𝑚 of first-layer cores is at most the original first hidden width 𝑚 1 .
+Proof. Choose 𝑐 ∈ (0, 1) outside the finite set of isolated zeros of the non-identically-zero
+affine functions
+(D.5)                               𝛽𝑖 (𝑐) = 𝑏 𝑖 + 𝑐 1 · 𝑤𝑖
+in the original first layer. Translate 𝑥 = 𝑦 + 𝑐1 and subtract 𝑐 at the output. The translated
+network agrees with MAX𝑑 (𝑦) on a neighborhood of zero.
+    Process the hidden layers from input to output. When a row is processed, all earlier
+hidden biases have already been removed, so its preactivation has the form 𝑟 (ℎ) + 𝑏, with
+𝑟 (ℎ) → 0 as ℎ → 0. A row with 𝑏 < 0 is inactive on a sufficiently small common
+neighborhood and is deleted. A row with 𝑏 = 0 is retained as one core. If 𝑏 > 0, replace
+the locally affine row by 𝜌(𝑟), 𝜌(−𝑟). If its old outgoing coefficient was 𝑣, use 𝑣, −𝑣 and
+add 𝑣𝑏 to the receiving bias. Locally,
+(D.6)                  𝑣𝜌(𝑟) − 𝑣𝜌(−𝑟) + 𝑣𝑏 = 𝑣(𝑟 + 𝑏) = 𝑣𝜌(𝑟 + 𝑏).
+   Suppose a later complete row has entries (𝑎, −𝑎) on an existing pair of columns. Duplicat-
+ing that row as 𝑟, −𝑟 creates entries (𝑎, −𝑎) and (−𝑎, 𝑎); both remain in the opposite-column
+subspace. Thus every previously created pair remains paired through all later processing.
+Each core descends from one original row in its layer, so no layer contains more than 𝑊
+cores.
+   This is an effective-core count, not a claim that the displayed normalized network has at
+most 𝑊 physical ReLU rows. A locally affine original row may be replaced by two opposite
+ReLUs. Those auxiliary rows transmit a linear form in the preceding-layer outputs and are
+excluded from the nonlinear-core count; retained cores still inject into the original rows. In
+particular, for depth three their number in the first layer is at most the original 𝑚 1 .
+   All hidden biases have now vanished. Equality at the origin forces the output bias to
+vanish as well. The constructed function and MAX𝑑 are positively homogeneous and agree
+near zero, so the equality is global.
+   A first-layer row is retained only if 𝛽𝑖 (𝑐) = 0. Genericity of 𝑐 then forces Equation (D.5)
+to vanish identically, hence 𝑏 𝑖 = 0 and 1 · 𝑤𝑖 = 0. Delete a zero vector. A nonzero zero-sum
+vector cannot have singleton support, proving Equation (D.4).                                □
+   We next make coordinate restrictions without accidentally creating new first-layer non-
+linear resources.
+Lemma D.3 (Retained-support principle). Let an admissible paired-core representation
+of MAX𝑑 with two hidden layers have first-core supports 𝑆1 , . . . , 𝑆 𝑚 . For every 𝐼 ⊆ [𝑑],
+|𝐼 | = 𝑟 ≥ 3, there is an admissible paired-core representation of MAX𝑟 with two hidden
+layers and at most
+(D.7)                               𝑁 𝐼 = #{𝑎 : 𝑆 𝑎 ⊆ 𝐼}
+first-layer cores. Every such core is the restriction of an original core whose support is
+contained in 𝐼.
+40                                            SHUNQI LU
+
+
+Proof. Order the coordinates outside 𝐼 as 𝑗 1 , . . . , 𝑗 𝑞 , fix
+(D.8)                                        𝑥 𝑗ℓ = −𝑅ℓ ,
+and let the coordinates in 𝐼 range over a bounded positive box. For a core whose support is
+not contained in 𝐼, its frozen contribution is a nonzero polynomial in 𝑅. The term with
+largest ℓ such that 𝑤 𝑗ℓ ≠ 0 is its leading term. Because only finitely many cores occur, one
+sufficiently large common 𝑅 fixes the sign of every such preactivation throughout the box.
+The corresponding ReLU is affine or zero. Cores supported inside 𝐼 remain homogeneous,
+and the target is MAX𝑟 because the frozen coordinates lie below the box.
+   Translate an interior diagonal point of the box to zero. Retained zero-sum cores acquire
+no bias. Collapse the affine first-layer outputs into the second layer, absorbing their constant
+terms into its biases. Represent each required linear form as an opposite ReLU pair
+𝜌(𝑟), 𝜌(−𝑟), keep every existing pair through Equation (D.3), and apply the three local
+cases from Proposition D.2 to the former second layer. Complete-row duplication preserves
+pairedness. It can add auxiliary physical rows but creates no new first core. Local equality
+globalizes by homogeneity, proving Equation (D.7).                                            □
+Corollary D.4 (Triple coverage). In every admissible paired-core representation of MAX𝑑
+with two hidden layers, each three-set 𝐼 ⊆ [𝑑] contains a first-core support.
+Proof. Otherwise Lemma D.3 would remove the first nonlinear layer completely. In each
+second-layer preactivation, the two terms of every remaining first-layer pair combine to one
+linear form by Equation (D.3); affine terms created by restriction can likewise be absorbed
+into that preactivation. This leaves a finite one-hidden-layer representation of MAX3 , in
+contradiction with Equation (D.1).                                                         □
+   The relative version of the same normalization can also be iterated after freezing external
+coordinates. The present paper needs only the two-hidden-layer statement above.
+
+D.2. Support rigidity. We now prove Theorem 2.13. Work with the admissible homo-
+geneous paired-core representation supplied by Proposition D.2, and let 𝑚 ≤ 𝑚 1 be the
+number of its first-layer cores. For each core 𝜌(𝑤𝑎 · 𝑥), write 𝑆 𝑎 = supp(𝑤𝑎 ).
+   Let 𝑃 ⊆ [𝑑2 ] be the set of distinct two-coordinate supports occurring among the 𝑆 𝑎 ,
+                 
+and define the missing-pair graph
+(D.9)            𝐻 = 𝐾 𝑑 \ 𝑃,        𝑝 = |𝑃|,        𝑒 = |𝐸 (𝐻)|,          𝑠 = 𝑚 − 𝑝.
+Thus 𝑠 counts every core of support at least three and every duplicate pair support beyond
+its first occurrence, and
+                                           
+                                           𝑑
+(D.10)                              𝑚=         − 𝑒 + 𝑠.
+                                           2
+The problem is to charge missing pair supports to the surplus 𝑠.
+
+D.2.1. Coordinate descent. The following elementary distributional identity prevents an
+unlimited second hidden layer from hiding a missing coordinate inside arbitrary signed
+cancellations.
+Lemma D.5 (First atomic moment). Let 𝑉 be a vector space of continuous functions of 𝑦.
+Suppose
+                                                      𝑁
+                                                     ∑︁
+(D.11)         max{𝑡, 𝑀 (𝑦)} = 𝐴(𝑦)𝑡 + 𝐵(𝑦) +               𝛼𝜈 𝜌(𝑎 𝜈 𝑡 + 𝑣𝜈 (𝑦)) ,      𝑣𝜈 ∈ 𝑉,
+                                                      𝜈=1
+for all 𝑡 ∈ R and all 𝑦, where 𝐴, 𝐵 are continuous, 𝑁 < ∞, and 𝛼𝜈 , 𝑎 𝜈 ∈ R are constants.
+Then 𝑀 ∈ 𝑉.
+             SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                      41
+
+
+Proof. Fix 𝑦 and take the second distributional derivative with respect to 𝑡. The affine term
+disappears and one obtains an equality of finite signed atomic measures,
+                                       ∑︁
+(D.12)                      𝛿 𝑀 ( 𝑦) =      𝛼𝜈 |𝑎 𝜈 |𝛿 −𝑣𝜈 ( 𝑦)/𝑎𝜈 .
+                                        𝜈:𝑎𝜈 ≠0
+
+Taking first moments gives
+                                        ∑︁
+(D.13)                     𝑀 (𝑦) = −             𝛼𝜈 sgn(𝑎 𝜈 )𝑣𝜈 (𝑦) ∈ 𝑉 .
+                                       𝜈:𝑎𝜈 ≠0
+
+Formally, one may test Equation (D.12) against a compactly supported smooth function that
+agrees with 𝑡 on an interval containing all atoms. Because 𝑦 was arbitrary, Equation (D.13)
+holds pointwise.                                                                         □
+
+    Every triangle of 𝐻 forces a core whose support is exactly that triangle: all three pair
+supports are missing, while Corollary D.4 forces some support inside the three-set and
+admissibility excludes supports of size at most one. Affine terms and paired channels do
+not supply an alternative nonlinear resource: they combine to affine first-layer features,
+which cannot by themselves realize MAX3 after one further hidden layer. Distinct triangles
+therefore force distinct support-three cores. Triangle counting alone is insufficient for a
+linear-deficit theorem; the additional constraint is centered.
+    For an induced claw 𝐶 = (𝑣; {𝑎, 𝑏, 𝑐}) of 𝐻, with center 𝑣 and leaf set {𝑎, 𝑏, 𝑐}, call a
+first-core support 𝑆 𝑗 a center witness for 𝐶 if
+(D.14)                    𝑣 ∈ 𝑆 𝑗 ⊆ {𝑣, 𝑎, 𝑏, 𝑐},         |𝑆 𝑗 | ∈ {3, 4}.
+Lemma D.6 (Centered induced-claw witness). Let 𝐼 = {𝑣, 𝑎, 𝑏, 𝑐} induce a claw in 𝐻,
+with center 𝑣. Then some first-core support is a center witness for this claw.
+Proof. Restrict the paired-core representation to 𝐼 by Lemma D.3. Put 𝑡 = 𝑥 𝑣 and 𝑦 =
+(𝑥 𝑎 , 𝑥 𝑏 , 𝑥 𝑐 ), and suppose that no retained core contains 𝑣. Every retained nonlinear first
+feature then depends only on 𝑦; paired channels transmit only linear forms. Let
+(D.15)               𝑉 = span {1, 𝑦 𝑎 , 𝑦 𝑏 , 𝑦 𝑐 } ∪ {𝜌(𝑤 𝑗 · 𝑦) : 𝑗 is a retained core} .
+                                                                                         
+
+After absorbing second-layer paired channels into a term affine in 𝑡, every remaining second-
+layer preactivation has the form 𝑎 𝜈 𝑡 + 𝑣𝜈 (𝑦), with 𝑣𝜈 ∈ 𝑉. Here 𝑎 𝜈 is constant because
+only linear first-layer channels depend on 𝑡; all retained nonlinear features depend on 𝑦
+alone. The affine remainder has zero second derivative in 𝑡, so neither it nor the paired
+channels can contribute an additional atom to the measure in Equation (D.12). Applying
+Lemma D.5 to
+(D.16)                               max{𝑡, MAX3 (𝑦)}
+would imply MAX3 ∈ 𝑉. This contradicts the one-hidden-layer obstruction Equation (D.1).
+   Hence a retained core contains 𝑣. It is not a singleton by admissibility. None of the three
+center–leaf pairs can be its support, because these are edges of 𝐻, hence absent from 𝑃. Its
+support is therefore a center-containing three- or four-set.                                 □
+
+   For 𝑣 ∈ [𝑑], let 𝑑 𝑣 = deg 𝐻 (𝑣), let 𝑡 𝑣 = |𝐸 (𝐻 [𝑁 𝐻 (𝑣)])|, and let 𝜅 𝑣 be the number of
+independent three-sets in 𝐻 [𝑁 𝐻 (𝑣)]. Equivalently, 𝜅 𝑣 is the number of induced claws of
+𝐻 centered at 𝑣. Denote the number of triangles of 𝐻 by 𝜏(𝐻).
+Proposition D.7 (Center-sensitive resource certificate). The surplus in Equation (D.9)
+obeys
+                                           ∑︁      𝜅𝑣
+(D.17)                        𝑠 ≥ 𝜏(𝐻) +                .
+                                                𝑑
+                                         𝑣:𝑑 ≥3 𝑣
+                                                    −2
+                                                     𝑣
+42                                         SHUNQI LU
+
+
+Proof. Reserve one forced support-three core for every triangle of 𝐻. Such a core cannot
+be a center witness for an induced claw, because the claw’s four-set is triangle-free.
+    For each induced claw, choose one center witness supplied by Lemma D.6. If a chosen
+support-three witness is 𝑆 = {𝑣, 𝑎, 𝑏}, then 𝐻 [𝑆] is the two-edge path with unique center
+𝑣: 𝑣𝑎, 𝑣𝑏 ∈ 𝐸 (𝐻), while 𝑎𝑏 ∉ 𝐸 (𝐻) because 𝑎, 𝑏 are leaves of the same induced claw.
+Consequently this support cannot witness a claw with another center, and it belongs to at
+most 𝑑 𝑣 − 2 claws centered at 𝑣, one for each choice of the third leaf. A support-four witness
+fixes its four-set; if that four-set induces a claw, its degree-three vertex is the unique center.
+It therefore witnesses only that claw and has capacity one, which is no larger than 𝑑 𝑣 − 2.
+Thus the sets of eligible witnesses for different centers are disjoint. At least 𝜅 𝑣 /(𝑑 𝑣 − 2)
+distinct non-triangle cores are needed at each center 𝑣, and adding the reserved triangle
+cores proves Equation (D.17).                                                                  □
+D.2.2. A graph inequality. The certificate becomes near-complete only after applying an
+extremal inequality separately inside every neighbor graph.
+Lemma D.8 (Edges versus independent triples). If a graph 𝐽 has 𝑟 ≥ 3 vertices, 𝑞 edges,
+and 𝑖 independent three-sets, then
+                                   𝑞     𝑖      𝑟 4
+(D.18)                                +      ≥ − .
+                                   3 𝑟 −2 2 3
+Proof. Every non-independent triple contains an edge, and every edge is contained in 𝑟 − 2
+triples. Hence
+                                   
+                                   𝑟
+(D.19)                        𝑖≥      − 𝑞(𝑟 − 2),     𝑖 ≥ 0.
+                                   3
+It follows that
+                                   𝑞 𝑟 (𝑟 − 1) 2𝑞     𝑟 (𝑟 − 1)
+                                                 
+                     𝑞   𝑖
+(D.20)                 +    ≥ max ,           −     ≥           .
+                     3 𝑟 −2        3     6      3         18
+For 𝑟 = 3, 4 and 𝑟 ≥ 6, this is at least the right-hand side of Equation (D.18), since
+                        𝑟 (𝑟 − 1)       𝑟 4        (𝑟 − 4) (𝑟 − 6)
+                                             
+(D.21)                             −      −     =                  ≥ 0.
+                            18          2 3              18
+For 𝑟 = 5, Equation (D.18) is equivalent, by integrality, to 𝑞 + 𝑖 ≥ 4. This is immediate for
+𝑞 ≥ 4; for 𝑞 ≤ 3, Equation (D.19) gives 𝑞 + 𝑖 ≥ 10 − 2𝑞 ≥ 4.                               □
+Proof of Theorem 2.13. Each triangle of 𝐻 is counted once in 𝐻 [𝑁 𝐻 (𝑣)] at each of its
+three vertices, so
+                                          1 ∑︁
+(D.22)                            𝜏(𝐻) =        𝑡𝑣 .
+                                          3 𝑣
+The right-hand side of Equation (D.17) is therefore
+                                     ∑︁ 𝑡 𝑣    ∑︁     𝜅𝑣
+(D.23)                       𝐵(𝐻) =         +             .
+                                      𝑣
+                                          3         𝑑
+                                              𝑣:𝑑 ≥3 𝑣
+                                                       −2
+                                                     𝑣
+
+When 𝑑 𝑣 ≥ 3, apply Lemma D.8 to 𝐽 = 𝐻 [𝑁 𝐻 (𝑣)], with 𝑟 = 𝑑 𝑣 , 𝑞 = 𝑡 𝑣 , and 𝑖 = 𝜅 𝑣 . When
+𝑑 𝑣 < 3, the local contribution in Equation (D.23) is nonnegative, whereas 𝑑 𝑣 /2 − 4/3 ≤ 0.
+Summing the vertexwise inequalities gives
+                                      ∑︁  𝑑 𝑣 4          4𝑑
+(D.24)                        𝐵(𝐻) ≥           −     =𝑒−      .
+                                        𝑣
+                                             2   3          3
+Combining Equations (D.10), (D.17) and (D.24) yields
+                                             4𝑑
+                                        
+                                        𝑑
+(D.25)                            𝑚≥       −     .
+                                        2     3
+              SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                        43
+
+
+Because 𝑚 and 𝑑2 are integers,
+                
+
+                                              4𝑑
+                                            
+                                          𝑑
+(D.26)                             𝑚≥       −    .
+                                          2    3
+Finally, Proposition D.2 gives 𝑚 ≤ 𝑚 1 .                                                         □
+Remark D.9 (Sharpness of the graph relaxation). If 𝐺 is a simple cubic triangle-free
+graph and 𝐻 = 𝐿(𝐺), then 𝐻 is four-regular and every neighbor graph is 2𝐾2 . With
+𝑑 = |𝑉 (𝐻)| = |𝐸 (𝐺)|,
+                                                      2𝑑
+(D.27)                    𝑒(𝐻) = 2𝑑,         𝜏(𝐻) =      ,    𝜅 𝑣 = 0,
+                                                       3
+and hence 𝑒(𝐻) − 𝐵(𝐻) = 4𝑑/3. The standard smallest example is 𝐿(𝐾3,3 ), on nine
+vertices. This shows that 4/3 is sharp for the passage from Equation (D.17) to the scalar
+width bound. It does not produce neural coefficients and is not a neural sharpness claim.
+    There is also a finite-dimensional comparison with the exact constructions of Rueß et
+al. [27] for 4 ≤ 𝑑 ≤ 12 and Wang–Basu [38] for 4 ≤ 𝑑 ≤ 8. Their pairwise maxima can
+share the first-layer features 𝜌(𝑥𝑖 − 𝑥 𝑗 ), 𝑖 < 𝑗, using max{𝑥𝑖 , 𝑥 𝑗 } = 𝑥 𝑗 + 𝜌(𝑥𝑖 − 𝑥 𝑗 ), with
+coordinate linear forms transmitted through paired channels. Thus at most 𝑑2 first-layer
+                                                                                      
+cores suffice in those constructions, with at most 2𝑑 additional physical rows for the linear
+channels on R𝑑 . For the dimensions covered, the difference between this core count and
+our lower bound is ⌊4𝑑/3⌋. These bounded-dimensional constructions do not establish an
+asymptotic 𝑂 (𝑑) gap for exact two-hidden-layer realization: existence in all dimensions
+remains open.
+
+                               Appendix E. Reproducibility
+   The threshold proof uses stored masks, exact integer existence bounds, and analytic
+estimates in the block-size ranges collected in Table 5. Once the tournaments are chosen, the
+network construction and its limiting identities are analytic. Separate regression calculations
+check formulas already proved in the text.
+
+           Evidence                        Range              Verification
+           Small-tournament obstruction    2≤𝑛≤6              Exhaustive integer checks
+           Tournament masks                7 ≤ 𝑛 ≤ 13         Subset recurrences
+           Binomial comparisons            14 ≤ 𝑛 ≤ 19        Integer arithmetic
+           Tournament existence            𝑛 ≥ 20             Hoeffding bound
+           Small networks                  𝑑 = 5, 6           Explicit formulas
+           Tensor identities               Selected orders    Rational arithmetic
+
+          Table 5. Finite and analytic inputs. Here 𝑛 is a tournament block size.
+          The first row explains a limitation of the balanced construction; the last
+          two rows check formulas whose proofs are given in the text.
+
+E.1. Finite predicates. For 7 ≤ 𝑛 ≤ 13, the masks in Table 4 specify every orientation.
+The verifiers check that each pair is oriented exactly once and that Equations (3.30) and (3.31)
+give
+                                                               𝑛−1
+                                                              3
+                           𝐷 ( [𝑛]) ≥ 𝑛,        𝑍 (𝑇) < 2𝑛!          .
+                                                              2
+Both statistics appear in Table 2; verification does not require reproducing a search proce-
+dure.
+   For 14 ≤ 𝑛 ≤ 19, the proof uses the exact integer comparisons in Equation (A.1); for
+𝑛 ≥ 20, it uses Equation (A.2). In each case the Markov bound for 𝑍 (𝑇) yields simultaneous
+44                                                SHUNQI LU
+
+
+existence. The dimension boundaries, including the mixed cases 𝑑 = 27, 39, are specified
+in Section 3.3.
+E.2. Verification scope. The exhaustive check in Appendix A.1 certifies the limitation of
+the balanced construction and is included in the release audit. Chamberwise evaluations of
+the networks in Equations (C.1) and (C.2) and selected folded-catalecticant and ordered-
+aggregation identities are regression checks. They do not replace the proofs.
+E.3. Code availability. Python verifiers and exact certificates are supplied in the source
+archive. The accompanying README.md describes regeneration, integrity checks, and
+compilation; full JSON outputs and search inputs remain in the source archive. The
+verifiers use only the Python standard library.
+
+                                                   Funding
+     The author received no funding for this work.
+
+                                          Conflict of interest
+     The author declares no conflict of interest.
+
+                                                References
+ [1] E. Bakaev, F. Brunck, C. Hertrich, J. Stade, and A. Yehudayoff, Better neural network expressivity: Subdi-
+     viding the simplex. In Proceedings of the 58th annual ACM symposium on theory of computing, pp. 500–507,
+     2026
+ [2] B. Bollobás, Modern graph theory. Graduate Texts in Mathematics 184, Springer, New York, 1998
+ [3] J. Bruna, The multiscale single-index model: A stylized model for hierarchical feature learning. 2026,
+     arXiv:2607.03347v1
+ [4] K.-L. Chen, H. Garudadri, and B. D. Rao, Improved bounds on neural complexity for representing piecewise
+     linear functions. In Advances in neural information processing systems, pp. 7167–7180, 35, Curran Associates,
+     Inc., 2022
+ [5] P. Das, Piecewise linear functions and neural network expressivity via discriminantal arrangements. 2026,
+     arXiv:2604.02480v1
+ [6] S. Dereich and S. Kassing, On the existence of optimal shallow feedforward networks with ReLU activation.
+     J. Mach. Learn. 3 (2024), no. 1, 1–22
+ [7] A. Dutta, I. Safran, and P. Valiant, The median is easier than it looks: Approximation with a constant-depth,
+     linear-width ReLU network. In Proceedings of the thirty-ninth conference on learning theory, pp. 2145–2199,
+     Proceedings of Machine Learning Research 336, 2026
+ [8] C. Eckart and G. Young, The approximation of one matrix by another of lower rank. Psychometrika 1 (1936),
+     no. 3, 211–218
+ [9] I. J. Goodfellow, D. Warde-Farley, M. Mirza, A. Courville, and Y. Bengio, Maxout networks. In Proceedings
+     of the 30th international conference on machine learning, pp. 1319–1327, Proceedings of Machine Learning
+     Research 28(3), 2013
+[10] M. Grillo, C. Hertrich, and G. Loho, Depth-bounds for neural networks via the braid arrangement. In
+     Advances in neural information processing systems, pp. 141727–141745, 38, 2025
+[11] D. Haider, M. Ehler, and P. Balazs, Convex geometry of ReLU-layers, injectivity on the ball and local
+     reconstruction. In Proceedings of the 40th international conference on machine learning, pp. 12339–12350,
+     Proceedings of Machine Learning Research 202, PMLR, 2023
+[12] C. Hertrich, A. Basu, M. Di Summa, and M. Skutella, Towards lower bounds on the depth of ReLU neural
+     networks. In Advances in neural information processing systems, pp. 3336–3348, 34, 2021
+[13] P. Jin, Two-hidden-layer ReLU neural networks and finite elements. Neural Netw. 198 (2026), 108559
+[14] Q.-T. Le, E. Riccietti, and R. Gribonval, Does a sparse ReLU network training problem always admit an
+     optimum? In Advances in neural information processing systems, pp. 65265–65298, 36, 2023
+[15] L.-H. Lim, M. Micha lek, and Y. Qi, Best 𝑘-layer neural network approximations. Constr. Approx. 55 (2022),
+     no. 1, 583–604
+[16] Z. Lu, H. Pu, F. Wang, Z. Hu, and L. Wang, The expressive power of neural networks: A view from the
+     width. In Advances in neural information processing systems, pp. 6231–6239, 30, Curran Associates, Inc.,
+     2017
+[17] S. Mahan, E. J. King, and A. Cloninger, Nonclosedness of sets of neural networks in Sobolev spaces. Neural
+     Netw. 137 (2021), 85–96
+                SHARP CLOSURE THRESHOLDS FOR TWO-HIDDEN-LAYER RELU NETWORKS                                   45
+
+
+[18] V. E. Maiorov, On best approximation by ridge functions. J. Approx. Theory 99 (1999), no. 1, 68–94
+[19] W. Mantel, Vraagstuk XXVIII. Wiskundige Opgaven met de Oplossingen 10 (1907), 60–61
+[20] S. McCarty, Piecewise linear functions representable with infinite width shallow ReLU neural networks.
+     Proc. Amer. Math. Soc. Ser. B 10 (2023), 296–310
+[21] M. Mondelli and A. Montanari, On the connection between learning two-layer neural networks and tensor
+     decomposition. In Proceedings of the 22nd international conference on artificial intelligence and statistics,
+     pp. 1051–1060, Proceedings of Machine Learning Research 89, 2019
+[22] P. Petersen, M. Raslan, and F. Voigtlaender, Topological properties of the set of functions generated by
+     neural networks of fixed size. Found. Comput. Math. 21 (2021), no. 2, 375–444
+[23] H. Petzka, M. Trimmel, and C. Sminchisescu, Notes on the symmetries of 2-layer ReLU-networks. Proceed-
+     ings of the Northern Lights Deep Learning Workshop 1 (2020), 6
+[24] A. Pinkus, Ridge functions. Cambridge Tracts in Mathematics 205, Cambridge University Press, Cambridge,
+     2015
+[25] M. Puthawala, K. Kothari, M. Lassas, I. Dokmanić, and M. de Hoop, Globally injective ReLU networks. J.
+     Mach. Learn. Res. 23 (2022), no. 105, 1–55
+[26] P. Ramakrishnan, A complete symmetry classification of shallow ReLU networks. 2026, arXiv:2604.
+     14037v2
+[27] K. Rueß, G. Averkov, F. Brunck, M. Grillo, C. Hertrich, G. Loho, J. Stade, M. Stargalla, M. Sun, and
+     M. Winter, Shallower ReLU network representations via exact linear algebra. 2026, arXiv:2607.21651v2
+[28] I. Safran, A depth hierarchy for computing the maximum in ReLU networks via extremal graph theory. In
+     Proceedings of the thirty-ninth conference on learning theory, pp. 5721–5742, Proceedings of Machine
+     Learning Research 336, 2026
+[29] I. Safran, Every layer counts: An exponential 𝐿2 depth hierarchy for ReLU networks. 2026, arXiv:
+     2608.23877v2
+[30] I. Safran, D. Reichman, and P. Valiant, How many neurons does it take to approximate the maximum? In
+     Proceedings of the 2024 annual ACM-SIAM symposium on discrete algorithms, pp. 3156–3183, 2024
+[31] I. Safran and O. Shamir, Depth-width tradeoffs in approximating natural functions with neural networks. In
+     Proceedings of the 34th international conference on machine learning, edited by D. Precup and Y. W. Teh,
+     pp. 2979–2987, Proceedings of Machine Learning Research 70, PMLR, 2017
+[32] M. E. Sander, J. Puigcerver, J. Djolonga, G. Peyré, and M. Blondel, Fast, differentiable and sparse top-k: A
+     convex analysis perspective. In Proceedings of the 40th international conference on machine learning, pp.
+     29919–29936, Proceedings of Machine Learning Research 202, 2023
+[33] W. Shang, K. Sohn, D. Almeida, and H. Lee, Understanding and improving convolutional neural networks
+     via concatenated rectified linear units. In Proceedings of the 33rd international conference on machine
+     learning, pp. 2217–2225, Proceedings of Machine Learning Research 48, 2016
+[34] J. W. Siegel, Optimal approximation rates for deep ReLU neural networks on Sobolev and Besov spaces. J.
+     Mach. Learn. Res. 24 (2023), no. 357, 1–52
+[35] G. Vardi, G. Yehudai, and O. Shamir, Width is less important than depth in ReLU neural networks. In
+     Proceedings of the thirty-fifth conference on learning theory, edited by P.-L. Loh and M. Raginsky, pp.
+     1249–1281, Proceedings of Machine Learning Research 178, PMLR, 2022
+[36] L. Venturi, A. S. Bandeira, and J. Bruna, Spurious valleys in one-hidden-layer neural network optimization
+     landscapes. J. Mach. Learn. Res. 20 (2019), no. 133, 1–34
+[37] S. Wang and X. Sun, Generalization of hinging hyperplanes. IEEE Trans. Inform. Theory 51 (2005), no. 12,
+     4425–4431
+[38] Z. Wang and A. Basu, Representing MAX functions using two-hidden-layer ReLU networks. 2026, arXiv:
+     2608.25221v1
+[39] S. Wojtowytsch, Optimal bump functions for shallow ReLU networks: Weight decay, depth separation, curse
+     of dimensionality. J. Mach. Learn. Res. 25 (2024), no. 27, 1–49
+
+   School of Artificial Intelligence, Capital University of Economics and Business
+No. 121 Zhangjialukou, Huaxiang, Fengtai District, 100070 Beijing, China
+   Email address: 32023210246@cueb.edu.cn
+

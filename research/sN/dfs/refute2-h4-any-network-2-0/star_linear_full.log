@@ -1,0 +1,12 @@
+N 4 localities 5 stars 108
+stars whose Lambda depends on rho: 0  nonzero entries with c notin T: 0
+pm1 rank 4 rank+target 5 NOT in span
+pm1_0 rank 5 rank+target 5 IN SPAN
+N 5 localities 26 stars 405
+stars whose Lambda depends on rho: 0  nonzero entries with c notin T: 30
+pm1 rank 15 rank+target 16 NOT in span
+pm1_0 rank 16 rank+target 16 IN SPAN
+N 6 localities 157 stars 1458
+stars whose Lambda depends on rho: 120  nonzero entries with c notin T: 720
+pm1 rank 50 rank+target 51 NOT in span
+pm1_0 rank 57 rank+target 57 IN SPAN

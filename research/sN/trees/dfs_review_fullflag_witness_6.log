@@ -1,0 +1,13 @@
+orbit 0 nonzero flags 15210 elapsed 18.07
+orbit 2 nonzero flags 18810 elapsed 35.33
+orbit 3 nonzero flags 18810 elapsed 50.38
+orbit 4 nonzero flags 7560 elapsed 75.99
+orbit 52 nonzero flags 360 elapsed 84.05
+{
+  "m": 6,
+  "status": "ALL_COMPLETE_FLAGS_NEGATIVE_TARGET",
+  "nonzero_entries": 360,
+  "negative_target_discrepancies": 0,
+  "elapsed": 84.0845057964325,
+  "first_counterexample": "((((0, 1, 0, 0, 0, -1), (0, 0, 1, 0, 0, -1), (0, 0, 0, 1, 0, -1), (0, 0, 0, 0, 1, -1)), ((0, 1, 0, 0, 0, -1), (0, 0, 1, 0, 0, -1), (0, 0, 0, 1, 0, -1)), ((0, 1, 0, 0, 0, -1), (0, 0, 1, 0, 0, -1)), ((0, 1, -1, 0, 0, 0),)), Fraction(2, 1))"
+}

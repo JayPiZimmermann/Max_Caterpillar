@@ -1,0 +1,9 @@
+/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h4-general-neurons/r3_starcover.py:1: SyntaxWarning: invalid escape sequence '\ '
+  """Round 3.  EXACT: the signed-star family covers every 3-locality, so the locality
+N 4 stars 8 uncovered 3-sets 0 of 4
+N 5 stars 10 uncovered 3-sets 0 of 10
+N 6 stars 18 uncovered 3-sets 0 of 20
+N 7 stars 21 uncovered 3-sets 0 of 35
+N 8 stars 24 uncovered 3-sets 0 of 56
+N 9 stars 27 uncovered 3-sets 0 of 84
+N 10 stars 40 uncovered 3-sets 0 of 120

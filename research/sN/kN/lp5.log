@@ -1,0 +1,10 @@
+dictionary 51475 1s
+after 0 pruning rounds alive 51475, class rows 20880, 2s
+iter 0 L1 2.4167 support 7 72s
+iter 1 L1 2.4167 support 7 78s
+iter 2 L1 2.4167 support 7 83s
+iter 3 L1 2.4167 support 7 89s
+iter 4 L1 2.4167 support 7 94s
+iter 5 L1 2.4167 support 7 99s
+saved support 7 to sup5.json
+EXIT 0

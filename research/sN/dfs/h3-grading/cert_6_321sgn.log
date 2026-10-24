@@ -1,0 +1,1 @@
+{"N": 6, "mu": [3, 2, 1], "twist": "sgn", "grades": [0, 1, 2, 3, 4], "ncols": 1682, "cell_reps": 420, "rank_lower_prefix": [7, 114, 470, 872, 1024], "rank_upper_prefix": [7, 114, 470, 872, 1024], "failed_cells": 0, "certified": true, "secs": [50.2, 2685.5]}

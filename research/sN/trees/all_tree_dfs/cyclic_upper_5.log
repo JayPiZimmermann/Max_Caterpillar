@@ -1,0 +1,3 @@
+5 dihedral False units 565
+rows 3700 variables 580 seconds 1.0791995525360107
+LP 2 The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)

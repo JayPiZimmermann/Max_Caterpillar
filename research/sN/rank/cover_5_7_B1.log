@@ -1,0 +1,4 @@
+m=5 N=7: full germs 1235, distinct stencil patterns 241
+LP cover lower bound 1.450596816976127
+ILP cover number 2.000000000000001 0 Optimization terminated successfully. (HiGHS Status 7: Optimal) 116s
+  cover: [((0, 1, -1, 1, -1), frozenset({(2, 3), (0, 1)})), ((0, 1, 1, -1, -1), frozenset({(0, 1)}))]

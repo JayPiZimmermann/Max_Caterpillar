@@ -1,0 +1,10 @@
+{"N": 4, "mu": [4], "twist": "triv", "seed": 1, "npts": 51, "ncols": [3, 2, 4, 2], "ranks_A_then_by_M": [3, 5, 7, 8], "secs": 0.0}
+{"N": 4, "mu": [3, 1], "twist": "triv", "seed": 1, "npts": 73, "ncols": [7, 5, 14, 7], "ranks_A_then_by_M": [6, 10, 17, 20], "secs": 0.0}
+{"N": 4, "mu": [4], "twist": "sgn", "seed": 1, "npts": 43, "ncols": [0, 0, 2, 1], "ranks_A_then_by_M": [0, 0, 1, 2], "secs": 0.0}
+{"N": 4, "mu": [3, 1], "twist": "sgn", "seed": 1, "npts": 57, "ncols": [1, 1, 10, 5], "ranks_A_then_by_M": [0, 1, 6, 9], "secs": 0.0}
+{"N": 4, "mu": [2, 1, 1], "twist": "triv", "seed": 1, "npts": 121, "ncols": [13, 11, 38, 19], "ranks_A_then_by_M": [10, 19, 37, 45], "secs": 0.0}
+{"N": 4, "mu": [2, 2], "twist": "triv", "seed": 1, "npts": 85, "ncols": [8, 7, 20, 10], "ranks_A_then_by_M": [7, 13, 22, 26], "secs": 0.0}
+{"N": 4, "mu": [2, 2], "twist": "sgn", "seed": 1, "npts": 69, "ncols": [2, 3, 16, 8], "ranks_A_then_by_M": [1, 4, 11, 15], "secs": 0.0}
+{"N": 4, "mu": [2, 1, 1], "twist": "sgn", "seed": 1, "npts": 105, "ncols": [7, 7, 34, 17], "ranks_A_then_by_M": [4, 10, 26, 34], "secs": 0.0}
+{"N": 4, "mu": [1, 1, 1, 1], "twist": "sgn", "seed": 1, "npts": 186, "ncols": [20, 18, 72, 36], "ranks_A_then_by_M": [14, 29, 63, 79], "secs": 0.0}
+{"N": 4, "mu": [1, 1, 1, 1], "twist": "triv", "seed": 1, "npts": 186, "ncols": [20, 18, 72, 36], "ranks_A_then_by_M": [14, 29, 63, 79], "secs": 0.0}

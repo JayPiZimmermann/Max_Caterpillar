@@ -1,0 +1,8 @@
+{
+  "index": 67,
+  "status": "EXACT_RATIONAL_IDENTITY",
+  "terms": 9280,
+  "elapsed_seconds": 316.49003410339355,
+  "relation_sha256": "b2a171d04a939b578a209f84efc7dd330488e1684bd831807bfa3e9b396cba91",
+  "units_sha256": "5f415187cd4a6ec944266a945355f98d527ec8db9fbedfc01e23423cbb91915f"
+}

@@ -1,0 +1,5 @@
+'KTie.mixedDiff_eq_zero_of_indep' depends on axioms: [propext, Quot.sound, Classical.choice]
+'KTie.mixedDiff_eq_zero_of_sum_indep' depends on axioms: [propext, Quot.sound, Classical.choice]
+'KTie.mixedDiff_eq_of_tie' depends on axioms: [propext, Quot.sound, Classical.choice]
+'KTie.mixedDiff_max' depends on axioms: [propext, Quot.sound, Classical.choice]
+'KTie.double_count' depends on axioms: [propext, Quot.sound, Classical.choice]

@@ -1,0 +1,8 @@
+{
+  "m": 6,
+  "status": "ALL_COMPLETE_FLAGS_NEGATIVE_TARGET",
+  "nonzero_entries": 360,
+  "negative_target_discrepancies": 0,
+  "elapsed": 84.0845057964325,
+  "first_counterexample": "((((0, 1, 0, 0, 0, -1), (0, 0, 1, 0, 0, -1), (0, 0, 0, 1, 0, -1), (0, 0, 0, 0, 1, -1)), ((0, 1, 0, 0, 0, -1), (0, 0, 1, 0, 0, -1), (0, 0, 0, 1, 0, -1)), ((0, 1, 0, 0, 0, -1), (0, 0, 1, 0, 0, -1)), ((0, 1, -1, 0, 0, 0),)), Fraction(2, 1))"
+}

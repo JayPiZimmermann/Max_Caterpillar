@@ -115,3 +115,38 @@ equals `δ ≠ 0` on `max_5`). The vanishing equations have only the zero soluti
 ## Theorem C (total): h1 + h2 ≥ 9 for any first layer
 
 From H1 and H2. ∎
+
+## Update: h2 ≥ 3 for any first layer
+
+research/sN/frontier4/PROOFS.md, Theorem 1 (valid for every N ≥ 3 and every h1) sharpens
+Theorem H2 to `h2 ≥ 3`; hence Theorem C becomes `h1 + h2 ≥ 7 + 3 = 10`.
+
+## §k-search: exact locality equations for the free-remainder count k(5)
+
+Let `max_5 = R + Σ_{k<K} d_k σ(g_k)` with `R, g_k ∈ span{x_i, σ(x_i - x_j)}`, `g_k` translation
+invariant (WLOG, research/sN/NOTE.md), `d_k = ±1` (positive homogeneity). Write
+`v_k(S) := g_k(1_S)` for `∅ ≠ S ⊆ [5]` (`v_k([5]) = 0`); `v_k(S) = Σ_{i∈S} l_i + Σ_{i<j, i∈S, j∉S} a_ij`.
+
+Locality `L = (T, (o1,o2))`, `|T| = 3`, cell `C_L = {x_t = s (t∈T), s > x_{o1} > x_{o2}}`, generic
+`p ∈ C_L`. On the closed braid cell through `p + δ1_U` (`U ⊆ T`) every `g` is linear with rays
+`1_U, 1_T, 1_{T+o1}, 1`, so `g(p + δ1_U) = g(p) + δ v(U)` and `g ≡ 0` on `C_L` iff
+`v(T) = v(T+o1) = 0`. The third mixed difference `Λ_L` (cube of side δ at p in the T
+coordinates) kills `R` and every neuron with `g(p) ≠ 0`, gives `δ` on `max_5`, and on a neuron
+vanishing on `C_L` gives `δ μ_T(σ v) = δ X_g(T)` with
+`X_g(T) = Σ_{t∈T} σ(v(t)) - Σ_{P⊂T,|P|=2} σ(v(P)) = ½(Σ_t |v(t)| - Σ_P |v(P)|)`
+(the last form uses `v(T) = 0` and `μ_T(v) = 0`). Hence, exactly,
+
+  (E)  `Σ_{k : v_k(T) = v_k(T+o1) = 0} d_k X_{g_k}(T) = 1`  for all 20 localities.
+
+(4-ties `J` give `Σ_{k: v_k(J)=0} d_k μ_J(σ v_k) = -1`, the 5-tie gives `Σ_k d_k μ_{[5]}(σ v_k) = 1`;
+not used yet.) Check: the known 4-neuron identity satisfies (E) exactly (`check_E_spec.py`).
+
+Search for K = 2 (`k2_exact.py`). Each `g_k` lies in the generic part of `V_Z = {v : v(S) = 0,
+S ∈ Z}` for its exact vanishing set `Z` among the 15 sets of size 3 and 4 (32753 flats,
+`flats_loc.py`). (E) needs every locality covered by some neuron, leaving 97961 ordered flat
+pairs, 1193 up to S5 and swap (`cover_pairs.py`). For each pair and each `d ∈ {±1}²` a DFS over
+the triples `T` branches on the closed signs of the singleton/pair forms `v(S)`, `S ⊂ T`, and
+imposes (E); a branch is pruned only with an exactly verified Farkas certificate (`exact_lp.py`:
+float HiGHS proposes, Fractions verify; exact Fourier–Motzkin fallback). Closed sign chambers
+and the whole flat `V_Z` are relaxations, so "no surviving pair" proves `k(5) ≥ 3`, hence
+`h2 ≥ 5` in model A.

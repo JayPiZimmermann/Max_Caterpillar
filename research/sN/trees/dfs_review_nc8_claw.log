@@ -1,0 +1,12 @@
+{
+  "n": 8,
+  "shape": "subdivided_claw",
+  "orientation": "away_from_source",
+  "marked_root": "arbitrary_including_source",
+  "status": "EXACT_ENUMERATION",
+  "noncrossing_trees_per_apex": 56,
+  "units": 12544,
+  "orbits": 784,
+  "diagonal_units": 3136,
+  "elapsed": 0.5479156970977783
+}

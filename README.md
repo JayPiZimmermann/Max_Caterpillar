@@ -33,22 +33,38 @@ $h_1=O(N^2)$ and $h_2=2^{O(N\log N)}$, with the latter formalized as
 $\log h_2=O(N\log N)$. The construction data are given by a direct finite
 formula at every arity; its correctness proof uses induction.
 
-## Version 2 and 3 results
+## Simplified proofs and broader lower bounds
 
-Superseded declarations are kept in the sources and commented as Version 1
-(or Version 2); their replacements are commented as Version 2 (or Version 3).
+This checkpoint preserves an unfinished proof consolidation. The previous
+122-statement verification receipt is historical; the current manifest still
+needs reconciliation and a fresh exact-statement gate. See
+[the cleanup status](research/sN/cleanup/PROGRESS.md).
 
-- `maximum_width_one_basis` (Version 3, the paper's main theorem): the widths
-  of `maximum_width` with rational weights and zero biases, proved from one
-  basis of the dictionary span via `quotient_compression` and
-  `quotientDim_add_two_le_secondWidth`
-  ([OneBasis.lean](MaxCaterpillar/OneBasis.lean)).
-- `maximum_width_rational` (Version 2): the same statement for the network
-  compiled from the Version 1 coefficients, an inverse-Gram average over all
-  bases (`coefficient_rational`, `network_rational`).
-- `rational_coefficients`: rational coefficients from one basis of the
-  dictionary, by an integration-free evaluation argument
-  ([Rationality.lean](MaxCaterpillar/Rationality.lean)).
+The current public `caterpillar_net` theorem uses the rational
+projection proof in [Rationality.lean](MaxCaterpillar/Rationality.lean).
+The factorial quotient-dimension bound has a third mixed difference proof in
+[Dimension.lean](MaxCaterpillar/Dimension.lean).
+The exponential lower bound extends to caterpillars together with all rooted-star
+face functions from the combinatorial construction of Brunck et al., and more
+generally to tree face functions with bounded numbers of out-leaves at each hub
+([Count/Main.lean](MaxCaterpillar/Count/Main.lean)). The paper also gives a
+mathematical extension to arbitrary tree shapes with all edges oriented away
+from one source and an arbitrary marked head root. That bridge is not yet
+formalized in Lean.
+
+An unrestricted all-tree exponential lower bound and an exponential upper
+construction remain open. Current research, with exact certificates separated
+from experiments, is recorded in
+[the DFS ledger](research/sN/trees/all_tree_dfs/CURRENT.md).
+The historical Lean gate checked 122 exact statements against 303 Lean source
+files before the consolidation.
+
+## Current proof routes
+
+- `caterpillar_net`: the stated widths with rational weights and zero biases,
+  using the retained dictionary and the rational projection lemma
+  ([Retained.lean](MaxCaterpillar/Retained.lean),
+  [Theorems.lean](MaxCaterpillar/Theorems.lean)).
 - `compilation`: any expansion of the maximum by normalized face functions
   `K` and an auxiliary remainder compiles with the same first hidden layer and
   `|K| + 2` second-layer neurons ([Compilation.lean](MaxCaterpillar/Compilation.lean)).
@@ -79,12 +95,13 @@ Superseded declarations are kept in the sources and commented as Version 1
 The paper-facing interface begins with
 [Definitions.lean](MaxCaterpillar/Definitions.lean),
 [Lemmas.lean](MaxCaterpillar/Lemmas.lean), and
-[Theorems.lean](MaxCaterpillar/Theorems.lean). The main theorem states:
+[Theorems.lean](MaxCaterpillar/Theorems.lean). The main statement is:
 
 ```lean
-theorem maximum_width (N : ℕ) [NeZero N] :
+theorem caterpillar_net (N : ℕ) [NeZero N] :
     ∃ net : Network N (firstWidth N) (secondWidth N),
-      ∀ x, net.eval x = Maximum N x
+      (∀ x, net.eval x = Maximum N x) ∧
+      net.HasRationalWeights ∧ net.HasZeroBiases
 ```
 
 `Network N h₁ h₂` contains the six real parameter arrays of the two-hidden-layer

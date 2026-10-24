@@ -1,6 +1,6 @@
 import MaxCaterpillar.Core
 
-/-! # Quotient-basis compression (Version 2 width)
+/-! # Quotient-basis compression
 
 Let `V_N` be the span of the dictionary and `A_N ⊆ V_N` the span of the
 auxiliary functions `σ(x_i)`, `σ(-x_i)`, `σ(x_i - x_j)`.  Put
@@ -10,8 +10,6 @@ functions.  One normalized description is selected for each added face
 function; the maximum is then an expansion by at most `q_N` units plus an
 auxiliary remainder, with rational coefficients, and compiles with the same
 first hidden layer and `q_N + 2` second-layer neurons.
-
-The Version 1 width `secondWidth` is retained; this file adds a second bound.
 -/
 
 open BigOperators

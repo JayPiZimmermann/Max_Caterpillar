@@ -1,0 +1,8 @@
+n=1 emax=2: 3 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 1
+n=2 emax=2: 9 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 3/4
+n=3 emax=2: 27 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 13/16
+n=4 emax=2: 162 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 71/96
+n=5 emax=2: 729 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 103/192
+n=6 emax=2: 4374 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 335/768
+n=7 emax=2: 24057 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 9047/23040
+n=8 emax=2: 150903 instances; exact>DP violations 0; DP>1 violations 0; max exact G x^D = 913/3072

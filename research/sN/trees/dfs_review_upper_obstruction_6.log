@@ -1,0 +1,19 @@
+{
+  "status": "EXACT_OBSTRUCTION_RECHECK_PASS",
+  "columns": 717,
+  "rows": 747,
+  "modular_ranks": [
+    711,
+    712
+  ],
+  "independent_exact_relations": 6,
+  "identities": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "elapsed": 9.018439531326294
+}

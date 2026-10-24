@@ -1,0 +1,8 @@
+orbits 158 rank 133
+reconstructed 158 nonzero 45
+fresh rational evaluations passed
+flags orbit 10 elapsed 4.807968854904175
+flags orbit 20 elapsed 6.8681323528289795
+flags orbit 40 elapsed 10.968174695968628
+flags orbit 80 elapsed 15.469147205352783
+DONE ALL_COMPLETE_FLAGS_EQUAL units 528 elapsed 19.208463430404663

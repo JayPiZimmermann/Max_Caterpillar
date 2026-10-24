@@ -1,0 +1,18 @@
+N 4 neurons 4 (N-2)*ceil(log2(N-1)) = 4
+ k 3 localities 4 covered 4 min|Lambda|/delta 1
+ k 4 localities 1 covered 1 min|Lambda|/delta 1
+N 5 neurons 6 (N-2)*ceil(log2(N-1)) = 6
+ k 3 localities 20 covered 20 min|Lambda|/delta 1
+ k 4 localities 5 covered 5 min|Lambda|/delta 1
+ k 5 localities 1 covered 1 min|Lambda|/delta 2
+N 6 neurons 12 (N-2)*ceil(log2(N-1)) = 12
+ k 3 localities 120 covered 120 min|Lambda|/delta 1
+ k 4 localities 30 covered 30 min|Lambda|/delta 1
+ k 5 localities 6 covered 6 min|Lambda|/delta 1
+ k 6 localities 1 covered 1 min|Lambda|/delta 3
+N 7 neurons 15 (N-2)*ceil(log2(N-1)) = 15
+ k 3 localities 840 covered 840 min|Lambda|/delta 1
+ k 4 localities 210 covered 210 min|Lambda|/delta 1
+ k 5 localities 42 covered 42 min|Lambda|/delta 1
+ k 6 localities 7 covered 7 min|Lambda|/delta 3
+ k 7 localities 1 covered 1 min|Lambda|/delta 6

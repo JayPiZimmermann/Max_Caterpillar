@@ -1,0 +1,8 @@
+N=4 mode=perkey keys=138 localities=4 (N!/6=4) Bg=13 Cg=13
+  {'aux_fail': 0, 'max_fail': 0, 'pass_fail': 0, 'strong_fail': 0, 'digit_fail': 0, 'nonzero': 68, 'pass_cnt': 108, 'strong_cnt': 84}
+  max per key #(Lambda!=0) = 2, max per key #Pass = 2, (N-2)(N-3)! = 2, 2(N-3)! = 2
+  max per key #(A=0 and M(T)!=empty) = 2
+  max #triples with Lambda!=0 per key = 2
+  histogram of #(Lambda!=0) per key: [(0, 82), (1, 44), (2, 12)]
+  values Lambda/delta: [(Fraction(-1, 1), 16), (Fraction(1, 1), 16), (Fraction(2, 1), 36)]
+  keys attaining max: [((-1, -1, 1, 1), [(0, 2), (0, 3)]), ((-1, -1, 1, 1), [(1, 2), (1, 3)]), ((-1, 0, 0, 1), [(1, 2), (2, 3)])]

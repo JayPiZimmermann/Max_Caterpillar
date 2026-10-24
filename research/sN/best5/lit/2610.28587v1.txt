@@ -1,0 +1,1746 @@
+                                                              TWO ReLU LAYERS IS ALL YOU NEED
+
+                                                         FLORESTAN BRUNCK, CHRISTOPH HERTRICH, KILIAN RUESS,
+                                                                 JACK STADE, AND AMIR YEHUDAYOFF
+
+
+                                                 Abstract. We prove that every ReLU network can be exactly simulated by a ReLU
+                                                 network with two hidden layers. We present two proofs: one that is based on fillings in
+                                                 homological algebra and a direct combinatorial proof.
+arXiv:2610.28587v1 [cs.CC] 20 Oct 2026
+
+
+
+
+                                                                                 1. Introduction
+
+                                         The ubiquity and success of neural networks as a model of computation motivates studying
+                                         the capabilities of their architectures. This study raises familiar complexity-theoretic
+                                         questions, like what is the class of functions they can compute, at what depth, with how
+                                         many gates, etc.?
+                                         This work investigates the role of depth in neural networks. On the one hand, deep learning
+                                         is one of the major successes of modern computer science. On the other hand, classical
+                                         approximation theorems dating back to the late 1980s show that, for many activation
+                                         functions including ReLU, a single hidden layer suffices to approximate any continuous
+                                         function arbitrarily well on a compact domain [10, 19, 24]. Although various explanations
+                                         for the power of compositions have been proposed [5, 26], a quantitative understanding of
+                                         the role of depth remains incomplete [20, 17].
+                                         The role of depth has been studied from several perspectives. One line of work investigates
+                                         depth-width tradeoffs in expressivity: can additional layers reduce the resources needed to
+                                         represent or approximate a function [2, 12, 32]? Another asks whether depth can provide
+                                         advantages for training [29]. Perhaps the most fundamental question, however, is whether
+                                         deeper networks can represent functions that shallower networks cannot. Until now, this
+                                         question has remained open.
+                                         We focus on neural networks that use the ReLU(x) = max{0, x} activation function, which
+                                         are among the most widely used ones in practice [13, 20]. A ReLU network with k hidden
+                                         layers (and depth k + 1) is traditionally defined as the alternating composition
+                                                             T (k) ◦ ReLU ◦T (k−1) ◦ · · · ◦ ReLU ◦T (1) ◦ ReLU ◦T (0)
+                                         where T (i) is an affine map between two Euclidean spaces and ReLU stands for entry-wise
+                                         application.
+                                         ReLU networks compute continuous and piecewise linear (CPWL) functions. These are
+                                         continuous functions that are affine on each cell of a finite polyhedral partition of the input
+                                         Euclidean space. Conversely, every CPWL function can be computed by a ReLU network
+                                         (see e.g. [2]). Their ability to capture nonlinear behavior while retaining a simple local
+                                         affine structure makes CPWL functions useful beyond neural networks. For example, they
+                                         are central to finite element methods [16], and their structure enables exact verification of
+                                         stability conditions in robotic control [11].
+                                                                                           1
+For a ring R ⊆ R, denote by CPWLn (R) the space of CPWL functions whose affine pieces
+have coefficients in R. Denote by ReLUn,k (R) the subset of CPWLn (R) representable by
+ReLU networks with k hidden layers, and weights and biases in R. The obvious inclusions
+are
+(1)           ReLUn,0 (R) ⊆ ReLUn,1 (R) ⊆ ReLUn,2 (R) ⊆ . . . ⊆ CPWLn (R).
+Our main results work when R is any field containing Q. We often write CPWLn and
+ReLUn,k for CPWLn (Q) and ReLUn,k (Q) respectively.
+The main goal of this work is understanding the inclusions in the chain (1). Wang and
+Sun [34] identified a key structural result; see also [17, 4] for alternative, more geometric
+proofs. They showed that
+                           MAXn (x1 , . . . , xn ) := max{x1 , . . . , xn }
+is complete for CPWLn−1 (R) with respect to depth. That is, every function f ∈ CPWLn (R)
+can be expressed as a finite sum
+                                          X
+(2)                             f (x) =        σi MAXn+1 (Ai (x))
+                                           i
+
+where Ai : Rn → Rn+1 is an affine map and σi ∈ {±1}. The geometric proof by [4] for
+the universality of MAXn+1 relies on the fact that MAXn+1 is the support function of a
+simplex, and every polytope can be triangulated into simplices.
+The first inclusion in (1) is trivially strict because ReLUn,0 (R) is precisely the set of affine
+functions. Mukherjee and Basu [27] showed that the second inclusion is strict for n ≥ 3
+because MAX3 ∈ ReLU3,2 (R) but MAX3 ̸∈ ReLU3,1 (R). In the other direction, Arora,
+Basu, Mianjy, and Mukherjee [2] observed that (2) implies that the length of the chain is
+at most logarithmic:
+                       CPWLn = ReLUn,k                 for k ≥ ⌈log2 (n + 1)⌉.
+The reason is that a divide-and-conquer network of depth ⌈log2 (n + 1)⌉ computes MAXn+1 .
+Subsequently, Hertrich, Basu, Di Summa, and Skutella [17] conjectured that the length of
+the chain is exactly ⌈log2 (n + 1)⌉. In other words, they conjectured that MAXn can not
+be computed by less than ⌈log2 (n)⌉ hidden layers.
+A series of works validated this conjecture in a variety of special cases. Haase, Hertrich,
+and Loho [15] proved the conjecture over the integers:
+                      k < ⌈log2 (n)⌉           ⇒       MAXn ̸∈ ReLUn,k (Z).
+Averkov, Hojny, and Merkert [3] extended the logarithmic lower bounds to rings of the
+form Z[1/N ] for an integer N > 0. They showed that if a prime p does not divide N then
+                   k < ⌈logp (n)⌉       ⇒          MAXn ̸∈ ReLUn,k (Z[1/N ]).
+There are more lower bounds for special classes of networks. Valerdi [33] proved the
+conjecture for input convex neural networks (ICNN), which was defined by Amos, Xu
+and Kolter [1] and studied in subsequent works (e.g. [7, 8, 9, 6, 18]). Grillo, Hertrich,
+and Loho [14] proved an Ω(log log n) lower bound for ReLU networks that “respect the
+singularities of MAXn ”.
+The conjecture was, however, recently disproved by Bakaev, Brunck, Hertrich, Stade, and
+Yehudayoff [4]. They proved that
+                                        MAX5 ∈ ReLU5,2
+                                                   2
+                                                                                       ReLUn,2
+                                                             “Hyperplane” functions
+                                       ReLUn,3                                         ReLUn,1
+                                       ReLUn,2                Affine Functions         ReLUn,0
+                                       ReLUn,1
+
+                                       ReLUn,0
+
+
+               CPWLn                                                CPWLn
+
+        Figure 1. The depth hierarchy of ReLU networks collapses to its first 3
+        levels.
+
+and concluded the asymptotic improvement
+                      MAXn ∈ ReLUn,k             for k = ⌈log3 (n − 2)⌉ + 1.
+Shortly after, computer-assisted constructions [28] showed that
+                                     MAX12 ∈ ReLU12,2 .
+Again, this finite case can be converted into an improvement of the asymptotic bound
+from [4], yielding
+                       MAXn ∈ ReLUn,k            for k = ⌈log6 (n/2)⌉ + 1.
+
+Our main result is that the entire depth hierarchy collapses to the second level, which is
+optimal by [27]. See Figure 1 for an illustration.
+Theorem 1. For all n ≥ 1 and any field R ⊆ R containing Q,
+                                 CPWLn (R) = ReLUn,2 (R).
+
+To prove our main result, it suffices to prove the inclusion
+                                    MAXn ∈ ReLUn,2 (Q)
+
+We provide two proofs of the inclusion. The first is abstract and uses the language
+of homological algebra. The second is concrete and is based on exact combinatorial
+cancellations.
+We, in fact, show that there is a ReLU network with two hidden layers for MAXn over the
+rationals where the precision required is poly(n) many bits. The lower bound√      from [3] says
+that such a network
+                √      must    divide by the product  of all primes up to ≈   n, which   requires
+precision of ≈ n many bits. The combinatorial proof requires division by n!, which is
+consistent with this barrier. As written, the homological algebra proof also uses division by
+n!, but this is not strictly necessary. What the homological proof actually uses is division
+by 2k − 1 for k = 1, . . . , n, which is consistent with the barrier by Fermat’s little theorem.
+
+1.1. Building the Simplex. Because MAXn is positively homogeneous, we can assume
+that all biases in the network expressing it are zero, see [17]. Because MAX2 (x1 , x2 ) =
+x1 + ReLU(x2 − x1 ), we can and will work with networks that use MAX2 gates instead of
+ReLU gates, also known as maxout networks.
+                                                 3
+                                                                    q
+
+
+
+
+                             B
+
+
+
+
+       Figure 2. A paramid given as the pyramid over a two-dimensional paral-
+       lelepiped B with apex q.
+
+
+There is a duality between computing functions with MAX2 networks and building formal
+Minkowski differences of polytopes using the two operations: Minkowski sums and convex
+hulls of a union (see e.g. [17, 4] and references therein). This duality says that computing
+MAXn+1 is equivalent to building the n-dimensional simplex ∆n . (There are n + 1 vertices
+and the dimension is n.)
+Computations with one hidden layer exactly correspond to differences of zonotopes, i.e.
+Minkowski sums of segments. Every zonotope can be decomposed into parallelepipeds
+                                                                           P
+                                                                                      ([31,
+Theorem (54)]) so one hidden layer is actually captured by parallelepipeds i [ai , bi ]. A
+general two-layer computation corresponds to the convex hull of two zonotopes.
+Both of the constructions we describe use a particular class of two-layer components we call
+paramids. A paramid is the convex hull of an apex γ ∈ Rn and a parallelepiped i [ai , bi ].
+                                                                                  P
+
+For an example see Figure 2. The support function of a paramid is thus of the form
+                                      X                                
+                        MAX2 ⟨γ, x⟩,         MAX2 (⟨ai , x⟩, ⟨bi , x⟩) .
+                                         i
+
+Paramids are the simplest two-layer polytopes and are thus a natural starting point to
+understand two-layer computations. Our results imply that ReLUn,2 is spanned by support
+functions of paramids. Actually, there is a more direct way to see this (see Section 5.1).
+Informally, every convex hull of two zonotopes can be expressed algebraically in terms of
+paramids.
+Another natural idea is to work modulo lower-dimensional pieces. A CPWL function
+f : Rn → R is said to be lower-dimensional if there is a non-zero direction v such that
+f (x + tv) = f (x) for all x ∈ Rn and t ∈ R. So if, for each n, we can write MAXn+1 as a
+                                               X
+                                 MAXn+1 =              ci hPi + R
+                                                   i
+
+where each Pi is a paramid and the remainder R is a sum of lower-dimensional functions,
+then we are done by induction. The reason is that every lower dimensional function is
+reducible to MAXn , which we already know how to compute.
+Subdivisions give us a powerful tool in these arguments. If we can subdivide ∆ into pieces
+that can be computed in k hidden layers, then ∆ can be computed by k hidden layers. So
+subdivisions are “free” in the sense that they do not cost us anything in terms of depth.
+This follows from the following well-known inclusion-exclusion-like formula also known as
+valuation (see e.g. Lemma 6.1.1 in [30] or 5.20 in [25]):
+                                               4
+Lemma 2 (Valuation property). Suppose that a polytope X can be written as a union of
+polytopes X = A1 ∪ · · · ∪ Ak . Then,
+                                   X        \                X       \
+                         X+                        Ai =                     Ai ,
+                              ∅̸=S⊆{1,...,k} i∈S          S⊆{1,...,k} i∈S
+                                 |S| even                  |S| odd
+
+where an empty polytope is interpreted as zero.
+
+Our new goal is thus to build the simplex using paramids modulo sums of lower dimensional
+pieces. We present two such constructions. One construction proceeds by induction and
+uses the language of chain complexes and homological algebra. The second construction is
+based on a direct inclusion-exclusion formula.
+
+1.2. Overview of the Homological Algebra Implementation. Let us start with some
+intuition. Imagine we already found a two-layer representation of ∆n . By restricting the
+representation to a facet, we get a two-layer representation of ∆n−1 . Each facet has its
+own representation and the n + 1 representations are somehow glued together coherently.
+What extra conditions does the boundary representation need to satisfy in order for it to
+extend to the n-simplex?
+This type of “boundary filling” question naturally suggests using the framework of chain
+complexes and homology. A chain complex C• is a sequence of vector spaces C0 , C1 , C2 , . . .
+equipped with linear boundary maps d : Ck → Ck−1 . The boundary map satisfies d2 = 0,
+which implies that the image of d : Ck+1 → Ck is a subspace of the kernel of d : Ck → Ck−1 .
+This leads to homology:
+                   Hk (C• ) = ker(d : Ck → Ck−1 )⧸img (d : C            .
+                                                             k+1 → Ck )
+An element x satisfying d(x) = 0 is called a cycle (we use lowercase x to distinguish a
+formal element x of a chain complex from a polytope, which we would represent with
+a capital X). An element x that is equal to d(y) for some y is called a boundary. The
+condition that d2 = 0 says that every boundary is a cycle. The homology groups record
+which cycles are boundaries.
+In Section 2, we define the chain complex P• of formal Minkowski differences of polytopes
+modulo lower dimensional polytopes. This is the main chain complex we care about,
+because it corresponds to ReLU networks by the duality discussed above. A central
+property for performing induction is that a top-dimensional class in P• is determined by
+its boundary. Namely, for chains of polytopes in Rn , the map d : Pn → Pn−1 is injective.
+This is a consequence of known results (see Theorem 3). So if we can find some x ∈ Pn
+such that d(x) = d(∆n ) then we actually obtained ∆n .
+We let Λ• be the subcomplex of P• generated by paramids. This chain complex corresponds
+to the subclass of two-layer ReLU networks we focus on. The homology of Λ• tells us a
+lot about the functions that can be represented in terms of paramids. If we can represent
+the n-simplex by paramids, then the boundary of the (n + 1)-simplex is a cycle in Λn .
+By injectivity, the question of whether we can represent the (n + 1)-simplex by paramids
+exactly asks whether this cycle is a boundary in Λ• .
+The Minkowski sum relations in Λ• are complicated, and it is difficult to perform calculations
+in this complex directly. So we try to approximate Λ• with a chain complex that is easier
+to understand. We define a chain complex C• of parallelepipeds. There is a coning map
+ρ : Ck → Pk+1 that sends a parallelepiped X to the paramid with base X and apex at
+                                                   5
+the origin. The image of ρ lies in the subcomplex Λ• of P• . A parallelepiped is a sum of
+intervals so it is zero in Pk for k ≥ 2. The parallelepiped facet of a k-dimensional paramid
+is zero in Pk−1 for k ≥ 3. Because the base does not survive in Λ• , this means that ρ
+commutes with the boundary maps of C• and P• for k ≥ 2.
+Let us try to implement the inductive construction. We start with a chain of parallelepipeds
+x ∈ Cn−1 such that ρ(x) is the n-simplex. We then create copies of x for each facet of
+the (n + 1)-simplex to get a cycle x′ ∈ Cn−1 such that ρ(x′ ) is the boundary of the n + 1
+simplex. If we can find some y ∈ Cn such that d(y) = x′ , then ρ(y) satisfies
+                           d(ρ(y)) = ρ(d(y)) = ρ(x′ ) = d(∆n+1 ).
+Injectivity tells us that ρ(y) is the needed (n + 1)-simplex.
+This still does not explain how we find y ∈ Cn with d(y) = x′ . We notice that not all cycles
+in C• are boundaries. Every boundary x in C• satisfies the augmentation condition, which
+says that x becomes 0 if we work modulo translations, because pairs of opposite faces of a
+parallelepiped give sign-reversed translates of each other after taking the boundary. But
+there are cycles in C• that do not have this property, see for example Figure 3.
+
+
+
+                                       t3            t2
+
+
+
+
+                                              t1
+
+        Figure 3. This triangle cannot be a boundary because it does not have
+        the augmentation property.
+
+We show that this is the only obstruction to filling boundaries in C• : any cycle with
+the augmentation condition is a boundary. The idea is that non-trivial homology in C•
+comes from relations among edge directions (see Section 3.1, or Section 5.2 for a different
+perspective). For example, the triangle illustrated in Figure 3 is a cycle in C1 that is not a
+boundary due to the relation t1 + t2 + t3 = 0, where t1 , t2 and t3 are the edge vectors of
+the triangle.
+We first illustrate our solution with the example of a regular hexagon, as shown in Figure 4.
+Of the three edge directions t1 , t2 and t3 , we choose the free generating set t1 and t2 . The
+two edges with direction t3 can be connected by parallelepipeds, as shown in the right
+part of the figure. After subtracting the boundary of these parallelepipeds, the remaining
+boundary (bottom part of the figure) has only t1 and t2 as edge directions. Since t1 and t2
+are independent, this remaining boundary can be filled.
+More generally, choose a set E of edge directions that have no relations among them. Let
+x ∈ Ck be a cycle with the augmentation property. Write X = x0 + · · · + xk , where xi is
+a parallelepiped with i edge directions in E and k − i edge directions not in E. Letting
+xj be the first non-zero term, we can find a boundary y = yj + · · · + yk where yi has i
+directions in E such that yj = xj . The j = 0 case requires the augmentation condition. By
+subtracting y from x, we reduce the number of non-zero terms. Inductively, this implies
+that x is a boundary.
+                                              6
+                               −t2
+
+                     −t3                −t1                t3
+                                                                    t1
+                                                                         t2
+
+
+                      t1                t3                                    −t3
+
+                              t2
+
+
+
+
+        Figure 4. The hexagon has the augmentation property, so it can be filled.
+
+We are still not done. By induction, we constructed x such that ρ(x) is ∆n . To perform the
+induction step, we take x′ to be copies of x for the facets of ∆n+1 so that ρ(x′ ) = d(∆n+1 ).
+We now want to fill x′ , but in general it is not true that x′ satisfies the augmentation
+condition.
+The last ingredient is the doubling map S : C• → C• . It takes a k-dimensional paral-
+lelepiped, scales it by a factor of 2, and then subdivides the scaled parallelepiped into 2k
+copies of the original one. This is illustrated in Figure 5. The element x′′ = 2k x′ − Sx′ is a
+cycle and it satisfies the augmentation property, so it can be filled. Geometrically, S is
+just a dilation by a factor of two:
+                                     ρ(S(x′ )) = 2ρ(x′ ).
+So, for n − 1 ≥ 2,
+                                     x′′
+                                            
+                             ρ n−1          = ρ(x′ ) = d(∆n+1 ).
+                                 2     −2
+Because x′′ can be filled, there is y such that
+                                                     x′′
+                                      d(y) =                    .
+                                                 2n−1 − 2
+Finally, by injectivity, the induction is complete
+                                        ρ(y) = ∆n+1 .
+
+
+1.3. Overview of the Direct Implementation. The second proof we present is based on
+directly constructing a family of paramids, whose indicator functions exhibit a combinatorial
+cancellation when being summed up. Here the goal is to build      the regular (n − 1)-simplex
+∆ = conv{ei : i ∈ [n]} that sits inside the space {x ∈ Rn : i xi = 1}. There are two main
+                                                            P
+
+ingredients to the construction. The first step is a comparably simple subdivision step, and
+the second step is where the non-trivial cancellation happens. By the valuation property
+(Theorem 20), it suffices to establish suitable identities up to lower-dimensional terms.
+                                                 7
+        Figure 5. The doubling map S scales a parallelogram in Ck by a factor of
+        2, then subdivides the parallelepiped face into 2k pieces, which are each a
+        translated copy of the original parallelepiped face. In P• , this corresponds to
+        scaling a paramid by 2 and then subdividing into 2k pieces. But subdivision
+        does not change a class in P• , so ρ ◦ S is equal to 2ρ.
+
+
+
+                                      2e3 − e2                                        2e3 − e1
+
+
+
+                e3                               e3                              e3
+
+
+
+              T2 T1                              T1                              T2
+        e1             e2              e1             e2                    e1            e2
+
+
+
+        Figure 6. On left, a partition of the simplex ∆ to simplices with R = {3}.
+        On middle and right, the two pyramids pyrev (Qv,R ) for v = 1 and v = 2.
+
+The first step is a geometric identity obtained by subdividing the simplex. Fix a nonempty
+subset R ⊊ [n]. For v ∈ / R, consider the simplex
+                                                            X
+                             Qv,R := (n − |R|)∆−v −                  ei ,
+                                                           i∈R∪{v}
+                                                            /
+
+where ∆−v = conv{ei : i ̸= v} is the facet opposite to ev . The simplex Qv,R is a dilation
+and translation of the facet ∆−v . Cone it with ev to get the simplex
+                             pyrev (Qv,R ) := conv({ev } ∪ Qv,R ).
+See Figure 6 for an illustration. The simplices pyrev (Qv,R ) for v ∈  / R partition the simplex
+∆ up to dilation and a translation, so the valuation property of support functions implies
+                                             1    X
+                          MAXn = h∆ ≡                  hpyrev (Qv,R ) ,
+                                          n − |R| v∈R
+                                                   /
+where ≡ means up to support functions of lower-dimensional pieces.
+This gives a family of identities expressing the support function of the original simplex in
+terms of other simplices. These identities alone do not yield the two-layer representations
+because the pyramids pyrev (Qv,R ) are simplices rather than paramids.
+                                                 8
+      Parallelepipeds
+
+
+
+
+               +2              +2           +2            +2               +2          +2
+
+
+
+
+               −2              −2           −2            −2               −2          −2
+
+      Simplices
+
+
+
+
+         +2             +2           +2             −6             −6            −6         +18
+
+
+
+
+                                                    +2
+
+                                               −2        −2
+
+                                               −2        −2
+                                          −2        +6        −2
+
+                                                    −2
+                                       +2                         +2
+                                               −2        −2
+
+
+
+
+       Figure 7. At the top, the parallelepipeds Bv,π,M and the simplices Qv,R
+       together with their respective coefficients. At the bottom, the total sum is
+       the same for the parallelepipeds and for the simplices.
+
+
+The second weightier step replaces the simplices Qv,R by parallelepipeds, which we cone
+with the apex ev to paramids. For each vertex v, we construct a family of parallelepipeds
+Bv,π,M indexed by permutations π and sets of positions M . Their signed indicator sum
+can be evaluated by viewing the input-coordinates as steps of a walk from 0 to 1. Inclusion–
+exclusion cancels all walks except the thermostat walks which rise below level 1 and fall
+above level 1. Their signed count turns out to be exactly (−1)s−1 s!(n − 1 − s)!, where s is
+the number of positive coordinates of the (generic) input. Binomial inversion expresses
+this count as a linear combination of the indicator sums of the auxiliary simplices Qv,R :
+                                                           X (−1)|R|−1 |R|
+                             (−1)|M | 1Bv,π,M ≡ (n − 1)!
+                  XX
+                                                                                 1Qv,R .
+                    π   M                                     R
+                                                                       n − |R|
+
+This identity replaces the simplices Qv,R by parallelepipeds Bv,π,M . See Figure 7 for
+illustrations.
+                                                    9
+But this identity by itself is not useful, because parallelepipeds are not enough. We need
+to cone the identity. Coning by ev brings the needed paramids to the left-hand side.
+Summing over all vertices v and applying the geometric identities from the first step gives
+h∆ up to a lower-dimensional remainder term Rn−1 :
+
+                              (−1)n X X X
+              MAXn = h∆ =                 (−1)|M | hpyrev (Bv,π,M ) + Rn−1 .
+                                n!  v π M
+
+This gives a two-layer representation of MAXn , because all paramids have support functions
+representable in two layers and the lower dimensional correction Rn−1 is handled by
+induction.
+
+
+
+                                  Statement of AI Use
+
+The authors verified the correctness and originality of all content, including references.
+
+
+Homological Algebra Approach. The proof contains significant technical contributions
+from both AI models and the authors. We used ChatGPT Sol 5.6 and ChatGPT Astra 6.
+The major contribution of the human authors is the overall proof strategy. The constructions
+of the chain complexes P• and Λ• , the idea to represent elements of Λ• as images of a coning
+map ρ : C• → P• , and the injectivity of the top boundary (Theorem 3) are all authors’
+ideas. AI was used throughout the process to check proofs and look for simplifications.
+The largest contributions from AI are the proofs of Theorem 10 and the doubling map
+used to prove Theorem 11. The proof of Theorem 4 that appears in this paper is also due
+largely to AI, but another proof was previously known to the authors (see Section 5.5).
+
+
+Direct Combinatorial Approach. We used Claude Opus 5.5 extensively in developing
+the mathematical content of the combinatorial proof.
+The outline of the proof was conceptualized by the authors. Our idea was to generalize the
+approach of subdividing into pyramids over zonotopes used in [4] to prove MAX5 ∈ ReLU5,2 ,
+handling lower-dimensional intersections by induction. We proposed combining this
+approach with ideas from the computational proof that MAX12 ∈ ReLU12,2 in [28]. Working
+interactively with the authors, the model implemented and carried out calculations in
+small dimensions, identified patterns in the resulting solutions and proposed the concrete
+constructions underlying Theorems 22 and 23.
+LLMs, primarily ChatGPT Sol 6.1, were also used to produce some of the TikZ figures.
+
+
+
+                                   Acknowledgments
+
+The authors thank the members of the Neural Polytopes Zulip community. F.B. and A.Y.
+are supported by the DNRF Chair grant 20231101-28697. J.S. is supported by Starting
+Grant 1054-00032B from the Independent Research Fund Denmark under the Sapere Aude
+research career programme, and by the Carlsberg Foundation, grant CF24-1929.
+                                             10
+Part 1. A Homological Algebra Proof
+
+                        2. The Chain Complex of Polytopes
+
+We start by defining a chain complex P•n . Here Pkn should represent “k-dimensional
+polytopes in Qn under Minkowski sum, modulo polytopes of dimension < k”.
+For a finite-dimensional real vector space S, let VS be the vector space of formal Minkowski-
+linear combinations of polytopes. Formally, VS is the Q-vector space spanned by pairs
+(X, Y ) of polytopes, modulo the relation (X, X) = 0. Addition in VS is given by Minkowski
+sum (X1 , Y1 ) + (X2 , Y2 ) = (X1 + X2 , Y1 + Y2 ). Multiplication by a constant is given by
+λ(X, Y ) = (λX, λY ) when λ is positive, and λ(X, Y ) = (|λ|Y, |λ|X) when λ is negative.
+If S ′ is a subspace of S, then there is a natural inclusion VS ′ → VS . We define VeS to be
+the quotient of VS by the sum over all proper subspaces S ′ of S of VS ′ .
+Formally, for k ≥ 1, we define Pkn to be the direct sum of VeS over each oriented k-
+dimensional subspace S of Qn , with relations that reversing the orientation of a subspace
+corresponds to reversing sign in VS .
+P0n will be mostly irrelevant for our calculations, but we define it here for completeness.
+For k = 0, P0n is defined as a direct sum over Qn -indexed copies of Q, modulo global
+translations. Note a translation induces aLpermutation of the summands. Here we are
+adding relations x − t(x) = 0, where x ∈ Qn Q and t is the linear map induced by the
+translation t permuting the factors.
+We want to define the boundary d : Pk+1    n   → Pkn . We start with k ≥ 1. Now Pk+1 is
+generated (as a Q-vector space) by classes of form (X, 0) with X a polytope in a k + 1-
+dimensional oriented subspace S ⊆ Qn . The boundary of (X, 0) is defined as the sum
+over all unit vectors v ∈ S of the face of X in direction v, translated so that it lies in the
+subspace U orthogonal to v. The orientation A of U is chosen so that v ∧ A represents the
+orientation of S. Note that this term is zero in Pkn unless v is orthogonal to a k-dimensional
+face of X, so only finitely many terms are non-zero.
+When k = 1, P1n is generated by classes of form (X, 0), with X a line segment in a
+1-dimensional space S. Let a and b be the endpoints of X, chosen so that the vector a − b
+induces the orientation on S. We set d((X, 0)) to be theLclass of ea − eb , where ea is the
+standard basis vector corresponding the a-component of Qn Q, and eb is the one of the b
+component.
+We need to check that d is well-defined and linear. Linearity is straightforward: if X and
+Y are polytopes, then the face of X + Y in direction v is the Minkowski sum of the faces
+of X and Y in direction v.
+It is clear that d((X, X)) = 0. If X is ≤ k-dimensional and S is a k + 1-dimensional
+subspace containing X, then (X, 0) is 0 in VeS , so we also need to check that d((X, 0)) = 0.
+If X is < k dimensional, then it has no k-dimensional faces, so d((X, 0)) is 0 in Pkn . If X is
+exactly k dimensional, then it has two identical k-dimensional faces in the two directions
+orthogonal to X. These induce opposite orientations of the same class in Pkn , so they
+cancel, and again d(X) = 0. This shows that d is well-defined.
+We need to check that d2 = 0. Let X be an n-dimensional polytope. Every n − 2-
+dimensional face F of X is a face of two n − 1 dimensional faces Y1 and Y2 of X. When
+
+                                              11
+we take d2 (x), a class corresponding to F appears twice, but with opposite orientations.
+So d2 ((X, 0)) = 0, and d2 = 0 by linearity.
+We define Λn• to be the subcomplex of P•n where Λnk is generated by classes of paramids of
+dimension k. For k ≤ 2, a paramid is a simplex, so Λn• = P•n . For k ≥ 3, the parallelepiped
+                           n , and all the other faces of a paramid are paramids of one
+face of a paramid is 0 in Pk−1
+                       n
+dimension lower. So Λ• is closed under the boundary.
+Paramids can be represented in depth 2. If the n − 1-simplex can be represented in depth
+2, then anything of dimension < n can be represented in depth 2, so everything in Λnn can
+be represented in depth 2. Our goal is to show that the class of the n-simplex is in Λnn for
+each n. By induction, this will show that the n-simplex is in depth 2 for all n.
+The key property of P•n is the following lemma, which says that a polytope is uniquely
+defined by its boundary, even modulo lower-dimensional terms:
+Lemma 3. The top differential d : Pnn → Pn−1
+                                         n   is injective.
+
+In order to prove Theorem 3, we need to understand the space Ve better. Our goal is to
+prove the following characterization of VeS :
+Lemma 4. Let X and Y be polytopes in Qn , with n ≥ 2. Then (X, Y ) = 0 in VeQn if
+and only if, for each non-zero direction v, the following property holds: let F1 and F2 be
+the faces of X in directions v and −v respectively, and let G1 and G2 be the faces of Y
+in directions v and −v respectively. Then (F1 + G2 , F2 + G1 ) = 0 in VeS , where S is the
+subspace of Qn orthogonal to v, and we translate F1 , F2 , G1 and G2 so that they lie in S.
+
+The “only if” direction appears in [22]. We reproduce the proof below:
+
+Proof of the “only if” direction. The condition (X, Y ) = 0 in VeQn is equivalent to saying
+that there exist polytopes A1 , . . . , Ak and B1 , . . . , Bj , each of dimension < n, such that
+X + A1 + · · · + Ak = Y + B1 + · · · + Bj .
+First, suppose that such Ai and Bi exist. Fix a non-zero direction v. For each i, let A′i
+be the face of Ai in direction v, and let A′′i be the face of Ai in direction −v, and define
+Bi′ and Bi′′ similarly. Let F1 and F2 be the faces of X in directions v and −v respectively,
+and G1 and G2 similarly for Y . Now F1 + A′1 + · · · + A′k = G1 + B1′ + · · · + Bj′ and
+F2 + A′′1 + · · · + A′′k = G2 + B1′′ + · · · + Bj′′ , so:
+
+
+ F1 + G2 + A′1 + · · · + A′k + B1′′ + · · · + Bj′′ = F2 + G1 + A′′1 + · · · + A′′k + B1′ + · · · + Bj′
+
+For each Ai , we have two cases: either v is not orthogonal to Ai , in which case A′i and A′′i
+have dimension < n − 1, or v is orthogonal to Ai , in which case A′i = A′′i . In the latter
+case, we can cancel A′i and A′′i from both sides of the equation. A similar claim holds for
+Bi′ and Bi′′ . After canceling equivalent terms, we see that (F1 + G2 , F2 + G1 ) = 0 in VeS ,
+where S is the subspace orthogonal to v. The assumption that n ≥ 2 means that we can
+translate F1 + G2 and F2 + G1 so that they lie in S.                                       □
+
+The other direction of the lemma could be deduced from the results in [23] (see Section 5.5).
+Instead, we will use a result of Jessen and Thorup [21]. They studied an algebra of
+polytopes modulo translations and a subdivision relation. Their results are stated for
+                                                  12
+polytopes with vertices in an arbitrary subfield of R. We specialize to the case of vertices
+in Q.
+For a finite-dimensional rational vector space S, we define BS to the abelian group freely
+generated by generators corresponding to full-dimensional polytopes in S. There is a
+homomorphism VolS : BS → Q that sends a polytope to its volume.
+We define ΠS to be BS modulo translations and subdivision relations that say that
+X1 + X2 = Z if X1 , X2 and Z are polytopes where X1 and X2 are interior-disjoint and
+X1 ∪ X2 = Z. It is straightforward to see that VolS descends to a map ΠS → Q.
+Let Q be a codimension 1 subspace of S and let v be a vector not in Q. Then we define a
+map hQ,v : BS → BQ as follows: for a polytope X in S, let F1 and F2 be the faces of X in
+the directions orthogonal to Q, with the normal to F1 being in the +v direction and the
+normal of F2 being in the −v direction, and translate F1 and F2 by multiples of v so that
+they are in Q. We view F1 or F2 as being 0 if it is not full-dimensional.
+Similar to the proof of the “only if” direction of Theorem 4, it is not too hard to see that,
+if x ∈ BS is 0 in ΠS , then hQ,v (x) = 0 in ΠQ . Jessen and Thorup prove the following:
+Theorem 5. ([21], Theorem 1) An element x ∈ BS is 0 in ΠS if and only if VolS (x) = 0
+and, for every codimension 1 subspace Q ⊆ S and v ∈
+                                                  / Q, hQ,v (x) is 0 in ΠQ .
+
+We define a map ξ : BS → VS that sends a polytope X to the class of (X, 0). Clearly, ξ is
+surjective. When n ≥ 1, Theorem 2 says that ξ descends to a map ΠS → VeS . In order to
+use Theorem 5, we need to understand ξ better.
+For k ∈ N+ , the dilation λk : ΠS → ΠS is the map that sends a polytope X to kX. An
+element x ∈ ΠS is said to have degree i if λk (x) = k i x for each k. We let ΠiS be the
+subgroup of elements of degree i. Jessen and Thorup show the following:
+                                                                                 dim(S)
+Theorem 6. ([21], Section 5) The group ΠS is the direct sum of ΠiS , . . . , ΠS           .
+
+An example with S = Q2 is illustrated in Figure 8. In this case, Π2Q2 is spanned by
+parallelograms, while Π1Q2 is spanned by terms that are the difference of a triangle and a
+parallelogram with the same area.
+Our next step is to show that ξ gives an isomorphism Π1S → VeS . Note that an element of
+ΠiS for i < dim(S) has volume 0. Indeed, VolS (λk (x)) = k dim(S) VolS (x). We also note that
+every hQ,v map commutes with every λk , so hQ,v preserves the decomposition into ΠiS .
+If S has dimension ≥ 2 and Q ⊆ S, then we can define a unique map hQ,v : VS → VQ
+similarly to hQ,v on BS . Note that hQ,v ◦ ξ = ξ ◦ hQ,v . We can now determine the kernel of
+ξ:
+Lemma 7. The kernel of ξ : ΠS → VeS is the sum of ΠiS for i > 1.
+
+Proof. First, we notice that every degree > 1 component of ΠS is in the kernel of ξ. This is
+because the dilation λk commutes with multiplication by k in VeS . That is, ξ(λk (x)) = kξ(x).
+So it remains to show that this is the entire kernel, i.e. that ξ is injective on Π1S . This
+is by induction on dim(S). The base case is dim(S) = 1. In this case, ΠS = Π1S and it is
+easy to see that ξ : ΠS → VeS is an isomorphism.
+Now let dim(S) ≥ 2. Let x ∈ Π1S with ξ(x) = 0. Represent x as a sum of polytopes
+A1 + · · · + Ak − B1 − · · · − Bj . So ξ(x) = (A1 + · · · + Ak , B1 + · · · + Bk ) = 0 in VeS .
+                                              13
+                           λ2
+                                                    =
+
+
+
+                           λ2
+                                                    =
+
+
+
+                           λ2
+             −                               −                = 2·              −
+
+        Figure 8. Top: the dilation of a parallelogram by 2 can be subdivided
+        into 4 copies of the original parallelogram. Middle: the dilation of a triangle
+        by 2 can be subdivided into two copies of the original triangle and one
+        parallelogram. So the difference of a triangle and a rectangle of the same
+        area is in Π1Q2 (bottom).
+
+
+
+The “only if” part of Theorem 4 exactly says that hQ,v ((A1 + · · · + Ak , B1 + · · · + Bk )) = 0
+for all Q, v. So ξ(hQ,v (x)) = hQ,v (ξ(x)) = 0 for all Q, v.
+Now hQ,v (x) is in Π1Q for all Q, v, so by inductive assumption, ξ(hQ,v (x)) = 0 implies
+hQ,v (x) = 0. We also know that VolS (x) = 0. So by Theorem 5, x = 0 in ΠS . By induction,
+this proves the claim.                                                                  □
+
+
+We know that ξ is surjective, so Theorem 7 shows that ξ : Π1S → VeS is an isomorphism.
+We can now complete the proof of Theorem 4:
+
+
+Proof of the “if” part of Theorem 4. The conditions of the lemma say exactly that hQ,v ((X, Y )) =
+0 for every codimension 1 subspace Q ⊆ Qn and v ∈         / Q. Since ξ is an isomorphism
+Π1S → VeS , there is some x ∈ Π1S such that ξ(x) = (X, Y ). For every Q, v, we have
+ξ(hQ,v (x)) = hQ,v (ξ(x)) = hQ,v ((X, Y )) = 0. Since hQ,v (x) ∈ Π1S , we have hQ,v (x) = 0 by
+Theorem 7. Since n ≥ 2, VolQn (x) = 0, so x = 0 in ΠS . So (X, Y ) = ξ(0) = 0 in VeS . □
+
+
+Theorem 3 follows immediately from Theorem 4.
+                                               14
+                       3. The Chain Complex of Parallelepipeds
+
+Let T = {t1 , . . . , tr } be the set of edge directions of the n simplex (with an arbitrary
+direction chosen for each). So r = n+1     2 . Let Γ = SpanZ {t1 , . . . , tr } be the lattice in Q
+                                                                                                   n
+
+generated by the ti .
+The ring Q[Γ] consists of formal Q-linear combinations of elements of Γ, where multiplication
+is given by the group law on Γ. We write g1 , . . . , gr for the generators of Q[Γ] corresponding
+to t1 , . . . , tr . So, for example, gi gj is the element of Q[Γ] corresponding to ti + tj . The
+element gi + gj is viewed formally as a superposition of ti and tj .
+We define a chain complex C•n , which consists of formal oriented parallelepipeds with edge
+directions in T and vertices in Γ, with the differential defined in the standard way.
+Let E = Qr with basis e1 , . . . , er . We can view Ckn as the Q-module Q[Γ] ⊗Q kQ E. This is
+                                                                                              V
+
+generated by elements of the form γ ⊗ ei1 ∧ · · · ∧ eik (γ ∈ Γ), which we view as corresponding
+to the parallelepiped:
+
+
+                                        γ + [0, ti1 ] + · · · + [0, tik ]
+
+The boundary map on Ckn is then defined as the standard cubical boundary. We have
+d(ei ) = gi − 1, this extends to higher orders using the graded Leibniz rule:
+
+                                        k
+                                        X
+          d(γ ⊗ ei1 ∧ · · · ∧ eik ) =       (−1)j−1 γ(gij − 1) ⊗ xi1 ∧ · · · ∧ xc
+                                                                                ij ∧ · · · ∧ xk
+                                        j=1
+
+The ρ : Ckn → Pk+1   n    is defined as follows: let x = γ ⊗ ei1 ∧ · · · ∧ eik be a parallelepiped
+     n
+in Ck . Let X be the convex hull of 0 and the vertices of x, which is a polytope in
+S = span(γ, ti1 , . . . , tik ). If γ, ti , . . . , tik are linearly independent, then the cone is non-
+degenerate and ρ(x) is the class corresponding to X in S, with the orientation of S given
+by ti1 ∧ · · · ∧ tik ∧ γ. Otherwise, the cone is degenerate and ρ(x) = 0.
+Lemma 8. The map ρ is well-defined.
+
+Proof. The only thing to check is that ρ respects the relation:
+
+
+    γ ⊗ ei1 ∧ · · · ∧ eij ∧ · · · ∧ eiℓ ∧ · · · ∧ eik = −γ ⊗ ei1 ∧ · · · ∧ eiℓ ∧ · · · ∧ eij ∧ · · · ∧ eik
+
+in Ckn . This is straightforward.                                                                            □
+
+We now claim that ρ commutes with the differentials on C•n and P•n in degrees at least 2:
+Lemma 9. If x ∈ Ckn for k ≥ 2, then d(ρ(x)) = ρ(d(x)).
+
+Proof. It is sufficient to check the claim for x = γ ⊗ xi1 ∧ · · · ∧ xik a parallelepiped. In this
+case, we have:
+
+                             k
+                             X
+                    d(x) =       (−1)j−1 γ(gij − 1) ⊗ xi1 ∧ · · · ∧ xc
+                                                                     ij ∧ · · · ∧ xk
+                             j=1
+                                                       15
+There are two cases to check, depending on whether x is degenerate. First, we consider
+the case that x is not degenerate. In this case, ρ(x) is the class in Pk+1     n   of the polytope
+X, which is the convex hull of 0 and γ + [0, ti1 ] + · · · + [0, tik ]. The orientation is given by
+ti1 ∧ · · · ∧ tik ∧ γ
+X has 2k + 1 facets. The face not containing 0 is γ + [0, ti1 ] + · · · + [0, tik ]. This is a
+Minkowski sum of intervals, which have dimension 1 < k. So the contribution of this face
+to d(ρ(x)) is 0.
+    each j ∈ {1, . . . , k}, we have two faces Fj and Gj of X. P
+For P                                                           Fj the convex hull of 0 and
+γ + ℓ̸=j [0, tiℓ ] and Gj is the convex hull of 0 and γ + tij + ℓ̸=j [0, tiℓ ].
+Now tij points out from Gj and −tij points out from Fj . So the orientation A of Fj is
+chosen so that (−tij ) ∧ A is the same as the orientation of ti1 ∧ · · · ∧ tik ∧ γ of X. So
+(−1)j ti1 ∧· · ·∧tij−1 ∧tij+1 ∧· · ·∧tik ∧γ is a representation of the orientation of Fj . Similarly,
+the orientation of Gj is represented by (−1)j+1 ti1 ∧ · · · ∧ tij−1 ∧ tij+1 ∧ · · · ∧ tik ∧ γ, which is
+equal to (−1)j+1 ti1 ∧ · · · ∧ tij−1 ∧ tij+1 ∧ · · · ∧ tik ∧ (γ + tij ). This shows that contributions
+of Fj and Gj to d(ρ(x)) are exactly:
+
+                                                                                    
+                  ρ (−1)j−1 γ(gij − 1) ⊗ xi1 ∧ · · · ∧ xij−1 ∧ xij+1 ∧ · · · ∧ xk
+
+So d(ρ(x)) = ρ(d(x)) when the cone of x is non-degenerate. We now move     P
+                                                                                  on to the
+degenerate case. Similarly to before, let X be the convex hull of 0 and γ + j [0, tij ]. Since
+the cone is degenerate, X is at most k dimensional. If X is ≤ k − 1 dimensional, then
+every face in d(x) is degenerate, so ρ(d(x)) = 0. The remaining case is when X is exactly k
+dimensional. Let S be the k-dimensional subspace containing X, and choose an arbitrary
+orientation of S.
+In this case, define Fj and Gj as oriented   polytopes in the same way as before. We also
+define a parallelepiped face Z = γ + j [0, tij ]. Since Z is zero in Pkn , it is clear that ρ(d(x))
+                                    P
+
+is the sum of classes corresponding to the Fj , Gj and Z.
+Now each of the Fj , Gj or Z is either degenerate, has positive orientation (with respect
+to the orientation chosen for S), or has negative orientation. We claim that the positive-
+orientation faces give a subdivision of X, and similarly the negative orientation faces also
+give a subdivision of X. This is straightforward.
+So by Theorem 2, the contributions from the positively-oriented pieces cancel with the
+contributions from the negatively-oriented pieces, so ρ(d(x)) = 0, as required.     □
+
+The image of ρ in P•n lies in the subcomplex Λn• generated by paramids. Note that
+parallelepipeds in C•n are restricted to having edge directions in T , so being in the image
+of ρ is more restrictive than just being in Λn• .
+
+
+3.1. The Homology of C•n . We can actually give a nice characterization of the homology
+of C•n . Let Γ̂ = Zr , generated by t̂1 , . . . , t̂r , and let π be the projection Γ̂ → Γ given by
+t̂i → ti .
+Let Ĉ•n be the chain complex of parallelepipeds (in Rr ) with vertices in Γ̂ and edge direction
+in {t̂1 , . . . , t̂r }. Now Ĉ•n is a cubicalization of Rr , and C•n is obtained from Ĉ•n by identifying
+parallelepipeds that differ by a translation in ker(π).
+                                                   16
+Now ker(π) is a subgroup of Zr , so by the structure theorem for finitely generated abelian
+groups, it is freely generated by elements a1 , . . . , ar−n of Zr . The ti are edge vectors of the
+simplex, and it is not too hard to find such a set of generators explicitly.
+So C•n is a cubicalization of a topological space which is the quotient of Rr by the action
+of the group generated by a1 , . . . , ar−n . This space is homeomorphic to a product of Rn
+                            n                         r−n
+and r − n circles. So Hk (C• ) is a direct sum of k copies of Q.
+We didn’t need to use anything special about t1 , . . . , tr here. In general, let T = {t1 , . . . , tr }
+be a set of directions generating an abelian group Γ, and let C•T be the chain complex of
+parallelepipeds with edges directions in T and vertices in Γ. Then the argument above
+shows that C•T is a cubicalization of a topological space which is the quotient of Rr by the
+set of relations among the ti . In particular, if the ti freely generate Γ, then C•T has the
+homology of a point. This observation will be useful for filling cycles in C•n .
+This last observation is also a consequence of a more general idea about the Koszul
+resolution of a regular sequence, see Section 5.2.
+
+3.2. Filling Boundaries in C•n . Let D•n be C•n modulo translations. Formally, we can
+think of Dkn as being equal to kQ E (recall E = Qr , generated by e1 , . . . , er ). Let ε be the
+                              V
+
+map C•n → D•n that forgets translation in C•n . Using Ckn = Q[Γ] ⊗ kQ E, ε can be defined
+                                                                   V
+
+using the map Q[Γ] → Q that sends each γ ∈ Γ to 1.
+We note that every boundary x in Ckn has ε(x) = 0. Indeed, opposite pairs of faces of a
+parallelepiped cancel after taking ε. So this gives a necessary condition for a cycle x to be
+a boundary. We claim that it is sufficient:
+Lemma 10. A cycle x ∈ Ckn is a boundary if and only if ε(x) = 0
+
+Proof. The “only if” direction is clear. So suppose that x is a cycle with ε(x) = 0. We
+need to show that x is a boundary.
+Without loss of generality, suppose that t1 , . . . , tn freely generate the rank-n free abelian
+group Γ. For example, we can take t1 , . . . , tn to be the set of edges of the simplex containing
+one distinguished vertex. Write A = {t1 , . . . , tn } and B = {tn+1 , . . . , tr }. Let K• be the
+chain complex of parallelepipeds with edge directions in A and vertices in Γ, and similarly
+let T• be the chain complex of parallelepipeds with edge direction in B and vertices in Γ.
+Write δ for the differential on K• and ∂ for the differential on T• .
+We claim that C n ∼•= K• ⊗ T• . Formally, this says:
+
+                                      Ckn ∼
+                                               M
+                                          =           Kp ⊗Q[Γ] Tq
+                                              p+q=k
+
+In other words, every parallelepiped in Ckn can be written as V       a formal product of one
+in K• and one in T• . The claim is clear from Kp = Q[Γ] ⊗ pQ ⟨e1 , . . . , en ⟩ and Tq =
+Q[Γ] ⊗ pQ ⟨en+1 , . . . , er ⟩. We can think of Kp ⊗ Tq as consisting of parallelepipeds with p
+       V
+
+edge directions in A and q edge directions in B.
+We extend δ and ∂ to maps δ : Kp+1 ⊗ Tq → Kp ⊗ Tq and ∂ : Kp ⊗ Tq+1 → Kp ⊗ Tq . In order
+for these to be compatible with the differential on C•n , the map ∂ : Kp ⊗ Tq+1 → Kp ⊗ Tq
+has a (−1)p factor compared to ∂ : Tq+1 → Tq . Note that δ∂ + ∂δ = 0, and the differential
+d on C•n is identified with δ + ∂.
+                                                   17
+Now x is a cycle in Ckn . For i = 0, . . . , k, let xi be the component of x in Ki ⊗ Tk−i . The
+strategy will be to inductively add boundaries that zero xi , starting with x0 . Note that ε
+identifies sets of parallelepipeds with the same set of edge directions, so ε(x) = 0 implies
+that ε(xi ) = 0 for each xi .
+So x0 is a class in K0 ⊗ Tk with ε(x0 ) = 0. Note that K0 = Q[Γ]. The image of δ : K1 → K0
+is the ideal I in Q[Γ] generated by g1 − 1, . . . , gn − 1. We claim that x0 ∈ I ⊗ Tk . Indeed,
+the parallelepipeds in x0 can be grouped in pairs that are orientation-reversed translates
+of each other, and each pair is an element of I ⊗ Tk . This says that x0 is a δ-boundary.
+Let y1 ∈ K1 ⊗ Tk with δ(y1 ) = x0 . We can subtract d(y1 ) = δ(y1 ) + ∂(y1 ) from x to get
+a new cycle with no component in K0 ⊗ Tk . Note that d(y1 ) is a cycle (since d2 = 0), so
+x − d(y1 ) is a cycle.
+Now proceed by induction: suppose that xi = 0 for i = 0, . . . , j − 1 for some j ≥ 1. We
+want to add a boundary to x that zeros xj . Now xj ∈ Kj ⊗ Tk−j , and δ(xj ) = d(xj ) since
+no other non-zero xi has any boundary in Kj−1 ⊗ Tk−j . Since xj is a cycle, δ(xj ) = 0.
+By exactness of K• , there is some yj+1 ∈ Kj+1 ⊗ Tk−j with δ(yj+1 ) = xj . Subtracting
+d(yj+1 ) = δ(yj+1 ) + ∂(yj+1 ) gives a new cycle with no Kj ⊗ Tk−j component.
+By induction, we can eventually zero all the terms in x. Since we have only subtracted
+boundaries from x, this proves that x is a boundary, as required.                    □
+Remark. In Section 5.4, we give a shorter, but less concrete proof of Theorem 10. We
+are also aware of a more explicit proof. We have decided not to include this since the
+combinatorial construction is explicit.
+
+
+                                       4. Filling Simplices
+
+In order to show that the n-simplex is in Λnn , we want to find a cycle x in Cn−2      n  with
+                                n
+ε(x) = 0 such that ρ(x) = d(∆ ) is the boundary of the n-simplex. By Theorem 10, x is
+then the boundary of some y ∈ Cn−1  n , and by Theorem 9, d(ρ(y)) = ρ(d(y)) = d(∆n ). By
+
+Theorem 3, ρ(y) is the class of ∆ in Pnn . Since the image of ρ is in Λn• , this will show that
+                                  n
+
+∆n is in Λn• .
+For a subset S ⊆ {1, . . . , n + 1} of size n, let FS be the n − 1-dimensional subspace of Qn
+spanned by edge directions contained in the face of ∆n that is the convex hull of vertices
+in S. We say that an element x of Ckn satisfies the face direction condition if, for every
+parallelepiped p with non-zero coefficient in x, all the vertices of p are contained in FS for
+some S.
+First, we show how to realize condition ε = 0:
+Lemma 11. Let x be a cycle in Ckn with k ≥ 2. Then there is a cycle x′ ∈ Ckn with
+ε(x′ ) = 0 and ρ(x′ ) = ρ(x). Furthermore, if x satisfies the face direction condition, then x′
+does as well.
+
+Proof. Let S : Ckn → Ckn be the map that takes a parallelepiped in Ckn , multiplies by 2,
+then subdivides it into 2k translated copies of the original parallelepiped (see Figure 5).
+Formally,
+
+                                                              (γ 2 · giu11 · . . . · giukk ) ⊗ ei1 ∧ · · · ∧ eik
+                                              X
+         S(γ ⊗ ei1 ∧ · · · ∧ eik ) =
+                                       (u1 ,...,uk )∈{0,1}k
+                                                        18
+Clearly, ε(S(x)) = 2k ε(x) for x ∈ Ckn . We claim that ρ(S(x)) = 2ρ(x). To see this, let
+x = γ ⊗ ei1 ∧ · · · ∧ eik be a parallelepiped in Ckn . Recall that ρ(x) is the (class of the)
+paramid X with apex at the origin and base γ + [0, ti1 ] + · · · + [0, tik ]. So 2X is the paramid
+with apex at the origin and base 2γ + [0, 2ti1 ] + · · · + [0, 2tik ], which can be subdivided
+into 2k pieces, corresponding to the components of S(x) (see Figure 5).
+So set x′ = 2k1−2 (2k x − S(x)). Since k ≥ 2, the denominator is non-zero. Now ε(x′ ) = 0,
+and ρ(x′ ) = ρ(x). It is straightforward to check that x′ is a cycle.                   □
+
+Now, we prove the inductive step that constructs a boundary of ∆n+1 given a ∆n .
+
+Lemma 12. Let n ≥ 2. Suppose there is an x ∈ Cn−1          n   such that ρ(x) = [∆n ], where
+                                                                              n+1
+d(x) satisfies the face direction condition. Then there is a cycle y ∈ Cn−1       such that
+ρ(y) = d([∆  n+1 ]), where y satisfies the face direction condition.
+
+Proof. The cycle y will be constructed from one copy of x for each injective map µ :
+{1, . . . , n + 1} → {1, . . . , n + 2}. We can view µ as a map that realizes ∆n as a face of
+∆n+1 . So each facet of the n-simplex is represented by (n + 1)! symmetrized copies of x.
+Let Γ be the lattice generated by simplex edge directions in Rn , and let Γ′ be the lattice
+generated by simplex edge directions in Rn+1 . A map µ : {1, . . . , n + 1} → {1, . . . , n + 2}
+induces a homomorphism Γ → Γ′ . This defines a map ψµ : C•n → C•n+1 .
+Each injective map µ : {1, . . . , n + 1} → {1, . . . , n + 2} extends uniquely to a permutation
+µ′ : {1, . . . , n + 2} → {1, . . . , n + 2}. We define:
+
+                                         1
+                                                 sign(µ′ )ψµ (x)
+                                              X
+                                 y=
+                                      (n + 1)! µ
+
+where the sum is over injective µ : {1, . . . , n + 1} → {1, . . . , n + 2}.
+We claim that ρ(y) ∈ Pnn+1 is the boundary of ∆n+1 . For each S ⊆ {1, . . . , n + 2} of size
+n + 1, there are (n + 1)! maps µ : {1, . . . , n + 1} → {1, . . . , n + 2} with image S. For each
+of these µ, ρ(ψµ (x)) is the ∆n face of ∆n+1 in FS , with sign determined by sign(µ′ ) (note
+that the orientation on FS induced by µ is determined by sign(µ′ )). So ρ(y) is exactly the
+boundary of ∆n+1 .
+                                             n+1
+Next, we claim that y is a cycle in Cn−1         . Clearly, ψµ commutes with the boundary d
+      n+1
+on Cn−1 . For each parallelepiped z with non-zero coefficient in d(x), we choose some
+S ⊆ {1, . . . , n + 1} such that z is in FS . This is possible by the face direction condition for
+d(x).
+Let z be a parallelepiped in d(x), which by assumption is in FS for some S. Let µ :
+{1, . . . , n + 1} → {1, . . . , n + 2} be injective, and let κ be the unique map that agrees
+with µ on S but is not equal to µ. Note that sign(µ′ ) = −sign(κ′ ), since µ′ and κ′ differ
+by a transposition. Now ψµ (z) = ψκ (z), so these terms cancel in d(y). This shows that
+d(y) = 0.
+Note that every parallelepiped in the image of ψµ is contained in the subspace Fimg(µ) , so
+y satisfies the face direction condition.                                                □
+
+Theorem 13. For each n, [∆n ] ∈ Λnn .
+                                                 19
+                         ∆3                             Π                    F
+                                     +                         −
+
+
+
+
+                                                     P = ∆3 ∪ Π
+
+                                 =
+
+
+
+
+                                         T                    E
+                                                +
+                    =
+
+
+
+
+       Figure 9. Top:                Using inclusion-exclusion, we can write the
+       union P of the standard 3-simplex ∆3 – with vertices at
+       (0, 0, 0), (1, 0, 0), (0, 1, 0) and (0, 0, 1) – and the paramid Π – with
+       vertices (0, 0, 0), (0, 1, 0), (−1, 1, 0), (−1, 0, 1) and (0, 0, 1) – as the sum of
+       the simplex and the paramid minus their intersection – the triangular
+       face F with vertices (0, 0, 0), (0, 1, 0) and (0, 0, 1). Bottom: P is also the
+       Minkowski sum of the triangular face T with vertices at (0, 0, 0), (−1, 1, 0)
+       and (−1, 0, 1) and the segment E with vertices at (0, 0, 0) and (1, 0, 0).
+
+
+Proof. We will show by induction on n that there is an x ∈ Cn−1   n   such that ρ(x) = ∆n ,
+and d(x) satisfies the face direction condition. The claim will follow since img(ρ) ⊆ Λn• .
+The base case is n = 3. We notice that the 3 simplex ∆3 is equivalent in VeRn to the
+negation of a paramid X that satisfies the face direction conditions. This is illustrated in
+Figure 9. The two polytopes give a subdivision of a polytope which is the sum of a triangle
+and a line segment. Since the triangle and line segment are less than 3 dimensional, this
+shows that ∆3 + X = 0 in VeRn . It is straightforward to check the face direction conditions
+for X. So the class of the base of X (with appropriately chosen orientation) gives an
+x ∈ C23 such that ρ(x) = ∆3 .
+For the inductive step, suppose the claim is true for some n ≥ 3. By Theorem 12, there
+                  n+1
+is a cycle y ∈ Cn−1    such that ρ(y) = d(∆n+1 ). By Theorem 11, there is some y ′ with
+    ′
+ρ(y ) = ρ(y) = d(∆   n+1 ), with ε(y ′ ) = 0. So by Theorem 10, there is some z ∈ Cnn+1 with
+d(z) = y ′ (so d(z) satisfies the face direction condition).
+                                               20
+By Theorem 9, we have d(ρ(z)) = ρ(d(z)) = ρ(y ′ ) = d(∆n+1 ). By Theorem 3, this means
+that ρ(z) = ∆n+1 . By induction, this completes the proof.                          □
+
+                                  5. Additional Ideas
+
+This section contains some results and alternate proofs that did not fit into the main
+body of this part of the paper. We believe that these ideas can be valuable intuition for
+understanding our result.
+
+5.1. The Universality of Paramids. Haase, Hertrich, and Loho show that ReLUn,2
+is generated by support functions of polytopes that are each the convex hull of two
+zonotopes (see Theorem 8 in [15]). By Propositions 9 and 10 in [15] and Theorem 2, such
+a polytope can be written in terms of polytopes of form conv(A ∪ B), where conv(A ∪ B)
+is a join of A and B (i.e. A and B have disjoint affine hulls and their tangent spaces are
+transverse). Working modulo lower-dimensional pieces, we can ignore pieces except those
+with dim(A) + dim(B) = n − 1.
+When A or B is a point, the piece we get is a paramid. The purpose of this section is to
+show that, modulo lower-dimensional terms, every such piece is equivalent to a paramid.
+This somewhat justifies the choice to focus on paramids with our proof.
+We write α : Rn → Rn for the antipodal map. The key result is the following:
+Lemma 14. Let A and B be polytopes in Rn (n ≥ 1) with disjoint affine hulls. Suppose
+A can be written A1 + A2 , where A1 and A2 have transverse tangent spaces. Then in VeRn ,
+the class of conv(A ∪ B) is equal to (−1)dim(A2 ) times the class of conv(A1 ∪ (B + α(A2 ))).
+
+Proof. In this proof, we use the convention that a zero-dimensional point has one −1-
+dimensional facet, which is the empty set. The Minkowski sum of any polytope with the
+empty set is empty. The way we use the induction hypothesis, we will sometimes need a
+version of the claim where A1 or B empty. We will check this case first.
+If both A1 and B are empty, then both conv(A ∪ B) and conv(A1 ∪ (B + α(A2 ))) are
+empty, so the claim is trivial. If A1 is empty and B is not, then conv(A ∪ B) = B and
+conv(A1 ∪ (B + A2 )) = B + A2 . Since A2 and B have dimension < n, these both represent
+0 in VeRn .
+We also handle the case dim(A2 ) = 0 separately. In this case, A2 is a point, and it is clear
+that conv(A1 ∪ (B + α(A2 ))) is just conv(A ∪ B) translated by −A2 .
+Now suppose that A and B are non-empty and A2 has dimension at least 1. The proof is
+by induction on n. When n = 1, the conditions of the lemma are impossible to satisfy, and
+so the result is true trivially.
+We want to use Theorem 4. Since A and B have disjoint affine hulls, the facets of
+conv(A ∪ B) are of form conv(F ∪ B) or conv(A ∪ G), where F is a facet of A or G is a
+facet of B.
+Since A1 and A2 have transverse tangent spaces, the facets of A = A1 + A2 are of form
+F1 + A2 or A1 + F2 , where F1 is a facet of A1 or F2 is a facet of A2 . So the facets of
+conv(A ∪ B) are:
+     • for each facet G of B, conv(A ∪ G),
+     • for each facet F1 of A1 , conv((F1 + A2 ) ∪ B), and
+                                             21
+      • for each facet F2 or A2 , conv((A1 + F2 ) ∪ B).
+
+Since A and B have transverse tangent spaces, B and A2 do as well. So by a similar
+argument to the above, the facets of conv(A1 ∪ (B + α(A2 ))) are:
+
+      • for each facet F1 of A1 , conv(F1 ∪ (B + α(A2 ))),
+      • for each facet G of B, conv(A1 ∪ (G + α(A2 )))
+      • for each facet F2 of A2 , conv(A1 ∪ (B + α(F2 )))
+
+By the inductive hypothesis, the class (in VeS , where S contains A1 , G and A2 ) of conv(A1 ∪
+(G + α(A2 ))) is equal to (−1)dim(A2 ) times the class conv(A ∪ G). Similarly, the class of
+conv(F1 ∪ (B + α(A2 ))) is equivalent to (−1)dim(A2 ) times the class of conv((F1 + A2 ) ∪ B).
+The dimension of F2 is one less than the dimension of A2 , so the class of conv(A1 ∪ (B +
+α(F2 ))) is −(−1)dim(A2 ) times the class conv((A1 + F2 ) ∪ B).
+We notice that the outward facing normal vector of conv(A1 ∪ (G + α(A2 ))) is the same as
+the one for conv(A ∪ G), and similarly for conv(F1 ∪ (B + α(A2 ))) and conv((F1 + A2 ) ∪ B),
+while conv(A1 ∪ (B + α(F2 ))) and conv((A1 + F2 ) ∪ B) have opposite normal vectors. By
+Theorem 4, this completes the proof.                                                      □
+
+In particular, if A and B are zonotopes, then the class of conv(A ∪ B) is, up to lower
+dimensional terms, equal to (−1)dim(A) times the class of conv({0}, B + α(A)). The latter
+polytope is a paramid.
+So, up to lower dimensional terms, support functions of paramids generate ReLUn,2 . Of
+course, this follows from Theorem 13 as well.
+Remark. Even if polytopes A and B in Rn are equivalent modulo terms of dimension < n,
+it is not true in general that pyramids on A and B in Rn+1 are equivalent modulo terms
+of dimension < n + 1. So Theorem 14 is not so useful for inductive arguments.
+
+5.2. The Koszul Complex. The chain complex C•n that we define is also known as the
+Koszul complex of the sequence t1 − 1, . . . , tr − 1, viewing t1 − 1, . . . , tr − 1 as elements of
+Q[Γ].
+Formally, given a ring U    and a set of elements x1 , . . . , xr , the associated Koszul complex
+K• is defined by Kp = pU U r (so K0 = U ). Viewing U r as being generated by e1 , . . . , er ,
+                          V
+
+the differential is defined by d(ei ) = xi and graded Leibniz.      Note that, if U is an Q-module
+(e.g. Q[Γ]), then Kp is naturally isomorphic to U ⊗Q pQ Qr .
+                                                            V
+
+A sequence F = (f1 , . . . , fr ) is called a regular sequence if the ideal (f1 , . . . , fr ) is not
+equal to U and, for each i, fi is not a zero-divisor in R/(f1 , . . . , fi−1 ). If fi = ti − 1 as in
+Section 3, then regularity says that the translations ti freely generate an abelian subgroup
+of Qn .
+The homology of a Koszul complex of a regular sequence is well understood:
+Theorem 15. (See e.g. [35], Corollary 4.5.5) Let U be a ring, let f1 , . . . , fr be a regular
+sequence, and let K• be the Koszul complex. Then H0 (K• ) = U/(f1 , . . . , fr ), and all higher
+homology is zero.
+
+5.3. The Action of S on H• (C•n ). Let S be the doubling map defined in the proof of
+Theorem 11 (see also Figure 5). Instead of using the augmentation condition for cycle
+                                                 22
+filing in C•n , we could instead try to compute the action of S on H• (C• ). Note that S
+computes with the boundary on C•n , so it induces a map S∗ : H• (C•n ) → H• (C•n ).
+Recall from Section 3.1 that C•n is the quotient of the unit-cubical complex Ĉ•n of Rr by the
+subgroup of Zr representing relations among the simplex edge directions t1 , . . . , tr . Now S
+lifts to a map Ĉ•n → Ĉ•n in a straightforward way.
+Note that Ĉ•n is a cubical complex for Rr and C•n is a cubical complex for the product
+Rn ×(S 1 )r−n . The map π : Rr → Rn ×(S 1 )r−n is the universal covering map of Rn ×(S 1 )r−n .
+Now S gives a map Rn × (S 1 )r−n → Rn × (S 1 )r−n , which lifts to a map S : Rr → Rr ,
+which is given by multiplication by 2.
+Now π1 (Rn × (S 1 )r−n ) is naturally associated with the group of deck transformations of Rr ,
+which is the kernel of π : Γ̂ → Γ. So we see that S∗ : π1 (Rn × (S 1 )r−n ) → π1 (Rn × (S 1 )r−n )
+is multiplication by 2.
+So S∗ : H1 (C•n ) → H1 (C•n ) is multiplication by 2. By functoriality of the product structure
+on the (co)homology of (S 1 )r−n , we see that S∗ : Hk (C• ) → Hk (C• ) is multiplication by 2k .
+This gives us a different way of seeing that, for a cycle x ∈ Ckn , 2k x − S(x) is a boundary.
+
+5.4. An Alternative Proof of Theorem 10. We can make D•n into a chain complex
+with boundary map 0. The map ε : C•n → D•n commutes with the boundary maps, so
+descends to a map ε∗ on homology. Since the boundary on D•n is 0, the homology of D•n is
+just D•n .
+Recall that Theorem 10 says that ε : C•n → D•n sends a cycle x to 0 if and only x is a
+boundary. This is equivalent to saying that ε∗ : H• (C•n ) → H• (D•n ) is injective.
+Now D•n is a cubicalization of the quotient of Rr by the action of Zr . Recall that C•n is the
+cubicalization of the quotient of Rr by the group of relations among the ti , call this group
+G. Now ε corresponds to the natural covering map Rr /G → Rr /Zn .
+Now Hk (C•n ) is identified with kQ (Q ⊗ G) and Hk (D•n ) is identified with kQ (Q ⊗ Zr ), and
+                                 V                                             V
+
+ε∗ is the map kQ (Q ⊗ G) → kQ (Q ⊗ Zr ) induced by the inclusion G → Zr . This map is
+                V              V
+
+injective, giving an alternate proof of Theorem 10.
+
+5.5. An Alternate Proof of Theorem 4. A result of Koutschan, Ponomarchuk, and
+Schicho [23] gives an exact condition for when a continuous piecewise linear function f in
+n inputs can be written as a linear combination of “lower-dimensional” functions. Here we
+show how to derive Theorem 4 from their result. The results of [23] are stated over R, so
+in this section we work with R coefficients instead of Q.
+The results of [23] are stated over the reals. We expect that the results also hold with
+rational coefficients, but in this section we will allow arbitrary real coefficients.
+Let S and Q be finite dimensional real vector spaces, and let g : S → Q be a piecewise
+constant function. We allow g to be defined only “almost everywhere” (precisely, we say
+that for “almost all” x ∈ S, g(x) is defined and constant on a neighborhood of x). Let
+H ⊆ S be an oriented codimension 1 subspace. For x ∈ H and ϵ > 0, let Bϵ+ (x) and Bϵ− (x)
+be the two halves of the ball of radius ϵ around x, split by H, with Bϵ+ (x) being the half
+on the positive side of H. For almost all x ∈ H, g is constant on Bϵ+ (x) and Bϵ− (x). We
+define ∆g (H) : H → Q to be the piecewise constant, almost everywhere defined function
+that is the difference of the values of g on Bϵ+ and Bϵ− , when this exists.
+                                               23
+An oriented flag H = (H1 , . . . , Hk ) of length k in S is a sequence of oriented codimension
+1 affine subspaces H1 ⊆ S and Hi+1 ⊆ Hi . For g : S → Q piecewise constant and almost
+everywhere defined, we define ∆g (H) inductively as follows: we define g1 = ∆g (H1 ) and
+gi+1 = ∆gi (Hi+1 ), and set ∆g (H) = gk . We say that H is critical for g if gk is non-zero.
+Let H = (H1 , . . . , Hk ) be a flag, and let v1 , . . . , vk be vectors such that vi is the normal
+vector to Hi in Hi−1 , viewing H0 as the base space S. Then, where ∆g (H) is defined, it is
+equal to:
+
+                                                  X                                                       k
+                                                                                                          Y
+      ∆g (H)(x) = lim . . . lim                                   g(x + s1 ϵ1 v1 + · · · + sk ϵk vk ) ·         sk
+                    ϵk →0+     ϵ1 →0+
+                                        (s1 ,...,sk   )∈{−1,1}k                                           i=1
+
+If f : Rn → R is a continuous piecewise linear function, then the gradient ∇f : Rn → Rn is
+a piecewise constant, almost everywhere defined function. The function f is said to be
+a maxk if it can be written f = max(ℓ1 , . . . , ℓk ), where each ℓi is an affine function. The
+following is proved in [23]:
+Theorem 16. ([23], Theorem 1) Let f : Rn → R be a continuous piecewise linear function.
+Then we can express f as a linear combination of maxk+1 functions if and only if every
+critical flag for ∇f has length ≤ k.
+
+A piecewise linear function is said to be homogeneous if every piece extends to a linear
+function (i.e. an affine function that is 0 at 0). Given a polytope X in Rn , its support
+function hX : Rn → R is defined by hX (v) = maxx∈X (v · x). This is a homogeneous
+piecewise linear function. There is a linear map from VS to the space of homogeneous
+piecewise linear functions on S that sends (X, Y ) to (hX , hY ). This is an isomorphism.
+A homogeneous maxk+1 (that is, a max of k linear functions) is the support function of a
+polytope with k + 1 vertices, which is at most k dimensional. So Theorem 16 is close to
+giving a characterization of VeS . We need one more lemma:
+Lemma 17. If f : Rn → R is a homogeneous piecewise linear function that can be written
+as a sum maxk functions, then f can be written as a sum of homogeneous maxk functions.
+
+Proof. We write:
+
+                                               k
+                                               X               j
+                                                               X
+                                        f+             ai −          bi = 0
+                                               i=1             i=1
+
+Where each ai and bi is a maxk term. Now obtain a′i from ai by adding a constant so that
+a′i (0) = 0. Since f (0) = 0, all the constant terms added must cancel, so:
+
+                                                       j             m
+                                                             a′i −         b′i = 0
+                                                       X             X
+                                  hX − hY +
+                                                       i=1           i=1
+
+Now each a′i or b′i is a max of n terms, plus a constant. Write a′1 = c0 + max(ℓ1 + c1 , . . . , ℓn +
+cn ) = c0 +max(ℓ1 +c0 +c1 , . . . , ℓn +c0 +cn ), where each ℓi is linear and each ci is a constant.
+We know that a1 (0) = 0, so all the c0 + ci are ≤ 0. Obtain a′′1 from a1 by removing all the
+ℓi + c0 + ci terms that have c0 + ci < 0. Note that a′′1 = a′1 in a neighborhood of 0. We
+similarly define a′′i and b′′i for each ai , and notice that:
+                                                          24
+                                                    j               m
+                                                           a′′i −         b′′i = 0
+                                                    X               X
+                                            f+
+                                                     i=1            i=1
+
+in a neighborhood of 0. However, both sides are homogeneous, and a homogeneous piecewise
+linear function is determined by its behavior near 0, so both sides are equal.        □
+
+We now have a characterization of VeS . Let (X, Y ) represent a class in VeS and let g =
+∇(hX − hY ). Then (X, Y ) = 0 in VeS if, for every flag H of length n, ∆g (H) = 0. The
+converse is also true, but this won’t be relevant for our approach.
+We say that a flag H(H1 , . . . , Hk ) is homogeneous if every Hi is a vector space (i.e. it
+contains 0). The following shows that, if we want to apply Theorem 16 to a homogeneous
+function, then we only need to consider homogeneous flags.
+Lemma 18. If f is a homogeneous piecewise linear function, g = ∇f and H is a flag,
+then ∆g (H) = 0 unless H is homogeneous.
+
+Proof. Straightforward.                                                                                                         □
+Lemma 19. Let X be a polytope in Rn . Let H = {H1 , . . . , Hn } be a homogeneous
+flag (so Hn = 0). Let v1 , . . . , vn be vectors such that vi is a normal vector to Hi in
+Hi−1 , viewing H0 = Rn . Let F1 and F2 be the faces of X in directions vn and −vn
+respectively. Let S be the orthogonal complement of vn in Rn . For i = 1, . . . , n − 1, let Hi′
+be the orthogonal complement of vn in Hi , so H′ = {H1′ , . . . , Hn−1
+                                                                   ′   } is a flag on S. Let
+                     ′                                      ′
+f = ∇hX and let f = ∇hF1 − ∇hF2 , where we restrict f to a function S → Rn . Then
+∆f (H)(0) = ∆f ′ (H′ )(0).
+
+Proof. We know that:
+
+                                                           X                                                   n
+                                                                                                               Y
+         ∆f (H)(0) = lim . . . lim                                         g(s1 ϵ1 v1 + · · · + sn ϵn vn ) ·         si
+                          ϵn →0+         ϵ1 →0
+                                                 (s1 ,...,sn )∈{−1,1}n                                         i=1
+
+and:
+
+                                                                                                                          n−1
+∆f ′ (H′ )(0) =                                                            f ′ (s1 ϵ1 v1 + · · · + sn−1 ϵn−1 vn−1 ) ·
+                                                      X                                                                   Y
+                    lim      . . . lim                                                                                          si
+                  ϵn−1 →0+      ϵ1 →0+
+                                         (s1 ,...,sn−1   )∈{−1,1}n−1                                                      i=1
+
+
+Note that hX , hF1 and hF2 are homogeneous, so f (λx) = f (x) for λ > 0, and similarly for
+f ′ . We observe that, for almost all x ∈ S:
+
+                                          ∇hF1 (x) = lim f (vn + ϵx)
+                                                             ϵ→0+
+
+To see this, we notice that, for v a direction, ∇f (v) is equal to the vertex u of X that
+maximizes u · v (∇f (x) is defined when this is unique). Now F1 is the set of points u
+in X maximizing u · vn . So when x is sufficiently small, f (vn + x) is the vertex u of F1
+maximizing u · x, which is equal to hF1 (x).
+Similarly, for almost all x ∈ S, we have:
+                                                              25
+                                  ∇hF2 (x) = lim f (−vn + ϵx)
+                                               ϵ→0+
+
+So for almost all x ∈ S, we have:
+
+                           f ′ (x) = lim (f (vn + ϵx) − f (−vn + ϵx ))
+                                    ϵ→0+
+
+It follows that ∆f (H)(0) = ∆f ′ (H′ )(0).                                                        □
+
+Proof of the “if” direction of Theorem 4. Let X and Y be polytopes in Rn . Suppose that,
+for every direction v, (F1 + G2 , F2 + G1 ) = 0 in VeS , where S is the orthogonal complement
+of v, F1 and F2 are the faces of X in directions v and −v respectively, and G1 and G2 are
+faces of Y in directions v and −v respectively.
+We want to show that there are Ai and Bi such that X + A1 + · · · + Ak = Y + B1 + · · · + Bj .
+Let f = ∇(hX − hY ). By Theorem 16 and Theorems 17 and 18, it is sufficient to show
+that, for any homogeneous flag H = {H1 , . . . , Hn }, we have ∆f (H)(0) = 0. This is by
+induction on n.
+Let H = {H1 , . . . , Hn } be a flag and let v be a vector in Hn representing the orientation
+of Hn−1 . Let F1 , F2 , G1 and G2 be faces of X and Y in directions ±v, as in the statement
+of the lemma, but not translated. Let f ′ = ∇(hF1 + hG2 − hF2 − hG1 ). By Theorem 19,
+we have ∆f ′ (H′ )(0) = ∆f (H)(0), where H′ is the flag obtained as in Theorem 19.
+Let F1′ , F2′ , G′1 and G′2 be F1 etc. translated to lie in the subspace S orthogonal to v. Let
+f ′′ = ∇(hF1′ + hG′2 − hF2′ − hG′1 ). Translating a polytope changes its support function
+by adding a linear function, so f ′′ differs from f ′ by a constant. Since H′ has length
+≥ n − 1 ≥ 1, we have ∆f ′′ (H′ )(0) = ∆f ′ (H′ )(0).
+We know that (F1′ + G′2 , F2′ + G′1 ) = 0 in VeS by assumption. In the base case n = 2, this
+means that F1′ +G′2 , F2′ +G′1 are translates of each other, so f ′′ is constant and ∆f ′′ (H′ ) = 0.
+When n > 2, the “only if” part of Theorem 4 shows that (F1′ + G′2 , F2′ + G′1 ) satisfies the
+conditions of the lemma. So we know by inductive assumption that ∆f ′′ (H′ )(0) = 0. In
+either case, we conclude that ∆f (H)(0), so hX −hY can be written in terms of homogeneous
+maxn terms, which means that (X, Y ) = 0 in VeRn .                                                □
+
+Part 2. A Direct Combinatorial Proof
+
+Here we explicitly construct a signed sum of paramids whose support functions equal
+MAXn modulo lower-dimensional terms.
+
+                                       6. Preliminaries
+
+Throughout this part, let [n] := {1, . . . , n} and let
+                                                         (                    )
+                                                                     X
+                                                                n
+                    ∆ := conv{e1 , . . . , en } ⊂ H :=       x∈R :       xi = 1
+                                                                     i
+be the standard (n − 1)-simplex living in the affine subspace H such that h∆ = MAXn .
+For every index v ∈ [n], let
+      V−v := [n] \ {v},       H−v := {p ∈ H : pv = 0},          ∆−v := conv{ei : i ∈ V−v }.
+                                                 26
+Furthermore, let Ln−2 be the span of support functions of polytopes in H of dimension at
+most n − 2. Write f ≡ g if f − g ∈ Ln−2 . We write “almost everywhere” to mean “outside
+a finite union of lower dimensional spaces”. For a polytope P and a point q, the pyramid
+with apex q and base P is denoted as
+                                     pyrq (P ) := conv({q} ∪ P ).
+
+6.1. Standard Valuations. Theorem 2 gives an inclusion–exclusion identity for support
+functions of a polytope covered by polytopes. The following lemma uses the same valuation
+property to handle arbitrary linear relations between indicator functions that hold almost
+everywhere, yielding an identity of support functions modulo lower-dimensional terms.
+Lemma 20 (Valuation). Let A ⊆ H be a d-dimensional affine subspace, let P1 , . . . , Pk ⊆ A
+be polytopes, and let c1 , . . . , ck ∈ R. If ki=1 ci 1Pi = 0 almost everywhere on A, then
+                                             P
+
+                                                  k
+                                                  X
+                                                         ci hPi
+                                                   i=1
+is a linear combination of support functions of polytopes in A of dimension at most d − 1.
+Moreover, for every q ∈ H \ A,
+                                                k
+                                                X
+                                                      ci hpyrq (Pi )
+                                                i=1
+is a linear combination of support functions of polytopes in aff(A ∪ {q}) of dimension at
+most d.
+
+Proof. The first assertion follows from full additivity of support functions after a suitable
+subdivision (see Theorem 2 and e.g. [30]). For the second, fix q ∈ H \ A and set B =
+aff(A ∪ {q}). Every section of the pyramids parallel to A, apart from the apex, is a common
+homothetic image of the original polytopes. Their signed indicators therefore cancel almost
+everywhere on B. Apply the first assertion in the (d + 1)-dimensional affine space B. □
+
+                          7. Replacing Simplices by Paramids
+
+7.1. The Parallelepipeds. Here we describe the parallelepipeds that form the bases of
+the paramids in our construction. For v ∈ [n], an ordering π = (π1 , . . . , πn−1 ) of V−v , and
+a set M ⊆ {2, . . . , n − 1} of marked indices, define the polytope
+                                   0 ≤ ui ≤ 1                      ∀i ∈ M,
+                                                                                            
+(3)           Bv,π,M := p ∈ H−v :                                                              ,
+                                  −1 ≤ pπi ≤ 0                     ∀i ∈ {2, . . . , n − 1} \ M
+             P
+where ui =    j<i pπj .
+
+Claim 21. The set Bv,π,M is a parallelepiped.
+                              P
+Proof. Since pv = 0 and i pi = 1, the coordinates pπ2 , . . . , pπn−1 determine p uniquely.
+The change of coordinates
+                                         (              Pn−1
+                                             ui = 1 −      j=i pπj     i ∈ M,
+                                  ti =
+                                             −pπi                      i∈/M
+is triangular with diagonal entries −1, and hence invertible. In these coordinates, Bv,π,M
+is the cube [0, 1]n−2 .                                                                  □
+                                                         27
+7.2. The Replacement Lemma. This is the main step that allows us to replace simplices
+by paramids. For v ∈ [n] and every nonempty R ⊆ V−v , define the dilated simplex
+                                                                       X
+                               Qv,R = (n − |R|)∆−v −                            ei ⊂ H−v ,
+                                                                      i∈R∪{v}
+                                                                       /
+
+a dilated and translated copy of the facet ∆−v . Recall Figure 7.
+Lemma 22. For each v ∈ [n], the following identity holds:
+                                                                                          (−1)|R|−1 |R|
+                          (−1)|M | hpyrev (Bv,π,M ) ≡ (n − 1)!
+     X        X                                                              X
+                                                                                                        hpyrev (Qv,R ) ,
+      π M ⊆{2,...,n−1}                                                   ∅̸=R⊆V−v
+                                                                                            n − |R|
+where π ranges over all orderings of V−v .
+
+7.3. The Thermostat Cancellation. Fix v ∈ [n]. We prove that the signed sum of
+indicator functions over the parallelepipeds Bv,π,M defined in Eq. (3) has a remarkably
+simple expression, when summing over all permutations π and sets of markings M , that
+only depends on the number of positive entries of the argument.
+Lemma 23. For every v ∈ [n] and almost every p in H−v ,
+                                                   (
+  X        X
+                            |M |                       (−1)s−1 s!(n − 1 − s)!                  pi > −1 for all i ∈ V−v ,
+                    (−1)           1Bv,π,M (p) =
+   π M ⊆{2,...,n−1}                                    0                                       otherwise,
+where s = |{i ∈ V−v : pi > 0}| and π ranges over all orderings of V−v .
+
+Proof. We may assume that no coordinate is 0 or −1, and no proper partial sum of the
+coordinates is 0 or 1, as this excludes only a finite number of lower dimensional hyperplanes.
+Fix an ordering π. For every M , membership in Bv,π,M requires 0 < ui < 1 for i ∈ M and
+−1 < pπi < 0 for i ∈ / M . Summing over all M ,
+                                                        n−1
+                                                        Y                                             
+                          (−1)|M | 1Bv,π,M (p) =
+                      X
+                                                                  1{−1<pπi <0} − 1{0<ui <1} .
+                      M                                 i=2
+
+Interpret pπ1 , . . . , pπn−1 as steps of a walk whose levels are u1 = 0, u2 , . . . , un−1 , un = 1. As
+we describe next, for the product above to be nonzero, the walk must satisfy the thermostat
+properties: it is positive, rises below 1 and drops above 1.
+
+                        (p1 = 0.3, p2 = 0.9, p4 = 0.3, p6 = 0.6) (p3 = −0.4, p5 = −0.7)
+
+                                              u3
+                                                       p3               u5
+                                                                 p4                               u7
+                                                                                                       1
+                                         p2                                     p5        p6
+                                                            u4
+
+                          p1                                                         u6
+                                    u2
+                   u1                                                                                  0
+
+
+
+         Figure 10. A thermostat walk obtained by merging the ordered positive
+         and negative coordinate lists shown above it. Take the next positive step
+         below level 1 and the next negative step above level 1.
+                                                             28
+The walk cannot reach a negative level because once it does, all subsequent permitted
+steps are negative, so it cannot finish at level 1. It follows that inside (0, 1) the walk must
+rise (otherwise, it becomes negative). Above 1 it must fall by less than 1. The first step
+must be positive as well. In particular, all coordinates exceed −1.
+Now, assume that every coordinate exceeds −1. Order the s positive coordinates and the
+n − 1 − s negative coordinates separately. There is a unique way to merge these two lists
+into a walk of the required type; see Figure 10. Take a positive step first. Take the next
+positive step whenever the current level is below 1, and the next negative step whenever
+it is above 1. The required step is always available. Indeed, the remaining steps sum to
+1 − ui , which is positive below 1 and negative above 1. Negative steps have size less than
+1, so the walk stays positive. The genericity assumption prevents reaching level 1 before
+the final step.
+We obtained a bijection between nonzero products and pairs of orderings of the positive
+and negative coordinates. There are s!(n − 1 − s)! pairs of orderings. Every nonzero product
+has sign (−1)s−1 , one (−1) factor for each positive step after the first.                □
+
+
+7.4. Proof of Theorem 22.
+
+Proof. Fix a generic p ∈ H−v . First we prove
+
+                                                                       (−1)|R|−1 |R|
+                          (−1)|M | 1Bv,π,M = (n − 1)!
+               XX                                           X
+(4)                                                                                  1Qv,R .
+                π    M                                    ∅̸=R⊆V−v
+                                                                         n − |R|
+
+If some coordinate is less than −1, both sides of (4) vanish, by Theorem 23 and the
+definition of Qv,R . Otherwise, let s be the number of positive coordinates. The point p
+belongs to Qv,R exactly
+                       when R is contained in the set of its positive coordinates. Thus,
+for each r, exactly rs sets R of size r contribute. To evaluate the right-hand side, the
+hockey-stick identity gives, for 1 ≤ r ≤ n − 1,
+               r                                                 r
+                          !                                                          !
+               X r                                               X n−1−j
+                           j!(n − 1 − j)! = r!(n − 1 − r)!
+               j=1
+                      j                                          j=1
+                                                                           r−j
+                                                                          !
+                                                                  n−1             (n − 1)! r
+                                              = r!(n − 1 − r)!                =              .
+                                                                  r−1               n−r
+By binomial inversion, the right-hand side is therefore
+                               s
+                                                !
+                               X
+                                        r−1    s  r
+                    (n − 1)!         (−1)            = (−1)s−1 s!(n − 1 − s)!.
+                               r=1
+                                               r n−r
+
+Theorem 23 says that the left-hand side is the same. To conclude the proof, apply the
+coning part of Theorem 20 to Eq. (4) with q = ev .                                 □
+Remark. Before coning, the right-hand side in Theorem 22 is not a single simplex but a
+signed combination of dilates of the facet ∆−v . Its simplex content cancels, as it must
+because a simplex is not a signed   sum of parallelepipeds. Indeed, the total coefficient of
+h∆−v before coning is (n − 1)! n−1         r−1 r n−1 = 0 for n ≥ 3. The identity acquires
+                                P                   
+                                  r=1 (−1)        r
+content only after coning with the apex ev . The pyramids pyrev (Qv,R ) are no longer dilates
+of one another.
+                                                     29
+                              8. Subdividing the Simplex
+
+This section uses the valuation property to relate the cones of the simplices Qv,R to the
+full simplex ∆. Recall Figure 6.
+Lemma 24. For every nonempty proper subset ∅ ̸= R ⊊ [n],
+                                  X
+(5)                                   hpyrev (Qv,R ) ≡ (n − |R|)h∆ .
+                              v ∈R
+                                /
+
+Proof. Let C := [n] \ R and consider the barycenter
+                                           1 X
+                                    qC :=         ei .
+                                          |C| i∈C
+For every v ∈ C, let Tv = pyrqC (∆−v ). We claim that the simplices Tv for v ∈ C form a
+subdivision of ∆ up to lower dimensional pieces; see Figure 11. Indeed, consider a generic
+
+                             e4                                                      e4
+
+
+
+
+                        qC                  e2                                                      e2
+               e1                                               e1
+                                                                                qC
+
+                                    e3                                                         e3
+                        C = {1, 2}                                            C = {1, 2, 3}
+
+
+       Figure 11. Two subdivisions of the tetrahedron ∆ into the simplices
+       Tv = pyrqC (∆−v ) for v ∈ C.
+      Pn
+       i=1 λi ei ∈ ∆, where λi ≥ 0 and
+                                             P
+x=                                               i λi = 1. The key observation is
+                                  x ∈ Tv         ⇐⇒         λv = min λi .
+                                                                      i∈C
+Indeed, if x = tqC + (1 − t)y with y ∈ ∆−v , then λv = t/|C| and λi ≥ t/|C| for every i ∈ C.
+Conversely, if λv is minimal, take t = |C|λv and y = (x − tqC )/(1 − t) ∈ ∆−v when t < 1
+and if t = 1, then x = qC ∈ Tv . Thus, by Theorem 20,
+                                             X
+                                                   hTv ≡ h∆ .
+                                             v∈C
+By the definitions,
+                                                                            X             
+                      pyrev (Qv,R ) = conv ev , |C|∆−v −                              ei
+                                                                            i∈C\{v}
+                                                            X
+                                         = |C|Tv −                   ei ,
+                                                        i∈C\{v}
+
+because ev = |C|qC − i∈C\{v} ei . Translation changes a support function by a linear
+                       P
+
+function, which is ≡ 0. Consequently,
+                                         hpyrev (Qv,R ) ≡ |C|hTv .
+                                                       30
+Summing over v ∈ C and applying the above gives
+                            X
+                                   hpyrev (Qv,R ) ≡ |C|h∆ = (n − |R|)h∆ .
+                            v ∈R
+                              /
+                                                                                                     □
+
+                                     9. Putting it Together
+
+The following theorem expresses the simplex as a signed sum of paramids modulo lower
+dimensional pieces.
+Theorem 25.
+                                  n X
+                            (−1)n X
+                                                     (−1)|M | hpyrev (Bv,π,M ) .
+                                           X
+                     h∆ ≡
+                              n! v=1 π M ⊆{2,...,n−1}
+
+Proof. Summing the identity from Theorem 22 over all v ∈ [n] gives
+                                                                  (−1)|R|−1 |R| X
+                  (−1)|M | hpyrev (Bv,π,M ) ≡ (n − 1)!
+     XXX                                                   X
+                                                                                  hpyrev (Qv,R ) .
+      v   π   M                                          ∅̸=R⊊[n]
+                                                                    n − |R| v∈R /
+
+By Theorem 24, this equals (with ≡)
+                                                         n−1
+                                                                           !!
+                                                               n
+                     (−1)|R|−1 |R| h∆ = (n − 1)!
+              X                                          X
+    (n − 1)!                                         (−1)r−1 r                  h∆ = (−1)n n! h∆ .
+             ∅̸=R⊊[n]                            r=1
+                                                               r
+                                                                                                     □
+
+                                            References
+ [1] Brandon Amos, Lei Xu, and J. Zico Kolter. “Input Convex Neural Networks”. In:
+     Proceedings of the 34th International Conference on Machine Learning. Vol. 70.
+     Proceedings of Machine Learning Research. PMLR, 2017, pp. 146–155. url: https:
+     //proceedings.mlr.press/v70/amos17b.html.
+ [2] Raman Arora, Amitabh Basu, Poorya Mianjy, and Anirbit Mukherjee. “Under-
+     standing Deep Neural Networks with Rectified Linear Units”. In: International
+     Conference on Learning Representations. 2018. arXiv: 1611 . 01491. url: https :
+     //openreview.net/forum?id=B1J_rgWRW.
+ [3] Gennadiy Averkov, Christopher Hojny, and Maximilian Merkert. “On the Expres-
+     siveness of Rational ReLU Neural Networks with Bounded Depth”. In: International
+     Conference on Learning Representations. 2025. url: https://openreview.net/
+     forum?id=uREg3OHjLL.
+ [4] Egor Bakaev, Florestan Brunck, Christoph Hertrich, Jack Stade, and Amir Yehudayoff.
+     “Better Neural Network Expressivity: Subdividing the Simplex”. In: Proceedings of the
+     58th Annual ACM Symposium on Theory of Computing. Preprint first posted in 2025.
+     Salt Lake City, UT, USA: ACM, 2026, pp. 500–507. doi: 10.1145/3798129.3800768.
+     arXiv: 2505.14338. url: https://arxiv.org/abs/2505.14338.
+ [5] Yoshua Bengio. “Learning Deep Architectures for AI”. In: Foundations and Trends
+     in Machine Learning 2.1 (2009), pp. 1–127. doi: 10.1561/2200000006.
+
+
+
+
+                                                   31
+ [6] Charlotte Bunne, Stefan G. Stark, Gabriele Gut, Jacobo Sarabia del Castillo, Mitch
+     Levesque, Kjong-Van Lehmann, Lucas Pelkmans, Andreas Krause, and Gunnar
+     Rätsch. “Learning Single-Cell Perturbation Responses Using Neural Optimal Trans-
+     port”. In: Nature Methods 20.11 (2023), pp. 1759–1768. doi: 10.1038/s41592-023-
+     01969-x. url: https://www.nature.com/articles/s41592-023-01969-x.
+ [7] Felix Bünning, Adrian Schalbetter, Ahmed Aboudonia, Mathias Hudoba de Badyn,
+     Philipp Heer, and John Lygeros. “Input Convex Neural Networks for Building
+     MPC”. In: Proceedings of the 3rd Conference on Learning for Dynamics and Control.
+     Vol. 144. Proceedings of Machine Learning Research. PMLR, 2021, pp. 251–262. url:
+     https://proceedings.mlr.press/v144/bunning21a.html.
+ [8] Yize Chen, Yuanyuan Shi, and Baosen Zhang. “Optimal Control Via Neural Networks:
+     A Convex Approach”. In: International Conference on Learning Representations.
+     Preprint first posted in 2018; conference publication in 2019. 2019. arXiv: 1805.11835.
+     url: https://openreview.net/forum?id=H1MW72AcK7.
+ [9] Yize Chen, Yuanyuan Shi, and Baosen Zhang. “Data-Driven Optimal Voltage Reg-
+     ulation Using Input Convex Neural Networks”. In: Electric Power Systems Re-
+     search 189 (2020), p. 106741. doi: 10.1016/j.epsr.2020.106741. url: https:
+     //www.sciencedirect.com/science/article/pii/S0378779620305447.
+[10] George Cybenko. “Approximation by Superpositions of a Sigmoidal Function”. In:
+     Mathematics of Control, Signals and Systems 2.4 (1989), pp. 303–314. doi: 10.1007/
+     BF02551274. url: https://link.springer.com/article/10.1007/BF02551274.
+[11] Hongkai Dai, Benoit Landry, Lujie Yang, Marco Pavone, and Russ Tedrake. “Lyapunov-
+     Stable Neural-Network Control”. In: Proceedings of Robotics: Science and Systems.
+     2021. doi: 10.15607/RSS.2021.XVII.063. url: https://roboticsproceedings.
+     org/rss17/p063.html.
+[12] Ronen Eldan and Ohad Shamir. “The Power of Depth for Feedforward Neural
+     Networks”. In: 29th Annual Conference on Learning Theory. Vol. 49. Proceedings of
+     Machine Learning Research. PMLR, 2016, pp. 907–940. url: https://proceedings.
+     mlr.press/v49/eldan16.html.
+[13] Xavier Glorot, Antoine Bordes, and Yoshua Bengio. “Deep Sparse Rectifier Neural
+     Networks”. In: Proceedings of the Fourteenth International Conference on Artificial
+     Intelligence and Statistics. Vol. 15. Proceedings of Machine Learning Research. PMLR,
+     2011, pp. 315–323. url: https://proceedings.mlr.press/v15/glorot11a.html.
+[14] Moritz Grillo, Christoph Hertrich, and Georg Loho. “Depth-Bounds for Neural
+     Networks via the Braid Arrangement”. In: Advances in Neural Information Processing
+     Systems. Vol. 38. Curran Associates, Inc., 2025. arXiv: 2502.09324. url: https:
+     //openreview.net/forum?id=XO9fhSZkBh.
+[15] Christian Alexander Haase, Christoph Hertrich, and Georg Loho. “Lower Bounds on
+     the Depth of Integral ReLU Neural Networks via Lattice Polytopes”. In: International
+     Conference on Learning Representations. 2023. arXiv: 2302 . 12553. url: https :
+     //openreview.net/forum?id=2mvALOAWaxY.
+[16] Juncai He, Lin Li, Jinchao Xu, and Chunyue Zheng. “ReLU deep neural networks
+     and linear finite elements”. In: Journal of Computational Mathematics 38.3 (2020),
+     pp. 502–527.
+[17] Christoph Hertrich, Amitabh Basu, Marco Di Summa, and Martin Skutella. “Towards
+     Lower Bounds on the Depth of ReLU Neural Networks”. In: SIAM Journal on Discrete
+     Mathematics 37.2 (2023). doi: 10.1137/22M1489332.
+
+
+                                            32
+[18] Christoph Hertrich and Georg Loho. Neural Networks and (Virtual) Extended Formu-
+     lations. First posted in 2024; revised in 2025. 2024. doi: 10.48550/arXiv.2411.03006.
+     arXiv: 2411.03006. url: https://arxiv.org/abs/2411.03006.
+[19] Kurt Hornik, Maxwell Stinchcombe, and Halbert White. “Multilayer Feedforward
+     Networks Are Universal Approximators”. In: Neural Networks 2.5 (1989), pp. 359–366.
+     doi: 10.1016/0893-6080(89)90020-8. url: https://www.sciencedirect.com/
+     science/article/pii/0893608089900208.
+[20] Joey Huchette, Gonzalo Muñoz, Thiago Serra, and Calvin Tsay. “When Deep Learning
+     Meets Polyhedral Theory: A Survey”. In: INFORMS Journal on Computing (2026).
+     Published online 12 March 2026; preprint first posted in 2023. doi: 10.1287/ijoc.
+     2024.0902. arXiv: 2305.00241. url: https://pubsonline.informs.org/doi/10.
+     1287/ijoc.2024.0902.
+[21] Børge Jessen and Anders Thorup. “THE ALGEBRA OF POLYTOPES IN AFFINE
+     SPACES”. In: Mathematica Scandinavica 43.2 (1978), pp. 211–240. issn: 00255521,
+     19031807. url: http://www.jstor.org/stable/24491087 (visited on 10/11/2026).
+[22] Christoph Koutschan, Bernhard Moser, Anton Ponomarchuk, and Josef Schicho.
+     “Representing piecewise linear functions by functions with small arity”. In: Applicable
+     Algebra in Engineering, Communication and Computing 36.4 (July 1, 2025), pp. 595–
+     610. issn: 1432-0622. doi: 10.1007/s00200-023-00627-1. url: https://doi.org/
+     10.1007/s00200-023-00627-1.
+[23] Christoph Koutschan, Anton Ponomarchuk, and Josef Schicho. “Representing Piecewise-
+     Linear Functions by Functions With Minimal Arity”. In: IEEE Transactions on
+     Information Theory 72.9 (2026), pp. 6825–6831. doi: 10.1109/TIT.2026.3705562.
+[24] Moshe Leshno, Vladimir Ya. Lin, Allan Pinkus, and Shimon Schocken. “Multilayer
+     Feedforward Networks with a Nonpolynomial Activation Function Can Approximate
+     Any Function”. In: Neural Networks 6.6 (1993), pp. 861–867. doi: 10.1016/S0893-
+     6080(05)80131-5.
+[25] Peter McMullen and Rolf Schneider. “Valuations on convex bodies”. In: Convexity
+     and its applications. Springer, 1983, pp. 170–247.
+[26] Hrushikesh Mhaskar, Qianli Liao, and Tomaso Poggio. “When and Why Are Deep
+     Networks Better Than Shallow Ones?” In: Proceedings of the AAAI Conference on
+     Artificial Intelligence 31.1 (2017). doi: 10.1609/aaai.v31i1.10913. url: https:
+     //ojs.aaai.org/index.php/AAAI/article/view/10913.
+[27] Anirbit Mukherjee and Amitabh Basu. Lower Bounds over Boolean Inputs for Deep
+     Neural Networks with ReLU Gates. Tech. rep. TR17-190. Rehovot, Israel: Electronic
+     Colloquium on Computational Complexity, 2017. doi: 10.48550/arXiv.1711.03073.
+     arXiv: 1711.03073. url: https://arxiv.org/abs/1711.03073.
+[28] Kilian Rueß, Gennadiy Averkov, Florestan Brunck, Moritz Grillo, Christoph Hertrich,
+     Georg Loho, Jack Stade, Moritz Stargalla, Matthew Sun, and Martin Winter. “Shal-
+     lower ReLU network representations via exact linear algebra”. In: arXiv preprint
+     arXiv:2607.21651 (2026). Version 2, 1 September 2026. doi: 10.48550/arXiv.2607.
+     21651. arXiv: 2607.21651. url: https://arxiv.org/abs/2607.21651v2.
+[29] Itay Safran and Jason D. Lee. “Optimization-Based Separations for Neural Networks”.
+     In: Proceedings of Thirty Fifth Conference on Learning Theory. Vol. 178. Proceedings
+     of Machine Learning Research. PMLR, 2022, pp. 3–64. url: https://proceedings.
+     mlr.press/v178/safran22a.html.
+[30] Rolf Schneider. “Valuations on convex bodies”. In: Convex Bodies: The Brunn–
+     Minkowski Theory. Encyclopedia of Mathematics and its Applications. Cambridge
+     University Press, 2013, pp. 329–368.
+                                            33
+[31] G. C. Shephard. “Combinatorial Properties of Associated Zonotopes”. In: Canadian
+     Journal of Mathematics 26.2 (1974), pp. 302–321. doi: 10.4153/CJM-1974-032-5.
+[32] Matus Telgarsky. “Benefits of Depth in Neural Networks”. In: 29th Annual Conference
+     on Learning Theory. Vol. 49. Proceedings of Machine Learning Research. PMLR, 2016,
+     pp. 1517–1539. url: https://proceedings.mlr.press/v49/telgarsky16.html.
+[33] Juan L. Valerdi. On Minimal Depth in Neural Networks. arXiv preprint arXiv:2402.15315.
+     First posted in 2024; version 6 revised 22 September 2026. 2026. doi: 10.48550/arXiv.
+     2402.15315. arXiv: 2402.15315. url: https://arxiv.org/abs/2402.15315v6.
+[34] Shuning Wang and Xusheng Sun. “Generalization of Hinging Hyperplanes”. In: IEEE
+     Transactions on Information Theory 51.12 (2005), pp. 4425–4431. doi: 10.1109/TIT.
+     2005.859246.
+[35] Charles A. Weibel. An Introduction to Homological Algebra. Cambridge Studies in
+     Advanced Mathematics. Cambridge University Press, 1994.
+
+Department of Computer Science, University of Copenhagen, Denmark
+Email address: flbr@di.ku.dk
+
+University of Technology Nuremberg, Germany
+Email address: christoph.hertrich@utn.de
+
+University of Technology Nuremberg, Germany
+Email address: kilian.ruess@utn.de
+
+Department of Computer Science, University of Copenhagen, Denmark
+Email address: jast@di.ku.dk
+
+Department of Computer Science, University of Copenhagen, Denmark and Department of
+Mathematics, Technion–IIT
+Email address: amye@di.ku.dk
+
+
+
+
+                                           34
+

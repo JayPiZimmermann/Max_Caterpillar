@@ -1,0 +1,10 @@
+{
+  "status": "EXACT_SYMBOLIC_CONTROLS_PASS",
+  "checks": 96,
+  "dimensions": [
+    1,
+    2,
+    3
+  ],
+  "elapsed": 0.08601117134094238
+}

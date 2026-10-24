@@ -1,0 +1,7 @@
+{"N": 5, "lam": [5], "grades": [-1, 0, 1, 2, 3], "ncols": 1840, "npts": 1870, "|R|": 120, "mult_prefix": [3, 7, 15, 22, 25], "saturated": false, "secs": 144.2}
+{"N": 5, "lam": [4, 1], "grades": [-1, 0, 1, 2, 3], "ncols": 843, "npts": 873, "|R|": 24, "mult_prefix": [3, 10, 30, 51, 59], "saturated": false, "secs": 19.6}
+{"N": 5, "lam": [3, 2], "grades": [-1, 0, 1, 2, 3], "ncols": 389, "npts": 419, "|R|": 12, "mult_prefix": [1, 6, 25, 48, 57], "saturated": false, "secs": 5.1}
+{"N": 5, "lam": [3, 1, 1], "grades": [-1, 0, 1, 2, 3], "ncols": 234, "npts": 264, "|R|": 6, "mult_prefix": [0, 3, 21, 44, 54], "saturated": false, "secs": 1.7}
+{"N": 5, "lam": [2, 2, 1], "grades": [0, 1, 2, 3], "ncols": 110, "npts": 140, "|R|": 4, "mult_prefix": [2, 13, 31, 39], "saturated": false, "secs": 1.2}
+{"N": 5, "lam": [2, 1, 1, 1], "grades": [1, 2, 3], "ncols": 45, "npts": 75, "|R|": 2, "mult_prefix": [6, 17, 22], "saturated": false, "secs": 0.5}
+{"N": 5, "lam": [1, 1, 1, 1, 1], "grades": [1, 2, 3], "ncols": 7, "npts": 37, "|R|": 1, "mult_prefix": [0, 2, 3], "saturated": false, "secs": 0.5}

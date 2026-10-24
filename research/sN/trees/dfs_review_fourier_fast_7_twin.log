@@ -1,0 +1,22 @@
+domain 7 twin orbits 176 budget_sec 110
+rows 10 ranks 10 10 elapsed 1.18
+rows 20 ranks 20 20 elapsed 1.88
+rows 30 ranks 30 30 elapsed 2.6
+rows 40 ranks 40 40 elapsed 3.27
+rows 50 ranks 50 50 elapsed 3.93
+rows 60 ranks 60 60 elapsed 4.66
+rows 70 ranks 70 70 elapsed 5.33
+rows 80 ranks 80 80 elapsed 6.01
+rows 90 ranks 83 84 elapsed 6.81
+rows 100 ranks 83 84 elapsed 7.63
+rows 110 ranks 83 84 elapsed 8.47
+rows 120 ranks 83 84 elapsed 9.25
+rows 130 ranks 83 84 elapsed 9.97
+rows 140 ranks 83 84 elapsed 10.65
+rows 150 ranks 83 84 elapsed 11.37
+rows 160 ranks 83 84 elapsed 12.08
+rows 170 ranks 83 84 elapsed 12.78
+rows 180 ranks 83 84 elapsed 13.45
+rows 190 ranks 83 84 elapsed 14.13
+rows 200 ranks 83 84 elapsed 14.87
+DONE {'m': 7, 'mode': 'twin', 'orbits': 176, 'prime': 1000003, 'rows': 200, 'modular_ranks': [83, 84], 'elapsed': 14.868938446044922, 'status': 'MODULAR_DIAGNOSTIC_ONLY'}

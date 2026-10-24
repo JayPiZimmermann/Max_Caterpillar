@@ -1,0 +1,6 @@
+N=4 spans 13 predicted dim gr_1 = 34; (#keys, loc) histogram [((2, 2), 6), ((8, 2), 3), ((9, 4), 4)]
+N=4 new kink lines from grade-1 keys: 0; local prediction + new lines = 34
+N=5 spans 125 predicted dim gr_1 = 370; (#keys, loc) histogram [((2, 2), 30), ((3, 3), 10), ((4, 3), 30), ((4, 4), 30), ((8, 2), 15), ((9, 4), 10)]
+N=5 new kink lines from grade-1 keys: 0; local prediction + new lines = 370
+N=6 spans 995 predicted dim gr_1 = 2600; (#keys, loc) histogram [((1, 1), 180), ((2, 2), 240), ((3, 3), 60), ((4, 2), 45), ((4, 3), 180), ((4, 4), 165), ((5, 5), 60), ((8, 2), 45), ((9, 4), 20)]
+N=6 new kink lines from grade-1 keys: 0; local prediction + new lines = 2600

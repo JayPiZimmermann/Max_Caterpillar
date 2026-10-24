@@ -116,6 +116,11 @@ noncomputable def Ordering.word {r : ℕ} {v : Fin (r + 1 + 1)} (π : Ordering (
 def cutSet {r : ℕ} (M : Finset ℕ) : Finset (Fin (r + 1)) :=
   Finset.univ.filter fun j => (j : ℕ) + 1 ∈ M
 
+/-- The rooted star with apex `a` and root `c`:
+`S_{a,c}(y) = σ(y_c - y_a + ∑_{l ∉ {a, c}} σ(y_c - y_l))`. -/
+noncomputable def rootedStar {N : ℕ} (a c : Fin N) (y : Fin N → ℝ) : ℝ :=
+  MaxNN.relu (y c - y a + ∑ l in (Finset.univ.erase a).erase c, MaxNN.relu (y c - y l))
+
 end BHRSY
 
 end MaxCaterpillar

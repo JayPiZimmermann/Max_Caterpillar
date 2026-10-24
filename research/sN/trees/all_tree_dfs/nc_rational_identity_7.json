@@ -1,0 +1,8 @@
+{
+  "n": 7,
+  "status": "EXACT_RATIONAL_IDENTITY",
+  "calls": 5202,
+  "memoized_identities": 626,
+  "max_depth": 4,
+  "elapsed_seconds": 21.375473737716675
+}

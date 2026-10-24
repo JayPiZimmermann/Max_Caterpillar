@@ -1,0 +1,14 @@
+it 0: status 0 obj 15.4923 support 178 feasible True pruned 178 t=149s
+it 1: status 0 obj 136.3839 support 124 feasible True pruned 124 t=178s
+it 2: status 0 obj 116.0455 support 124 feasible True pruned 124 t=211s
+it 3: status 0 obj 116.2196 support 124 feasible True pruned 124 t=251s
+it 4: status 0 obj 115.9264 support 124 feasible True pruned 124 t=295s
+it 5: status 0 obj 116.1918 support 124 feasible True pruned 124 t=348s
+it 6: status 0 obj 116.0326 support 124 feasible True pruned 124 t=399s
+it 7: status 0 obj 116.0203 support 124 feasible True pruned 124 t=432s
+it 8: status 0 obj 116.0822 support 124 feasible True pruned 124 t=469s
+it 9: status 0 obj 116.0345 support 124 feasible True pruned 124 t=510s
+it 10: status 0 obj 116.3124 support 124 feasible True pruned 124 t=544s
+it 11: status 0 obj 116.2998 support 124 feasible True pruned 124 t=592s
+it 12: status 0 obj 116.1355 support 124 feasible True pruned 124 t=639s
+it 13: status 0 obj 116.2333 support 124 feasible True pruned 124 t=678s

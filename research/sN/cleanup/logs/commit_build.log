@@ -1,0 +1,5 @@
+Command: ulimit -s unlimited; lake build All
+The tool session terminated with exit status 143 before Lake emitted output.
+At the last process inspection it was rebuilding six Max5Lns27 generated cell modules.
+This is an interrupted build, not a mathematical or Lean proof failure.
+TOOL_EXIT 143

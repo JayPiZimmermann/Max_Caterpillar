@@ -1,0 +1,11 @@
+# max_4 = sum d_k U_k + sum e_a aux_a, certified exactly on all cells (omp.py N=4 seed=0)
+unit h=[-1, -1, 1, 1] M=[(0, 2), (0, 3)] d=1
+unit h=[0, 0, -1, 1] M=[(0, 3), (1, 3)] d=1
+unit h=[1, 0, -1, 0] M=[(1, 3)] d=-1
+aux ('pos', 0) e=1
+aux ('neg', 0) e=-1
+aux ('pos', 1) e=1
+aux ('neg', 1) e=-1
+aux ('pos', 3) e=-1
+aux ('neg', 3) e=1
+aux ('pair', 0, 3) e=-1

@@ -1,0 +1,8 @@
+N=4 h=(8,2) bias=0 seed=7 restarts=96 best_val_maxrel=3.245e-01 time=451s
+N=3 h=(3,3) bias=0 seed=7 restarts=163 best_val_maxrel=5.705e-01 time=451s
+N=3 h=(6,2) bias=0 seed=7 restarts=128 best_val_maxrel=2.076e-01 time=451s
+N=3 h=(3,6) bias=0 seed=7 restarts=129 best_val_maxrel=5.705e-01 time=452s
+N=4 h=(5,4) bias=1 seed=7 restarts=80 best_val_maxrel=4.826e-15 time=452s
+N=4 h=(5,3) bias=0 seed=7 restarts=114 best_val_maxrel=2.867e-01 time=452s
+N=3 h=(10,2) bias=1 seed=7 restarts=63 best_val_maxrel=2.567e-03 time=459s
+N=4 h=(5,6) bias=0 seed=7 restarts=76 best_val_maxrel=1.775e-01 time=462s

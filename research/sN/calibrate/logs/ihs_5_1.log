@@ -1,0 +1,7 @@
+it 0: cuts 0 |K| 0 dual_bound 0 status None feasible False t=0s
+   cut size 186, orbit 120
+   cut size 116, orbit 120
+it 1: cuts 240 |K| 6 dual_bound 5.9999999999990115 status 0 feasible False t=271s
+   cut size 185, orbit 120
+   cut size 203, orbit 120
+it 2: cuts 480 |K| 8 dual_bound 5.0 status 1 feasible False t=975s

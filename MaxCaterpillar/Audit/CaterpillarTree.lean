@@ -1,4 +1,4 @@
-import MaxCaterpillar.Trees
+import MaxCaterpillar.Count.Defs
 import MaxCaterpillar.Audit.Expansion
 
 /-! # Faithfulness: every caterpillar function is the face function of a caterpillar tree
@@ -487,7 +487,7 @@ theorem caterpillarFunction_eq_tree (r : ℕ) {k : FaceKey r}
   obtain ⟨F, hF, he⟩ := caterpillarFunction_eq_treeFace r hk
   exact ⟨F, hF, fun x => by rw [he]; rfl⟩
 
-/-! ## Nonvacuity of the tree, rooted-star and mixed expansions -/
+/-! ## Nonvacuity of the tree and mixed expansions -/
 
 /-- A caterpillar expansion is an expansion by caterpillar tree faces. -/
 theorem isTreeExpansion_of_isCaterpillarExpansion (r : ℕ) {K : Finset (FaceKey r)}
@@ -527,21 +527,8 @@ theorem exists_isTreeExpansion (r : ℕ) :
   obtain ⟨K', h1, -, h2⟩ := isTreeExpansion_of_isCaterpillarExpansion r hK
   exact ⟨K', h1, h2⟩
 
-/-- **Nonvacuity of the rooted-star lower bounds.** Every caterpillar expansion is a
-rooted-star expansion (all rooted-star coefficients zero). -/
-theorem isRootedStarExpansion_of_isCaterpillarExpansion (r : ℕ) {K : Finset (FaceKey r)}
-    (hK : IsCaterpillarExpansion r K) : IsRootedStarExpansion r K := by
-  obtain ⟨hsub, d, a, h⟩ := hK
-  refine ⟨hsub, d, fun _ => 0, a, fun x => ?_⟩
-  simp only [zero_mul, Finset.sum_const_zero, add_zero]
-  exact h x
-
-theorem exists_isRootedStarExpansion (r : ℕ) : ∃ K, IsRootedStarExpansion r K := by
-  obtain ⟨K, hK⟩ := exists_isCaterpillarExpansion r
-  exact ⟨K, isRootedStarExpansion_of_isCaterpillarExpansion r hK⟩
-
 /-- **Nonvacuity of the mixed lower bound.** Every caterpillar expansion is a mixed expansion
-with no tree units (`K₂ = ∅`, so the `HubOK` hypothesis holds vacuously). -/
+with no tree units (`K₂ = ∅`, so the class hypothesis `ω ≤ 2` holds vacuously). -/
 theorem isMixedExpansion_of_isCaterpillarExpansion (r : ℕ) {K : Finset (FaceKey r)}
     (hK : IsCaterpillarExpansion r K) : IsMixedExpansion r K ∅ := by
   obtain ⟨hsub, d, a, h⟩ := hK
@@ -551,9 +538,9 @@ theorem isMixedExpansion_of_isCaterpillarExpansion (r : ℕ) {K : Finset (FaceKe
 
 theorem exists_isMixedExpansion (r : ℕ) :
     ∃ (K₁ : Finset (FaceKey r)) (K₂ : Finset (TreeFace (r + 1 + 1))),
-      IsMixedExpansion r K₁ K₂ ∧ ∀ Δ, ∀ F ∈ K₂, HubOK F.descr Δ := by
+      IsMixedExpansion r K₁ K₂ ∧ ∀ F ∈ K₂, Count.OmegaLe F.descr 2 := by
   obtain ⟨K, hK⟩ := exists_isCaterpillarExpansion r
-  exact ⟨K, ∅, isMixedExpansion_of_isCaterpillarExpansion r hK, fun _ _ h => absurd h
+  exact ⟨K, ∅, isMixedExpansion_of_isCaterpillarExpansion r hK, fun _ h => absurd h
     (Finset.not_mem_empty _)⟩
 
 end Audit

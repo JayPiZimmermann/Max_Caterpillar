@@ -1,0 +1,8 @@
+N=9 mode=a+b' units=277749 (N-3)!=720
+max total=1440  W=2.000000  at S=3 stcode=8
+|Neg|=1: max W=2.000000, units with some valid T=22302
+|Neg|=2: max W=1.000000, units with some valid T=15164
+|Neg|=3: max W=0.000000, units with some valid T=0
+|Neg|=4: max W=0.000000, units with some valid T=0
+violations: Neg not in T=0, CaseI T shape=0, CaseI one-comp/tau=0, CaseII >1 triple=0, CaseII x!=parent(z)=0
+EXIT=0

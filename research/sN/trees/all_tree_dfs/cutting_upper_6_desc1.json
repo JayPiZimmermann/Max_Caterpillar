@@ -1,0 +1,15 @@
+{
+  "n": 6,
+  "mode": "desc1",
+  "units": 11846,
+  "matrix_rows": 120120,
+  "seed": 241026,
+  "iterations": [
+    {
+      "iteration": 0,
+      "rows": 4820,
+      "status": 1
+    }
+  ],
+  "elapsed_seconds": 65.63322257995605
+}

@@ -2,6 +2,7 @@
 *.olean
 *.ilean
 *.c
+!/research/**/*.c
 __pycache__/
 paper/*.aux
 paper/*.log
@@ -19,4 +20,27 @@ verification/logs/
 
 # Private conference preparation, downloaded papers, and working analysis.
 /notes/
+
+# Reproducible local research environments and interrupted matrix jobs.
+/research/**/venv/
+/research/**/_tmp_*.bin
+/research/sN/dfs/h3-grading/*.in
+/research/sN/trees/logs/l2A_*.npy
+
+# Compiled research executables; their C and C++ sources remain versioned.
+/research/sN/dfs/h3-grading/rankp
+/research/sN/dfs/h3-grading/ysev
+/research/sN/dfs/h4-any-network/r3/convex_m3
+/research/sN/dfs/h4-any-network/r3/convex_scan
+/research/sN/dfs/h4-general-neurons/r4/qmax
+/research/sN/dfs/h4-trees/r3/phi
+/research/sN/dfs/h4-trees/wfast
+/research/sN/dfs/h5-growth/edfs
+/research/sN/dfs/h5-growth/edfs2
+/research/sN/dfs/h5-growth/edfs3
+/research/sN/dfs/h5-growth/extend
+/research/sN/dfs/refute-h4-any-network-1-0/ex5
+/research/sN/ktie/mixed
+/research/sN/ktie/mixed2
+/research/sN/verify-logic/wcount
 

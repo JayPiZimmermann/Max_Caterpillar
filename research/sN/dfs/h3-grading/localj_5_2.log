@@ -1,0 +1,5 @@
+N=5 j=2 m=1 spans 25 predicted dim gr_j = 480; saturated spans 0; (#keys with span W, loc_W) histogram [((21, 18), 10), ((36, 18), 10), ((48, 24), 5)]
+N=5 j=2 m=3 spans 25 predicted dim gr_j = 1268; saturated spans 0; (#keys with span W, loc_W) histogram [((21, 18), 2), ((21, 58), 8), ((36, 18), 3), ((36, 52), 7), ((48, 70), 5)]
+N=5 j=2 m=6 spans 25 predicted dim gr_j = 1450; saturated spans 0; (#keys with span W, loc_W) histogram [((21, 58), 10), ((36, 52), 10), ((48, 70), 5)]
+N=5 j=2 m=1 spans 25 predicted dim gr_j = 480; saturated spans 0; (#keys with span W, loc_W) histogram [((21, 18), 10), ((36, 18), 10), ((48, 24), 5)]
+N=5 j=2 m=3 spans 25 predicted dim gr_j = 1268; saturated spans 0; (#keys with span W, loc_W) histogram [((21, 18), 2), ((21, 58), 8), ((36, 18), 3), ((36, 52), 7), ((48, 70), 5)]

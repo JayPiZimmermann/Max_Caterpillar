@@ -1,0 +1,5 @@
+n=3 instances 465 (forests x rootings x kappa): all proof checks passed; max_m ratio 0.0046
+n=4 instances 6020 (forests x rootings x kappa): all proof checks passed; max_m ratio 0.0185
+n=5 instances 57535 (forests x rootings x kappa): all proof checks passed; max_m ratio 0.0324
+exit 0
+n=5 instances 57535 (forests x rootings x kappa): all proof checks passed; max_m ratio 0.0324

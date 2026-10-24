@@ -1,0 +1,8 @@
+N=5 mode=global keys=1830 localities=20 (N!/6=20) Bg=17 Cg=17
+  {'aux_fail': 0, 'max_fail': 0, 'pass_fail': 0, 'strong_fail': 0, 'digit_fail': 0, 'nonzero': 1280, 'pass_cnt': 1980, 'strong_cnt': 1560}
+  max per key #(Lambda!=0) = 4, max per key #Pass = 4, (N-2)(N-3)! = 6, 2(N-3)! = 4
+  max per key #(A=0 and M(T)!=empty) = 4
+  max #triples with Lambda!=0 per key = 3
+  histogram of #(Lambda!=0) per key: [(0, 1208), (1, 204), (2, 298), (4, 120)]
+  values Lambda/delta: [(Fraction(-1, 1), 280), (Fraction(1, 1), 280), (Fraction(2, 1), 720)]
+  keys attaining max: [((-1, -1, 0, 1, 1), [(0, 2), (0, 3), (2, 4)]), ((-1, -1, 0, 1, 1), [(0, 2), (0, 4), (2, 3)]), ((-1, -1, 0, 1, 1), [(0, 3), (0, 4)])]

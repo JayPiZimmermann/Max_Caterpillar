@@ -1,0 +1,6 @@
+{"N": 3, "mu": [3], "twist": "sgn", "seed": 1, "npts": 41, "ncols": [1, 0], "ranks_A_then_by_M": [0, 0], "secs": 0.0}
+{"N": 3, "mu": [3], "twist": "triv", "seed": 1, "npts": 44, "ncols": [3, 1], "ranks_A_then_by_M": [3, 4], "secs": 0.0}
+{"N": 3, "mu": [2, 1], "twist": "sgn", "seed": 1, "npts": 46, "ncols": [5, 1], "ranks_A_then_by_M": [3, 3], "secs": 0.0}
+{"N": 3, "mu": [2, 1], "twist": "triv", "seed": 1, "npts": 49, "ncols": [7, 2], "ranks_A_then_by_M": [6, 7], "secs": 0.0}
+{"N": 3, "mu": [1, 1, 1], "twist": "triv", "seed": 1, "npts": 55, "ncols": [12, 3], "ranks_A_then_by_M": [9, 10], "secs": 0.0}
+{"N": 3, "mu": [1, 1, 1], "twist": "sgn", "seed": 1, "npts": 55, "ncols": [12, 3], "ranks_A_then_by_M": [9, 10], "secs": 0.0}

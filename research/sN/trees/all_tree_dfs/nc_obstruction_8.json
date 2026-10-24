@@ -1,0 +1,10 @@
+{
+  "n": 8,
+  "status": "BUDGET_EXHAUSTED",
+  "old_columns": 4165,
+  "independent_exact_relations": 39,
+  "rational_rank_upper": 4126,
+  "modular_augmented_rank": 4098,
+  "elapsed_seconds": 348.22160243988037,
+  "symbolic_calls": 53600
+}

@@ -1,0 +1,12 @@
+# max_4 = sum d_k U_k + sum e_a aux_a, certified exactly on all cells (irl1.py 4 6 0)
+unit h=[1, -1, -1, 1] M=[] d=-1/2
+unit h=[-1, 1, 1, -1] M=[(0, 1), (0, 2)] d=1/2
+unit h=[0, 0, -1, 1] M=[(0, 1), (1, 3)] d=1/2
+unit h=[0, -1, 0, 1] M=[(0, 2), (2, 3)] d=1/2
+unit h=[-1, 0, 0, 1] M=[(1, 3), (2, 3)] d=1/2
+aux ('pos', 0) e=1
+aux ('neg', 0) e=-1
+aux ('pair', 0, 1) e=-1/2
+aux ('pair', 0, 2) e=-1/2
+aux ('pair', 1, 3) e=-1/2
+aux ('pair', 2, 3) e=-1/2

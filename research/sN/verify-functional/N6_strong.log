@@ -1,0 +1,2 @@
+N=6 keys=26780 max SP localities/key=12 (=2.0 x (N-3)!), (N-2)(N-3)!=24, 2(N-3)!=12; max SP triples/key=4; SP localities not of form apex+edge: 0; |Neg| on SP localities: {1: 43920}
+  histogram [(0, 16880), (1, 1080), (2, 1260), (3, 1800), (4, 1800), (6, 3060), (8, 360), (12, 540)]

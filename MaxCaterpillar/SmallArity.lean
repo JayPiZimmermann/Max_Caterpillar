@@ -1,6 +1,6 @@
 import MaxCaterpillar.RationalWidth
 
-/-! # Sparse caterpillar expansions in small arity (Version 2 widths)
+/-! # Sparse caterpillar expansions in small arity
 
 An exact search over the caterpillar vocabulary (`scripts/vocabulary_search.py`)
 finds expansions of the maximum by very few normalized face functions.  The
@@ -11,8 +11,8 @@ the existing first hidden layer:
 * `N = 3`: `max₃ = x₁ + σ(x₂ - x₁ + σ(x₀ - x₂))`, widths `(7, 3)`;
 * `N = 4`: three face functions, widths `(11, 5)`.
 
-The Version 1 widths `(firstWidth N, secondWidth N)` remain proved in
-`Theorems.lean`; these are additional, smaller widths for these arities.
+The general widths `(firstWidth N, secondWidth N)` are proved in
+`Theorems.lean`; these are smaller widths for these arities.
 -/
 
 open BigOperators
@@ -75,7 +75,7 @@ theorem realUnitY_key3 (x : Fin 3 → ℝ) :
   rw [Finset.sum_singleton, dot_lbl, dot_lbl]
   rfl
 
-/-- **Arity three (Version 2 width).** Widths `(7, 3)`, rational weights,
+/-- **Arity three.** Widths `(7, 3)`, rational weights,
 zero biases. -/
 theorem max_three_network :
     ∃ net : Network 3 (firstWidth 3) 3,
@@ -189,7 +189,7 @@ theorem labels_four : ∀ k ∈ ({keyA, keyB, keyC} : Finset (RealKey 3)), ∀ v
     simp only [keyA, keyB, keyC, Finset.mem_insert, Finset.mem_singleton] at hv <;>
     rcases hv with rfl | rfl <;> exact lbl_simplexDifference _ _
 
-/-- **Arity four (Version 2 width).** Widths `(11, 5)`, rational weights,
+/-- **Arity four.** Widths `(11, 5)`, rational weights,
 zero biases. -/
 theorem max_four_network :
     ∃ net : Network 4 (firstWidth 4) 5,

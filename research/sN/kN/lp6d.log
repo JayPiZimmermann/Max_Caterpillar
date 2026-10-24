@@ -1,0 +1,6 @@
+dictionary 51897 2s
+after 19 pruning rounds alive 34611, class rows 275618, 161s
+groups 29325 (sizes: max 7, mean 1.08), multi rows 93467, 187s
+lsqr residual 7.372e-02
+MAXRSS_KB 1384068
+EXIT 0
