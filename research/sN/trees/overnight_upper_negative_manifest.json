@@ -1,0 +1,804 @@
+{
+  "status": "FROZEN_COMPLETED_RESEARCH_CERTIFICATE_CHECKPOINT",
+  "date": "2026-10-25",
+  "scope": "Completed fixed-family exact exclusions and small positive controls; no unrestricted upper bound or Lean theorem.",
+  "excludes": "Active balanced/BFS data, all large matrices and raw rational-row archives, sparse-basis checkpoints, native evaluator artifacts, and unfinished probes.",
+  "integrity_checker_scope": "File hashes and finite-receipt completion invariants only; reproduction runs the exact mathematical checks.",
+  "receipts": [
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_4.json",
+      "status": "EXACT_TOP_IDENTITY",
+      "arity": 4,
+      "ranks": [
+        8,
+        8
+      ],
+      "exact_kernel_count": null,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_star_heads.py",
+        "4"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "star_heads_4"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_5.json",
+      "status": "EXACT_GENERAL_HEAD_STAR_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        18,
+        19
+      ],
+      "exact_kernel_count": 2,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_star_heads.py",
+        "5"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "star_heads_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_reciprocal_5.json",
+      "status": "EXACT_GENERAL_HEAD_STAR_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        29,
+        30
+      ],
+      "exact_kernel_count": 6,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_star_heads.py",
+        "5",
+        "reciprocal"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "star_heads_reciprocal_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_4.json",
+      "status": "EXACT_MIDPOINT_STAR_TOP_OBSTRUCTION",
+      "arity": 4,
+      "ranks": [
+        12,
+        13
+      ],
+      "exact_kernel_count": 0,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_midpoint.py",
+        "4"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "midpoint_4"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_5.json",
+      "status": "EXACT_MIDPOINT_STAR_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        30,
+        31
+      ],
+      "exact_kernel_count": 0,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_midpoint.py",
+        "5"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "midpoint_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_reciprocal_4.json",
+      "status": "EXACT_MIDPOINT_STAR_TOP_OBSTRUCTION",
+      "arity": 4,
+      "ranks": [
+        15,
+        16
+      ],
+      "exact_kernel_count": 0,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_midpoint.py",
+        "4",
+        "reciprocal"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "midpoint_reciprocal_4"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_5.json",
+      "status": "EXACT_JOINT_STAR_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        48,
+        49
+      ],
+      "exact_kernel_count": 2,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_joint_stars.py",
+        "5"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "joint_stars_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_reciprocal_5.json",
+      "status": "EXACT_JOINT_STAR_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        74,
+        75
+      ],
+      "exact_kernel_count": 6,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_joint_stars.py",
+        "5",
+        "reciprocal"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "joint_stars_reciprocal_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_4_h3.json",
+      "status": "EXACT_TOP_IDENTITY",
+      "arity": 4,
+      "ranks": [
+        15,
+        15
+      ],
+      "exact_kernel_count": null,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_circuit.py",
+        "4",
+        "3"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "circuit_4_h3"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3.json",
+      "status": "EXACT_CIRCUIT_CORE_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        54,
+        55
+      ],
+      "exact_kernel_count": 2,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_circuit.py",
+        "5",
+        "3"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "circuit_5_h3"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3_half_union.json",
+      "status": "EXACT_CIRCUIT_CORE_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        75,
+        76
+      ],
+      "exact_kernel_count": 2,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_circuit.py",
+        "5",
+        "3",
+        "half_union"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "circuit_5_h3_half_union"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h4.json",
+      "status": "EXACT_CIRCUIT_CORE_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        118,
+        119
+      ],
+      "exact_kernel_count": 2,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_circuit.py",
+        "5",
+        "4"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "circuit_5_h4"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_weighted_star_5.json",
+      "status": "EXACT_WEIGHTED_STAR_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        94,
+        95
+      ],
+      "exact_kernel_count": 18,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_weighted_star.py",
+        "5"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "weighted_star_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_5.json",
+      "status": "EXACT_TWO_CIRCUIT_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        83,
+        84
+      ],
+      "exact_kernel_count": 52,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_two_circuits.py",
+        "5"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "two_circuits_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_union_5.json",
+      "status": "EXACT_TWO_CIRCUIT_UNION_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        93,
+        94
+      ],
+      "exact_kernel_count": 52,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_two_circuits_union.py",
+        "5"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "two_circuits_union_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_5.json",
+      "status": "EXACT_MEAN_TILE_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        44,
+        45
+      ],
+      "exact_kernel_count": 12,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_mean_tiles.py",
+        "5"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "mean_tiles_5"
+      ]
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_wide_5.json",
+      "status": "EXACT_MEAN_TILE_TOP_OBSTRUCTION",
+      "arity": 5,
+      "ranks": [
+        262,
+        263
+      ],
+      "exact_kernel_count": 102,
+      "reproduce": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_mean_tiles.py",
+        "5",
+        "wide"
+      ],
+      "compact_after_reproduction": [
+        "research/sN/dfs/h5-growth/venv/bin/python",
+        "research/sN/trees/overnight_upper_negative_compact.py",
+        "mean_tiles_wide_5"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "research/sN/cycles/cycle_fourier.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "dc9b6b1d9c114302e930e1542001f5b6393b2d0442cb0eb6af895dcfa3bc275a",
+      "bytes": 8129
+    },
+    {
+      "path": "research/sN/trees/all_tree_dfs/rational_identity.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "d65665bbc8399194d96da0fc47bfe7929a1eba7dfd9d7005a9116a716c2d1f2c",
+      "bytes": 7103
+    },
+    {
+      "path": "research/sN/trees/exponential_families.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "290e498d9cffb58540b3e543ac846308caf8bb81ec34c8a1414a02dd3e08374c",
+      "bytes": 6041
+    },
+    {
+      "path": "research/sN/trees/exponential_families_batch.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "73b9983fbba3b45519f073eb6a881bd1e97818987d0f3cb655c63507c4f65cdb",
+      "bytes": 10438
+    },
+    {
+      "path": "research/sN/trees/exponential_families_probe.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "80d7604c1a93ae3d53b083c82950e25adc6a95488ba072a42929d18fdf7b635b",
+      "bytes": 8070
+    },
+    {
+      "path": "research/sN/trees/gluing_review.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "65d921db7c5e69b238ce633f186aefd8b8a022f608f173727b74e78303024f23",
+      "bytes": 6217
+    },
+    {
+      "path": "research/sN/trees/gluing_review_gates.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "c89b76df8b1745218d7ac26d010012ee3d5e6c07b435784ae123ba1f8de343ea",
+      "bytes": 9108
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_broader.md",
+      "role": "mathematical_scope_and_bridge",
+      "sha256": "4167da8aaba813e49ece2d763ed5a3b546499e9b843c7e5893b0de67eddd9d58",
+      "bytes": 6454
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit.md",
+      "role": "mathematical_scope_and_bridge",
+      "sha256": "1f35576975b21c4a791fe389197a92bf2ff190723f8edafec5417b8c1640dc28",
+      "bytes": 6621
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit.py",
+      "role": "producer",
+      "sha256": "9247b7de0d676cdd5998ccdfc9b77484f855489d04138e78c3a55372c7ba8fac",
+      "bytes": 7130
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_4_h3.json",
+      "role": "exact_research_receipt",
+      "sha256": "d1ea3c7f763ab6e9c593c05cb9bf67142800040ef119f9e0d1271755461a3234",
+      "bytes": 6783
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_4_h3.log",
+      "role": "run_log",
+      "sha256": "8637cc8faae9d29baa4435806dda5c1741aee0849bd538ce89d807ba262fed3a",
+      "bytes": 238
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_4_h3_exit.json",
+      "role": "exit_record",
+      "sha256": "83a334ca8aee246f0d32a66c1fc57425fbc146923a5d0002813ca74196454476",
+      "bytes": 462
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3.json",
+      "role": "exact_research_receipt",
+      "sha256": "de64b8f679c2a2f75e2eefe457c8bb1b9fdad3cbbfd1a821f4ae9d9c63e95115",
+      "bytes": 29676
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3.log",
+      "role": "run_log",
+      "sha256": "c40deb8ac329fa46aa992c17ed0cef7d7924352ffe18b5224bc0914ef45a3d8e",
+      "bytes": 355
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3_exit.json",
+      "role": "exit_record",
+      "sha256": "4316bc179694bc59cd8aeaf8ad9108e32aa4f129ff7660e356894bb3cba49797",
+      "bytes": 460
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3_half_union.json",
+      "role": "exact_research_receipt",
+      "sha256": "1b879c21e774aaf626ae40d18c8586d927cdc620d404f2438c1d76ed10f57088",
+      "bytes": 51470
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3_half_union.log",
+      "role": "run_log",
+      "sha256": "e2f53eab57b5ce1e047e73a5f82b7ec4f89bf26a5d998f0e0713b840b8833088",
+      "bytes": 420
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h3_half_union_exit.json",
+      "role": "exit_record",
+      "sha256": "eb65bcb5c3db49d77e3fc0d354c94e13e67d5ceed3081bad8a96fbca298e48cc",
+      "bytes": 489
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h4.json",
+      "role": "exact_research_receipt",
+      "sha256": "9f7d89dd9e797f4c61854b3a17b8caf3c7e4d944033f9fb9071bec17bd1080d5",
+      "bytes": 115509
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h4.log",
+      "role": "run_log",
+      "sha256": "5ac78cc65d782c68f02e5474532596e3c98c8681458cfab418c93fd7eccbd81a",
+      "bytes": 601
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_circuit_5_h4_exit.json",
+      "role": "exit_record",
+      "sha256": "dd4cb61e4414ee64f4cd9b075c15106b1a9d839877f30fe8675a6201ef40b47e",
+      "bytes": 461
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars.py",
+      "role": "producer",
+      "sha256": "e1644a6d6d53d90b9cc0e31259398f59f81ee5b3a93c59cce653a015e22b997c",
+      "bytes": 3241
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "dbda9c4ed7ed68538bc4f5ca34ffbd99b2a92ced816ede4ecb1afe001464519f",
+      "bytes": 23305
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_5.log",
+      "role": "run_log",
+      "sha256": "15541f680d7ee882296d0ef0e4fae04dd3cbf6c40ac6fac0fa0ced45083d05af",
+      "bytes": 121
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_5_exit.json",
+      "role": "exit_record",
+      "sha256": "e5e5b00414b6105f7f3f61933bc0932c2bbad0e6ad8a37afe167cfaaa0d847a4",
+      "bytes": 457
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_reciprocal_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "5abf9b2f2a4e012ad8962bcf32d5267e9aed08c71ed3b4199dead575b1a92e73",
+      "bytes": 53426
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_reciprocal_5.log",
+      "role": "run_log",
+      "sha256": "e31ef5ac4e3749c01cc7992c4d904543298e39887121f9b73e7137dabda3e414",
+      "bytes": 119
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_joint_stars_reciprocal_5_exit.json",
+      "role": "exit_record",
+      "sha256": "94f14fb410149f13ff3f297e7ab0e288bbe9b9309a66ab8bfa319a72812e94f4",
+      "bytes": 486
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles.md",
+      "role": "mathematical_scope_and_bridge",
+      "sha256": "a988edea810f4dce8a947a8e588915601098a73ec136b08d97441997ddd6ea84",
+      "bytes": 5119
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles.py",
+      "role": "producer",
+      "sha256": "bdb74197caad35af76371865b896f487322abeb1379a64f74aa1e4d7577d951e",
+      "bytes": 6767
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "055abc13677c52032a4c84112ceba572e5a80aba6b32438e14e740c477d5100c",
+      "bytes": 29371
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_5.log",
+      "role": "run_log",
+      "sha256": "255e41f5b998fb70beafad8bc9e386e8a0845050d62c8a13a58805b0c3faa1e0",
+      "bytes": 133
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_5_exit.json",
+      "role": "exit_record",
+      "sha256": "11886564a2bf8ccbefda92a91e98c2eb05596de6bb98ef2d16e16714ff0489c2",
+      "bytes": 454
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_wide_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "50e9f2c4fb87107b5a27e485b859c187a00f9136f29658b56901a59c8f3c71f0",
+      "bytes": 964282
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_wide_5.log",
+      "role": "run_log",
+      "sha256": "360f7e23996007da3e1adda93225dab72114f2b7a9f00f0d95c3fed2a053fe28",
+      "bytes": 272
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_mean_tiles_wide_5_exit.json",
+      "role": "exit_record",
+      "sha256": "c8f59c3634c15da933eb3209483ffec9979042f385fdf8d57ce615b7e7c5be25",
+      "bytes": 472
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint.py",
+      "role": "producer",
+      "sha256": "35bd60d1639a8704e3945415c6dec8153734778d6ceaed2da8d3faf7218cb649",
+      "bytes": 6546
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_4.json",
+      "role": "exact_research_receipt",
+      "sha256": "00369d9e5066e4dbf9470e9364c265f154bf547c625f0f27c6bb78e2203d1151",
+      "bytes": 3450
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_4.log",
+      "role": "run_log",
+      "sha256": "35d6a2d364729f9eb9f8b669234911c5cb6fc98cdada4d7d5a41cd648eb4b781",
+      "bytes": 125
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_4_exit.json",
+      "role": "exit_record",
+      "sha256": "1fae3c53a1dfa9a5167dc034b2651b20d06e47f59cb4e3848d95e2f1de6480de",
+      "bytes": 451
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "fb53b69047aa474a4e4f30ba8b66542a48f4d83586a58613158130938d29059e",
+      "bytes": 10556
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_5.log",
+      "role": "run_log",
+      "sha256": "d9d1c0436ebfb922d58e2b02a2e5cb7ee4ec8238628dd45afc809b1f02c539bc",
+      "bytes": 123
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_5_exit.json",
+      "role": "exit_record",
+      "sha256": "ee80e89a272200e02bb73eaae2d90058794b69b3124bd30ef39a8a56867ab044",
+      "bytes": 449
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_reciprocal_4.json",
+      "role": "exact_research_receipt",
+      "sha256": "a055f380177b20127bcfa5534379d0eea9a90a57409ebf1547178df0643e9159",
+      "bytes": 4330
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_reciprocal_4.log",
+      "role": "run_log",
+      "sha256": "c67885ca5df093d622ca283a1c7f0ff8986cc9542057fd381e9903bcb0ba3296",
+      "bytes": 124
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_midpoint_reciprocal_4_exit.json",
+      "role": "exit_record",
+      "sha256": "a26b6cbe21e19f734d9ad4b6ec7ce614841bea0d2791a4b555562b1bd4e88685",
+      "bytes": 481
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_negative_compact.py",
+      "role": "modular_rank_and_compaction_checker",
+      "sha256": "6a075d5ff450d9bf5e37b2c90b741e28b9a93093d6b9731c9cf633fc9f7ea4b0",
+      "bytes": 3257
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_negative_manifest.py",
+      "role": "manifest_integrity_checker",
+      "sha256": "27d13cd13a808ccb0fcd0b0af2e53eff198ee67e2f8572eb0d893b2abaa48703",
+      "bytes": 4961
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_probe.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "d53680711dc74a423045ffbf0eb8624998cf0b0084f4ee4ad90072465d7881c4",
+      "bytes": 11138
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_run.py",
+      "role": "stable_runtime_dependency",
+      "sha256": "3192943205ead6986c3906691a7abef2b8b1101887e1296f642be51a9f620007",
+      "bytes": 2207
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads.md",
+      "role": "mathematical_scope_and_bridge",
+      "sha256": "e9fc0c8347bc910d38048cbcecebde522f93eae909cee915dd7dcc52e80f6641",
+      "bytes": 4420
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads.py",
+      "role": "producer",
+      "sha256": "d29716832dd53ae0c3516a9e28c086d5bc87bf2bf35ebfe2424bcf3201da0566",
+      "bytes": 6169
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_4.json",
+      "role": "exact_research_receipt",
+      "sha256": "1afab7c71526a6d1188a11cd179da3a07692ad36bbe0f73f7cc88c5c28c7dd44",
+      "bytes": 2821
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_4.log",
+      "role": "run_log",
+      "sha256": "2bdc21fc8138f79c1ac942d7d2f6e7fcff210e04210fd57beefd4fb389146223",
+      "bytes": 118
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_4_exit.json",
+      "role": "exit_record",
+      "sha256": "78572f82e08121ac15df780f5e052a957dc5a1f3174a18d6213ad7b5f7041019",
+      "bytes": 456
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "6c3db3aef83634a2c75ba285bdcd19b679f4108e6d38fc71dc3f5f6fb5ac15f5",
+      "bytes": 6057
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_5.log",
+      "role": "run_log",
+      "sha256": "c52f66316bfeb4bdd111093ce4682fad9dd08b3695da2686d43985d82601ad07",
+      "bytes": 139
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_5_exit.json",
+      "role": "exit_record",
+      "sha256": "0f0cb7393af2992996d58db9b02d3aad330aa026747efd0bfa0c95ceb0331566",
+      "bytes": 455
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_reciprocal_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "715dcc5fee64275ed4f30952b4445def06a1e84925ecd1ac51d0ae7a08895202",
+      "bytes": 13847
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_reciprocal_5.log",
+      "role": "run_log",
+      "sha256": "7a334719b88b54157ea1842c62e7ed8b0b7f465de2f07c922165bf9be3fab394",
+      "bytes": 136
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_star_heads_reciprocal_5_exit.json",
+      "role": "exit_record",
+      "sha256": "54dbca2aa3638e28e5241c50745a3f01e7aaf7733bdeb4cc1ed8ca656e1d2a1e",
+      "bytes": 484
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits.py",
+      "role": "producer",
+      "sha256": "a37781b83127e00d8746778a951c36cd03260b719862c79fdce5c0b43a6de2d7",
+      "bytes": 7161
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "3b9223105d49965553fdc14453f1963f37355806da2417531073d239e7de9b96",
+      "bytes": 145704
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_5.log",
+      "role": "run_log",
+      "sha256": "99ba2996b3a3b5393dbdc2b9fb5f60745c4e4e0fc2f68fab6bc4f5e6b030d908",
+      "bytes": 634
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_5_exit.json",
+      "role": "exit_record",
+      "sha256": "09032c9003f5a81b515a834c4ef3f38334ab3a38ed74ef67b81042e9e66a6a79",
+      "bytes": 458
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_union.py",
+      "role": "producer",
+      "sha256": "61e7c539d8d3e7b90b5731cb0ca36edefc7ae8b72f67f8657580e369310ff2c9",
+      "bytes": 3400
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_union_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "e2ead60e6aad4f52976ce16323f8799da8556737b9cdd0dcf93c38dabe804d6a",
+      "bytes": 161766
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_union_5.log",
+      "role": "run_log",
+      "sha256": "206ae08e71d8f9ba139be6b157d87de4bb9232e734899f8d8b531c43be626fe3",
+      "bytes": 388
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_circuits_union_5_exit.json",
+      "role": "exit_record",
+      "sha256": "a45e805dfa0708cd3643a1e12944013972f3737d31cf64695c9a2d7dd196818d",
+      "bytes": 470
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_weighted_star.py",
+      "role": "producer",
+      "sha256": "713564d4631251f937d7410801dd2a9ca065e7a1606b4d6ebecc568c449dd42e",
+      "bytes": 5260
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_weighted_star_5.json",
+      "role": "exact_research_receipt",
+      "sha256": "400732b22c2f77d5b7966db571b547e8ea278f9fe0f5c9dc2d655f1bbbd2b124",
+      "bytes": 99751
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_weighted_star_5.log",
+      "role": "run_log",
+      "sha256": "4c58ee5b545633bc0517d68b1dbe29c24c9b369f38e7d319cf963a4b3987cfac",
+      "bytes": 124
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_weighted_star_5_exit.json",
+      "role": "exit_record",
+      "sha256": "1bb62a80ec1c12895f08f5ae155e7a3e7d340c22bbc13088080f5e1878e03929",
+      "bytes": 461
+    }
+  ]
+}

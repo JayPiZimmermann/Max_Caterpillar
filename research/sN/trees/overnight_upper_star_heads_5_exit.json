@@ -1,0 +1,16 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_star_heads.py",
+    "5"
+  ],
+  "started_utc": "2026-10-24T21:40:02.638134+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_star_heads_5.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.4182216610024625,
+  "finished_utc": "2026-10-24T21:40:03.056356+00:00"
+}
