@@ -15,14 +15,14 @@ where `R` is an arbitrary finite shallow ReLU function. Each simple comparison
 graph `G_j` is a forest on all `N` labels, including isolated vertices, and
 has maximum degree at most `Delta`. Put
 
-`A_N = 1 + N + binom(N,2)`.
+`A_N = 1 + N/2 + binom(N,2)/4`.
 
 For `N>=3`, the number of second-hidden-layer units satisfies
 
-`|K| >= (1-A_N/2^N)/A_N * (8/7)^(N/(Delta+1))`.
+`|K| >= (1-A_N*(2/3)^N)/A_N * (27/23)^(N/(Delta+1))`.
 
 Consequently every fixed maximum degree gives an exponential lower bound,
-`Omega_Delta((8/7)^(N/(Delta+1))/N^2)`. This includes all bounded-degree tree
+`Omega_Delta((27/23)^(N/(Delta+1))/N^2)`. This includes all bounded-degree tree
 shapes and all orientations, with no canonical-head or unit-length assumption.
 Arbitrary biases are allowed by taking the recession function. More strongly,
 the same bound holds for the number of distinct simple comparison graphs
@@ -31,8 +31,8 @@ the set of ties it can serve in the argument below.
 
 For arbitrary graphs of maximum degree at most `Delta`, the analogous bound is
 
-`|K| >= (1-A_N/2^N)/A_N
-        * (1-2^(-Delta-1))^(-N/(Delta^2+1))`.
+`|K| >= (1-A_N*(2/3)^N)/A_N
+        * (1-(2/3)^Delta/3)^(-N/(Delta^2+1))`.
 
 Thus bounded degree suffices even if cycles are allowed. The sharper
 `Omega(2^N/N^(7/2))` result in `overnight_degree_two.md` remains preferable
@@ -51,10 +51,10 @@ remainder has its germ in `L1` and does not change this conclusion.
 ## Count ties by isolated selected vertices
 
 Select a random subset `T` by including every label independently with
-probability one half. For a vertex `v`, the event that `v` is an isolated
+probability one third. For a vertex `v`, the event that `v` is an isolated
 vertex of `G[T]` has probability
 
-`p_v = 2^(-deg(v)-1)`.
+`p_v = (1/3)*(2/3)^deg(v)`.
 
 Events for vertices with pairwise disjoint closed neighborhoods are
 independent. If `C` is such a collection, then
@@ -67,8 +67,8 @@ independent. If `C` is such a collection, then
 
 `<= A_N product_(v in C)(1-p_v)`.
 
-The last inequality uses `0<p_v<=1/2`, so every displayed odds ratio is at
-most one. Empty induced graphs and ties of size one or two are harmless:
+The last inequality uses `0<p_v<=1/3`, so every displayed odds ratio is at
+most one half. Empty induced graphs and ties of size one or two are harmless:
 we will only require coverage of sets of size at least three.
 
 ## Find a large product saving in a forest
@@ -83,32 +83,36 @@ at most two. Each color class therefore has disjoint closed neighborhoods.
 
 Set `a_v=-log(1-p_v)`. The function
 
-`d -> log(1-2^(-d-1))`
+`d -> log(1-(2/3)^d/3)`
 
-is increasing and concave for `d>=0`: with `z=2^(-d-1)`, its second
-derivative is `-(log 2)^2 z/(1-z)^2`. A forest has average degree at most
+is increasing and concave for `d>=0`: with `z=(2/3)^d/3`, its second
+derivative is `-(log(3/2))^2 z/(1-z)^2`. A forest has average degree at most
 two, so Jensen's inequality gives
 
-`sum_v a_v >= N log(8/7)`.
+`sum_v a_v >= N log(27/23)`.
 
 Among the `Delta+1` color classes, one consequently satisfies
 
-`sum_(v in C) a_v >= N log(8/7)/(Delta+1)`.
+`sum_(v in C) a_v >= N log(27/23)/(Delta+1)`.
 
 For that class the preceding probability estimate becomes
 
-`Pr(c(G[T])<=2) <= A_N (7/8)^(N/(Delta+1))`.
+`Pr(c(G[T])<=2) <= A_N (23/27)^(N/(Delta+1))`.
 
-There are `2^N-A_N` subsets of size at least three, and each must be served
-by at least one comparison graph. The union bound now proves the stated
-width bound. Applying the same union bound to distinct graphs proves the
+The probability that `|T|>=3` is `1-A_N*(2/3)^N`, and every such set
+must be served by at least one comparison graph. The union bound now proves
+the stated width bound. Applying the same union bound to distinct graphs proves the
 stronger graph-count statement.
+
+The choice one third optimizes this Jensen bound: for selection probability
+`p`, the average-degree-two saving is `-log(1-p*(1-p)^2)`, and
+`p*(1-p)^2` is largest at `p=1/3`.
 
 ## General bounded-degree graphs
 
 For an arbitrary graph of maximum degree `Delta`, its square has maximum
 degree at most `Delta^2`, hence a greedy coloring uses `Delta^2+1` colors.
-Also `a_v >= -log(1-2^(-Delta-1))` at every vertex. Choose the color class
+Also `a_v >= -log(1-(2/3)^Delta/3)` at every vertex. Choose the color class
 with greatest total `a_v` and repeat the same probability and coverage
 argument. This proves the graph version.
 
@@ -116,7 +120,7 @@ argument. This proves the graph version.
 
 The exponential rate depends on the maximum degree. For a star, all subsets
 containing its center are connected, so a single graph can serve roughly
-half of all ties in this necessary locality test. The family of stars with
+half of all ties under uniform subset counting in this necessary locality test. The family of stars with
 every possible center serves every nonempty tie. Therefore this graph-only
 coverage condition cannot yield an unrestricted all-tree exponential bound;
 that target needs additional information about the heads, coefficients, or

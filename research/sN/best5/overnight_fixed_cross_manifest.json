@@ -1,0 +1,19 @@
+{
+  "claim": "An explicit rational (9,17) network equals max of five inputs globally; no optimality claim. Verification needs only the network and standard-library checker.",
+  "existing_dependencies": {
+    "netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432"
+  },
+  "new_files": {
+    "overnight_fixed_cross.md": "091be970639558d1ef3db1165182d681eb4e35dce77449cbcaf96238ad08647f",
+    "overnight_fixed_cross_controls.json": "794cc730947e728d423262d062e7638da1f2d95add6c7a15066490fc8b53e5b1",
+    "overnight_fixed_cross_controls.log": "31e6923d57cb3a66db7468017429aee7d5ce9d856ac1c0dd703bede1a9fe0809",
+    "overnight_fixed_cross_controls.py": "ef05caa4a3b7d979daa137395c31fc9a607c919df2ca3e4d5c0ca97d88ddb26d",
+    "overnight_fixed_cross_net9_17.json": "9d6cc7ee37699e452bc52adee66b09baac91dfc4d84e0af43dece807c1546482",
+    "overnight_fixed_cross_net9_17_check.json": "5b2cdae4b6bd80f1fb6f0be3bc5f059af3b517bd73248c3bb1ea404d5d624bc6",
+    "overnight_fixed_cross_net9_18.json": "bc06b1f5244170bb27c8819598f79602629f4162451aff31001db9d9f2b48a26",
+    "overnight_fixed_cross_net9_18_check.json": "a27288354250cf5db2ac1839f3838bf311bba89daf36a9dc6d83a4919d12510f",
+    "overnight_fixed_cross_verify.py": "0a1fbec1f71e25aed99a03ca3627a71485f6a3e967ee5ddc2ab414c33112987d",
+    "overnight_fixed_cross_verify_control.json": "019387bd3ba86fd914eb8ae6a1bb73ef0bec09af7b1f3c4f1a3960a2b0705d0b"
+  },
+  "status": "INDEPENDENT_EXACT_NINE_FIRST_LAYER_CONSTRUCTION"
+}
