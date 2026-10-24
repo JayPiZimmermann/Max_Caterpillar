@@ -228,6 +228,9 @@
 \DeclareSourceEquation{eq:fixed-five-difference}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie\_verify.py}
 \DeclareSourceEquation{eq:fixed-five-locality}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie\_verify.py}
 \DeclareSourceEquation{eq:fixed-five-rays}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie\_verify.py}
+\DeclareSourceEquation{eq:degree-two-unit}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight\_degree\_two.md}
+\DeclareSourceEquation{eq:degree-two-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight\_degree\_two.md}
+\DeclareSourceEquation{eq:degree-two-capacity}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight\_degree\_two.md}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -803,6 +806,31 @@ construction of Brunck et al.\ \cite{BSY}; see \Cref{app:bsy}.
 More generally, \Cref{thm:forest-count} covers every tree of bounded degree,
 with arbitrary edge orientations, and permits unboundedly many deleted
 leaves at each vertex.
+
+\begin{theorem}[Paths and cycles with arbitrary weights, {\Cref{pf:thm:degree-two-weighted}}]\label{thm:degree-two-weighted}
+Suppose $N\geq3$ and $\maxn_N=R+\sum_{k\in K}d_kU_k$, where $R$ is a
+linear function plus a finite linear combination of ReLUs of linear forms,
+and
+\begin{align}\label{eq:degree-two-unit}
+ U_k(x)=\relu\!\left(h_k(x)+
+       \sum_{(i,j)\in M_k}c_{k,ij}\relu(x_i-x_j)\right).
+\end{align}
+The heads $h_k$ are arbitrary linear functions, all coefficients are arbitrary
+real numbers, and each $M_k$ orients a simple graph of maximum degree at most
+two. Then
+\begin{align}\label{eq:degree-two-count}
+ \binom Nm\leq\left(N+\frac{m-1}{2}N^2\right)|K|
+ \qquad(3\leq m\leq N).
+\end{align}
+Taking $m=\lfloor N/2\rfloor$ gives
+$|K|=\Omega(2^N/N^{7/2})$ as $N\to\infty$.
+The conclusion remains valid when biases are allowed.
+\end{theorem}
+
+The comparison graphs in \Cref{thm:degree-two-weighted} may be disconnected
+unions of paths and cycles. Degree refers to the full graph, before any leaf
+deletion. The proof uses only the rank of the comparisons at a tied maximum
+and a count of connected subsets; it is not yet formalized in Lean.
 
 \paragraph[Trees with few out-leaves]{Trees with few out-leaves (\leandecl{MaxCaterpillar/Count/Main.lean}{228}{outLeaf_unified_exponential}).}
 There is also an exponential bound without restricting internal branching.
@@ -1830,6 +1858,50 @@ This proves \Cref{eq:count-exponential} and the remaining assertions of
 The bound \Cref{eq:count-quadratic} uses
 three-element tie sets, a six-point second difference, and the sharper
 count of at most $N-2$ tie sets per caterpillar function.
+\end{Proof}
+
+\Needspace{8\baselineskip}
+\begin{Proof}{Theorem}{thm:degree-two-weighted}
+First remove biases, if present, by taking the recession function
+$\lim_{t\to\infty}F(tx)/t$. This preserves the homogeneous target, the
+comparison graphs, and the number of neurons.
+
+Fix an $m$-element label set $T$. Take the directional germ at $\one_T$,
+vary only the tied coordinates, and fix one tied perturbation coordinate
+to zero. The target germ is the support function of an $(m-1)$-simplex,
+whose class modulo $\LS_{m-2}$ is nonzero. Indeed, repeated opposite-face
+differences and restrictions to facet coordinates would otherwise, by
+\Cref{eq:face-dimension-drop}, put a segment support function in $\LS_0$;
+that function is not linear. The germ of the shallow remainder lies in
+$\LS_1$.
+
+For a counted unit, only comparisons with both endpoints in $T$ remain
+nonlinear. Let $c$ be the number of connected components of its induced
+comparison graph, including isolated vertices. The free comparison forms
+span a space of dimension $m-c$. If the outer preactivation is nonzero at
+$\one_T$, the germ is zero or belongs to $\LS_1$. Otherwise, adjoining the
+resulting linear head gives at most $m-c+1$ directions. Signed inner weights
+cause no difficulty: split the local preactivation as $h_P-h_Q$, where the
+two polytopes lie in this span, and use
+$\relu(h_P-h_Q)=h_{\operatorname{conv}(P\cup Q)}-h_Q$.
+Thus its germ belongs to $\LS_{m-c+1}$. If $c\geq3$, its class modulo
+$\LS_{m-2}$ vanishes. Every tie therefore requires some counted unit whose
+induced graph has at most two connected components.
+
+For a graph of maximum degree two, let $C_j$ count its connected induced
+$j$-vertex subsets. Each path or cycle component contributes at most its
+number of vertices: a proper connected subset is an interval or circular
+arc, and a whole component contributes only once. Hence $C_j\leq N$.
+An $m$-element set with two induced components is an unordered union of
+two connected sets. Dropping disjointness and the absence of edges between
+them only increases the count. A single unit consequently covers at most
+\begin{align}\label{eq:degree-two-capacity}
+ C_m+\frac12\sum_{j=1}^{m-1}C_jC_{m-j}
+ \leq N+\frac{m-1}{2}N^2
+\end{align}
+ties of size $m$. Counting all $\binom Nm$ ties proves
+\Cref{eq:degree-two-count}. The central binomial coefficient is
+$\Theta(2^N/\sqrt N)$, giving the stated asymptotic bound.
 \end{Proof}
 
 \paragraph{Arbitrary tree shapes with a source orientation.}

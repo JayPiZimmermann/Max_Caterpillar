@@ -141,7 +141,7 @@ def main():
             if not entry['source_url'].startswith('https://') or entry.get('steps'):
                 raise SystemExit('Source equations need an HTTPS source and cannot label proof steps.')
             kind = entry.get('kind', 'literature')
-            if kind not in ('literature', 'certificate'):
+            if kind not in ('literature', 'certificate', 'proof'):
                 raise SystemExit('Unknown non-Lean equation source kind: ' + kind)
             tex_source = entry['source_url'].replace('%', r'\%').replace('_', r'\_').replace('#', r'\#')
             for label in entry.get('equations', []):

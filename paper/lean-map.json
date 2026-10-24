@@ -1160,5 +1160,14 @@
       "eq:fixed-five-locality",
       "eq:fixed-five-rays"
     ]
+  },
+  "weighted_degree_two": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
+    "equations": [
+      "eq:degree-two-unit",
+      "eq:degree-two-count",
+      "eq:degree-two-capacity"
+    ]
   }
 }

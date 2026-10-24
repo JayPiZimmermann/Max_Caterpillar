@@ -1866,5 +1866,16 @@
     ],
     "key": "fixed_five_differences",
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie_verify.py"
+  },
+  {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
+    "equations": [
+      "eq:degree-two-unit",
+      "eq:degree-two-count",
+      "eq:degree-two-capacity"
+    ],
+    "key": "weighted_degree_two",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md"
   }
 ]
