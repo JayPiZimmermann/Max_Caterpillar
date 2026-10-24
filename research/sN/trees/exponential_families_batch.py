@@ -53,6 +53,34 @@ def inward(key):
     return all(head[v] + sum(a == v for a, b in edges) == 1 for v in vertices)
 
 
+def edge_marked(key):
+    """Inward tree base, optionally shifted by one oriented tree edge."""
+    head, edges = key
+    vertices = {v for edge in edges for v in edge}
+    defects = {v: head[v] + sum(a == v for a, b in edges) - 1 for v in vertices}
+    nonzero = {v: k for v, k in defects.items() if k}
+    return (not nonzero or (len(nonzero) == 2 and sorted(nonzero.values()) == [-1, 1]
+                            and tuple(sorted(nonzero)) in edges))
+
+
+def path_marked(key, max_distance):
+    head, edges = key
+    vertices = {v for edge in edges for v in edge}
+    defects = {v: head[v] + sum(a == v for a, b in edges) - 1 for v in vertices}
+    nonzero = {v: k for v, k in defects.items() if k}
+    if not nonzero:
+        return True
+    if len(nonzero) != 2 or sorted(nonzero.values()) != [-1, 1]:
+        return False
+    first, last = nonzero
+    reached = {first}
+    for _ in range(max_distance):
+        reached |= {v if u in reached else u for u, v in edges if u in reached or v in reached}
+        if last in reached:
+            return True
+    return False
+
+
 def engine(n, orbits):
     keys = [key for orbit in orbits for key in orbit]
     offsets = np.cumsum([0] + [len(orb) for orb in orbits])[:-1]
@@ -93,6 +121,11 @@ def main(n, mode, restriction):
         orbits = [orb for orb in orbits if source_root(orb[0])]
     elif restriction == 'inward':
         orbits = [orb for orb in orbits if inward(orb[0])]
+    elif restriction == 'edge':
+        orbits = [orb for orb in orbits if edge_marked(orb[0])]
+    elif restriction.startswith('path'):
+        distance = int(restriction[4:])
+        orbits = [orb for orb in orbits if path_marked(orb[0], distance)]
     else:
         assert restriction == 'full'
     width = len(orbits)

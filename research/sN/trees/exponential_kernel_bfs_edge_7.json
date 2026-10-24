@@ -1,0 +1,22 @@
+{
+  "n": 7,
+  "family": "bfs",
+  "orientation_restriction": "edge",
+  "source": "exponential_batch_bfs_edge_7.json",
+  "source_sha256": "375f4c7a507657bbbae9c3b861aa43cf79365badcf0b0f25a5509a641e92fc05",
+  "checker_sha256": "776fdcc4535870531357cceb8a5827ab18836c8970f6483faeb15ff5b479e07b",
+  "independent_relations": 5,
+  "passed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "ordinary_rank_upper": 2439,
+  "augmented_rank_lower_from_modular_receipt": 2440,
+  "status": "ALL_EXACT_KERNEL_IDENTITIES_VERIFIED",
+  "budget_seconds": 180,
+  "symbolic_calls_this_run": 4635,
+  "seconds_this_run": 7.464432716369629
+}

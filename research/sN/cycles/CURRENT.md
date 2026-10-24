@@ -19,11 +19,13 @@ Those formal states need not all be actual exposed faces of a full cyclic
 zonotope; the two families must not be conflated.
 
 The latest upper priority is the [renewed tree-family shortlist](../trees/EXPONENTIAL_FAMILIES.md).
-Breadth-first and balanced-hierarchy trees both have size `poly(N)20^N`
-after all head roots and edge states, and exact top identities at five and
-six inputs. Deque traversals, two-page trees and matching expansions are
-controlled enlargements. Uniform sufficiency is open; finite identities
-and counting alone do not settle the exponential construction question.
+The fixed dyadic hierarchy now fails exactly at seven inputs despite its
+five- and six-input successes. The genuinely larger family of all balanced
+interval hierarchies has size `poly(N)70^N` after all head roots and edge
+states; its sufficiency remains open. Full breadth-first/deque orientations,
+two-page trees and matching expansions are other candidates. An exact
+gluing factorization is available, but its blocks retain attachment shifts
+and an external frequency parameter. Uniform sufficiency is not established.
 
 Budget: first validate the general-head tree Fourier formula against a separately
 implemented braid-chamber integral on exact rational frequencies, N=4,5.

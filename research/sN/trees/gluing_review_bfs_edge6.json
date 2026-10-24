@@ -1,0 +1,17 @@
+{
+  "status": "INDEPENDENT_COMPLETE_FLAG_IDENTITY_PASS",
+  "inputs": 6,
+  "family": "BFS with reversal, inward unit plus at most one oriented edge shift",
+  "nonzero_orbits": 7,
+  "full_units": 84,
+  "coefficients": [
+    "-1/6",
+    "1/6"
+  ],
+  "complete_flag_rows": 11796,
+  "residual_nonzero_rows": 0,
+  "source": "exponential_batch_bfs_edge_6.json",
+  "source_sha256": "2d16182bc30b86535a7f3aa16bf4186c3ac6c07bb18bddc10c06e9c4a9cf2384",
+  "checker_sha256": "c89b76df8b1745218d7ac26d010012ee3d5e6c07b435784ae123ba1f8de343ea",
+  "elapsed_seconds": 3.207425049997255
+}

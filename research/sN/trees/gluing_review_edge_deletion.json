@@ -1,0 +1,18 @@
+{
+  "status": "EXACT_BOUNDED_PATH_SHIFT_DELETION_CONTROLS_PASS",
+  "exact_directional_derivative_controls": 4800,
+  "nonlinear_nonleaf_lower_dimension_controls": 780,
+  "bfs_leaf_deletion_controls": 9414,
+  "bfs_vertex_counts": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "consequence": "Together with the reviewed deletion proof, BFS single-edge-shift exclusion at N=7 propagates to all N>=7",
+  "producer_sha256": "1c212186760b37aaebd478ddcf75bc78745d18cd39267bdd7f1f44a7229e4727"
+}

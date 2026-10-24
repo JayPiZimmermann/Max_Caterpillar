@@ -1,0 +1,29 @@
+{
+  "status": "INDEPENDENT_HIERARCHY7_COVERAGE_AND_FIRST_ROW_PASS",
+  "tree_count_per_apex": 96,
+  "full_units": 75264,
+  "orbit_columns": 5392,
+  "exact_kernel_relations_independently_normalized": 296,
+  "all_kernel_gate_receipt_indices_present": true,
+  "kernel_identities_rechecked_symbolically": false,
+  "large_modular_rank_repeated": false,
+  "ordinary_rank_upper": 5096,
+  "augmented_rank_lower": 5097,
+  "independent_first_row_entries": 5393,
+  "first_point": [
+    896251,
+    90396,
+    317569,
+    -3677071,
+    574412,
+    910358,
+    888085
+  ],
+  "first_row_uint32_sha256": "5d3a3068ed614699a4afd16ac5fc94558e9b2ea9f66f8478d6bcbffc3f27f655",
+  "source": "exponential_batch_hierarchy_full_7.json",
+  "source_sha256": "6a4bac0767068877269fde0a534032e1e4ebc7a4a7c95a7be0fb7dbdae610bd5",
+  "exact_gate_source": "exponential_kernel_hierarchy_full_7.json",
+  "exact_gate_source_sha256": "0c53a6342ce43f641a17150420e7a089ff45a8764c2a843e100d82bea1a95536",
+  "checker_sha256": "c89b76df8b1745218d7ac26d010012ee3d5e6c07b435784ae123ba1f8de343ea",
+  "elapsed_seconds": 4.184734724000009
+}

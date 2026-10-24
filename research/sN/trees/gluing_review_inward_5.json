@@ -1,0 +1,89 @@
+{
+  "status": "EXACT_ALL_INWARD_TREE_TOP_OBSTRUCTION",
+  "inputs": 5,
+  "domain": "All labelled trees, every apex and head root, every hinge directed child-to-parent toward the head root",
+  "additional_lower_dimensional_faces": true,
+  "mathematical_boundary": "N=5 base obstruction; the reviewed opposite-face deletion proof propagates exclusion to every N>=5, but not to arbitrary edge orientations",
+  "shape_columns": [
+    {
+      "name": "path",
+      "oriented_edges": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "star",
+      "oriented_edges": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    }
+  ],
+  "full_permutation_sum": true,
+  "frequencies": [
+    [
+      1,
+      2,
+      3,
+      4,
+      -10
+    ],
+    [
+      1,
+      2,
+      4,
+      8,
+      -15
+    ],
+    [
+      1,
+      3,
+      9,
+      27,
+      -40
+    ]
+  ],
+  "augmented_matrix": [
+    [
+      "-461/5292",
+      "-26/189",
+      "-1/240"
+    ],
+    [
+      "-169457/7567560",
+      "-75553/2162160",
+      "-1/960"
+    ],
+    [
+      "-10191989/13189077720",
+      "-801173/676362960",
+      "-1/29160"
+    ]
+  ],
+  "augmented_determinant": "-108076159/19163354302226534400",
+  "exact_root_independence_controls": 5184,
+  "exact_opposite_derivative_deletion_controls": 19440,
+  "producer_sha256": "efaae1421e0e72ab924eb5f4f347b30652063ed4d23a85c511acb0be042e4e2b",
+  "kernel_source_sha256": "65d921db7c5e69b238ce633f186aefd8b8a022f608f173727b74e78303024f23"
+}

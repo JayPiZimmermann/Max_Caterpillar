@@ -1,11 +1,19 @@
 # Exponential labelled tree families: a renewed shortlist
 
 24 October 2026. **A uniform exponential construction is still open.**
-The most useful new candidates are breadth-first/deque traversal families,
-balanced hierarchical trees, two-page trees, and trees assembled from a
-noncrossing matching. The first two now have exact top-class identities at
-five and six inputs. These are finite mathematical certificates, not Lean
-results or a uniform formula.
+The fixed pruned-dyadic hierarchy now fails exactly at seven inputs, despite
+its exact five- and six-input identities. Full breadth-first/deque families
+with arbitrary orientations remain open. The hierarchy route has been
+reopened only after a genuine enlargement: all balanced interval splits,
+with dictionary size `poly(N)70^N`. The full gluing factorization is proved,
+but a scalar smaller-block induction is refuted. See [the gluing review](gluing_review.md).
+
+A separate new separator excludes all canonical tree units with at most one
+zero of `kappa_v=head_v+positive-endpoint outdegree_v`, at every arity at
+least seven. This includes all one-sink orientations with arbitrary head root,
+on every tree shape. It does not exclude unrestricted orientations or settle
+the exponential all-tree lower bound. See [the defect review](lower_defect_review.md).
+These are mathematical results with exact arithmetic controls, not Lean results.
 
 ## Common target and counting convention
 
@@ -63,12 +71,14 @@ use a chain up to the earlier endpoint, then make that vertex the centre of
 a star on the remaining labels. Thus the first hidden layer is not confined
 to one sparse graph. Arbitrary orientations remain available.
 
-**Next test:** the seven-input breadth-first family, or a structured
-seven-input coefficient search exploiting its child-count description.
-The naive complete matrix already grows substantially, so the decisive
-mathematical target is a cancellation identity preserved by queue processing.
-For the deque enlargement, a relation between the two possible next visits
-would be more useful than a larger unstructured rank calculation.
+**Remaining target:** a cancellation identity preserved by queue processing,
+with arbitrary orientations. At seven inputs the full breadth-first family
+has 24,872 dihedral columns; its complete span has not been tested. The
+one-sink/arbitrary-head-root restriction is now excluded on every tree family
+for all arities at least seven. The opposite source/root restriction gives
+only a modular negative diagnostic at seven inputs. Neither excludes all
+breadth-first orientations or their combinations. For the deque enlargement,
+a relation between the two possible next visits remains a useful target.
 
 ## 2. Trees with two noncrossing pages
 
@@ -119,7 +129,7 @@ allowing arbitrary permutations of blocks would lose the exponential count.
 with the apex frequency retained as a boundary parameter. Ordinary
 smaller-arity induction loses that parameter and is known not to close.
 
-## 4. Fixed balanced hierarchy with arbitrary connecting edges
+## 4. Fixed balanced hierarchy: exact failure at seven inputs
 
 Fix a complete binary hierarchy on `M` ordered leaves, where `M` is the next
 power of two at least `n`, and retain the first `n` leaves. At each split with
@@ -142,9 +152,38 @@ The hierarchy is fixed, but its graph is not. All connecting endpoints are
 free, so this family avoids the sparse-global-feature-graph obstruction.
 It permits crossings and gives a direct two-block recursive structure.
 
-**Proof target:** a gluing identity for two blocks that sums over their
-connecting endpoint pair and both hinge orientations. It must be an identity
-in the linear span of units, not a composition of two smaller networks.
+**The uniform sufficiency claim for this exact family is false.** At seven
+inputs, all 5,392 dihedral columns satisfy 296 independently checked rational
+relations, so their rank is at most 5,096. Adding the maximum gives modular
+rank 5,097, a characteristic-zero lower rank bound. The independent review
+rebuilds all 96 six-vertex trees and all 75,264 normalized units, verifies the
+orbits and kernel independence, and recomputes a complete Fourier row with
+a separate DFS formula. All five tree-edge states are covered, since missing
+and linear states vanish in this top quotient. This is an exact finite
+obstruction, not a timeout or a modular rank gap alone.
+
+### Reopening: all balanced interval splits
+
+At every interval of size `n`, allow every split with `n/3 <= k <= 2n/3`,
+then recursively choose two child trees and one arbitrary connecting edge.
+The number of descriptions satisfies `B_1=1` and
+`B_n=sum_k k(n-k) B_k B_(n-k)`. An induction gives
+`B_n <= 14^(n-1)/n^3`: for `n>=3` there are at most `2n/3` split positions,
+and `k(n-k)>=2n^2/9`, so the inductive sum is at most
+`14^(n-2) 27/(2n^3)`. Check `n=1,2` directly.
+
+Thus this candidate, with all roots, orientations and five edge states, has
+size `poly(N)70^N`. Union with the old fixed hierarchy preserves the bound;
+the union is needed because some old pruned splits are unbalanced. Already
+the `3+3` split on six vertices adds new trees. For example the path with
+edges `01,12,03,34,45` contains neither of the two cyclic adjacent perfect
+matchings that characterize the old six-vertex family.
+
+The [count proof](gluing_review_balanced.md) establishes size only. The exact
+edge-gluing identity retains an external parameter and shifts the frequency
+at the attachment vertex. Ordinary smaller-simplex identities do not supply
+those block functions. A closed linear gluing identity for the enlarged
+family is still missing; composition of smaller networks would add depth.
 
 ## 5. Two additional enlargements
 
@@ -196,6 +235,7 @@ checks the entire resulting Fourier identity, not just sample points.
 |---|---:|---:|---:|---|
 | Breadth first / 5 | 164 | 32 | 320 | Top-class identity |
 | Breadth first / 6 | 2,404 | 146 | 1,752 | Top-class identity |
+| Breadth first, one marked edge / 6 | 451 | 7 | 84 | Top-class identity |
 | Balanced hierarchy / 5 | 82 | 12 | 110 | Top-class identity |
 | Balanced hierarchy / 6 | 1,562 | 330 | 3,960 | Top-class identity |
 
@@ -206,6 +246,25 @@ identity implies finite sufficiency of its face dictionary by the reviewed
 face-closure bridge. No uniform coefficient formula follows from these
 checks, and six-input success must not be extrapolated: the earlier
 noncrossing-caterpillar family passed at six and seven, then failed at eight.
+
+The new 84-unit identity uses coefficients `+1/6` and `-1/6` on seven full
+dihedral orbits. Its units have preactivation `M_T-x_a`, optionally shifted
+by `x_s-x_t` along one tree edge, where
+`M_T=sum_edges max(x_i,x_j)-sum_v(deg(v)-1)x_v`. These are canonical tree
+units. Independent complete flags check all 11,796 coordinates exactly.
+The number 84 is still before face corrections, not a final network width.
+
+The subsequent seven-input results are:
+
+| Family | Columns | Ordinary / augmented rank | Status |
+|---|---:|---:|---|
+| Fixed dyadic hierarchy, every orientation | 5,392 | 5,096 / 5,097 | Exact obstruction: 296 rational identities |
+| Breadth first, one marked edge | 2,444 | 2,439 / 2,440 | Exact obstruction: 5 rational identities |
+| Breadth first, one marked path of length at most two | 4,880 | 4,650 / 4,651 | Exact obstruction: 230 rational identities |
+| Breadth first, all outward source/head-root choices | 4,668 | 3,839 / 3,840 | Modular diagnostic only |
+
+The two marked-path restrictions are now subsumed by the stronger all-tree
+one-sink exclusion. This does not settle the unrestricted breadth-first span.
 
 The six-input breadth-first run first stopped at a five-million-entry matrix
 cap. That is preserved as `exponential_families_bfs_6_budget5m.*`. Raising
@@ -233,8 +292,11 @@ research/sN/dfs/h5-growth/venv/bin/python research/sN/trees/exponential_families
 research/sN/dfs/h5-growth/venv/bin/python research/sN/trees/exponential_families_probe.py 6 hierarchy
 ```
 
-Priority: pursue a breadth-first/deque cancellation identity and the
-two-block hierarchy identity; retain two-page and matching-expansion trees
-as principled enlargements. The unrestricted all-tree exponential lower
-bound is still open separately; its latest odd-arity reduction and the
-failed fixed-coordinate recursion are in [the lower-bound note](reopen_lower_odd.md).
+Priority: arbitrary-orientation breadth-first/deque cancellation, or the
+enlarged balanced-interval gluing identity. Do not retry the exact fixed
+hierarchy or the one-sink restrictions without changing their definitions.
+Two-page and matching-expansion trees remain further candidates. The
+unrestricted all-tree exponential lower bound is still open; [raw survival
+already fails on one star](lower_obstacle_review.md), whereas [defect
+separation](lower_defect_review.md) and [odd perfect-matching separation](reopen_lower_odd.md)
+remain possible ways to distinguish the required local class.

@@ -1,0 +1,20 @@
+{
+  "status": "INDEPENDENT_BFS_EDGE7_COVERAGE_AND_FIRST_ROW_PASS",
+  "tree_count_per_apex": 444,
+  "full_units": 34188,
+  "orbit_columns": 2444,
+  "independently_normalized_exact_kernel_relations": 5,
+  "ordinary_rank_upper": 2439,
+  "augmented_rank_lower": 2440,
+  "independent_first_row_entries": 2445,
+  "first_row_uint32_sha256": "b8985be4f3de0437f7b382decc9b953565a125aeda8c957b4f0ef82523b94484",
+  "kernel_identities_rechecked_symbolically": false,
+  "large_modular_rank_repeated": false,
+  "source": "exponential_batch_bfs_edge_7.json",
+  "source_sha256": "375f4c7a507657bbbae9c3b861aa43cf79365badcf0b0f25a5509a641e92fc05",
+  "gate_source": "exponential_kernel_bfs_edge_7.json",
+  "gate_sha256": "d7349cd4c67092654a56d3fb831cf667331e628c1ce596539256b075469aeec6",
+  "checker_sha256": "2cadbb1ad7a8f37e0814bdd5036c04b5006307c35668ebe861581a56eb761af1",
+  "dfs_checker_sha256": "c89b76df8b1745218d7ac26d010012ee3d5e6c07b435784ae123ba1f8de343ea",
+  "elapsed_seconds": 1.7234397690008336
+}

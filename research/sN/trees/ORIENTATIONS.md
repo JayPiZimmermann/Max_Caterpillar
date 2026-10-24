@@ -7,6 +7,27 @@ all orientations of stars. The model still has a canonical head
 `x_root-x_apex`, unit edge coefficients, and omitted/linear/hinge states;
 it does not allow arbitrary weighted inner edges or arbitrary heads.
 
+## Latest structural separator: one-sink units
+
+The [defect review](lower_defect_review.md) now gives an exact seven-input
+separator for every canonical full tree unit with at most one zero of
+`kappa_v=head_v+positive-endpoint outdegree_v`. Equivalently as functions,
+these are all orientations toward one sink with arbitrary head root, on
+every tree shape. An exact 61-row rational evaluation functional annihilates
+all 81 full-symmetry orbit columns and is nonzero on the maximum. Coordinate
+deletion preserves the defect bound, so exclusion holds at every arity
+`N>=7`. Adding lower-dimensional tree-face states at that arity cannot repair
+the top-class obstruction. This is nonspanning, not a width lower bound.
+
+The unrestricted exponential count is still missing. A single outward-star
+unit already has nonzero top germs at `2^(N-2)-1-(N-2)-binom(N-2,2)` ties of
+size at least five; see [the exact raw-survival obstruction](lower_obstacle_review.md).
+Thus raw survival counting cannot give a universal exponential saving.
+The new separator distinguishes the required simplex class from a surviving
+tree class. A constant defect cutoff alone is insufficient for exponential
+width, and a locality count for arbitrary face descriptions needs a separate
+bridge. These claims are mathematical certificates, not Lean results.
+
 ## Proved extension
 
 Let `N >= 3`, `0 <= 2k <= N-1`, with integer `k`. Add every tree-face unit
@@ -74,9 +95,9 @@ of separation. Exact matching and exposed-face controls accompany the proof.
 The earlier outward-twin residual remains another sufficient route.
 
 For the separate upper problem, see the [renewed exponential tree families](EXPONENTIAL_FAMILIES.md).
-Breadth-first and fixed-hierarchy candidates have exact five- and six-input
-top identities, with all roots and orientations and both traversal directions.
-The all-arity construction is still open.
+The fixed-hierarchy candidate now fails exactly at seven inputs. Full
+breadth-first/deque orientations and the enlarged balanced-interval hierarchy
+remain open. The all-arity exponential construction is not proved.
 
 ## A shortcut refuted for outward twins
 

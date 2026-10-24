@@ -1,0 +1,5 @@
+EXACT NULLSPACE shape 81 61 nullity 1 seconds 0.071
+DONE {'status': 'EXACT_FINITE_EVALUATION_SEPARATOR', 'arity': 7, 'defect_bound': 1, 'orbits': 81, 'rows': 61, 'ordinary_rank': 60, 'augmented_rank': 61, 'rows_sha256': 'c437e78b4ae2322729dba684f1febbb1431bdf1b63c75a6e01830c60c908f1ad', 'producer_sha256': '4523a0b50d96ad4efe11f41008662fa5ab9b1e128859e02cc2845f2a0f1de30a', 'elapsed_seconds': 0.10389943500194931, 'budget_seconds': 120, 'trust_boundary': 'Exact rational Fourier evaluations and full orbit coverage; not a Lean theorem'}
+TARGET NONZERO True target digits 3651
+
+EXIT 0

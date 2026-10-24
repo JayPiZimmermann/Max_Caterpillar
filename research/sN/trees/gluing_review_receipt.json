@@ -1,0 +1,80 @@
+{
+  "status": "EXACT_GLUING_AND_BOUNDARY_REVIEW_PASS",
+  "exact_gluing_controls": 3480,
+  "exhaustive_nonapex_arities": [
+    2,
+    3,
+    4
+  ],
+  "additional_nonapex_arities": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "frequency_domains": [
+    "free external parameter",
+    "sum(omega)=-external"
+  ],
+  "omitted_attachment_shift": {
+    "actual": "1/7200",
+    "wrong": "1/1800"
+  },
+  "replaced_external_parameter": {
+    "actual": "1/30",
+    "wrong": "-1/6"
+  },
+  "smallest_block_obstruction": {
+    "coefficient_field": "Q(a,b)",
+    "variable": "x",
+    "other_frequency": "y=b-x",
+    "pole_rows": [
+      "-a",
+      "a",
+      "a + b",
+      "-a + b",
+      "0"
+    ],
+    "augmented_residue_matrix": [
+      [
+        "-1/a",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/a",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/a",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1/a",
+        "0"
+      ],
+      [
+        "1/a",
+        "-1/a",
+        "0",
+        "0",
+        "1/b"
+      ]
+    ],
+    "augmented_determinant": "1/(a**4*b)",
+    "conclusion": "1/(x*y) is outside the four rooted oriented two-vertex kernels over Q(a,b)"
+  },
+  "producer_sha256": "65d921db7c5e69b238ce633f186aefd8b8a022f608f173727b74e78303024f23",
+  "elapsed_seconds": 0.40915371700248215
+}

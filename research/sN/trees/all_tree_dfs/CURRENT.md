@@ -12,28 +12,39 @@ verification receipt.
 
 ## Renewed exponential-size tree families
 
-See [the current shortlist](../EXPONENTIAL_FAMILIES.md) and its independent
-semantic/complete-flag review. Breadth-first and fixed pruned-dyadic-hierarchy
-trees, allowing cyclic starts and both traversal directions, have candidate
-dictionary counts `poly(N)20^N` including all roots and five edge states.
-Both now have exact top-class identities at five and six inputs. At six,
-the breadth-first family uses 100 of the 125 nonapex labelled trees and its
-certificate selects 1,752 full units; the hierarchy uses 65 trees and selects
-3,960 full units. Counts are before face corrections. These finite identities
-are not uniform constructions or Lean results.
+The full fixed pruned hierarchy is now exactly excluded at seven inputs,
+including all orientations. Its 5,392 columns satisfy 296 exact rational
+identities; ordinary rank is at most 5,096 and augmented rank at least 5,097.
+The independent review reconstructs all 96 inner trees and all 75,264 units
+and checks a complete Fourier row. Earlier exact five- and six-input
+successes do not extend uniformly. See [the shortlist](../EXPONENTIAL_FAMILIES.md).
 
-The deque enlargement has count `poly(N)40^N`. Two-page trees, noncrossing
-matching expansions, nonnesting trees, and restricted relabellings of arbitrary
-noncrossing trees are additional precisely counted candidates. The defining
-constraint must control labelings, not just unlabelled shapes. The new
-hierarchy family allows every pair of labels as a possible connecting edge,
-so it is not excluded by the sparse-global-feature-graph obstruction.
+The genuine hierarchy enlargement now permits all balanced interval splits,
+with description bound `poly(N)70^N`; sufficiency is open. The full gluing
+factorization is proved, but a two-vertex residue obstruction excludes a
+naive scalar block-induction target. Full breadth-first/deque orientations
+remain open, as do two-page and matching-expansion families.
+
+The six-input breadth-first witness has been shortened to 84 full units in
+seven dihedral orbits, with coefficients `+1/6` or `-1/6`; independent
+complete flags confirm it. These counts are before face corrections. Its
+one-sink orientation restriction fails at every arity at least seven, so
+this small identity is not a uniform formula. None of these new certificates
+is a Lean result.
 
 The latest lower refinement is [the odd-tie argument](../reopen_lower_odd.md):
 perfect-matching separation only at sufficiently large odd arities would
 yield base `2/phi` with a Fibonacci denominator and no polynomial loss.
 The same note gives a uniform obstruction to proving it by one fixed
 coordinate deletion. The separation theorem itself remains open.
+
+A different new [defect separator](../lower_defect_review.md) excludes all
+one-sink/arbitrary-head-root canonical tree units at every `N>=7`, with all
+tree shapes allowed. The exact seven-input evaluation separator has ranks
+60/61 on 81 full-symmetry columns and propagates by coordinate deletion.
+This is a structural exclusion, not the unrestricted exponential width
+bound. [A single star](../lower_obstacle_review.md) already defeats uniform
+raw-survival counting, making such separators essential to this route.
 
 ## Latest arbitrary-orientation extension
 
