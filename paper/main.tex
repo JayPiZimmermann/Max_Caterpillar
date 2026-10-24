@@ -231,8 +231,8 @@
 \DeclareSourceEquation{eq:degree-two-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight\_degree\_two.md}
 \DeclareSourceEquation{eq:degree-two-capacity}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight\_degree\_two.md}
 \DeclareSourceEquation{eq:fixed-five-rays}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight\_fixed\_bowtie\_pairs.md}
-\DeclareSourceEquation{eq:weighted-forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/e9cea5db0b78bc02d24e03e5d545c23a61d8a761/research/sN/trees/overnight\_bounded\_degree.md}
-\DeclareSourceEquation{eq:weighted-isolates}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/e9cea5db0b78bc02d24e03e5d545c23a61d8a761/research/sN/trees/overnight\_bounded\_degree.md}
+\DeclareSourceEquation{eq:weighted-forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/84eb935304c04e4b5a878adf219fbcede5758b83/research/sN/trees/overnight\_bounded\_degree.md}
+\DeclareSourceEquation{eq:weighted-isolates}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/84eb935304c04e4b5a878adf219fbcede5758b83/research/sN/trees/overnight\_bounded\_degree.md}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -834,7 +834,7 @@ unions of paths and cycles. The same locality argument also gives an
 exponential bound for arbitrary weighted forests of bounded degree.
 
 \begin{theorem}[Bounded degree with arbitrary weights, {\Cref{pf:thm:weighted-forest}}]\label{thm:weighted-forest}
-Use the representation and coefficient assumptions of
+Let $N\geq3$ and $\Delta\geq0$ be integers. Use the representation and coefficient assumptions of
 \Cref{thm:degree-two-weighted}, and put $a_N=1+N/2+\binom N2/4$.
 If each comparison graph is a forest of maximum degree at most $\Delta$,
 then
@@ -1948,10 +1948,13 @@ The square of a forest of maximum degree $\Delta$ has a coloring with
 $\Delta+1$ colors. Root each component and color in breadth-first order:
 only the parent, grandparent, and earlier siblings can forbid colors, at
 most $\Delta$ in total. Each color class has disjoint closed neighborhoods.
-The function $d\mapsto\log(1-(2/3)^d/3)$ is increasing and concave, and a
-forest has average degree at most two. Jensen's inequality therefore gives
-$\sum_v-\log(1-p_v)\geq N\log(27/23)$.
-Some color class $C$ accounts for at least $1/(\Delta+1)$ of this sum.
+Since a forest has at most $N$ edges,
+$\prod_v p_v=3^{-N}(2/3)^{2|E|}\geq(4/27)^N$.
+The arithmetic-geometric mean inequality gives first
+$N^{-1}\sum_v p_v\geq4/27$, and then
+$\prod_v(1-p_v)\leq(1-N^{-1}\sum_v p_v)^N\leq(23/27)^N$.
+The color classes partition this product, so one class $C$ has
+$\prod_{v\in C}(1-p_v)\leq(23/27)^{N/(\Delta+1)}$.
 By \Cref{eq:weighted-isolates}, one graph consequently serves a fraction
 at most $a_N(23/27)^{N/(\Delta+1)}$ of all subsets.
 The probability of size at least three is $1-a_N(2/3)^N$; applying the union
@@ -1959,8 +1962,8 @@ bound proves \Cref{eq:weighted-forest-count}.
 
 For an arbitrary graph of maximum degree $\Delta$, its square has maximum
 degree at most $\Delta^2$ and hence admits $\Delta^2+1$ colors. Also
-$-\log(1-p_v)\geq-\log(1-(2/3)^\Delta/3)$ for every vertex. Choose the color
-class with greatest total $-\log(1-p_v)$ and repeat the argument.
+$p_v\geq(2/3)^\Delta/3$ for every vertex. A largest color class has at least
+$N/(\Delta^2+1)$ vertices; bound its product factor by factor and repeat the argument.
 Finally, repeated units with the same graph serve no additional tied sets,
 so both union bounds may count distinct graphs instead of units.
 \end{Proof}

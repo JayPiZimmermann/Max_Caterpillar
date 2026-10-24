@@ -1178,7 +1178,7 @@
   },
   "weighted_forests": {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/e9cea5db0b78bc02d24e03e5d545c23a61d8a761/research/sN/trees/overnight_bounded_degree.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/84eb935304c04e4b5a878adf219fbcede5758b83/research/sN/trees/overnight_bounded_degree.md",
     "equations": [
       "eq:weighted-forest-count",
       "eq:weighted-isolates"
