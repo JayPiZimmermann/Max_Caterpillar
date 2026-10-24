@@ -1,0 +1,192 @@
+{
+  "status": "EXACT_TREE_SIGN_IMBALANCE_CONTROLS_PASS",
+  "counts": {
+    "2": {
+      "tree_shapes": 1,
+      "oriented_trees": 2,
+      "no_perfect_matching": 0,
+      "perfectly_matchable": 2
+    },
+    "4": {
+      "tree_shapes": 2,
+      "oriented_trees": 16,
+      "no_perfect_matching": 8,
+      "perfectly_matchable": 8
+    },
+    "6": {
+      "tree_shapes": 6,
+      "oriented_trees": 192,
+      "no_perfect_matching": 128,
+      "perfectly_matchable": 64
+    },
+    "8": {
+      "tree_shapes": 23,
+      "oriented_trees": 2944,
+      "no_perfect_matching": 2304,
+      "perfectly_matchable": 640
+    }
+  },
+  "examples": [
+    {
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "matching": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "extensions": 35,
+      "signed_extensions": -3,
+      "contracted_extensions": 3
+    },
+    {
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "matching": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "extensions": 125,
+      "signed_extensions": 3,
+      "contracted_extensions": 3
+    },
+    {
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "matching": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "extensions": 245,
+      "signed_extensions": -5,
+      "contracted_extensions": 5
+    }
+  ],
+  "seconds": 0.1769450410065474,
+  "scope": "Uniform combinatorial proof is in the pruning note; no kernel functional or lower bound follows without a separate bridge."
+}

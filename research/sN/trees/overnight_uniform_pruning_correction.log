@@ -1,0 +1,12 @@
+{
+  "status": "EXACT_NEXT_JET_BREAKS_LEADING_WITNESS",
+  "curves": [
+    "-3*(3*r**4*s + 3*r**4 + 9*r**3*s**2 + 8*r**3*s + 9*r**3 + 9*r**2*s**3 + 26*r**2*s**2 + 26*r**2*s + 9*r**2 + 3*r*s**4 + 8*r*s**3 + 26*r*s**2 + 8*r*s + 3*r + 3*s**4 + 9*s**3 + 9*s**2 + 3*s)/(r*s*(r + 1)*(r + s)*(s + 1))",
+    "2*(3*r**5*s + 3*r**5 + 12*r**4*s**2 + 34*r**4*s + 12*r**4 + 18*r**3*s**3 + 71*r**3*s**2 + 71*r**3*s + 18*r**3 + 12*r**2*s**4 + 71*r**2*s**3 + 126*r**2*s**2 + 71*r**2*s + 12*r**2 + 3*r*s**5 + 34*r*s**4 + 71*r*s**3 + 71*r*s**2 + 34*r*s + 3*r + 3*s**5 + 12*s**4 + 18*s**3 + 12*s**2 + 3*s)/(r*s*(r + 1)*(r + s)*(s + 1)*(r + s + 1))"
+  ],
+  "target": "-(r + s + 1)**2/(4*r*s)",
+  "defect": "-r*s/((r + 1)*(r + s)*(s + 1)*(r + s + 1))",
+  "seconds": 29.631892618002894,
+  "scope": "The leading two-star combination fails at the next inverse coefficient.",
+  "zero_sum_limit": "oo"
+}

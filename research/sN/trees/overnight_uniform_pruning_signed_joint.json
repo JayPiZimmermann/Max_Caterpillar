@@ -1,0 +1,114 @@
+{
+  "status": "MODULAR_JOINT_SIGNED_FAMILY_GATE",
+  "prime": 1000003,
+  "arity_stats": {
+    "5": {
+      "feature_rank": 11,
+      "constraint_rank": 4,
+      "valid_assignment_dimension": 7
+    },
+    "7": {
+      "feature_rank": 95,
+      "constraint_rank": 57,
+      "valid_assignment_dimension": 38
+    }
+  },
+  "joint_constraint_rank": 61,
+  "joint_candidate_count": 85,
+  "joint_candidates": [
+    {
+      "coefficients_mod": {
+        "all;d^1;parity^0;orientation^0;one": 500069,
+        "all;d^1;parity^0;orientation^0;k_sum": 249997,
+        "all;d^1;parity^0;orientation^1;one": 750006,
+        "all;d^1;parity^1;orientation^0;k_sum": 749991,
+        "all;d^1;parity^1;orientation^1;one": 249997,
+        "all;d^2;parity^0;orientation^1;one": 874997
+      },
+      "responses_mod": {
+        "5": 1,
+        "7": 178572
+      }
+    },
+    {
+      "coefficients_mod": {
+        "all;d^1;parity^0;orientation^0;one": 500069,
+        "all;d^1;parity^0;orientation^0;k_sum": 249997,
+        "all;d^1;parity^0;orientation^1;one": 60,
+        "all;d^1;parity^1;orientation^0;k_sum": 749991,
+        "all;d^1;parity^1;orientation^1;one": 499964,
+        "all;d^2;parity^1;orientation^1;one": 125006
+      },
+      "responses_mod": {
+        "5": 1,
+        "7": 178572
+      }
+    },
+    {
+      "coefficients_mod": {
+        "all;d^0;parity^0;orientation^0;k_prod": 370642,
+        "all;d^1;parity^0;orientation^0;one": 534177,
+        "all;d^1;parity^0;orientation^0;k_sum": 375318,
+        "all;d^1;parity^0;orientation^0;k_prod": 333777,
+        "all;d^1;parity^0;orientation^0;k_diff2": 926273,
+        "all;d^1;parity^0;orientation^1;one": 16852,
+        "all;d^1;parity^0;orientation^1;k_sum": 62458,
+        "all;d^1;parity^1;orientation^0;k_sum": 755976,
+        "all;d^1;parity^1;orientation^0;k_prod": 888744,
+        "all;d^1;parity^1;orientation^0;k_diff2": 296248,
+        "all;d^1;parity^1;orientation^1;one": 327747,
+        "all;d^1;parity^1;orientation^1;k_sum": 62503,
+        "all;d^2;parity^0;orientation^0;k_prod": 296248,
+        "all;d^2;parity^0;orientation^0;k_diff2": 296248,
+        "all;d^2;parity^0;orientation^1;k_sum": 875012,
+        "all;d^2;parity^1;orientation^1;k_sum": 687503,
+        "both;d^0;parity^0;orientation^0;one": 728896,
+        "both;d^0;parity^0;orientation^0;k_sum": 3525,
+        "both;d^0;parity^0;orientation^0;k_prod": 308190,
+        "both;d^0;parity^0;orientation^0;k_diff2": 943085,
+        "both;d^0;parity^0;orientation^1;one": 62218,
+        "both;d^0;parity^0;orientation^1;k_sum": 437896,
+        "both;d^0;parity^0;orientation^1;k_prod": 124676,
+        "both;d^0;parity^0;orientation^1;k_diff2": 937125,
+        "both;d^0;parity^1;orientation^0;one": 242742,
+        "both;d^0;parity^1;orientation^0;k_sum": 159881,
+        "both;d^0;parity^1;orientation^0;k_prod": 412656,
+        "both;d^0;parity^1;orientation^0;k_diff2": 56873,
+        "both;d^0;parity^1;orientation^1;one": 939330,
+        "both;d^0;parity^1;orientation^1;k_sum": 811459,
+        "both;d^0;parity^1;orientation^1;k_prod": 375588,
+        "both;d^0;parity^1;orientation^1;k_diff2": 312515,
+        "both;d^1;parity^0;orientation^0;one": 850450,
+        "both;d^1;parity^0;orientation^0;k_sum": 586856,
+        "both;d^1;parity^0;orientation^0;k_prod": 162460,
+        "both;d^1;parity^0;orientation^1;one": 376638,
+        "both;d^1;parity^0;orientation^1;k_sum": 373818,
+        "both;d^1;parity^0;orientation^1;k_prod": 250762,
+        "both;d^1;parity^0;orientation^1;k_diff2": 375423,
+        "both;d^1;parity^1;orientation^0;one": 493927,
+        "both;d^1;parity^1;orientation^0;k_sum": 587591,
+        "both;d^1;parity^1;orientation^0;k_prod": 161725,
+        "both;d^1;parity^1;orientation^1;one": 875057,
+        "both;d^2;parity^0;orientation^0;one": 330777,
+        "both;d^2;parity^0;orientation^1;one": 375108,
+        "one;d^0;parity^1;orientation^0;k_sum": 2610,
+        "one;d^0;parity^1;orientation^0;k_prod": 994783
+      },
+      "responses_mod": {
+        "5": 1,
+        "7": 689725
+      }
+    }
+  ],
+  "short_N7_formula": {
+    "5": {
+      "passes": false,
+      "response_mod": 98
+    },
+    "7": {
+      "passes": true,
+      "response_mod": 1
+    }
+  },
+  "seconds": 1.3382245459943078
+}

@@ -1,0 +1,13 @@
+{
+  "status": "INDEPENDENT_EXACT_N5_SIGNED_SCORE_PASS",
+  "all_labelled_tree_coverage": true,
+  "root_orientation_orbits": 26,
+  "active_evaluation_points": 12,
+  "identity": "L(F_U)=-15 Q(U), L(R_max)=1",
+  "scope": "Exact N5 functional only; the same Q fails the N7 finite modular gate. No uniform lower bound.",
+  "seconds": 0.29111260699573904,
+  "source_sha256": {
+    "overnight_uniform_pruning_signed_gate.json": "d2c7d34c98007efcac8b073979413f0b0b8022c9d278872f0c6db5a90a54a527",
+    "overnight_uniform_pruning_signed_family.json": "6b0705f6b629a750c038ba61b3ace6451490c63f96ab2a217ce2fa8674801524"
+  }
+}

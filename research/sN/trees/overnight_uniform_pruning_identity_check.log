@@ -1,0 +1,11 @@
+{
+  "status": "INDEPENDENT_EXACT_PAIR_INFINITY_OBSTRUCTION_PASS",
+  "curves": {
+    "0": "-12*(3*r**2*s + 3*r**2 + 3*r*s**2 + 4*r*s + 3*r + 3*s**2 + 3*s)/(r*s*(r + 1)*(r + s)*(s + 1))",
+    "1": "8*(3*r**2*s + 3*r**2 + 3*r*s**2 + 8*r*s + 3*r + 3*s**2 + 3*s)/(r*s*(r + 1)*(r + s)*(s + 1))"
+  },
+  "identity": "L(F_star0)/72 - L(F_star1)/48 = -1/(r*s)",
+  "seconds": 5.272063502998208,
+  "source_sha256": "66fc68779678a681d52062bacb097405d9bb5ba088103835e9941e01b84eead9",
+  "scope": "The entire leading pair-at-infinity map loses separation already at5 labels; not a counterexample to the full tree lower bound."
+}

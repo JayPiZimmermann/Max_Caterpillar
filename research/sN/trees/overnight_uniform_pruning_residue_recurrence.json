@@ -1,0 +1,1450 @@
+{
+  "status": "EXACT_ALL_APEX_CUT_RESIDUE_RECURRENCE_CONTROLS_PASS",
+  "cases": [
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-3307/221931600",
+      "pole_summands": 48,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-3307/1331589600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-263/106527168",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": false,
+          "value": "13/2663179200"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-263/106527168",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-3307/1331589600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "13/1331589600",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": false,
+          "value": "13/2663179200"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "1358905304881/290769002333409600",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "633942382561/290769002333409600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-3307/1331589600",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "24296948989/80769167314836000",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "148147285799/484615003889016000"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-13/2663179200",
+      "pole_summands": 12,
+      "pieces": [
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-163013776040981/15043834335011882400",
+      "pole_summands": 48,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "3307/665794800"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "633942382561/290769002333409600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": true,
+          "value": "-99465908279/5529562967728800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "12942689/85070199503520",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-13/1331589600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": true,
+          "value": "133579493/850701995035200"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-3307/221931600",
+      "pole_summands": 48,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-3307/1331589600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-263/106527168",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            3
+          ],
+          "exceptional_root_leaf": false,
+          "value": "13/2663179200"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-7451965795/11630760093336384",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "-91020539759/145384501166704800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "881/177545280",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "3307/665794800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-13/2663179200"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "1358905304881/290769002333409600",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "633942382561/290769002333409600"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-3307/1331589600",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            2,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "3307/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "13/443863200",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "13/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-3307/332897400",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-3307/665794800"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "13/1331589600",
+      "pole_summands": 12,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "13/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "24296948989/40384583657418000",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "-13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "148147285799/484615003889016000"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "148147285799/484615003889016000"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "7557057479/1057341826666944",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "3307/665794800"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "633942382561/290769002333409600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-13/1331589600",
+      "pole_summands": 12,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "-13/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "-3307/332897400",
+      "pole_summands": 24,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "-3307/665794800"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "-3307/665794800"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "13/1331589600",
+      "pole_summands": 12,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "13/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "0",
+      "pole_summands": 0,
+      "pieces": []
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "z": 47,
+      "eta": [
+        1,
+        3,
+        -4
+      ],
+      "value": "13/443863200",
+      "pole_summands": 36,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 3,
+          "value": "13/1331589600"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "13/1331589600"
+        }
+      ]
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "z": 407,
+      "eta": [
+        1,
+        3,
+        9,
+        27,
+        -40
+      ],
+      "value": "1879237081039866993117823484635549098310941089773469739113/105073498812471529323080311294380192667903943150315890052163840000",
+      "pole_summands": 480,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "101583950079822837926964385653319086321751921/134427388729788976270921251373789106542067671759482048000"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            5,
+            6
+          ],
+          "exceptional_root_leaf": false,
+          "value": "1803205528268975863675716737446777/100826618239493291312886223012019016960000"
+        }
+      ]
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ]
+        ]
+      },
+      "z": 407,
+      "eta": [
+        1,
+        3,
+        9,
+        27,
+        -40
+      ],
+      "value": "-12957280715058457250632356784965552718408265141237519/134292961341059187294650330122415317435525604087722565952000",
+      "pole_summands": 960,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "-101583950079822837926964385653319086321751921/134427388729788976270921251373789106542067671759482048000"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 6,
+          "value": "-101583950079822837926964385653319086321751921/134427388729788976270921251373789106542067671759482048000"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            1,
+            2
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-1678423792747528989367117/34791872960349154733277737088000"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            5,
+            6
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-1678423792747528989367117/34791872960349154733277737088000"
+        }
+      ]
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            5
+          ]
+        ]
+      },
+      "z": 407,
+      "eta": [
+        1,
+        3,
+        9,
+        27,
+        -40
+      ],
+      "value": "270471837178184025630053315738337378585987644923459478872239719515806025253789/44787717950219494359335027591887170152057050622659528468505117696451518054564607360000",
+      "pole_summands": 1200,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "4259072808311219961053655288187892181406136442417679/4841805687269539347326041631981136039432193401433024404864000"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 4,
+          "value": "18080095657121889965251791005559375229867366812340313254026994439279/135007883797220282842890883927521061393574575161299508466246651273139454720000"
+        },
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 6,
+          "value": "18080095657121889965251791005559375229867366812340313254026994439279/135007883797220282842890883927521061393574575161299508466246651273139454720000"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            3,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "39026530410068591556432310325917/15956908277902416538213297902771705292800"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            5,
+            6
+          ],
+          "exceptional_root_leaf": false,
+          "value": "39026530410068591556432310325917/15956908277902416538213297902771705292800"
+        }
+      ]
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "z": 407,
+      "eta": [
+        1,
+        3,
+        9,
+        27,
+        -40
+      ],
+      "value": "-670402638923763474283617148830203606136887341/9938902938625123643064479024621241182207358279360000",
+      "pole_summands": 720,
+      "pieces": [
+        {
+          "kind": "outlier-apex leaf",
+          "leaf": 1,
+          "value": "-4259072808311219961053655288187892181406136442417679/4841805687269539347326041631981136039432193401433024404864000"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            3,
+            4
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-7724493828972865313147636983/232061792645528862070962506376960000"
+        },
+        {
+          "kind": "finite-apex pendant pair",
+          "pair": [
+            5,
+            6
+          ],
+          "exceptional_root_leaf": false,
+          "value": "-7724493828972865313147636983/232061792645528862070962506376960000"
+        }
+      ]
+    }
+  ],
+  "seconds": 0.4648801940056728,
+  "scope": "Exact controls and general termwise derivation. Recurrence retains external-apex shifts and the exceptional root-leaf factor z\u00b2\u22124a\u00b2; it is not an all-tree separator."
+}

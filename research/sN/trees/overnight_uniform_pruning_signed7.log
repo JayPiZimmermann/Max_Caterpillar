@@ -1,0 +1,33 @@
+ROWS 16 SECONDS 0.0117633
+ROWS 32 SECONDS 0.023427
+ROWS 48 SECONDS 0.0345489
+ROWS 64 SECONDS 0.0492951
+ROWS 80 SECONDS 0.0607064
+ROWS 96 SECONDS 0.0719427
+ROWS 112 SECONDS 0.085652
+ROWS 128 SECONDS 0.097512
+ROWS 144 SECONDS 0.108685
+ROWS 160 SECONDS 0.122995
+ROWS 176 SECONDS 0.134173
+ROWS 192 SECONDS 0.146347
+ROWS 208 SECONDS 0.174398
+ROWS 224 SECONDS 0.20128
+ROWS 240 SECONDS 0.217607
+ROWS 256 SECONDS 0.229703
+ROWS 272 SECONDS 0.241664
+ROWS 288 SECONDS 0.253102
+ROWS 304 SECONDS 0.264389
+ROWS 320 SECONDS 0.27552
+DONE 320 ROWS 458 COLUMNS 6650 STATES 26524 TERMS SECONDS 0.275525
+rank [40, 40]
+rank [80, 80]
+rank [120, 120]
+rank [160, 160]
+rank [200, 175]
+rank [240, 175]
+rank [280, 175]
+rank [320, 175]
+basic {'features': 48, 'constraint_rank': 19, 'nullity': 29}
+kappa {'features': 192, 'constraint_rank': 57, 'nullity': 135, 'candidate_mod': {'all;d^1;parity^0;orientation^0;k_sum': 999898, 'all;d^1;parity^0;orientation^1;one': 499844, 'all;d^1;parity^1;orientation^0;k_sum': 999688, 'all;d^1;parity^1;orientation^1;one': 500054}, 'target_response_mod': 1}
+degree {'features': 288, 'constraint_rank': 57, 'nullity': 231, 'candidate_mod': {'all;d^0;parity^0;orientation^1;deg_prod': 666657, 'all;d^0;parity^1;orientation^1;deg_prod': 210, 'all;d^1;parity^0;orientation^0;k_sum': 999898, 'all;d^1;parity^1;orientation^0;k_sum': 999688}, 'target_response_mod': 1}
+DONE False 3.086218695003481

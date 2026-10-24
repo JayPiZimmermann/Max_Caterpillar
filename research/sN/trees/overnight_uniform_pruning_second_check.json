@@ -1,0 +1,1024 @@
+{
+  "status": "EXACT_ALL_APEX_SECOND_COEFFICIENT_CONTROLS_PASS",
+  "checked_units": 29,
+  "rows": [
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-473833/28080",
+      "outlier_apex": "-24056/1755",
+      "total": "-286243/9360",
+      "path_defect_assignments": {
+        "0": 24,
+        "1": 0,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-74587/7020",
+      "outlier_apex": "11687/270",
+      "total": "5095/156",
+      "path_defect_assignments": {
+        "0": 18,
+        "1": 6,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-74587/7020",
+      "outlier_apex": "11687/270",
+      "total": "5095/156",
+      "path_defect_assignments": {
+        "0": 18,
+        "1": 6,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "48191/720",
+      "outlier_apex": "-3757/45",
+      "total": "-11921/720",
+      "path_defect_assignments": {
+        "0": 12,
+        "1": 12,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-780193901/21621600",
+      "outlier_apex": "115408/1755",
+      "total": "213877553/7207200",
+      "path_defect_assignments": {
+        "0": 12,
+        "1": 12,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "34361567/864864",
+      "outlier_apex": "-165142/1755",
+      "total": "-78367351/1441440",
+      "path_defect_assignments": {
+        "0": 12,
+        "1": 6,
+        "2": 6
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "23184421/277200",
+      "outlier_apex": "-110729/1170",
+      "total": "-13215949/1201200",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 18,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-5245019/55440",
+      "outlier_apex": "11297/90",
+      "total": "190437/6160",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 12,
+        "2": 6
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-2749371811/205405200",
+      "outlier_apex": "18763/702",
+      "total": "304520221/22822800",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 18,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "236734537/15800400",
+      "outlier_apex": "-4069/135",
+      "total": "-26611247/1755600",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 12,
+        "2": 6
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-473833/28080",
+      "outlier_apex": "-24056/1755",
+      "total": "-286243/9360",
+      "path_defect_assignments": {
+        "0": 24,
+        "1": 0,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-74587/7020",
+      "outlier_apex": "11687/270",
+      "total": "5095/156",
+      "path_defect_assignments": {
+        "0": 18,
+        "1": 6,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "62348767/6320160",
+      "outlier_apex": "-172007/3510",
+      "total": "-71462353/1825824",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 6,
+        "2": 12
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-99982987/6320160",
+      "outlier_apex": "202013/3510",
+      "total": "380993497/9129120",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 6,
+        "2": 6
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-780193901/21621600",
+      "outlier_apex": "115408/1755",
+      "total": "213877553/7207200",
+      "path_defect_assignments": {
+        "0": 12,
+        "1": 12,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "34361567/864864",
+      "outlier_apex": "-165142/1755",
+      "total": "-78367351/1441440",
+      "path_defect_assignments": {
+        "0": 12,
+        "1": 6,
+        "2": 6
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-21203/720",
+      "outlier_apex": "-182/9",
+      "total": "-11921/240",
+      "path_defect_assignments": {
+        "0": 24,
+        "1": 0,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-40391/1080",
+      "outlier_apex": "27941/351",
+      "total": "197519/4680",
+      "path_defect_assignments": {
+        "0": 18,
+        "1": 6,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "280397/2160",
+      "outlier_apex": "-3952/27",
+      "total": "-11921/720",
+      "path_defect_assignments": {
+        "0": 12,
+        "1": 12,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-455264459/15800400",
+      "outlier_apex": "20023/351",
+      "total": "214778579/7607600",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 18,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "359457839/15800400",
+      "outlier_apex": "-27376/351",
+      "total": "-420277159/7607600",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 12,
+        "2": 6
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-9728303/632016",
+      "outlier_apex": "2821/27",
+      "total": "2085395/23408",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 6,
+        "2": 12
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-40391/1080",
+      "outlier_apex": "27941/351",
+      "total": "197519/4680",
+      "path_defect_assignments": {
+        "0": 18,
+        "1": 6,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "280397/2160",
+      "outlier_apex": "-3952/27",
+      "total": "-11921/720",
+      "path_defect_assignments": {
+        "0": 12,
+        "1": 12,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-1885/9",
+      "outlier_apex": "1885/9",
+      "total": "0",
+      "path_defect_assignments": {
+        "0": 6,
+        "1": 18,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex": "-21203/720",
+      "outlier_apex": "-182/9",
+      "total": "-11921/240",
+      "path_defect_assignments": {
+        "0": 24,
+        "1": 0,
+        "2": 0
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9,
+        27,
+        81
+      ],
+      "finite_apex": "-28893580508885642561705342595860024150389844530543840475179/13946229734703819560348701060070720223849804448756071936000",
+      "outlier_apex": "171123818501/23330456730",
+      "total": "8155441884757964021471087048748964514939908420167840578669/1549581081633757728927633451118968913761089383195119104000",
+      "path_defect_assignments": {
+        "0": 120,
+        "1": 120,
+        "2": 120
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            3
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9,
+        27,
+        81
+      ],
+      "finite_apex": "680016755357013955951318053802995574904899664712929/104118901907200991008844275302583079827324098432000",
+      "outlier_apex": "-277730741/13181049",
+      "total": "-4541448621944603427635196542771173285578459138725213/312356705721602973026532825907749239481972295296000",
+      "path_defect_assignments": {
+        "0": 480,
+        "1": 120,
+        "2": 120
+      },
+      "cylindrical_controls": 10
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 6,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9,
+        27,
+        81
+      ],
+      "finite_apex": "680016755357013955951318053802995574904899664712929/104118901907200991008844275302583079827324098432000",
+      "outlier_apex": "-277730741/13181049",
+      "total": "-4541448621944603427635196542771173285578459138725213/312356705721602973026532825907749239481972295296000",
+      "path_defect_assignments": {
+        "0": 480,
+        "1": 120,
+        "2": 120
+      },
+      "cylindrical_controls": 10
+    }
+  ],
+  "seconds": 1.555549663004058,
+  "scope": "Checks the general path/moment formula, not a uniform matching separator."
+}

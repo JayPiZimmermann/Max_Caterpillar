@@ -1,0 +1,25 @@
+{
+  "status": "EXACT_FULL_CUT_RESIDUE_CONTROLS_PASS",
+  "five_label_curves": [
+    "24*(r**2 + r + 1)/((-r + z)*(r + z)*(z - 1)*(z + 1)*(-r + z - 1)*(r + z + 1))",
+    "-16*(-r**2 - r + 3*z**2 - 1)/((-r + z)*(r + z)*(z - 1)*(z + 1)*(-r + z - 1)*(r + z + 1))"
+  ],
+  "five_label_assignment_counts": [
+    {
+      "0": 0,
+      "1": 36
+    },
+    {
+      "0": 0,
+      "1": 24
+    }
+  ],
+  "witness_residue": "z^2 / product_(eta in [1,r,-1-r]) (z^2-eta^2)",
+  "seven_label_star_value": "12367701071/153439520352168960",
+  "seven_label_assignment_counts": {
+    "0": 0,
+    "1": 1200
+  },
+  "seconds": 0.7409613249983522,
+  "scope": "Exact cut-residue identities and a uniform-star formula control; no uniform all-tree separator."
+}

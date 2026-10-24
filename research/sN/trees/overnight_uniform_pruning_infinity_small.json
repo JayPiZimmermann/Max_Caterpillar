@@ -1,0 +1,1269 @@
+{
+  "status": "EXACT_PAIR_INFINITY_RECURSION_CONTROLS_PASS",
+  "mode": "small",
+  "checked_units": 29,
+  "rows": [
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-133/540",
+      "infinite_apex_part": "-16/27",
+      "total": "-151/180",
+      "contamination_integer": 8,
+      "reachable_hook_counts": {
+        "1": 3,
+        "2": 3,
+        "3": 1,
+        "4": 1
+      },
+      "contraction_values": [
+        "-71/1080",
+        "-31/1080",
+        "-31/1080"
+      ],
+      "surviving_assignments": [
+        36,
+        48
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "49/270",
+      "infinite_apex_part": "14/27",
+      "total": "7/10",
+      "contamination_integer": -7,
+      "reachable_hook_counts": {
+        "1": 3,
+        "2": 3,
+        "3": 1
+      },
+      "contraction_values": [
+        "169/2160",
+        "89/2160",
+        "-31/1080"
+      ],
+      "surviving_assignments": [
+        36,
+        36
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "49/270",
+      "infinite_apex_part": "14/27",
+      "total": "7/10",
+      "contamination_integer": -7,
+      "reachable_hook_counts": {
+        "1": 3,
+        "2": 3,
+        "4": 1
+      },
+      "contraction_values": [
+        "169/2160",
+        "-31/1080",
+        "89/2160"
+      ],
+      "surviving_assignments": [
+        36,
+        36
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "1/60",
+      "infinite_apex_part": "-4/9",
+      "total": "-77/180",
+      "contamination_integer": 6,
+      "reachable_hook_counts": {
+        "1": 3,
+        "2": 3
+      },
+      "contraction_values": [
+        "-2/27",
+        "89/2160",
+        "89/2160"
+      ],
+      "surviving_assignments": [
+        36,
+        24
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-2143/37800",
+      "infinite_apex_part": "8/27",
+      "total": "3019/12600",
+      "contamination_integer": -4,
+      "reachable_hook_counts": {
+        "1": 3,
+        "3": 1
+      },
+      "contraction_values": [
+        "-71/1080",
+        "2713/59400",
+        "-51/6160"
+      ],
+      "surviving_assignments": [
+        36,
+        24
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "1327/83160",
+      "infinite_apex_part": "-8/27",
+      "total": "-7771/27720",
+      "contamination_integer": 4,
+      "reachable_hook_counts": {
+        "1": 3,
+        "3": 1
+      },
+      "contraction_values": [
+        "169/2160",
+        "-10309/166320",
+        "-51/6160"
+      ],
+      "surviving_assignments": [
+        36,
+        24
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "18787/69300",
+      "infinite_apex_part": "-2/9",
+      "total": "1129/23100",
+      "contamination_integer": 3,
+      "reachable_hook_counts": {
+        "1": 3
+      },
+      "contraction_values": [
+        "169/2160",
+        "2713/59400",
+        "43/3696"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-3449/13860",
+      "infinite_apex_part": "2/9",
+      "total": "-41/1540",
+      "contamination_integer": -3,
+      "reachable_hook_counts": {
+        "1": 3
+      },
+      "contraction_values": [
+        "-2/27",
+        "-10309/166320",
+        "43/3696"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-339643/3950100",
+      "infinite_apex_part": "2/27",
+      "total": "-5227/438900",
+      "contamination_integer": -1,
+      "reachable_hook_counts": {
+        "3": 1
+      },
+      "contraction_values": [
+        "-9971/877800",
+        "-31/1080",
+        "-857/292600"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "391141/3950100",
+      "infinite_apex_part": "-2/27",
+      "total": "10949/438900",
+      "contamination_integer": 1,
+      "reachable_hook_counts": {
+        "3": 1
+      },
+      "contraction_values": [
+        "263/23408",
+        "89/2160",
+        "-857/292600"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-133/540",
+      "infinite_apex_part": "-16/27",
+      "total": "-151/180",
+      "contamination_integer": 8,
+      "reachable_hook_counts": {
+        "1": 3,
+        "2": 3,
+        "3": 1,
+        "4": 1
+      },
+      "contraction_values": [
+        "-71/1080",
+        "-31/1080",
+        "-31/1080"
+      ],
+      "surviving_assignments": [
+        36,
+        48
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "49/270",
+      "infinite_apex_part": "14/27",
+      "total": "7/10",
+      "contamination_integer": -7,
+      "reachable_hook_counts": {
+        "1": 3,
+        "2": 3,
+        "3": 1
+      },
+      "contraction_values": [
+        "169/2160",
+        "89/2160",
+        "-31/1080"
+      ],
+      "surviving_assignments": [
+        36,
+        36
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "104611/1580040",
+      "infinite_apex_part": "-2/27",
+      "total": "-1381/175560",
+      "contamination_integer": 1,
+      "reachable_hook_counts": {
+        "3": 1
+      },
+      "contraction_values": [
+        "-9971/877800",
+        "2713/59400",
+        "-85/70224"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-164191/1580040",
+      "infinite_apex_part": "2/27",
+      "total": "-5239/175560",
+      "contamination_integer": -1,
+      "reachable_hook_counts": {
+        "3": 1
+      },
+      "contraction_values": [
+        "263/23408",
+        "-10309/166320",
+        "-85/70224"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-2143/37800",
+      "infinite_apex_part": "8/27",
+      "total": "3019/12600",
+      "contamination_integer": -4,
+      "reachable_hook_counts": {
+        "1": 3,
+        "3": 1
+      },
+      "contraction_values": [
+        "-71/1080",
+        "2713/59400",
+        "-51/6160"
+      ],
+      "surviving_assignments": [
+        36,
+        24
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "1327/83160",
+      "infinite_apex_part": "-8/27",
+      "total": "-7771/27720",
+      "contamination_integer": 4,
+      "reachable_hook_counts": {
+        "1": 3,
+        "3": 1
+      },
+      "contraction_values": [
+        "169/2160",
+        "-10309/166320",
+        "-51/6160"
+      ],
+      "surviving_assignments": [
+        36,
+        24
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-71/180",
+      "infinite_apex_part": "-8/9",
+      "total": "-77/60",
+      "contamination_integer": 12,
+      "reachable_hook_counts": {
+        "1": 2,
+        "2": 6,
+        "3": 2,
+        "4": 2
+      },
+      "contraction_values": [
+        "-71/1080",
+        "-71/1080",
+        "-71/1080"
+      ],
+      "surviving_assignments": [
+        36,
+        48
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "49/270",
+      "infinite_apex_part": "20/27",
+      "total": "83/90",
+      "contamination_integer": -10,
+      "reachable_hook_counts": {
+        "1": 2,
+        "2": 6,
+        "3": 2
+      },
+      "contraction_values": [
+        "169/2160",
+        "169/2160",
+        "-71/1080"
+      ],
+      "surviving_assignments": [
+        36,
+        36
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "89/540",
+      "infinite_apex_part": "-16/27",
+      "total": "-77/180",
+      "contamination_integer": 8,
+      "reachable_hook_counts": {
+        "1": 2,
+        "2": 6
+      },
+      "contraction_values": [
+        "-2/27",
+        "169/2160",
+        "169/2160"
+      ],
+      "surviving_assignments": [
+        36,
+        24
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-698843/3950100",
+      "infinite_apex_part": "4/27",
+      "total": "-4209/146300",
+      "contamination_integer": -2,
+      "reachable_hook_counts": {
+        "1": 2
+      },
+      "contraction_values": [
+        "-71/1080",
+        "-9971/877800",
+        "-9971/877800"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "88163/564300",
+      "infinite_apex_part": "-4/27",
+      "total": "169/20900",
+      "contamination_integer": 2,
+      "reachable_hook_counts": {
+        "1": 2
+      },
+      "contraction_values": [
+        "169/2160",
+        "263/23408",
+        "-9971/877800"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-16307/158004",
+      "infinite_apex_part": "4/27",
+      "total": "263/5852",
+      "contamination_integer": -2,
+      "reachable_hook_counts": {
+        "1": 2
+      },
+      "contraction_values": [
+        "-2/27",
+        "263/23408",
+        "263/23408"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "49/270",
+      "infinite_apex_part": "20/27",
+      "total": "83/90",
+      "contamination_integer": -10,
+      "reachable_hook_counts": {
+        "2": 6,
+        "3": 2,
+        "4": 2
+      },
+      "contraction_values": [
+        "-71/1080",
+        "169/2160",
+        "169/2160"
+      ],
+      "surviving_assignments": [
+        36,
+        36
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "89/540",
+      "infinite_apex_part": "-16/27",
+      "total": "-77/180",
+      "contamination_integer": 8,
+      "reachable_hook_counts": {
+        "2": 6,
+        "3": 2
+      },
+      "contraction_values": [
+        "169/2160",
+        "-2/27",
+        "169/2160"
+      ],
+      "surviving_assignments": [
+        36,
+        24
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-4/9",
+      "infinite_apex_part": "4/9",
+      "total": "0",
+      "contamination_integer": -6,
+      "reachable_hook_counts": {
+        "2": 6
+      },
+      "contraction_values": [
+        "-2/27",
+        "-2/27",
+        "-2/27"
+      ],
+      "surviving_assignments": [
+        36,
+        12
+      ]
+    },
+    {
+      "arity": 5,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9
+      ],
+      "finite_apex_part": "-71/180",
+      "infinite_apex_part": "-8/9",
+      "total": "-77/60",
+      "contamination_integer": 12,
+      "reachable_hook_counts": {
+        "1": 2,
+        "2": 6,
+        "3": 2,
+        "4": 2
+      },
+      "contraction_values": [
+        "-71/1080",
+        "-71/1080",
+        "-71/1080"
+      ],
+      "surviving_assignments": [
+        36,
+        48
+      ]
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9,
+        27,
+        81
+      ],
+      "finite_apex_part": "-648375185733138502669984561562484395445825264464489659/3486557433675954890087175265017680055962451112189017984000",
+      "infinite_apex_part": "2/19683",
+      "total": "-32678249778056954776987223013649795049508467295954851/387395270408439432231908362779742228440272345798779776000",
+      "contamination_integer": -3,
+      "reachable_hook_counts": {
+        "1": 3
+      },
+      "contraction_values": [
+        "-21446173451640332222038732133651413/196865760121545687200840433522314937600",
+        "4296127851447869767731265723/232896734388741643986858894648000",
+        "-26270585873073570464993/16617550416763078374871910400",
+        "157144081976749504818044504479/2332304084248548981406569035894592000",
+        "-4198481883133021838153189303750115679/4297036568544022624173205137401097184704000"
+      ],
+      "surviving_assignments": [
+        1200,
+        240
+      ]
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 3,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            3
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9,
+        27,
+        81
+      ],
+      "finite_apex_part": "-2591428345607322872080263032526630494055691843/5205945095360049550442213765129153991366204921600",
+      "infinite_apex_part": "-4/2187",
+      "total": "-12113047175712580394608317472634822522160319043/5205945095360049550442213765129153991366204921600",
+      "contamination_integer": 54,
+      "reachable_hook_counts": {
+        "3": 30,
+        "4": 15,
+        "5": 3,
+        "6": 6
+      },
+      "contraction_values": [
+        "-859080457672746183367/89219313104841669210552000",
+        "10538759550767509/56814182551942452000",
+        "-6415713952714744471372913707/25718657785259813446401595728000",
+        "-172914384164864908100738797065551/3137984873695120358222351497964736000",
+        "-32657759148587647165011738891850093/271703307068212431975049936378297368000"
+      ],
+      "surviving_assignments": [
+        1200,
+        960
+      ]
+    },
+    {
+      "arity": 7,
+      "unit": {
+        "root": 6,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "xi": [
+        1,
+        3,
+        9,
+        27,
+        81
+      ],
+      "finite_apex_part": "-2591428345607322872080263032526630494055691843/5205945095360049550442213765129153991366204921600",
+      "infinite_apex_part": "-4/2187",
+      "total": "-12113047175712580394608317472634822522160319043/5205945095360049550442213765129153991366204921600",
+      "contamination_integer": 54,
+      "reachable_hook_counts": {
+        "1": 3,
+        "2": 15,
+        "3": 30,
+        "6": 6
+      },
+      "contraction_values": [
+        "-172914384164864908100738797065551/3137984873695120358222351497964736000",
+        "-6415713952714744471372913707/25718657785259813446401595728000",
+        "10538759550767509/56814182551942452000",
+        "-859080457672746183367/89219313104841669210552000",
+        "-32657759148587647165011738891850093/271703307068212431975049936378297368000"
+      ],
+      "surviving_assignments": [
+        1200,
+        960
+      ]
+    }
+  ],
+  "seconds": 0.18835287899855757,
+  "scope": "Controls of the all-apex algebraic identity; not a separator or matching theorem."
+}
