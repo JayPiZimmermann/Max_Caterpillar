@@ -81,19 +81,19 @@ there are at most `Delta` such colors. The root case and its children use
 no more colors. These are all the previously colored vertices at distance
 at most two. Each color class therefore has disjoint closed neighborhoods.
 
-Set `a_v=-log(1-p_v)`. The function
+A forest has at most `N` edges, so
 
-`d -> log(1-(2/3)^d/3)`
+`product_v p_v = 3^(-N)*(2/3)^(2|E|) >= (4/27)^N`.
 
-is increasing and concave for `d>=0`: with `z=(2/3)^d/3`, its second
-derivative is `-(log(3/2))^2 z/(1-z)^2`. A forest has average degree at most
-two, so Jensen's inequality gives
+The arithmetic-geometric mean inequality first gives
+`(sum_v p_v)/N >= 4/27`, and then gives
 
-`sum_v a_v >= N log(27/23)`.
+`product_v (1-p_v) <= (1-(sum_v p_v)/N)^N <= (23/27)^N`.
 
-Among the `Delta+1` color classes, one consequently satisfies
+The `Delta+1` color classes partition this product. At least one class `C`
+therefore satisfies
 
-`sum_(v in C) a_v >= N log(27/23)/(Delta+1)`.
+`product_(v in C) (1-p_v) <= (23/27)^(N/(Delta+1))`.
 
 For that class the preceding probability estimate becomes
 
@@ -104,17 +104,18 @@ must be served by at least one comparison graph. The union bound now proves
 the stated width bound. Applying the same union bound to distinct graphs proves the
 stronger graph-count statement.
 
-The choice one third optimizes this Jensen bound: for selection probability
-`p`, the average-degree-two saving is `-log(1-p*(1-p)^2)`, and
+The choice one third optimizes this product bound: for selection probability
+`p`, the guaranteed average isolation probability is `p*(1-p)^2`, and
 `p*(1-p)^2` is largest at `p=1/3`.
 
 ## General bounded-degree graphs
 
 For an arbitrary graph of maximum degree `Delta`, its square has maximum
 degree at most `Delta^2`, hence a greedy coloring uses `Delta^2+1` colors.
-Also `a_v >= -log(1-(2/3)^Delta/3)` at every vertex. Choose the color class
-with greatest total `a_v` and repeat the same probability and coverage
-argument. This proves the graph version.
+Also `p_v >= (2/3)^Delta/3` at every vertex. A largest color class has at
+least `N/(Delta^2+1)` vertices. Bound its product of `1-p_v` factor by
+factor and repeat the same probability and coverage argument. This proves
+the graph version.
 
 ## Why this does not settle all trees
 
