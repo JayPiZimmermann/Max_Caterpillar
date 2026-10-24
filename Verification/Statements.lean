@@ -334,3 +334,7 @@ example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeE
 example : ∀ (r : ℕ) {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K₁ K₂ → ∀ {Δ : ℕ}, 3 ≤ Δ → (∀ F ∈ K₂, Trees.HubOK F.descr Δ) → ∀ {k : ℕ}, 3 ≤ k → (144 * (2 * Δ - 1) ^ 2 + 1) * k ≤ r + 1 + 1 → (2 : ℝ) ^ k ≤ 2 * (k + 1) ^ 2 * (K₁.card + K₂.card) :=
   @MaxCaterpillar.Trees.mixed_expansion_exponential
 #print axioms MaxCaterpillar.Trees.mixed_expansion_exponential
+
+example : ∀ (N : ℕ) [inst : NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
+  @MaxCaterpillar.caterpillar_net_v4
+#print axioms MaxCaterpillar.caterpillar_net_v4

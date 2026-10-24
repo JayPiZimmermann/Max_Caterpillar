@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-23T23:59:16.230530+00:00",
+  "checked_at_utc": "2026-10-24T07:52:47.325228+00:00",
   "source_commit": null,
-  "source_sha256": "e9d76d04b0a788e1ca051c2bfbf5f69bd066a93e9c3da1ed0a445c99719aa483",
+  "source_sha256": "c105afe8e8400f38282583ebae9a40bbe6d43041e86bae03a24028cc42ad8fbf",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -847,6 +847,16 @@
         "propext"
       ],
       "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_net_v4",
+      "type": "\u2200 (N : \u2115) [inst : NeZero N], \u2203 net : Network N (firstWidth N) (secondWidth N), (\u2200 x, net.eval x = Maximum N x) \u2227 net.HasRationalWeights \u2227 net.HasZeroBiases",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
     }
   ],
   "source_files": {
@@ -903,6 +913,7 @@
     "MaxCaterpillar/Rationality.lean": "45b11f39e655632e5977d318617f3b20bd93a9b762a23b2bbbacfce63a5ac2ac",
     "MaxCaterpillar/Sharing.lean": "02c80786642c189a2c95930a5fbb12651ed13ce36288ce02a076e3f68c5fe43e",
     "MaxCaterpillar/SharingRational.lean": "fdda6c8a7a3862f9471c95180304153573ae9b27324f286080a38a5bba4ebe25",
+    "MaxCaterpillar/Simplify/Rational.lean": "98cbe9304aa4e867127bf31ea3471e5789b10fb70d1d88858070fe19d7256e13",
     "MaxCaterpillar/SmallArity.lean": "ea9d57b776d54e3fc89479af3b5718b7fedd198940c461b17e0a4b707a2083e5",
     "MaxCaterpillar/SmallN/Common.lean": "804dab1de75a622f672b9ae391d5ca1a5b06d613c228923c241469cdc6498df0",
     "MaxCaterpillar/SmallN/Max4Test/Cells0.lean": "9ebabac2fade3840db1a77f37aaa9e7d2fe51d7a5ed5a8c71922f7c67443e0f4",
@@ -932,7 +943,7 @@
     "MaxCaterpillar/Trees/Quadratic.lean": "8b548b7596fd28523b3cd59ffc7dc6670c8289c7e7dfd91ac83695eb2b207ecf",
     "MaxCaterpillar/Trees/RootedStars.lean": "72bcae69b40327c273695eb9b9967639d192b80708cfccea1a42f7d49846943d",
     "MaxCaterpillar/Trees.lean": "568b82ed10147f32463c4232ffaba594327e6182e427570b064823ce577040c2",
-    "MaxCaterpillar.lean": "cd4575f8229c6e8127f1d247185fdb1b4eb5cb03195c0ab09285102cee57c99b",
+    "MaxCaterpillar.lean": "4c53e9b378bc216d445cdd9bfa0eb33e09c78bd5abae0698745d8f7b3819b852",
     "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
     "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
     "MaxNN/CPWL/Conditional/Finitary.lean": "23bb8dec03ed56bc703279a21f38a92366bd96410202af1627196fa6c2f187d2",
@@ -1116,7 +1127,7 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "6dc1366c37fb084d2b4be6bd1f579e0b33ec3305df2ee22e4a90e41b29b6d299",
+    "Verification/Statements.lean": "682201d4317b5085485d2f6825b7a68df27ce03af9d1cfe1883fc6b38f3030a9",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
@@ -1135,6 +1146,6 @@
     "research/sN/rank/Speed.lean": "deacc99537990bfceb917b0b6c6eb2ca632d93c736c1c32bca041c8144012629",
     "research/sN/rank/T1.lean": "eac75cdd10f4e70def1f0a1d31ff55b5b308146b42a428c922c80bb815a88647",
     "research/sN/restricted/Germ.lean": "8e8039ac2d52a5ccd8c947332db7bf908937739a1c73654fac19cf90bb8706dd",
-    "verification/main.json": "6f70495be27e47b6961f5e7731800feaf01566d7d3cbadb0281f3c04edbca611"
+    "verification/main.json": "e55cf34aea5beebe6107035920f277e19a421e73d0acbf87d3756d2def505633"
   }
 }
