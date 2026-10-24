@@ -1,0 +1,48 @@
+checked 5 160 cases 0.002
+checked 6 480 cases 0.012
+checked 7 1344 cases 0.071
+checked 8 3584 cases 0.389
+checked 9 9216 cases 2.029
+{
+  "status": "EXACT_VERTEX_DELETION_CONTROLS_PASS_NOT_A_LEAN_PROOF",
+  "domain": "m=5..9, apex 0 and centre 1 by label equivariance; all roots, orientations, deletions",
+  "deletion_cases": 14784,
+  "cases": {
+    "apex_zonotope_minus_zero": 1776,
+    "centre_difference_of_segments": 1776,
+    "nonroot_inward_negative_star": 4852,
+    "nonroot_outward_positive_star": 4852,
+    "root_inward_transfer_to_centre": 764,
+    "root_outward_negative_zonotope": 764
+  },
+  "per_arity": [
+    {
+      "m": 5,
+      "deletion_cases": 160
+    },
+    {
+      "m": 6,
+      "deletion_cases": 480
+    },
+    {
+      "m": 7,
+      "deletion_cases": 1344
+    },
+    {
+      "m": 8,
+      "deletion_cases": 3584
+    },
+    {
+      "m": 9,
+      "deletion_cases": 9216
+    }
+  ],
+  "finite_constant_instances": 496,
+  "budget_seconds": 90,
+  "elapsed_seconds": 2.031012111000109,
+  "producer_sha256": "ebb252bc10e0836b00f2f806f49bdd855d1a4a87cd38ceb12faf950f0585eac1",
+  "base_certificate_sha256": "e995c9a3f450d18d06be1fe382fd774d0762ea2685d687013124b21e8a7cc1b9",
+  "base_independent_checker_sha256": "991fc650cf7e942066e5e778d05eb861188e016be92b5091bdfb28d4f54e4606"
+}
+
+EXIT 0

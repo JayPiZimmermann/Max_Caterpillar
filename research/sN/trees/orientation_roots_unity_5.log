@@ -1,0 +1,72 @@
+{
+  "arity": 5,
+  "prime": 1000000021,
+  "zeta": 77565402,
+  "point": [
+    1,
+    77565402,
+    461077393,
+    590120294,
+    871236952
+  ],
+  "family_orbits": 4,
+  "tested": 1,
+  "zero": 0,
+  "witness": {
+    "unit": {
+      "root": 1,
+      "edges": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "cuts": [
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          1
+        ],
+        [
+          [
+            3
+          ],
+          1
+        ],
+        [
+          [
+            4
+          ],
+          1
+        ]
+      ]
+    },
+    "twins": [
+      [
+        2,
+        [
+          3,
+          4
+        ]
+      ]
+    ],
+    "value": 60
+  },
+  "target": 1,
+  "elapsed_seconds": 0.0023745210000925,
+  "status": "ONE_EVALUATION_SEPARATOR_REFUTED",
+  "scope": "Only the proposed single roots-of-unity evaluation; outward-twin separation by another functional remains open."
+}
+
+EXIT 0

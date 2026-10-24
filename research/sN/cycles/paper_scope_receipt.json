@@ -1,13 +1,14 @@
 {
   "status": "PAPER_BUILD_AND_LINK_CHECK_PASS",
-  "pages": 36,
+  "pages": 37,
   "source_links": 175,
   "global_Lean_verification": "Public theorem interface build passed; historical 122-statement certificate does not cover cleanup. Full build interrupted (143); manifest reconciliation pending.",
   "sha256": {
-    "paper/main.tex": "c4204746ae795fd0dc05b531f422a3755a22d2f9d996c23f7d666932f1cbf739",
-    "paper/main.pdf": "bfdf32962e8d30bde5e0fb3d39b170c4a5a0c7f0dd18f8a9ff45242c94f74488",
+    "paper/main.tex": "eb5ac9a4cd906bdf70d159a38f7e16e88cab1be01acd2d26078e3106d4e6e21d",
+    "paper/main.pdf": "9b9372481dab9ba0ab185d9065e4a8efcbf9822b70245844dc4952e77b2ccaaf",
     "paper/lean-map.json": "9df0d0fddb66f4c2d5f5d447e53dad3a188478bef835c4ff1a21e9e16f36a23d",
     "paper/lean-links.json": "c2c45300693b5e26a009ece003221f90694426418b3b57a2da26922129cd3d63"
   },
-  "linked_source_commit": "039d68443bca6a324955031992db10b6e896f2d4"
+  "linked_source_commit": "039d68443bca6a324955031992db10b6e896f2d4",
+  "mathematical_extensions": "Matching-number bound with arbitrary orientations/all face states, and arbitrary-star separator propagation; independently reviewed, not Lean-verified."
 }

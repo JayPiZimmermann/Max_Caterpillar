@@ -52,6 +52,15 @@ mathematical extension to arbitrary tree shapes with all edges oriented away
 from one source and an arbitrary marked head root. That bridge is not yet
 formalized in Lean.
 
+A further mathematical extension permits every orientation and every face
+state on trees with a matching of size at least `k`. Adding them to the
+caterpillar/rooted-star dictionary preserves the lower bound
+`(169/147)^k/(N+1)^2`. This is exponential when `k` is proportional to `N`;
+stars with every edge subdivided once are included. Arbitrarily oriented
+stars can also be added, with a larger polynomial denominator. Proofs,
+finite checks, and the remaining unrestricted question are in
+[the orientation ledger](research/sN/trees/ORIENTATIONS.md).
+
 An unrestricted all-tree exponential lower bound and an exponential upper
 construction remain open. Current research, with exact certificates separated
 from experiments, is recorded in

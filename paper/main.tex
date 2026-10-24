@@ -821,8 +821,41 @@ is given at the end of \Cref{app:count-exponential}.
 This includes every underlying tree shape.
 It does not include arbitrary face functions of those added trees:
 replacing edges by linear terms can create many out-leaves at one vertex.
-A uniform exponential bound allowing arbitrary orientations and all face
-states of arbitrary trees remains open.
+
+\paragraph{Arbitrary orientations and large matchings.}
+A different argument removes the orientation restriction completely when
+the original trees have sufficiently many disjoint edges. Let $N\geq3$ and
+let $k$ be an integer with $0\leq2k\leq N-1$.
+Adjoin to the caterpillar and rooted-star face dictionaries
+all tree face functions whose original $(N-1)$-vertex tree contains a
+matching of size at least $k$, meaning $k$ edges with pairwise disjoint
+endpoints. Use any head $x_r-x_a$, any edge orientations, and any of the
+three face states. Every expansion of $\maxn_N$ in this enlarged dictionary,
+with an auxiliary remainder, uses at least
+$(169/147)^k/(N+1)^2$ functions. The proof at the end of
+\Cref{app:count-exponential} is mathematical; this extension is not yet
+formalized in Lean.
+
+Thus every orientation and every face state is covered when
+$k\geq\varepsilon(N-1)$ for a fixed $\varepsilon>0$. This includes all trees
+with a perfect or near-perfect matching, and every star whose edges are
+subdivided once. More generally, a tree on $n\geq2$ vertices with $L$ leaves
+has a matching of size at least $(n-L+1)/2$, so a fixed positive fraction of
+nonleaf vertices suffices. The enlarged dictionary still spans the maximum
+because it contains the original caterpillar dictionary.
+
+\paragraph{Stars with arbitrary orientations.}
+All star face functions can also be adjoined, with arbitrary head roots,
+edge orientations, and face states. The caterpillar dictionary together
+with this entire star family still requires at least
+$(7/6)^N/(N+1)^4$ nonstar terms for $N\geq5$.
+If the matching class above is included as well, the corresponding bound
+is $(169/147)^k/(N+1)^4$ on the terms outside the added star family.
+This follows by propagating an exactly checked five-label separator through
+coordinate deletions; the argument is given in \Cref{app:count-exponential}.
+It is not yet a Lean result. Nonstar trees with sublinear matching number
+remain unresolved in general, so the unrestricted all-tree exponential
+bound is still open.
 
 \Needspace{6\baselineskip}
 \begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/Theorems.lean}{192}{caterpillarDim_ge}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
@@ -1778,6 +1811,115 @@ edges. Thus $R$ has maximum degree two. This gives the per-unit factor $6^m$
 for every $U_{a,s,r,T}$, and hence the stated $(7/6)^N/(N+1)$ bound for mixtures
 with the existing caterpillar and rooted-star face dictionaries.
 
+\paragraph{Arbitrary orientations and large matchings.}
+Write $n=N-1$. For a tree $G$ on $n$ vertices with a matching of size $k$,
+and $y>0$, the sum of $y^{|S|}$ over nonempty connected vertex sets $S$ is
+at most $n(1+y)^{n-2k}(1+y+y^2)^k$. Indeed, root $G$ at a chosen vertex
+$v$. A connected set containing $v$ contains every ancestor of each of its
+vertices. On each matching edge, the state with the parent absent and the
+child present is forbidden. The other three states have total weight
+$1+y+y^2$. Since the edges are disjoint, their weights multiply; every
+remaining vertex contributes $1+y$. Summing over the $n$ choices of $v$
+counts every nonempty connected set at least once.
+
+Choose the common integer $B$ in \Cref{eq:base-point} large enough for
+every unit in the enlarged finite expansion. At an $m$-element tie,
+$m\geq3$, fix one tied perturbation coordinate to zero and consider the
+local functions modulo $\LS_{m-2}$ on the remaining $m-1$ coordinates. The maximum
+has the nonzero simplex class, whereas the auxiliary functions vanish.
+If a tree unit's outer argument is nonzero at the base point, its local
+function is zero or a sum of linear functions and segment support
+functions, so its class vanishes. If the outer argument is zero, the digit
+argument already used above makes every frozen coordinate coefficient
+zero. The apex coefficient is $-1$, so the apex must be tied. If the
+retained hinges on the other $m-1$ tied labels are disconnected, there are
+at most $m-3$ such hinges; adjoining the head gives dimension at most
+$m-2$. Thus a nonzero class requires those labels to form a connected
+subset of the original tree. This condition is independent of edge
+orientation and remains necessary with omitted or linear edges.
+
+Let $K_0$ count the caterpillar and rooted-star face functions, and $K_1$
+the added functions with matching number at least $k$. At each permutation
+locality, at least one unit has a nonzero class. Such a unit satisfies the
+balance and activity conditions above: every nonapex tied label has a
+retained neighbour, and the isolated apex has coefficient $-1$.
+Consequently a function counted by $K_0$ contributes at most
+$6^m m!(N-m)!$ localities of size $m$. Divide the covering count by
+$m!(N-m)!$, multiply by $y^m$, and sum over $3\leq m\leq N$.
+Putting $\rho=(1+y+y^2)/(1+y)^2$, the connected-set estimate bounds the
+contribution of each function counted by $K_1$ by
+$ny(1+y)^n\rho^k$; the extra factor $y$ accounts for its fixed apex.
+We obtain
+$(1+y)^N-1-Ny-\binom N2y^2
+\leq |K_0|\sum_{m=3}^N(6y)^m+|K_1|ny(1+y)^n\rho^k$.
+
+Take $y=2/11$, so $\rho=147/169$, and put
+$E=(13/11)^N\rho^k$ and $Z=|K_0|+|K_1|$.
+Since $2k\leq N-1$ and $147\geq12^2$, we have
+$E=(13/11)^{N-2k}(147/121)^k\geq(12/11)^N\geq1$.
+Also $Z\geq1$, since the auxiliary functions alone cannot give the simplex
+class at a three-element tie. The preceding inequality therefore yields
+$(13/11)^N\leq
+\bigl(1+2N/11+4\binom N2/121+N-2+2n/13\bigr)EZ
+\leq(N+1)^2EZ$.
+Canceling $(13/11)^N$ proves $Z\geq(169/147)^k/(N+1)^2$.
+Finally, the leaf criterion follows from a minimum vertex cover $C$ of
+size equal to the maximum matching number $\nu$. The nonleaf vertices
+outside $C$ form an independent set $I$; their at least $2|I|$ incident
+edges lie in the forest on $I\cup C$, which has at most $|I|+\nu-1$
+edges. Hence $|I|\leq\nu-1$, and $n-L\leq2\nu-1$.
+
+\paragraph{Adding every oriented star.}
+Work in full coordinates. For a label $j$, let $\iota_j$ insert a zero at
+that coordinate and put
+$\mathcal T_j g=(\partial_{-e_j}g-\partial_{e_j}g)\circ\iota_j$.
+This linear operator sends $\LS_d$ into $\LS_{d-1}$ for $d\geq1$ and
+annihilates $\LS_0$: if coordinate $j$ is constant on a polytope, its two
+exposed faces coincide; otherwise both have smaller dimension. Projection
+under restriction cannot increase dimension. Moreover,
+$\mathcal T_j\maxn_m=\maxn_{m-1}$, since the simplex faces are its facet
+opposite $e_j$ and the vertex $e_j$.
+
+For a canonical star, deletion of a nonroot leaf gives the smaller star
+modulo $\LS_1$, with sign $+$ for $\relu(x_l-x_c)$ and sign $-$ for
+$\relu(x_c-x_l)$. If the deleted leaf is the head root, the latter
+orientation transfers the head to the centre with sign $+$; the former
+gives zero modulo $\LS_1$. Deleting the apex leaves a zonotope, and deleting
+the centre fixes every segment, so these cases also give zero modulo
+$\LS_1$. Thus successive deletions preserve the span of canonical stars
+modulo the lower-dimensional terms.
+
+At five labels, a
+\href{\leanbase/research/sN/trees/all_tree_dfs/complete_flags_5.json}{six-flag certificate}
+gives a linear functional that annihilates every canonical oriented star
+and $\LS_3$, and takes value $120$ on the simplex. The
+\href{\leanbase/research/sN/trees/dfs_review_flag_certificate.py}{independent vertex checker}
+checks all $640$ labelled stars, with every head root and orientation,
+by successive maxima and minima over explicit vertex sets. Composing
+this functional with $m-5$ coordinate deletions therefore gives such a
+separator at every $m\geq5$. A nonhinge state already has dimension at
+most $m-2$, so all star face states are covered too.
+
+Assign every term whose function belongs to the star family to the added
+star class, even if it was originally listed in another class. Here
+$K_0,K_1$ count only the remaining terms, and $Z=|K_0|+|K_1|$.
+At any tie of size at least five, a surviving top-dimensional star germ is again a canonical
+star: each untied component has a unique attachment to the tied subtree,
+and summing its zero frozen coefficients transports the head to that
+attachment if it contains the original root. Apply the separator to
+the local expansion. Every added star term vanishes, so a term from the
+other classes must cover the locality. The preceding weighted count now
+starts at $m=5$. With caterpillars alone, $y=1/6$ gives
+$(7/6)^N-\sum_{j=0}^4\binom Nj6^{-j}\leq(N-4)|K_0|$.
+There is at least one nonstar term, and
+$\sum_{j=0}^4\binom Nj6^{-j}+N-4\leq(N+1)^4$ for $N\geq5$,
+which proves the first assertion. For the matching class, the same
+choice $y=2/11$ and the same $E$ as above give
+$(13/11)^N\leq
+\bigl(\sum_{j=0}^4\binom Nj(2/11)^j+N-4+2n/13\bigr)EZ
+\leq(N+1)^4EZ$.
+This proves the stated bound without counting the added star terms.
+
 \subsection{Proof of the dimension bound}\label{app:quotient-lower}
 
 \begin{Proof}{Theorem}{thm:quotient-lower}
@@ -2293,9 +2435,9 @@ are available in the linked
 \href{\leanbase/verification/certificate.json}{verification record}.
 The subsequent consolidation of the Lean modules is not covered by that
 certificate: the current sources require an updated exact-statement manifest
-and a fresh verification run. In particular, the arbitrary-tree-shape
-source-orientation extension is a mathematical argument in this paper,
-not a claim checked by the historical certificate.
+and a fresh verification run. In particular, the source-orientation,
+matching-number, and arbitrary-star extensions are mathematical arguments
+in this paper, not claims checked by the historical certificate.
 The mathematical arguments are provided in the main text and
 \Crefrange{app:dictionary}{app:lower}; the formalization is an
 additional certificate of the formal statements.

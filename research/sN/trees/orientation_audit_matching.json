@@ -1,0 +1,58 @@
+{
+  "status": "EXACT_FINITE_CONTROLS_PASS_NOT_A_LEAN_PROOF",
+  "domain": "all nonisomorphic trees, 2 <= n <= 11; all nonempty vertex subsets",
+  "trees": 435,
+  "vertex_subsets": 621273,
+  "rooted_controls": 399393,
+  "finite_constant_instances": 62748,
+  "weighted_parameters": [
+    "1/6",
+    "2/11"
+  ],
+  "leaf_count_bound": "2*nu >= n-L+1",
+  "per_arity": [
+    {
+      "n": 2,
+      "trees": 1
+    },
+    {
+      "n": 3,
+      "trees": 1
+    },
+    {
+      "n": 4,
+      "trees": 2
+    },
+    {
+      "n": 5,
+      "trees": 3
+    },
+    {
+      "n": 6,
+      "trees": 6
+    },
+    {
+      "n": 7,
+      "trees": 11
+    },
+    {
+      "n": 8,
+      "trees": 23
+    },
+    {
+      "n": 9,
+      "trees": 47
+    },
+    {
+      "n": 10,
+      "trees": 106
+    },
+    {
+      "n": 11,
+      "trees": 235
+    }
+  ],
+  "budget_seconds": 90,
+  "elapsed_seconds": 0.9770589820000168,
+  "producer_sha256": "5109725e0dcbe09a0b93fe33d3dc06c7a1c36406e212fa94cd494a13e3b8f892"
+}

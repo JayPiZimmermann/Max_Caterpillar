@@ -111,3 +111,15 @@ The out-leaf paragraph now states the sharper bound
 `(1+1/(2s+4))^N/(N+1)` supplied by `Count.outLeaf_unified_exponential`.
 The final link inventory has175 entries. These moved modules are still part
 of the concurrent cleanup; its fresh global Lean gate remains separate.
+
+## Published checkpoint and arbitrary-orientation continuation
+
+The checkpoint and prior local commits were pushed through `9147823`.
+Paper Lean links are pinned to source snapshot `039d684`. The subsequent
+[orientation continuation](../trees/ORIENTATIONS.md) proves a matching-based
+exponential bound with all orientations and all face states, and propagates
+the five-label separator to allow all oriented stars. The unrestricted
+all-tree theorem and exponential upper construction remain open. The paper
+now includes these mathematical extensions; they are not Lean declarations.
+The public theorem interface builds, but the complete historical manifest
+still needs reconciliation after the cleanup.

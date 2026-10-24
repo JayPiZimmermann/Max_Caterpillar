@@ -10,6 +10,32 @@ unrestricted cubic bound and reduces an exponential bound to uniform canonical
 twin separation. None of these new finite certificates is part of the Lean
 verification receipt.
 
+## Latest arbitrary-orientation extension
+
+See [the orientation ledger](../ORIENTATIONS.md). All orientations and all
+face states are now covered for added trees with matching number at least
+`k`: the mixed spanning dictionary needs `(169/147)^k/(N+1)^2` units.
+This is exponential for `k=Omega(N)`, and includes every tree class with a
+positive fraction of nonleaf vertices. An independent coordinate-deletion
+argument propagates the exact five-label star separator to every arity.
+Thus all arbitrarily oriented star faces can also be added: caterpillars
+plus these stars require `(7/6)^N/(N+1)^4` nonstar terms; with the matching
+class added, the bound is `(169/147)^k/(N+1)^4`.
+These are mathematical proofs with exact finite controls, not Lean results.
+
+The unrestricted gap now includes nonstar trees with sublinear matching
+number. A new matching-deficiency separator would imply exponential base
+`2/phi` for all trees. The seven-label test on all 258 rooted oriented
+tree orbits with matching number at most 2 gives modular ranks 112/113;
+this is diagnostic only. The uniform separator remains open. The upper
+construction problem is unchanged.
+
+The checkpoint and all preceding local commits were pushed to `origin/main`
+through `9147823`; its Lean links point to source snapshot `039d684`.
+The current paper additionally contains these new orientation results.
+The public theorem interface build passes, but the old global certificate
+is historical and manifest reconciliation is still pending.
+
 ## Upper target and what would suffice
 
 Keep the ordinary two hidden layers, zero biases, first hidden layer consisting
@@ -229,7 +255,7 @@ verified, not yet integrated in the stable root at this review.
 A new mathematical corollary covers **every underlying tree shape**: retain
 all edges, orient them away from an arbitrary source s, and use the canonical
 head x_r-x_a with arbitrary root r. Kappa(v)=deg(v)-1+[v=s]+[v=r]. Only s,r can
-be out-leaves. Rooting the heir cover at r makes its degree at most2 even in
+be out-leaves. Rooting the heir cover at r makes its degree at most 2 even in
 the exceptional case of two such leaves at one hub. Therefore adding all
 these full-hinge units to the known caterpillar/rooted-star face dictionary
 preserves the base7/6 lower bound. This is nonvacuous because that known
