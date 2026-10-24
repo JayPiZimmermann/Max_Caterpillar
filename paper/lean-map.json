@@ -1134,5 +1134,31 @@
   "out-leaf-count": {
     "file": "MaxCaterpillar/Count/Main.lean",
     "name": "outLeaf_unified_exponential"
+  },
+  "fixed_five_network": {
+    "kind": "certificate",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/netB_10_6.json",
+    "equations": [
+      "eq:fixed-five-features",
+      "eq:fixed-five-identity",
+      "eq:fixed-five-scalar"
+    ]
+  },
+  "fixed_five_translation": {
+    "kind": "certificate",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie.md#reduction-to-four-free-neurons",
+    "equations": [
+      "eq:fixed-five-free",
+      "eq:fixed-five-translation"
+    ]
+  },
+  "fixed_five_differences": {
+    "kind": "certificate",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie_verify.py",
+    "equations": [
+      "eq:fixed-five-difference",
+      "eq:fixed-five-locality",
+      "eq:fixed-five-rays"
+    ]
   }
 }

@@ -139,10 +139,14 @@ def main():
     for key, entry in mapping.items():
         if 'source_url' in entry:
             if not entry['source_url'].startswith('https://') or entry.get('steps'):
-                raise SystemExit('Literature equations need an HTTPS source and cannot label proof steps.')
+                raise SystemExit('Source equations need an HTTPS source and cannot label proof steps.')
+            kind = entry.get('kind', 'literature')
+            if kind not in ('literature', 'certificate'):
+                raise SystemExit('Unknown non-Lean equation source kind: ' + kind)
+            tex_source = entry['source_url'].replace('%', r'\%').replace('_', r'\_').replace('#', r'\#')
             for label in entry.get('equations', []):
-                lines.append(r'\DeclareSourceEquation{' + label + '}{' + entry['source_url'] + '}')
-            records.append(dict(entry, key=key, url=entry['source_url'], kind='literature'))
+                lines.append(r'\DeclareSourceEquation{' + label + '}{' + tex_source + '}')
+            records.append(dict(entry, key=key, url=entry['source_url'], kind=kind))
             continue
         path = ROOT / entry['file']
         if commit:
@@ -191,7 +195,7 @@ def main():
     (ROOT / 'paper/lean-links.json').write_text(json.dumps(records, indent=2) + '\n')
     config_path.write_text(json.dumps({'base_url': base_url}, indent=2) + '\n')
     lean_count = sum('file' in entry for entry in records)
-    print('Resolved {} Lean references and {} literature references (base {}).'.format(
+    print('Resolved {} Lean references and {} other source references (base {}).'.format(
         lean_count, len(records) - lean_count, base_url))
 
 

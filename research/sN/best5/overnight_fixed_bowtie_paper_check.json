@@ -1,0 +1,19 @@
+{
+  "status": "MATCHED_FIXED10_PAPER_AND_PDF_CHECK_PASS",
+  "local_date": "2026-10-25",
+  "scope": "Fixed ten input weight rows; minimum second hidden layer width six; arbitrary biases covered by recession; no unrestricted N5 optimality or Lean lower-bound claim",
+  "certificate_commit": "76a60f09f65d081d9949f62c6ae3e4dc451d7694",
+  "pdf_pages": 40,
+  "latex_warnings": 0,
+  "lean_reference_records": 175,
+  "certificate_reference_records": 3,
+  "independent_prose_review": "width5_fixed reviewed model reduction and upper identity; its generic/top-tie wording corrections applied",
+  "hashes": {
+    "paper/main.tex": "d05876671b6f628e6cfb814b9009dc6b544f0de5113d4a326c71fb59ddb14e92",
+    "paper/main.pdf": "54171f0385557d64a47ea1128fb4fec6c479fce5bf5988d4f7411b3ee5013484",
+    "paper/lean-map.json": "0cf4f7cff5c997cc6ac18e8532b35ee09711a2cb14cf7e479c5718f9ee30dcc7",
+    "paper/lean-links.tex": "342e2e0a5a8060e66564e2d21ce1612751ebc30a3df79279157e4685fcb19af1",
+    "paper/lean-links.json": "e78e63eab1a4661156322cde6383930efd75b215512bbdce52dd49d53d10696d",
+    "scripts/paper_links.py": "a289d86dc424c8c89f3f8ad272ffe836642d0c34108e7c67a1f2149b54a14d97"
+  }
+}

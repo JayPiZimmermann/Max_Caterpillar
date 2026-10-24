@@ -220,6 +220,14 @@
 \DeclareLeanEquation{eq:forest-count}{MaxCaterpillar/Count/Main.lean}{26}
 \DeclareLeanEquation{stp:count-assembly}{MaxCaterpillar/Count/Main.lean}{26}
 \DeclareLeanEquation{eq:block-weight}{MaxCaterpillar/Count/BlockSum.lean}{95}
+\DeclareSourceEquation{eq:fixed-five-features}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/netB\_10\_6.json}
+\DeclareSourceEquation{eq:fixed-five-identity}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/netB\_10\_6.json}
+\DeclareSourceEquation{eq:fixed-five-scalar}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/netB\_10\_6.json}
+\DeclareSourceEquation{eq:fixed-five-free}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie.md\#reduction-to-four-free-neurons}
+\DeclareSourceEquation{eq:fixed-five-translation}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie.md\#reduction-to-four-free-neurons}
+\DeclareSourceEquation{eq:fixed-five-difference}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie\_verify.py}
+\DeclareSourceEquation{eq:fixed-five-locality}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie\_verify.py}
+\DeclareSourceEquation{eq:fixed-five-rays}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight\_fixed\_bowtie\_verify.py}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -236,6 +244,8 @@
 }
 \makeatother
 % END GENERATED EQUATION LINKS
+
+\newcommand{\fixedfivebase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem*{representationtheorem}{Theorem}
@@ -1297,6 +1307,47 @@ are known: nesting $\max(s,t)=t+\relu(s-t)$ gives widths $(5,3)$ for
 $\maxn_3$ and $(6,3)$ for $\maxn_4$. The identities illustrate how sparse the expansion in the
 vocabulary can be.
 
+\subsection{A matching bound with a fixed first hidden layer}\label{sec:fixed-five}
+
+For five inputs, an explicit first hidden layer admits a matching construction
+and lower bound for the second hidden layer. Define
+\begin{align}\label{eq:fixed-five-features}
+\begin{split}
+\Phi_{10}(x)=\bigl(&\relu(x_0-x_1),\relu(x_0-x_2),
+ \relu(x_1-x_2),\relu(x_2-x_1),\\
+ &\relu(x_3-x_1),\relu(x_1-x_4),\relu(x_4-x_1),
+ \relu(x_3-x_4),\relu(x_1),\relu(-x_1)\bigr).
+\end{split}
+\end{align}
+
+\begin{theorem}[Five inputs with a prescribed first hidden layer]\label{thm:fixed-five}
+Among two-hidden-layer networks whose first hidden layer has the ten input
+weight rows in \Cref{eq:fixed-five-features}, the minimum second hidden layer
+width for computing $\maxn_5$ is exactly six. The lower bound allows arbitrary
+real weights in the remaining layers and arbitrary biases in every layer.
+The bound is attained with rational weights and zero biases.
+\end{theorem}
+
+Here is the attaining identity. Put $a=\relu(x_0-x_1)$,
+$b=\relu(x_2-x_1)$, $c=\relu(x_3-x_1)$, and $d=\relu(x_4-x_1)$,
+and set $\eta=x_4-x_2+\relu(x_3-x_4)-\relu(x_0-x_2)$. Then
+\begin{align}\label{eq:fixed-five-identity}
+\begin{split}
+\maxn_5(x)={}&x_1+a+\relu(\eta)
+ -\relu\!\left(\eta+\frac{a+b-c-d}{2}\right)\\
+ &+\frac12\relu(b-a+d-c)+\frac12\relu(b-a+c-d).
+\end{split}
+\end{align}
+Every displayed preactivation is a linear combination of the features in
+\Cref{eq:fixed-five-features}. Writing
+$x_1+a=\relu(x_1+a)-\relu(-x_1-a)$ uses two more neurons, giving widths
+$(10,6)$ without skip connections.
+\Cref{app:fixed-five} proves the identity directly and gives the reduction
+and exact finite certificate for optimality. This optimality concerns the
+prescribed first hidden layer; the unrestricted five-input width frontier
+is not determined. The finite lower-bound certificate is independently
+checked with rational arithmetic and is not a Lean theorem.
+
 
 \section{CPWL functions}\label{sec:sharing}
 
@@ -2134,6 +2185,134 @@ so the value is at most $1+(N-3)$. If $m=0$, the head contributes $0$,
 because $q\geq\min S>0$, so the value is at most $N-2$. Thus
 $U_k(e_c)\leq N-2<S_{a,c}(e_c)$.
 \end{Proof}
+
+\section{Optimal second width for the prescribed five-input layer}\label{app:fixed-five}
+
+\begin{Proof}{fixed-five}{thm:fixed-five}
+Let $u=x_0-x_1$, $v=x_2-x_1$, $w=x_3-x_1$, and $z=x_4-x_1$.
+Write $A=\max\{u,v\}$, $B=\max\{w,z\}$,
+$S=a+b$, $T=c+d$, $D=|a-b|$, and $E=|c-d|$.
+Thus $\eta=B-A$. The elementary identity
+$\relu(p+q)+\relu(p-q)=p+\max\{|p|,|q|\}$
+shows that the right side of \Cref{eq:fixed-five-identity}, minus $x_1$, is
+\begin{align}\label{eq:fixed-five-scalar}
+\frac{S+\max\{D,E\}}2+\relu(B-A)
+ -\relu\!\left(B-A+\frac{S-T}2\right).
+\end{align}
+If $A,B\geq0$, then $2A=S+D$ and $2B=T+E$, so
+\Cref{eq:fixed-five-scalar} reduces to $A+\relu(B-A)=\max\{A,B\}$.
+If $A\leq0\leq B$, then $S=D=0$ and
+$B-A\geq B\geq T/2$; the difference of the two ReLUs is $T/2$, giving $B$.
+If $B\leq0\leq A$, both ReLUs vanish and the expression is $A$.
+If $A,B\leq0$, then $S=T=D=E=0$ and the expression is zero.
+This proves \Cref{eq:fixed-five-identity} on all real inputs and establishes
+the upper bound.
+
+For the lower bound, let $W$ be the span of the first eight functions in
+\Cref{eq:fixed-five-features}, and put $f=\maxn_5-x_1$.
+Let $k_W$ be the least $K$ for which
+\begin{align}\label{eq:fixed-five-free}
+f=R+\sum_{j=1}^{K}d_j\relu(g_j),\qquad R,g_j\in W.
+\end{align}
+The minimum second hidden layer width for the prescribed first hidden layer
+is $k_W+2$. To see this, every second-layer preactivation has the form
+$v_j+\alpha_j\relu(x_1)+\beta_j\relu(-x_1)$ with $v_j\in W$.
+Translate every input coordinate by the same scalar. At positive infinity,
+the nonlinear terms that remain have $\alpha_j=0$, so there must be at least
+$k_W$ such neurons, as well as a passing neuron accounting for the linear
+growth. The negative end gives the same conclusion for $\beta_j$.
+
+If there were only $k_W+1$ neurons, each end would have a unique passing
+neuron. Call them $n,m$; their output coefficients have signs $d_n>0>d_m$,
+so they are distinct. All other neurons have both slopes zero, and
+$\beta_n=\alpha_m=0$. The two translation identities are therefore
+\begin{align}\label{eq:fixed-five-translation}
+f=d_n v_n+d_m\relu(v_m)+C
+  =d_n\relu(v_n)+d_m v_m+C,
+\end{align}
+where $C$ consists of the $k_W-1$ common nonlinear terms. Subtracting gives
+$d_n\relu(-v_n)=d_m\relu(-v_m)$, so both sides vanish. Absorbing the two
+passing terms into $W$ contradicts the minimality of $k_W$.
+Conversely, any representation in \Cref{eq:fixed-five-free} is compiled
+with $K+2$ neurons by representing $x_1+R$ as a difference of two ReLUs.
+No assumption that $W$ contains all linear functions is used.
+
+It remains to establish $k_W\geq4$. The following exact finite certificate
+excludes $K\leq3$; its domain includes all real coefficients.
+Absorb each nonzero output magnitude into its preactivation, so
+$d_j\in\{-1,1\}$. For a coordinate subset $U$, write
+\begin{align}\label{eq:fixed-five-difference}
+Q_U(g)=\sum_{\varnothing\ne S\subsetneq U}
+ (-1)^{|U|-|S|}\,|g(\mathbf1_S)|.
+\end{align}
+On Boolean indicator vectors, every $g\in W$ has degree at most two and
+vanishes on the empty and full vectors. At a generic point of a top triple
+tie $U$ with next label $o$,
+only terms satisfying
+$g_j(\mathbf1_U)=g_j(\mathbf1_{U\cup\{o\}})=0$ contribute to its third
+mixed difference. At a top four-label tie $U$, the condition is
+$g_j(\mathbf1_U)=0$; at the full tie every term contributes.
+For each of these localities, taking the mixed difference in
+\Cref{eq:fixed-five-free} and using $2\relu(g)=g+|g|$ gives
+\begin{align}\label{eq:fixed-five-locality}
+\sum_{j\text{ satisfying the stated vanishing conditions}}
+d_j Q_U(g_j)=2(-1)^{|U|+1}.
+\end{align}
+There are twenty triple equations, five four-label equations, and one
+full-tie equation. The remainder is annihilated by these differences.
+
+There are twenty-two further equations that retain the restriction $R\in W$.
+Evaluate the eight first hidden layer functions spanning $W$ on all thirty nontrivial
+Boolean rays. The resulting $30\times8$ matrix has rank eight. For every
+vector $\lambda$ in its left kernel, \Cref{eq:fixed-five-free} implies
+\begin{align}\label{eq:fixed-five-rays}
+\sum_{\varnothing\ne S\subsetneq[5]}\lambda_S
+ \sum_j d_j|g_j(\mathbf1_S)|
+=2\sum_{\varnothing\ne S\subsetneq[5]}\lambda_S
+ \bigl(1-\mathbf1_{1\in S}\bigr).
+\end{align}
+Here $[5]=\{0,1,2,3,4\}$.
+
+The fifteen linear forms $g\mapsto g(\mathbf1_U)$ with $|U|=3,4$
+have 623 exact vanishing flats in $W$, including the zero flat.
+Every nonzero real preactivation lies in one of the other 622 strata.
+The checker regenerates these flats by intersections of kernels and checks
+which equations in \Cref{eq:fixed-five-locality} can receive a nonzero
+contribution. There are 30,041 unordered covering triples of flats and
+eight output-sign choices for each, giving 240,328 cases. The parameter
+space in each case is the entire corresponding linear flat: no coefficient
+grid or magnitude bound is imposed. Cases with extra vanishing forms are
+also included under their own exact strata. Repeated flats are included.
+A representation with one or two nonzero nonlinear terms can be padded to
+three by splitting a term into two equal positive multiples. With no
+nonlinear terms, the full-tie equation would give $0=2$. Thus these cases
+cover every $K\leq3$.
+
+For 240,144 cases the certificate gives a rational separation using
+\Crefrange{eq:fixed-five-locality}{eq:fixed-five-rays}, nonnegativity of
+absolute values, and triangle inequalities from explicitly verified linear
+dependencies among their arguments. The other 184 cases have finite trees
+that branch on both closed signs of an argument and end in rational linear
+contradictions. The independent checker rebuilds the unreduced equations,
+checks every dependency and rational contradiction, and verifies that all
+cases and all branches are covered. The known four-term identity satisfies
+the same equations as a positive control.
+Thus $k_W\geq4$, while \Cref{eq:fixed-five-identity} gives $k_W\leq4$.
+The required width is $k_W+2=6$.
+
+Finally, biases cannot lower this bound. For any exact biased network,
+the recession limit $\lim_{t\to\infty}F(tx)/t$ removes all biases and
+preserves its input weight rows and both widths; the target is unchanged
+by positive homogeneity.
+\end{Proof}
+
+The \href{\fixedfivebase/overnight_fixed_bowtie.md}{certificate description},
+\href{\fixedfivebase/overnight_fixed_bowtie_coverage.py}{domain checker},
+\href{\fixedfivebase/overnight_fixed_bowtie_verify.py}{rational certificate checker},
+and \href{\fixedfivebase/overnight_fixed_bowtie_check.json}{verification receipt}
+are pinned to the same repository snapshot. The compressed certificate is
+3.4 MiB. These checks use exact rational arithmetic; they are separate from
+the Lean verification discussed in \Cref{app:lean}.
 
 \section{Lean definitions and main theorem}\label{app:lean}
 

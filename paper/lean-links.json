@@ -1834,5 +1834,37 @@
     "line": 228,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Main.lean#L228",
     "sha256": "a637871e6ec9ddd4ff18d71f28bd65eb14d951b1877e3af1876779cdaa3c06e1"
+  },
+  {
+    "kind": "certificate",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/netB_10_6.json",
+    "equations": [
+      "eq:fixed-five-features",
+      "eq:fixed-five-identity",
+      "eq:fixed-five-scalar"
+    ],
+    "key": "fixed_five_network",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/netB_10_6.json"
+  },
+  {
+    "kind": "certificate",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie.md#reduction-to-four-free-neurons",
+    "equations": [
+      "eq:fixed-five-free",
+      "eq:fixed-five-translation"
+    ],
+    "key": "fixed_five_translation",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie.md#reduction-to-four-free-neurons"
+  },
+  {
+    "kind": "certificate",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie_verify.py",
+    "equations": [
+      "eq:fixed-five-difference",
+      "eq:fixed-five-locality",
+      "eq:fixed-five-rays"
+    ],
+    "key": "fixed_five_differences",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/76a60f09f65d081d9949f62c6ae3e4dc451d7694/research/sN/best5/overnight_fixed_bowtie_verify.py"
   }
 ]
