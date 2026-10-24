@@ -1,0 +1,16 @@
+'MaxCaterpillar.exists_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+MaxCaterpillar.caterpillar_count_exponential : ∀ (r : ℕ),
+  ∀ K ⊆ normalizedKeys r,
+    ∀ (d : RealKey (r + 1) → ℝ) (a : Fin (W (r + 1 + 1)) → ℝ),
+      (∀ (x : MaxCaterpillar.Point (r + 1 + 1)),
+          MaxCaterpillar.Maximum (r + 1 + 1) x = ∑ k in K, d k * realUnitY k x + MaxCaterpillar.auxiliary a x) →
+        ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → Nat.choose (r + 1 + 1) k ≤ 6 ^ k * Finset.card K
+MaxCaterpillar.caterpillar_count_exponential_pow : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ K ⊆ normalizedKeys r,
+      ∀ (d : RealKey (r + 1) → ℝ) (a : Fin (W (r + 1 + 1)) → ℝ),
+        (∀ (x : MaxCaterpillar.Point (r + 1 + 1)),
+            MaxCaterpillar.Maximum (r + 1 + 1) x = ∑ k in K, d k * realUnitY k x + MaxCaterpillar.auxiliary a x) →
+          7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * Finset.card K
+'MaxCaterpillar.caterpillar_count_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.caterpillar_count_exponential_pow' depends on axioms: [propext, Quot.sound, Classical.choice]

@@ -1,0 +1,589 @@
+caterpillar_net : ∀ (N : ℕ) [inst : NeZero N],
+  ∃ (net : Network N (firstWidth N) (secondWidth N)),
+    (∀ (x : Point N), Network.eval net x = Maximum N x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+caterpillar_expansion_choose_le : ∀ (r : ℕ) {K : Finset (FaceKey r)},
+  IsCaterpillarExpansion r K → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → Nat.choose (r + 1 + 1) k ≤ 6 ^ k * Finset.card K
+caterpillar_expansion_exponential : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ {K : Finset (FaceKey r)},
+      IsCaterpillarExpansion r K → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * Finset.card K
+caterpillar_expansion_quadratic : ∀ (r : ℕ),
+  1 ≤ r → ∀ {K : Finset (FaceKey r)}, IsCaterpillarExpansion r K → (r + 1 + 1) * (r + 1) ≤ 6 * Finset.card K
+caterpillarDim_ge : ∀ (r : ℕ), 1 ≤ r → Nat.factorial r ≤ caterpillarDim r
+caterpillarDim_eq : ∀ (r : ℕ), caterpillarDim r = quotientDim r
+maximum_width : ∀ (N : ℕ) [inst : NeZero N],
+  ∃ (net : Network N (firstWidth N) (secondWidth N)), ∀ (x : Point N), Network.eval net x = Maximum N x
+network_correct : ∀ (r : ℕ), 1 ≤ r → ∀ (x : Point (r + 1 + 1)), Network.eval (network r) x = Maximum (r + 1 + 1) x
+@facet_reduction : ∀ {r : ℕ},
+  2 ≤ r →
+    ParamidGeom.germDiff (fun (x : Fin (r + 1)) => 1)
+          (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) ∈
+        ParamidGeom.LSpan (r + 1) (r - 1) →
+      ∀ (u : Fin (r + 1) → ℝ),
+        ParamidGeom.germDiff u (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) ∈
+          ParamidGeom.LSpan (r + 1) (r - 1)
+@facet_completeness : ∀ {r : ℕ},
+  1 ≤ r →
+    (∀ (u : Fin (r + 1) → ℝ),
+        ParamidGeom.germDiff u (Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1))) ∈
+          ParamidGeom.LSpan (r + 1) (r - 1)) →
+      Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1)) ∈ ParamidGeom.LSpan (r + 1) r
+@coordinate_deletion : ∀ {s : ℕ},
+  1 ≤ s →
+    ParamidGeom.germDiff (Caterpillar.coordinateOne s) (Caterpillar.formula (s + 1)) - Caterpillar.valueFormula s ∈
+      ParamidGeom.LSpan (s + 2) s
+class_identity : ∀ (r : ℕ),
+  1 ≤ r → Caterpillar.formula r - ParamidGeom.hS (ParamidGeom.simplexVerts (r + 1)) ∈ ParamidGeom.LSpan (r + 1) r
+maximum_mem_dictionary : ∀ (r : ℕ), 1 ≤ r → Maximum (r + 1 + 1) ∈ Submodule.span ℝ ↑(dictionary r)
+canonical_expansion : ∀ (r : ℕ),
+  1 ≤ r → ∀ (x : Point (r + 1 + 1)), ∑ i : Atom r, coefficient r i * atom r i x = Maximum (r + 1 + 1) x
+normalized_cone_count : ∀ (r : ℕ), Finset.card (Caterpillar.Corrections.normalizedWordCones r) ≤ coneCount (r + 1 + 1)
+width_of_cone_count : ∀ (r b : ℕ),
+  1 ≤ r →
+    Finset.card (Caterpillar.Corrections.normalizedWordCones r) ≤ b →
+      ∃ (net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (b * 3 ^ r - (r + 1 + 1) * (r + 1) + 2)),
+        ∀ (x : Point (r + 1 + 1)), Network.eval net x = Maximum (r + 1 + 1) x
+construction_width : ∀ (r : ℕ),
+  1 ≤ r →
+    ∃ (net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (secondWidth (r + 1 + 1))),
+      ∀ (x : Point (r + 1 + 1)), Network.eval net x = Maximum (r + 1 + 1) x
+firstWidth_le_square : ∀ (N : ℕ), firstWidth N ≤ (N + 1) ^ 2
+firstWidth_le_four_mul_square : ∀ (N : ℕ), 1 ≤ N → firstWidth N ≤ 4 * N ^ 2
+firstWidth_isBigO_square : (fun (N : ℕ) => ↑(firstWidth N)) =O[Filter.atTop] fun (N : ℕ) => ↑N ^ 2
+coneCount_le_pow : ∀ (N : ℕ), 3 ≤ N → coneCount N ≤ N ^ (4 * N)
+secondWidth_le_two_mul_pow : ∀ (N : ℕ), 3 ≤ N → secondWidth N ≤ 2 * N ^ (5 * N)
+secondWidth_isBigO_pow : (fun (N : ℕ) => ↑(secondWidth N)) =O[Filter.atTop] fun (N : ℕ) => ↑(N ^ (5 * N))
+log_secondWidth_le : ∀ (N : ℕ), 3 ≤ N → Real.log ↑(secondWidth N) ≤ Real.log 2 + ↑(5 * N) * Real.log ↑N
+log_secondWidth_le_six_mul : ∀ (N : ℕ), 3 ≤ N → Real.log ↑(secondWidth N) ≤ 6 * (↑N * Real.log ↑N)
+log_secondWidth_isBigO_mul_log : (fun (N : ℕ) => Real.log ↑(secondWidth N)) =O[Filter.atTop] fun (N : ℕ) =>
+  ↑N * Real.log ↑N
+width_asymptotics : ((fun (N : ℕ) => ↑(firstWidth N)) =O[Filter.atTop] fun (N : ℕ) => ↑N ^ 2) ∧
+  (fun (N : ℕ) => Real.log ↑(secondWidth N)) =O[Filter.atTop] fun (N : ℕ) => ↑N * Real.log ↑N
+@Internal.ofLayers_eval : ∀ {N h₁ h₂ : ℕ} (T₁ : Affine N h₁) (T₂ : Affine h₁ h₂) (T₃ : Affine h₂ 1) (x : Point N),
+  Network.eval (Internal.ofLayers T₁ T₂ T₃) x =
+    ReLUNet.eval (ReLUNet.layer T₁ (ReLUNet.layer T₂ (ReLUNet.affine T₃))) x 0
+@Internal.toReLUNet_eval : ∀ {N h₁ h₂ : ℕ} (net : Network N h₁ h₂) (x : Point N),
+  ReLUNet.eval (Internal.toReLUNet net) x 0 = Network.eval net x
+@Internal.twoLayerWidth_iff : ∀ {N h₁ h₂ : ℕ} {f : Point N → ℝ},
+  Width.TwoLayerWidth N h₁ h₂ f ↔ ∃ (net : Network N h₁ h₂), ∀ (x : Point N), Network.eval net x = f x
+Internal.maximum_eq_MAX : ∀ (N : ℕ) [inst : NeZero N], Maximum N = MAX N
+Internal.coneCount_eq_spineConeBound : ∀ (N : ℕ), coneCount N = Caterpillar.Corrections.spineConeBound N
+network_eval_internal : ∀ (r : ℕ) (x : Point (r + 1 + 1)),
+  Network.eval (network r) x = ReLUNet.eval (Caterpillar.compactEssentialNetwork r) x 0
+maximum_width_rational : ∀ (N : ℕ) [inst : NeZero N],
+  ∃ (net : Network N (firstWidth N) (secondWidth N)),
+    (∀ (x : Point N), Network.eval net x = Maximum N x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+coefficient_rational : ∀ (r : ℕ), 1 ≤ r → ∀ (i : Atom r), ∃ (q : ℚ), ↑q = coefficient r i
+network_rational : ∀ (r : ℕ), 1 ≤ r → Network.HasRationalWeights (network r) ∧ Network.HasZeroBiases (network r)
+rational_coefficients : ∀ (r : ℕ),
+  1 ≤ r →
+    ∃ (c : Atom r → ℝ),
+      (∀ (i : Atom r), ∃ (q : ℚ), ↑q = c i) ∧
+        ∀ (x : Point (r + 1 + 1)), ∑ i : Atom r, c i * atom r i x = Maximum (r + 1 + 1) x
+compilation : ∀ (r : ℕ),
+  ∀ K ⊆ Caterpillar.Corrections.normalizedKeys r,
+    ∀ (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ),
+      (∀ (x : Point (r + 1 + 1)),
+          Maximum (r + 1 + 1) x = ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) →
+        ∃ (net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (Finset.card K + 2)),
+          (∀ (x : Point (r + 1 + 1)), Network.eval net x = Maximum (r + 1 + 1) x) ∧
+            Network.HasZeroBiases net ∧
+              ((∀ k ∈ K, ∃ (q : ℚ), ↑q = d k) →
+                (∀ (j : Fin (Width.W (r + 1 + 1))), ∃ (q : ℚ), ↑q = a j) → Network.HasRationalWeights net)
+quotientDim_eq : ∀ (r : ℕ),
+  quotientDim r = FiniteDimensional.finrank ℝ ↥(vocabularySpan r) - FiniteDimensional.finrank ℝ ↥(auxSpan (r + 1 + 1))
+quotient_compression : ∀ (r : ℕ),
+  1 ≤ r →
+    ∃ K ⊆ Caterpillar.Corrections.normalizedKeys r,
+      Finset.card K ≤ quotientDim r ∧
+        ∃ (net : Network (r + 1 + 1) (firstWidth (r + 1 + 1)) (quotientDim r + 2)),
+          (∀ (x : Point (r + 1 + 1)), Network.eval net x = Maximum (r + 1 + 1) x) ∧
+            Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+maximum_width_one_basis : ∀ (N : ℕ) [inst : NeZero N],
+  ∃ (net : Network N (firstWidth N) (secondWidth N)),
+    (∀ (x : Point N), Network.eval net x = Maximum N x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+quotientDim_add_two_le_secondWidth : ∀ (r : ℕ), 1 ≤ r → quotientDim r + 2 ≤ secondWidth (r + 1 + 1)
+@caterpillar_sum_affine : ∀ {d T : ℕ} (r : ℕ),
+  1 ≤ r →
+    ∀ (Aw : Fin T → Fin (r + 1 + 1) → Fin d → ℝ) (Ab : Fin T → Fin (r + 1 + 1) → ℝ) (ε : Fin T → ℝ),
+      ∃ (net : Network d (T * firstWidth (r + 1 + 1)) (T * (secondWidth (r + 1 + 1) - 2) + 2)),
+        ∀ (x : Point d), Network.eval net x = ∑ t : Fin T, ε t * Maximum (r + 1 + 1) (pieces (Aw t) (Ab t) x)
+@caterpillar_shared_pieces : ∀ {d n T : ℕ} (r : ℕ),
+  1 ≤ r →
+    ∀ (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ) (α : Fin T → Fin (r + 1 + 1) → Fin (n + 1)) (ε : Fin T → ℝ),
+      ∃ (net :
+        Network d (Nat.choose (n + 1) 2 + (n + 1) + 1) (Finset.card (imageSets α) * (secondWidth (r + 1 + 1) - 2) + 2)),
+        ∀ (x : Point d),
+          Network.eval net x =
+            ∑ t : Fin T, ε t * Maximum (r + 1 + 1) fun (i : Fin (r + 1 + 1)) => pieces Gw Gb x (α t i)
+@caterpillar_shared_pieces_min : ∀ {d n T : ℕ} (r : ℕ),
+  1 ≤ r →
+    ∀ (Gw : Fin (n + 1) → Fin d → ℝ) (Gb : Fin (n + 1) → ℝ) (α : Fin T → Fin (r + 1 + 1) → Fin (n + 1)),
+      (∀ (t : Fin T), Function.Injective (α t)) →
+        ∀ (ε : Fin T → ℝ),
+          ∃ (net :
+            Network d (Nat.choose (n + 1) 2 + (n + 1) + 1)
+              (min T (Nat.choose (n + 1) (r + 1 + 1)) * (secondWidth (r + 1 + 1) - 2) + 2)),
+            ∀ (x : Point d),
+              Network.eval net x =
+                ∑ t : Fin T, ε t * Maximum (r + 1 + 1) fun (i : Fin (r + 1 + 1)) => pieces Gw Gb x (α t i)
+@card_imageSets_le_sum_choose : ∀ {N p T : ℕ} (α : Fin T → Fin N → Fin p),
+  Finset.card (imageSets α) ≤ ∑ m in Finset.range (N + 1), Nat.choose p m
+wang_sun : ∀ (d : ℕ),
+  ∀ f ∈ CPWL d,
+    ∃ (T : ℕ) (ε : Fin T → ℝ) (Aw : Fin T → Fin (d + 1) → Fin d → ℝ) (Ab : Fin T → Fin (d + 1) → ℝ),
+      (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+        ∀ (x : Point d),
+          f x = ∑ t : Fin T, ε t * Maximum (d + 1) fun (i : Fin (d + 1)) => ∑ l : Fin d, Aw t i l * x l + Ab t i
+cpwl_two_hidden_layers : ∀ (d : ℕ),
+  2 ≤ d →
+    ∀ f ∈ CPWL d,
+      ∃ (T : ℕ) (ε : Fin T → ℝ) (Aw : Fin T → Fin (d + 1) → Fin d → ℝ) (Ab : Fin T → Fin (d + 1) → ℝ),
+        (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+          (∀ (x : Point d),
+              f x = ∑ t : Fin T, ε t * Maximum (d + 1) fun (i : Fin (d + 1)) => ∑ l : Fin d, Aw t i l * x l + Ab t i) ∧
+            ∃ (net : Network d (T * firstWidth (d + 1)) (T * (secondWidth (d + 1) - 2) + 2)),
+              ∀ (x : Point d), Network.eval net x = f x
+cpwl_two_hidden_layers_shared : ∀ (d : ℕ),
+  2 ≤ d →
+    ∀ f ∈ CPWL d,
+      ∃ (p : ℕ) (T : ℕ) (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ) (α : Fin T → Fin (d + 1) → Fin p) (ε : Fin T → ℝ),
+        (Function.Injective fun (a : Fin p) => (Gw a, Gb a)) ∧
+          (∀ (a : Fin p), ∃ (t : Fin T) (i : Fin (d + 1)), α t i = a) ∧
+            (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+              (∀ (x : Point d),
+                  f x =
+                    ∑ t : Fin T,
+                      ε t * Maximum (d + 1) fun (i : Fin (d + 1)) => ∑ l : Fin d, Gw (α t i) l * x l + Gb (α t i)) ∧
+                ∃ (s : ℕ),
+                  s = Finset.card (Finset.image (fun (t : Fin T) => Finset.image (α t) Finset.univ) Finset.univ) ∧
+                    s ≤ T ∧
+                      ∃ (net : Network d (Nat.choose p 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2)),
+                        ∀ (x : Point d), Network.eval net x = f x
+@kmps_of_continuous_selection : ∀ {d n : ℕ} (g : Fin n → AffineFn d) (f : Point d → ℝ),
+  Continuous f →
+    (∀ (x : Point d), ∃ (i : Fin n), f x = AffineFn.eval (g i) x) →
+      ∃ (T : ℕ) (ε : Fin T → ℝ) (α : Fin T → Fin (d + 1) → Fin n),
+        (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+          ∀ (x : Point d), f x = ∑ t : Fin T, ε t * Maximum (d + 1) fun (i : Fin (d + 1)) => AffineFn.eval (g (α t i)) x
+kmps_pieces : ∀ (d : ℕ),
+  ∀ f ∈ CPWL d,
+    ∀ (W : CPWLWitness d f),
+      ∃ (T : ℕ) (ε : Fin T → ℝ) (α : Fin T → Fin (d + 1) → Fin W.n),
+        (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+          ∀ (x : Point d),
+            f x =
+              ∑ t : Fin T,
+                ε t *
+                  Maximum (d + 1) fun (i : Fin (d + 1)) =>
+                    ∑ l : Fin d, AffineFn.a (CPWLWitness.g W (α t i)) l * x l + (CPWLWitness.g W (α t i)).c
+cpwl_two_hidden_layers_pieces : ∀ (d : ℕ),
+  2 ≤ d →
+    ∀ f ∈ CPWL d,
+      ∀ (W : CPWLWitness d f),
+        ∃ (T : ℕ) (α : Fin T → Fin (d + 1) → Fin W.n) (ε : Fin T → ℝ),
+          (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+            (∀ (x : Point d),
+                f x =
+                  ∑ t : Fin T,
+                    ε t *
+                      Maximum (d + 1) fun (i : Fin (d + 1)) =>
+                        ∑ l : Fin d, AffineFn.a (CPWLWitness.g W (α t i)) l * x l + (CPWLWitness.g W (α t i)).c) ∧
+              ∃ (s : ℕ),
+                s = Finset.card (Finset.image (fun (t : Fin T) => Finset.image (α t) Finset.univ) Finset.univ) ∧
+                  s ≤ T ∧
+                    ∃ (net : Network d (Nat.choose W.n 2 + W.n + 1) (s * (secondWidth (d + 1) - 2) + 2)),
+                      ∀ (x : Point d), Network.eval net x = f x
+exists_rat_caterpillarExpansion : ∀ (r : ℕ),
+  1 ≤ r →
+    ∃ (E :
+      PairExpansion (r + 1 + 1) { x : Caterpillar.Corrections.RealKey (r + 1) // x ∈ caterpillarKeys r }
+        (Fin (Caterpillar.Corrections.compactWidth (r + 1)))),
+      PairExpansion.IsRational E
+@caterpillar_sum_affine_rational_pieces : ∀ {d T : ℕ} (r : ℕ),
+  1 ≤ r →
+    ∀ (Aw : Fin T → Fin (r + 1 + 1) → Fin d → ℝ) (Ab : Fin T → Fin (r + 1 + 1) → ℝ) (ε : Fin T → ℝ),
+      (∀ (t : Fin T) (i : Fin (r + 1 + 1)) (l : Fin d), ∃ (q : ℚ), ↑q = Aw t i l) →
+        (∀ (t : Fin T) (i : Fin (r + 1 + 1)), ∃ (q : ℚ), ↑q = Ab t i) →
+          (∀ (t : Fin T), ∃ (q : ℚ), ↑q = ε t) →
+            ∃ (net : Network d (T * firstWidth (r + 1 + 1)) (T * (secondWidth (r + 1 + 1) - 2) + 2)),
+              (∀ (x : Point d), Network.eval net x = ∑ t : Fin T, ε t * Maximum (r + 1 + 1) (pieces (Aw t) (Ab t) x)) ∧
+                Network.HasRationalWeights net ∧ Network.HasRationalBiases net ∧ (Ab = 0 → Network.HasZeroBiases net)
+@caterpillar_shared_pieces_rational_pieces : ∀ {d p T : ℕ} (r : ℕ),
+  1 ≤ r →
+    ∀ (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ) (α : Fin T → Fin (r + 1 + 1) → Fin p) (ε : Fin T → ℝ),
+      (∀ (a : Fin p) (l : Fin d), ∃ (q : ℚ), ↑q = Gw a l) →
+        (∀ (a : Fin p), ∃ (q : ℚ), ↑q = Gb a) →
+          (∀ (t : Fin T), ∃ (q : ℚ), ↑q = ε t) →
+            ∃ (net :
+              Network d (Nat.choose p 2 + p + 1) (Finset.card (imageSets α) * (secondWidth (r + 1 + 1) - 2) + 2)),
+              (∀ (x : Point d),
+                  Network.eval net x =
+                    ∑ t : Fin T,
+                      ε t *
+                        Maximum (r + 1 + 1) fun (i : Fin (r + 1 + 1)) => ∑ l : Fin d, Gw (α t i) l * x l + Gb (α t i)) ∧
+                Network.HasRationalWeights net ∧ Network.HasRationalBiases net ∧ (Gb = 0 → Network.HasZeroBiases net)
+cpwl_two_hidden_layers_shared_rational : ∀ (d : ℕ),
+  2 ≤ d →
+    ∀ f ∈ CPWL d,
+      ∃ (p : ℕ) (T : ℕ) (Gw : Fin p → Fin d → ℝ) (Gb : Fin p → ℝ) (α : Fin T → Fin (d + 1) → Fin p) (ε : Fin T → ℝ),
+        (Function.Injective fun (a : Fin p) => (Gw a, Gb a)) ∧
+          (∀ (a : Fin p), ∃ (t : Fin T) (i : Fin (d + 1)), α t i = a) ∧
+            (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+              (∀ (x : Point d),
+                  f x =
+                    ∑ t : Fin T,
+                      ε t * Maximum (d + 1) fun (i : Fin (d + 1)) => ∑ l : Fin d, Gw (α t i) l * x l + Gb (α t i)) ∧
+                ∃ (s : ℕ),
+                  s = Finset.card (Finset.image (fun (t : Fin T) => Finset.image (α t) Finset.univ) Finset.univ) ∧
+                    s ≤ T ∧
+                      ∃ (net : Network d (Nat.choose p 2 + p + 1) (s * (secondWidth (d + 1) - 2) + 2)),
+                        (∀ (x : Point d), Network.eval net x = f x) ∧
+                          Network.HasRationalOuterLayers net ∧
+                            ∀ (j : Fin (Nat.choose p 2 + p + 1)),
+                              IsPieceRow Gw Gb (Network.W₁ net j) (Network.b₁ net j) ∨
+                                Network.W₁ net j = 0 ∧ Network.b₁ net j = 0
+cpwl_two_hidden_layers_pieces_rational : ∀ (d : ℕ),
+  2 ≤ d →
+    ∀ f ∈ CPWL d,
+      ∀ (W : CPWLWitness d f),
+        (∀ (i : Fin W.n) (l : Fin d), ∃ (q : ℚ), ↑q = AffineFn.a (CPWLWitness.g W i) l) →
+          (∀ (i : Fin W.n), ∃ (q : ℚ), ↑q = (CPWLWitness.g W i).c) →
+            ∃ (T : ℕ) (α : Fin T → Fin (d + 1) → Fin W.n) (ε : Fin T → ℝ),
+              (∀ (t : Fin T), ε t = 1 ∨ ε t = -1) ∧
+                (∀ (x : Point d),
+                    f x =
+                      ∑ t : Fin T,
+                        ε t *
+                          Maximum (d + 1) fun (i : Fin (d + 1)) =>
+                            ∑ l : Fin d, AffineFn.a (CPWLWitness.g W (α t i)) l * x l + (CPWLWitness.g W (α t i)).c) ∧
+                  ∃ (s : ℕ),
+                    s = Finset.card (Finset.image (fun (t : Fin T) => Finset.image (α t) Finset.univ) Finset.univ) ∧
+                      s ≤ T ∧
+                        ∃ (net : Network d (Nat.choose W.n 2 + W.n + 1) (s * (secondWidth (d + 1) - 2) + 2)),
+                          (∀ (x : Point d), Network.eval net x = f x) ∧
+                            Network.HasRationalWeights net ∧
+                              Network.HasRationalBiases net ∧
+                                ((∀ (i : Fin W.n), (CPWLWitness.g W i).c = 0) → Network.HasZeroBiases net)
+max_three_network : ∃ (net : Network 3 (firstWidth 3) 3),
+  (∀ (x : Point 3), Network.eval net x = Maximum 3 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+max_four_network : ∃ (net : Network 4 (firstWidth 4) 5),
+  (∀ (x : Point 4), Network.eval net x = Maximum 4 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+max_four_identity : ∀ (x : Fin 4 → ℝ),
+  MAX 4 x =
+    x 1 - MaxCaterpillar.relu (x 0 - x 2) -
+          MaxCaterpillar.relu (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1)) +
+        MaxCaterpillar.relu
+          (x 1 + x 2 - x 0 - x 3 + MaxCaterpillar.relu (x 0 - x 1) + MaxCaterpillar.relu (x 0 - x 2)) +
+      MaxCaterpillar.relu (x 3 - x 1 + MaxCaterpillar.relu (x 0 - x 2) + MaxCaterpillar.relu (x 2 - x 3))
+caterpillar_choose_three_le : ∀ (r : ℕ),
+  ∀ K ⊆ Caterpillar.Corrections.normalizedKeys r,
+    ∀ (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ),
+      (∀ (x : Point (r + 1 + 1)),
+          Maximum (r + 1 + 1) x = ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) →
+        Nat.choose (r + 1 + 1) 3 ≤ Finset.card K * r
+caterpillar_count_lower : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ K ⊆ Caterpillar.Corrections.normalizedKeys r,
+      ∀ (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ),
+        (∀ (x : Point (r + 1 + 1)),
+            Maximum (r + 1 + 1) x = ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) →
+          (r + 1 + 1) * (r + 1) ≤ 6 * Finset.card K
+caterpillar_count_exponential : ∀ (r : ℕ),
+  ∀ K ⊆ Caterpillar.Corrections.normalizedKeys r,
+    ∀ (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ),
+      (∀ (x : Point (r + 1 + 1)),
+          Maximum (r + 1 + 1) x = ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) →
+        ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → Nat.choose (r + 1 + 1) k ≤ 6 ^ k * Finset.card K
+caterpillar_count_exponential_pow : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ K ⊆ Caterpillar.Corrections.normalizedKeys r,
+      ∀ (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ),
+        (∀ (x : Point (r + 1 + 1)),
+            Maximum (r + 1 + 1) x = ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) →
+          7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * Finset.card K
+factorial_le_quotientDim : ∀ (r : ℕ), 1 ≤ r → Nat.factorial r ≤ quotientDim r
+SmallN.Max5General4.max_network : ∃ (net : Network 5 (firstWidth 5) 6),
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+SmallN.Max5Lns27.max_network : ∃ (net : Network 5 (firstWidth 5) 29),
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+SmallN.Max4Test.max_network : ∃ (net : Network 4 (firstWidth 4) 5),
+  (∀ (x : Point 4), Network.eval net x = Maximum 4 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+@Frontier.max4_widths_iff : ∀ {h₁ h₂ : ℕ},
+  (∃ (net : Network 4 h₁ h₂), ∀ (x : Point 4), Network.eval net x = Maximum 4 x) ↔ 6 ≤ h₁ ∧ 3 ≤ h₂
+@Frontier.max3_widths_iff : ∀ {h₁ h₂ : ℕ},
+  (∃ (net : Network 3 h₁ h₂), ∀ (x : Point 3), Network.eval net x = Maximum 3 x) ↔ 4 ≤ h₁ ∧ 3 ≤ h₂
+@Frontier.second_width_ge_three : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  3 ≤ N → ∀ (net : Network N h₁ h₂), (∀ (x : Point N), Network.eval net x = Maximum N x) → 3 ≤ h₂
+@Frontier.first_width_quadratic : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) → 3 * N * N + 12 ≤ 6 * h₁ + 11 * N
+@Frontier.second_width_half : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) → N ≤ 2 * h₂
+@Frontier.second_width_half_succ : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) →
+    Finset.card (Finset.filter (fun (j : Fin h₁) => 0 < ∑ i : Fin N, Network.W₁ net j i) Finset.univ) = 1 →
+      Finset.card (Finset.filter (fun (j : Fin h₁) => ∑ i : Fin N, Network.W₁ net j i < 0) Finset.univ) = 1 →
+        N + 2 ≤ 2 * h₂
+@Frontier.second_width_joint : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) → 6 * h₁ + 11 * N < 3 * N * N + 18 → N + 2 ≤ 2 * h₂
+@Frontier.free_neurons : ∀ {N : ℕ} [inst : NeZero N] (m K : ℕ) (c : Point N) (a : Fin m → ℝ) (B : Fin m → Point N)
+  (d : Fin K → ℝ) (C : Fin K → Point N) (W : Fin K → Fin m → ℝ),
+  (∀ (x : Point N),
+      Maximum N x =
+        Frontier.lin c x + ∑ j : Fin m, a j * MaxCaterpillar.relu (Frontier.lin (B j) x) +
+          ∑ k : Fin K,
+            d k *
+              MaxCaterpillar.relu
+                (Frontier.lin (C k) x + ∑ j : Fin m, W k j * MaxCaterpillar.relu (Frontier.lin (B j) x))) →
+    N ≤ 2 * K + 2
+Trees.rootedStar_expansion_choose_le : ∀ (r : ℕ) {K : Finset (FaceKey r)},
+  Trees.IsRootedStarExpansion r K → ∀ {k : ℕ}, 3 ≤ k → k < r + 1 + 1 → Nat.choose (r + 1 + 1) k ≤ 6 ^ k * Finset.card K
+Trees.rootedStar_expansion_exponential : ∀ (r : ℕ),
+  2 ≤ r →
+    ∀ {K : Finset (FaceKey r)},
+      Trees.IsRootedStarExpansion r K →
+        7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * (r + 1 + 1) ^ 2 * 6 ^ (r + 1 + 1) * Finset.card K
+Trees.tree_expansion_quadratic : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → (r + 1 + 1) * (r + 1) ≤ 6 * Finset.card K
+Trees.tree_bounded_choose_le : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))},
+  Trees.IsTreeExpansion r K →
+    ∀ {Δ : ℕ},
+      1 ≤ Δ →
+        (∀ F ∈ K, ∀ (u : Fin (r + 1 + 1)), Trees.TreeFace.hingeDeg F u ≤ Δ) →
+          ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → ↑(Nat.choose (r + 1 + 1) k) ≤ 2 * (6 * ↑(2 * Δ - 1)) ^ k * ↑(Finset.card K)
+Trees.tree_bounded_exponential : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))},
+      Trees.IsTreeExpansion r K →
+        ∀ {Δ : ℕ},
+          1 ≤ Δ →
+            (∀ F ∈ K, ∀ (u : Fin (r + 1 + 1)), Trees.TreeFace.hingeDeg F u ≤ Δ) →
+              ↑(6 * (2 * Δ - 1) + 1) ^ (r + 1 + 1) ≤
+                2 * (↑r + 1 + 1 + 1) * ↑(6 * (2 * Δ - 1)) ^ (r + 1 + 1) * ↑(Finset.card K)
+Trees.tree_star_or_bounded_exponential : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))},
+  Trees.IsTreeExpansion r K →
+    ∀ {Δ : ℕ},
+      3 ≤ Δ →
+        (∀ F ∈ K,
+            (∃ (a : Fin (r + 1 + 1)) (c : Fin (r + 1 + 1)) (hac : c ≠ a), F = Trees.starFace a c hac) ∨
+              ∀ (u : Fin (r + 1 + 1)), Trees.TreeFace.hingeDeg F u ≤ Δ) →
+          ∀ {k : ℕ}, 3 ≤ k → (144 * (2 * Δ - 1) ^ 2 + 1) * k ≤ r + 1 + 1 → 2 ^ k ≤ 2 * (↑k + 1) ^ 2 * ↑(Finset.card K)
+Trees.mixed_expansion_exponential : ∀ (r : ℕ) {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))},
+  Trees.IsMixedExpansion r K₁ K₂ →
+    ∀ {Δ : ℕ},
+      3 ≤ Δ →
+        (∀ F ∈ K₂, Trees.HubOK (Trees.TreeFace.descr F) Δ) →
+          ∀ {k : ℕ},
+            3 ≤ k →
+              (144 * (2 * Δ - 1) ^ 2 + 1) * k ≤ r + 1 + 1 →
+                2 ^ k ≤ 2 * (↑k + 1) ^ 2 * (↑(Finset.card K₁) + ↑(Finset.card K₂))
+caterpillar_net_v4 : ∀ (N : ℕ) [inst : NeZero N],
+  ∃ (net : Network N (firstWidth N) (secondWidth N)),
+    (∀ (x : Point N), Network.eval net x = Maximum N x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+@bhrsy_parallelepiped_eq_zonotope : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ},
+  M ⊆ Finset.Icc 2 (r + 1) →
+    BHRSY.parallelepiped v π M =
+      zonotope (Pi.single (BHRSY.Ordering.pos π (BHRSY.lastMarked M)) 1) (Finset.Icc 2 (r + 1)) fun (i : ℕ) =>
+        Pi.single (BHRSY.Ordering.pos π (BHRSY.markedParent M i)) 1 - Pi.single (BHRSY.Ordering.pos π i) 1
+@bhrsy_parallelepiped_eq_zonotope_of_nonempty : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
+  {M : Finset ℕ},
+  M ⊆ Finset.Icc 2 (r + 1) →
+    ∀ (hne : Finset.Nonempty M),
+      BHRSY.parallelepiped v π M =
+        zonotope (Pi.single (BHRSY.Ordering.pos π (Finset.max' M hne)) 1) (Finset.Icc 2 (r + 1)) fun (i : ℕ) =>
+          Pi.single (BHRSY.Ordering.pos π (BHRSY.markedParent M i)) 1 - Pi.single (BHRSY.Ordering.pos π i) 1
+@bhrsy_parallelepiped_empty : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v),
+  BHRSY.parallelepiped v π ∅ =
+    zonotope (Pi.single (BHRSY.Ordering.pos π 1) 1) (Finset.Icc 2 (r + 1)) fun (i : ℕ) =>
+      Pi.single (BHRSY.Ordering.pos π 1) 1 - Pi.single (BHRSY.Ordering.pos π i) 1
+@bhrsy_support_eq : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ},
+  M ⊆ Finset.Icc 2 (r + 1) →
+    ∀ (y : Point (r + 1 + 1)),
+      BHRSY.paramidSupport v π M y =
+        y v +
+          MaxCaterpillar.relu
+            (y (BHRSY.Ordering.pos π (BHRSY.lastMarked M)) - y v +
+              ∑ i in Finset.Icc 2 (r + 1),
+                MaxCaterpillar.relu (y (BHRSY.Ordering.pos π (BHRSY.markedParent M i)) - y (BHRSY.Ordering.pos π i)))
+@bhrsy_support_eq_word : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ},
+  M ⊆ Finset.Icc 2 (r + 1) →
+    Finset.card (BHRSY.cutSet M) = Finset.card M ∧
+      ∀ (y : Point (r + 1 + 1)),
+        BHRSY.paramidSupport v π M y =
+          y v + caterpillarFunction (caterpillarWordDescription (BHRSY.Ordering.word π) (BHRSY.cutSet M)) y
+@bhrsy_support_mem_caterpillar : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ},
+  M ⊆ Finset.Icc 2 (r + 1) →
+    Finset.Nonempty M →
+      ∃ k ∈ caterpillarDescriptions r,
+        ∀ (y : Fin (r + 1 + 1) → ℝ), BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y
+@bhrsy_word_mem : ∀ {r : ℕ} (σ : Equiv.Perm (Fin (r + 1 + 1))) {S : Finset (Fin (r + 1))},
+  Finset.Nonempty S →
+    0 ∉ S →
+      ∃ (v : Fin (r + 1 + 1)) (π : BHRSY.Ordering (r + 1 + 1) v),
+        ∃ M ⊆ Finset.Icc 2 (r + 1),
+          Finset.Nonempty M ∧
+            ∀ (y : Fin (r + 1 + 1) → ℝ),
+              BHRSY.paramidSupport v π M y = y v + caterpillarFunction (caterpillarWordDescription σ S) y
+@bhrsy_support_empty : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) (y : Point (r + 1 + 1)),
+  BHRSY.paramidSupport v π ∅ y = y v + Trees.rootedStar v (BHRSY.Ordering.pos π 1) y
+@rootedStar_ne_caterpillarFunction : ∀ {r : ℕ} {a c : Fin (r + 1 + 1)},
+  a ≠ c → ∀ {k : FaceKey r}, k ∈ caterpillarDescriptions r → Trees.rootedStar a c ≠ caterpillarFunction k
+@bhrsy_support_empty_not_caterpillar : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v),
+  ¬∃ k ∈ caterpillarDescriptions r,
+      ∀ (y : Fin (r + 1 + 1) → ℝ), BHRSY.paramidSupport v π ∅ y = y v + caterpillarFunction k y
+@bhrsy_family : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ},
+  M ⊆ Finset.Icc 2 (r + 1) →
+    (Finset.Nonempty M ∧
+        ∃ k ∈ caterpillarDescriptions r,
+          ∀ (y : Fin (r + 1 + 1) → ℝ), BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y) ∨
+      M = ∅ ∧
+        (∀ (y : Fin (r + 1 + 1) → ℝ),
+            BHRSY.paramidSupport v π M y = y v + Trees.rootedStar v (BHRSY.Ordering.pos π 1) y) ∧
+          ¬∃ k ∈ caterpillarDescriptions r,
+              ∀ (y : Fin (r + 1 + 1) → ℝ), BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y
+Simplify.tree_outLeaf_choose_le : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))},
+  Trees.IsTreeExpansion r K →
+    ∀ {s : ℕ},
+      (∀ F ∈ K, Simplify.OutLeafBound (Trees.TreeFace.descr F) s) →
+        ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → ↑(Nat.choose (r + 1 + 1) k) ≤ (16 * (↑s + 1) / 3) ^ k * ↑(Finset.card K)
+Simplify.tree_outLeaf_exponential : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))},
+      Trees.IsTreeExpansion r K →
+        ∀ {s : ℕ},
+          (∀ F ∈ K, Simplify.OutLeafBound (Trees.TreeFace.descr F) s) →
+            (16 * (↑s + 1) / 3 + 1) ^ (r + 1 + 1) ≤
+              (↑(r + 1 + 1) + 1) * (16 * (↑s + 1) / 3) ^ (r + 1 + 1) * ↑(Finset.card K)
+Simplify.mixed_outLeaf_choose_le : ∀ (r : ℕ) {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))},
+  Trees.IsMixedExpansion r K₁ K₂ →
+    ∀ {s : ℕ},
+      1 ≤ s →
+        (∀ F ∈ K₂, Simplify.OutLeafBound (Trees.TreeFace.descr F) s) →
+          ∀ {k : ℕ},
+            3 ≤ k →
+              k ≤ r + 1 + 1 →
+                ↑(Nat.choose (r + 1 + 1) k) ≤ (16 * (↑s + 1) / 3) ^ k * (↑(Finset.card K₁) + ↑(Finset.card K₂))
+Simplify.mixed_outLeaf_exponential : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))},
+      Trees.IsMixedExpansion r K₁ K₂ →
+        ∀ {s : ℕ},
+          1 ≤ s →
+            (∀ F ∈ K₂, Simplify.OutLeafBound (Trees.TreeFace.descr F) s) →
+              (16 * (↑s + 1) / 3 + 1) ^ (r + 1 + 1) ≤
+                (↑(r + 1 + 1) + 1) * (16 * (↑s + 1) / 3) ^ (r + 1 + 1) * (↑(Finset.card K₁) + ↑(Finset.card K₂))
+@Simplify.outLeafBound_of_hubOK : ∀ {N : ℕ} {D : CountLower.Descr N},
+  (∀ m ∈ D.M, m.1 < m.2) → ∀ {Δ : ℕ}, Trees.HubOK D Δ → Simplify.OutLeafBound D Δ
+@Simplify.outLeafBound_of_hingeDeg_le : ∀ {N : ℕ} (F : Trees.TreeFace N) {Δ : ℕ},
+  (∀ (u : Fin N), Trees.TreeFace.hingeDeg F u ≤ Δ) → Simplify.OutLeafBound (Trees.TreeFace.descr F) Δ
+@Simplify.starFace_outLeafBound : ∀ {N : ℕ} (a c : Fin N) (hac : c ≠ a),
+  Simplify.OutLeafBound (Trees.TreeFace.descr (Trees.starFace a c hac)) 1
+Simplify.factorial_le_quotientDim : ∀ (r : ℕ), 1 ≤ r → Nat.factorial r ≤ quotientDim r
+@Simplify.brunck_expansion_choose_le : ∀ {r : ℕ} {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))},
+  Simplify.IsBrunckExpansion r K₁ K₂ →
+    ∀ {m : ℕ}, 3 ≤ m → m ≤ r + 1 + 1 → Nat.choose (r + 1 + 1) m ≤ 6 ^ m * (Finset.card K₁ + Finset.card K₂)
+@Simplify.brunck_expansion_exponential : ∀ {r : ℕ},
+  1 ≤ r →
+    ∀ {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))},
+      Simplify.IsBrunckExpansion r K₁ K₂ →
+        7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * (Finset.card K₁ + Finset.card K₂)
+Simplify.tree_reduced_choose_le : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))},
+  Trees.IsTreeExpansion r K →
+    ∀ {Δ : ℕ},
+      2 ≤ Δ →
+        (∀ F ∈ K, Simplify.RedDeg (Trees.TreeFace.descr F) Δ) →
+          ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → Nat.choose (r + 1 + 1) k ≤ (2 * Δ + 2) ^ k * Finset.card K
+Simplify.tree_reduced_exponential : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))},
+  Trees.IsTreeExpansion r K →
+    ∀ {Δ : ℕ},
+      2 ≤ Δ →
+        (∀ F ∈ K, Simplify.RedDeg (Trees.TreeFace.descr F) Δ) →
+          6 * Δ + 8 ≤ r + 1 + 1 →
+            (2 * Δ + 2 + 1) ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * (2 * Δ + 2) ^ (r + 1 + 1) * Finset.card K
+Simplify.tree_reduced_exponential_two : ∀ (r : ℕ),
+  1 ≤ r →
+    ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))},
+      Trees.IsTreeExpansion r K →
+        (∀ F ∈ K, Simplify.RedDeg (Trees.TreeFace.descr F) 2) →
+          7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * Finset.card K
+Audit.exists_isCaterpillarExpansion : ∀ (r : ℕ), ∃ (K : Finset (FaceKey r)), IsCaterpillarExpansion r K
+Audit.caterpillarFunction_eq_treeFace : ∀ (r : ℕ) {k : FaceKey r},
+  k ∈ caterpillarDescriptions r →
+    ∃ (F : Trees.TreeFace (r + 1 + 1)), Trees.TreeFace.IsCaterpillar F ∧ caterpillarFunction k = Trees.TreeFace.unit F
+@Simplify.caterpillarFunction_eq_upTree : ∀ {r : ℕ} {k : FaceKey r},
+  k ∈ caterpillarDescriptions r →
+    ∃ (F : Trees.TreeFace (r + 1 + 1)),
+      Simplify.TreeFaceR.IsUpCaterpillar F ∧ caterpillarFunction k = Trees.TreeFace.unit F
+Simplify.choose_le_of_red : ∀ (r : ℕ) {ι : Type u_1} (K : Finset ι) (D : ι → CountLower.Descr (r + 1 + 1)),
+  (∀ i ∈ K, ∀ m ∈ (D i).M, m.1 < m.2) →
+    (∀ i ∈ K, Trees.LeafProp (D i).M) →
+      ∀ {Δ : ℕ},
+        2 ≤ Δ →
+          (∀ i ∈ K, Simplify.RedDeg (D i) Δ) →
+            ∀ (d : ι → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ),
+              (∀ (x : Point (r + 1 + 1)),
+                  Maximum (r + 1 + 1) x = ∑ i in K, d i * CountLower.Descr.unit (D i) x + auxiliary a x) →
+                ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → Nat.choose (r + 1 + 1) k ≤ (2 * Δ + 2) ^ k * Finset.card K
+Audit.exists_isCaterpillarExpansion : ∀ (r : ℕ), ∃ (K : Finset (FaceKey r)), IsCaterpillarExpansion r K
+Audit.caterpillarFunction_eq_treeFace : ∀ (r : ℕ) {k : FaceKey r},
+  k ∈ caterpillarDescriptions r →
+    ∃ (F : Trees.TreeFace (r + 1 + 1)), Trees.TreeFace.IsCaterpillar F ∧ caterpillarFunction k = Trees.TreeFace.unit F
+Audit.caterpillarFunction_eq_tree : ∀ (r : ℕ) {k : FaceKey r},
+  k ∈ caterpillarDescriptions r →
+    ∃ (F : Trees.TreeFace (r + 1 + 1)),
+      Trees.TreeFace.IsCaterpillar F ∧
+        ∀ (x : Point (r + 1 + 1)),
+          caterpillarFunction k x =
+            MaxNN.relu (x F.root - x F.apex + ∑ v in Trees.TreeFace.edgeVerts F, Trees.TreeFace.edgeTerm F v x)
+Audit.exists_isTreeExpansion : ∀ (r : ℕ),
+  ∃ (K : Finset (Trees.TreeFace (r + 1 + 1))), (∀ F ∈ K, Trees.TreeFace.IsCaterpillar F) ∧ Trees.IsTreeExpansion r K
+Audit.isTreeExpansion_of_isCaterpillarExpansion : ∀ (r : ℕ) {K : Finset (FaceKey r)},
+  IsCaterpillarExpansion r K →
+    ∃ (K' : Finset (Trees.TreeFace (r + 1 + 1))),
+      (∀ F ∈ K', Trees.TreeFace.IsCaterpillar F) ∧ Finset.card K' ≤ Finset.card K ∧ Trees.IsTreeExpansion r K'
+Audit.exists_isRootedStarExpansion : ∀ (r : ℕ), ∃ (K : Finset (FaceKey r)), Trees.IsRootedStarExpansion r K
+Audit.exists_isMixedExpansion : ∀ (r : ℕ),
+  ∃ (K₁ : Finset (FaceKey r)) (K₂ : Finset (Trees.TreeFace (r + 1 + 1))),
+    Trees.IsMixedExpansion r K₁ K₂ ∧ ∀ (Δ : ℕ), ∀ F ∈ K₂, Trees.HubOK (Trees.TreeFace.descr F) Δ
+Audit.second_width_half_succ_satisfiable_three : ∃ (net : Network 3 4 3),
+  (∀ (x : Point 3), Network.eval net x = Maximum 3 x) ∧
+    Finset.card (Finset.filter (fun (j : Fin 4) => 0 < ∑ i : Fin 3, Network.W₁ net j i) Finset.univ) = 1 ∧
+      Finset.card (Finset.filter (fun (j : Fin 4) => ∑ i : Fin 3, Network.W₁ net j i < 0) Finset.univ) = 1
+Audit.second_width_half_succ_satisfiable_four : ∃ (net : Network 4 6 3),
+  (∀ (x : Point 4), Network.eval net x = Maximum 4 x) ∧
+    Finset.card (Finset.filter (fun (j : Fin 6) => 0 < ∑ i : Fin 4, Network.W₁ net j i) Finset.univ) = 1 ∧
+      Finset.card (Finset.filter (fun (j : Fin 6) => ∑ i : Fin 4, Network.W₁ net j i < 0) Finset.univ) = 1
+@Audit.second_width_joint_hyp_false_three : ∀ {h₁ h₂ : ℕ} (net : Network 3 h₁ h₂),
+  (∀ (x : Point 3), Network.eval net x = Maximum 3 x) → ¬6 * h₁ + 11 * 3 < 3 * 3 * 3 + 18
+@Audit.second_width_joint_hyp_false_four : ∀ {h₁ h₂ : ℕ} (net : Network 4 h₁ h₂),
+  (∀ (x : Point 4), Network.eval net x = Maximum 4 x) → ¬6 * h₁ + 11 * 4 < 3 * 4 * 4 + 18
+Audit.free_neurons_satisfiable : ∀ (N : ℕ) [inst : NeZero N],
+  ∃ (m : ℕ) (K : ℕ) (c : Point N) (a : Fin m → ℝ) (B : Fin m → Point N) (d : Fin K → ℝ) (C : Fin K → Point N) (W :
+    Fin K → Fin m → ℝ),
+    ∀ (x : Point N),
+      Maximum N x =
+        Frontier.lin c x + ∑ j : Fin m, a j * MaxCaterpillar.relu (Frontier.lin (B j) x) +
+          ∑ k : Fin K,
+            d k *
+              MaxCaterpillar.relu
+                (Frontier.lin (C k) x + ∑ j : Fin m, W k j * MaxCaterpillar.relu (Frontier.lin (B j) x))
+@Trees.TreeFace.IsCaterpillar : {N : ℕ} → Trees.TreeFace N → Prop
+'MaxCaterpillar.Audit.exists_isCaterpillarExpansion' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Audit.caterpillarFunction_eq_treeFace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Audit.caterpillarFunction_eq_tree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Audit.exists_isTreeExpansion' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Audit.isTreeExpansion_of_isCaterpillarExpansion' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Audit.exists_isRootedStarExpansion' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Audit.exists_isMixedExpansion' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Audit.second_width_half_succ_satisfiable_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Audit.second_width_half_succ_satisfiable_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Audit.second_width_joint_hyp_false_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Audit.second_width_joint_hyp_false_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Audit.free_neurons_satisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]

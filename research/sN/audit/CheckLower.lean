@@ -1,0 +1,4 @@
+import MaxCaterpillar.CountLower
+open MaxCaterpillar
+#check @MaxCaterpillar.caterpillar_count_lower
+#print axioms MaxCaterpillar.caterpillar_count_lower

@@ -1,0 +1,246 @@
+MaxCaterpillar/Simplify/Dimension.lean:46:73: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  shift a (shift e ?x)
+r : ℕ
+a e : Fin (r + 1 + 1)
+g : (P r) → ℝ
+h : Indep a g
+hae : a ≠ e
+x : P r
+⊢ g (shift e (shift a x)) - g (shift a x) = g (shift e x) - g x
+MaxCaterpillar/Simplify/Dimension.lean:48:77: error: application type mismatch
+  D a
+argument
+  a
+has type
+  Fin (r + 1 + 1) : Type
+but is expected to have type
+  Indep ?m.21693 ?m.21695 : Prop
+MaxCaterpillar/Simplify/Dimension.lean:48:83: error: type mismatch
+  0
+has type
+  ℕ : Type
+but is expected to have type
+  Indep ?m.21693 (Simplify.D ?m.21694 ?m.21695) : Prop
+MaxCaterpillar/Simplify/Dimension.lean:64:8: error: invalid field 'D_eq', the environment does not contain 'MaxCaterpillar.Simplify.Indep.D_eq'
+  Indep.D (Indep.D hg hac) hab
+has type
+  Indep e (D b (D c g))
+MaxCaterpillar/Simplify/Dimension.lean:64:8: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  Indep.D (Indep.D hg hac) hab
+has type
+  ∀ (x : P r), D b (D c g) (shift e x) = D b (D c g) x
+MaxCaterpillar/Simplify/Dimension.lean:64:8: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.205460
+case inl
+r : ℕ
+b c : Fin (r + 1 + 1)
+hbc : b ≠ c
+z : P r
+g : (P r) → ℝ
+e : Fin (r + 1 + 1)
+hg : Indep e g
+hab : e ≠ b
+hac : e ≠ c
+⊢ D e (D b (D c g)) z = 0
+MaxCaterpillar/Simplify/Dimension.lean:65:8: error: invalid field 'D_eq', the environment does not contain 'MaxCaterpillar.Simplify.Indep.D_eq'
+  Indep.D hg hbc
+has type
+  Indep e (D c g)
+MaxCaterpillar/Simplify/Dimension.lean:65:8: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  Indep.D hg hbc
+has type
+  ∀ (x : P r), D c g (shift e x) = D c g x
+MaxCaterpillar/Simplify/Dimension.lean:65:8: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.205479
+case inr.inl
+r : ℕ
+a c : Fin (r + 1 + 1)
+hac : a ≠ c
+z : P r
+g : (P r) → ℝ
+e : Fin (r + 1 + 1)
+hg : Indep e g
+hab : a ≠ e
+hbc : e ≠ c
+⊢ D a (D e (D c g)) z = 0
+MaxCaterpillar/Simplify/Dimension.lean:66:8: error: invalid field 'D_eq', the environment does not contain 'MaxCaterpillar.Simplify.Indep.D_eq'
+  hg
+has type
+  Indep e g
+MaxCaterpillar/Simplify/Dimension.lean:66:8: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  hg
+has type
+  ∀ (x : P r), g (shift e x) = g x
+MaxCaterpillar/Simplify/Dimension.lean:66:8: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.205481
+case inr.inr
+r : ℕ
+a b : Fin (r + 1 + 1)
+hab : a ≠ b
+z : P r
+g : (P r) → ℝ
+e : Fin (r + 1 + 1)
+hg : Indep e g
+hac : a ≠ e
+hbc : b ≠ e
+⊢ D a (D b (D e g)) z = 0
+MaxCaterpillar/Simplify/Dimension.lean:73:22: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  Function.update ?f e ?v p
+r : ℕ
+a b c : Fin (r + 1 + 1)
+hab : a ≠ b
+hac : a ≠ c
+hbc : b ≠ c
+z : P r
+φ : ℝ → ℝ → ℝ
+p q e : Fin (r + 1 + 1)
+hp : e ≠ p
+hq : e ≠ q
+x : P r
+⊢ (fun x => φ (x p) (x q)) (Function.update x e (x e + 1)) = (fun x => φ (x p) (x q)) x
+MaxCaterpillar/Simplify/Dimension.lean:122:20: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  D c g x
+r : ℕ
+a b c : Fin (r + 1 + 1)
+hab : a ≠ b
+hac : a ≠ c
+hbc : b ≠ c
+z : P r
+g h : (P r) → ℝ
+H : ∀ (x : P r), InBox z x → g x = h x
+hz : InBox z z
+h3 : ∀ (x : P r), InBox z x → x c = z c → D c g x = D c h x
+x : P r
+hx : InBox z x
+hc : x c = z c
+hb : x b = z b
+⊢ g (shift c (shift b x)) - g (shift b x) - (g (shift c x) - g x) =
+    h (shift c (shift b x)) - h (shift b x) - (h (shift c x) - h x)
+MaxCaterpillar/Simplify/Dimension.lean:125:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  D b (D c g) z
+r : ℕ
+a b c : Fin (r + 1 + 1)
+hab : a ≠ b
+hac : a ≠ c
+hbc : b ≠ c
+z : P r
+g h : (P r) → ℝ
+H : ∀ (x : P r), InBox z x → g x = h x
+hz : InBox z z
+h3 : ∀ (x : P r), InBox z x → x c = z c → D c g x = D c h x
+h2 : ∀ (x : P r), InBox z x → x c = z c → x b = z b → D b (D c g) x = D b (D c h) x
+⊢ g (shift c (shift b (shift a z))) - g (shift b (shift a z)) - (g (shift c (shift a z)) - g (shift a z)) -
+      (g (shift c (shift b z)) - g (shift b z) - (g (shift c z) - g z)) =
+    h (shift c (shift b (shift a z))) - h (shift b (shift a z)) - (h (shift c (shift a z)) - h (shift a z)) -
+      (h (shift c (shift b z)) - h (shift b z) - (h (shift c z) - h z))
+MaxCaterpillar/Simplify/Dimension.lean:291:53: error: omega did not find a contradiction:
+[0, 0, 1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+[1] ∈ [1, ∞)
+[0, 1, -1] ∈ [1, ∞)
+MaxCaterpillar/Simplify/Dimension.lean:295:73: error: omega did not find a contradiction:
+[1, -1] ∈ [1, ∞)
+[0, 1] ∈ [0, ∞)
+[1] ∈ [1, ∞)
+MaxCaterpillar/Simplify/Dimension.lean:329:17: error: unsolved goals
+r : ℕ
+hr : 1 ≤ r
+π ρ : PathIdx r
+hne : π ≠ ρ
+h0l : 0 ≠ Fin.last (r + 1)
+h0c : 0 ≠ ↑ρ (cPos r)
+hlc : Fin.last (r + 1) ≠ ↑ρ (cPos r)
+hinge : Fin r → (P r) → ℝ := fun j x => relu (x (↑π (Fin.succ (Fin.castSucc j))) - x (↑π (Fin.succ (Fin.succ j))))
+hlin : (detector ρ) ((fun x => (fun u v => u - v) (x (Fin.last (r + 1))) (x 0)) + ∑ j : Fin r, hinge j) = 0
+x : P r
+hx : InBox (testZ ↑ρ) x
+g : Equiv.Perm (Fin (r + 1 + 1)) := (↑π).trans (↑ρ).symm
+hg0 : g 0 = 0
+hg1 : g ≠ 1
+j : Fin r
+hj : g (Fin.succ (Fin.succ j)) < g (Fin.succ (Fin.castSucc j))
+⊢ ↑j + 1 ≤ r
+MaxCaterpillar/Simplify/Dimension.lean:340:76: error: unsolved goals
+r : ℕ
+hr : 1 ≤ r
+π ρ : PathIdx r
+hne : π ≠ ρ
+h0l : 0 ≠ Fin.last (r + 1)
+h0c : 0 ≠ ↑ρ (cPos r)
+hlc : Fin.last (r + 1) ≠ ↑ρ (cPos r)
+hinge : Fin r → (P r) → ℝ := fun j x => relu (x (↑π (Fin.succ (Fin.castSucc j))) - x (↑π (Fin.succ (Fin.succ j))))
+hlin : (detector ρ) ((fun x => (fun u v => u - v) (x (Fin.last (r + 1))) (x 0)) + ∑ j : Fin r, hinge j) = 0
+x : P r
+hx : InBox (testZ ↑ρ) x
+g : Equiv.Perm (Fin (r + 1 + 1)) := (↑π).trans (↑ρ).symm
+hg0 : g 0 = 0
+hg1 : g ≠ 1
+j : Fin r
+hj : g (Fin.succ (Fin.succ j)) < g (Fin.succ (Fin.castSucc j))
+hm1 : Middle r (g (Fin.succ (Fin.castSucc j)))
+this : g (Fin.succ (Fin.castSucc j)) ≠ Fin.last (r + 1)
+hlt : ↑(g (Fin.succ (Fin.succ j))) < ↑(g (Fin.succ (Fin.castSucc j)))
+hle : ↑(g (Fin.succ (Fin.castSucc j))) ≤ r + 1
+h : ↑(g (Fin.succ (Fin.castSucc j))) = r + 1
+⊢ ↑((↑ρ).symm (↑π (Fin.succ (Fin.castSucc j)))) = r + 1
+MaxCaterpillar/Simplify/Dimension.lean:341:6: error: omega did not find a contradiction:
+[1, -1] ∈ [-1, ∞)
+[0, 0, 1] ∈ [0, ∞)
+[0, 1] ∈ [0, ∞)
+[1] ∈ [1, ∞)
+[0, 1, -1] ∈ [1, ∞)
+MaxCaterpillar/Simplify/Dimension.lean:360:46: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  MaxNN.relu ?m.313846
+case intro.intro.intro
+r : ℕ
+hr : 1 ≤ r
+π ρ : PathIdx r
+hne : π ≠ ρ
+h0l : 0 ≠ Fin.last (r + 1)
+h0c : 0 ≠ ↑ρ (cPos r)
+hlc : Fin.last (r + 1) ≠ ↑ρ (cPos r)
+hinge : Fin r → (P r) → ℝ := fun j x => relu (x (↑π (Fin.succ (Fin.castSucc j))) - x (↑π (Fin.succ (Fin.succ j))))
+hlin : (detector ρ) ((fun x => (fun u v => u - v) (x (Fin.last (r + 1))) (x 0)) + ∑ j : Fin r, hinge j) = 0
+x : P r
+hx : InBox (testZ ↑ρ) x
+g : Equiv.Perm (Fin (r + 1 + 1)) := (↑π).trans (↑ρ).symm
+hg0 : g 0 = 0
+hg1 : g ≠ 1
+j : Fin r
+hj : g (Fin.succ (Fin.succ j)) < g (Fin.succ (Fin.castSucc j))
+hm1 : Middle r (g (Fin.succ (Fin.castSucc j)))
+hm2 : Middle r (g (Fin.succ (Fin.succ j)))
+hz : ∀ (k : Fin (r + 1 + 1)), ↑π k = ↑ρ (g k)
+h1 : 2 * ↑↑(g (Fin.succ (Fin.castSucc j))) ≤ x (↑ρ (g (Fin.succ (Fin.castSucc j))))
+h2 : x (↑ρ (g (Fin.succ (Fin.succ j)))) ≤ 2 * ↑↑(g (Fin.succ (Fin.succ j))) + 1
+hgap : ↑↑(g (Fin.succ (Fin.succ j))) + 1 ≤ ↑↑(g (Fin.succ (Fin.castSucc j)))
+hterm : 1 ≤ hinge j x
+hsum : hinge j x ≤ ∑ j : Fin r, hinge j x
+hb : 2 * ↑r ≤ x (Fin.last (r + 1))
+h0 : x 0 ≤ 2 * ↑r + 1
+⊢ relu
+      (x (Fin.last (r + 1)) - x 0 +
+        ∑ j : Fin r, relu (x (↑π (Fin.succ (Fin.castSucc j))) - x (↑π (Fin.succ (Fin.succ j))))) =
+    ((fun x => (fun u v => u - v) (x (Fin.last (r + 1))) (x 0)) + ∑ j : Fin r, hinge j) x
+MaxCaterpillar/Simplify/Dimension.lean:375:63: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ?g (∑ x in ?s, ?f x)
+r✝ r : ℕ
+hr : 1 ≤ r
+Aq : Submodule ℝ ↥(vocabularySpan r) := Submodule.comap (Submodule.subtype (vocabularySpan r)) (auxSpan (r + 1 + 1))
+v : PathIdx r → ↥(vocabularySpan r) :=
+  fun σ => { val := pathUnit hr ↑σ, property := (_ : pathUnit hr ↑σ ∈ vocabularySpan r) }
+c : PathIdx r → ℝ
+hc : ∑ i : PathIdx r, c i • (Submodule.mkQ Aq) (v i) = 0
+τ : PathIdx r
+⊢ Submodule.Quotient.mk ?m.321516 = 0
+MaxCaterpillar/Simplify/Dimension.lean:374:70: error: unsolved goals
+r✝ r : ℕ
+hr : 1 ≤ r
+Aq : Submodule ℝ ↥(vocabularySpan r) := Submodule.comap (Submodule.subtype (vocabularySpan r)) (auxSpan (r + 1 + 1))
+v : PathIdx r → ↥(vocabularySpan r) :=
+  fun σ => { val := pathUnit hr ↑σ, property := (_ : pathUnit hr ↑σ ∈ vocabularySpan r) }
+c : PathIdx r → ℝ
+hc : ∑ i : PathIdx r, c i • (Submodule.mkQ Aq) (v i) = 0
+τ : PathIdx r
+⊢ ∑ σ : PathIdx r, c σ • pathUnit hr ↑σ ∈ auxSpan (r + 1 + 1)
+EXIT 1

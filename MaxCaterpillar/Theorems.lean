@@ -3,6 +3,9 @@ import MaxCaterpillar.CountLower
 import MaxCaterpillar.CountExp
 import MaxCaterpillar.LowerBound
 import MaxCaterpillar.Competing.Support
+import MaxCaterpillar.Simplify.Rational
+import MaxCaterpillar.Simplify.Dimension
+import MaxCaterpillar.Simplify.Brunck
 
 /-! # The public theorem interface
 
@@ -33,13 +36,13 @@ open MaxNN MaxNN.Caterpillar
 
 /-- **Caterpillar Net.** For every positive arity `N` there is a two-hidden-layer
 ReLU network of widths `firstWidth N` and `secondWidth N` with rational weights
-and zero biases computing `max_N` on all of `ℝ^N`. (Version 3 of
-`maximum_width`; the rational coefficients come from one basis of the
-caterpillar span, `OneBasis.lean`.) -/
+and zero biases computing `max_N` on all of `ℝ^N`. (Version 4 of
+`maximum_width`; rational coefficients follow by applying a ℚ-linear
+projection at rational input points, `Simplify/Rational.lean`.) -/
 theorem caterpillar_net (N : ℕ) [NeZero N] :
     ∃ net : Network N (firstWidth N) (secondWidth N),
       (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
-  maximum_width_one_basis N
+  caterpillar_net_v4 N
 
 /-- Unfold a caterpillar expansion into the internal hypotheses. -/
 theorem IsCaterpillarExpansion.unfold {r : ℕ} {K : Finset (FaceKey r)}
@@ -55,16 +58,22 @@ theorem IsCaterpillarExpansion.unfold {r : ℕ} {K : Finset (FaceKey r)}
 theorem caterpillar_expansion_choose_le (r : ℕ) {K : Finset (FaceKey r)}
     (hK : IsCaterpillarExpansion r K) {k : ℕ} (hk : 3 ≤ k) (hkN : k ≤ r + 1 + 1) :
     (r + 1 + 1).choose k ≤ 6 ^ k * K.card := by
-  obtain ⟨hsub, d, a, h⟩ := hK.unfold
-  exact caterpillar_count_exponential r K hsub d a h hk hkN
+  have h : Simplify.IsBrunckExpansion r K ∅ := by
+    obtain ⟨hsub, d, a, hexp⟩ := hK.unfold
+    refine ⟨hsub, by simp, d, 0, a, ?_⟩
+    intro x
+    simpa [caterpillarFunction, auxiliary, auxiliaryFunction] using hexp x
+  simpa using Simplify.brunck_expansion_choose_le h hk hkN
+
 
 /-- **Exponential count.** Every caterpillar expansion `K` of `max_N`,
 `N = r + 2 ≥ 3`, satisfies `7^N ≤ (N + 1) 6^N |K|`, i.e. `|K| ≥ (7/6)^N/(N+1)`. -/
 theorem caterpillar_expansion_exponential (r : ℕ) (hr : 1 ≤ r) {K : Finset (FaceKey r)}
     (hK : IsCaterpillarExpansion r K) :
     7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * K.card := by
-  obtain ⟨hsub, d, a, h⟩ := hK.unfold
-  exact caterpillar_count_exponential_pow r hr K hsub d a h
+  exact Simplify.seven_pow_le_of_choose_le' (by omega)
+    (fun _k hk hkN => caterpillar_expansion_choose_le r hK hk hkN)
+
 
 /-- **Quadratic count.** Every caterpillar expansion `K` of `max_N`,
 `N = r + 2 ≥ 3`, satisfies `N(N - 1) ≤ 6 |K|`. -/
@@ -107,7 +116,7 @@ theorem caterpillarDim_eq (r : ℕ) : caterpillarDim r = quotientDim r := by
 `dim(V_N / A_N) ≥ (N - 2)!`. -/
 theorem caterpillarDim_ge (r : ℕ) (hr : 1 ≤ r) : r.factorial ≤ caterpillarDim r := by
   rw [caterpillarDim_eq]
-  exact factorial_le_quotientDim r hr
+  exact Simplify.factorial_le_quotientDim r hr
 
 /-! ## Relation to the construction of Brunck et al.
 

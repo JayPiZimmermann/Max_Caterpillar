@@ -17,3 +17,4 @@ import MaxCaterpillar.Frontier
 import MaxCaterpillar.Trees
 import MaxCaterpillar.Simplify.Rational
 import MaxCaterpillar.Simplify.CoverageMain
+import MaxCaterpillar.Audit

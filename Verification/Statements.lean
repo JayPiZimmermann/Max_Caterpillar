@@ -410,3 +410,83 @@ example : ∀ {N : ℕ} (F : Trees.TreeFace N) {Δ : ℕ}, (∀ u, F.hingeDeg u 
 example : ∀ {N : ℕ} (a c : Fin N) (hac : c ≠ a), Simplify.OutLeafBound (Trees.starFace a c hac).descr 1 :=
   @MaxCaterpillar.Simplify.starFace_outLeafBound
 #print axioms MaxCaterpillar.Simplify.starFace_outLeafBound
+
+example : ∀ (r : ℕ), 1 ≤ r → r.factorial ≤ quotientDim r :=
+  @MaxCaterpillar.Simplify.factorial_le_quotientDim
+#print axioms MaxCaterpillar.Simplify.factorial_le_quotientDim
+
+example : ∀ {r : ℕ} {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Simplify.IsBrunckExpansion r K₁ K₂ → ∀ {m : ℕ}, 3 ≤ m → m ≤ r + 1 + 1 → (r + 1 + 1).choose m ≤ 6 ^ m * (K₁.card + K₂.card) :=
+  @MaxCaterpillar.Simplify.brunck_expansion_choose_le
+#print axioms MaxCaterpillar.Simplify.brunck_expansion_choose_le
+
+example : ∀ {r : ℕ}, 1 ≤ r → ∀ {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Simplify.IsBrunckExpansion r K₁ K₂ → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * (K₁.card + K₂.card) :=
+  @MaxCaterpillar.Simplify.brunck_expansion_exponential
+#print axioms MaxCaterpillar.Simplify.brunck_expansion_exponential
+
+example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {Δ : ℕ}, 2 ≤ Δ → (∀ F ∈ K, Simplify.RedDeg F.descr Δ) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → (r + 1 + 1).choose k ≤ (2 * Δ + 2) ^ k * K.card :=
+  @MaxCaterpillar.Simplify.tree_reduced_choose_le
+#print axioms MaxCaterpillar.Simplify.tree_reduced_choose_le
+
+example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {Δ : ℕ}, 2 ≤ Δ → (∀ F ∈ K, Simplify.RedDeg F.descr Δ) → 6 * Δ + 8 ≤ r + 1 + 1 → (2 * Δ + 2 + 1) ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * (2 * Δ + 2) ^ (r + 1 + 1) * K.card :=
+  @MaxCaterpillar.Simplify.tree_reduced_exponential
+#print axioms MaxCaterpillar.Simplify.tree_reduced_exponential
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → (∀ F ∈ K, Simplify.RedDeg F.descr 2) → 7 ^ (r + 1 + 1) ≤ (r + 1 + 1 + 1) * 6 ^ (r + 1 + 1) * K.card :=
+  @MaxCaterpillar.Simplify.tree_reduced_exponential_two
+#print axioms MaxCaterpillar.Simplify.tree_reduced_exponential_two
+
+example : ∀ (r : ℕ), ∃ K, IsCaterpillarExpansion r K :=
+  @MaxCaterpillar.Audit.exists_isCaterpillarExpansion
+#print axioms MaxCaterpillar.Audit.exists_isCaterpillarExpansion
+
+example : ∀ (r : ℕ) {k : FaceKey r}, k ∈ caterpillarDescriptions r → ∃ F : Trees.TreeFace (r + 1 + 1), F.IsCaterpillar ∧ caterpillarFunction k = F.unit :=
+  @MaxCaterpillar.Audit.caterpillarFunction_eq_treeFace
+#print axioms MaxCaterpillar.Audit.caterpillarFunction_eq_treeFace
+
+example : ∀ {r : ℕ} {k : FaceKey r}, k ∈ caterpillarDescriptions r → ∃ F : Trees.TreeFace (r + 1 + 1), Simplify.TreeFaceR.IsUpCaterpillar F ∧ caterpillarFunction k = F.unit :=
+  @MaxCaterpillar.Simplify.caterpillarFunction_eq_upTree
+#print axioms MaxCaterpillar.Simplify.caterpillarFunction_eq_upTree
+
+example : ∀ (r : ℕ) {ι : Type} (K : Finset ι) (D : ι → CountLower.Descr (r + 1 + 1)), (∀ i ∈ K, ∀ m ∈ (D i).M, m.1 < m.2) → (∀ i ∈ K, Trees.LeafProp (D i).M) → ∀ {Δ : ℕ}, 2 ≤ Δ → (∀ i ∈ K, Simplify.RedDeg (D i) Δ) → ∀ (d : ι → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ), (∀ x, Maximum (r + 1 + 1) x = ∑ i in K, d i * (D i).unit x + auxiliary a x) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → (r + 1 + 1).choose k ≤ (2 * Δ + 2) ^ k * K.card :=
+  @MaxCaterpillar.Simplify.choose_le_of_red
+#print axioms MaxCaterpillar.Simplify.choose_le_of_red
+
+example : ∀ (r : ℕ) {k : FaceKey r}, k ∈ caterpillarDescriptions r → ∃ F : Trees.TreeFace (r + 1 + 1), F.IsCaterpillar ∧ ∀ x : Point (r + 1 + 1), caterpillarFunction k x = MaxNN.relu (x F.root - x F.apex + ∑ v in F.edgeVerts, F.edgeTerm v x) :=
+  @MaxCaterpillar.Audit.caterpillarFunction_eq_tree
+#print axioms MaxCaterpillar.Audit.caterpillarFunction_eq_tree
+
+example : ∀ (r : ℕ), ∃ K : Finset (Trees.TreeFace (r + 1 + 1)), (∀ F ∈ K, F.IsCaterpillar) ∧ Trees.IsTreeExpansion r K :=
+  @MaxCaterpillar.Audit.exists_isTreeExpansion
+#print axioms MaxCaterpillar.Audit.exists_isTreeExpansion
+
+example : ∀ (r : ℕ), ∃ K, Trees.IsRootedStarExpansion r K :=
+  @MaxCaterpillar.Audit.exists_isRootedStarExpansion
+#print axioms MaxCaterpillar.Audit.exists_isRootedStarExpansion
+
+example : ∀ (r : ℕ), ∃ (K₁ : Finset (FaceKey r)) (K₂ : Finset (Trees.TreeFace (r + 1 + 1))), Trees.IsMixedExpansion r K₁ K₂ ∧ ∀ Δ, ∀ F ∈ K₂, Trees.HubOK F.descr Δ :=
+  @MaxCaterpillar.Audit.exists_isMixedExpansion
+#print axioms MaxCaterpillar.Audit.exists_isMixedExpansion
+
+example : ∀ (r : ℕ), ∃ K : Finset (Trees.TreeFace (r + 1 + 1)), Trees.IsTreeExpansion r K ∧ (∀ F ∈ K, F.IsCaterpillar) ∧ (∀ F ∈ K, ∀ u, F.hingeDeg u ≤ r + 1 + 1) ∧ ∀ F ∈ K, Simplify.OutLeafBound F.descr (r + 1 + 1) :=
+  @MaxCaterpillar.Audit.exists_isTreeExpansion_bounded
+#print axioms MaxCaterpillar.Audit.exists_isTreeExpansion_bounded
+
+example : ∃ net : Network 3 4 3, (∀ x, net.eval x = Maximum 3 x) ∧ (Finset.univ.filter fun j => 0 < ∑ i, net.W₁ j i).card = 1 ∧ (Finset.univ.filter fun j => ∑ i, net.W₁ j i < 0).card = 1 :=
+  @MaxCaterpillar.Audit.second_width_half_succ_satisfiable_three
+#print axioms MaxCaterpillar.Audit.second_width_half_succ_satisfiable_three
+
+example : ∃ net : Network 4 6 3, (∀ x, net.eval x = Maximum 4 x) ∧ (Finset.univ.filter fun j => 0 < ∑ i, net.W₁ j i).card = 1 ∧ (Finset.univ.filter fun j => ∑ i, net.W₁ j i < 0).card = 1 :=
+  @MaxCaterpillar.Audit.second_width_half_succ_satisfiable_four
+#print axioms MaxCaterpillar.Audit.second_width_half_succ_satisfiable_four
+
+example : ∀ {h₁ h₂ : ℕ} (net : Network 3 h₁ h₂), (∀ x, net.eval x = Maximum 3 x) → ¬ 6 * h₁ + 11 * 3 < 3 * 3 * 3 + 18 :=
+  @MaxCaterpillar.Audit.second_width_joint_hyp_false_three
+#print axioms MaxCaterpillar.Audit.second_width_joint_hyp_false_three
+
+example : ∀ {h₁ h₂ : ℕ} (net : Network 4 h₁ h₂), (∀ x, net.eval x = Maximum 4 x) → ¬ 6 * h₁ + 11 * 4 < 3 * 4 * 4 + 18 :=
+  @MaxCaterpillar.Audit.second_width_joint_hyp_false_four
+#print axioms MaxCaterpillar.Audit.second_width_joint_hyp_false_four
+
+example : ∀ (N : ℕ) [NeZero N], ∃ (m K : ℕ) (c : Point N) (a : Fin m → ℝ) (B : Fin m → Point N) (d : Fin K → ℝ) (C : Fin K → Point N) (W : Fin K → Fin m → ℝ), ∀ x, Maximum N x = Frontier.lin c x + ∑ j, a j * MaxCaterpillar.relu (Frontier.lin (B j) x) + ∑ k, d k * MaxCaterpillar.relu (Frontier.lin (C k) x + ∑ j, W k j * MaxCaterpillar.relu (Frontier.lin (B j) x)) :=
+  @MaxCaterpillar.Audit.free_neurons_satisfiable
+#print axioms MaxCaterpillar.Audit.free_neurons_satisfiable

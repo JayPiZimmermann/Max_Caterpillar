@@ -1,29 +1,35 @@
 # Verification record
 
-Status: **the repository passes the complete verification gate**.
+Status: **the working tree passes the complete verification gate**.
 
 The public interface and dependency closure contain the caterpillar
-construction of $\operatorname{MAX}_N$, the Version 2 and Version 3 results
-added on 2026-10-22, the restored Wang–Sun formalization under `MaxNN/CPWL`,
+construction of $\operatorname{MAX}_N$, the Version 2–4 proofs,
+the restored Wang–Sun formalization under `MaxNN/CPWL`,
 and the Koutschan–Moser–Ponomarchuk–Schicho representation. Superseded
 declarations are kept in the sources and commented as Version 1 (or 2);
-their replacements are commented as Version 2 (or 3).
+their replacements are identified by their version and proof route.
 
-On 2026-10-22 the following command completed successfully on a local
+On 2026-10-24 the following command completed successfully on a local
 workstation (Lean 4.4.0, mathlib cache from `lake exe cache get`):
 
 ```sh
 ulimit -s unlimited && python3 scripts/verify.py
 ```
 
-The verifier built `All` and `Verification.Statements`, re-elaborated all 65
+The verifier built `All` and `Verification.Statements`, re-elaborated all 112
 exact theorem statements in `verification/main.json`, rejected `sorry`,
 `admit`, project `axiom` declarations, and `native_decide`, and audited every
-theorem with `#print axioms`. It found 239 Lean source files. Every theorem
+theorem with `#print axioms`. It found 302 Lean source files. Every theorem
 uses only the permitted foundational axioms `propext`, `Classical.choice`, and
 `Quot.sound`.
 
-Statements added on 2026-10-22 (in addition to the 27 original ones):
+The latest gate includes the simplified rational projection and third mixed
+difference proofs, the reduced-degree forest bound, its caterpillar/rooted-star
+corollary, and the existence and tree-model bridges. The unrestricted
+all-tree cubic certificate and the exploratory upper-bound searches are
+separate research results, not claims covered by this Lean receipt.
+
+Statements added on 2026-10-22 (historical list, in addition to the 27 original ones):
 
 - `maximum_width_rational`, `maximum_width_one_basis`, `coefficient_rational`,
   `network_rational`, `rational_coefficients`, `compilation`;
@@ -47,8 +53,7 @@ Statements added on 2026-10-22 (in addition to the 27 original ones):
 
 The machine-readable receipt is `verification/certificate.json`, with
 aggregate source digest
-`1e4bae2059e93e22671285562e6ab84281639860b8af32d64367be9d08b78f87`
+`1aeb284ad96c2a461d5b97f0d8e2d1531a93b6bb8a6e26266a5f4447d685dbee`
 and the SHA-256 of every checked source and manifest. Its `source_commit` is
-`null` because the gate certified the working tree by content; the checked
-Lean sources are identical to those of commit
-`8b4d74ab66f429fc454c8349ade514bc3775f557`.
+`null` because the gate certified the working tree by content. This receipt
+does not assert that the checked sources have been committed or pushed.

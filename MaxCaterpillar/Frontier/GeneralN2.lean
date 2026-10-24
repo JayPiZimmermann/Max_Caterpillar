@@ -26,7 +26,9 @@ theorem second_width_half_succ [NeZero N] (net : Network N h₁ h₂)
   net.toZ.second_width_half_succ (net.toZ_eval_of_max h) hp1 hq1
 
 /-- **Joint bound.** A network computing `max_N` whose first width is within two of the lower
-bound of `first_width_quadratic` (`6h₁ + 11N < 3N² + 18`) has `N + 2 ≤ 2h₂`. -/
+bound of `first_width_quadratic` (`6h₁ + 11N < 3N² + 18`) has `N + 2 ≤ 2h₂`.
+Conditional: it is not known whether any network satisfies the hypothesis (for `N = 3, 4`
+none does: `Audit.second_width_joint_hyp_false_three`, `Audit.second_width_joint_hyp_false_four`). -/
 theorem second_width_joint [NeZero N] (net : Network N h₁ h₂)
     (h : ∀ x, net.eval x = Maximum N x) (hh : 6 * h₁ + 11 * N < 3 * N * N + 18) :
     N + 2 ≤ 2 * h₂ :=

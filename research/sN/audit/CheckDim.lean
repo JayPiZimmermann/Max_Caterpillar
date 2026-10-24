@@ -1,0 +1,4 @@
+import MaxCaterpillar.LowerBound
+#check @MaxCaterpillar.factorial_le_quotientDim
+#print MaxCaterpillar.quotientDim
+#print axioms MaxCaterpillar.factorial_le_quotientDim
