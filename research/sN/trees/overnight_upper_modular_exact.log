@@ -1,0 +1,8 @@
+EXACT EXPRESSION 170836 CONTROLLED UNITS 16 SECONDS 8.484599994000746
+symbolic calls 14000 depth 2 terms 224 elapsed 492.2553331851959
+symbolic calls 15000 depth 3 terms 20 elapsed 494.38116335868835
+symbolic calls 58000 depth 3 terms 15 elapsed 845.5908532142639
+symbolic calls 59000 depth 3 terms 12 elapsed 850.5383727550507
+symbolic calls 67000 depth 3 terms 25 elapsed 922.9432108402252
+symbolic calls 73000 depth 2 terms 30 elapsed 964.9887013435364
+{"status": "EXACT_GATE_BUDGET_REACHED_NO_CONCLUSION", "n": 7, "source_sha256": "cf91e207405bae3f776a5fa3e22ed156ed08f9bba16aac5d0cd20cfae2af7dc2", "engine_sha256": "058bf67b084ccd634f6530fd35c3e672ed7f48ab0f63ff4b965731f43b830593", "family_sha256": "a60dde757dc7b5fde94342bcb4208e4030549050ac609732735ef5d0b89f184d", "producer_sha256": "a94c2acd8492d1374abe2251e70bbde3985db1061c645c782ff1c7d1ed41ea4c", "exact_terms": 170836, "independent_unit_controls": 16, "symbolic_calls": 78048, "symbolic_seconds": 1000.4844858646393, "total_seconds": 1008.9691664819984}
