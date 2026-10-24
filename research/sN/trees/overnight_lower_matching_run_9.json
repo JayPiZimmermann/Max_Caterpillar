@@ -1,0 +1,19 @@
+{
+  "arity": 9,
+  "rows": 3854,
+  "columns": 3822,
+  "prime": 1000003,
+  "seed": 2026102501,
+  "positive_frequency_domain": [
+    20,
+    40
+  ],
+  "positive_frequencies_distinct": true,
+  "generation_budget_seconds": 1200,
+  "rank_budget_seconds": 1200,
+  "memory_budget_bytes": 3000000000,
+  "points_sha256": "8f8c1254c1c1803eff37e0c9d9039310938d7fec1571ece3a8520b4ee13d44f7",
+  "dag_sha256": "53336bf5c1a974a007ad8ce44dc9c8fcd7b174cad3152f01f3dd6e6d0e494989",
+  "source_sha256": "aefe528627cade2749d914d3c118c4176dc02e3469f4a5df189ea9231a0adabf",
+  "status": "CONFIGURED_MODULAR_PROBE_NO_CONCLUSION"
+}

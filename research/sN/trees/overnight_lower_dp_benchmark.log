@@ -1,0 +1,25 @@
+{
+  "status": "COMPILED_DP_INDEPENDENT_CONTROLS_PASS",
+  "prime": 1000003,
+  "n9_columns": 3822,
+  "n9_states": 127848,
+  "n9_terms": 1081248,
+  "n9_complete_permutation_controls": [
+    0,
+    1911,
+    3821
+  ],
+  "permutations_per_control": 362880,
+  "n9_python_cpp_complete_row_matches": 16,
+  "n7_complete_stored_rows_checked": 5,
+  "n7_entries_per_row": 259,
+  "n9_cpp_16_rows_seconds": 1.0102565359993605,
+  "n9_cpp_seconds_per_row": 0.06314103349996003,
+  "estimated_3854_row_seconds": 243.34554310884596,
+  "child_peak_rss_kib": 149368,
+  "cpp_source_sha256": "aefe528627cade2749d914d3c118c4176dc02e3469f4a5df189ea9231a0adabf",
+  "dag_source_sha256": "77819738af10d5db091c7b7b45ae486961725d7644223a1567fdf845f11a3369",
+  "benchmark_source_sha256": "47f20de5b75e53e26fba5b99d0fb154297f4a4748340ded6087d03061b46acf3",
+  "inventory_sha256": "7650f12cf96844ba6aa2be1254776458af53160e0c29e80d0f51453a5741c9c9",
+  "elapsed_seconds": 4.1583883370003605
+}

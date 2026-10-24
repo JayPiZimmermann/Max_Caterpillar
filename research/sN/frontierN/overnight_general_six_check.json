@@ -1,0 +1,26 @@
+{
+  "status": "PASS: complete real-coefficient support/sign classification via exact finite necessities",
+  "support_multisets": 2767,
+  "support_orbits": 43,
+  "coefficient_sign_profiles": 58176,
+  "counts": {
+    "negative_flags": 55839,
+    "full_flags": 1300,
+    "pair_cuts": 1031,
+    "global_cuts": 2,
+    "bowties": 4
+  },
+  "rank_arithmetic": {
+    "prime": 1009,
+    "max_columns": 6,
+    "entry_bound": 1,
+    "all_minor_abs_bound": 720
+  },
+  "hashes": {
+    "overnight_general_six_supports.json": "9f86924da89ba88318aac4ddf30856255bf5591205b54a8a5c835362fadd7f92",
+    "overnight_general_six_pairpeeling.json": "0d00d7f03d193ff2d4a0c3d7c3f9ff500753a7d1a5d7c57dce890037897b55b5",
+    "overnight_general_six_global.json": "4f72c752f82ce1299aed36933c5f99a30759e1b56d117411d4d4a53d8999d8e3"
+  },
+  "seconds": 11.235013745998003,
+  "scope": "Finite classification plus written cell/span bridge; not Lean verified."
+}

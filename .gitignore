@@ -44,3 +44,10 @@ verification/logs/
 /research/sN/ktie/mixed2
 /research/sN/verify-logic/wcount
 
+# Reproducible overnight matching-search matrices and exact-row caches.
+/research/sN/trees/overnight_lower_*.u32
+/research/sN/trees/overnight_lower_*.bin
+/research/sN/trees/overnight_lower_exact9_chunks/*.jsonl
+/research/sN/trees/overnight_lower_exact9_chunks/*.jsonl.gz
+/research/sN/trees/overnight_lower_exact9_chunks/*.points.txt
+

@@ -1,0 +1,69 @@
+family 0 {'negative_flags': 64, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 1 {'negative_flags': 188, 'full_flags': 0, 'pair_cuts': 4, 'global_cuts': 0, 'bowties': 0}
+family 2 {'negative_flags': 192, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 3 {'negative_flags': 572, 'full_flags': 0, 'pair_cuts': 4, 'global_cuts': 0, 'bowties': 0}
+family 4 {'negative_flags': 564, 'full_flags': 12, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 5 {'negative_flags': 60, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 4}
+family 6 {'negative_flags': 64, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 7 {'negative_flags': 192, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 8 {'negative_flags': 188, 'full_flags': 0, 'pair_cuts': 4, 'global_cuts': 0, 'bowties': 0}
+family 9 {'negative_flags': 192, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 10 {'negative_flags': 444, 'full_flags': 0, 'pair_cuts': 4, 'global_cuts': 0, 'bowties': 0}
+family 11 {'negative_flags': 192, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 12 {'negative_flags': 574, 'full_flags': 2, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 13 {'negative_flags': 568, 'full_flags': 0, 'pair_cuts': 8, 'global_cuts': 0, 'bowties': 0}
+family 14 {'negative_flags': 572, 'full_flags': 0, 'pair_cuts': 4, 'global_cuts': 0, 'bowties': 0}
+family 15 {'negative_flags': 1336, 'full_flags': 0, 'pair_cuts': 8, 'global_cuts': 0, 'bowties': 0}
+family 16 {'negative_flags': 3124, 'full_flags': 0, 'pair_cuts': 12, 'global_cuts': 0, 'bowties': 0}
+family 17 {'negative_flags': 576, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 18 {'negative_flags': 190, 'full_flags': 2, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 19 {'negative_flags': 192, 'full_flags': 0, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 20 {'negative_flags': 444, 'full_flags': 4, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 21 {'negative_flags': 950, 'full_flags': 10, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 22 {'negative_flags': 564, 'full_flags': 12, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 23 {'negative_flags': 566, 'full_flags': 4, 'pair_cuts': 6, 'global_cuts': 0, 'bowties': 0}
+family 24 {'negative_flags': 562, 'full_flags': 8, 'pair_cuts': 6, 'global_cuts': 0, 'bowties': 0}
+family 25 {'negative_flags': 468, 'full_flags': 46, 'pair_cuts': 62, 'global_cuts': 0, 'bowties': 0}
+family 26 {'negative_flags': 575, 'full_flags': 1, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 27 {'negative_flags': 571, 'full_flags': 5, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 28 {'negative_flags': 1318, 'full_flags': 17, 'pair_cuts': 9, 'global_cuts': 0, 'bowties': 0}
+family 29 {'negative_flags': 1234, 'full_flags': 78, 'pair_cuts': 32, 'global_cuts': 0, 'bowties': 0}
+family 30 {'negative_flags': 1328, 'full_flags': 16, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 31 {'negative_flags': 2760, 'full_flags': 85, 'pair_cuts': 35, 'global_cuts': 0, 'bowties': 0}
+family 32 {'negative_flags': 1714, 'full_flags': 14, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 33 {'negative_flags': 1708, 'full_flags': 0, 'pair_cuts': 18, 'global_cuts': 2, 'bowties': 0}
+family 34 {'negative_flags': 1695, 'full_flags': 24, 'pair_cuts': 9, 'global_cuts': 0, 'bowties': 0}
+family 35 {'negative_flags': 1708, 'full_flags': 20, 'pair_cuts': 0, 'global_cuts': 0, 'bowties': 0}
+family 36 {'negative_flags': 1476, 'full_flags': 94, 'pair_cuts': 158, 'global_cuts': 0, 'bowties': 0}
+family 37 {'negative_flags': 1696, 'full_flags': 16, 'pair_cuts': 16, 'global_cuts': 0, 'bowties': 0}
+family 38 {'negative_flags': 3778, 'full_flags': 150, 'pair_cuts': 104, 'global_cuts': 0, 'bowties': 0}
+family 39 {'negative_flags': 3954, 'full_flags': 50, 'pair_cuts': 28, 'global_cuts': 0, 'bowties': 0}
+family 40 {'negative_flags': 3528, 'full_flags': 276, 'pair_cuts': 228, 'global_cuts': 0, 'bowties': 0}
+family 41 {'negative_flags': 8134, 'full_flags': 278, 'pair_cuts': 228, 'global_cuts': 0, 'bowties': 0}
+family 42 {'negative_flags': 5064, 'full_flags': 76, 'pair_cuts': 44, 'global_cuts': 0, 'bowties': 0}
+{
+  "status": "PASS: complete real-coefficient support/sign classification via exact finite necessities",
+  "support_multisets": 2767,
+  "support_orbits": 43,
+  "coefficient_sign_profiles": 58176,
+  "counts": {
+    "negative_flags": 55839,
+    "full_flags": 1300,
+    "pair_cuts": 1031,
+    "global_cuts": 2,
+    "bowties": 4
+  },
+  "rank_arithmetic": {
+    "prime": 1009,
+    "max_columns": 6,
+    "entry_bound": 1,
+    "all_minor_abs_bound": 720
+  },
+  "hashes": {
+    "overnight_general_six_supports.json": "9f86924da89ba88318aac4ddf30856255bf5591205b54a8a5c835362fadd7f92",
+    "overnight_general_six_pairpeeling.json": "0d00d7f03d193ff2d4a0c3d7c3f9ff500753a7d1a5d7c57dce890037897b55b5",
+    "overnight_general_six_global.json": "4f72c752f82ce1299aed36933c5f99a30759e1b56d117411d4d4a53d8999d8e3"
+  },
+  "seconds": 11.235013745998003,
+  "scope": "Finite classification plus written cell/span bridge; not Lean verified."
+}

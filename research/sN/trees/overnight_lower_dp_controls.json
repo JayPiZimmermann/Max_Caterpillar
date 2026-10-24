@@ -1,0 +1,23 @@
+{
+  "status": "EXACT_N5_AND_COMPLETE_N7_ROW_CONTROLS_PASS",
+  "n5_fraction_permutation_controls": 24,
+  "n7_complete_rows": 5,
+  "n7_columns": 258,
+  "n7_states": 3808,
+  "n7_terms": 15540,
+  "n7_python_row_seconds": [
+    0.018671773999813013,
+    0.023734783000691095,
+    0.018472712999937357,
+    0.01857977699910407,
+    0.02378265100196586
+  ],
+  "n7_diagnostics": {
+    "signed_subtree_types": 343,
+    "function_states": 968,
+    "forest_states": 2840
+  },
+  "source_sha256": "fa5b0457a8d6de21d2cff1abf97e5194c84054a0e6019719ab4b338a3c728208",
+  "producer_sha256": "77819738af10d5db091c7b7b45ae486961725d7644223a1567fdf845f11a3369",
+  "elapsed_seconds": 0.17283604000112973
+}

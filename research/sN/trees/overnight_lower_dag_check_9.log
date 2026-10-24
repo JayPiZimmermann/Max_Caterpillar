@@ -1,0 +1,13 @@
+{
+  "status": "ALL_SUBSET_DAG_IDENTITIES_AND_ROOTS_PASS",
+  "arity": 9,
+  "states": 127848,
+  "summands": 1081248,
+  "roots": 3822,
+  "inventory_sha256": "7650f12cf96844ba6aa2be1254776458af53160e0c29e80d0f51453a5741c9c9",
+  "dag_sha256": "53336bf5c1a974a007ad8ce44dc9c8fcd7b174cad3152f01f3dd6e6d0e494989",
+  "semantics_sha256": "0dd3fffc38c5977a7e4e3681bc656915ea71c74f76a065cc1a146410e28b4189",
+  "checker_sha256": "95b7f30094b18fde978c0d43a1912f8395637548689bca515ba6f114099589ac",
+  "seconds": 3.1581684660013707,
+  "scope": "Recurrence and orbit sums only; no separation or rank claim"
+}

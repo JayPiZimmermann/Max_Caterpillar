@@ -1,0 +1,30 @@
+{
+  "status": "COMPILED_DAG_NO_SPAN_CLAIM",
+  "arity": 9,
+  "columns": 3822,
+  "states": 127848,
+  "terms": 1081248,
+  "used_edge_factors": 508,
+  "diagnostics": {
+    "signed_subtree_types": 5733,
+    "function_states": 31386,
+    "forest_states": 96462
+  },
+  "compile_seconds": 1.187125576998369,
+  "binary_bytes": 13503740,
+  "binary_sha256": "53336bf5c1a974a007ad8ce44dc9c8fcd7b174cad3152f01f3dd6e6d0e494989",
+  "source_sha256": "7650f12cf96844ba6aa2be1254776458af53160e0c29e80d0f51453a5741c9c9",
+  "producer_sha256": "77819738af10d5db091c7b7b45ae486961725d7644223a1567fdf845f11a3369",
+  "python_row_seconds": 1.9791769939984079,
+  "benchmark_point": [
+    -108,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ]
+}

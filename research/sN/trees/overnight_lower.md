@@ -139,8 +139,7 @@ only yields a polynomial bound. More generally an exact separator at
 \]
 
 The next discriminating finite case is nine labels and eight-vertex trees
-without perfect matchings. A size/coverage inventory will precede any
-long numerical run. A family of finite separators must not be promoted
+without perfect matchings. A family of finite separators must not be promoted
 to an all-arity theorem without a uniform proof.
 
 The nine-label inventory now has an independent complete-domain check:
@@ -148,9 +147,46 @@ all 262144 labelled eight-vertex trees, all 23 unlabelled shapes, all 18
 matching-deficient shapes, and all 3822 normalized function orbits are
 covered. The checker uses Prüfer sequences and coloured-tree canonical
 forms, sharing no graph-library enumeration or isomorphism code with the
-producer. This certifies the search domain only. A cached subset dynamic
-program for full permutation-orbit sums is being developed before launching
-the rank search; there is no nine-label separation claim yet.
+producer. This certifies the search domain only.
+
+The shared subset recurrence in `overnight_lower_dp_README.md` now evaluates
+all full permutation sums without factorial enumeration. At 3,854 generic
+integer frequency points the 3,822 ordinary columns and maximum target have
+modular ranks 1,970/1,971, modulo 1000003. This is a diagnostic, not a rational
+separation theorem. The deterministic points, source hashes and row/column
+pivots are retained in `overnight_lower_matching_rank_9.json`.
+
+An exact finite-evaluation gate is running in restartable batches. Two primes
+reconstructed all 1,852 proposed rational column relations; each has a
+different free coordinate and otherwise uses the same 1,970 pivot columns.
+Their largest numerator or denominator has absolute value 24,440. They all
+vanish at the first independently evaluated exact row, but that single control
+does not prove their validity at the remaining rows.
+
+The gate checks every relation at all 1,971 selected exact points, using both
+reduced GMP rational arithmetic and a separate common-denominator integer
+evaluation. The two implementations must produce byte-identical canonical
+rows. An independent checker has already validated all 127,848 recurrence
+states, all 1,081,248 summands, and all 3,822 root types against direct tree
+reconstruction. A separate scalar modular determinant check is used for the
+augmented minor, without the rank-proposal solver.
+
+If all gates pass, the 1,852 independent right-kernel vectors will prove an
+ordinary exact rank at most 1,970 on those finite rows, whereas the nonzero
+augmented minor proves rank at least 1,971. This avoids solving for a huge
+rational left annihilator. **The full gate is not yet complete.** Its status is
+`overnight_lower_exact9_run.json` when written; individual completed chunks
+have receipts in `overnight_lower_exact9_chunks/`. The hypothetical counting
+consequence is `|K| >= binom(N,5)/126` for `N>=9`, still polynomial.
+
+The attempted frequency-collision shortcut is also recorded. One positive
+outlier and otherwise equal positive frequencies retain a five-label modular
+gap (4/5) but lose it at seven labels (20/20). Two independent positive
+outliers recover the seven-label ranks 112/113, but at nine labels give
+408/408 on 500 rows. These are bounded diagnostics about those projections,
+not refutations of the full matching-separation conjecture. Exact five-label
+Laurent controls independently confirm cancellation of the removable
+pair-difference poles used by the coalescence instrument.
 
 ## A paired-frequency shortcut, and its obstruction
 

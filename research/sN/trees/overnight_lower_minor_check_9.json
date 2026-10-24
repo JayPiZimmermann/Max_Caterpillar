@@ -1,0 +1,14 @@
+{
+  "status": "NONZERO_AUGMENTED_MINOR_MOD_PRIME",
+  "dimension": 1971,
+  "prime": 1000003,
+  "determinant": 938220,
+  "row_swaps": 0,
+  "seconds": 25.2595,
+  "minor_sha256": "f4bf3442fa34db8bca0841da6c96c272316d631607dbb0b295d73a0ffca2b74b",
+  "matrix_sha256": "f1de036dc395a71dca30a9c34d27e3731af681df39e2cbda0195a619bae3621c",
+  "rank_proposal_sha256": "7a27f363930a76e59ae6afb9d51811e6bf7cfa24c2db504de6daf0cdf383db8c",
+  "checker_cpp_sha256": "f9bb9d316394853336d3df065be24cb8de2cc4867956630cf8be312ee5d469b1",
+  "checker_python_sha256": "079555d651d3fbcb31b1d6c6d6cb11f90320e27e21849912e48d0d0790760ec8",
+  "scope": "Rational augmented rank lower bound after exact row/reduction checks; no ordinary rank upper bound here"
+}
