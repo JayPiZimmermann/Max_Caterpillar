@@ -23,12 +23,13 @@ real coefficients, using the exact certificate below.
 Consequences in the no-skip architecture, counting every neuron:
 
 * For the paper's fixed 16-feature first layer, `5 <= h2* <= 6`.
-* For the fixed 10-feature first layer of `netB_10_6.json`, likewise
-  `5 <= h2* <= 6`.
+* For the fixed 10-feature first layer of `netB_10_6.json`, the subsequent
+  complete K=3 certificate now proves `h2*=6`; see
+  `overnight_fixed_bowtie.md` for the matching result and proof gate.
 
-Neither statement says that unrestricted first layers require second
-width five. Nor does it decide between five and six for either fixed
-layer. The next task is a three-free-neuron exclusion or construction.
+The full paper layer remains undecided between five and six. These
+statements do not say that every unrestricted first layer requires
+second width five.
 
 ## Why the fixed-layer width gains two
 
@@ -41,13 +42,21 @@ The 10-feature construction uses eight coordinate-difference ReLUs and
 span of the paper's first layer based at coordinate1. Thus any network
 with that fixed 10-row layer can be implemented with the full paper
 layer at the same second width. The lower bound five transfers. The
-existing `(10,6)` exact network supplies the upper bound six.
+existing `(10,6)` exact network supplies the upper bound six. The
+subsequent stronger fixed-layer equations in `overnight_fixed_bowtie.md`
+close this gap exactly.
 
-More generally, the lower bound applies to any first layer consisting
-of coordinate-difference features and the two carriers
-`sigma(x_r),sigma(-x_r)`; arbitrary hidden-layer weights and signed
-output weights are allowed. A first layer with unrelated carrier
-hyperplanes is outside this conclusion.
+More generally, the lower bound five applies when every zero-sum
+first-layer row is a coordinate difference and there is exactly one
+positive-sum and one negative-sum first-layer row. The two carrier
+hyperplanes need not coincide. At each translation end, K2 exclusion
+forces at least three zero-slope neurons. If the second width were four,
+the positive and negative ends would have distinct unique passing
+neurons, leaving two common free neurons. Comparing the two identities
+gives a globally nonnegative linear function equal to a positive sum of
+two negative-part functions. The linear function must vanish, so both
+passing neurons can be absorbed into the unrestricted linear-plus-pair
+remainder. This contradicts the K2 certificate.
 
 ## Exact necessary equations
 
@@ -166,10 +175,12 @@ sigma(u), sigma(u-v), sigma(-v), sigma(v),
 sigma(s), sigma(-t), sigma(t), sigma(s-t), sigma(x1), sigma(-x1).
 ```
 
-Its eight translation-invariant features give only309 nonzero
-locality-coverage masks. Exact enumeration leaves30029 covering
-triples of vanishing flats for a possible three-free-neuron identity.
-This is a finite necessary-condition search space, not an exclusion.
+Its eight translation-invariant features give 310 locality-coverage
+masks, including zero. Complete enumeration gives 30,041 covering
+triples of nonzero vanishing flats. All eight output-sign choices have
+now been independently excluded, including the six zero-coverage flats;
+see `overnight_fixed_bowtie.md`. The earlier counts 309 and 30,029 omitted
+those six flats and are superseded.
 
 The natural eight-row candidate keeps the four positive differences
 `sigma(u),sigma(v),sigma(s),sigma(t)`, the two comparisons

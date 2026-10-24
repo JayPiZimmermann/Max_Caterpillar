@@ -1,0 +1,8 @@
+{
+  "cases": 240328,
+  "new_counts": {},
+  "producer_sha256": "5eacafd34c3afdcfc4d669c3104078e110c14e50dfe408b3a9bc0b71aea17474",
+  "proof_sha256": "8509278c66a6791361c06f8cc06cf04467c4ff33359a9d713d61958f61be5b5f",
+  "seconds": 2.3344827449982404,
+  "status": "ALL_K3_PROOFS_PRODUCED"
+}

@@ -1,0 +1,1 @@
+{"coverage_masks": 310, "covering_mask_pairs": 2, "covering_mask_triples": 11272, "dimension_counts": {"1": 36, "2": 105, "3": 161, "4": 161, "5": 105, "6": 43, "7": 10, "8": 1}, "flat_triples_upper": 30041, "seconds": 2.4311721260019112, "status": "EXACT_NECESSARY_COVER_INVENTORY", "unique_hyperplanes": 10}

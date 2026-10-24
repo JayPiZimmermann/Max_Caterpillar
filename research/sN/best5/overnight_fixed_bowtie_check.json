@@ -1,0 +1,24 @@
+{
+  "checker_sha256": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+  "counts": {
+    "cases": 240328,
+    "circuit_uses": 18157,
+    "cone": 240144,
+    "constant": 8474,
+    "equation_spaces": 184,
+    "farkas": 131222,
+    "split": 139512,
+    "tree": 184
+  },
+  "hashes": {
+    "netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+    "overnight_fixed_bowtie_coverage.json": "aa98f9e0821edd8c512a3a1a4720822765e79e4823eadbc095498b1c172528ff",
+    "overnight_fixed_bowtie_coverage_triples.json": "f29a6c0c245bdea301f9e049665521a8c46654bd700c98d36a812ddef763e017",
+    "overnight_fixed_bowtie_inventory.json": "21f36c76b052776d5abec7a84409eb82da9e5f758ddb200bfae4996c00ecb5a1",
+    "overnight_fixed_bowtie_proof.jsonl.gz": "8509278c66a6791361c06f8cc06cf04467c4ff33359a9d713d61958f61be5b5f",
+    "overnight_fixed_k2_check.json": "286f7463b240218963ff7dc5abf8e3d2e233c1e0c86a0f3309ba736409624ee8"
+  },
+  "scope": "All real preactivations and remainder in the eight zero-sum first-layer feature span; mathematical locality/translation bridge; not Lean",
+  "seconds": 214.24995566100188,
+  "status": "INDEPENDENT_EXACT_BOWTIE_K3_EXCLUSION_PASS"
+}
