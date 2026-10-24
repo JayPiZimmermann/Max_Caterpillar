@@ -3,6 +3,7 @@ Proved (Lean): quadratic N(N-1) <= 6|K| for arbitrary tree units; exponential bo
 Brunck et al. vocabulary (caterpillars + all rooted-star faces, stars not counted).
 Refuted (measured): path necessity at a 5-tie. Next test: germ functionals that use head
 size / multiplicity jointly (big-head germs need non-leaf outside structure).
+Step 13: no uniform (all-heads) mixed-difference functional kills twin germs at m=5 (spread must be >= R+1); m=4 exact uniform functional; per-R separation measured.
 
 # Tree units: does the exponential lower bound survive? (research/sN/trees)
 
@@ -187,3 +188,48 @@ Lambda kills germs with >= m-2 out-leaves at a centre (lam_r.py: m=5 r=3, m=6 r=
 >= m-3 (m=6 r=3: 4320/8640 nonzero).
 Status: general-m twin elimination OPEN (measured true for m <= 6 and m = 7, R = 1); no PROOFS.md entry.
 m=7 R=2 run still in progress (logs/sym_md_7.log; slow canonicalisation).
+
+### 13. Fresh look at the all-twin functional: reformulations; m = 4 exact; NO finite uniform functional at m = 5
+Reformulations (proved on paper, elementary):
+ (a) MD functionals = pairings with D = d_1...d_m.  A PL function with all m-th mixed differences zero is a
+     sum of PL functions each independent of one coordinate (ANOVA: f(z) = -sum_{S != [m]} (-1)^{m-|S|} f(z_S)).
+     So a twin-killing Phi_m (killing W_m = sum_i {f independent of z_i}) exists for heads <= R iff
+     max_m is not in span(twin germs, heads <= R) + W_m.
+ (b) Unit-cube form: on diagonal-invariant germs every integer-box MD functional is
+     Phi_W f = sum_{ybar in Z^m / Z.1} W(ybar) U_ybar f  (U_y = MD on the unit cube anchored at y), and
+     U_y(max) = (-1)^{m+1} [y in Z.1], so Phi_W(max) = (-1)^{m+1} W(0).  Origin-anchored positive steps
+     are WLOG (diagonal translation + inclusion-exclusion); MD_delta max = (-1)^{m+1} min(delta).
+ (c) D max restricted to 1^perp is the point mass at 0 (Fourier transform constant).
+m = 4 (EXACT, twin_m4_check.py): W = 1 on the S_4-orbits of (0000), (0022), (0111), (0122) and 2 on the
+orbit of (0222) gives Phi(max) = -1 and Phi(g) = 0 for every twin germ at a 4-tie, all labelings and ALL
+kappa (Phi(g_kappa) is PL in kappa with kinks |kappa| <= 12; checked |kappa| <= 60).  At m = 4 the twin family
+is {relu(-z_a + (1-2k) z_c + k(z_1+z_2) + relu(z_1-z_c) + relu(z_2-z_c))} (in-orientation = out at k-1).
+m = 5 (measured, twin_wsep.py, anchors normalised min 0, entries <= k): separation holds iff k >= R+1 in all
+runs: R=2: k=4 yes (k=2,3 no); R=4: k=5 yes, k=4 no; R=6: k=7 yes, k=5,6 no; R=8: k=9 yes, k=5..8 no;
+R=10: k=11 yes, k=9 no.  For each fixed k the family rank saturates (k=5: rank 106 at R=6 and R=8; k=6: 189)
+with max INSIDE.  Same failure when only the twin leaves' heads are bounded (|kappa| <= 1, others <= R).
+CONSEQUENCE: at m = 5 no finite combination of mixed differences (any rational boxes) kills all twin germs
+for all head sizes; Phi_m must depend on the head bound R (resolution ~ 1/(R+1)) or be a non-finite
+(limit / integral) functional.  Per-R separation still holds (measured R <= 10).
+Closure probe (twin_limit.py, generic boxes): adding head-limit functions 1[<l,z> > 0] * L0 (limits of
+twin germs with heads v0 + lambda l, l_apex = 0, l equal on the twin pair) adds 1 dimension and keeps max
+separated (m=5, R <= 4, |l| <= 2): no sign that max lies in the closure, so a continuous (non-finite)
+uniform functional may exist.
+Wall-density functionals (twin_jfam.py: MDs of the H_12 jump density J_12 f, symmetrised; they kill W
+and twins at their own pair) do NOT separate even at m = 4.
+One-huge-step limit functionals (twin_hier.py: sum_t Psi o Delta_t with Psi an (m-1)-dim unit-anchor
+functional, D = 10^7, plus m-dim anchors) with fixed spreads also lose separation as R grows (m=5: k1<=6,
+k2<=5 fail at R=4..8).
+Continuum probe (twin_l2.py, L^2 on 2500 random chamber points of the symmetrised MD transform):
+relative residual of max against span(twins, heads <= R): m=4: 0.109, 0.059, 0.048, 0.045, 0.044 (R=1..32,
+stable -> consistent with the uniform m=4 functional); m=5: 2.2e-2 (R=1), 8.3e-3 (2), 8.6e-3 (3), 5.7e-3 (4),
+4.9e-3 (6), 3.6e-3 (8), 3.9e-3 (10) (logs/twin_l2_5.log; numerical ranks 36/64/102/200/330/492 = exact ranks).
+Decreasing, possibly levelling off; INCONCLUSIVE whether max lies in the closure at m=5.
+New separation data (generic symmetric tests, sym_generic.py, validated: m=6 R=3 "two" rank 135 as before):
+m=6 twin R=3 (3142 germ reps): rank 849, with max 850 -> SEPARATED (logs/gen_twin_6_3.log).
+m=7 "two" R=2 (old run "not separated" with 6 step values, 792 tests, rank 610): re-test with generic tests
+queued (logs/gen_two_7_2.log; family cache logs/fam_two_7_2.pkl, slow canonicalisation).
+Status: per-R twin elimination measured true (m<=6, m=5 up to R=10); a UNIFORM (all heads) functional of
+mixed-difference type does not exist at m=5 (measured); a short general-m proof via one explicit Phi_m is
+not in sight.  Twin elimination would have to be R-dependent (heads up to N at a locality), so the route
+"one explicit Phi_m" to an exponential bound for arbitrary trees is blocked as stated.

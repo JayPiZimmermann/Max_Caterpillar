@@ -1,0 +1,9 @@
+m=5 R=1: 24 germs, numerical rank 14, relative residual 2.229e-02 (11s)
+m=5 R=2: 72 germs, numerical rank 36, relative residual 8.333e-03 (36s)
+m=5 R=3: 144 germs, numerical rank 64, relative residual 8.641e-03 (70s)
+m=5 R=4: 240 germs, numerical rank 102, relative residual 5.722e-03 (102s)
+m=5 R=6: 504 germs, numerical rank 200, relative residual 4.851e-03 (250s)
+m=5 R=8: 864 germs, numerical rank 330, relative residual 3.574e-03 (491s)
+m=5 R=10: 1320 germs, numerical rank 492, relative residual 3.871e-03 (658s)
+
+[exited with code 0]

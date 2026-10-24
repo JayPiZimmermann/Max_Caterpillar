@@ -1,0 +1,3 @@
+batch 1: 300 tests, 3142 germs: rank 300, with max 300 -> not separated (423s)
+batch 2: 600 tests, 3142 germs: rank 600, with max 600 -> not separated (1064s)
+batch 3: 900 tests, 3142 germs: rank 849, with max 850 -> SEPARATED (2059s)
