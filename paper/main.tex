@@ -71,7 +71,7 @@
 \makeatletter
 \newcommand{\DeclareSourceEquation}[2]{\expandafter\def\csname paper@lean@#1\endcsname{#2}}
 \makeatother
-\newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557}
+\newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/f312cc5e0065a5e9976465f4a12aedd9571c719b}
 \DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{39}
 \DeclareLeanEquation{eq:count}{MaxCaterpillar/Definitions.lean}{63}
 \DeclareLeanEquation{eq:word}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}
@@ -440,7 +440,7 @@ hidden layers.
 \end{theorem}
 Their first proof proceeds by induction on dimension, using homological algebra to construct a linear combination of support functions of pyramids over parallelepipeds that agrees with the simplex support function modulo lower-dimensional terms. Our construction restricts these building blocks to an explicitly specified finite family, the caterpillar polytopes; we deliver a geometric proof of the corresponding identity.
 
-Independently and concurrently, they developed a second proof based on combinatorial cancellation, using the same caterpillar construction. The caterpillar family and coefficients coincide with ours. \Cref{app:bsy} identifies their building blocks with ours: for nonempty marked sets their pyramids are translated caterpillar polytopes, and the remaining pyramids are rooted stars, which are not caterpillar functions. We establish explicit width bounds for the first and second hidden layers, respectively. These bounds also apply to their combinatorial construction but are not stated in their paper.
+Independently and concurrently, they developed a second proof based on combinatorial cancellation, with building blocks closely related to ours. \Cref{app:bsy} identifies them exactly: for nonempty marked sets their pyramids are translated caterpillar polytopes, and the remaining pyramids are rooted stars, which are not caterpillar functions. We do not claim that their coefficients agree with ours. We establish explicit width bounds for the first and second hidden layers; their paper states no widths.
 
 
 \section{The Caterpillar Net}\label{sec:construction}
@@ -2325,7 +2325,7 @@ by itself assert an efficient algorithm for extracting numerical weights.
 
 \subsection{Verification scope}
 The repository's verification certificate, dated 22 October 2026, records
-a build with Lean 4.4.0 and checks 65 public statements against their exact
+a build with Lean 4.4.0 and checks 102 public statements against their exact
 types. Its permitted axioms are \texttt{propext},
 \texttt{Classical.choice}, and \texttt{Quot.sound}. The checked interface
 includes dictionary sufficiency, rational expansions, network correctness
