@@ -1,0 +1,5 @@
+N 6 R 3 vals [-1, 0, 1] diag False types 16998 cross 2277 TOP False
+
+real	1m17.288s
+user	1m9.051s
+sys	0m8.207s

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/construct/dstar_block2.py", line 34, in <module>
+    st, w, sh = S.solve_lp(ntypes)
+                ^^^^^^^^^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/construct/blocksym.py", line 43, in solve_lp
+    res = linprog(np.zeros(ntypes), A_eq=M, b_eq=b, bounds=(None, None), method='highs')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h4-general-neurons/venv/lib/python3.12/site-packages/scipy/optimize/_linprog.py", line 660, in linprog
+    sol = _linprog_highs(lp, solver=highs_solvers[meth],
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h4-general-neurons/venv/lib/python3.12/site-packages/scipy/optimize/_linprog_highs.py", line 355, in _linprog_highs
+    res = _highs_wrapper(c, A.indptr, A.indices, A.data, lhs, rhs,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/dfs/h4-general-neurons/venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_highs_wrapper.py", line 206, in _highs_wrapper
+    run_status = highs.run()
+                 ^^^^^^^^^^^
+MemoryError: std::bad_alloc

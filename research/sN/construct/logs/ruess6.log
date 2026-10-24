@@ -1,0 +1,16 @@
+atoms 4095
+iter 0 support 294
+iter 1 support 279
+iter 2 support 279
+iter 3 support 279
+iter 4 support 279
+iter 5 support 279
+best 279
+atoms 4095
+iter 0 neurons 253
+iter 1 neurons 110
+iter 2 neurons 110
+iter 3 neurons 110
+iter 4 neurons 110
+iter 5 neurons 110
+best 110
