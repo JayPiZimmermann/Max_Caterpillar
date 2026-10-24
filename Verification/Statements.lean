@@ -338,3 +338,75 @@ example : ∀ (r : ℕ) {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFa
 example : ∀ (N : ℕ) [inst : NeZero N], ∃ net : Network N (firstWidth N) (secondWidth N), (∀ x, net.eval x = Maximum N x) ∧ net.HasRationalWeights ∧ net.HasZeroBiases :=
   @MaxCaterpillar.caterpillar_net_v4
 #print axioms MaxCaterpillar.caterpillar_net_v4
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}, M ⊆ Finset.Icc 2 (r + 1) → BHRSY.parallelepiped v π M = zonotope (Pi.single (π.pos (BHRSY.lastMarked M)) 1) (Finset.Icc 2 (r + 1)) (fun i => Pi.single (π.pos (BHRSY.markedParent M i)) 1 - Pi.single (π.pos i) 1) :=
+  @MaxCaterpillar.bhrsy_parallelepiped_eq_zonotope
+#print axioms MaxCaterpillar.bhrsy_parallelepiped_eq_zonotope
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}, M ⊆ Finset.Icc 2 (r + 1) → ∀ (hne : M.Nonempty), BHRSY.parallelepiped v π M = zonotope (Pi.single (π.pos (M.max' hne)) 1) (Finset.Icc 2 (r + 1)) (fun i => Pi.single (π.pos (BHRSY.markedParent M i)) 1 - Pi.single (π.pos i) 1) :=
+  @MaxCaterpillar.bhrsy_parallelepiped_eq_zonotope_of_nonempty
+#print axioms MaxCaterpillar.bhrsy_parallelepiped_eq_zonotope_of_nonempty
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v), BHRSY.parallelepiped v π ∅ = zonotope (Pi.single (π.pos 1) 1) (Finset.Icc 2 (r + 1)) (fun i => Pi.single (π.pos 1) 1 - Pi.single (π.pos i) 1) :=
+  @MaxCaterpillar.bhrsy_parallelepiped_empty
+#print axioms MaxCaterpillar.bhrsy_parallelepiped_empty
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}, M ⊆ Finset.Icc 2 (r + 1) → ∀ (y : Point (r + 1 + 1)), BHRSY.paramidSupport v π M y = y v + MaxCaterpillar.relu (y (π.pos (BHRSY.lastMarked M)) - y v + ∑ i in Finset.Icc 2 (r + 1), MaxCaterpillar.relu (y (π.pos (BHRSY.markedParent M i)) - y (π.pos i))) :=
+  @MaxCaterpillar.bhrsy_support_eq
+#print axioms MaxCaterpillar.bhrsy_support_eq
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}, M ⊆ Finset.Icc 2 (r + 1) → (BHRSY.cutSet (r := r) M).card = M.card ∧ ∀ y : Point (r + 1 + 1), BHRSY.paramidSupport v π M y = y v + caterpillarFunction (caterpillarWordDescription π.word (BHRSY.cutSet M)) y :=
+  @MaxCaterpillar.bhrsy_support_eq_word
+#print axioms MaxCaterpillar.bhrsy_support_eq_word
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}, M ⊆ Finset.Icc 2 (r + 1) → M.Nonempty → ∃ k ∈ caterpillarDescriptions r, ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y :=
+  @MaxCaterpillar.bhrsy_support_mem_caterpillar
+#print axioms MaxCaterpillar.bhrsy_support_mem_caterpillar
+
+example : ∀ {r : ℕ} (σ : Equiv.Perm (Fin (r + 1 + 1))) {S : Finset (Fin (r + 1))}, S.Nonempty → (0 : Fin (r + 1)) ∉ S → ∃ (v : Fin (r + 1 + 1)) (π : BHRSY.Ordering (r + 1 + 1) v) (M : Finset ℕ), M ⊆ Finset.Icc 2 (r + 1) ∧ M.Nonempty ∧ ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction (caterpillarWordDescription σ S) y :=
+  @MaxCaterpillar.bhrsy_word_mem
+#print axioms MaxCaterpillar.bhrsy_word_mem
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) (y : Point (r + 1 + 1)), BHRSY.paramidSupport v π ∅ y = y v + Trees.rootedStar v (π.pos 1) y :=
+  @MaxCaterpillar.bhrsy_support_empty
+#print axioms MaxCaterpillar.bhrsy_support_empty
+
+example : ∀ {r : ℕ} {a c : Fin (r + 1 + 1)}, a ≠ c → ∀ {k : FaceKey r}, k ∈ caterpillarDescriptions r → Trees.rootedStar a c ≠ caterpillarFunction k :=
+  @MaxCaterpillar.rootedStar_ne_caterpillarFunction
+#print axioms MaxCaterpillar.rootedStar_ne_caterpillarFunction
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v), ¬ ∃ k ∈ caterpillarDescriptions r, ∀ y, BHRSY.paramidSupport v π ∅ y = y v + caterpillarFunction k y :=
+  @MaxCaterpillar.bhrsy_support_empty_not_caterpillar
+#print axioms MaxCaterpillar.bhrsy_support_empty_not_caterpillar
+
+example : ∀ {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}, M ⊆ Finset.Icc 2 (r + 1) → (M.Nonempty ∧ ∃ k ∈ caterpillarDescriptions r, ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y) ∨ (M = ∅ ∧ (∀ y, BHRSY.paramidSupport v π M y = y v + Trees.rootedStar v (π.pos 1) y) ∧ ¬ ∃ k ∈ caterpillarDescriptions r, ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y) :=
+  @MaxCaterpillar.bhrsy_family
+#print axioms MaxCaterpillar.bhrsy_family
+
+example : ∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {s : ℕ}, (∀ F ∈ K, Simplify.OutLeafBound F.descr s) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → ((r + 1 + 1).choose k : ℝ) ≤ (16 * ((s : ℝ) + 1) / 3) ^ k * K.card :=
+  @MaxCaterpillar.Simplify.tree_outLeaf_choose_le
+#print axioms MaxCaterpillar.Simplify.tree_outLeaf_choose_le
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {s : ℕ}, (∀ F ∈ K, Simplify.OutLeafBound F.descr s) → (16 * ((s : ℝ) + 1) / 3 + 1) ^ (r + 1 + 1) ≤ ((r + 1 + 1 : ℕ) + 1) * (16 * ((s : ℝ) + 1) / 3) ^ (r + 1 + 1) * K.card :=
+  @MaxCaterpillar.Simplify.tree_outLeaf_exponential
+#print axioms MaxCaterpillar.Simplify.tree_outLeaf_exponential
+
+example : ∀ (r : ℕ) {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K₁ K₂ → ∀ {s : ℕ}, 1 ≤ s → (∀ F ∈ K₂, Simplify.OutLeafBound F.descr s) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → ((r + 1 + 1).choose k : ℝ) ≤ (16 * ((s : ℝ) + 1) / 3) ^ k * (K₁.card + K₂.card) :=
+  @MaxCaterpillar.Simplify.mixed_outLeaf_choose_le
+#print axioms MaxCaterpillar.Simplify.mixed_outLeaf_choose_le
+
+example : ∀ (r : ℕ), 1 ≤ r → ∀ {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K₁ K₂ → ∀ {s : ℕ}, 1 ≤ s → (∀ F ∈ K₂, Simplify.OutLeafBound F.descr s) → (16 * ((s : ℝ) + 1) / 3 + 1) ^ (r + 1 + 1) ≤ ((r + 1 + 1 : ℕ) + 1) * (16 * ((s : ℝ) + 1) / 3) ^ (r + 1 + 1) * ((K₁.card : ℝ) + K₂.card) :=
+  @MaxCaterpillar.Simplify.mixed_outLeaf_exponential
+#print axioms MaxCaterpillar.Simplify.mixed_outLeaf_exponential
+
+example : ∀ {N : ℕ} {D : CountLower.Descr N}, (∀ m ∈ D.M, m.1 < m.2) → ∀ {Δ : ℕ}, Trees.HubOK D Δ → Simplify.OutLeafBound D Δ :=
+  @MaxCaterpillar.Simplify.outLeafBound_of_hubOK
+#print axioms MaxCaterpillar.Simplify.outLeafBound_of_hubOK
+
+example : ∀ {N : ℕ} (F : Trees.TreeFace N) {Δ : ℕ}, (∀ u, F.hingeDeg u ≤ Δ) → Simplify.OutLeafBound F.descr Δ :=
+  @MaxCaterpillar.Simplify.outLeafBound_of_hingeDeg_le
+#print axioms MaxCaterpillar.Simplify.outLeafBound_of_hingeDeg_le
+
+example : ∀ {N : ℕ} (a c : Fin N) (hac : c ≠ a), Simplify.OutLeafBound (Trees.starFace a c hac).descr 1 :=
+  @MaxCaterpillar.Simplify.starFace_outLeafBound
+#print axioms MaxCaterpillar.Simplify.starFace_outLeafBound

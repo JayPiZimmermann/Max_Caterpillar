@@ -2,6 +2,7 @@ import MaxCaterpillar.OneBasis
 import MaxCaterpillar.CountLower
 import MaxCaterpillar.CountExp
 import MaxCaterpillar.LowerBound
+import MaxCaterpillar.Competing.Support
 
 /-! # The public theorem interface
 
@@ -18,6 +19,10 @@ imports.
   uses at least `C(N,k)/6^k` (`3 ≤ k ≤ N`), hence `(7/6)^N/(N+1)`, and at least
   `N(N-1)/6` caterpillar functions.
 * `caterpillarDim_ge`: `dim(V_N/A_N) ≥ (N-2)!`.
+* `bhrsy_*`, `rootedStar_ne_caterpillarFunction`: the pyramids `pyr_{e_v}(B_{v,π,M})` of
+  Brunck et al. (arXiv:2610.28587v1, Sec. 7.1; definitions in `Competing/Defs.lean`) are
+  translated caterpillar polytopes for `M ≠ ∅` and rooted stars for `M = ∅`; rooted stars
+  are not caterpillar functions.
 -/
 
 open BigOperators
@@ -103,5 +108,110 @@ theorem caterpillarDim_eq (r : ℕ) : caterpillarDim r = quotientDim r := by
 theorem caterpillarDim_ge (r : ℕ) (hr : 1 ≤ r) : r.factorial ≤ caterpillarDim r := by
   rw [caterpillarDim_eq]
   exact factorial_le_quotientDim r hr
+
+/-! ## Relation to the construction of Brunck et al.
+
+`N = r + 2`, an apex `v`, an ordering `π` of `[N] ∖ {v}` (positions `1, …, N - 1`), and
+marked positions `M ⊆ {2, …, N - 1}` as in arXiv:2610.28587v1, Sec. 7.1, Eq. (3). -/
+
+/-- **(a) Zonotope form.** `B_{v,π,M} = e_{π_q} + ∑_{i=2}^{N-1} [0, e_{π_{r(i)}} - e_{π_i}]` with
+`q = max ({1} ∪ M)` and `r(i) = max ({1} ∪ {j ∈ M : j < i})`. -/
+theorem bhrsy_parallelepiped_eq_zonotope {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1)) :
+    BHRSY.parallelepiped v π M =
+      zonotope (Pi.single (π.pos (BHRSY.lastMarked M)) 1) (Finset.Icc 2 (r + 1))
+        (fun i => Pi.single (π.pos (BHRSY.markedParent M i)) 1 - Pi.single (π.pos i) 1) :=
+  BHRSY.parallelepiped_eq_zonotope π hM
+
+/-- **(a), `M ≠ ∅`.** `B_{v,π,M} = e_{π_{max M}} + ∑_{i=2}^{N-1} [0, e_{π_{r(i)}} - e_{π_i}]`. -/
+theorem bhrsy_parallelepiped_eq_zonotope_of_nonempty {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1))
+    (hne : M.Nonempty) :
+    BHRSY.parallelepiped v π M =
+      zonotope (Pi.single (π.pos (M.max' hne)) 1) (Finset.Icc 2 (r + 1))
+        (fun i => Pi.single (π.pos (BHRSY.markedParent M i)) 1 - Pi.single (π.pos i) 1) := by
+  rw [← BHRSY.lastMarked_eq_max' hM hne]
+  exact BHRSY.parallelepiped_eq_zonotope π hM
+
+/-- **(a), `M = ∅`.** `B_{v,π,∅} = e_{π₁} + ∑_{i=2}^{N-1} [0, e_{π₁} - e_{π_i}]`. -/
+theorem bhrsy_parallelepiped_empty {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) :
+    BHRSY.parallelepiped v π ∅ =
+      zonotope (Pi.single (π.pos 1) 1) (Finset.Icc 2 (r + 1))
+        (fun i => Pi.single (π.pos 1) 1 - Pi.single (π.pos i) 1) := by
+  rw [BHRSY.parallelepiped_eq_zonotope π (Finset.empty_subset _), BHRSY.lastMarked_empty]
+  simp only [BHRSY.markedParent_empty]
+
+/-- **(b) Support function.** `h_{pyr_{e_v}(B_{v,π,M})}(y) =
+y_v + σ(y_{π_q} - y_v + ∑_{i=2}^{N-1} σ(y_{π_{r(i)}} - y_{π_i}))`. -/
+theorem bhrsy_support_eq {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
+    {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1)) (y : Point (r + 1 + 1)) :
+    BHRSY.paramidSupport v π M y = y v + MaxCaterpillar.relu (y (π.pos (BHRSY.lastMarked M)) - y v +
+      ∑ i in Finset.Icc 2 (r + 1),
+        MaxCaterpillar.relu (y (π.pos (BHRSY.markedParent M i)) - y (π.pos i))) :=
+  BHRSY.paramidSupport_eq π hM y
+
+/-- **(c) The dictionary.** The support function is `y_v + U_{π',S}` for the word
+`π' = (v, π₁, …, π_{N-1})` and the cut set `S = M - 1`, and `|S| = |M|`. -/
+theorem bhrsy_support_eq_word {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
+    {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1)) :
+    (BHRSY.cutSet (r := r) M).card = M.card ∧ ∀ y : Point (r + 1 + 1),
+      BHRSY.paramidSupport v π M y =
+        y v + caterpillarFunction (caterpillarWordDescription π.word (BHRSY.cutSet M)) y :=
+  ⟨BHRSY.card_cutSet hM, BHRSY.paramidSupport_eq_word π hM⟩
+
+/-- **(c) `M ≠ ∅`: caterpillar polytopes.** The support function is `y_v` plus a caterpillar
+function `U_k`, `k ∈ 𝒦₀`. -/
+theorem bhrsy_support_mem_caterpillar {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1))
+    (hne : M.Nonempty) :
+    ∃ k ∈ caterpillarDescriptions r,
+      ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y :=
+  BHRSY.exists_caterpillarDescription π hM hne
+
+/-- **(c) Converse.** Every caterpillar word `(σ, S)` is a pyramid of Brunck et al. with
+`M ≠ ∅` (namely `v = σ 0`, `π_j = σ j`, `M = S + 1`). -/
+theorem bhrsy_word_mem {r : ℕ} (σ : Equiv.Perm (Fin (r + 1 + 1))) {S : Finset (Fin (r + 1))}
+    (hS : S.Nonempty) (hS0 : (0 : Fin (r + 1)) ∉ S) :
+    ∃ (v : Fin (r + 1 + 1)) (π : BHRSY.Ordering (r + 1 + 1) v) (M : Finset ℕ),
+      M ⊆ Finset.Icc 2 (r + 1) ∧ M.Nonempty ∧ ∀ y,
+        BHRSY.paramidSupport v π M y =
+          y v + caterpillarFunction (caterpillarWordDescription σ S) y := by
+  refine BHRSY.exists_paramid_of_word σ (Finset.mem_erase.mpr ⟨hS.ne_empty, ?_⟩)
+  exact Finset.mem_powerset.mpr fun j hj =>
+    Finset.mem_erase.mpr ⟨fun h => hS0 (h ▸ hj), Finset.mem_univ j⟩
+
+/-- **(d) `M = ∅`: rooted stars.** `h_{pyr_{e_v}(B_{v,π,∅})}(y) = y_v + S_{v,π₁}(y)`. -/
+theorem bhrsy_support_empty {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
+    (y : Point (r + 1 + 1)) :
+    BHRSY.paramidSupport v π ∅ y = y v + Trees.rootedStar v (π.pos 1) y :=
+  BHRSY.paramidSupport_empty π y
+
+/-- **(d) Rooted stars are not caterpillar functions** (`N = r + 2`, `a ≠ c`). -/
+theorem rootedStar_ne_caterpillarFunction {r : ℕ} {a c : Fin (r + 1 + 1)} (hac : a ≠ c)
+    {k : FaceKey r} (hk : k ∈ caterpillarDescriptions r) :
+    Trees.rootedStar a c ≠ caterpillarFunction k :=
+  BHRSY.rootedStar_ne_caterpillarFunction hac hk
+
+/-- **(d)** For `M = ∅` the support function is not `y_v` plus any caterpillar function. -/
+theorem bhrsy_support_empty_not_caterpillar {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) :
+    ¬ ∃ k ∈ caterpillarDescriptions r,
+      ∀ y, BHRSY.paramidSupport v π ∅ y = y v + caterpillarFunction k y :=
+  BHRSY.paramidSupport_empty_not_caterpillar π
+
+/-- **The family of Brunck et al.** Every pyramid support function is `y_v` plus either a
+caterpillar function (`M ≠ ∅`) or a rooted star (`M = ∅`), and not both. -/
+theorem bhrsy_family {r : ℕ} {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
+    {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1)) :
+    (M.Nonempty ∧ ∃ k ∈ caterpillarDescriptions r,
+        ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y) ∨
+      (M = ∅ ∧ (∀ y, BHRSY.paramidSupport v π M y = y v + Trees.rootedStar v (π.pos 1) y) ∧
+        ¬ ∃ k ∈ caterpillarDescriptions r,
+          ∀ y, BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y) := by
+  rcases M.eq_empty_or_nonempty with h | h
+  · subst h
+    exact Or.inr ⟨rfl, bhrsy_support_empty π, bhrsy_support_empty_not_caterpillar π⟩
+  · exact Or.inl ⟨h, bhrsy_support_mem_caterpillar π hM h⟩
 
 end MaxCaterpillar

@@ -6,9 +6,9 @@
       "eq:width"
     ],
     "key": "main",
-    "line": 34,
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L34",
-    "sha256": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9"
+    "line": 39,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L39",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
   },
   {
     "file": "MaxCaterpillar/Definitions.lean",
@@ -1389,9 +1389,9 @@
       "eq:count-binomial"
     ],
     "key": "countBinomial",
-    "line": 50,
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L50",
-    "sha256": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9"
+    "line": 55,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L55",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
   },
   {
     "file": "MaxCaterpillar/Theorems.lean",
@@ -1400,9 +1400,9 @@
       "eq:count-exponential"
     ],
     "key": "countExponential",
-    "line": 58,
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L58",
-    "sha256": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9"
+    "line": 63,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L63",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
   },
   {
     "file": "MaxCaterpillar/Theorems.lean",
@@ -1411,9 +1411,9 @@
       "eq:count-quadratic"
     ],
     "key": "countQuadratic",
-    "line": 66,
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L66",
-    "sha256": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9"
+    "line": 71,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L71",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
   },
   {
     "file": "MaxCaterpillar/Definitions.lean",
@@ -1427,9 +1427,9 @@
     "file": "MaxCaterpillar/Theorems.lean",
     "name": "caterpillarDim_ge",
     "key": "caterpillarDimGe",
-    "line": 103,
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L103",
-    "sha256": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9"
+    "line": 108,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L108",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
   },
   {
     "file": "MaxCaterpillar/CountExp/Defs.lean",
@@ -1705,5 +1705,196 @@
     "line": 478,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/LowerBound.lean#L478",
     "sha256": "2c7cabab3478c11e3c6272c21a161435cbe3fdfe0d4d2a080bbafaab6e75e714"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "hyperplane",
+    "equations": [
+      "eq:bsy-hyperplane"
+    ],
+    "key": "bsy-hyperplane",
+    "line": 68,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Defs.lean#L68",
+    "sha256": "b437a6e46f3f150d680dd9ecfa3c67a17c9670eba957b4122073d24af95e6bea"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "parallelepiped",
+    "equations": [
+      "eq:bsy-parallelepiped"
+    ],
+    "key": "bsy-parallelepiped",
+    "line": 78,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Defs.lean#L78",
+    "sha256": "b437a6e46f3f150d680dd9ecfa3c67a17c9670eba957b4122073d24af95e6bea"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "paramidSupport",
+    "key": "bsy-support-def",
+    "line": 88,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Defs.lean#L88",
+    "sha256": "b437a6e46f3f150d680dd9ecfa3c67a17c9670eba957b4122073d24af95e6bea"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "markedParent",
+    "equations": [
+      "eq:bsy-marked"
+    ],
+    "key": "bsy-marked",
+    "line": 99,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Defs.lean#L99",
+    "sha256": "b437a6e46f3f150d680dd9ecfa3c67a17c9670eba957b4122073d24af95e6bea"
+  },
+  {
+    "file": "MaxCaterpillar/Trees/RootedStars.lean",
+    "name": "rootedStar",
+    "equations": [
+      "eq:rooted-star"
+    ],
+    "key": "rooted-star",
+    "line": 34,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Trees/RootedStars.lean#L34",
+    "sha256": "72bcae69b40327c273695eb9b9967639d192b80708cfccea1a42f7d49846943d"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_parallelepiped_eq_zonotope",
+    "equations": [
+      "eq:bsy-zonotope"
+    ],
+    "key": "bsy-zonotope",
+    "line": 119,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L119",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_eq",
+    "equations": [
+      "eq:bsy-support"
+    ],
+    "key": "bsy-support",
+    "line": 147,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L147",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_eq_word",
+    "equations": [
+      "eq:bsy-word"
+    ],
+    "key": "bsy-word",
+    "line": 156,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L156",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_mem_caterpillar",
+    "key": "bsy-caterpillar",
+    "line": 165,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L165",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_word_mem",
+    "key": "bsy-converse",
+    "line": 174,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L174",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_empty",
+    "key": "bsy-empty",
+    "line": 185,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L185",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "rootedStar_ne_caterpillarFunction",
+    "key": "bsy-star-ne",
+    "line": 191,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L191",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_family",
+    "key": "bsy-family",
+    "line": 205,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Theorems.lean#L205",
+    "sha256": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Relation.lean",
+    "name": "zvec_mem",
+    "steps": [
+      "stp:bsy-coordinates"
+    ],
+    "key": "bsy-coordinates",
+    "line": 321,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Relation.lean#L321",
+    "sha256": "33e60df4fb8da221c26dd3f14f89b1b4c66e294463b0bf7385ed71680c5a1792"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Relation.lean",
+    "name": "eq_of_coords",
+    "steps": [
+      "stp:bsy-injective"
+    ],
+    "key": "bsy-injective",
+    "line": 332,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Relation.lean#L332",
+    "sha256": "33e60df4fb8da221c26dd3f14f89b1b4c66e294463b0bf7385ed71680c5a1792"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Relation.lean",
+    "name": "parallelepiped_eq_zonotope",
+    "steps": [
+      "stp:bsy-zonotope"
+    ],
+    "key": "bsy-zonotope-proof",
+    "line": 392,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Relation.lean#L392",
+    "sha256": "33e60df4fb8da221c26dd3f14f89b1b4c66e294463b0bf7385ed71680c5a1792"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Support.lean",
+    "name": "paramidSupport_eq",
+    "steps": [
+      "stp:bsy-support"
+    ],
+    "key": "bsy-support-proof",
+    "line": 55,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Support.lean#L55",
+    "sha256": "40caa30929bf18779092fa911bd638f6b9de9e0e3bdcd35701b76d1f05947baf"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Support.lean",
+    "name": "paramidSupport_eq_word",
+    "steps": [
+      "stp:bsy-word"
+    ],
+    "key": "bsy-word-proof",
+    "line": 238,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Support.lean#L238",
+    "sha256": "40caa30929bf18779092fa911bd638f6b9de9e0e3bdcd35701b76d1f05947baf"
+  },
+  {
+    "file": "MaxCaterpillar/Competing/Support.lean",
+    "name": "rootedStar_ne_caterpillarFunction",
+    "steps": [
+      "stp:bsy-star"
+    ],
+    "key": "bsy-star-proof",
+    "line": 454,
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557/MaxCaterpillar/Competing/Support.lean#L454",
+    "sha256": "40caa30929bf18779092fa911bd638f6b9de9e0e3bdcd35701b76d1f05947baf"
   }
 ]

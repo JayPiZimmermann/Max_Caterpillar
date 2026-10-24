@@ -1057,5 +1057,120 @@
     "steps": [
       "stp:quotient-path-values"
     ]
+  },
+  "bsy-hyperplane": {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "hyperplane",
+    "equations": [
+      "eq:bsy-hyperplane"
+    ]
+  },
+  "bsy-parallelepiped": {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "parallelepiped",
+    "equations": [
+      "eq:bsy-parallelepiped"
+    ]
+  },
+  "bsy-support-def": {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "paramidSupport"
+  },
+  "bsy-marked": {
+    "file": "MaxCaterpillar/Competing/Defs.lean",
+    "name": "markedParent",
+    "equations": [
+      "eq:bsy-marked"
+    ]
+  },
+  "rooted-star": {
+    "file": "MaxCaterpillar/Trees/RootedStars.lean",
+    "name": "rootedStar",
+    "equations": [
+      "eq:rooted-star"
+    ]
+  },
+  "bsy-zonotope": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_parallelepiped_eq_zonotope",
+    "equations": [
+      "eq:bsy-zonotope"
+    ]
+  },
+  "bsy-support": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_eq",
+    "equations": [
+      "eq:bsy-support"
+    ]
+  },
+  "bsy-word": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_eq_word",
+    "equations": [
+      "eq:bsy-word"
+    ]
+  },
+  "bsy-caterpillar": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_mem_caterpillar"
+  },
+  "bsy-converse": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_word_mem"
+  },
+  "bsy-empty": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_support_empty"
+  },
+  "bsy-star-ne": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "rootedStar_ne_caterpillarFunction"
+  },
+  "bsy-family": {
+    "file": "MaxCaterpillar/Theorems.lean",
+    "name": "bhrsy_family"
+  },
+  "bsy-coordinates": {
+    "file": "MaxCaterpillar/Competing/Relation.lean",
+    "name": "zvec_mem",
+    "steps": [
+      "stp:bsy-coordinates"
+    ]
+  },
+  "bsy-injective": {
+    "file": "MaxCaterpillar/Competing/Relation.lean",
+    "name": "eq_of_coords",
+    "steps": [
+      "stp:bsy-injective"
+    ]
+  },
+  "bsy-zonotope-proof": {
+    "file": "MaxCaterpillar/Competing/Relation.lean",
+    "name": "parallelepiped_eq_zonotope",
+    "steps": [
+      "stp:bsy-zonotope"
+    ]
+  },
+  "bsy-support-proof": {
+    "file": "MaxCaterpillar/Competing/Support.lean",
+    "name": "paramidSupport_eq",
+    "steps": [
+      "stp:bsy-support"
+    ]
+  },
+  "bsy-word-proof": {
+    "file": "MaxCaterpillar/Competing/Support.lean",
+    "name": "paramidSupport_eq_word",
+    "steps": [
+      "stp:bsy-word"
+    ]
+  },
+  "bsy-star-proof": {
+    "file": "MaxCaterpillar/Competing/Support.lean",
+    "name": "rootedStar_ne_caterpillarFunction",
+    "steps": [
+      "stp:bsy-star"
+    ]
   }
 }

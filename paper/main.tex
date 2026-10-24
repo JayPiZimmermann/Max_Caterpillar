@@ -46,6 +46,15 @@
     {↥}{{$\Uparrow$}}1
     {⧸}{{$/$}}1
     {≤}{{$\leq$}}1
+    {π}{{$\pi$}}1
+    {σ}{{$\sigma$}}1
+    {≃}{{$\simeq$}}1
+    {≠}{{$\neq$}}1
+    {∈}{{$\in$}}1
+    {∉}{{$\notin$}}1
+    {•}{{$\bullet$}}1
+    {∅}{{$\varnothing$}}1
+    {¬}{{$\neg$}}1
 }
 % End lean_listings.tex
 
@@ -63,7 +72,7 @@
 \newcommand{\DeclareSourceEquation}[2]{\expandafter\def\csname paper@lean@#1\endcsname{#2}}
 \makeatother
 \newcommand{\leanbase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/8b4d74ab66f429fc454c8349ade514bc3775f557}
-\DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{34}
+\DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{39}
 \DeclareLeanEquation{eq:count}{MaxCaterpillar/Definitions.lean}{63}
 \DeclareLeanEquation{eq:word}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}
 \DeclareLeanEquation{eq:faces}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}
@@ -170,9 +179,9 @@
 \DeclareLeanEquation{eq:max-three}{MaxCaterpillar/SmallArity.lean}{62}
 \DeclareLeanEquation{eq:max-four}{MaxCaterpillar/SmallArity.lean}{117}
 \DeclareLeanEquation{eq:kmps}{MaxCaterpillar/KMPS.lean}{410}
-\DeclareLeanEquation{eq:count-binomial}{MaxCaterpillar/Theorems.lean}{50}
-\DeclareLeanEquation{eq:count-exponential}{MaxCaterpillar/Theorems.lean}{58}
-\DeclareLeanEquation{eq:count-quadratic}{MaxCaterpillar/Theorems.lean}{66}
+\DeclareLeanEquation{eq:count-binomial}{MaxCaterpillar/Theorems.lean}{55}
+\DeclareLeanEquation{eq:count-exponential}{MaxCaterpillar/Theorems.lean}{63}
+\DeclareLeanEquation{eq:count-quadratic}{MaxCaterpillar/Theorems.lean}{71}
 \DeclareLeanEquation{eq:base-point}{MaxCaterpillar/CountExp/Defs.lean}{72}
 \DeclareLeanEquation{eq:mixed-difference}{MaxCaterpillar/CountExp/Defs.lean}{86}
 \DeclareLeanEquation{eq:balanced}{MaxCaterpillar/CountExp/Defs.lean}{115}
@@ -203,6 +212,19 @@
 \DeclareLeanEquation{stp:quotient-auxiliary}{MaxCaterpillar/LowerBound.lean}{384}
 \DeclareLeanEquation{eq:path-functional}{MaxCaterpillar/LowerBound.lean}{478}
 \DeclareLeanEquation{stp:quotient-path-values}{MaxCaterpillar/LowerBound.lean}{478}
+\DeclareLeanEquation{eq:bsy-hyperplane}{MaxCaterpillar/Competing/Defs.lean}{68}
+\DeclareLeanEquation{eq:bsy-parallelepiped}{MaxCaterpillar/Competing/Defs.lean}{78}
+\DeclareLeanEquation{eq:bsy-marked}{MaxCaterpillar/Competing/Defs.lean}{99}
+\DeclareLeanEquation{eq:rooted-star}{MaxCaterpillar/Trees/RootedStars.lean}{34}
+\DeclareLeanEquation{eq:bsy-zonotope}{MaxCaterpillar/Theorems.lean}{119}
+\DeclareLeanEquation{eq:bsy-support}{MaxCaterpillar/Theorems.lean}{147}
+\DeclareLeanEquation{eq:bsy-word}{MaxCaterpillar/Theorems.lean}{156}
+\DeclareLeanEquation{stp:bsy-coordinates}{MaxCaterpillar/Competing/Relation.lean}{321}
+\DeclareLeanEquation{stp:bsy-injective}{MaxCaterpillar/Competing/Relation.lean}{332}
+\DeclareLeanEquation{stp:bsy-zonotope}{MaxCaterpillar/Competing/Relation.lean}{392}
+\DeclareLeanEquation{stp:bsy-support}{MaxCaterpillar/Competing/Support.lean}{55}
+\DeclareLeanEquation{stp:bsy-word}{MaxCaterpillar/Competing/Support.lean}{238}
+\DeclareLeanEquation{stp:bsy-star}{MaxCaterpillar/Competing/Support.lean}{454}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -361,7 +383,7 @@ A network has \emph{rational weights} if every entry of $W_1$, $W_2$, and $w_3$
 is rational, and \emph{zero biases} if $b_1$, $b_2$, and $b_3$ vanish.
 
 \Needspace{10\baselineskip}
-\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{34}{caterpillar_net}, {\Cref{pf:thm:main}}]\label{thm:main}
+\begin{theorem}[Caterpillar Net, \leandecl{MaxCaterpillar/Theorems.lean}{39}{caterpillar_net}, {\Cref{pf:thm:main}}]\label{thm:main}
 For every $N\geq3$, there is a two-hidden-layer ReLU network with rational weights and zero biases computing $\maxn_N$ with widths
 \begin{align}
  h_1=\binom N2+N+1,\qquad h_2=3^{N-2}C_N-N(N-1)+2,\label{eq:width}
@@ -418,7 +440,7 @@ hidden layers.
 \end{theorem}
 Their first proof proceeds by induction on dimension, using homological algebra to construct a linear combination of support functions of pyramids over parallelepipeds that agrees with the simplex support function modulo lower-dimensional terms. Our construction restricts these building blocks to an explicitly specified finite family, the caterpillar polytopes; we deliver a geometric proof of the corresponding identity.
 
-Independently and concurrently, they developed a second proof based on combinatorial cancellation, using the same caterpillar construction. The caterpillar family and coefficients coincide with ours. We establish explicit width bounds for the first and second hidden layers, respectively. These bounds also apply to their combinatorial construction but are not stated in their paper.
+Independently and concurrently, they developed a second proof based on combinatorial cancellation, using the same caterpillar construction. The caterpillar family and coefficients coincide with ours. \Cref{app:bsy} identifies their building blocks with ours: for nonempty marked sets their pyramids are translated caterpillar polytopes, and the remaining pyramids are rooted stars, which are not caterpillar functions. We establish explicit width bounds for the first and second hidden layers, respectively. These bounds also apply to their combinatorial construction but are not stated in their paper.
 
 
 \section{The Caterpillar Net}\label{sec:construction}
@@ -723,7 +745,7 @@ with $\maxn_N=\sum_{k\in K}d_kU_k+R$ on $\R^N$. Its \emph{size} is $|K|$.
 \end{definition}
 
 \Needspace{10\baselineskip}
-\begin{theorem}[Exponential count, \leandecl{MaxCaterpillar/Theorems.lean}{50}{caterpillar_expansion_choose_le}, \leandecl{MaxCaterpillar/Theorems.lean}{58}{caterpillar_expansion_exponential}, \leandecl{MaxCaterpillar/Theorems.lean}{66}{caterpillar_expansion_quadratic}, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
+\begin{theorem}[Exponential count, \leandecl{MaxCaterpillar/Theorems.lean}{55}{caterpillar_expansion_choose_le}, \leandecl{MaxCaterpillar/Theorems.lean}{63}{caterpillar_expansion_exponential}, \leandecl{MaxCaterpillar/Theorems.lean}{71}{caterpillar_expansion_quadratic}, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
 Let $N\geq3$ and let $K$ be a caterpillar expansion of $\maxn_N$. Then
 \begin{align}
  \binom Nm&\leq6^m\,|K|\qquad(3\leq m\leq N),\label{eq:count-binomial}\\
@@ -747,7 +769,7 @@ tied coordinates there. The caterpillar structure allows a single $U_k$ to
 do so only at a fraction $6^m/\binom Nm$ of these points.
 
 \Needspace{6\baselineskip}
-\begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/Theorems.lean}{103}{caterpillarDim_ge}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
+\begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/Theorems.lean}{108}{caterpillarDim_ge}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
 For every $N\geq3$, the span $V_N:=\spn\D$ of the dictionary satisfies
 $q_N:=\dim(V_N/A_N)\geq(N-2)!$.
 \end{theorem}
@@ -1127,7 +1149,7 @@ combined with the auxiliary functions. By \Cref{thm:compilation}, the
 second width is the number of retained descriptions plus two;
 \Cref{app:widths} gives the complete count.
 
-\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{34}{caterpillar_net}).}
+\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{39}{caterpillar_net}).}
 The theorem and equation links point to the Lean development at a fixed
 repository revision. \Cref{app:lean} prints the network definitions
 and the main theorem, and describes the verification certificate.
@@ -1839,6 +1861,170 @@ linearly independent modulo $A_N$, and $q_N=\dim(V_N/A_N)\geq(N-2)!$.
 \end{Proof}
 % End appendices/lower.tex
 % Begin appendices/lean.tex
+\section{Relation to the construction of Brunck et al.}\label{app:bsy}
+
+The combinatorial proof of \cite[Part~2]{BSY} cones parallelepipeds
+$B_{v,\pi,M}$ to pyramids and expresses the simplex support function as a
+signed sum of their support functions modulo lower-dimensional terms
+\cite[Lemma~22]{BSY}. This appendix identifies these building blocks. For a
+nonempty set $M$ of marked positions, the pyramid has the support function
+of a translated caterpillar polytope, with apex $v$, label order $\pi$, and
+cut set $M-1$. For $M=\varnothing$ it gives a rooted star, which is not a
+caterpillar function. We use the indexing of \cite[Section~7.1]{BSY}, with
+their $n$ written as $N$ and $[N]$ identified with our label set
+$\{0,\ldots,N-1\}$. Positions of an ordering are numbered from $1$.
+
+\Needspace{12\baselineskip}
+\begin{definition}[Parallelepipeds of Brunck et al., \leandecl{MaxCaterpillar/Competing/Defs.lean}{78}{parallelepiped}, \leandecl{MaxCaterpillar/Competing/Defs.lean}{88}{paramidSupport}]\label{def:bsy}
+Let $N\geq3$, let $v$ be a label, let $\pi=(\pi_1,\ldots,\pi_{N-1})$ be an
+ordering of the remaining labels, and let $M\subseteq\{2,\ldots,N-1\}$.
+For $p\in\R^N$ put $u_i(p):=\sum_{1\leq j<i}p_{\pi_j}$. Following
+\cite[Equation~(3)]{BSY}, define
+\begin{align}
+ H_{-v}&:=\Bigl\{p\in\R^N:p_v=0,\ \sum_kp_k=1\Bigr\},\label{eq:bsy-hyperplane}\\
+ B_{v,\pi,M}&:=\left\{p\in H_{-v}:
+ \begin{array}{ll}
+ 0\leq u_i(p)\leq1 & \text{for } i\in M,\\
+ -1\leq p_{\pi_i}\leq0 & \text{for } i\in\{2,\ldots,N-1\}\setminus M
+ \end{array}\right\}.\label{eq:bsy-parallelepiped}
+\end{align}
+The pyramid with apex $e_v$ is
+$\operatorname{pyr}_{e_v}(B_{v,\pi,M}):=\operatorname{conv}(\{e_v\}\cup
+B_{v,\pi,M})$, with support function $h_{v,\pi,M}$ as
+in~\Cref{eq:support-function}. Its last marked position and the marked
+parent of a position $i$ are
+\begin{align}\label{eq:bsy-marked}
+ q:=\max(\{1\}\cup M),\qquad
+ r(i):=\max\bigl(\{1\}\cup\{j\in M:j<i\}\bigr)\qquad(2\leq i\leq N-1).
+\end{align}
+For $M\neq\varnothing$, $q=\max M$. For labels $a\neq c$, the \emph{rooted
+star} with apex $a$ and root $c$ is
+\begin{align}\label{eq:rooted-star}
+ S_{a,c}(x):=\relu\Bigl(x_c-x_a+\sum_{l\notin\{a,c\}}\relu(x_c-x_l)\Bigr).
+\end{align}
+\end{definition}
+
+\Needspace{12\baselineskip}
+\begin{theorem}[Relation to Brunck et al., \leandecl{MaxCaterpillar/Theorems.lean}{119}{bhrsy_parallelepiped_eq_zonotope}, \leandecl{MaxCaterpillar/Theorems.lean}{147}{bhrsy_support_eq}, \leandecl{MaxCaterpillar/Theorems.lean}{156}{bhrsy_support_eq_word}, \leandecl{MaxCaterpillar/Theorems.lean}{165}{bhrsy_support_mem_caterpillar}, \leandecl{MaxCaterpillar/Theorems.lean}{174}{bhrsy_word_mem}, \leandecl{MaxCaterpillar/Theorems.lean}{185}{bhrsy_support_empty}, \leandecl{MaxCaterpillar/Theorems.lean}{191}{rootedStar_ne_caterpillarFunction}, \leandecl{MaxCaterpillar/Theorems.lean}{205}{bhrsy_family}, {\Cref{pf:thm:bsy-relation}}]\label{thm:bsy-relation}
+Let $v$, $\pi$, and $M$ be as in~\Cref{def:bsy}, and let $q$ and $r(i)$ be as
+in~\Cref{eq:bsy-marked}.
+\begin{enumerate}
+\item[(a)] The parallelepiped is the zonotope
+\begin{align}\label{eq:bsy-zonotope}
+ B_{v,\pi,M}=e_{\pi_q}+\sum_{i=2}^{N-1}\bigl[0,e_{\pi_{r(i)}}-e_{\pi_i}\bigr].
+\end{align}
+\item[(b)] For every $x\in\R^N$,
+\begin{align}\label{eq:bsy-support}
+ h_{v,\pi,M}(x)=x_v+\relu\Bigl(x_{\pi_q}-x_v+\sum_{i=2}^{N-1}\relu\bigl(x_{\pi_{r(i)}}-x_{\pi_i}\bigr)\Bigr).
+\end{align}
+\item[(c)] Let $M\neq\varnothing$. Define the caterpillar description $(\pi',S)$
+by $\pi'(0):=v$, $\pi'(j):=\pi_j$ for $1\leq j\leq N-1$, and
+$S:=\{i-1:i\in M\}$. Then $|S|=|M|$ and
+\begin{align}\label{eq:bsy-word}
+ h_{v,\pi,M}(x)=x_v+U_{\pi',S}(x)\qquad(x\in\R^N).
+\end{align}
+Hence $h_{v,\pi,M}-x_v=U_k$ for some $k\in\mathcal K_0$. Conversely, every
+caterpillar description $(\pi',S)$ arises in this way from $v=\pi'(0)$,
+$\pi_j=\pi'(j)$, and $M=\{j+1:j\in S\}\neq\varnothing$.
+\item[(d)] Let $M=\varnothing$. Then $h_{v,\pi,\varnothing}(x)=x_v+S_{v,\pi_1}(x)$.
+No rooted star is a caterpillar function: $S_{a,c}\neq U_k$ for all labels
+$a\neq c$ and all $k\in\mathcal K_0$. In particular,
+$h_{v,\pi,\varnothing}-x_v\neq U_k$ for every $k\in\mathcal K_0$.
+\end{enumerate}
+\end{theorem}
+By~\Cref{eq:unit-polytope}, the right-hand side of~\Cref{eq:bsy-word} is
+the support function of the translated caterpillar polytope
+$e_v+Q_{h_{\pi',S},L_{\pi',S}}$. The family of \cite{BSY} therefore consists
+of the caterpillar polytopes, translated by $e_v$, and of the pyramids over
+rooted stars. The sign $(-1)^{|M|}$ of \cite[Lemma~22]{BSY} equals
+$(-1)^{|S|}$. The theorem compares building blocks only. It makes no
+statement about corrections or network coefficients.
+
+\begin{Proof}{Theorem}{thm:bsy-relation}
+Write $I:=\{2,\ldots,N-1\}$ and $g_i:=e_{\pi_{r(i)}}-e_{\pi_i}$ for $i\in I$.
+Every element of $\{1\}\cup M$ lies in $\{1,\ldots,N-1\}$, so $q$ and all
+$r(i)$ are positions. Since $M\subseteq I$, the definitions give
+\begin{itemize}
+\item $1\leq r(i)<i$ for $i\in I$, and $i\leq r(l)$ whenever $i\in M$ and $i<l$,
+\item $i\leq q$ for $i\in M$,
+\item $q\neq i$ and $r(l)\neq i$ for $i\in I\setminus M$ and all $l$.
+\end{itemize}
+
+\pfstep{stp:bsy-coordinates}{Coordinates of the zonotope}
+For $t\in[0,1]^I$ let $z(t):=e_{\pi_q}+\sum_{l\in I}t_lg_l$. Every
+$e_{\pi_j}$ has coordinate sum $1$ and vanishes at $v$, so $z(t)\in H_{-v}$.
+For $i\in I\setminus M$ the coordinate $z(t)_{\pi_i}$ collects the term
+$-t_i$ and no other term, since $\pi_i$ is neither $\pi_q$ nor any
+$\pi_{r(l)}$. Hence $z(t)_{\pi_i}=-t_i$. For $i\in M$, the prefix sum
+$u_i$ counts a vector $e_{\pi_j}$ exactly when $j<i$. Thus $e_{\pi_q}$
+contributes $0$, because $q\geq i$. A generator $g_l$ with $l<i$
+contributes $1-1=0$, because $r(l)<l<i$. A generator with $l>i$
+contributes $0-0$, because $r(l)\geq i$. Finally $g_i$ contributes $t_i$,
+because $r(i)<i$. Hence $u_i(z(t))=t_i$. Therefore $z(t)\in B_{v,\pi,M}$.
+
+\pfstep{stp:bsy-injective}{The coordinates determine the point}
+Let $p,p'\in H_{-v}$ with $u_i(p)=u_i(p')$ for $i\in M$ and
+$p_{\pi_i}=p'_{\pi_i}$ for $i\in I\setminus M$. Put $d:=p-p'$ and
+$U_i:=\sum_{1\leq j<i}d_{\pi_j}$. Then $U_1=0$, and $U_N=\sum_kd_k-d_v=0$.
+Descending from $i=N-1$ to $i=2$, either $i\in M$ and $U_i=0$ by
+assumption, or $i\notin M$ and $U_i=U_{i+1}-d_{\pi_i}=U_{i+1}=0$. Hence
+$d_{\pi_j}=U_{j+1}-U_j=0$ for $1\leq j\leq N-1$, and $d_v=0$. Thus $p=p'$.
+This is the invertibility in \cite[Claim~21]{BSY}.
+
+\pfstep{stp:bsy-zonotope}{Proof of (a)}
+\Cref{stp:bsy-coordinates} shows that the right-hand side
+of~\Cref{eq:bsy-zonotope} lies in $B_{v,\pi,M}$. Conversely, let
+$p\in B_{v,\pi,M}$, and set $t_i:=u_i(p)$ for $i\in M$ and
+$t_i:=-p_{\pi_i}$ for $i\in I\setminus M$. The inequalities
+in~\Cref{eq:bsy-parallelepiped} say $t\in[0,1]^I$. By
+\Cref{stp:bsy-coordinates}, the points $p$ and $z(t)$ of $H_{-v}$ have the
+same coordinates, so $p=z(t)$ by \Cref{stp:bsy-injective}.
+
+\pfstep{stp:bsy-support}{Proof of (b)}
+A linear function attains the same supremum on a set and on its convex
+hull. Hence $h_{v,\pi,M}(x)=\max(x_v,\sup_{p\in B_{v,\pi,M}}\langle p,x\rangle)$.
+Put $b_l:=x_{\pi_{r(l)}}-x_{\pi_l}$. By (a),
+$\langle z(t),x\rangle=x_{\pi_q}+\sum_lt_lb_l$, and $t_lb_l\leq\relu(b_l)$
+for $0\leq t_l\leq1$, with equality for $t_l=\mathds 1_{\{b_l\geq0\}}$. So
+the supremum over $B_{v,\pi,M}$ equals
+$A:=x_{\pi_q}+\sum_l\relu(b_l)$. Then~\Cref{eq:max-hinge} gives
+$\max(x_v,A)=x_v+\relu(A-x_v)$, which is~\Cref{eq:bsy-support}.
+
+\pfstep{stp:bsy-word}{Proof of (c)}
+With $\pi'$ and $S$ as in (c), position $j$ of the caterpillar carries the
+label $\pi'(j+1)=\pi_{j+1}$, so caterpillar position $j$ is the position
+$j+1$ of \cite{BSY}. The map $i\mapsto i-1$ is a bijection from $M$ onto
+$S$, hence $|S|=|M|$, and it carries $\{1\}\cup M$ onto $\{0\}\cup S$ and
+$\{1\}\cup\{j\in M:j<i\}$ onto $\{0\}\cup\{j\in S:j<i-1\}$. Comparing
+with~\Cref{eq:word-parent}, the last spine position is $q-1$ and the parent
+of caterpillar position $i-1$ is $r(i)-1$. By~\Cref{eq:edge-functions,eq:word-gamma},
+the head is $x_{\pi_q}-x_v$ and the edge functions are
+$x_{\pi_{r(i)}}-x_{\pi_i}$, $i\in I$. So the right-hand side
+of~\Cref{eq:bsy-support} is $x_v+U_{\pi',S}(x)$. If $M\neq\varnothing$,
+then $S\neq\varnothing$ and $0\notin S$, so $(\pi',S)$ is a caterpillar
+description, and its normalized description $k\in\mathcal K_0$ satisfies
+$U_k=U_{\pi',S}$ by~\Cref{eq:hinge-reversal}. The converse inverts these
+bijections.
+
+\pfstep{stp:bsy-star}{Proof of (d)}
+For $M=\varnothing$, $q=1$ and $r\equiv1$, and $\{\pi_i:i\in I\}$ is the
+set of labels other than $v$ and $\pi_1$. So~\Cref{eq:bsy-support} becomes
+$x_v+S_{v,\pi_1}(x)$. Let $a\neq c$ and evaluate at $x=e_c$. Every inner
+term of $S_{a,c}(e_c)$ equals $\relu(1)$, so $S_{a,c}(e_c)=1+(N-2)=N-1$.
+Let $k\in\mathcal K_0$. Then $U_k$ is the normalization of a face function
+$U^\tau_{\pi',S}$, and $U_k=U^\tau_{\pi',S}$ by~\Cref{eq:hinge-reversal}.
+Since $\ell\leq\relu\circ\ell$, $0\leq\relu\circ\ell$, and $\relu$ is
+monotone, $U^\tau_{\pi',S}\leq U_{\pi',S}$. At $x=e_c$, every head and edge
+function takes values in $\{-1,0,1\}$. If $c=\pi'(0)$, the argument of the
+outer $\relu$ in $U_{\pi',S}(e_c)$ is $-1$, so $U_{\pi',S}(e_c)=0$.
+Otherwise $c$ is the label of a caterpillar position $m$. The head
+contributes at most $1$, and every inner hinge at most $1$. If $m\geq1$,
+the inner hinge of the edge into position $m$ is $\relu(x_{\pi'(p(m)+1)}-1)=0$,
+so the value is at most $1+(N-3)$. If $m=0$, the head contributes $0$,
+because $q\geq\min S>0$, so the value is at most $N-2$. Thus
+$U_k(e_c)\leq N-2<S_{a,c}(e_c)$.
+\end{Proof}
+
 \section{Lean definitions and main theorem}\label{app:lean}
 
 The real parameter arrays in~\Cref{eq:network-evaluation} have dimensions
@@ -1849,7 +2035,7 @@ The real parameter arrays in~\Cref{eq:network-evaluation} have dimensions
  w_3&\in\R^{h_2},& b_3&\in\R,
  \end{aligned}
 \end{align}
-\paragraph[Sources]{Sources (\leanlinkdecl{MaxCaterpillar/Definitions.lean}{22}{Point}{Definitions.lean}, \leanlinkdecl{MaxCaterpillar/Theorems.lean}{34}{caterpillar_net}{Theorems.lean}).}
+\paragraph[Sources]{Sources (\leanlinkdecl{MaxCaterpillar/Definitions.lean}{22}{Point}{Definitions.lean}, \leanlinkdecl{MaxCaterpillar/Theorems.lean}{39}{caterpillar_net}{Theorems.lean}).}
 The listings specify the network, widths, and correctness for every real
 input. They reproduce declarations from these files at revision
 \texttt{8b4d74ab66f4}, omitting imports, documentation comments, and the
@@ -1987,6 +2173,122 @@ theorem caterpillar_expansion_quadratic (r : ℕ)
 theorem caterpillarDim_ge (r : ℕ) (hr : 1 ≤ r) :
     r.factorial ≤ caterpillarDim r
 \end{lstlisting}
+
+\subsection{The building blocks of Brunck et al.}
+The definitions of \Cref{def:bsy}, in the indexing of
+\cite[Section~7.1]{BSY}, are in \texttt{Competing/Defs.lean}. An ordering is
+a bijection from the $N-1$ positions onto the labels other than $v$, and
+\texttt{Ordering.pos} returns $\pi_i$ at position $i$, $1\leq i\leq N-1$.
+
+\begin{lstlisting}[style=lean]
+noncomputable def supportFunction {n : ℕ}
+    (P : Set (Fin n → ℝ)) (y : Fin n → ℝ) : ℝ :=
+  sSup ((fun p => ∑ k, p k * y k) '' P)
+
+def pyramid {n : ℕ} (q : Fin n → ℝ)
+    (P : Set (Fin n → ℝ)) : Set (Fin n → ℝ) :=
+  convexHull ℝ (insert q P)
+
+def zonotope {n : ℕ} (a : Fin n → ℝ) (I : Finset ℕ)
+    (g : ℕ → Fin n → ℝ) : Set (Fin n → ℝ) :=
+  {p | ∃ t : ℕ → ℝ, (∀ i ∈ I, 0 ≤ t i ∧ t i ≤ 1) ∧
+    p = a + ∑ i in I, t i • g i}
+
+abbrev BHRSY.Ordering (n : ℕ) (v : Fin n) :=
+  Fin (n - 1) ≃ {k : Fin n // k ≠ v}
+
+def BHRSY.Ordering.pos {v : Fin n} (π : Ordering n v)
+    (i : ℕ) : Fin n :=
+  if h : i - 1 < n - 1 then (π ⟨i - 1, h⟩).1 else v
+
+def BHRSY.hyperplane (v : Fin n) : Set (Fin n → ℝ) :=
+  {p | p v = 0 ∧ ∑ k, p k = 1}
+
+noncomputable def BHRSY.prefixSum {v : Fin n}
+    (π : Ordering n v) (p : Fin n → ℝ) (i : ℕ) : ℝ :=
+  ∑ j in Finset.Ico 1 i, p (π.pos j)
+
+def BHRSY.parallelepiped (v : Fin n) (π : Ordering n v)
+    (M : Finset ℕ) : Set (Fin n → ℝ) :=
+  {p | p ∈ hyperplane v ∧
+    (∀ i ∈ M, 0 ≤ prefixSum π p i ∧ prefixSum π p i ≤ 1) ∧
+    ∀ i ∈ Finset.Icc 2 (n - 1), i ∉ M →
+      -1 ≤ p (π.pos i) ∧ p (π.pos i) ≤ 0}
+
+def BHRSY.paramid (v : Fin n) (π : Ordering n v)
+    (M : Finset ℕ) : Set (Fin n → ℝ) :=
+  pyramid (Pi.single v 1) (parallelepiped v π M)
+
+noncomputable def BHRSY.paramidSupport (v : Fin n)
+    (π : Ordering n v) (M : Finset ℕ) : (Fin n → ℝ) → ℝ :=
+  supportFunction (paramid v π M)
+
+def BHRSY.lastMarked (M : Finset ℕ) : ℕ :=
+  (insert 1 M).max' (Finset.insert_nonempty _ _)
+
+def BHRSY.markedParent (M : Finset ℕ) (i : ℕ) : ℕ :=
+  (insert 1 (M.filter fun j => j < i)).max'
+    (Finset.insert_nonempty _ _)
+\end{lstlisting}
+The dictionary uses the word $\pi'=(v,\pi_1,\ldots,\pi_{N-1})$
+(\texttt{Ordering.word}), the cut set $S=M-1$ (\texttt{cutSet}), and the
+description $(h_{\pi',S},L_{\pi',S})$ of a word
+(\texttt{caterpillarWordDescription}). The rooted star is
+\texttt{Trees.rootedStar}. With $N=r+2$, \texttt{Theorems.lean} states
+\Cref{thm:bsy-relation} as follows.
+
+\begin{lstlisting}[style=lean]
+theorem bhrsy_parallelepiped_eq_zonotope {r : ℕ}
+    {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
+    {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1)) :
+    BHRSY.parallelepiped v π M =
+      zonotope (Pi.single (π.pos (BHRSY.lastMarked M)) 1)
+        (Finset.Icc 2 (r + 1))
+        (fun i => Pi.single (π.pos (BHRSY.markedParent M i)) 1
+          - Pi.single (π.pos i) 1)
+
+theorem bhrsy_support_eq {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}
+    (hM : M ⊆ Finset.Icc 2 (r + 1)) (y : Point (r + 1 + 1)) :
+    BHRSY.paramidSupport v π M y =
+      y v + MaxCaterpillar.relu
+        (y (π.pos (BHRSY.lastMarked M)) - y v +
+          ∑ i in Finset.Icc 2 (r + 1), MaxCaterpillar.relu
+            (y (π.pos (BHRSY.markedParent M i)) - y (π.pos i)))
+
+theorem bhrsy_support_eq_word {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) {M : Finset ℕ}
+    (hM : M ⊆ Finset.Icc 2 (r + 1)) :
+    (BHRSY.cutSet (r := r) M).card = M.card ∧
+      ∀ y : Point (r + 1 + 1), BHRSY.paramidSupport v π M y =
+        y v + caterpillarFunction
+          (caterpillarWordDescription π.word (BHRSY.cutSet M)) y
+
+theorem bhrsy_support_mem_caterpillar {r : ℕ}
+    {v : Fin (r + 1 + 1)} (π : BHRSY.Ordering (r + 1 + 1) v)
+    {M : Finset ℕ} (hM : M ⊆ Finset.Icc 2 (r + 1))
+    (hne : M.Nonempty) :
+    ∃ k ∈ caterpillarDescriptions r, ∀ y,
+      BHRSY.paramidSupport v π M y = y v + caterpillarFunction k y
+
+theorem bhrsy_support_empty {r : ℕ} {v : Fin (r + 1 + 1)}
+    (π : BHRSY.Ordering (r + 1 + 1) v) (y : Point (r + 1 + 1)) :
+    BHRSY.paramidSupport v π ∅ y =
+      y v + Trees.rootedStar v (π.pos 1) y
+
+theorem rootedStar_ne_caterpillarFunction {r : ℕ}
+    {a c : Fin (r + 1 + 1)} (hac : a ≠ c) {k : FaceKey r}
+    (hk : k ∈ caterpillarDescriptions r) :
+    Trees.rootedStar a c ≠ caterpillarFunction k
+\end{lstlisting}
+\begingroup\sloppy
+The same file contains the converse \texttt{bhrsy\_word\_mem}, the
+special cases
+\texttt{bhrsy\_parallelepiped\_eq\_zonotope\_of\_nonempty} and
+\texttt{bhrsy\_parallelepiped\_empty}, the statement
+\texttt{bhrsy\_support\_empty\_not\_caterpillar}, and the dichotomy
+\texttt{bhrsy\_family}.
+\par\endgroup
 
 \subsection{Version 1, 2, and 3 declarations}
 Improvements were added beside the existing development rather than

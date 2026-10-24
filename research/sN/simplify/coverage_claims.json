@@ -1,0 +1,30 @@
+[
+ {
+  "declaration": "MaxCaterpillar.Simplify.tree_outLeaf_choose_le",
+  "type": "∀ (r : ℕ) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {s : ℕ}, (∀ F ∈ K, Simplify.OutLeafBound F.descr s) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → ((r + 1 + 1).choose k : ℝ) ≤ (16 * ((s : ℝ) + 1) / 3) ^ k * K.card"
+ },
+ {
+  "declaration": "MaxCaterpillar.Simplify.tree_outLeaf_exponential",
+  "type": "∀ (r : ℕ), 1 ≤ r → ∀ {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K → ∀ {s : ℕ}, (∀ F ∈ K, Simplify.OutLeafBound F.descr s) → (16 * ((s : ℝ) + 1) / 3 + 1) ^ (r + 1 + 1) ≤ ((r + 1 + 1 : ℕ) + 1) * (16 * ((s : ℝ) + 1) / 3) ^ (r + 1 + 1) * K.card"
+ },
+ {
+  "declaration": "MaxCaterpillar.Simplify.mixed_outLeaf_choose_le",
+  "type": "∀ (r : ℕ) {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K₁ K₂ → ∀ {s : ℕ}, 1 ≤ s → (∀ F ∈ K₂, Simplify.OutLeafBound F.descr s) → ∀ {k : ℕ}, 3 ≤ k → k ≤ r + 1 + 1 → ((r + 1 + 1).choose k : ℝ) ≤ (16 * ((s : ℝ) + 1) / 3) ^ k * (K₁.card + K₂.card)"
+ },
+ {
+  "declaration": "MaxCaterpillar.Simplify.mixed_outLeaf_exponential",
+  "type": "∀ (r : ℕ), 1 ≤ r → ∀ {K₁ : Finset (FaceKey r)} {K₂ : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K₁ K₂ → ∀ {s : ℕ}, 1 ≤ s → (∀ F ∈ K₂, Simplify.OutLeafBound F.descr s) → (16 * ((s : ℝ) + 1) / 3 + 1) ^ (r + 1 + 1) ≤ ((r + 1 + 1 : ℕ) + 1) * (16 * ((s : ℝ) + 1) / 3) ^ (r + 1 + 1) * ((K₁.card : ℝ) + K₂.card)"
+ },
+ {
+  "declaration": "MaxCaterpillar.Simplify.outLeafBound_of_hubOK",
+  "type": "∀ {N : ℕ} {D : CountLower.Descr N}, (∀ m ∈ D.M, m.1 < m.2) → ∀ {Δ : ℕ}, Trees.HubOK D Δ → Simplify.OutLeafBound D Δ"
+ },
+ {
+  "declaration": "MaxCaterpillar.Simplify.outLeafBound_of_hingeDeg_le",
+  "type": "∀ {N : ℕ} (F : Trees.TreeFace N) {Δ : ℕ}, (∀ u, F.hingeDeg u ≤ Δ) → Simplify.OutLeafBound F.descr Δ"
+ },
+ {
+  "declaration": "MaxCaterpillar.Simplify.starFace_outLeafBound",
+  "type": "∀ {N : ℕ} (a c : Fin N) (hac : c ≠ a), Simplify.OutLeafBound (Trees.starFace a c hac).descr 1"
+ }
+]

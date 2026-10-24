@@ -1,0 +1,6 @@
+[2090/2091] Building MaxCaterpillar.Competing.Support
+stdout:
+./././MaxCaterpillar/Competing/Support.lean:61:76: warning: unused variable `hb` [linter.unusedVariables]
+./././MaxCaterpillar/Competing/Support.lean:410:11: warning: unused variable `ha0` [linter.unusedVariables]
+./././MaxCaterpillar/Competing/Support.lean:411:11: warning: unused variable `hb0` [linter.unusedVariables]
+EXIT 0

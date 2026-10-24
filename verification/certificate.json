@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-24T07:52:47.325228+00:00",
+  "checked_at_utc": "2026-10-24T08:52:20.185112+00:00",
   "source_commit": null,
-  "source_sha256": "c105afe8e8400f38282583ebae9a40bbe6d43041e86bae03a24028cc42ad8fbf",
+  "source_sha256": "641aa26200da2138674f6791266a159b455b7bb924150739b21d28baa8aa7a03",
   "lean_version": "Lean (version 4.4.0, commit ca7d6dadb9e1, Release)",
   "commands": [
     [
@@ -857,13 +857,200 @@
         "propext"
       ],
       "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_parallelepiped_eq_zonotope",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) {M : Finset \u2115}, M \u2286 Finset.Icc 2 (r + 1) \u2192 BHRSY.parallelepiped v \u03c0 M = zonotope (Pi.single (\u03c0.pos (BHRSY.lastMarked M)) 1) (Finset.Icc 2 (r + 1)) (fun i => Pi.single (\u03c0.pos (BHRSY.markedParent M i)) 1 - Pi.single (\u03c0.pos i) 1)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_parallelepiped_eq_zonotope_of_nonempty",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) {M : Finset \u2115}, M \u2286 Finset.Icc 2 (r + 1) \u2192 \u2200 (hne : M.Nonempty), BHRSY.parallelepiped v \u03c0 M = zonotope (Pi.single (\u03c0.pos (M.max' hne)) 1) (Finset.Icc 2 (r + 1)) (fun i => Pi.single (\u03c0.pos (BHRSY.markedParent M i)) 1 - Pi.single (\u03c0.pos i) 1)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_parallelepiped_empty",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v), BHRSY.parallelepiped v \u03c0 \u2205 = zonotope (Pi.single (\u03c0.pos 1) 1) (Finset.Icc 2 (r + 1)) (fun i => Pi.single (\u03c0.pos 1) 1 - Pi.single (\u03c0.pos i) 1)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_support_eq",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) {M : Finset \u2115}, M \u2286 Finset.Icc 2 (r + 1) \u2192 \u2200 (y : Point (r + 1 + 1)), BHRSY.paramidSupport v \u03c0 M y = y v + MaxCaterpillar.relu (y (\u03c0.pos (BHRSY.lastMarked M)) - y v + \u2211 i in Finset.Icc 2 (r + 1), MaxCaterpillar.relu (y (\u03c0.pos (BHRSY.markedParent M i)) - y (\u03c0.pos i)))",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_support_eq_word",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) {M : Finset \u2115}, M \u2286 Finset.Icc 2 (r + 1) \u2192 (BHRSY.cutSet (r := r) M).card = M.card \u2227 \u2200 y : Point (r + 1 + 1), BHRSY.paramidSupport v \u03c0 M y = y v + caterpillarFunction (caterpillarWordDescription \u03c0.word (BHRSY.cutSet M)) y",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_support_mem_caterpillar",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) {M : Finset \u2115}, M \u2286 Finset.Icc 2 (r + 1) \u2192 M.Nonempty \u2192 \u2203 k \u2208 caterpillarDescriptions r, \u2200 y, BHRSY.paramidSupport v \u03c0 M y = y v + caterpillarFunction k y",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_word_mem",
+      "type": "\u2200 {r : \u2115} (\u03c3 : Equiv.Perm (Fin (r + 1 + 1))) {S : Finset (Fin (r + 1))}, S.Nonempty \u2192 (0 : Fin (r + 1)) \u2209 S \u2192 \u2203 (v : Fin (r + 1 + 1)) (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) (M : Finset \u2115), M \u2286 Finset.Icc 2 (r + 1) \u2227 M.Nonempty \u2227 \u2200 y, BHRSY.paramidSupport v \u03c0 M y = y v + caterpillarFunction (caterpillarWordDescription \u03c3 S) y",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_support_empty",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) (y : Point (r + 1 + 1)), BHRSY.paramidSupport v \u03c0 \u2205 y = y v + Trees.rootedStar v (\u03c0.pos 1) y",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.rootedStar_ne_caterpillarFunction",
+      "type": "\u2200 {r : \u2115} {a c : Fin (r + 1 + 1)}, a \u2260 c \u2192 \u2200 {k : FaceKey r}, k \u2208 caterpillarDescriptions r \u2192 Trees.rootedStar a c \u2260 caterpillarFunction k",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_support_empty_not_caterpillar",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v), \u00ac \u2203 k \u2208 caterpillarDescriptions r, \u2200 y, BHRSY.paramidSupport v \u03c0 \u2205 y = y v + caterpillarFunction k y",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.bhrsy_family",
+      "type": "\u2200 {r : \u2115} {v : Fin (r + 1 + 1)} (\u03c0 : BHRSY.Ordering (r + 1 + 1) v) {M : Finset \u2115}, M \u2286 Finset.Icc 2 (r + 1) \u2192 (M.Nonempty \u2227 \u2203 k \u2208 caterpillarDescriptions r, \u2200 y, BHRSY.paramidSupport v \u03c0 M y = y v + caterpillarFunction k y) \u2228 (M = \u2205 \u2227 (\u2200 y, BHRSY.paramidSupport v \u03c0 M y = y v + Trees.rootedStar v (\u03c0.pos 1) y) \u2227 \u00ac \u2203 k \u2208 caterpillarDescriptions r, \u2200 y, BHRSY.paramidSupport v \u03c0 M y = y v + caterpillarFunction k y)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Simplify.tree_outLeaf_choose_le",
+      "type": "\u2200 (r : \u2115) {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K \u2192 \u2200 {s : \u2115}, (\u2200 F \u2208 K, Simplify.OutLeafBound F.descr s) \u2192 \u2200 {k : \u2115}, 3 \u2264 k \u2192 k \u2264 r + 1 + 1 \u2192 ((r + 1 + 1).choose k : \u211d) \u2264 (16 * ((s : \u211d) + 1) / 3) ^ k * K.card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Simplify.tree_outLeaf_exponential",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2200 {K : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsTreeExpansion r K \u2192 \u2200 {s : \u2115}, (\u2200 F \u2208 K, Simplify.OutLeafBound F.descr s) \u2192 (16 * ((s : \u211d) + 1) / 3 + 1) ^ (r + 1 + 1) \u2264 ((r + 1 + 1 : \u2115) + 1) * (16 * ((s : \u211d) + 1) / 3) ^ (r + 1 + 1) * K.card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Simplify.mixed_outLeaf_choose_le",
+      "type": "\u2200 (r : \u2115) {K\u2081 : Finset (FaceKey r)} {K\u2082 : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K\u2081 K\u2082 \u2192 \u2200 {s : \u2115}, 1 \u2264 s \u2192 (\u2200 F \u2208 K\u2082, Simplify.OutLeafBound F.descr s) \u2192 \u2200 {k : \u2115}, 3 \u2264 k \u2192 k \u2264 r + 1 + 1 \u2192 ((r + 1 + 1).choose k : \u211d) \u2264 (16 * ((s : \u211d) + 1) / 3) ^ k * (K\u2081.card + K\u2082.card)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Simplify.mixed_outLeaf_exponential",
+      "type": "\u2200 (r : \u2115), 1 \u2264 r \u2192 \u2200 {K\u2081 : Finset (FaceKey r)} {K\u2082 : Finset (Trees.TreeFace (r + 1 + 1))}, Trees.IsMixedExpansion r K\u2081 K\u2082 \u2192 \u2200 {s : \u2115}, 1 \u2264 s \u2192 (\u2200 F \u2208 K\u2082, Simplify.OutLeafBound F.descr s) \u2192 (16 * ((s : \u211d) + 1) / 3 + 1) ^ (r + 1 + 1) \u2264 ((r + 1 + 1 : \u2115) + 1) * (16 * ((s : \u211d) + 1) / 3) ^ (r + 1 + 1) * ((K\u2081.card : \u211d) + K\u2082.card)",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Simplify.outLeafBound_of_hubOK",
+      "type": "\u2200 {N : \u2115} {D : CountLower.Descr N}, (\u2200 m \u2208 D.M, m.1 < m.2) \u2192 \u2200 {\u0394 : \u2115}, Trees.HubOK D \u0394 \u2192 Simplify.OutLeafBound D \u0394",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Simplify.outLeafBound_of_hingeDeg_le",
+      "type": "\u2200 {N : \u2115} (F : Trees.TreeFace N) {\u0394 : \u2115}, (\u2200 u, F.hingeDeg u \u2264 \u0394) \u2192 Simplify.OutLeafBound F.descr \u0394",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "declaration": "MaxCaterpillar.Simplify.starFace_outLeafBound",
+      "type": "\u2200 {N : \u2115} (a c : Fin N) (hac : c \u2260 a), Simplify.OutLeafBound (Trees.starFace a c hac).descr 1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "status": "VERIFIED"
     }
   ],
   "source_files": {
     "All.lean": "c55c153c4ea209f54e44ed00c0f2898efb00265409230832ce38e8d54628bdcd",
     "MaxCaterpillar/Asymptotics.lean": "640255cd2965b4c364e9e0435d2ad12a4458ed67dd9d16d14f170be593a4a946",
+    "MaxCaterpillar/Audit/CaterpillarTree.lean": "80daa8c5aa9c96a00cbc1e4b1c795793793d1a37c18bc580738ea88fb35655f4",
+    "MaxCaterpillar/Audit/Expansion.lean": "c80af0a2e5d9e9779a1d22dabde65b386dc6abfd447ad9648128fbf81e9830f8",
+    "MaxCaterpillar/Audit/Widths.lean": "1dbb1c2c23b0fea6d5a9e644a70dcbe1d2e0c6ad35f1d85765673999d806080a",
+    "MaxCaterpillar/Audit.lean": "50706488fec09dc8ba0364e49698d2242098c8115cce15968836d291ae81fe15",
     "MaxCaterpillar/CPWL.lean": "ec7dc5253be1142466de4af458ab461b96169a7eff371f3ed4830944dc292d77",
     "MaxCaterpillar/CPWLRational.lean": "fafa1f2932135d8e880ebfcf4b4b1c228dd61e221f1f0882c79f5679954ef589",
+    "MaxCaterpillar/Competing/Defs.lean": "b437a6e46f3f150d680dd9ecfa3c67a17c9670eba957b4122073d24af95e6bea",
+    "MaxCaterpillar/Competing/Relation.lean": "33e60df4fb8da221c26dd3f14f89b1b4c66e294463b0bf7385ed71680c5a1792",
+    "MaxCaterpillar/Competing/Support.lean": "40caa30929bf18779092fa911bd638f6b9de9e0e3bdcd35701b76d1f05947baf",
     "MaxCaterpillar/Compilation.lean": "2d2213c4d9e360aa936dd19df492aab7b5907cc76b1a6020a481647c8e2f7cb2",
     "MaxCaterpillar/Construction.lean": "d30bbf1b948682a246880b0090f9b714f9492c658790b16a87188eb6c8faf166",
     "MaxCaterpillar/Core.lean": "76e210cd6a02fc9cf182ebb0b657ab1c02a54f6e02eb8e2df514d510c8c81d1d",
@@ -896,7 +1083,7 @@
     "MaxCaterpillar/Frontier/FirstWidth.lean": "5c719e82c0c61e475128f6c44b3ed2ee34e3c9aab779c043c53734da514b5918",
     "MaxCaterpillar/Frontier/FirstWidthN.lean": "42e9b57fbc5d1a5312fb070be45f932249925c68b259e2c8d68b615a132d9810",
     "MaxCaterpillar/Frontier/GeneralN.lean": "59a58d4a6b2b227a07090b17f77e47898aad8fca4dd55f20a8a4251779c6c1f8",
-    "MaxCaterpillar/Frontier/GeneralN2.lean": "33dc109d653abaee406c9718e4e3cd056fc9112abe94ffc4573c964e37c21b2b",
+    "MaxCaterpillar/Frontier/GeneralN2.lean": "549117aac5661a08a50025ea44d1cd55356637fc8011e87e0afdcebca4e63f38",
     "MaxCaterpillar/Frontier/Main.lean": "c84f1eadede51cdb53691a4efd2053299b498a3bbdb6942fc9ec81ded5f1a214",
     "MaxCaterpillar/Frontier/MaxMinSubspace.lean": "a15f183e4ccdf28f8eb70e94f3138af5f60be5a6fec341e7d76f29413a06cdbc",
     "MaxCaterpillar/Frontier/SecondWidth.lean": "6e7419588afbf99371389556e08fc3dc5e35d981b11593a85c3b42bdbf7b3ab6",
@@ -913,7 +1100,15 @@
     "MaxCaterpillar/Rationality.lean": "45b11f39e655632e5977d318617f3b20bd93a9b762a23b2bbbacfce63a5ac2ac",
     "MaxCaterpillar/Sharing.lean": "02c80786642c189a2c95930a5fbb12651ed13ce36288ce02a076e3f68c5fe43e",
     "MaxCaterpillar/SharingRational.lean": "fdda6c8a7a3862f9471c95180304153573ae9b27324f286080a38a5bba4ebe25",
+    "MaxCaterpillar/Simplify/BlockSum.lean": "d52a32a10acb97aa6969d5c89e16c37eb2adbc8081a80026c055103a3a63d139",
+    "MaxCaterpillar/Simplify/Brunck.lean": "6cd6348fb430baa89772fe7e660b2857a766ae2f1da42fdaa6dcd836f0a3b97c",
+    "MaxCaterpillar/Simplify/Coverage.lean": "3cb10ee06bcb7a1ea7066a9a2ecbc164750092fb59ac83a9cb042c1bad2431e2",
+    "MaxCaterpillar/Simplify/CoverageMain.lean": "472f6c9c5ff0568c463716c60dbc127ef58d561df3dd3fc60f1b8ee2277c6c21",
+    "MaxCaterpillar/Simplify/Dimension.lean": "60cf34e86bc3d32ff67c5d57488fa33f4d91f1682e86f507136c401995ad2dae",
     "MaxCaterpillar/Simplify/Rational.lean": "98cbe9304aa4e867127bf31ea3471e5789b10fb70d1d88858070fe19d7256e13",
+    "MaxCaterpillar/Simplify/Reduced.lean": "8c21f8b6cf9ffbebd245f1ba403eea58b62bb4dd7c6547ca2cab2f6fc5e35e18",
+    "MaxCaterpillar/Simplify/StarCover.lean": "1a8956391148d3c0fdadb309c14544396346336c78d1899a187be6e5a854b670",
+    "MaxCaterpillar/Simplify/TreeUnits.lean": "02c4ad9e2ad2365b9ae18793b747677f51097400d8b0c10d9a91b52dd0b7a005",
     "MaxCaterpillar/SmallArity.lean": "ea9d57b776d54e3fc89479af3b5718b7fedd198940c461b17e0a4b707a2083e5",
     "MaxCaterpillar/SmallN/Common.lean": "804dab1de75a622f672b9ae391d5ca1a5b06d613c228923c241469cdc6498df0",
     "MaxCaterpillar/SmallN/Max4Test/Cells0.lean": "9ebabac2fade3840db1a77f37aaa9e7d2fe51d7a5ed5a8c71922f7c67443e0f4",
@@ -933,7 +1128,7 @@
     "MaxCaterpillar/SmallN/Max5Lns27/Defs.lean": "4a6799a10e4714e0f1d389e7f978703842c9d5ce2e30130590ee1ccd51f686d9",
     "MaxCaterpillar/SmallN/Max5Lns27.lean": "d95dda6b266618720ff4bd32cad14de65ea8636878539b7e5899a2a2d655f945",
     "MaxCaterpillar/SmallN.lean": "536f1f27252d783b0635efdee5c8ffa94c9af0b65182ddba6e4fa88b089d9903",
-    "MaxCaterpillar/Theorems.lean": "71715ec62e369505c72f5843f22bb22237339084f4d8fe6e917e6523e9af3fe9",
+    "MaxCaterpillar/Theorems.lean": "774008c2e4a26f16d6fcf6a5c7fbcfa3d367bd43304f4f08793ee2e5c7753ac7",
     "MaxCaterpillar/Trees/BoundedDegree.lean": "963f9f28c5db4da8e7e5a03c565be31c6529430a336a30eb8cbff1ec2d71a1d2",
     "MaxCaterpillar/Trees/BoundedDegreeMain.lean": "424437991233fbac2b55381ade4b48333ad94dd2657350ad70d6aaad41d3648d",
     "MaxCaterpillar/Trees/Combined.lean": "a3f10d4d5aa13fe12db7e024b3b2f044a4bf51df27b8f9af839c096fc1d6af8b",
@@ -943,7 +1138,7 @@
     "MaxCaterpillar/Trees/Quadratic.lean": "8b548b7596fd28523b3cd59ffc7dc6670c8289c7e7dfd91ac83695eb2b207ecf",
     "MaxCaterpillar/Trees/RootedStars.lean": "72bcae69b40327c273695eb9b9967639d192b80708cfccea1a42f7d49846943d",
     "MaxCaterpillar/Trees.lean": "568b82ed10147f32463c4232ffaba594327e6182e427570b064823ce577040c2",
-    "MaxCaterpillar.lean": "4c53e9b378bc216d445cdd9bfa0eb33e09c78bd5abae0698745d8f7b3819b852",
+    "MaxCaterpillar.lean": "a96087729e7fe1a47c6d59c83c9806c98e3dd14f237051514ce69b86de499ebc",
     "MaxNN/CPWL/Closure.lean": "6b990558199ff99835d18e5ff835e2506351bc2f5516b6f8acf35ec6b1281a1c",
     "MaxNN/CPWL/Conditional/Finitary/Bundle.lean": "c0e0d0e5b5ed8cf942161e4a1fcb9e9b213587d32345871c4954c58afbce4290",
     "MaxNN/CPWL/Conditional/Finitary.lean": "23bb8dec03ed56bc703279a21f38a92366bd96410202af1627196fa6c2f187d2",
@@ -1127,7 +1322,7 @@
     "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
     "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
     "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
-    "Verification/Statements.lean": "682201d4317b5085485d2f6825b7a68df27ce03af9d1cfe1883fc6b38f3030a9",
+    "Verification/Statements.lean": "a78e48d7bfd1c1ecaaad2821640fe8e3818d8a8b784df10ea5cc7d790cd2d77e",
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
@@ -1146,6 +1341,8 @@
     "research/sN/rank/Speed.lean": "deacc99537990bfceb917b0b6c6eb2ca632d93c736c1c32bca041c8144012629",
     "research/sN/rank/T1.lean": "eac75cdd10f4e70def1f0a1d31ff55b5b308146b42a428c922c80bb815a88647",
     "research/sN/restricted/Germ.lean": "8e8039ac2d52a5ccd8c947332db7bf908937739a1c73654fac19cf90bb8706dd",
-    "verification/main.json": "e55cf34aea5beebe6107035920f277e19a421e73d0acbf87d3756d2def505633"
+    "research/sN/simplify/CheckDimension.lean": "d8f6c01296874dd603c7a29d2f0d70b0583fa414f62d01cccc103a6aff493b2d",
+    "research/sN/simplify/CoverageStatements.lean": "1349375418594db0f84c9f69c2f7a8a4f27334ef3a518466e468a19a5e9f17d1",
+    "verification/main.json": "49822ff7457573e94a358e041ad4098c883fe2ebf81b816e58428b97a2a95b6c"
   }
 }

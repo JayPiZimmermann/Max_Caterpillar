@@ -1,0 +1,8 @@
+'MaxCaterpillar.Simplify.tree_outLeaf_choose_le' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.tree_outLeaf_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.mixed_outLeaf_choose_le' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.mixed_outLeaf_exponential' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.outLeafBound_of_hubOK' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.outLeafBound_of_hingeDeg_le' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Simplify.starFace_outLeafBound' depends on axioms: [propext, Quot.sound, Classical.choice]
+EXIT 0

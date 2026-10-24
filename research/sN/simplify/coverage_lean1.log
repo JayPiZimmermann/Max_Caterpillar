@@ -1,0 +1,4 @@
+MaxCaterpillar/Simplify/Coverage.lean:404:53: warning: unused variable `hlt` [linter.unusedVariables]
+MaxCaterpillar/Simplify/Coverage.lean:495:31: warning: unused variable `hn` [linter.unusedVariables]
+MaxCaterpillar/Simplify/Coverage.lean:525:7: warning: unused variable `hs4` [linter.unusedVariables]
+EXIT 0
