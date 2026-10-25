@@ -175,8 +175,6 @@
 \DeclareLeanEquation{eq:rational-coordinate}{MaxCaterpillar/Rationality.lean}{64}
 \DeclareLeanEquation{eq:quotient-dimension}{MaxCaterpillar/Quotient.lean}{44}
 \DeclareLeanEquation{eq:quotient-width}{MaxCaterpillar/Quotient.lean}{57}
-\DeclareLeanEquation{eq:max-three}{MaxCaterpillar/SmallArity.lean}{62}
-\DeclareLeanEquation{eq:max-four}{MaxCaterpillar/SmallArity.lean}{117}
 \DeclareLeanEquation{eq:kmps}{MaxCaterpillar/KMPS.lean}{410}
 \DeclareLeanEquation{eq:count-binomial}{MaxCaterpillar/Theorems.lean}{113}
 \DeclareLeanEquation{eq:count-exponential}{MaxCaterpillar/Theorems.lean}{121}
@@ -420,8 +418,7 @@ vocabulary; the same proof shows that they are rational, without any
 integral (\Cref{thm:quotient-compression}).
 \Cref{sec:compression} bounds the second width by $q_N+2$, where $q_N$ is the
 dimension of the vocabulary modulo its auxiliary functions; this bound
-proves \Cref{thm:main}. For $N=3,4$ expansions with one and three units are
-proved in Lean. Conversely, \Cref{sec:lower} proves that every expansion of
+proves \Cref{thm:main}. Conversely, \Cref{sec:lower} proves that every expansion of
 $\maxn_N$ in caterpillar and auxiliary functions has at least
 $(7/6)^N/(N+1)$ caterpillar functions, and that $q_N\geq(N-2)!$.
 \Cref{sec:sharing} applies the
@@ -1365,34 +1362,11 @@ because the new coefficients are rational.
 
 Every face function is the unit of a normalized description outside
 $\mathcal P$ or an auxiliary combination (\Cref{app:widths}), so $q_N+2$ never
-exceeds the second width of \Cref{thm:main}. The quotient dimension controls
-only this compression. A network needs only the units of one expansion of
-$\maxn_N$; \Cref{thm:small-arity} gives expansions with one and three units
-for $N=3,4$.
+exceeds the second width of \Cref{thm:main}. This dimension controls
+compression by a basis of the whole vocabulary. An individual expansion
+of $\maxn_N$ may use fewer functions.
 
-\Needspace{8\baselineskip}
-\begin{theorem}[Small arities, \leandecl{MaxCaterpillar/SmallArity.lean}{80}{max_three_network}, \leandecl{MaxCaterpillar/SmallArity.lean}{194}{max_four_network}]\label{thm:small-arity}
-For all real inputs,
-\begin{align}
- \maxn_3(x)&=x_1+\relu\bigl(x_2-x_1+\relu(x_0-x_2)\bigr),\label{eq:max-three}\\
- \begin{split}
- \maxn_4(x)&=x_1-\relu(x_0-x_2)-\relu\bigl(x_1+x_2-x_0-x_3+\relu(x_0-x_1)\bigr)\\
- &\quad+\relu\bigl(x_1+x_2-x_0-x_3+\relu(x_0-x_1)+\relu(x_0-x_2)\bigr)\\
- &\quad+\relu\bigl(x_3-x_1+\relu(x_0-x_2)+\relu(x_2-x_3)\bigr).
- \end{split}\label{eq:max-four}
-\end{align}
-Hence the network of \Cref{thm:compilation} computes $\maxn_3$ with widths
-$(7,3)$ and $\maxn_4$ with widths $(11,5)$, with rational weights and zero
-biases.
-\end{theorem}
-Each outer unit in~\Cref{eq:max-three,eq:max-four} is a normalized face
-function. Lean proves both identities by exhaustive case analysis of the
-activation pattern on all of $\R^N$. For these arities, smaller networks
-are known: nesting $\max(s,t)=t+\relu(s-t)$ gives widths $(5,3)$ for
-$\maxn_3$ and $(6,3)$ for $\maxn_4$. The identities illustrate how sparse the expansion in the
-vocabulary can be.
-
-\subsection{A matching bound with a fixed first hidden layer}\label{sec:fixed-five}
+\subsection{Matching width bounds for five inputs}\label{sec:fixed-five}
 
 For five inputs, an explicit first hidden layer admits a matching construction
 and lower bound for the second hidden layer. Define
@@ -1432,6 +1406,21 @@ and exact finite certificate for optimality. This optimality concerns the
 prescribed first hidden layer; the unrestricted five-input width frontier
 is not determined. The finite lower-bound certificate is independently
 checked with rational arithmetic and is not a Lean theorem.
+
+
+\begin{theorem}[Minimum first hidden layer width for five inputs]\label{thm:first-five-nine}
+Among two-hidden-layer ReLU networks with arbitrary real weights and
+biases, no skip connections, and a finite second hidden layer, the minimum
+first hidden layer width required to compute $\maxn_5$ on $\mathbb R^5$ is
+nine. A rational network with hidden widths $(9,14)$ attains this first
+width.
+\end{theorem}
+
+The lower bound combines an exact finite classification of first hidden layers
+of width eight with a short obstruction that excludes every finite second
+width over the surviving first hidden layer. \Cref{app:first-five} gives both
+arguments and the attaining construction. The minimum second hidden layer
+width at first hidden layer width nine remains open.
 
 
 \section{CPWL functions}\label{sec:sharing}
@@ -1478,8 +1467,7 @@ biases, and linear $g_i$ give zero biases.
 
 \section{Conclusion}
 The second width of the Caterpillar Net is the number of caterpillar
-functions in an expansion of $\maxn_N$ plus two. For $N=3,4$, one and three
-functions suffice (\Cref{thm:small-arity}); for general $N$,
+functions in an expansion of $\maxn_N$ plus two. For general $N$,
 \Cref{thm:quotient-compression} retains at most $q_N$ of them.
 Conversely, every such expansion needs at least $(7/6)^N/(N+1)$ caterpillar
 functions (\Cref{thm:count-exponential}), so caterpillar building blocks
@@ -2388,6 +2376,248 @@ because $q\geq\min S>0$, so the value is at most $N-2$. Thus
 $U_k(e_c)\leq N-2<S_{a,c}(e_c)$.
 \end{Proof}
 
+\section{Minimum first hidden layer width for five inputs}\label{app:first-five}
+\newcommand{\firstfivebase}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/ecf07e77dde5cb9a1f41714a39425e65f3b9a38d/research/sN/frontierN}
+\newcommand{\firstfivebest}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/ecf07e77dde5cb9a1f41714a39425e65f3b9a38d/research/sN/best5}
+
+\subsection{The only possible first hidden layer of width eight}
+\label{app:first-five-classification}
+
+\begin{lemma}[First-layer classification]\label{lem:first-five-classification}
+If an exact network for $\maxn_5$ has first hidden layer width at most eight,
+then after removing biases, permuting coordinates and neurons, and
+positively rescaling first hidden layer rows, its first hidden layer functions must be
+\[
+ \relu(x_0),\ \relu(-x_0),\quad
+ \relu(x_i-x_0)\ (1\le i\le4),\quad
+ \relu(x_1-x_2),\ \relu(x_3-x_4).
+\]
+\end{lemma}
+
+\begin{proof}[Exact-certificate proof]
+Let $J_+,J_-,J_0$ denote rows with positive, negative, and zero coordinate
+sum. The signed classes are nonempty. The support and feature-cell
+conditions below force their sizes to be $(1,1,6)$.
+For a singleton signed class, translation along the common-coordinate
+direction gives
+\[
+ \maxn_5(x)=\ell(x)+\Phi\bigl(\relu(r_1\cdot x),\ldots,
+                                      \relu(r_6\cdot x)\bigr),
+\]
+where the $r_j$ have coordinate sum zero. On a strict feature cell with
+active rows $A$ and unique maximizing coordinate $i$, variation along
+feature fibers implies
+\[
+ e_i-\ell\in\operatorname{span}\{r_j:j\in A\}.
+\]
+The exact checker exhausts all support multisets and coefficient-sign
+profiles compatible with the support conditions. Its only survivors
+are the four orientations of the two matching comparisons displayed in
+the statement, and its equations force $\ell=e_0$. If $a$ is the unique
+positive-sum row, translation to positive infinity gives
+$\ell=a/(a\cdot\one)$: the zero-slope second hidden layer neurons do not use this
+row, and the target's diagonal slope fixes its total coefficient.
+The negative translation end gives the same conclusion for the unique
+negative-sum row. Thus these rows are positive multiples of $e_0$ and $-e_0$.
+Swapping the endpoints of either matching edge gives the displayed
+orientation. The complete real-parameter coverage and arithmetic trust
+boundary are specified in \Cref{app:first-five-classification}.
+\end{proof}
+
+The support conditions follow from directional germs. At the common-coordinate
+vector, only zero-sum first hidden layer rows remain nonlinear. At a generic point
+where precisely the coordinates in $I$ tie at the maximum, only rows whose
+supports lie in $I$ remain nonlinear. If no such row exists for a
+three-element $I$, the germ would represent $\maxn_3$ by one hidden layer
+plus a linear function. This is impossible: its gradient jump across
+$x_1=x_2$ is nonzero where $x_1=x_2>x_3$ and zero where
+$x_1=x_2<x_3$, whereas a finite sum of ReLUs of linear forms has a constant
+jump along each hyperplane away from the other hyperplanes.
+
+For $|I|=4$, suppose none of the retained supports contains $i\in I$.
+Writing $t=x_i$ and $z=x_{I\setminus\{i\}}$, the germ has the form
+$L(t,z)+S(z)+\sum_j d_j\relu(m_jt+M_j(z))$, where $S$ and every $M_j$
+are one-hidden-layer functions with linear terms allowed. For fixed $z$,
+its nonzero-slope terms have jumps $d_j|m_j|$ at
+$t=-M_j(z)/m_j$. The target $\max(t,\max z)$ has one jump of size one
+at $t=\max z$. Equality of the first moments of the jumps would give
+$\max z=-\sum_{m_j\ne0}d_j\operatorname{sgn}(m_j)M_j(z)$, contradicting
+the three-variable obstruction. This proves both support conditions.
+
+The support conditions require every three-element coordinate set to
+contain the support of a nonzero zero-sum row and, for every four-element
+set $I$ and every $i\in I$, require such a support $S$ with
+$i\in S\subseteq I$. Exhaustive support coverage needs at least five
+useful rows. For five rows there are 102 labelled support covers in three
+permutation orbits; all 416 possible coefficient-sign classes are excluded
+when either signed row class is a singleton. This yields the preliminary
+first hidden layer width bound eight and the row-sum class sizes $(1,1,6)$ at equality.
+
+For six rows the checker enumerates 2767 labelled support multisets in
+43 permutation orbits and all 58176 coefficient-sign profiles. It tests
+the feature-fiber equations using signed lexicographic coordinate flags
+and validates explicit cut-removal witnesses. Exactly four profiles
+survive, corresponding to the two independent matching-edge orientations
+in \Cref{lem:first-five-classification}; the same equations force
+$\ell=e_0$. Repeated supports, zero-coefficient support boundaries, and
+both signs of every nonzero coefficient are covered. For any fixed real
+rows, sufficiently separated lexicographic coordinates realize every
+recorded strict sign condition, so arbitrary irrational and arbitrarily
+small nonzero coefficients are included.
+
+The cut-removal witnesses use only the span condition in
+\Cref{lem:first-five-classification}. Two flags with the same active rows
+and distinct winners $i,j$ force $e_i-e_j$ into the span of those rows.
+If a cut does not separate $i,j$ and exactly one remaining row crosses it,
+then that row's coefficient in this span expression must vanish whenever
+its sum on the cut is nonzero. The recorded coefficient signs certify
+nonzeroness when all its nonzero entries on either side have one sign.
+Delete that row and repeat; a final cut separating $i,j$ is a contradiction.
+The same operation applies to $e_i-\ell$ when previously established cut
+sums force its cut sum to vanish. The checker validates every deletion
+and every forced equation.
+
+The finite check uses no numerical optimizer. Its linear systems have
+at most six columns and entries zero or one. Every square determinant
+therefore has absolute value at most $6!=720<1009$, so the recorded
+arithmetic modulo 1009 preserves rational ranks, including augmented
+ranks and tests of forced equations. The arithmetic does not approximate
+the unknown real row coefficients. The classification is an independently
+checked exact certificate with this written model reduction, not a
+Lean-verified network-classification theorem. The algebraic curvature-score
+identity in \Cref{lem:first-five-rectangle} is separately Lean verified;
+its geometric argument is the proof given there.
+
+The \href{\firstfivebase/overnight_general.md}{five-row reduction} and
+\href{\firstfivebase/overnight_general_six.md}{six-row classification}
+include the complete certificate data. Their independent checkers
+\href{\firstfivebase/overnight_general_check.py}{enumerate the five-row cases}
+and \href{\firstfivebase/overnight_general_six_check.py}{verify all six-row cases}
+using exact arithmetic. The curvature proof and the construction are
+recorded with their precise formalization scope in the
+\href{\firstfivebest/overnight_fixed_first9_paper_manifest.json}{verification manifest}.
+
+\subsection{A curvature obstruction}
+
+\begin{lemma}[A rectangle of curvature scores]
+\label{lem:first-five-rectangle}
+Set
+\[
+ (a,b,c)=(\relu(u),\relu(v),\relu(v-u)),\qquad
+ (d,e,f)=(\relu(s),\relu(t),\relu(t-s)).
+\]
+On this feature image, $\max(a,b,d,e)$ is not a finite signed sum of ReLUs
+of linear forms in the six features, even after adding an arbitrary
+linear function of the features.
+\end{lemma}
+
+\begin{proof}
+Each block image consists of the cones between consecutive rays
+$(1,0,0),(1,1,0),(0,1,1),(0,0,1)$. Consider four full four-dimensional
+product cones:
+\[
+\begin{array}{c|c|c|c}
+ &\text{first block}&\text{second block}&\text{target}\\ \hline
+ 00&c=0,\ a\ge b\ge0&f=0,\ d\ge e\ge0&\max(a,d)\\
+ 02&c=0,\ a\ge b\ge0&d=0,\ f\ge e\ge0&\max(a,e)\\
+ 20&a=0,\ c\ge b\ge0&f=0,\ d\ge e\ge0&\max(b,d)\\
+ 22&a=0,\ c\ge b\ge0&d=0,\ f\ge e\ge0&\max(b,e).
+\end{array}
+\]
+On every cone, $b$ and $e$ remain independent coordinates. Hence the
+class of hyperplanes whose normal coefficients satisfy $B+E=0$ is
+intrinsic to the restricted hyperplane: a different coefficient class
+cannot cancel one of its interior gradient jumps.
+
+For a form
+$g=Aa+Bb+Cc+Dd+Ee+Ff$ in this class, define
+\[
+ \kappa(A,B,D)=\relu(A+B)-\relu(A)-\relu(D)+\relu(D-B).
+\]
+Its scores on the four cones are respectively
+\[
+ \kappa(A,B,D),\quad\kappa(A,B,F),\quad
+ \kappa(C,B,D),\quad\kappa(C,B,F).
+\]
+Forms outside the class have score zero. These scores are well-defined
+for a finite ReLU sum modulo linear functions on each cone. Indeed,
+\[
+ \kappa(A,B,D)=\tfrac12\bigl(|A+B|-|A|-|D|+|D-B|\bigr)
+\]
+is unchanged by reversing the normal and scales by the absolute value
+of its scale factor. If the form has fixed sign on the cone, its four
+ray values have one sign and the score is zero. For every other form,
+a generic point on its crossing hyperplane fixes the total signed
+coefficient of that hyperplane; distinct crossing hyperplanes cannot
+cancel there.
+
+For each individual unit, separability gives
+\[
+ \kappa(A,B,D)-\kappa(A,B,F)
+ -\kappa(C,B,D)+\kappa(C,B,F)=0.
+\]
+Thus the four scores of every finite represented function satisfy
+$S_{00}-S_{02}-S_{20}+S_{22}=0$. The target scores are instead
+$(0,0,0,1)$: its first three crease normals are $a-d,a-e,b-d$, while the
+last is $b-e$ and $\kappa(0,1,0)=1$. This is a contradiction.
+\end{proof}
+
+\begin{Proof}{first-five-nine}{thm:first-five-nine}
+Positive homogeneity permits removal of every bias without changing the
+computed function or the widths. If the first hidden layer width were at most eight,
+\Cref{lem:first-five-classification} would give its displayed first hidden layer.
+Restricting to $x_0=0$ makes both coordinate carriers vanish. After swapping
+names within each matched pair, any finite second hidden layer would
+contradict \Cref{lem:first-five-rectangle}. The rational construction in
+\Cref{app:first-five-upper} gives the upper bound nine.
+\end{Proof}
+
+\subsection{A rational construction attaining first hidden layer width nine}
+\label{app:first-five-upper}
+
+Set $u=x_1-x_0$, $v=x_2-x_0$, $s=x_3-x_0$, and $t=x_4-x_0$, and use the
+seven invariant first hidden layer features
+\[
+ z=(a,b,p,c,d,q,r)
+  =\bigl(\relu(u),\relu(v),\relu(v-u),\relu(s),\relu(t),
+               \relu(s-t),\relu(v-t)\bigr),
+\]
+together with $\relu(x_0),\relu(-x_0)$. Put
+$R(z)=(-a+b+2d+q)/2$. The following identity specifies the construction:
+\[
+ \maxn_5(x)=x_0+R(z)+\sum_{j=1}^{12}\lambda_j\relu(L_j(z)),
+\]
+where the rows below give the coefficients of $L_j$ in the displayed
+order of $z$:
+\[
+\begin{array}{c|rrrrrrr}
+\lambda_j&a&b&p&c&d&q&r\\ \hline
+ 1/2&0&1&-1&-1&0&0&-1\\
+ -1/2&1&0&0&-1&0&1&-1\\
+ 1/2&1&0&1&0&0&1&-1\\
+ 1&0&0&0&0&0&1&-1\\
+ -1/2&0&0&1&0&0&1&-1\\
+ -1/2&0&1&-1&-1&0&0&0\\
+ -1/2&0&1&-1&0&-1&0&0\\
+ 1/2&0&1&0&0&-1&0&0\\
+ -1/2&0&1&0&0&0&1&-1\\
+ 1&1&0&0&-1&0&0&0\\
+ -1/2&1&0&0&-1&0&1&0\\
+ 1&1&0&0&0&-1&0&0
+\end{array}
+\]
+Two further second hidden layer neurons encode the linear remainder as
+$\relu(x_0+R(z))-\relu(-x_0-R(z))$. Thus the identity is an ordinary
+network with widths $(9,14)$ and no skip connection.
+
+The \href{\firstfivebest/overnight_fixed_cross_verify.py}{independent exact checker} verifies the \href{\firstfivebest/overnight_fixed_cross_net9_14_simple.json}{rational network} on every one of the
+120 input braid cones. It groups proportional interior hyperplanes,
+checks their signed gradient-jump cancellation, and then checks equality
+of the remaining gradient to the maximizing coordinate. Homogeneity and
+continuity cover the origin and all cone boundaries. This is a global
+rational certificate, not a sampled validation. Only first hidden layer width nine is
+claimed minimal.
+
 \section{Optimal second width for the prescribed five-input layer}\label{app:fixed-five}
 
 \begin{Proof}{fixed-five}{thm:fixed-five}
@@ -2819,6 +3049,9 @@ certificate: the current sources require an updated exact-statement manifest
 and a fresh verification run. In particular, the source-orientation,
 matching-number, and arbitrary-star extensions are mathematical arguments
 in this paper, not claims checked by the historical certificate.
+The matched five-input width bounds use independently checked rational
+certificates and the geometric arguments in
+\Cref{app:first-five,app:fixed-five}; they are not Lean-verified network theorems.
 The mathematical arguments are provided in the main text and
 \Crefrange{app:dictionary}{app:lower}; the formalization is an
 additional certificate of the formal statements.
