@@ -21,6 +21,13 @@ tree units, their proper face functions, and a shallow remainder satisfies
 where F_1=F_2=1. In particular |K|=Omega((2/phi)^N), where
 phi=(1+sqrt(5))/2. Only full-dimensional units need to be counted in K.
 
+It is enough to have these separators at all sufficiently large odd arities.
+If the first guaranteed odd arity is a fixed m_0>=5, replace the numerator
+by 2^(N-1)-sum_(j<m_0, j odd) binom(N,j). The removed terms are polynomial
+in N, so the same exponential rate2/phi follows. In particular, a candidate
+vanishing on max_5 and max_7 is not excluded if it detects every later odd
+maximum. The denominator F_N-N+1 remains a valid upper bound.
+
 ## Which coordinate deletions can survive?
 
 For each odd label subset S of size m>=5, apply the signed coordinate-deletion
