@@ -1,0 +1,5 @@
+# Frozen matching-state note and bounded modular endpoint gate, 25 October 2026.
+7dcca3b3906e7b6de9526b4ab1d5a6fbcb8635e9becc069638a2669e5888131f  research/sN/trees/overnight_uniform_cut_matching.md
+afcd721ad79132ba30403c95d03a5db9a05b8d06c6b5518d4c9b820871fe8d31  research/sN/trees/overnight_uniform_cut_matching_gate.json
+d46aa504a982942889eb2f5022e492dee965453c3548c27efeb5faa4b946c711  research/sN/trees/overnight_uniform_cut_matching_gate.log
+833ad2d153275a627cc1a15631f074964d9df992c3061cab32b87ce061dbb6a0  research/sN/trees/overnight_uniform_cut_matching_gate.py

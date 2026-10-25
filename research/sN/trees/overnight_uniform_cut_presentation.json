@@ -1,0 +1,8 @@
+{
+  "status": "EXACT_CHARGED_ROOT_SLIDE_AND_TRIANGULAR_CORRECTION_PASS",
+  "defect_numerator_zero": true,
+  "six_term_numerator_zero": true,
+  "seconds": 0.00021399699471658096,
+  "checker_sha256": "4454190cc8ca1fc8517af305a0ad95b55110dc68f0c72675882ac86686b4a52c",
+  "scope": "Local rational identities only. No assertion that these relations present the full canonical kernel space or preserve every outward-twin relation."
+}

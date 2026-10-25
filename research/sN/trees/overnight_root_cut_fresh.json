@@ -1,0 +1,44 @@
+{
+  "status": "ROOT_FRESH_LOCAL_CUT_IDENTITIES_AND_MODULAR_DIAGNOSTICS_PASS",
+  "receipts": {
+    "overnight_uniform_cut_presentation": {
+      "status": "EXACT_CHARGED_ROOT_SLIDE_AND_TRIANGULAR_CORRECTION_PASS",
+      "fresh_seconds": 0.02316550799878314
+    },
+    "overnight_uniform_cut_endpoint_gate": {
+      "status": "MODULAR_SHIFTED_CUT_ENDPOINT_DIAGNOSTIC_ONLY",
+      "columns": 92,
+      "endpoint_columns": 33,
+      "original_rank": 47,
+      "endpoint_rank": 12,
+      "residue_rank": 35,
+      "joint_rank": 47,
+      "fresh_seconds": 0.4307091890004813
+    },
+    "overnight_uniform_cut_matching_gate": {
+      "status": "MODULAR_NO_PERFECT_MATCHING_ENDPOINT_DIAGNOSTIC_ONLY",
+      "columns": 258,
+      "endpoint_columns": 77,
+      "original_rank": 112,
+      "endpoint_rank": 16,
+      "residue_rank": 96,
+      "joint_rank": 112,
+      "fresh_seconds": 1.0277120209939312
+    }
+  },
+  "source_hashes": {
+    "research/sN/trees/overnight_uniform_cut_endpoint_gate.json": "66dce5f70091a0855abadb11b7f216e8fdadedaa5a7fc0893dd79b232cebfb85",
+    "research/sN/trees/overnight_uniform_cut_endpoint_gate.log": "accebbdaf484d7d4e1047091cc067e00de8b509763d0a5036c4058b1c8a10fc1",
+    "research/sN/trees/overnight_uniform_cut_endpoint_gate.py": "a29b8b9c1432ac4ee7aa01a57916f0b7f4e4afe404628c49223e53e9b1765eef",
+    "research/sN/trees/overnight_uniform_cut_matching.md": "7dcca3b3906e7b6de9526b4ab1d5a6fbcb8635e9becc069638a2669e5888131f",
+    "research/sN/trees/overnight_uniform_cut_matching_gate.json": "afcd721ad79132ba30403c95d03a5db9a05b8d06c6b5518d4c9b820871fe8d31",
+    "research/sN/trees/overnight_uniform_cut_matching_gate.log": "d46aa504a982942889eb2f5022e492dee965453c3548c27efeb5faa4b946c711",
+    "research/sN/trees/overnight_uniform_cut_matching_gate.py": "833ad2d153275a627cc1a15631f074964d9df992c3061cab32b87ce061dbb6a0",
+    "research/sN/trees/overnight_uniform_cut_presentation.json": "430cadd309b7c22680950ddebb91f81b3e295dd0824600329c976b156923cf24",
+    "research/sN/trees/overnight_uniform_cut_presentation.log": "430cadd309b7c22680950ddebb91f81b3e295dd0824600329c976b156923cf24",
+    "research/sN/trees/overnight_uniform_cut_presentation.md": "844be6bd127f20e201e9a8e1b34d70d032e196ff4ef1107f92912d3f5aa3cda5",
+    "research/sN/trees/overnight_uniform_cut_presentation.py": "4454190cc8ca1fc8517af305a0ad95b55110dc68f0c72675882ac86686b4a52c"
+  },
+  "temporary_directory": "/tmp/max_cut_root_fresh_0zkel9pn",
+  "scope": "Exact local polynomial identities replayed; endpoint ranks remain modular diagnostics, not spanning theorems."
+}

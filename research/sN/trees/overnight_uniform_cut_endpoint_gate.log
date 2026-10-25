@@ -1,0 +1,19 @@
+SIZE 2 rank 8 cumulative 8 seconds 0.121
+SIZE 3 rank 12 cumulative 18 seconds 0.174
+SIZE 4 rank 6 cumulative 24 seconds 0.228
+SIZE 5 rank 12 cumulative 35 seconds 0.31
+{
+  "status": "MODULAR_SHIFTED_CUT_ENDPOINT_DIAGNOSTIC_ONLY",
+  "prime": 1000003,
+  "columns": 92,
+  "endpoint_columns": 33,
+  "original_rank": 47,
+  "endpoint_rank": 12,
+  "residue_rank": 35,
+  "joint_rank": 47,
+  "dimension_expected_if_endpoint_exact": 35,
+  "seconds": 0.36225974500121083,
+  "source_sha256": "fa5b0457a8d6de21d2cff1abf97e5194c84054a0e6019719ab4b338a3c728208",
+  "producer_sha256": "a29b8b9c1432ac4ee7aa01a57916f0b7f4e4afe404628c49223e53e9b1765eef",
+  "scope": "All residue poles considered are nonsingleton shifted-minus cuts, with actual-apex isolation proved in the note. Equal observed dimensions are not an exact rational spanning theorem. A discrepancy requires an independently certified witness."
+}
