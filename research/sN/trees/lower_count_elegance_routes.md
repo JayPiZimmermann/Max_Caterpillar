@@ -5,8 +5,10 @@ Lean certificates. Exact finite controls and a fresh root replay passed;
 see `lower_count_elegance_independent_audit.md` and
 `lower_count_elegance_root_replay.json`. The existing formal statements remain valid. These
 routes keep the caterpillar and Brunck-et-al. rooted-star face dictionaries,
-source-oriented full tree functions, and the weighted large-matching
-mixtures. They do not establish an unrestricted all-tree exponential bound.
+source-oriented tree functions and all their faces, and the weighted large-matching
+mixtures. The face extension is proved in
+[source_face_closure_audit.md](source_face_closure_audit.md); the full-unit
+cover below is one ingredient of that proof. They do not establish an unrestricted all-tree exponential bound.
 
 ## 1. DIRECT_REPLACE: one germ on a generic ordered tie stratum
 
@@ -117,8 +119,10 @@ forest has degree at most two without an exceptional common-neighbor
 case. Every isolated vertex in $\Phi$ is pendant-adjacent or a leaf with
 $\kappa\notin\{0,1\}$, and the latter is forced tied.
 Thus the same four block factors apply to the entire base family.
-Arbitrary face states of these additional source-oriented trees are not
-automatically included.
+All face states of these source-oriented trees are now included by the
+component-charge reduction in [the face-closure proof](source_face_closure_audit.md).
+The degree-two cover itself need not survive taking a face; the reduction
+transfers detection capacity to one smaller full source unit instead.
 
 ## 4. Pure base: remove the polynomial loss, or improve the base
 

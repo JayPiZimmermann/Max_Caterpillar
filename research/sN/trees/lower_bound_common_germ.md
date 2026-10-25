@@ -133,8 +133,10 @@ The established counting arguments give:
 Thus all reduced-degree-two integer-head functions and source-oriented full
 tree functions may be included in the base class of the matching and
 bounded-degree mixtures without changing any bound.
-This does not include every face state of those source-oriented trees:
-freezing edges can create additional out-leaves.
+The direct out-leaf cover need not survive freezing edges. The later
+[component-charge proof](source_face_closure_audit.md) nevertheless extends
+the same capacity bounds to every source-oriented face, using the common
+test's induced-component condition.
 The degree, matching, and orientation restrictions remain distinct; (4)
 does not assert one new graph condition covering unrestricted trees.
 

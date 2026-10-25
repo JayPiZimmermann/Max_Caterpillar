@@ -1,0 +1,36 @@
+{
+  "status": "INDEPENDENT_SOURCE_FACE_CHARGE_AND_CAPACITY_CONTROLS_PASS",
+  "cases": 7167,
+  "cases_by_size": [
+    {
+      "tree_vertices": 2,
+      "faces_source_root_cases": 12
+    },
+    {
+      "tree_vertices": 3,
+      "faces_source_root_cases": 243
+    },
+    {
+      "tree_vertices": 4,
+      "faces_source_root_cases": 6912
+    }
+  ],
+  "passing_ordered_ties": 3899,
+  "states": {
+    "0": "omit",
+    "1": "linear",
+    "2": "retained"
+  },
+  "checks": [
+    "direct charge update and nonnegativity",
+    "component charge versus head sum",
+    "fixed unique active component",
+    "exact smaller normalized head",
+    "every passing order restricts to a smaller passing order",
+    "exact fractions have no interleaving loss",
+    "original-N generating bound at y=1/2"
+  ],
+  "seconds": 0.4087735490029445,
+  "producer_sha256": "f7eb032ae3dfbe9f7cf056ae5c50b6d06ae719c2282614b1bae1067f660b3ac5",
+  "scope": "Exhaustive finite convention controls through four nonapex vertices; the independent review note gives the uniform proof. No Lean claim."
+}

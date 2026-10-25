@@ -804,12 +804,17 @@ same exponential base **7/6**, for these full-hinge units.
 This can be combined with the existing caterpillar and rooted-star face
 dictionary, yielding a nonvacuous larger vocabulary with arbitrary tree
 shapes. No assertion is made here that full-hinge source/root units alone
-span the maximum in every arity. Nor does this argument cover all faces of
-the newly added trees. A decisive counterexample to that extension is a
+span the maximum in every arity. The direct covering argument does not
+apply unchanged to all faces. A counterexample to its covering hypothesis is a
 centre with `k` length-two arms: retain each centre–middle edge as
 `σ(x_c-x_m)` but make each middle–outer edge linear `x_m-x_l`. Every
 middle vertex then has hinge degree one and `κ=1`, so `ω(c)=k`. Both the
 fixed-`ω` hypothesis and the degree-two covering relation can fail.
+
+Update, 25 October 2026: [the component-charge reduction](source_face_closure_audit.md)
+proves the same exponential capacity bounds for **all** source-oriented
+face functions. The example above defeats the direct cover, but its local
+test has zero capacity; it does not refute face closure of the bound.
 
 `dfs_review_continue_checks.py` exhaustively checks all 46,656 labelled
 seven-input full-hinge trees with ordered source/root pairs. It computes
