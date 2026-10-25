@@ -1,0 +1,9 @@
+{
+  "status": "PASS_EXACT_INTEGER_VALUE_SEPARATOR",
+  "raw_functions": 556,
+  "points": 119,
+  "seconds": 39.75828067299881,
+  "certificate_sha256": "1df5acb590e1d72dee9f1b4a0f569e063ef48fa350a340cf7bbaa94b9b25c7b4",
+  "source_sha256": "411953ee3ae3d008c555ebf55ea1f9e978ee31fcdddb067c2cc81d01bed5f971",
+  "scope": "Only the explicit finite two-class graph family (including full comparison graphs), all canonical stars, and symmetric pair-comparison remainder"
+}

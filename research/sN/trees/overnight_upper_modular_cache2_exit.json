@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_modular_cache2.py"
+  ],
+  "started_utc": "2026-10-25T02:03:16.124780+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_modular_cache2.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 1.9208767649979563,
+  "finished_utc": "2026-10-25T02:03:18.045661+00:00"
+}

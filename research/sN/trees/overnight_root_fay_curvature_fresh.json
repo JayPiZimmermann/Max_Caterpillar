@@ -1,0 +1,20 @@
+[
+  {
+    "checker": "overnight_uniform_fay_function_verify.py",
+    "returncode": 0,
+    "seconds": 19.125443149001512,
+    "log": "research/sN/trees/overnight_root_overnight_uniform_fay_function_verify_fresh.log"
+  },
+  {
+    "checker": "overnight_uniform_fay_q2_verify.py",
+    "returncode": 0,
+    "seconds": 0.4119543829947361,
+    "log": "research/sN/trees/overnight_root_overnight_uniform_fay_q2_verify_fresh.log"
+  },
+  {
+    "checker": "overnight_uniform_curvature_sym.py",
+    "returncode": 0,
+    "seconds": 0.9978182990016649,
+    "log": "research/sN/trees/overnight_root_overnight_uniform_curvature_sym_fresh.log"
+  }
+]

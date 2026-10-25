@@ -1,0 +1,21 @@
+{
+  "status": "MODULAR_N9_GLOBAL_FEATURE_RELATION_PROPOSALS",
+  "rows": 2112,
+  "columns": 1643,
+  "evaluation_rank": 1259,
+  "total_constraint_rank_mod": 5,
+  "targets_q2_to_q10_detectable_mod": {
+    "2": false,
+    "3": false,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true,
+    "9": true,
+    "10": true
+  },
+  "scope": "Each selected integer relation remains a proposal until an independent whole-function or rational-function identity check passes. No new evaluation rows or features.",
+  "seconds": 3.691471621998062
+}
+selected supports [12]

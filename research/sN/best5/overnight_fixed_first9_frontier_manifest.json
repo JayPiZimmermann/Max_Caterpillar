@@ -1,0 +1,14 @@
+{
+  "files": {
+    "overnight_fixed_first9_splits.md": "ae3f94b3a70333207f49cb8d55a9956ce20f9bdcf463a9616411abc0d06ae12e",
+    "overnight_fixed_p4_eta.json": "6a547b4e5fbc1f2205df7fb208efd7749314610437f9c94eab9dd90a1ff5d16b",
+    "overnight_fixed_p4_eta.log": "6a547b4e5fbc1f2205df7fb208efd7749314610437f9c94eab9dd90a1ff5d16b",
+    "overnight_fixed_p4_eta.md": "7d06fd0e2e5e981563e4a93ed57c92cf9087804546a99afefd4709a448f689a3",
+    "overnight_fixed_p4_eta.py": "805b734b665baa4d86d967befc8c8a49235e8c091bd137acae240e5cb10cb645",
+    "overnight_fixed_p4_eta_check.json": "71fdb7219e01880eedecec764ef81edc5c874704ce093758aeeb114aa9e1922d",
+    "overnight_fixed_p4_eta_check.log": "71fdb7219e01880eedecec764ef81edc5c874704ce093758aeeb114aa9e1922d",
+    "overnight_fixed_p4_eta_check.py": "90ccbcfda308fd1ab10d05148671680ab167e3d053213a61ca6935763727238f"
+  },
+  "scope": "Necessary row-count splits and one restricted construction-route exclusion; no new unrestricted second-width bound.",
+  "status": "FROZEN_FIRST9_SPLITS_AND_SINGLE_ETA_ROUTE_EXCLUSION"
+}

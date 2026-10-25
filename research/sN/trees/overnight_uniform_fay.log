@@ -1,0 +1,16 @@
+{'processed': 34, 'arity': 7, 'rank': 10, 'seconds': 0.24139186200045515}
+{'processed': 94, 'arity': 7, 'rank': 20, 'seconds': 0.26702401600050507}
+{'processed': 214, 'arity': 7, 'rank': 30, 'seconds': 0.3636242700013099}
+{'processed': 449, 'arity': 7, 'rank': 40, 'seconds': 0.4380272810012684}
+{'processed': 515, 'arity': 7, 'rank': 50, 'seconds': 0.5066704170021694}
+{'processed': 1016, 'arity': 9, 'rank': 60, 'seconds': 0.7084968580020359}
+{'processed': 1026, 'arity': 9, 'rank': 70, 'seconds': 0.7435043869991205}
+{'processed': 1036, 'arity': 9, 'rank': 80, 'seconds': 0.7743967200003681}
+{'processed': 1142, 'arity': 9, 'rank': 90, 'seconds': 0.8415399520017672}
+{'processed': 1160, 'arity': 9, 'rank': 100, 'seconds': 0.8832752380039892}
+{'processed': 1210, 'arity': 9, 'rank': 110, 'seconds': 0.9421363750007004}
+{'processed': 1268, 'arity': 9, 'rank': 120, 'seconds': 1.0184705200008466}
+{'processed': 1315, 'arity': 9, 'rank': 130, 'seconds': 1.0893719509986113}
+{'processed': 2067, 'arity': 9, 'rank': 140, 'seconds': 1.5267694860012853}
+{'processed': 3419, 'arity': 9, 'rank': 150, 'seconds': 2.0911208870020346}
+EXHAUSTED 32252 rank 155 certificates []

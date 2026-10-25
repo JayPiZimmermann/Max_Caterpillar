@@ -1,0 +1,6 @@
+{
+  "status": "EXACT_MODULAR_CACHE_CONTROLS_PASS",
+  "checks": 1030,
+  "producer_sha256": "dc0af178d47122436f1634f29134c059b80b8705d8dce6942729ada776f25d6e",
+  "scope": "Arithmetic optimization control on actual two-page rational columns at two primes; no new mathematical span claim."
+}

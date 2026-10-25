@@ -1,0 +1,7 @@
+research/sN/trees/overnight_uniform_curvature.json
+research/sN/trees/overnight_uniform_curvature.log
+research/sN/trees/overnight_uniform_curvature.md
+research/sN/trees/overnight_uniform_curvature.py
+research/sN/trees/overnight_uniform_curvature_sym.json
+research/sN/trees/overnight_uniform_curvature_sym.log
+research/sN/trees/overnight_uniform_curvature_sym.py

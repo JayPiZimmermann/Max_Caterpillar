@@ -1,0 +1,19 @@
+SIZE 1 COLUMNS 18 SECONDS 0.02
+SIZE 2 COLUMNS 62 SECONDS 0.04
+SIZE 3 COLUMNS 74 SECONDS 0.06
+{
+  "n": 5,
+  "status": "EXACT_FAMILY_OBSTRUCTION",
+  "ranks": [
+    69,
+    70
+  ],
+  "rows": 204,
+  "columns": 74,
+  "distinct_interior_walls": 199,
+  "seconds": 0.07747034500062,
+  "scope": "Only the stated symmetric two-block graph family and symmetric shallow comparison remainder",
+  "all_canonical_stars": false,
+  "full_comparison_graphs": false,
+  "checker_sha256": "5ea4813faa7443e163344e8a740644cac306f555251a7ec871022a2345619c64"
+}

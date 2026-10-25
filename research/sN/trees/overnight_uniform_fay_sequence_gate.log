@@ -1,0 +1,10 @@
+q 2 target_detectable False seconds 0.1854977479961235
+q 3 target_detectable False seconds 0.19166739699721802
+q 4 target_detectable True seconds 0.2048804250007379
+q 5 target_detectable True seconds 0.233606317997328
+q 6 target_detectable True seconds 0.2980208129956736
+q 7 target_detectable True seconds 0.4977432149971719
+q 8 target_detectable True seconds 0.7790806549965055
+q 9 target_detectable True seconds 1.3878431759949308
+q 10 target_detectable True seconds 2.5871331119997194
+DONE False 2.58847355999751

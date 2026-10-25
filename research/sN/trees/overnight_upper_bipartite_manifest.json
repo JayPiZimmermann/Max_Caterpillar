@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_TWO_CLASS_CYCLIC_GRAPH_FAMILY_OBSTRUCTION",
+  "files": {
+    "overnight_upper_bipartite_cycle.py": "5ea4813faa7443e163344e8a740644cac306f555251a7ec871022a2345619c64",
+    "overnight_upper_bipartite_cycle.md": "9ac549d963d1cc328c94b4a5c7fff96a1f829bbce1d8e62095a4581e2a5a9572",
+    "overnight_upper_bipartite_cycle_5.json": "aebbf33ca7d988d4a413fefc2c9bb7fcfa7d6166a12476a996740decccbcaade",
+    "overnight_upper_bipartite_cycle_5.log": "cce462dd3064fd7b58e9fb6db84c2e4debe4982e108111ffbbde950433060c29",
+    "overnight_upper_bipartite_cycle_5_stars.json": "0528bfe8d363dc667c92102f473234779dd775f3f36e0115fb7b9ffcd90fd6f2",
+    "overnight_upper_bipartite_cycle_5_stars.log": "7a38f614d6f3351a6d53ea0efa32b3b0f39413b0976e1dc84390f35cf68cdfae",
+    "overnight_upper_bipartite_cycle_5_stars_full.json": "4d0d151796d46debbd8829222962408d170cb39158b248f60644e51dcc814b6e",
+    "overnight_upper_bipartite_cycle_5_stars_full.log": "7b1a66b5d97d8622b8e9e683e7c17915a926f3d6e57d1b73a2f22bf10a872207",
+    "overnight_upper_bipartite_values.py": "411953ee3ae3d008c555ebf55ea1f9e978ee31fcdddb067c2cc81d01bed5f971",
+    "overnight_upper_bipartite_values_certificate.json": "1df5acb590e1d72dee9f1b4a0f569e063ef48fa350a340cf7bbaa94b9b25c7b4",
+    "overnight_upper_bipartite_values_produce.log": "ae900056a6b3cf74d38a3eac5763bc8c60645ac0ef673ed17e20e65f144cf402",
+    "overnight_upper_bipartite_values_check.log": "323c60f8f8ea6cd7e05515b3926d98cf832ea268ecf276322e5efabe5b365c08"
+  },
+  "scope": "Only the finite-coefficient family in the note; no general impossibility claim for cycles."
+}

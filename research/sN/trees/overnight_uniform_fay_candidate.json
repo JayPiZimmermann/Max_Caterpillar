@@ -1,0 +1,61 @@
+{
+  "status": "FOUR_FEATURE_GLOBAL_N9_NECESSARY_GATE",
+  "coefficients": {
+    "all;d^0;parity^0;orientation^1;deg_prod": "2/3",
+    "all;d^0;parity^1;orientation^1;deg_prod": "2",
+    "all;d^1;parity^0;orientation^1;one": "-10/3",
+    "all;d^1;parity^0;orientation^1;deg_sum": "1"
+  },
+  "exact_caterpillar_checks": [
+    {
+      "arity": 5,
+      "signed_sum": "0",
+      "necessary_target": "0"
+    },
+    {
+      "arity": 7,
+      "signed_sum": "0",
+      "necessary_target": "0"
+    },
+    {
+      "arity": 9,
+      "signed_sum": "-1792/3",
+      "necessary_target": "-2/1215"
+    },
+    {
+      "arity": 11,
+      "signed_sum": "-13312/3",
+      "necessary_target": "-52/467775"
+    },
+    {
+      "arity": 13,
+      "signed_sum": "-107008/3",
+      "necessary_target": "-19/3316950"
+    }
+  ],
+  "rows": 2112,
+  "columns": 1644,
+  "gate": {
+    "rank": 1260,
+    "score_in_sampled_rowspan": false,
+    "seconds": 2.8623619659992983,
+    "smallest_violated_sampled_relation": {
+      "5391": 1,
+      "128": 1000002,
+      "192": 1,
+      "1472": 1,
+      "1520": 1000002,
+      "2112": 1000002,
+      "2160": 1,
+      "3188": 1000002,
+      "3252": 1,
+      "5350": 1,
+      "5351": 1000002,
+      "5390": 1000002
+    },
+    "score_pairing_mod": 665986,
+    "support": 12
+  },
+  "scope": "Uniform local Fay compatibility follows by orientation-sign cancellation. The target formula has a direct Boolean-cube derivation. This finite modular global gate is only diagnostic; a failure requires an independently proved all-frequency relation.",
+  "seconds": 4.781712197996967
+}

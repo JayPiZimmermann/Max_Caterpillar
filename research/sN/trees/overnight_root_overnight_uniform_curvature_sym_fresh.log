@@ -1,0 +1,30 @@
+{
+  "status": "EXACT_FULL_SYMMETRIC_INWARD_STAR_CURVATURE_CONTROL",
+  "original_unit": {
+    "root": 1,
+    "edges": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ]
+    ]
+  },
+  "distinct_relabelings": 20,
+  "total_multiplicity": 120,
+  "unaveraged_full_S5_score": "6",
+  "negative_input_full_S5_score": "-39",
+  "oddized_full_S5_score": "45",
+  "maximum_full_S5_score": 120,
+  "oddized_maximum_full_S5_score": 240,
+  "scope": "Exact rational hyperplane-section volume computation. Both symmetrized and oddized operators fail to annihilate this canonical star. This does not refute a relative or tensor-valued curvature construction.",
+  "seconds": 0.3405855539967888,
+  "volume_cache": "CacheInfo(hits=450, misses=178, maxsize=None, currsize=178)"
+}

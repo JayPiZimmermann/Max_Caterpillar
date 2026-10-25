@@ -1,0 +1,27 @@
+permutations 50000 seconds 2.9649247679990367
+permutations 100000 seconds 5.70231299399893
+permutations 150000 seconds 8.118363476001832
+permutations 200000 seconds 10.273586385999806
+permutations 250000 seconds 12.589857724000467
+permutations 300000 seconds 15.640314627002226
+permutations 350000 seconds 18.532273695003823
+{
+  "status": "INDEPENDENT_EXACT_N9_WHOLE_FUNCTION_IDENTITY",
+  "arity": 9,
+  "units": 12,
+  "all_label_permutations": 362880,
+  "distinct_mixed_gap_walls": 3717,
+  "nonzero_wall_coefficients": 0,
+  "linear_gap_coefficients": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "scope": "The unaveraged full symmetric signed sum vanishes on the open ordered chamber by exact ReLU wall consolidation. Permutation symmetry and continuity extend it to all real inputs. Therefore the corresponding rational-kernel relation also holds. No frequency samples or rank assumptions.",
+  "seconds": 19.09092284199869
+}

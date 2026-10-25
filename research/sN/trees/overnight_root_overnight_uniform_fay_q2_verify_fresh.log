@@ -1,0 +1,126 @@
+{
+  "status": "EXACT_Q2_LOCAL_MOMENT_AND_GLOBAL_IDENTITY_CONTROLS_PASS",
+  "coefficients": {
+    "all;d^0;parity^1;orientation^1;deg_prod": "2",
+    "all;d^1;parity^0;orientation^1;one": "3/2",
+    "all;d^1;parity^0;orientation^1;deg_sum": "-5/4",
+    "all;d^2;parity^0;orientation^1;deg_prod": "1"
+  },
+  "known_local_constraints_pass": true,
+  "twelve_term_pairing_independently_recomputed": "0",
+  "twelve_term_scores": [
+    "-104",
+    "-238",
+    "238",
+    "160",
+    "160",
+    "160",
+    "160",
+    "30",
+    "-30",
+    "-104",
+    "104",
+    "104"
+  ],
+  "moment_table": [
+    {
+      "distance": 1,
+      "boundary_order": "(0,0),(0,1),(1,0),(1,1)",
+      "means": [
+        "-3",
+        "-7/2",
+        "-7/2",
+        "-7/2"
+      ]
+    },
+    {
+      "distance": 2,
+      "boundary_order": "(0,0),(0,1),(1,0),(1,1)",
+      "means": [
+        "-1/2",
+        "0",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "distance": 3,
+      "boundary_order": "(0,0),(0,1),(1,0),(1,1)",
+      "means": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "distance": 4,
+      "boundary_order": "(0,0),(0,1),(1,0),(1,1)",
+      "means": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "distance": 5,
+      "boundary_order": "(0,0),(0,1),(1,0),(1,1)",
+      "means": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "target_checks": [
+    {
+      "q": 2,
+      "signed_sum": "0",
+      "maximum_response_if_descent": "0"
+    },
+    {
+      "q": 3,
+      "signed_sum": "0",
+      "maximum_response_if_descent": "0"
+    },
+    {
+      "q": 4,
+      "signed_sum": "-448",
+      "maximum_response_if_descent": "-1/810"
+    },
+    {
+      "q": 5,
+      "signed_sum": "-2528",
+      "maximum_response_if_descent": "-79/1247400"
+    },
+    {
+      "q": 6,
+      "signed_sum": "-17536",
+      "maximum_response_if_descent": "-137/48648600"
+    },
+    {
+      "q": 7,
+      "signed_sum": "-113920",
+      "maximum_response_if_descent": "-89/1021620600"
+    },
+    {
+      "q": 8,
+      "signed_sum": "-779264",
+      "maximum_response_if_descent": "-761/347351004000"
+    },
+    {
+      "q": 9,
+      "signed_sum": "-5402112",
+      "maximum_response_if_descent": "-3517/79196028912000"
+    },
+    {
+      "q": 10,
+      "signed_sum": "-38091776",
+      "maximum_response_if_descent": "-37199/49893498214560000"
+    }
+  ],
+  "scope": "These checks support the uniform local-Fay and target-moment calculations in the note. They do not construct a linear functional or establish descent through all global identities.",
+  "seconds": 0.37367965200246545
+}

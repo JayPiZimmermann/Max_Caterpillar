@@ -1,0 +1,201 @@
+{
+  "status": "FROZEN_COMPLETE_MARKED_AFFINE_EAR_EXCLUSION",
+  "files": [
+    {
+      "path": "research/sN/trees/all_tree_dfs/rational_identity.py",
+      "bytes": 7103,
+      "sha256": "d65665bbc8399194d96da0fc47bfe7929a1eba7dfd9d7005a9116a716c2d1f2c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_attachment.md",
+      "bytes": 5451,
+      "sha256": "88c3afb0904344eb545ebde81c55cfa9208518f7383490c6eb3073ca4551f024"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_bundle.json",
+      "bytes": 1356870,
+      "sha256": "b9a421f4cfe2b7e89eb14d9bb1802b8d8208aaba78d8913376e8020710cabbe0"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_bundle.py",
+      "bytes": 13876,
+      "sha256": "745d98401c34cd72a953bed1e2f0d64a96558ff5a5ff0e44157dfbebc695bdf8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_bundle_extract.log",
+      "bytes": 38,
+      "sha256": "2fee8203407f1441845058ece4d399f12c118a992a85040f00d3c84d735e713c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_bundle_extract_exit.json",
+      "bytes": 474,
+      "sha256": "bce7063d5376d67d426be2cc730184dbf865c08dc9998f5784d0c8dd2a953a86"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_bundle_replay2.log",
+      "bytes": 1141,
+      "sha256": "607cb9e71c23fac390ed0477641df3b7b0b8a50cc8de37cedbc7679d8be75bb3"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_bundle_replay2_exit.json",
+      "bytes": 473,
+      "sha256": "7e583f18f6172e589d2ebbbbf536282f5485777dbcfbd171547b6ea6ef501673"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_ear_inventory.log",
+      "bytes": 116,
+      "sha256": "e402fa1d8ddfa0fb4d05b11265ad05e0eea435f7d83c1ec326e81ff28c1f21ed"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_ear_inventory.py",
+      "bytes": 5543,
+      "sha256": "0a9d3ef02409ea90115168f71f68c06fb7b2529dcfd13d4aaf5c201172316e8c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_ear_inventory_exit.json",
+      "bytes": 464,
+      "sha256": "ef9f2c81f242016671f1e32adb9b636df17329f2075f3964d89fbcf169c9e421"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_ear_probe.log",
+      "bytes": 2453,
+      "sha256": "9bfdb48513741bdc1201cf8b1b280e1963b4fe6fadf4092370f8a786a2f47923"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_ear_probe.py",
+      "bytes": 7739,
+      "sha256": "af09d5c596a9dff46fecc11e9da888da1876669ce0e2a0a072e88ba9e8bae67b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_ear_probe_exit.json",
+      "bytes": 455,
+      "sha256": "9dcdd1e5a225d4b141a6ba918115d5d6e0ce806c882e2c8950377296a6ae7629"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_kernel_inventory.log",
+      "bytes": 98,
+      "sha256": "a0360163d0a1012b58ca1702c6954d86ff9bee43568e9e8e585c8b204e7d9e43"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_kernel_inventory.py",
+      "bytes": 3615,
+      "sha256": "8677697a058edb23f520f816c0a84c64661b9c2be2522ac8cb414faf6930162a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_kernel_inventory_exit.json",
+      "bytes": 469,
+      "sha256": "97f424814a10d738d6a1fa483eac088475d04c212592435e54110494d6c78833"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_kernel_probe.log",
+      "bytes": 1444,
+      "sha256": "89496b156ad768e9efc0b9e14ea93164b3a76adc43e2246df69fc830412c6763"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_kernel_probe.py",
+      "bytes": 5962,
+      "sha256": "03db763093262f03f1d25c0913159227c1947be2c5bdde44a6397272e60b896c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_kernel_probe_exit.json",
+      "bytes": 460,
+      "sha256": "3b3fa70571e92f2cfe4379d7941954e0565a10a9b1ab80b2a61420d9e53a8afe"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_manifest.py",
+      "bytes": 3250,
+      "sha256": "753596289110d17ecf9246ea41fe298529598899cc62c56cd6be53a3ba5417cc"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache.json",
+      "bytes": 288,
+      "sha256": "c702d4a6657b2458c5d4c897893f66d2e5dbc88762ba8092fc771f3ee9f8bfc4"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache.log",
+      "bytes": 278,
+      "sha256": "823005b6146f856da45ed45bf2b285087738d4cb6c29869e7f52c63b3e19b9c0"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache.py",
+      "bytes": 3572,
+      "sha256": "dc0af178d47122436f1634f29134c059b80b8705d8dce6942729ada776f25d6e"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache2.json",
+      "bytes": 164,
+      "sha256": "1288c559d9744e69d40276d0adcf8c3a21add6f9e7268a54a849fee2c201963b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache2.log",
+      "bytes": 156,
+      "sha256": "c672fe62abb6c1dff2a99b31b3c8941caa3d62ec6eec6b07b053173d957f5850"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache2.py",
+      "bytes": 3141,
+      "sha256": "ebb7caa21c815fa3e9edfd2d198327a700612268514a2b8b362e3524edb875f9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache2_exit.json",
+      "bytes": 452,
+      "sha256": "2dfefefbb49edb14e380549fddb1e766af35413647964324c4d0b4e405440585"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_modular_cache_exit.json",
+      "bytes": 450,
+      "sha256": "914e0e101f7a85e6a596700c34ab897eb9c83c60e82b8609a01a896320e0f9ee"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_oriented_products.json",
+      "bytes": 172,
+      "sha256": "d5f0f1ad30a9593fc87bad58d9d08199bc08881cdb8e475ea4328489443ab4ef"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_oriented_products.log",
+      "bytes": 164,
+      "sha256": "2aeeb574ae5e1a44c3b969bcc2a6fe0096f730e97d3da3fd548d6853fc5fff17"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_oriented_products.py",
+      "bytes": 3220,
+      "sha256": "9ab88310a417f270dce62581b85aecc48b091a2d7c0325aacdcff135560698f8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_oriented_products_exit.json",
+      "bytes": 458,
+      "sha256": "1a623a1fd7113b4aa269e6930c38bbf0d68b4229631ade647a3626a53f0ea626"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_product_family.py",
+      "bytes": 9820,
+      "sha256": "42db60ac3bd712684358fa641a1c5793995690516911e01f8fc2af75b52664f8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_run.py",
+      "bytes": 2207,
+      "sha256": "3192943205ead6986c3906691a7abef2b8b1101887e1296f642be51a9f620007"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachments.py",
+      "bytes": 7734,
+      "sha256": "5dd69fb813aaab9f166215a8b47e8a4058abc9b428fb57e997a8c5bbd94c3988"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_fixed.py",
+      "bytes": 6060,
+      "sha256": "a7cf0b9d3d352eb78e891ed963b319b1fe2a3b1e35d4bbdecf8f7632a280a41a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_two_pages.py",
+      "bytes": 3453,
+      "sha256": "1c82b7ac04f1389063425656b9abf12ad3001339ac303e72fdd79d62b63e693b"
+    }
+  ],
+  "total_bytes": 1459283,
+  "scope": "Exact N7 failure of every marked-affine ear extension from the specified six-label two-page source span. Both lower reflection sectors and all attachment channels are included. No all-two-page or all-N exclusion and no Lean claim.",
+  "completed_replay_seconds": 542.08,
+  "excluded": "Historical large sampled matrices and redundant raw inventories. The compact bundle contains all source descriptions, exact relations, minor points and row digests required to rebuild the certificate. The first replay launched during re-extraction and stopped on an old-schema KeyError; replay2 is the complete fresh successful replay.",
+  "check": "python3 research/sN/trees/overnight_upper_marked_manifest.py --check",
+  "replay": "research/sN/dfs/h5-growth/venv/bin/python research/sN/trees/overnight_upper_marked_manifest.py --replay"
+}
