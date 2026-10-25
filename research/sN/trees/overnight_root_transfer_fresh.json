@@ -1,0 +1,139 @@
+{
+  "manifest_sha256": "083e6b618bd0adf4b5112ec312a2f59aa7ce7e171959c713ea6a1ce82d2940b1",
+  "receipts": {
+    "root_transfer": {
+      "checks": 44,
+      "producer_sha256": "6f4aa735b4fa8cecfe383feacc0bafbd1c5e7ea42e32992786507cc7772ca24d",
+      "records": [
+        {
+          "complete": true,
+          "k": 1,
+          "max_actual_primitive_cubes": 3,
+          "products_checked": 6,
+          "theoretical_bound": 6
+        },
+        {
+          "complete": true,
+          "k": 2,
+          "max_actual_primitive_cubes": 30,
+          "products_checked": 15,
+          "theoretical_bound": 72
+        },
+        {
+          "complete": true,
+          "k": 3,
+          "max_actual_primitive_cubes": 148,
+          "products_checked": 20,
+          "theoretical_bound": 702
+        },
+        {
+          "complete": false,
+          "k": 4,
+          "max_actual_primitive_cubes": 327,
+          "products_checked": 3,
+          "theoretical_bound": 6480
+        }
+      ],
+      "scope": "Uniform local and product homotopy; the displayed exponential bound applies to one full closed-wedge transfer. No uniform bound on the number of correction wedges over all arities is asserted.",
+      "seconds": 0.14118278100067982,
+      "status": "EXACT_ORIGINAL_CUBE_ROOT_TRANSFER_HOMOTOPY_CONTROLS"
+    },
+    "single_facet": {
+      "producer_sha256": "186363a00e52ba0f94fdab1dd92186db337ad8c43d2efd8e11bbf07931fe9341",
+      "records": [
+        {
+          "corrected_cubes": 23,
+          "exceptional_coface_cubes": 23,
+          "exceptional_contraction": {
+            "contracted_basis_terms": 51,
+            "forward_basis_terms": 29,
+            "input_cubes": 23,
+            "output_cubes": 134,
+            "seconds": 0.0029614939994644374
+          },
+          "full_boundary_cubes": 85,
+          "full_contraction": {
+            "contracted_basis_terms": 51,
+            "forward_basis_terms": 39,
+            "input_cubes": 85,
+            "output_cubes": 134,
+            "seconds": 0.0020641569935833104
+          },
+          "individually_zero_cofaces": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "input_cubes": 3,
+          "output_cubes": 134,
+          "simplex_dimension": 3
+        },
+        {
+          "corrected_cubes": 276,
+          "exceptional_coface_cubes": 276,
+          "exceptional_contraction": {
+            "contracted_basis_terms": 1099,
+            "forward_basis_terms": 530,
+            "input_cubes": 276,
+            "output_cubes": 3150,
+            "seconds": 0.10621680699841818
+          },
+          "full_boundary_cubes": 1264,
+          "full_contraction": {
+            "contracted_basis_terms": 1099,
+            "forward_basis_terms": 674,
+            "input_cubes": 1264,
+            "output_cubes": 3150,
+            "seconds": 0.06273575600062031
+          },
+          "individually_zero_cofaces": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "input_cubes": 134,
+          "output_cubes": 3150,
+          "simplex_dimension": 4
+        },
+        {
+          "corrected_cubes": 4965,
+          "exceptional_coface_cubes": 4965,
+          "exceptional_contraction": {
+            "contracted_basis_terms": 33576,
+            "forward_basis_terms": 13193,
+            "input_cubes": 4965,
+            "output_cubes": 102187,
+            "seconds": 5.190302341994538
+          },
+          "full_boundary_cubes": 26125,
+          "full_contraction": {
+            "contracted_basis_terms": 33576,
+            "forward_basis_terms": 17021,
+            "input_cubes": 26125,
+            "output_cubes": 102187,
+            "seconds": 3.5590977579995524
+          },
+          "individually_zero_cofaces": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "input_cubes": 3150,
+          "output_cubes": 102187,
+          "simplex_dimension": 5
+        }
+      ],
+      "scope": "The single-coface identity has a uniform contraction-naturality proof; these are exact controls on actual simplex lifts. The remaining support growth of head expansion and closed augmentation corrections is not bounded exponentially.",
+      "seconds": 14.164952314000402,
+      "status": "EXACT_ACTUAL_ORDERED_SIMPLEX_SINGLE_COFACE_CONTROLS"
+    }
+  },
+  "status": "ROOT_FRESH_ACTUAL_SINGLE_COFACE_AND_TRANSFER_PASS",
+  "temporary_directory": "/tmp/max_root_transfer_fresh_48sn1cjd"
+}

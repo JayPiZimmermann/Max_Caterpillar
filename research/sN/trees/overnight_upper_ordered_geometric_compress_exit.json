@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_ordered_geometric_compress.py"
+  ],
+  "started_utc": "2026-10-25T03:36:45.254378+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_ordered_geometric_compress.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 35.19040399599908,
+  "finished_utc": "2026-10-25T03:37:20.444782+00:00"
+}

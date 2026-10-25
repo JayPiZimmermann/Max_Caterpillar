@@ -1,0 +1,95 @@
+{
+  "status": "EXACT_ACTUAL_ORDERED_SIMPLEX_SINGLE_COFACE_CONTROLS",
+  "records": [
+    {
+      "simplex_dimension": 3,
+      "input_cubes": 3,
+      "corrected_cubes": 23,
+      "full_boundary_cubes": 85,
+      "exceptional_coface_cubes": 23,
+      "output_cubes": 134,
+      "individually_zero_cofaces": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "exceptional_contraction": {
+        "input_cubes": 23,
+        "forward_basis_terms": 29,
+        "contracted_basis_terms": 51,
+        "output_cubes": 134,
+        "seconds": 0.003263903003244195
+      },
+      "full_contraction": {
+        "input_cubes": 85,
+        "forward_basis_terms": 39,
+        "contracted_basis_terms": 51,
+        "output_cubes": 134,
+        "seconds": 0.0020948449964635074
+      }
+    },
+    {
+      "simplex_dimension": 4,
+      "input_cubes": 134,
+      "corrected_cubes": 276,
+      "full_boundary_cubes": 1264,
+      "exceptional_coface_cubes": 276,
+      "output_cubes": 3150,
+      "individually_zero_cofaces": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "exceptional_contraction": {
+        "input_cubes": 276,
+        "forward_basis_terms": 530,
+        "contracted_basis_terms": 1099,
+        "output_cubes": 3150,
+        "seconds": 0.12361365299875615
+      },
+      "full_contraction": {
+        "input_cubes": 1264,
+        "forward_basis_terms": 674,
+        "contracted_basis_terms": 1099,
+        "output_cubes": 3150,
+        "seconds": 0.07521565599745372
+      }
+    },
+    {
+      "simplex_dimension": 5,
+      "input_cubes": 3150,
+      "corrected_cubes": 4965,
+      "full_boundary_cubes": 26125,
+      "exceptional_coface_cubes": 4965,
+      "output_cubes": 102187,
+      "individually_zero_cofaces": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "exceptional_contraction": {
+        "input_cubes": 4965,
+        "forward_basis_terms": 13193,
+        "contracted_basis_terms": 33576,
+        "output_cubes": 102187,
+        "seconds": 6.109403669004678
+      },
+      "full_contraction": {
+        "input_cubes": 26125,
+        "forward_basis_terms": 17021,
+        "contracted_basis_terms": 33576,
+        "output_cubes": 102187,
+        "seconds": 3.7924283469983493
+      }
+    }
+  ],
+  "seconds": 15.819533157002297,
+  "producer_sha256": "186363a00e52ba0f94fdab1dd92186db337ad8c43d2efd8e11bbf07931fe9341",
+  "scope": "The single-coface identity has a uniform contraction-naturality proof; these are exact controls on actual simplex lifts. The remaining support growth of head expansion and closed augmentation corrections is not bounded exponentially."
+}

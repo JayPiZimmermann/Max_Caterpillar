@@ -1,0 +1,51 @@
+ROOT POWER actual_X3 {'power': 1, 'labels': 5, 'cubes': 13, 'abstract_terms': 5, 'first_star_positions': [1, 2, 3], 'max_head_l1': 2} SECONDS 0.0012459360004868358
+ROOT POWER actual_X3 {'power': 2, 'labels': 6, 'cubes': 196, 'abstract_terms': 58, 'first_star_positions': [1, 2, 3, 4], 'max_head_l1': 5} SECONDS 0.022592073000851087
+ROOT POWER actual_X3 {'power': 3, 'labels': 7, 'cubes': 5492, 'abstract_terms': 2095, 'first_star_positions': [1, 2, 3, 4, 5], 'max_head_l1': 9} SECONDS 0.9373266809998313
+ROOT POWER actual_X3 {'power': 4, 'labels': 8, 'cubes': 239146, 'abstract_terms': 98575, 'first_star_positions': [1, 2, 3, 4, 5, 6], 'max_head_l1': 17} SECONDS 61.015215585997794
+ROOT POWER constant_z21 {'power': 1, 'labels': 4, 'cubes': 7, 'abstract_terms': 4, 'first_star_positions': [1, 2], 'max_head_l1': 2} SECONDS 61.10289747099887
+ROOT POWER constant_z21 {'power': 2, 'labels': 5, 'cubes': 53, 'abstract_terms': 26, 'first_star_positions': [1, 2, 3], 'max_head_l1': 4} SECONDS 61.10594991900143
+ROOT POWER constant_z21 {'power': 3, 'labels': 6, 'cubes': 821, 'abstract_terms': 354, 'first_star_positions': [1, 2, 3, 4], 'max_head_l1': 7} SECONDS 61.174680447002174
+ROOT POWER constant_z21 {'power': 4, 'labels': 7, 'cubes': 22179, 'abstract_terms': 9255, 'first_star_positions': [1, 2, 3, 4, 5], 'max_head_l1': 13} SECONDS 64.13277834800101
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_ordered_contraction.py", line 69, in expand_basis
+    out[(tuple(a+b for a,b in zip(head,shift)),newedges)]+=coefficient*value
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MemoryError
+
+During handling of the above exception, another exception occurred:
+
+MemoryError
+
+During handling of the above exception, another exception occurred:
+
+MemoryError
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 64, in apport_excepthook
+    import traceback
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1528, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1502, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1605, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1656, in _fill_cache
+MemoryError
+
+Original exception was:
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_ordered_contraction.py", line 69, in expand_basis
+    out[(tuple(a+b for a,b in zip(head,shift)),newedges)]+=coefficient*value
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MemoryError
+
+During handling of the above exception, another exception occurred:
+
+MemoryError
+
+During handling of the above exception, another exception occurred:
+
+MemoryError

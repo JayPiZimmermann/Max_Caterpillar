@@ -1,0 +1,101 @@
+{
+  "status": "FROZEN_ACTUAL_ROOT_TRANSFER_AND_GEOMETRIC_COMPRESSION",
+  "files": [
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_geometric_compress.json",
+      "bytes": 4617,
+      "sha256": "afd771d4695a7c08ca00f8278340f1911d1044e864dc186f0fb11e1305647dd7"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_geometric_compress.log",
+      "bytes": 2984,
+      "sha256": "4a2640d124f9e2b672f3fa2c366614f3bf13a184dfb669d9e0f2f189f00d9b7a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_geometric_compress.py",
+      "bytes": 6947,
+      "sha256": "dc8d22d98219003d8e9681a58aa7e4bb887834526048650630efc890aa734086"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_geometric_compress_exit.json",
+      "bytes": 475,
+      "sha256": "6fbb2071c3b519efc21fc216a78ca73b25df631233f2b6f415b2cae796f6f3be"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_manifest.json",
+      "bytes": 15306,
+      "sha256": "bdca0217b734c80d022ca8f9dff1db39efb0b64d55ac6a2078dc45b719bc224a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_powers.log",
+      "bytes": 3231,
+      "sha256": "913113d45d3ea9d19e2c5d323ef301564cd9e2e6a7833949696986f862b3d000"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_powers.py",
+      "bytes": 2149,
+      "sha256": "3dff82a1776a38f20adc32542c4b6e072c0a6d75f2d090f4b333e5c41b8caf58"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_powers_exit.json",
+      "bytes": 461,
+      "sha256": "bb040f3ee7b9233c8a21e4b2723c7bbbdcb1ce56e32c95296018b9fa25603064"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_transfer.json",
+      "bytes": 1040,
+      "sha256": "c43b731fda0209b6019a48560d93341fe50d729ca6d92ad7baffee0b0d27dc99"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_transfer.log",
+      "bytes": 610,
+      "sha256": "ecd311d1289bcd0fc63eea5ae85384b3e4def113bd98838f06661d9dfd6e196a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_transfer.md",
+      "bytes": 6266,
+      "sha256": "e34d268906714133640c27e7689ba538921b0f42e603de3f7854beb33b8e391f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_transfer.py",
+      "bytes": 3084,
+      "sha256": "6f4aa735b4fa8cecfe383feacc0bafbd1c5e7ea42e32992786507cc7772ca24d"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_root_transfer_exit.json",
+      "bytes": 467,
+      "sha256": "f9f55164c6ff7d9ebacb18668b32467a7ecf1a2305abea519674300b4331834f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_single_facet.json",
+      "bytes": 2643,
+      "sha256": "e3a984d9d1d5ca2f173932d8ef3f2174f94a3ed59f3a0169e662b7f706bbfff8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_single_facet.log",
+      "bytes": 220,
+      "sha256": "d3e0cdeb6a9d4326dc5aac27b24837b8ee43e8f0f362ff87c0cba8d3a9f701a8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_single_facet.py",
+      "bytes": 3254,
+      "sha256": "186363a00e52ba0f94fdab1dd92186db337ad8c43d2efd8e11bbf07931fe9341"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ordered_single_facet_exit.json",
+      "bytes": 464,
+      "sha256": "e4688656391f495e85a45ea67cb6d81dcb4551e3f83f9c577b2b2c12872b1a7a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_root_transfer_manifest.py",
+      "bytes": 2328,
+      "sha256": "6bb5c781a0b8b71e470049d249c98607cca76be876856865ac31bcda7cd95f22"
+    }
+  ],
+  "bytes": 56546,
+  "base_manifest": "research/sN/trees/overnight_upper_ordered_manifest.json",
+  "mathematical_results": "Root-preserving naturality, exceptional-coface recurrence, local and product root-transfer homotopies.",
+  "finite_controls": "Actual lifts through simplex dimension6; all lower-dimensional aggregation corrections retained.",
+  "resource_stop": "ordered_root_powers exited1 at3GiB while expanding the fifth power on z21. Its completed log entries are measurements, not a completed uniform test.",
+  "scope": "No exponential total-width theorem and no exact maximum network beyond the established top-class construction."
+}

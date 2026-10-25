@@ -1,0 +1,4 @@
+ROOT TRANSFER {'k': 1, 'products_checked': 6, 'complete': True, 'max_actual_primitive_cubes': 3, 'theoretical_bound': 6} SECONDS 0.0017730179970385507
+ROOT TRANSFER {'k': 2, 'products_checked': 15, 'complete': True, 'max_actual_primitive_cubes': 30, 'theoretical_bound': 72} SECONDS 0.015557973994873464
+ROOT TRANSFER {'k': 3, 'products_checked': 20, 'complete': True, 'max_actual_primitive_cubes': 148, 'theoretical_bound': 702} SECONDS 0.1114455930000986
+ROOT TRANSFER {'k': 4, 'products_checked': 3, 'complete': False, 'max_actual_primitive_cubes': 327, 'theoretical_bound': 6480} SECONDS 0.182174325993401

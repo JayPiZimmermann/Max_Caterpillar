@@ -1,0 +1,37 @@
+{
+  "status": "EXACT_ORIGINAL_CUBE_ROOT_TRANSFER_HOMOTOPY_CONTROLS",
+  "records": [
+    {
+      "k": 1,
+      "products_checked": 6,
+      "complete": true,
+      "max_actual_primitive_cubes": 3,
+      "theoretical_bound": 6
+    },
+    {
+      "k": 2,
+      "products_checked": 15,
+      "complete": true,
+      "max_actual_primitive_cubes": 30,
+      "theoretical_bound": 72
+    },
+    {
+      "k": 3,
+      "products_checked": 20,
+      "complete": true,
+      "max_actual_primitive_cubes": 148,
+      "theoretical_bound": 702
+    },
+    {
+      "k": 4,
+      "products_checked": 3,
+      "complete": false,
+      "max_actual_primitive_cubes": 327,
+      "theoretical_bound": 6480
+    }
+  ],
+  "checks": 44,
+  "seconds": 0.1822463099961169,
+  "producer_sha256": "6f4aa735b4fa8cecfe383feacc0bafbd1c5e7ea42e32992786507cc7772ca24d",
+  "scope": "Uniform local and product homotopy; the displayed exponential bound applies to one full closed-wedge transfer. No uniform bound on the number of correction wedges over all arities is asserted."
+}
