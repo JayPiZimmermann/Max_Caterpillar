@@ -1,0 +1,3 @@
+{'n': 3, 'columns': 4, 'constraints': 1, 'exact_ranks': [1, 1]}
+{'n': 4, 'columns': 7, 'constraints': 3, 'exact_ranks': [3, 3]}
+{'n': 5, 'columns': 11, 'constraints': 8, 'exact_ranks': [6, 7]}

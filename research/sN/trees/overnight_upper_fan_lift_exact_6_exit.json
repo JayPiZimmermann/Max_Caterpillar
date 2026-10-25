@@ -1,0 +1,16 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_fan_lift_exact.py",
+    "6"
+  ],
+  "started_utc": "2026-10-24T23:39:10.675860+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_fan_lift_exact_6.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 2.5323270999942906,
+  "finished_utc": "2026-10-24T23:39:13.208188+00:00"
+}

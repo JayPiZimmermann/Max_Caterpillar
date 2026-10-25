@@ -1,0 +1,17 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_full_cycle_states.py",
+    "6",
+    "2"
+  ],
+  "started_utc": "2026-10-24T23:49:16.920775+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_full_cycle_states_n6_b2.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 76.53776787699462,
+  "finished_utc": "2026-10-24T23:50:33.458543+00:00"
+}

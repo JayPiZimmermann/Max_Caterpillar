@@ -1,0 +1,14 @@
+INTEGRITY PASS 51 FILES 118594 BYTES
+REPLAY PASS tropical_min_b2 0.05 SECONDS
+REPLAY PASS tropical_min_b3 0.06 SECONDS
+REPLAY PASS full_cycle_n5_b3 0.31 SECONDS
+REPLAY PASS full_cycle_states_n5_b2 3.01 SECONDS
+REPLAY PASS full_cycle_states_n6_b1 4.5 SECONDS
+REPLAY PASS full_cycle_states_n6_b2 94.13 SECONDS
+REPLAY PASS permutohedron_n3_h6 94.17 SECONDS
+REPLAY PASS permutohedron_n4_h6 94.25 SECONDS
+REPLAY PASS permutohedron_n5_h6 94.67 SECONDS
+REPLAY PASS fan_lift_6 96.36 SECONDS
+REPLAY PASS fan_lift_exact_6 97.65 SECONDS
+REPLAY PASS path_locality 101.35 SECONDS
+ALL FINITE REPLAYS PASS; uniform arguments remain mathematical proofs in the notes.

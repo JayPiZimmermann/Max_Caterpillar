@@ -1,0 +1,1 @@
+{'status': 'EXACT_CHAMBER_RANKS', 'n': 6, 'ranks': [279, 280], 'rows': 3389, 'columns': 376, 'conclusion': 'The target is outside this precise bounded fan-extension span.', 'source_sha256': 'bd5685ec6d3fb26f60462ea335be59af653a11fb4d141d37b41d88b4dfa50ae4', 'producer_sha256': 'fdf59fe3f97b6e0b48e3570806a996c3ed3ac9bc39763e78aeddee1dafe8f91a', 'seconds': 2.3805904900000314}

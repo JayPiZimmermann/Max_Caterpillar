@@ -1,0 +1,457 @@
+{
+  "status": "COMPLETE_NONCROSSING_PATH_TIE_RANK_CONTROLS",
+  "controls": [
+    {
+      "n": 3,
+      "count": 3
+    },
+    {
+      "n": 4,
+      "count": 8
+    },
+    {
+      "n": 5,
+      "count": 20
+    },
+    {
+      "n": 6,
+      "count": 48
+    },
+    {
+      "n": 7,
+      "count": 112
+    }
+  ],
+  "results": [
+    {
+      "n": 7,
+      "tie": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "path_graphs": 336,
+      "max_free_rank": 3,
+      "necessary_free_rank": 2,
+      "obstruction": false,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "tie": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "path_graphs": 896,
+      "max_free_rank": 2,
+      "necessary_free_rank": 2,
+      "obstruction": false,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "tie": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "path_graphs": 2304,
+      "max_free_rank": 3,
+      "necessary_free_rank": 3,
+      "obstruction": false,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "n": 10,
+      "tie": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "path_graphs": 5760,
+      "max_free_rank": 3,
+      "necessary_free_rank": 3,
+      "obstruction": false,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "tie": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "path_graphs": 14080,
+      "max_free_rank": 4,
+      "necessary_free_rank": 4,
+      "obstruction": false,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            9,
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "tie": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "path_graphs": 33792,
+      "max_free_rank": 3,
+      "necessary_free_rank": 4,
+      "obstruction": true,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            10,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 13,
+      "tie": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "path_graphs": 79872,
+      "max_free_rank": 4,
+      "necessary_free_rank": 5,
+      "obstruction": true,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            11,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "n": 14,
+      "tie": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "path_graphs": 186368,
+      "max_free_rank": 4,
+      "necessary_free_rank": 5,
+      "obstruction": true,
+      "witness": {
+        "apex": 1,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      }
+    }
+  ],
+  "producer_sha256": "4aa2c48be163a2b8b255eac3d61a7a0e8eb9c27b8ad484e479f23de374b62dd2",
+  "seconds": 5.892869180999696
+}

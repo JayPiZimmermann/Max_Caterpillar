@@ -1,0 +1,456 @@
+{
+  "status": "COMPACT_FINITE_RESEARCH_SUMMARY_REGENERATE_SYSTEMS_WITH_LISTED_PRODUCERS",
+  "records": [
+    {
+      "status": "EXACT_TROPICAL_RESTRICTION_OBSTRUCTION",
+      "alphabet": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "n": 5,
+      "results": [
+        {
+          "n": 3,
+          "columns": 4,
+          "constraints": 1,
+          "exact_ranks": [
+            1,
+            1
+          ]
+        },
+        {
+          "n": 4,
+          "columns": 7,
+          "constraints": 3,
+          "exact_ranks": [
+            3,
+            3
+          ]
+        },
+        {
+          "n": 5,
+          "columns": 11,
+          "constraints": 8,
+          "exact_ranks": [
+            6,
+            7
+          ]
+        }
+      ],
+      "producer_sha256": "34a23a38346228bb86f5b167c1f1524b3f6752ea2f1d9993cc5241694304e087",
+      "seconds": 0.003738960003829561,
+      "producer_receipt": "overnight_upper_tropical_min_b2.json",
+      "producer_receipt_sha256": "1eb7ec334e9a61b12491d62d58d5adf344eb408eb8b5fc4016228b467bf180b7",
+      "integer_rows_sha256": "4bed7df53a7b6ee230975714d725aab2b7ec57e226d12eb972577abde68ebe1c"
+    },
+    {
+      "status": "EXACT_TROPICAL_RESTRICTION_OBSTRUCTION",
+      "alphabet": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 5,
+      "results": [
+        {
+          "n": 3,
+          "columns": 7,
+          "constraints": 1,
+          "exact_ranks": [
+            1,
+            1
+          ]
+        },
+        {
+          "n": 4,
+          "columns": 17,
+          "constraints": 5,
+          "exact_ranks": [
+            5,
+            5
+          ]
+        },
+        {
+          "n": 5,
+          "columns": 31,
+          "constraints": 21,
+          "exact_ranks": [
+            16,
+            17
+          ]
+        }
+      ],
+      "producer_sha256": "34a23a38346228bb86f5b167c1f1524b3f6752ea2f1d9993cc5241694304e087",
+      "seconds": 0.010698363003029954,
+      "producer_receipt": "overnight_upper_tropical_min_b3.json",
+      "producer_receipt_sha256": "4b9e28fe2ee02234ecd3a008fa1e0ff2812fbe27a996eabe07acfa0ee7ab0747",
+      "integer_rows_sha256": "c989491880acd01c164aa4a2889c0976192385ab3cb1362091e4abac735e3101"
+    },
+    {
+      "status": "EXACT_CHAMBER_SPAN_EXCLUSION",
+      "n": 5,
+      "head_height": 3,
+      "exact_ranks": [
+        79,
+        80
+      ],
+      "modular_ranks": [
+        79,
+        80
+      ],
+      "prime": 1000000007,
+      "scope": "Full S_N sums of full-label cycle atoms with integer head height <= bound, plus pairwise-absolute-value auxiliary. Formal face states are not included.",
+      "producer_sha256": "7c0252d71431cb134def51992639b83b7b5c0311ecf8914aad2b5cec899e818b",
+      "seconds": 0.16088993000448681,
+      "producer_receipt": "overnight_upper_full_cycle_n5_b3.json",
+      "producer_receipt_sha256": "10d3131f563a0d1e28c9183ceaf22f75c49f500566725462d156d897c78a7014",
+      "integer_rows_sha256": "3871923a1e7be4ed238a494fd2ec38a9781504a7198d4576a0155a58b6ce210b"
+    },
+    {
+      "status": "EXACT_CHAMBER_SPAN_INCLUSION",
+      "n": 5,
+      "head_height": 2,
+      "exact_ranks": [
+        216,
+        216
+      ],
+      "modular_ranks": [
+        216,
+        216
+      ],
+      "prime": 1000000007,
+      "scope": "Full S_N sums of arbitrary subcycle atoms with integer cyclic-head height <= bound, plus pairwise-absolute-value auxiliary.",
+      "producer_sha256": "80822cd3ecd62ba07ddbd57b028a9ee3a332c64a30f10df577ef1cd0ddd80d10",
+      "dependency_sha256": "7c0252d71431cb134def51992639b83b7b5c0311ecf8914aad2b5cec899e818b",
+      "seconds": 1.5139319350055302,
+      "nonzero_coefficients": 8,
+      "producer_receipt": "overnight_upper_full_cycle_states_n5_b2.json",
+      "producer_receipt_sha256": "904b2af9ac3e2fb46b3e517d91690bd0d30d1a4e4061c9ec7269688e902a2406",
+      "integer_rows_sha256": "a6fce3feedc7f84a58e799346ecca667a0c5a5ad2e2ad0352b88e5ea6bf5a315",
+      "selected_atoms": [
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "coefficient": "1/24"
+        },
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          "coefficient": "1/48"
+        },
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          "coefficient": "1/16"
+        },
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ]
+          ],
+          "coefficient": "1/8"
+        },
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          "coefficient": "-1/24"
+        },
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          "coefficient": "-1/16"
+        },
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "coefficient": "1/48"
+        },
+        {
+          "candidate": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              0
+            ]
+          ],
+          "coefficient": "-1/16"
+        }
+      ],
+      "auxiliary_coefficient": "0"
+    },
+    {
+      "status": "EXACT_CHAMBER_SPAN_EXCLUSION",
+      "n": 6,
+      "head_height": 1,
+      "exact_ranks": [
+        164,
+        165
+      ],
+      "modular_ranks": [
+        164,
+        165
+      ],
+      "prime": 1000000007,
+      "scope": "Full S_N sums of arbitrary subcycle atoms with integer cyclic-head height <= bound, plus pairwise-absolute-value auxiliary.",
+      "producer_sha256": "80822cd3ecd62ba07ddbd57b028a9ee3a332c64a30f10df577ef1cd0ddd80d10",
+      "dependency_sha256": "7c0252d71431cb134def51992639b83b7b5c0311ecf8914aad2b5cec899e818b",
+      "seconds": 1.6751290229949518,
+      "producer_receipt": "overnight_upper_full_cycle_states_n6_b1.json",
+      "producer_receipt_sha256": "87f2ef730a6e3bdf680a4ca5096094f996d4f76e913d200fe4ecd80a30fb6553",
+      "integer_rows_sha256": "5ab5442ccba87f1d104fe1dfda0bc19a1f072f942bd13e0cde12d65d4b670aea"
+    },
+    {
+      "status": "EXACT_CHAMBER_SPAN_EXCLUSION",
+      "n": 6,
+      "head_height": 2,
+      "exact_ranks": [
+        1220,
+        1221
+      ],
+      "modular_ranks": [
+        1220,
+        1221
+      ],
+      "prime": 1000000007,
+      "scope": "Full S_N sums of arbitrary subcycle atoms with integer cyclic-head height <= bound, plus pairwise-absolute-value auxiliary.",
+      "producer_sha256": "80822cd3ecd62ba07ddbd57b028a9ee3a332c64a30f10df577ef1cd0ddd80d10",
+      "dependency_sha256": "7c0252d71431cb134def51992639b83b7b5c0311ecf8914aad2b5cec899e818b",
+      "seconds": 75.68871679499716,
+      "producer_receipt": "overnight_upper_full_cycle_states_n6_b2.json",
+      "producer_receipt_sha256": "1ec724ceca4d82b59e48da7d33d27d66289b985d6f379001cf5298b54b4ee979",
+      "integer_rows_sha256": "44f76509da781a88e712bd4974dd278e0fde9806edea4fb55e037a87f51a551c"
+    },
+    {
+      "status": "EXACT_PERMUTOHEDRAL_SUBSET_INCLUSION",
+      "n": 3,
+      "rational_height": 6,
+      "exact_ranks": [
+        39,
+        39
+      ],
+      "columns": 48,
+      "constraints": 39,
+      "producer_sha256": "dd36c3249f969472b4236b1449c73d4168804498bda2596f7f6e0342d6fdd8fb",
+      "seconds": 0.0072901109961094335,
+      "scope": "Symmetric mean heads, a single uniform edge weight per clique, listed finite lambda alphabet, all label subsets; no general heads or whole face closure claim.",
+      "selected": [
+        [
+          [
+            2,
+            -1,
+            "1/2"
+          ],
+          "5"
+        ],
+        [
+          [
+            2,
+            -1,
+            "5/2"
+          ],
+          "-3"
+        ],
+        [
+          [
+            2,
+            1,
+            "1/6"
+          ],
+          "9"
+        ]
+      ],
+      "producer_receipt": "overnight_upper_permutohedron_n3_h6.json",
+      "producer_receipt_sha256": "abcdf1cf7b394213aac2b7e5b6b573eef6a18401b20cf42bd3defc5196009b25",
+      "integer_rows_sha256": "3cf810eb6fe1b420ee94f26238f0270d16818f1b80b3fb039825deab48d11b9a",
+      "selected_atoms": [
+        {
+          "candidate": [
+            2,
+            -1,
+            "1/2"
+          ],
+          "coefficient": "5"
+        },
+        {
+          "candidate": [
+            2,
+            -1,
+            "5/2"
+          ],
+          "coefficient": "-3"
+        },
+        {
+          "candidate": [
+            2,
+            1,
+            "1/6"
+          ],
+          "coefficient": "9"
+        }
+      ],
+      "auxiliary_coefficient": "0"
+    },
+    {
+      "status": "EXACT_PERMUTOHEDRAL_SUBSET_EXCLUSION",
+      "n": 4,
+      "rational_height": 6,
+      "exact_ranks": [
+        86,
+        87
+      ],
+      "columns": 96,
+      "constraints": 201,
+      "producer_sha256": "dd36c3249f969472b4236b1449c73d4168804498bda2596f7f6e0342d6fdd8fb",
+      "seconds": 0.1569595710025169,
+      "scope": "Symmetric mean heads, a single uniform edge weight per clique, listed finite lambda alphabet, all label subsets; no general heads or whole face closure claim.",
+      "producer_receipt": "overnight_upper_permutohedron_n4_h6.json",
+      "producer_receipt_sha256": "74fbfcb0fa7a1786ca4b8b38a5ebbedebe0dc48eafe3682f9dfb31b58624c3f3",
+      "integer_rows_sha256": "ab0a25d6d9fa0d68648e05c8be4c4ae6eb1f46dd41077616d644e6a43782c9b1"
+    },
+    {
+      "status": "EXACT_PERMUTOHEDRAL_SUBSET_EXCLUSION",
+      "n": 5,
+      "rational_height": 6,
+      "exact_ranks": [
+        133,
+        134
+      ],
+      "columns": 144,
+      "constraints": 677,
+      "producer_sha256": "dd36c3249f969472b4236b1449c73d4168804498bda2596f7f6e0342d6fdd8fb",
+      "seconds": 0.3185666319986922,
+      "scope": "Symmetric mean heads, a single uniform edge weight per clique, listed finite lambda alphabet, all label subsets; no general heads or whole face closure claim.",
+      "producer_receipt": "overnight_upper_permutohedron_n5_h6.json",
+      "producer_receipt_sha256": "704e3ebca1cc91c63a4e1f619d9d02dee6681d0314ca8721789612dca9fd074e",
+      "integer_rows_sha256": "e68c80475c8231f234ec4a2e376a50e3308a4b859804907535edc27abe8b8353"
+    },
+    {
+      "status": "EXACT_CHAMBER_RANKS",
+      "n": 6,
+      "ranks": [
+        279,
+        280
+      ],
+      "rows": 3389,
+      "columns": 376,
+      "conclusion": "The target is outside this precise bounded fan-extension span.",
+      "source_sha256": "bd5685ec6d3fb26f60462ea335be59af653a11fb4d141d37b41d88b4dfa50ae4",
+      "producer_sha256": "fdf59fe3f97b6e0b48e3570806a996c3ed3ac9bc39763e78aeddee1dafe8f91a",
+      "seconds": 2.3805904900000314,
+      "producer_receipt": "overnight_upper_fan_lift_exact_6.json",
+      "producer_receipt_sha256": "a6a7e8209d19d64c41fba2060c37aeb75535622251f1d5fe3d5690391c939f9e"
+    }
+  ]
+}
