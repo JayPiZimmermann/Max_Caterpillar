@@ -1,0 +1,27 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependencies": [
+    "overnight_fixed_natural8_rectangle_manifest.json",
+    "overnight_fixed_cross14_manifest.json"
+  ],
+  "draft_build": "Standalone article build passed twice:3 pages, no warnings or overfull boxes. Draft PDF in/tmp/overnight_fixed_first9_draft.pdf; not an edit to main.tex.",
+  "files": {
+    "overnight_fixed_first9_paper.tex": "27b8e81bf69b0a885f9ae99ba6dc506a5bd6c0bc60f4bd273588d1b85e7349cb",
+    "overnight_fixed_first9_paper_check.json": "281b296a871492b6b0bbc557deef0b62a453fc9de03af48708ff9001c74e8b0f",
+    "overnight_fixed_first9_paper_check.log": "281b296a871492b6b0bbc557deef0b62a453fc9de03af48708ff9001c74e8b0f",
+    "overnight_fixed_first9_paper_check.py": "a96d04ba9b9ff061dc2b89f08315414f999ce5699a210318ed49e96ef1543766",
+    "overnight_fixed_natural8_continuous.lean": "be2cc8643ee3ea89ac17a729e91a28ab1ebad3d571717c0ce9d30d7d53acb53e",
+    "overnight_fixed_natural8_continuous.log": "f880ea2e736a15368f4a42f3fdb0df620ff363a073f10e335eb5b421d4dbb22e"
+  },
+  "lean_scope": "Score absolute-value identity, absolute homogeneity, fixed-sign vanishing, rectangle identity, and finite-sum contradiction. Geometric and classification bridges are in the paper draft and rectangle note.",
+  "replay": [
+    "lake env lean research/sN/best5/overnight_fixed_natural8_continuous.lean",
+    "python3 research/sN/best5/overnight_fixed_first9_paper_check.py"
+  ],
+  "result": "Matched minimum first hidden layer width9 for exact max5, with finite arbitrary second width; joint pair optimality not asserted.",
+  "status": "FROZEN_DIRECT_CONTINUOUS_SCORE_AND_FIRST9_PAPER_DRAFT"
+}

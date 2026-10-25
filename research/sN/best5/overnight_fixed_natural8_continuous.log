@@ -1,0 +1,2 @@
+'NaturalEightContinuous.no_finite_target_scores' depends on axioms: [propext, Quot.sound, Classical.choice]
+'NaturalEightContinuous.score_scale' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,10 @@
+{
+  "checker_sha256": "a96d04ba9b9ff061dc2b89f08315414f999ce5699a210318ed49e96ef1543766",
+  "first_width": 9,
+  "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+  "paper_sha256": "27b8e81bf69b0a885f9ae99ba6dc506a5bd6c0bc60f4bd273588d1b85e7349cb",
+  "rows": 12,
+  "scope": "Exact positive neuron rescalings and carrier equality; global correctness is inherited from the independent cone certificate for the identical network.",
+  "second_width": 14,
+  "status": "PASS_EXACT_PAPER_CONSTRUCTION_RESCALES_CERTIFIED_NETWORK"
+}
