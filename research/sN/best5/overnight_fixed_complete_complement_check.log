@@ -1,0 +1,1 @@
+{"basis_functions": 14, "boolean_checks": 448, "inverse_coefficient_checks": 196, "producer_sha256": "64542a8cf3ca359167df793ba523da45230ba90071cd1624b909b8a3142eca31", "scope": "Exact integer identities on a basis prove the whole real comparison-span coordinate transformation. No K3 feasibility verdict.", "status": "PASS"}

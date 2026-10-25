@@ -1,0 +1,13 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "command": "lake env lean -j1 research/sN/best5/overnight_fixed_complete_four_sign.lean",
+  "declaration": "OvernightCompleteFourSign.negative_single_fold_impossible",
+  "log_sha256": "b25e7052a7c854d95e1f62f95bc5d25fde5808d697928de173cb5a8a4389e5b2",
+  "scope": "Elementary arithmetic contradiction only. The local-max4 and positive-quad-cover bridges are reviewed written mathematics.",
+  "source_sha256": "ee60addb0f606702f3060bc9a9457769b5a23aa7f09093d2a720df904e39b8f4",
+  "status": "PASS"
+}

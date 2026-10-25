@@ -1,0 +1,142 @@
+{
+  "cases": [
+    {
+      "counts": [
+        0,
+        0,
+        5
+      ],
+      "index": 0,
+      "reason": "timeout",
+      "seconds": 15.003386005999346,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        0,
+        1,
+        4
+      ],
+      "index": 1,
+      "reason": "timeout",
+      "seconds": 15.002551153993409,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        0,
+        2,
+        3
+      ],
+      "index": 2,
+      "reason": "timeout",
+      "seconds": 15.002233277002233,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        1,
+        0,
+        4
+      ],
+      "index": 3,
+      "reason": "timeout",
+      "seconds": 15.002851630000805,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        1,
+        1,
+        3
+      ],
+      "index": 4,
+      "reason": "timeout",
+      "seconds": 15.002781950002827,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        1,
+        2,
+        2
+      ],
+      "index": 5,
+      "reason": "timeout",
+      "seconds": 15.00283115899947,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        2,
+        0,
+        3
+      ],
+      "index": 6,
+      "reason": "timeout",
+      "seconds": 15.002424335994874,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        2,
+        1,
+        2
+      ],
+      "index": 7,
+      "reason": "timeout",
+      "seconds": 15.002530240999477,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        3,
+        0,
+        2
+      ],
+      "index": 8,
+      "reason": "timeout",
+      "seconds": 15.003410625999095,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        3,
+        1,
+        1
+      ],
+      "index": 9,
+      "reason": "timeout",
+      "seconds": 15.002603886001452,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        4,
+        0,
+        1
+      ],
+      "index": 10,
+      "reason": "timeout",
+      "seconds": 15.002483627999027,
+      "status": "unknown"
+    },
+    {
+      "counts": [
+        5,
+        0,
+        0
+      ],
+      "index": 11,
+      "reason": "timeout",
+      "seconds": 15.002680486002646,
+      "status": "unknown"
+    }
+  ],
+  "elapsed": 180.11470365599962,
+  "mode": "p1",
+  "producer_sha256": "8a4ccfed3e3cd4144b21f72b3660561c86f71682be0594fae34ff083ee097f0a",
+  "scope": "Complete closed12casecover of the full real-coefficient K3 formula by quadruple-ray zero assignments. UNSAT needs independent proof; timeouts implynothing. Only independently globally checkedSAT is a construction.",
+  "seconds_per_case": 15,
+  "source_sha256": "2fd43e5908c9ec479a22d19dccb6514e0b8db87d7040cbf48812fd0bca107d42"
+}

@@ -1,0 +1,31 @@
+{
+  "files": {
+    "overnight_fixed_complete_complement.md": "36edd3f709c633d6e76f6108e0c827a7fdeb4aa1c020971942d559ecf0895648",
+    "overnight_fixed_complete_complement_check.json": "8801719fb64b6b38a65d5463e6cd8a7c08d93f1f03a7cffd4e2b4d9fc7115e48",
+    "overnight_fixed_complete_complement_check.log": "ea9a3736a0015dd3770ec33cfd1e5c117a9218fc9b9d2ead7c87dcf9df79f1f4",
+    "overnight_fixed_complete_complement_check.py": "64542a8cf3ca359167df793ba523da45230ba90071cd1624b909b8a3142eca31",
+    "overnight_fixed_complete_four_sign.json": "0b20acf1b1b7340d904e1d599fabe2bda63cf54dd50aec132db1cc45e7bbbec3",
+    "overnight_fixed_complete_four_sign.lean": "ee60addb0f606702f3060bc9a9457769b5a23aa7f09093d2a720df904e39b8f4",
+    "overnight_fixed_complete_four_sign.log": "b25e7052a7c854d95e1f62f95bc5d25fde5808d697928de173cb5a8a4389e5b2",
+    "overnight_fixed_complete_four_sign.md": "aca6b8278fb5856d0c7c89fe354964a732490828380fc74618d8b532a6cdd782",
+    "overnight_fixed_complete_quadcover.md": "8d4d0142c18c96b575e39f3660048ac747560f6725d43b796288412364a3055d",
+    "overnight_fixed_complete_quadcover.py": "8a4ccfed3e3cd4144b21f72b3660561c86f71682be0594fae34ff083ee097f0a",
+    "overnight_fixed_complete_quadcover_check.json": "375a01251c1a5661ce184a362dcf84c6799fc6597626b161586aac5480b174dd",
+    "overnight_fixed_complete_quadcover_check.log": "6ba73a3fde45ace27b6186052f999a9415f0384e3e318b8c12a20a51e59709a1",
+    "overnight_fixed_complete_quadcover_check.py": "30a6d2a950b739fde68c33c20e8373506cbcadaa55f8a47f4d51f61e4bfa7b88",
+    "overnight_fixed_complete_quadcover_p1.json": "56c4457743fc62cfdbcaf5336b14c261a0c5333d085dd758f4c4274471c0a220",
+    "overnight_fixed_complete_quadcover_p1.log": "fa7af4ea4f7863117bcce370704f16818a95d52f1ec804860d9ff8284173df1d",
+    "overnight_fixed_complete_quadcover_p2.json": "d5bbe0fb79b19f81e594d69f745de67ae61a76219b0d84be3014a82a3600cac6",
+    "overnight_fixed_complete_quadcover_p2.log": "3d1e8643f18f9e4dcf3225a44d39c9add37b050e118ef3742913bee903cb30d2"
+  },
+  "immutable_dependencies": {
+    "overnight_fixed_anchor_verify.py": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+    "overnight_fixed_complete_decide_control10.smt2": "8bcb74a0b7e0899bd7798dd23a48049507af65d863eebd1bee1853f99b672e80",
+    "overnight_fixed_complete_decide_control10_network.json": "aff63ada1c5cc78e4268e6fe75d764286708f567a0666f309f9cf7f368fa1ead",
+    "overnight_fixed_complete_decide_p1.smt2": "2fd43e5908c9ec479a22d19dccb6514e0b8db87d7040cbf48812fd0bca107d42",
+    "overnight_fixed_complete_decide_p2.smt2": "78d1b17f272a8f49ae87d8cb1875edeca7bfacce003046514a792b3f7c0b2ce3",
+    "overnight_fixed_complete_mixed_manifest.json": "2a3e2825d211bdbe9fc1ed7d5bd7533c6593f4118e162e0b00b1376d1ad4a07f"
+  },
+  "scope": "FullK3 remainsopen: all24 complete-covercases timeout15s. Exact sparsecoordinate inverse verified on a basis. Written single-negative-max4 obstruction implies everyp2quad has a positivezero core; its arithmetic control is Leanverified. No new widthlowerbound orconstruction.",
+  "status": "FROZEN_EXACT_COORDINATE_AND_COVER_CHECKS_WITH_WRITTEN_SIGN_LEMMA"
+}

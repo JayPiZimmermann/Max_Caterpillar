@@ -1,0 +1,148 @@
+{
+  "assignments_per_sign": 243,
+  "cases": {
+    "p1": [
+      [
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        0,
+        4
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        3
+      ],
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        3,
+        0,
+        2
+      ],
+      [
+        3,
+        1,
+        1
+      ],
+      [
+        4,
+        0,
+        1
+      ],
+      [
+        5,
+        0,
+        0
+      ]
+    ],
+    "p2": [
+      [
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        4,
+        1
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        1,
+        4,
+        0
+      ],
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        3,
+        0
+      ]
+    ]
+  },
+  "control_smt_sha256": "8bcb74a0b7e0899bd7798dd23a48049507af65d863eebd1bee1853f99b672e80",
+  "global_control": {
+    "N": 5,
+    "braid_cones": 120,
+    "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+    "comparison_rows": 14,
+    "coordinate_anchors": [
+      4
+    ],
+    "h1": 16,
+    "h2": 6,
+    "interior_wall_groups": 32,
+    "network_sha256": "aff63ada1c5cc78e4268e6fe75d764286708f567a0666f309f9cf7f368fa1ead",
+    "seconds": 0.05964878300437704,
+    "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+  },
+  "known_control_cases": 24,
+  "producer_sha256": "30a6d2a950b739fde68c33c20e8373506cbcadaa55f8a47f4d51f61e4bfa7b88",
+  "status": "PASS"
+}
