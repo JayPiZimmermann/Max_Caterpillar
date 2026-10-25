@@ -1,0 +1,1 @@
+{"checker_sha256": "9d972e6520e464ef1e9393a8d92bec1aaf7d01ba718765e17364c1b3bb10cd8f", "hyperplanes": 13, "identity": "sigma(g)=positive_minimum3+(1/2)positive_minimum3_composed_with_A", "rays": 50, "seconds": 0.0026985899967257865, "status": "EXACT_GLOBAL_SHALLOW_CLASSIFIER_IDENTITY_PASS"}

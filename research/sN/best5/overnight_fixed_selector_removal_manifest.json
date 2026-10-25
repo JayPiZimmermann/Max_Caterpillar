@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "bytes": 8019,
+      "path": "overnight_fixed_selector_removal.md",
+      "sha256": "856f5f12b0baed5a59468b0fe267300a84a3aff4a73c6247acb7036097d1b821"
+    },
+    {
+      "bytes": 5333,
+      "path": "overnight_fixed_selector_pair_certificate.json",
+      "sha256": "13e3c6fb831535f6c81c0389e6e3d41fc5c3f5cdf944c3361450c7af34e27ef7"
+    },
+    {
+      "bytes": 1901,
+      "path": "overnight_fixed_selector_pair_verify.py",
+      "sha256": "3923075c1db1c7e78b9cf999b75f455439c9126d9ec15ecc6a3908565162af80"
+    },
+    {
+      "bytes": 433,
+      "path": "overnight_fixed_selector_pair_check.json",
+      "sha256": "ea8f5bf177fc5dc4d952758479dd33ef043dc1bfd1550543a0b5fc820a6e358f"
+    },
+    {
+      "bytes": 401,
+      "path": "overnight_fixed_selector_pair_check.log",
+      "sha256": "c528135f33c45a0c1d205ab24d9cfec10d2d85868fec45c81217230ec49c8b0a"
+    }
+  ],
+  "scope": "One weak activation pattern only; unrestricted second width six remains open.",
+  "status": "FROZEN_ARBITRARY_FIRST_LAYER_SELECTOR_PATTERN_EXCLUSION",
+  "trust_boundary": "Written wall-removal proof plus independent exact34-equation certificate; not Lean verified."
+}

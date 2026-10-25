@@ -1,0 +1,46 @@
+{
+  "status": "EXACT_ACTUAL_VANDERMONDE_SQUARE_REFUTATION",
+  "arity": 5,
+  "operator": "Delta(partial)^2 on R(-sum x,x), at x=(1,1,1,1)",
+  "target_value": "-864",
+  "target_moment_monomials": 201,
+  "stars": [
+    {
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "apex_placement_values": [
+        "-230193152/531441",
+        "-1464251/10368",
+        "-26433/64",
+        "-1464251/10368",
+        "-1464251/10368"
+      ],
+      "full_S5_value": "-86380735795/2834352",
+      "moment_monomials": [
+        2135,
+        1874,
+        7934,
+        1874,
+        1874
+      ],
+      "normalized_head_control": true
+    }
+  ],
+  "scope": "The operator is well-defined on kernels analytic at this point, including the target and this star in every apex placement. It does not annihilate this matching-deficient star, so any extension to the full rational space still fails. This refutes the naive doubled Vandermonde bridge on the tree kernels themselves, not every operator on the sheared product.",
+  "seconds": 0.24626508299843408
+}

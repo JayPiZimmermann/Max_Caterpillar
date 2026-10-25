@@ -1,0 +1,47 @@
+{
+  "evidence": "Two exact global finite-ray identity controls and a written uniform denominator/normal-form proof; not Lean verified.",
+  "files": [
+    {
+      "bytes": 3317,
+      "path": "overnight_fixed_shallow_classifier.md",
+      "sha256": "d89091650e14a6e25f80e6d1a5c38fba4ddc364fc760e35602a3f79fae76ccd9"
+    },
+    {
+      "bytes": 1970,
+      "path": "overnight_fixed_classifier_control.py",
+      "sha256": "9d972e6520e464ef1e9393a8d92bec1aaf7d01ba718765e17364c1b3bb10cd8f"
+    },
+    {
+      "bytes": 306,
+      "path": "overnight_fixed_classifier_check.json",
+      "sha256": "959a7fe6da0bf44447cc1b38e05999a0843542827c5ac190397286859720f2e2"
+    },
+    {
+      "bytes": 292,
+      "path": "overnight_fixed_classifier_check.log",
+      "sha256": "36cce6148cdeec982cf30bc205011ea9ad8e461b1c8e6dd47a9f2d9a564b7b02"
+    },
+    {
+      "bytes": 7199,
+      "path": "overnight_fixed_reflection_orbit.md",
+      "sha256": "af75a897b7999ed4dd13cdaa0b9fb44a8344fc6169129761f40d5333c50df1a1"
+    },
+    {
+      "bytes": 3099,
+      "path": "overnight_fixed_reflection_control.py",
+      "sha256": "d09236a33c843f9d2862bf21a94d219c82985e0f151d70b9955a8432de53b006"
+    },
+    {
+      "bytes": 1033,
+      "path": "overnight_fixed_reflection_check.json",
+      "sha256": "890001300e70cafe738cae17fb695eff722d11c254e9be8a4eb9c94fcf00eb51"
+    },
+    {
+      "bytes": 851,
+      "path": "overnight_fixed_reflection_check.log",
+      "sha256": "cb204efa7cfd5967f6173ae6200e74bd144eec46b2c958cf8d08359ea72bff73"
+    }
+  ],
+  "scope": "No general network-width lower bound or finite exponential construction is claimed.",
+  "status": "FROZEN_EXACT_FOLDINGS_AND_UNIFORM_NATURAL_REFLECTION_OBSTRUCTION"
+}

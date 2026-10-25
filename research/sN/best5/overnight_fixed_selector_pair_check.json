@@ -1,0 +1,14 @@
+{
+  "certificate_sha256": "13e3c6fb831535f6c81c0389e6e3d41fc5c3f5cdf944c3361450c7af34e27ef7",
+  "checker_sha256": "3923075c1db1c7e78b9cf999b75f455439c9126d9ec15ecc6a3908565162af80",
+  "coefficient_parameters": 56,
+  "equations": 34,
+  "kinds": {
+    "value": 12,
+    "zero": 22
+  },
+  "seconds": 0.00919366099697072,
+  "status": "INDEPENDENT_EXACT_SELECTOR_PAIR_PATTERN_EXCLUSION_PASS",
+  "summed_left": "0",
+  "summed_right": "1"
+}

@@ -1,0 +1,14 @@
+research/sN/trees/overnight_uniform_product.md
+research/sN/trees/overnight_uniform_product_integer_check.json
+research/sN/trees/overnight_uniform_product_integer_check.log
+research/sN/trees/overnight_uniform_product_integer_check.py
+research/sN/trees/overnight_uniform_product_integer_gate.json
+research/sN/trees/overnight_uniform_product_integer_gate.log
+research/sN/trees/overnight_uniform_product_integer_gate.py
+research/sN/trees/overnight_uniform_product_periodic_numeric.json
+research/sN/trees/overnight_uniform_product_periodic_numeric.log
+research/sN/trees/overnight_uniform_product_periodic_numeric.py
+research/sN/trees/overnight_uniform_product_periodization.md
+research/sN/trees/overnight_uniform_product_vandermonde.json
+research/sN/trees/overnight_uniform_product_vandermonde.log
+research/sN/trees/overnight_uniform_product_vandermonde.py

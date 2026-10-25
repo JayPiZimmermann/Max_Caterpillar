@@ -1,0 +1,401 @@
+{
+  "scope": "Only the corrected-selector weak activation pattern; no unrestricted three-neuron lower bound.",
+  "terms": [
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        -1,
+        -1,
+        -2,
+        -2
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "2",
+      "kind": "value",
+      "point": [
+        0,
+        -1,
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "kind": "value",
+      "point": [
+        0,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "-2",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "-2",
+      "kind": "value",
+      "point": [
+        0,
+        0,
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "2",
+      "kind": "value",
+      "point": [
+        0,
+        -1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "coefficient": "1",
+      "kind": "value",
+      "point": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "coefficient": "1",
+      "kind": "value",
+      "point": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "coefficient": "1",
+      "kind": "value",
+      "point": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "kind": "value",
+      "point": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        -1,
+        1,
+        0,
+        0
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        -1,
+        0,
+        -1,
+        0
+      ],
+      "unit": 1
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "unit": 1
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "unit": 1
+    },
+    {
+      "coefficient": "-2",
+      "kind": "value",
+      "point": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "coefficient": "2",
+      "kind": "value",
+      "point": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "2",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "unit": 0
+    },
+    {
+      "coefficient": "2",
+      "kind": "zero",
+      "point": [
+        0,
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "unit": 1
+    },
+    {
+      "coefficient": "-2",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "unit": 1
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "-1",
+      "kind": "zero",
+      "point": [
+        0,
+        1,
+        0,
+        -1,
+        -1
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "-3",
+      "kind": "value",
+      "point": [
+        0,
+        -1,
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "coefficient": "3",
+      "kind": "value",
+      "point": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        -1,
+        0,
+        -1,
+        -1
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "unit": 2
+    },
+    {
+      "coefficient": "1",
+      "kind": "zero",
+      "point": [
+        0,
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "unit": 2
+    }
+  ]
+}
