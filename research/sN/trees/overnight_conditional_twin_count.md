@@ -1,6 +1,11 @@
 # Outward twins suffice: a conditional all-tree exponential count
 
-25 October 2026. This is a conditional uniform counting theorem. The
+25 October 2026. Superseded quantitatively by the simpler matching-count
+recurrence in `overnight_uniform_twin_dp.md`, which obtains rate 2/phi
+under the SAME outward-twin hypothesis. This star-block proof is retained
+as an independent counting route.
+
+This is a conditional uniform counting theorem. The
 uniform separator hypothesis remains open. It is not an unrestricted
 exponential lower bound. The counting proof was independently reviewed.
 
