@@ -1,0 +1,20 @@
+{"units": 6, "terms": 60480, "raw_records": 24000, "seconds": 3.115724041002977}
+{"units": 12, "terms": 126720, "raw_records": 36000, "seconds": 3.656746952998219}
+{"units": 18, "terms": 178560, "raw_records": 43200, "seconds": 4.171096773003228}
+{"units": 24, "terms": 216000, "raw_records": 49680, "seconds": 4.661280792999605}
+{"units": 30, "terms": 253440, "raw_records": 59760, "seconds": 5.114676757999405}
+{"units": 36, "terms": 282240, "raw_records": 64080, "seconds": 5.526380865005194}
+{
+  "status": "EXACT_RESIDUE_DICTIONARY_FOR_ENDPOINT_Q2_PROPOSAL",
+  "subset_size": 4,
+  "proposal_score_pairing": "-448",
+  "full_permutation_terms": 282240,
+  "linear_forms": 1880,
+  "surviving_records": 28560,
+  "dictionary_cancels": false,
+  "coefficient_common_scale": 1048576,
+  "seconds": 5.53122147799877,
+  "producer_sha256": "6258e9c425f06c4f8545b59afa29b7913fb99435b59906acc68abc3b4a91edb4",
+  "scope": "An empty dictionary proves this full ordinary-cut residue is zero. A nonempty dictionary requires additional exact circuit reduction; no Q2 refutation or proof is inferred.",
+  "fraction_cache": "overnight_uniform_endpoint_q2_residue_4.fractions.json.gz"
+}

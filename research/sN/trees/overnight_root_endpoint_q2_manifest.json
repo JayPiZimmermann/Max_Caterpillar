@@ -1,0 +1,223 @@
+{
+  "status": "FROZEN_EXACT_Q2_REFUTATION_IN_GENERIC_RATIONAL_QUOTIENT",
+  "files": [
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2.md",
+      "bytes": 7243,
+      "sha256": "f649c0ac2eff0000ee86dc2d6009038982ce5084e0e2bbee65440c4d0b88ff16"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_multihub.md",
+      "bytes": 2427,
+      "sha256": "bf945c9f148b0555066a6397d093413e12bdd96dc1b669ad65f0fea881237837"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2.py",
+      "bytes": 5622,
+      "sha256": "a70a192ee02ce513455706f3009694e44e3f3832d78fb0967b07bf049c043b5d"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2.json",
+      "bytes": 31603,
+      "sha256": "7bbebcbec3431c5d19edec5ba5da1111c04ff9ab3ab7bfc33387c3269c8033ea"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2.log",
+      "bytes": 538,
+      "sha256": "7fba55956913667fbb4f0cd19b3a571c10bb09c156b88f7302508da66a79e445"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue.py",
+      "bytes": 5569,
+      "sha256": "6258e9c425f06c4f8545b59afa29b7913fb99435b59906acc68abc3b4a91edb4"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_dfs.py",
+      "bytes": 8667,
+      "sha256": "c1fb2da0b0e8383d5d657258808a4bbd0d9782999a4b70563b83b6cf11f58557"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_coordinate.py",
+      "bytes": 2580,
+      "sha256": "a73253bece06e6983ba63f4c9c3fc923b0a854aeb9149a76f65594e81a87a334"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_coordinate.json",
+      "bytes": 7597,
+      "sha256": "2343d862a05b28c7c91c1a07245d36fdedf4d3da432401789fcfa3d0aae7044a"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_constant.py",
+      "bytes": 3066,
+      "sha256": "93016372310d459108288e9afcb00a4d8d360aae5c37dfa05411733f8d178e0e"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_constant.json",
+      "bytes": 899,
+      "sha256": "4a273952c1cb6f33098012432a5506196d132e882c17be64de522127cffdb3a1"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_2.json",
+      "bytes": 1974,
+      "sha256": "e831b3a6e90fc616a6331b4eb4dc6e5761e4bf4830510d9a2d4c249a272e83c9"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_2.log",
+      "bytes": 1178,
+      "sha256": "3f594f302ceab431f45eeb711039b6515856f6fa81be6a5565beaf86066cd2a5"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_2.fractions.json.gz",
+      "bytes": 1442943,
+      "sha256": "1cccda4d5cdb27d83e24aac0b624e9a9afbe22161c0e7b59c1cfc9688005f4ca"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_dfs_2.json",
+      "bytes": 137002,
+      "sha256": "7c1ed7eaced192dae40c89088917d1d809d8bbc684e0ef8f67580ea6bc53f181"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_dfs_2.log",
+      "bytes": 769,
+      "sha256": "5a432935c8662d2822cebb92af70898aec60bb2beba8561f5dcbf4741b5831da"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_3.json",
+      "bytes": 1967,
+      "sha256": "ac0ea33168d5b238c2634e3febd127885d674c4cc3d1f47b4d74219c60720fee"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_3.log",
+      "bytes": 1171,
+      "sha256": "0df083d24c49ae29962c33071e1fa95bc8b2808a7f98dd64b1c8bb5507b09cf5"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_3.fractions.json.gz",
+      "bytes": 218210,
+      "sha256": "491984ee351f0c3978b478946d64bbe016c97dceb9701a32d571e36bcc8f41dd"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_dfs_3.json",
+      "bytes": 93751,
+      "sha256": "53999c38b46fb654e652cb5a215aed034e59bc8529838cd6c896c28760829693"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_dfs_3.log",
+      "bytes": 856,
+      "sha256": "643f192643fda5a2006d02229db1d8b9a5cfcd6fd57951c517a4fdf8ca691bf3"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_4.json",
+      "bytes": 1963,
+      "sha256": "102246840c97b37e9295bc005b6655c30b848ca9e8a1c627a95079ac95baeab5"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_4.log",
+      "bytes": 1167,
+      "sha256": "b197c24e60de8c2753dc87ee75a6d0c472adbef9abbbf83d986e20e5e4607b5f"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_residue_4.fractions.json.gz",
+      "bytes": 127867,
+      "sha256": "20ddcd0bee3cc00e05fd18a5e52f9cee556daafa76d2c5996127a96dca08da23"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_dfs_4.json",
+      "bytes": 79955,
+      "sha256": "b250f7778026ae265d23d50fe534646280ac13ee5f1a0d1b06e23f4785df95c9"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_dfs_4.log",
+      "bytes": 587,
+      "sha256": "abe9abdd0071eeeee7c41641543038a00d253c86437237ab2f59dd6fc23a23df"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_endpoint_q2_FROZEN.txt",
+      "bytes": 1580,
+      "sha256": "10720fa7a3227840f7512991ff367e7bedb731f3c84c752e4e7821e1946af2b1"
+    },
+    {
+      "path": "research/sN/overnight_status_2026_10_25_morning.md",
+      "bytes": 8651,
+      "sha256": "f7406c7c0f07028c5c6bfe06007ae6833f6c5be98ff9c9bba6ff8a8a5c5a2ee5"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_replay.py",
+      "bytes": 3729,
+      "sha256": "26b7dd0cb2fe33471bca3e3861caa874a50192ef19ab3fc7e9f51a146290b2b7"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_replay.json",
+      "bytes": 2561,
+      "sha256": "f4230cceea443450881889989de272f9412b06620ee4e1d1ec7c080d228a37aa"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_score.py",
+      "bytes": 3248,
+      "sha256": "215f7ca008fc6780e5a2c641e185f79b1796f6a4bbe462ffbb51b61cce520678"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_score.json",
+      "bytes": 1034,
+      "sha256": "146504cadd2aedc48d314c54d4b1bb264bdfd7e45dda72162b8cd012d5ef60d8"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_constant.log",
+      "bytes": 898,
+      "sha256": "2754395ca4c53099986279424f3167d040f667ca7688fcbb974e5cd52d07b468"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_endpoint_q2_review.md",
+      "bytes": 3478,
+      "sha256": "23304ee38bbd77013ca99d51bfe688f72164f88955ba53534b114ab4e8d74f25"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_endpoint_q2_check.py",
+      "bytes": 4100,
+      "sha256": "dbf720632c7cd811caa8bc9f7a66bdda908f3697718171f97f8c1b7c2e916d12"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_endpoint_q2_check.json",
+      "bytes": 1085,
+      "sha256": "0190e7cdd9a916ed01d334abfb4d17354ce18f9871da42ce2a0f16f679cea675"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_residue_2.log",
+      "bytes": 1176,
+      "sha256": "1959bdb84cccc0c817a498c4a3a680ad9b66b9733a0c3bcab8fff86a14d62d93"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_residue_3.log",
+      "bytes": 1172,
+      "sha256": "c09d39a80150326346a2467341e1dcaa8d95976f47ae7b7d1d2dd91b1f8526f4"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_residue_4.log",
+      "bytes": 1168,
+      "sha256": "2f10914ecc6a28e14393b9a7f532066a26a43eb095fc9293bccca418ac9426ff"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_dfs_2.log",
+      "bytes": 770,
+      "sha256": "4dfd4038635e9df9ae8191689081c350ddbb9599a1dfbc51ce4665dc66e122ba"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_dfs_3.log",
+      "bytes": 856,
+      "sha256": "d9aa70ec0622a62c57be36bad0dd015bafa7fa9d6cc535a72dbae1ef42f4b91f"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_endpoint_q2_dfs_4.log",
+      "bytes": 586,
+      "sha256": "86f1f6923209c3984279de5732188025febfc915f9ba2dfa2892df34d246b682"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research/sN/trees/overnight_uniform_q9_inventory.json",
+      "bytes": 10181387,
+      "sha256": "c2fb778f5c5d24ed6c34d7c3059939139ce0c1b3e2b6af21fd9ef23b67efe54f"
+    }
+  ],
+  "scope": "Exact 36-term generic Fourier-kernel relation, independent semantic audit, fresh proper-residue replay, independent coordinate implementation and Q2 pairing -448. Not a whole-function identity or unrestricted exponential lower bound."
+}

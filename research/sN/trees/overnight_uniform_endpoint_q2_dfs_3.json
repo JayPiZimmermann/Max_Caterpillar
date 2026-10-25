@@ -1,0 +1,5186 @@
+{
+  "status": "BOUNDED_EXACT_RECURSIVE_POLE_CERTIFICATION",
+  "zero": true,
+  "completed_nodes": 66,
+  "calls_this_phase": 66,
+  "seconds": 9.701742841003579,
+  "events": [
+    {
+      "hash": "dcb6e05b3b458d42e85a802c87611ed431bb398694294970c78c896ead443304",
+      "depth": 3,
+      "dimension": 4,
+      "records": 100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "5c5b49e707bfc2cb31d928bfc446b880e6ed6300e335bbef3b71df0d8cc498c5",
+      "depth": 2,
+      "dimension": 5,
+      "records": 100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "orbit": 2,
+          "child_records": 100,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "e8ebcd946c34a4a16b593a583add237f98b4bbcd02dfc3bdf71cd0c7e2730044",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "a3b10b5ab357cb4c757bdabf55902c8b98975d2c4a51de3a1111db3ea2fe88c0",
+      "depth": 3,
+      "dimension": 4,
+      "records": 120,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "64f6feebb61b52c6bcea49a4aeeb58d6a1f9ef46cd51bc3958c2b871c69a23f9",
+      "depth": 3,
+      "dimension": 4,
+      "records": 112,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "d90693da931f43a6fff2de24c9cf0f493e4b4790f975ad2fd24f61f01fd560b3",
+      "depth": 2,
+      "dimension": 5,
+      "records": 540,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 5,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 120,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 112,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "cc3e18771e3720dbf530633390e2b5ee9873f2296a0759fcff99488eae9c5898",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "d6971497c84e58fa07aaa5a6b144f4bbeb442248da9419ea6a52278034ec4fa9",
+      "depth": 3,
+      "dimension": 4,
+      "records": 90,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "7d12e8d67bcb0f1065d4d158af59fb17d3a001cae044cbeb69af9c7d55008efb",
+      "depth": 3,
+      "dimension": 4,
+      "records": 120,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "5c55f159d254f1889b0181acc2796762785e8902341f7b2e4e9e299597710f75",
+      "depth": 2,
+      "dimension": 5,
+      "records": 360,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 120,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 90,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 120,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "07018a42989e619e25eec3c9e7943eb0578d8f488b2c59a590ff8d412fc86594",
+      "depth": 3,
+      "dimension": 4,
+      "records": 196,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "b70d8d8bf3a6e898b324e951501ec9543f04fcb2dccc24ebb769e744136243c5",
+      "depth": 2,
+      "dimension": 5,
+      "records": 396,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 2,
+          "child_records": 112,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 90,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "8d2858bb04bffecdbd68b8f993c773ed9b1e0c7eda038d74ceae8a0364cd0954",
+      "depth": 3,
+      "dimension": 4,
+      "records": 100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "d18851018bce80a32d2aeda7fc944c242f70b98a2bc014226825be89033363aa",
+      "depth": 2,
+      "dimension": 5,
+      "records": 1020,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 5,
+          "child_records": 100,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 120,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "ca013d88aad6b63a89bb1361e29b652b7f723ec6caae554197dd3f0524e88cef",
+      "depth": 1,
+      "dimension": 6,
+      "records": 2100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 5,
+          "child_records": 100,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 2,
+          "child_records": 540,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 360,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 396,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 1020,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "d131200164effc976b7c346259835882afe4db9727e4affe86a90ff9a8dd0e20",
+      "depth": 3,
+      "dimension": 4,
+      "records": 100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "7e052bc11fc9b1653bd19311e711ffc772a6ee06df31f4b398b2aaa04c41322f",
+      "depth": 3,
+      "dimension": 4,
+      "records": 100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "6eb4f0bd6a6b8446f5a533419daaccfe3ce18239b00513517f27715ac0c125d4",
+      "depth": 2,
+      "dimension": 5,
+      "records": 300,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 100,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 100,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "65791e62e782a7ab92052d0487dc935e680ab0dee645cfd01f4d9449243884ef",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "ef3bdba5fe926b4483db007b5335cda8db01d42c04493c96ad592a0d5e4af3d0",
+      "depth": 3,
+      "dimension": 4,
+      "records": 120,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "05341c0270771d8873b90d932c9c1c3c502dd7c3d2bd9b8becef45548ee56cae",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "e8917692ea4a613e2497d5bbfdc9324e445989f1f2a427ce9cc8fda77af5d68e",
+      "depth": 3,
+      "dimension": 4,
+      "records": 196,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "809893cc525c4d87aa984f2003601e604bf3e89e03402b8afe27739a5d640d3f",
+      "depth": 2,
+      "dimension": 5,
+      "records": 560,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 5,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 5,
+          "child_records": 100,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 120,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "97494051ac104d18a30c26c6c7ff33ba26783a98cf7f2a841c6f350da5d181cc",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "3c3f3080329443c26436368d41e3072ff7bbb52980b9ade066fb29f8138d3ae3",
+      "depth": 3,
+      "dimension": 4,
+      "records": 90,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "3d4491c7695ad3fe5687243d98e36bb2c17ea1b62503f019227f433852cfe759",
+      "depth": 3,
+      "dimension": 4,
+      "records": 120,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "ff03ccea2aaa25c244e706ef7045e5248ed7142f104f0224d5d54dab14ceea97",
+      "depth": 2,
+      "dimension": 5,
+      "records": 360,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 120,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 90,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 120,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "59dacfd8264df027a5598c86bc091d45dc90c9f3b507071d73a2802097dacaed",
+      "depth": 3,
+      "dimension": 4,
+      "records": 196,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "201df83c8165e7544e177f38538087ba1a0082dc1a0d1c7619a6aec1b605201e",
+      "depth": 2,
+      "dimension": 5,
+      "records": 588,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 196,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 90,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "6a55bc502e54c8f01d37553c4b82c0cc97889d21f405c49478e642da3ac6fa94",
+      "depth": 2,
+      "dimension": 5,
+      "records": 560,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 5,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 5,
+          "child_records": 100,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 120,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "e6760db074d4284760610009b4c73e7d32f850b25b1a2ef05566854a56b9e5bb",
+      "depth": 1,
+      "dimension": 6,
+      "records": 1680,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 5,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 5,
+          "child_records": 300,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 560,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 360,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 588,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 560,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "8d1861ccd4f5f3522776491d062d9882c85fe83750fbfb277310d12fe84c338a",
+      "depth": 2,
+      "dimension": 5,
+      "records": 252,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "87251b842a25d1cafcd8382ce8ef02bcd78fc2d0e8059ace967b6ed0351afb30",
+      "depth": 2,
+      "dimension": 5,
+      "records": 252,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            -1,
+            -1
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "8f7c45d2287979c3a06db304a9997575a46d038ac72f08c90323b6a2c7d09eb5",
+      "depth": 2,
+      "dimension": 5,
+      "records": 288,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "f9c53e58a4b2c45e0a874219741fcedbed97b336d59a361ef55a79c5613ce828",
+      "depth": 1,
+      "dimension": 6,
+      "records": 1404,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 252,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 252,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 288,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "442e26d2ea105a390b3f9ef67cdafbd681fb5fe3730c252fbe723cc0bcf54b72",
+      "depth": 2,
+      "dimension": 5,
+      "records": 576,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "0cf853f4fe847b6361cc844e0003989868c10dc64c4a90a316c83b5107b7a042",
+      "depth": 1,
+      "dimension": 6,
+      "records": 1584,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 12,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 12,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 8,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 576,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "0ea04bbeff9979eadb08a082f4a3d5092eb420ac158527e415343fc653ebbc2f",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "98498464031a09ed4a12af94ccfe5a7e401d32ef3b14f2ae627f3e7ecb740dc7",
+      "depth": 3,
+      "dimension": 4,
+      "records": 112,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "5247de5fc9e14a978c3b0178e48500fb9b6364f900aa2c38a9b3688322762696",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "f96e65cce88d8721cb47b1a4349ef5f6edab2e4ad468f4914f1a609797bbd8c3",
+      "depth": 3,
+      "dimension": 4,
+      "records": 90,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "352d7eae5d457c190cc73ab5a7fcd90c1599865b895fb66c26021a93bcc43ad0",
+      "depth": 3,
+      "dimension": 4,
+      "records": 196,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "7eaebc75828023ac668f51d63ed73743fb61e0b2eb004247a9005dc8607212ca",
+      "depth": 2,
+      "dimension": 5,
+      "records": 396,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 2,
+          "child_records": 112,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 90,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "1011757c6238a7345380f0510802d3a1b907847a2583edf3a68f6d6581745a29",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "bf08da6aeda326ebad057bb2628cde64281235891da5d2a9eb941f70944164ad",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "426def7ae125a08dfe490db7b35cf0e7473b28bf416134cd0214033131bf6d8b",
+      "depth": 3,
+      "dimension": 4,
+      "records": 90,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            2,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "2966c76a5b9098a23da1e69e4430819219839afa29825b3e3a96913a735fcdbd",
+      "depth": 3,
+      "dimension": 4,
+      "records": 196,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "8a1020d2b2b4bfdba09b10d635e6d8d614e9da86663f6b0f355830aec3156c13",
+      "depth": 2,
+      "dimension": 5,
+      "records": 588,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 196,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 90,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 2,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "47d32e4bf9c3ba8c79e8da3b8793acb589596ca597d08d043489c2e82ecdc5bb",
+      "depth": 2,
+      "dimension": 5,
+      "records": 576,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "b6e1f94172bc44f6e03af25728bbeb76fe10cdd7ee3de2b19518a6b310126e05",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 13,
+      "degree": 13,
+      "zero": true
+    },
+    {
+      "hash": "56fa91780d49ec3c9c7a4df5dfa035deccf52dfadc3d284441d640810232ce37",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 13,
+      "degree": 13,
+      "zero": true
+    },
+    {
+      "hash": "123703c38d8106b55a7a2307b1539d4fd66dddbff380c4f60d6bfb91b0caf9a5",
+      "depth": 3,
+      "dimension": 4,
+      "records": 180,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0
+          ],
+          "orbit": 9,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "dad966181a0c5bb6564e9e0cf4085dcc318722fa288292349d51364747558822",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 13,
+      "degree": 13,
+      "zero": true
+    },
+    {
+      "hash": "89ce74d6ba2c2b3c2f633c34ad88f5ffed463a9400d63902c4b74ab2141c1fde",
+      "depth": 3,
+      "dimension": 4,
+      "records": 96,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 8,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "fb53e84ab1df765c2f4b7c3d316b34e467d7aa624803a6188726f983066d7439",
+      "depth": 2,
+      "dimension": 5,
+      "records": 648,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 12,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 12,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 180,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 96,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "72fe689a907cb08eb353e7e3521cd77957f89740e2568e13621ba94921f65729",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "575273d511c0c533cf96dd922be3760dc1c148e187d7d7ae55ee2150491d22b4",
+      "depth": 3,
+      "dimension": 4,
+      "records": 196,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "0441b174756185b97949db482cc1ef15ddafd42edf483464c9f2bda7d019a3b4",
+      "depth": 2,
+      "dimension": 5,
+      "records": 1870,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 20,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 10,
+          "child_records": 196,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 96,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "3728d94c22ba5f9e4650f37396b906dbb562f51dac8ce324e027b58b979b04ed",
+      "depth": 1,
+      "dimension": 6,
+      "records": 11100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 30,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 30,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 15,
+          "child_records": 396,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "orbit": 15,
+          "child_records": 588,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 576,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 648,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 1870,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "657e6a1991d96b97d06ca29e905694df777bb226ab32dcb255d25da1eec47e93",
+      "depth": 3,
+      "dimension": 4,
+      "records": 100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "0b1a0664e8d0a5b2a3ff1eb09f0e2c68830ddd73598e40a5f3a0db5f3d197158",
+      "depth": 4,
+      "dimension": 3,
+      "records": 30,
+      "method": "exact_common_denominator",
+      "forms": 15,
+      "degree": 15,
+      "zero": true
+    },
+    {
+      "hash": "e4030d346c6f50b3fd5844cf830ccac554d0ca762dd18da3bd537f79b68e98ef",
+      "depth": 3,
+      "dimension": 4,
+      "records": 144,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            2,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            2,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "fb07e83494fa49c81900778a5a777bdc72c6ff0476d359a37e9af3e3ba1911f2",
+      "depth": 3,
+      "dimension": 4,
+      "records": 196,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 30,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 4,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "46ece93e7f22120bd42fef736c5f35bd8346438d5c2a7db95324ec35dce71605",
+      "depth": 2,
+      "dimension": 5,
+      "records": 1100,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "orbit": 5,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "orbit": 5,
+          "child_records": 100,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 144,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 5,
+          "child_records": 196,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "55d17a1cffc6fd9e50907f188977a08de8ff89be3878f0978ee31190faa5d98e",
+      "depth": 1,
+      "dimension": 6,
+      "records": 11040,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 30,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 20,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 15,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 288,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 15,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 12,
+          "child_records": 1100,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 1870,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 1,
+          "child_records": 0,
+          "zero": true
+        }
+      ],
+      "zero": true
+    },
+    {
+      "hash": "b57219e6f6efc182188dbfe3e4b5b2108b5fcefecd73ab4185bbaec7ad68d82a",
+      "depth": 0,
+      "dimension": 7,
+      "records": 47520,
+      "method": "complete_pole_orbits",
+      "tests": [
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "orbit": 60,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "orbit": 45,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "orbit": 15,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "orbit": 18,
+          "child_records": 2100,
+          "zero": true
+        },
+        {
+          "pole": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 0,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 18,
+          "child_records": 1680,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "orbit": 10,
+          "child_records": 1404,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "orbit": 15,
+          "child_records": 1584,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "orbit": 6,
+          "child_records": 11100,
+          "zero": true
+        },
+        {
+          "pole": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "orbit": 3,
+          "child_records": 11040,
+          "zero": true
+        }
+      ],
+      "zero": true
+    }
+  ],
+  "input_sha256": "491984ee351f0c3978b478946d64bbe016c97dceb9701a32d571e36bcc8f41dd",
+  "producer_sha256": "c1fb2da0b0e8383d5d657258808a4bbd0d9782999a4b70563b83b6cf11f58557",
+  "scope": "Only the specified ordinary-cut residue of the sampled36-term relation is tested. A successful recursion still requires independent review; other first-pole types remain separate obligations."
+}

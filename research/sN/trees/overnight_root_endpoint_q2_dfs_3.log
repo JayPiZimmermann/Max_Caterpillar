@@ -1,0 +1,17 @@
+proved nodes 17 calls 20 depth 3 dimension 4
+proved nodes 18 calls 20 depth 2 dimension 5
+proved nodes 47 calls 50 depth 3 dimension 4
+proved nodes 48 calls 50 depth 2 dimension 5
+proved nodes 57 calls 60 depth 3 dimension 4
+proved nodes 58 calls 60 depth 2 dimension 5
+proved nodes 59 calls 60 depth 1 dimension 6
+{
+  "status": "BOUNDED_EXACT_RECURSIVE_POLE_CERTIFICATION",
+  "zero": true,
+  "completed_nodes": 66,
+  "calls_this_phase": 66,
+  "seconds": 8.377552441001171,
+  "input_sha256": "89efb05540fee3849cb79bf9c8f99600ee052f6311609fc962efd544f3d34146",
+  "producer_sha256": "c1fb2da0b0e8383d5d657258808a4bbd0d9782999a4b70563b83b6cf11f58557",
+  "scope": "Only the specified ordinary-cut residue of the sampled36-term relation is tested. A successful recursion still requires independent review; other first-pole types remain separate obligations."
+}

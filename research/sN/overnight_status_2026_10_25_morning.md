@@ -58,6 +58,15 @@ checked seven-label witness. Scalar torsion traces and raw matching
 signatures also fail. These closed routes and their precise counterexamples
 are retained so later searches do not repeat them.
 
+The final morning audit also closes the proposed Q2 score: an exact 36-term
+relation among endpoint rational kernels has Q2 pairing -448. Fresh residue
+replay and a separate signed-order score calculation passed. This is a
+generic Fourier-kernel identity, allowing a lower-filtration function
+remainder; it refutes that score, not the desired separator theorem. See
+[the exact relation and replay instructions](trees/overnight_uniform_endpoint_q2.md).
+The accompanying [multihub interpolation formula](trees/overnight_uniform_endpoint_multihub.md)
+is an exact marked identity, with no unproved descent assertion.
+
 ## What remains viable for an exponential construction
 
 The live geometric candidate is a family of sparse cyclic graphs: a full

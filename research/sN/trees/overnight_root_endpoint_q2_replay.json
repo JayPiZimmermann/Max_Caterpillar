@@ -1,0 +1,86 @@
+{
+  "source_sha256": {
+    "overnight_uniform_q9_inventory.json": "c2fb778f5c5d24ed6c34d7c3059939139ce0c1b3e2b6af21fd9ef23b67efe54f",
+    "overnight_uniform_endpoint_q2.json": "7bbebcbec3431c5d19edec5ba5da1111c04ff9ab3ab7bfc33387c3269c8033ea",
+    "overnight_uniform_endpoint_q2_residue.py": "6258e9c425f06c4f8545b59afa29b7913fb99435b59906acc68abc3b4a91edb4",
+    "overnight_uniform_endpoint_q2_dfs.py": "c1fb2da0b0e8383d5d657258808a4bbd0d9782999a4b70563b83b6cf11f58557",
+    "overnight_uniform_endpoint_q2_coordinate.py": "a73253bece06e6983ba63f4c9c3fc923b0a854aeb9149a76f65594e81a87a334",
+    "overnight_uniform_endpoint_q2_constant.py": "93016372310d459108288e9afcb00a4d8d360aae5c37dfa05411733f8d178e0e"
+  },
+  "checks": [
+    {
+      "cut_size": 2,
+      "stage": "residue",
+      "records": 320040,
+      "exact_cache_matches": true
+    },
+    {
+      "cut_size": 2,
+      "stage": "dfs",
+      "zero": true,
+      "fresh_nodes": 109
+    },
+    {
+      "cut_size": 3,
+      "stage": "residue",
+      "records": 47520,
+      "exact_cache_matches": true
+    },
+    {
+      "cut_size": 3,
+      "stage": "dfs",
+      "zero": true,
+      "fresh_nodes": 66
+    },
+    {
+      "cut_size": 4,
+      "stage": "residue",
+      "records": 28560,
+      "exact_cache_matches": true
+    },
+    {
+      "cut_size": 4,
+      "stage": "dfs",
+      "zero": true,
+      "fresh_nodes": 62
+    }
+  ],
+  "scope": "Fresh producer replay without saved memo; mathematical bridges require the accompanying independent written review.",
+  "coordinate_constant": {
+    "status": "EXACT_COORDINATE_CONSTANT_CHECK",
+    "stages": [
+      {
+        "arity_after": 8,
+        "surviving_classes": 20
+      },
+      {
+        "arity_after": 7,
+        "surviving_classes": 12
+      },
+      {
+        "arity_after": 6,
+        "surviving_classes": 6
+      },
+      {
+        "arity_after": 5,
+        "surviving_classes": 4
+      }
+    ],
+    "frequency": [
+      -40,
+      1,
+      3,
+      9,
+      27
+    ],
+    "summands": 480,
+    "value": "0",
+    "constant": "0",
+    "zero": true,
+    "scope": "Assuming all noncoordinate poles vanish, the original homogeneous degree -9 full symmetric rational relation is c/product(omega). Four coordinate residues preserve c; their N5 value is computed exactly here. The leaf-deletion and pole-completeness bridges still require independent semantic review.",
+    "producer_sha256": "93016372310d459108288e9afcb00a4d8d360aae5c37dfa05411733f8d178e0e",
+    "seconds": 0.0796174190036254
+  },
+  "status": "PASS",
+  "seconds": 74.39649789499526
+}

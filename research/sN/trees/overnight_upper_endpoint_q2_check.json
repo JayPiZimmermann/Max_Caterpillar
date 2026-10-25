@@ -1,0 +1,42 @@
+{
+  "status": "INDEPENDENT_DIRECT_COORDINATE_RESIDUES_PASS",
+  "endpoint_units": 36,
+  "individual_poles_simple": true,
+  "no_root_slide_preprocessing": true,
+  "no_colored_tree_grouping": true,
+  "stages": [
+    {
+      "arity": 8,
+      "labelled_states": 83
+    },
+    {
+      "arity": 7,
+      "labelled_states": 93
+    },
+    {
+      "arity": 6,
+      "labelled_states": 72
+    },
+    {
+      "arity": 5,
+      "labelled_states": 48
+    }
+  ],
+  "frequency": [
+    -40,
+    1,
+    3,
+    9,
+    27
+  ],
+  "summands": 5760,
+  "value": "0",
+  "zero": true,
+  "seconds": 0.11191613599658012,
+  "producer_sha256": "dbf720632c7cd811caa8bc9f7a66bdda908f3697718171f97f8c1b7c2e916d12",
+  "input_sha256": {
+    "overnight_uniform_q9_inventory.json": "c2fb778f5c5d24ed6c34d7c3059939139ce0c1b3e2b6af21fd9ef23b67efe54f",
+    "overnight_uniform_endpoint_q2.json": "7bbebcbec3431c5d19edec5ba5da1111c04ff9ab3ab7bfc33387c3269c8033ea"
+  },
+  "scope": "Independent coordinate constant step and initial endpoint/simple-pole checks. Proper-cut pole elimination is separately audited and replayed."
+}

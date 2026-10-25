@@ -1,0 +1,90 @@
+{
+  "status": "EXACT_RESIDUE_DICTIONARY_FOR_ENDPOINT_Q2_PROPOSAL",
+  "subset_size": 2,
+  "relation": {
+    "8271": 2,
+    "0": -3,
+    "1": -2,
+    "5": 5,
+    "512": 4,
+    "513": 2,
+    "516": 2,
+    "517": -6,
+    "1216": -1,
+    "1217": -2,
+    "1220": 1,
+    "1472": 6,
+    "1473": 2,
+    "1476": 2,
+    "1477": -10,
+    "2492": -4,
+    "2493": -2,
+    "2495": -2,
+    "2496": 6,
+    "3204": -3,
+    "3205": -2,
+    "3207": 5,
+    "3696": 2,
+    "3697": 2,
+    "3701": -4,
+    "4229": -2,
+    "4640": -2,
+    "4641": -2,
+    "4643": -2,
+    "4644": 4,
+    "5924": -2,
+    "5925": -2,
+    "5927": 4,
+    "6855": 2,
+    "7139": 2,
+    "7625": 2
+  },
+  "proposal_score_pairing": "-448",
+  "full_permutation_terms": 1209600,
+  "linear_forms": 1569,
+  "surviving_records": 320040,
+  "dictionary_cancels": false,
+  "coefficient_common_scale": 1048576,
+  "progress": [
+    {
+      "units": 6,
+      "terms": 201600,
+      "raw_records": 60480,
+      "seconds": 3.703454859001795
+    },
+    {
+      "units": 12,
+      "terms": 383040,
+      "raw_records": 110880,
+      "seconds": 4.698355095999432
+    },
+    {
+      "units": 18,
+      "terms": 564480,
+      "raw_records": 177660,
+      "seconds": 5.707179733995872
+    },
+    {
+      "units": 24,
+      "terms": 766080,
+      "raw_records": 207900,
+      "seconds": 6.796453495997412
+    },
+    {
+      "units": 30,
+      "terms": 987840,
+      "raw_records": 259560,
+      "seconds": 7.936814619999495
+    },
+    {
+      "units": 36,
+      "terms": 1209600,
+      "raw_records": 335160,
+      "seconds": 9.077111105994845
+    }
+  ],
+  "seconds": 9.130923475997406,
+  "producer_sha256": "6258e9c425f06c4f8545b59afa29b7913fb99435b59906acc68abc3b4a91edb4",
+  "scope": "An empty dictionary proves this full ordinary-cut residue is zero. A nonempty dictionary requires additional exact circuit reduction; no Q2 refutation or proof is inferred.",
+  "fraction_cache": "overnight_uniform_endpoint_q2_residue_2.fractions.json.gz"
+}

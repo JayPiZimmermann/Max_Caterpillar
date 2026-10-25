@@ -1,0 +1,23 @@
+{
+  "arity": 7,
+  "rows": 320,
+  "endpoint_columns": 108,
+  "rank": 24,
+  "nonzero_unit_scores": 0,
+  "target_score": "0",
+  "score_in_sampled_rowspan": true,
+  "violated_sampled_relations": 0,
+  "seconds": 0.06885620499815559
+}
+{
+  "arity": 9,
+  "rows": 3400,
+  "endpoint_columns": 231,
+  "rank": 180,
+  "nonzero_unit_scores": 35,
+  "target_score": "-1/810",
+  "score_in_sampled_rowspan": false,
+  "violated_sampled_relations": 31,
+  "seconds": 0.47518863400182454
+}
+proposal sizes [[], [36, 41, 46, 50, 51, 52, 56, 83, 94, 94, 95, 98]]
