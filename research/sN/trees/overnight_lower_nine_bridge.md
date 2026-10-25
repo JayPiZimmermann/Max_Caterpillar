@@ -85,7 +85,7 @@ Large reproducible rational rows are local caches, with content hashes and
 small receipts retained. The final streaming checker replays every exact
 column relation and modular reduction and verifies complete row coverage.
 
-This note is research-only. The five-input paper section contains matched
-results; the nine-label computation is not presented there as an optimal
-small-input network result. Neither the finite separator nor its counting
+This note is research-only. Small-input network width results are kept out
+of the paper; the nine-label computation here proves a uniform all-arity
+bound, not an optimal small-input network result. Neither the finite separator nor its counting
 bridge has been formalized in Lean.

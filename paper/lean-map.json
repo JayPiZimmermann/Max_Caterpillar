@@ -37,7 +37,8 @@
   },
   "network": {
     "file": "MaxCaterpillar/Core.lean",
-    "name": "network_correct"
+    "name": "network_correct",
+    "equations": []
   },
   "class": {
     "file": "MaxCaterpillar/Lemmas.lean",
@@ -51,11 +52,13 @@
   },
   "assembly": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Completeness.lean",
-    "name": "mem_LSpan_of_mem_simplexMod_of_forall_germDiff_mem"
+    "name": "mem_LSpan_of_mem_simplexMod_of_forall_germDiff_mem",
+    "equations": []
   },
   "braid": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Braid.lean",
-    "name": "germDiff_formula_braid_mem_LSpan_zero"
+    "name": "germDiff_formula_braid_mem_LSpan_zero",
+    "equations": []
   },
   "coneclosure": {
     "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean",
@@ -69,11 +72,13 @@
   },
   "block": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Block/Global.lean",
-    "name": "germDiff_formula_mem_LSpan_of_repeatedValues"
+    "name": "germDiff_formula_mem_LSpan_of_repeatedValues",
+    "equations": []
   },
   "toggle": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Block/Transform.lean",
-    "name": "blockTransform_involutive"
+    "name": "blockTransform_involutive",
+    "equations": []
   },
   "coordinate": {
     "file": "MaxCaterpillar/Lemmas.lean",
@@ -91,7 +96,8 @@
   },
   "star": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Coordinate/Star.lean",
-    "name": "coordinateEndpointStarSum_mem_LSpan"
+    "name": "coordinateEndpointStarSum_mem_LSpan",
+    "equations": []
   },
   "graph": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/GraphKey.lean",
@@ -102,11 +108,13 @@
   },
   "encoding": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/WordEncoding.lean",
-    "name": "normalizedKey_wordKey_eq_shapeKey"
+    "name": "normalizedKey_wordKey_eq_shapeKey",
+    "equations": []
   },
   "reversal": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Spine/Reversal.lean",
-    "name": "card_shapeKeys_le_half"
+    "name": "card_shapeKeys_le_half",
+    "equations": []
   },
   "count": {
     "file": "MaxCaterpillar/Lemmas.lean",
@@ -124,15 +132,18 @@
   },
   "absorb": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Essential.lean",
-    "name": "compactEssentialNetwork"
+    "name": "compactEssentialNetwork",
+    "equations": []
   },
   "transport": {
     "file": "MaxCaterpillar/Lemmas.lean",
-    "name": "construction_width"
+    "name": "construction_width",
+    "equations": []
   },
   "reduction": {
     "file": "MaxCaterpillar/Lemmas.lean",
-    "name": "facet_reduction"
+    "name": "facet_reduction",
+    "equations": []
   },
   "compiler": {
     "file": "MaxCaterpillar/Retained.lean",
@@ -146,7 +157,8 @@
   },
   "asymptotics": {
     "file": "MaxCaterpillar/Core.lean",
-    "name": "width_asymptotics"
+    "name": "width_asymptotics",
+    "equations": []
   },
   "networkParameters": {
     "file": "MaxCaterpillar/Definitions.lean",
@@ -222,7 +234,8 @@
   },
   "unitDefinition": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
-    "name": "paramidOn"
+    "name": "paramidOn",
+    "equations": []
   },
   "fullFeatures": {
     "file": "MaxNN/Constructions/MaxN/Width/Layer/Features.lean",
@@ -233,7 +246,8 @@
   },
   "fiberAverage": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/FiberCompiler.lean",
-    "name": "sum_finiteFiber_average_mul"
+    "name": "sum_finiteFiber_average_mul",
+    "equations": []
   },
   "signedRelu": {
     "file": "MaxNN/Core/Relu.lean",
@@ -251,7 +265,8 @@
   },
   "reducedCoordinates": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Formula/Simplex.lean",
-    "name": "simplexValues_zero"
+    "name": "simplexValues_zero",
+    "equations": []
   },
   "simplex": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
@@ -297,11 +312,13 @@
   },
   "facetOperator": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
-    "name": "germDiff"
+    "name": "germDiff",
+    "equations": []
   },
   "coneVertices": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
-    "name": "coneVertsOn"
+    "name": "coneVertsOn",
+    "equations": []
   },
   "classDefinition": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean",
@@ -389,7 +406,8 @@
   },
   "compilationWidths": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Essential.lean",
-    "name": "compactEssential_twoLayerWidth"
+    "name": "compactEssential_twoLayerWidth",
+    "equations": []
   },
   "recoverCoordinates": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
@@ -400,7 +418,8 @@
   },
   "recoverHinges": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
-    "name": "compactHingeLin_feat"
+    "name": "compactHingeLin_feat",
+    "equations": []
   },
   "featureCount": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/CompactFeatures.lean",
@@ -550,7 +569,8 @@
   },
   "columnReconstruction": {
     "file": "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean",
-    "name": "column_sweep"
+    "name": "column_sweep",
+    "equations": []
   },
   "sweepOperation": {
     "file": "MaxNN/Constructions/Paramid/Geom/Defs.lean",
@@ -604,23 +624,28 @@
   },
   "dictionaryDefinition": {
     "file": "MaxCaterpillar/Construction.lean",
-    "name": "dictionary"
+    "name": "dictionary",
+    "equations": []
   },
   "tagFamily": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
-    "name": "atomFunction"
+    "name": "atomFunction",
+    "equations": []
   },
   "taggedCoefficient": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
-    "name": "taggedCoeff"
+    "name": "taggedCoeff",
+    "equations": []
   },
   "taggedExpansion": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Coefficients.lean",
-    "name": "sum_taggedCoeff_eq"
+    "name": "sum_taggedCoeff_eq",
+    "equations": []
   },
   "normalizedTagCoefficients": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Canonical/Table.lean",
-    "name": "canonicalNormalizedCoeff"
+    "name": "canonicalNormalizedCoeff",
+    "equations": []
   },
   "retainedDescriptions": {
     "file": "MaxCaterpillar/Retained.lean",
@@ -756,7 +781,8 @@
   },
   "rationalSpan": {
     "file": "MaxCaterpillar/Rationality.lean",
-    "name": "exists_rat_coeff_of_mem_span"
+    "name": "exists_rat_coeff_of_mem_span",
+    "equations": []
   },
   "rationalCoordinate": {
     "file": "MaxCaterpillar/Rationality.lean",
@@ -779,39 +805,20 @@
       "eq:quotient-width"
     ]
   },
-  "maxThree": {
-    "file": "MaxCaterpillar/SmallArity.lean",
-    "name": "max_three_identity",
-    "equations": [
-      "eq:max-three"
-    ]
-  },
-  "maxFour": {
-    "file": "MaxCaterpillar/SmallArity.lean",
-    "name": "max_four_identity",
-    "equations": [
-      "eq:max-four"
-    ]
-  },
-  "maxThreeNetwork": {
-    "file": "MaxCaterpillar/SmallArity.lean",
-    "name": "max_three_network"
-  },
-  "maxFourNetwork": {
-    "file": "MaxCaterpillar/SmallArity.lean",
-    "name": "max_four_network"
-  },
   "cpwlTwo": {
     "file": "MaxCaterpillar/CPWL.lean",
-    "name": "cpwl_two_hidden_layers"
+    "name": "cpwl_two_hidden_layers",
+    "equations": []
   },
   "cpwlShared": {
     "file": "MaxCaterpillar/CPWL.lean",
-    "name": "cpwl_two_hidden_layers_shared"
+    "name": "cpwl_two_hidden_layers_shared",
+    "equations": []
   },
   "point": {
     "file": "MaxCaterpillar/Definitions.lean",
-    "name": "Point"
+    "name": "Point",
+    "equations": []
   },
   "kmps": {
     "file": "MaxCaterpillar/KMPS.lean",
@@ -822,15 +829,18 @@
   },
   "kmpsPieces": {
     "file": "MaxCaterpillar/KMPS.lean",
-    "name": "kmps_pieces"
+    "name": "kmps_pieces",
+    "equations": []
   },
   "cpwlPiecesRational": {
     "file": "MaxCaterpillar/CPWLRational.lean",
-    "name": "cpwl_two_hidden_layers_pieces_rational"
+    "name": "cpwl_two_hidden_layers_pieces_rational",
+    "equations": []
   },
   "argumentSets": {
     "file": "MaxCaterpillar/Sharing.lean",
-    "name": "card_imageSets_le_sum_choose"
+    "name": "card_imageSets_le_sum_choose",
+    "equations": []
   },
   "countBinomial": {
     "file": "MaxCaterpillar/Theorems.lean",
@@ -855,24 +865,19 @@
   },
   "caterpillarExpansion": {
     "file": "MaxCaterpillar/Definitions.lean",
-    "name": "IsCaterpillarExpansion"
+    "name": "IsCaterpillarExpansion",
+    "equations": []
   },
   "caterpillarDimGe": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "caterpillarDim_ge"
+    "name": "caterpillarDim_ge",
+    "equations": []
   },
   "draft_countexp-basept": {
     "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "basePt",
     "equations": [
       "eq:base-point"
-    ]
-  },
-  "draft_countexp-mixeddiff": {
-    "file": "MaxCaterpillar/Count/Locality.lean",
-    "name": "mixedDiff",
-    "equations": [
-      "eq:mixed-difference"
     ]
   },
   "draft_countexp-balanced": {
@@ -887,23 +892,6 @@
     "name": "Active",
     "equations": [
       "eq:active"
-    ]
-  },
-  "draft_countexp-auxiliary": {
-    "file": "MaxCaterpillar/Count/Locality.lean",
-    "name": "mixedDiff_auxiliary",
-    "equations": [
-      "eq:mixed-auxiliary"
-    ],
-    "steps": [
-      "stp:count-functional"
-    ]
-  },
-  "draft_countexp-maximum": {
-    "file": "MaxCaterpillar/Count/Locality.lean",
-    "name": "mixedDiff_maximum",
-    "equations": [
-      "eq:mixed-maximum"
     ]
   },
   "draft_countexp-digits": {
@@ -921,7 +909,8 @@
     "name": "tie_eq_of_inter_block",
     "steps": [
       "stp:count-admissible"
-    ]
+    ],
+    "equations": []
   },
   "draft_countexp-orders": {
     "file": "MaxCaterpillar/Count/Passing.lean",
@@ -983,7 +972,8 @@
     "name": "auxSpan_le_ker",
     "steps": [
       "stp:quotient-auxiliary"
-    ]
+    ],
+    "equations": []
   },
   "draft_quotlower-values": {
     "file": "MaxCaterpillar/Dimension.lean",
@@ -1011,7 +1001,8 @@
   },
   "bsy-support-def": {
     "file": "MaxCaterpillar/Competing/Defs.lean",
-    "name": "paramidSupport"
+    "name": "paramidSupport",
+    "equations": []
   },
   "bsy-marked": {
     "file": "MaxCaterpillar/Competing/Defs.lean",
@@ -1050,65 +1041,76 @@
   },
   "bsy-caterpillar": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "bhrsy_support_mem_caterpillar"
+    "name": "bhrsy_support_mem_caterpillar",
+    "equations": []
   },
   "bsy-converse": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "bhrsy_word_mem"
+    "name": "bhrsy_word_mem",
+    "equations": []
   },
   "bsy-empty": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "bhrsy_support_empty"
+    "name": "bhrsy_support_empty",
+    "equations": []
   },
   "bsy-star-ne": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "rootedStar_ne_caterpillarFunction"
+    "name": "rootedStar_ne_caterpillarFunction",
+    "equations": []
   },
   "bsy-family": {
     "file": "MaxCaterpillar/Theorems.lean",
-    "name": "bhrsy_family"
+    "name": "bhrsy_family",
+    "equations": []
   },
   "bsy-coordinates": {
     "file": "MaxCaterpillar/Competing/Relation.lean",
     "name": "zvec_mem",
     "steps": [
       "stp:bsy-coordinates"
-    ]
+    ],
+    "equations": []
   },
   "bsy-injective": {
     "file": "MaxCaterpillar/Competing/Relation.lean",
     "name": "eq_of_coords",
     "steps": [
       "stp:bsy-injective"
-    ]
+    ],
+    "equations": []
   },
   "bsy-zonotope-proof": {
     "file": "MaxCaterpillar/Competing/Relation.lean",
     "name": "parallelepiped_eq_zonotope",
     "steps": [
       "stp:bsy-zonotope"
-    ]
+    ],
+    "equations": []
   },
   "bsy-support-proof": {
     "file": "MaxCaterpillar/Competing/Support.lean",
     "name": "paramidSupport_eq",
     "steps": [
       "stp:bsy-support"
-    ]
+    ],
+    "equations": []
   },
   "bsy-word-proof": {
     "file": "MaxCaterpillar/Competing/Support.lean",
     "name": "paramidSupport_eq_word",
     "steps": [
       "stp:bsy-word"
-    ]
+    ],
+    "equations": []
   },
   "bsy-star-proof": {
     "file": "MaxCaterpillar/Competing/Support.lean",
     "name": "rootedStar_ne_caterpillarFunction",
     "steps": [
       "stp:bsy-star"
-    ]
+    ],
+    "equations": []
   },
   "forestCount": {
     "file": "MaxCaterpillar/Count/Main.lean",
@@ -1129,59 +1131,87 @@
   },
   "quadraticRefinement": {
     "file": "MaxCaterpillar/CountLower.lean",
-    "name": "caterpillar_count_lower"
+    "name": "caterpillar_count_lower",
+    "equations": []
   },
   "out-leaf-count": {
     "file": "MaxCaterpillar/Count/Main.lean",
-    "name": "outLeaf_unified_exponential"
+    "name": "outLeaf_unified_exponential",
+    "equations": []
   },
-  "fixed_five_network": {
-    "kind": "certificate",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/netB_10_6.json",
+  "all_tree_quadratic": {
+    "file": "MaxCaterpillar/Count/TreeFace.lean",
+    "name": "tree_expansion_quadratic",
+    "equations": []
+  },
+  "paper_source_bounded_degree_count": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md",
     "equations": [
-      "eq:fixed-five-features",
-      "eq:fixed-five-identity",
-      "eq:fixed-five-scalar"
+      "eq:bounded-degree-count"
     ]
   },
-  "fixed_five_translation": {
-    "kind": "certificate",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight_fixed_bowtie.md#reduction-to-four-free-neurons",
+  "paper_source_bounded_excess_count": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/61b26cf955427ab7fbc6919a51623c98fded4740/research/sN/trees/overnight_bounded_excess.md",
     "equations": [
-      "eq:fixed-five-free",
-      "eq:fixed-five-translation"
+      "eq:bounded-excess-count"
     ]
   },
-  "fixed_five_differences": {
-    "kind": "certificate",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight_fixed_bowtie_verify.py",
+  "paper_source_connected_capacity": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md",
     "equations": [
-      "eq:fixed-five-difference",
-      "eq:fixed-five-locality"
+      "eq:connected-capacity"
     ]
   },
-  "weighted_degree_two": {
+  "paper_source_degree_two_capacity": {
     "kind": "proof",
     "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
     "equations": [
-      "eq:degree-two-unit",
-      "eq:degree-two-count",
       "eq:degree-two-capacity"
     ]
   },
-  "fixed_five_rays": {
-    "kind": "certificate",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight_fixed_bowtie_pairs.md",
+  "paper_source_degree_two_count": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
     "equations": [
-      "eq:fixed-five-rays"
+      "eq:degree-two-count"
     ]
   },
-  "weighted_forests": {
+  "paper_source_degree_two_unit": {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/84eb935304c04e4b5a878adf219fbcede5758b83/research/sN/trees/overnight_bounded_degree.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
     "equations": [
-      "eq:weighted-forest-count",
-      "eq:weighted-isolates"
+      "eq:degree-two-unit"
+    ]
+  },
+  "paper_source_matching_mixture_count": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#compact-matching-mixture-without-anti-concentration",
+    "equations": [
+      "eq:matching-mixture-count"
+    ]
+  },
+  "paper_source_matching_witnesses": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md",
+    "equations": [
+      "eq:matching-witnesses"
+    ]
+  },
+  "paper_source_tie_test": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#the-common-local-test",
+    "equations": [
+      "eq:tie-test"
+    ]
+  },
+  "paper_source_weighted_forest_count": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md",
+    "equations": [
+      "eq:weighted-forest-count"
     ]
   }
 }
