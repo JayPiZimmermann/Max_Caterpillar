@@ -134,12 +134,9 @@
 \DeclareLeanEquation{eq:retained-count}{MaxCaterpillar/Retained.lean}{80}
 \DeclareLeanEquation{stp:size-count}{MaxCaterpillar/Retained.lean}{80}
 \DeclareLeanEquation{eq:face-dimension-drop}{MaxNN/Constructions/Paramid/Geom/Flag.lean}{200}
-\DeclareLeanEquation{eq:error-peeling}{MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean}{38}
 \DeclareLeanEquation{eq:simplex-vertex-removal}{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean}{184}
 \DeclareLeanEquation{eq:initial-simplex-error}{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/LocalIdentity.lean}{205}
 \DeclareLeanEquation{eq:simplex-deletion-sign}{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean}{195}
-\DeclareLeanEquation{eq:simplex-induction-use}{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean}{40}
-\DeclareLeanEquation{eq:residual-invariant}{MaxNN/Constructions/Paramid/Geom/Faces.lean}{69}
 \DeclareLeanEquation{eq:support-cut}{MaxNN/Constructions/Paramid/Geom/Sweep/Support.lean}{142}
 \DeclareLeanEquation{eq:sweep-support-high}{MaxNN/Constructions/Paramid/Geom/Sweep.lean}{187}
 \DeclareLeanEquation{eq:sweep-support-translate}{MaxNN/Constructions/Paramid/Geom/Sweep.lean}{304}
@@ -207,6 +204,7 @@
 \DeclareSourceEquation{eq:forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower\_count\_elegance\_routes.md}
 \DeclareSourceEquation{eq:matching-mixture-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower\_count\_elegance\_routes.md}
 \DeclareSourceEquation{eq:bsy-combinatorial}{https://arxiv.org/pdf/2610.28587v1\#page=31}
+\DeclareSourceEquation{eq:face-annihilation}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/f9f57af7cdd36cc9b9a1fb1faea52facecf2e336/research/sN/simplify/dictionary\_shape\_review.md}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -1055,13 +1053,14 @@ from~\Cref{eq:signed-word-sum} gives
 \frac{1}{N!}\sum_{\pi}\sum_{\varnothing\ne S\subseteq\{1,\ldots,N-2\}}(-1)^{N+|S|}h_{Q_{\pi,S}}-h_\Delta\in\LS_{N-2}.
 \end{align}
 
-We correct the error by subtracting derivatives $\partial_u$ until it is
-linear. Faces of $Q_{\pi,S}$ already have support functions in the dictionary
-span: apex--base faces give~\Cref{eq:faces}, base faces give linear
-functions plus hinges, and the apex alone gives zero. Coordinate features
+Put $V:=\spn\D$. Faces of $Q_{\pi,S}$ already have support functions in $V$:
+apex--base faces give~\Cref{eq:faces}, base faces give linear
+functions plus sums of $\sigma(x_i-x_j)$, and the apex alone gives zero. Coordinate features
 and~\Cref{eq:hinge-reversal} represent the linear terms and either hinge
-orientation. Differentiating $h_\Delta$ also produces simplex faces;
-induction on their vertex count supplies these functions.
+orientation. Taking another exposed face stays within the same family,
+so $\partial_u V\subseteq V$ for every $u$.
+We use this closure to eliminate the error; induction on the number of
+simplex vertices supplies the simplex faces that occur along the way.
 
 \pfclaim{clm:simplex-faces}{Simplex faces, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean}{40}{hS_mem_of_subset_simplexVerts}, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean}{71}{simplex_sub_mem_coneFaceSpan}, {\Cref{pf:clm:simplex-faces}}}
 For every nonempty $T\subseteq\{0,e_1,\ldots,e_{N-1}\}$, the support function of $\Delta_T:=\operatorname{conv}T$ lies in the dictionary span.
@@ -1096,34 +1095,24 @@ caterpillar-face support functions and lie in $\spn\D$.
 By~\Cref{eq:face-dimension-drop}, $\varepsilon_T\in\LS_{|T|-2}$.
 For the full vertex set the empty composition is the identity.
 
-Lower the residual dimension recursively by
-\begin{align}\label{eq:error-peeling}
-\begin{aligned}
-\varepsilon_T^{(0)}(x)&:=\varepsilon_T(x),\\
-\varepsilon_T^{(j+1)}(x)&:=\varepsilon_T^{(j)}(x)-\sum_{u\in E_{T,j}}\bigl(\partial_u\varepsilon_T^{(j)}\bigr)(x).
-\end{aligned}
-\end{align}
-Here $0\leq j<|T|-2$; the next claim chooses each finite $E_{T,j}\subseteq H_0$.
+\pfclaim{clm:residual-reduction}{Finite elimination, {\Cref{pf:clm:residual-reduction}}}
+Let $V$ be a linear subspace of support-function combinations, stable
+under every $\partial_u$, and let $P$
+be a polytope whose proper-face support functions belong to $V$.
+If $g-h_P\in V$ and $g\in\LS_k$ with $k<\dim P$, then $h_P\in V$.
 
-\pfclaim{clm:residual-reduction}{Residual reduction, \leandecl{MaxNN/Constructions/Paramid/Geom/Faces.lean}{69}{mem_GSpanRel_sup_of_lt_finrank}, {\Cref{pf:clm:residual-reduction}}}
-The sets $E_{T,j}$ can be chosen successively so that, for $0\leq j\leq|T|-2$,
-\begin{align}\label{eq:residual-invariant}
-\begin{aligned}
-\varepsilon_T^{(j)}&\in\LS_{|T|-2-j},\\
-\varepsilon_T-\varepsilon_T^{(j)}&\in\spn\D.
-\end{aligned}
-\end{align}
-Each residual remains a linear combination of $h_{\Delta_T}$, support
-functions of its proper faces and of caterpillar faces, and linear functions.
+\noindent To see the mechanism, write $g=\sum_i c_i h_{P_i}$ with
+$\dim P_i\leq k$. Choose $u_i$ constant on $P_i$ but nonconstant on $P$.
+The operator $I-\partial_{u_i}$ kills every face support function of $P_i$
+and preserves $h_P$ modulo $V$. Applying all these operators kills $g$
+while preserving its class $h_P$ modulo $V$. \Cref{app:residual} gives
+the details, including why the order of the operators causes no difficulty.
 
-\noindent The proof in \Cref{app:residual} chooses a direction orthogonal
-to each maximal-dimensional direction space, avoiding orthogonality to
-the simplex and other spaces. The derivative sum preserves each maximal
-term exactly once; subtracting it lowers the dimension.
-
-At stage $j=|T|-2$, the error is linear, so~\Cref{eq:residual-invariant}
-gives $\varepsilon_T\in\spn\D$. Its simplex coefficient is $\pm1$, and its
-other terms already lie in the span; hence $h_{\Delta_T}\in\spn\D$.
+Apply the claim to $P=\Delta_T$ and
+$g=(-1)^{N-|T|+1}\varepsilon_T$.
+Its hypotheses follow from the outer induction and
+$\varepsilon_T\in\LS_{|T|-2}$, since $\dim\Delta_T=|T|-1$.
+Thus $h_{\Delta_T}\in V$.
 Taking the full vertex set proves $h_\Delta\in\spn\D$ under
 assumption~\Cref{eq:class-identity}.
 
@@ -1381,31 +1370,29 @@ second-layer functions remains open.
 % Begin appendices/dictionary.tex
 \section{Supporting proofs for the dictionary theorem}\label{app:dictionary}
 
-\subsection{Residual reduction}\label{app:residual}
-We prove the inner induction used in the simplex-face argument of
-\Cref{sec:dictionary}. Fix a nonempty vertex set $T$ with $|T|\geq2$,
-and assume that every proper simplex face on a subset of $T$ is already in
-the dictionary span, as in the outer induction there.
+\subsection{Finite elimination of the error}\label{app:residual}
 
 \begin{ProofOf}{Claim}{clm:residual-reduction}
-We argue by induction on $j$.
-\paragraph{Start ($j=0$).}
-By definition, $\varepsilon_T^{(0)}=\varepsilon_T$. Its dimension bound and support-function expression were established above, and the removed part is zero.
-
-\paragraph{Step ($j<|T|-2$).}
-Assume the directions for the first $j$ stages have been chosen and the claim holds at stage $j$. Put $k:=|T|-2-j\geq1$. We require each new direction $u$ to be nonorthogonal to the simplex direction space $\operatorname{dir}\Delta_T:=\operatorname{span}\{v-w:v,w\in T\}$. Its values on $T$ are then not all equal, so the maximizing vertices form a nonempty proper subset:
-\begin{align}\label{eq:simplex-induction-use}
-\begin{aligned}
-A_u&:=\{v\in T:\langle u,v\rangle=h_{\Delta_T}(u)\},\qquad \varnothing\ne A_u\subsetneq T,\\
-\partial_u h_{\Delta_T}&=h_{\Delta_{A_u}}\in\spn\D.
-\end{aligned}
+Choose a finite expression $g=\sum_{i=1}^m c_i h_{P_i}$ with
+$\dim P_i\leq k<\dim P$. For each $i$, choose
+$u_i\in(\operatorname{dir}P_i)^\perp$ that is not orthogonal to
+$\operatorname{dir}P$. Such a direction exists because
+$\operatorname{dir}P$ is not contained in $\operatorname{dir}P_i$.
+Set
+\begin{align}\label{eq:face-annihilation}
+ A_i:=I-\partial_{u_i},\qquad \mathcal A:=A_m\cdots A_1.
 \end{align}
-The last membership uses the outer induction hypothesis, since $|A_u|<|T|$. An orthogonal direction would leave $h_{\Delta_T}$ unchanged and would not allow this use of the hypothesis.
 
-Choose an auxiliary expression for $\varepsilon_T^{(j)}$ by support functions of polytopes of dimension at most $k$, and collect their distinct $k$-dimensional direction spaces. For each such space $V$, choose $u_V\in V^\perp$ not orthogonal to $\operatorname{dir}\Delta_T$ or to any other collected space $V'$. This is possible because $\dim\Delta_T=|T|-1>k$: each of $\operatorname{dir}\Delta_T$ and $V'$ contains a vector outside $V$, whose nonzero projection onto $V^\perp$ is not orthogonal to that vector. Adding sufficiently small multiples of these projections avoids each orthogonality condition in turn while preserving those already avoided. Choose $E_{T,j}:=\{u_V:V\text{ is a collected direction space}\}$, with $E_{T,j}=\varnothing$ if there are none. In the sum of derivatives over $E_{T,j}$, each term coming from a $k$-dimensional polytope is preserved exactly once. Every other derivative of that term is the support function of a proper face, while terms of lower dimension remain in $\LS_{k-1}$. Subtracting this derivative sum therefore cancels all $k$-dimensional terms. By the recursive definition~\Cref{eq:error-peeling}, the resulting error satisfies $\varepsilon_T^{(j+1)}\in\LS_{k-1}=\LS_{|T|-3-j}$.
-
-Now compute these same derivatives using the support-function expression in the claim. The derivative of $h_{\Delta_T}$ lies in the dictionary span by~\Cref{eq:simplex-induction-use}. Differentiating the support function of an already proper simplex face still gives a support function of a proper face of $\Delta_T$, so the same induction hypothesis applies. Differentiating the support function of a face of $Q_{\pi,S}$ gives a support function of a face of the same polytope, whose support functions lie in the dictionary span, and linear functions remain linear. Thus the derivative sum lies in the dictionary span. By~\Cref{eq:error-peeling}, $\varepsilon_T-\varepsilon_T^{(j+1)}$ is the sum of the previously removed part and this derivative sum, so it also lies in the dictionary span. Subtracting the derivative sum preserves the stated types of support-function terms. This completes the proof step.
-
+Every $u_i$ exposes a proper face of $P$, so $A_i h_P-h_P\in V$.
+Since $\partial_{u_i}V\subseteq V$, the relation $g-h_P\in V$ therefore
+implies $\mathcal A g-h_P\in V$.
+On the other hand, each partial composition sends $h_{P_i}$ to a linear
+combination of support functions of faces of $P_i$. The direction $u_i$
+is constant on every such face $F$, so
+$\partial_{u_i}h_F=h_F$ and $A_i h_F=0$. Thus the $i$th factor kills
+all descendants of $h_{P_i}$, and later factors preserve zero.
+It follows that $\mathcal A g=0$, hence $h_P\in V$.
+No commutation of derivatives is required.
 \end{ProofOf}
 
 \subsection{Reconstruction from opposite exposed faces}\label{app:reconstruction}
@@ -1455,9 +1442,18 @@ Let $k=|\{F\text{ facet of }P:\langle\nu_F,e_1\rangle\ne0\}|$ count facets not p
 There is one upper facet $F^+$ and one lower facet $F^-$. Every line parallel to $e_1$ that meets $P$ has its two intersection endpoints on these facets. Thus $h_P(x)=h_{F^+}(x)$ when $x_1\geq0$, and $h_P(x)=h_{F^-}(x)$ when $x_1<0$. When $x_1\geq0$, $\mathcal T$ evaluates at $x$, so subtracting $\mathcal T(h_{F^+}-h_{F^-})$ from $h_P$ leaves $h_{F^-}$. When $x_1<0$, $\mathcal T$ evaluates both facet support functions at $x-x_1e_1$, where they agree because the facets have the same projection. Their difference is therefore zero, again leaving $h_{F^-}$. The reconstruction error is therefore $h_{F^-}\in\LS_{N-2}$, proving the claim for $k=2$.
 
 \paragraph{Step ($k>2$).}
-Assume the claim for $k-1$, and let $P$ have $k$ facets not parallel to $e_1$. Two of them have the same nonzero sign of $\langle \nu_F, e_1 \rangle$. Their intersection is an $(N-3)$-dimensional face $C$. Let $W:=\operatorname{span}\{p-q:p,q\in C\}$, and project orthogonally within $H_0$ onto $W^\perp$. This is a two-dimensional plane, since $\dim H_0=N-1$ and $\dim W=N-3$. All points of $C$ have the same projection $c$, because their differences lie in $W$. There are just two vertices of $P$ outside $C$, so the projected simplex is a triangle with vertices $c$ and the projections of those two vertices. The chosen facets project to its two sides meeting at $c$.
-
-The chosen facet normals are orthogonal to $W$, so their signs against $e_1$ equal their signs against its projection. This projected direction is nonzero, since the chosen facets are not parallel to $e_1$. If both sides are upper, moving from $c$ opposite to this direction enters the triangle; if both are lower, moving in this direction enters it. Continuing meets the interior of the opposite edge. The inverse image of the line through $c$ in this direction is a hyperplane in $H_0$ containing $C$ and parallel to $e_1$. It cuts the edge whose endpoints are the two vertices outside $C$ at an interior point and divides $P$ into two $(N-1)$-dimensional simplices. Each keeps one of the two chosen facets and replaces the other by the new facet parallel to $e_1$. Its other facets retain their normal directions, so each new simplex has exactly $k-1$ facets not parallel to $e_1$.
+Assume the claim for $k-1$. Choose two facets $F_j,F_l$ with the same
+nonzero sign against $e_1$, and let $\beta_j,\beta_l$ be their barycentric
+coordinates: $F_i=\{\beta_i=0\}$ in $P$.
+The constant directional derivatives $b_j:=\beta_j(x+e_1)-\beta_j(x)$ and
+$b_l:=\beta_l(x+e_1)-\beta_l(x)$ have the same nonzero sign, opposite to
+that of the outward normals.
+The hyperplane $b_l\beta_j-b_j\beta_l=0$ contains the common ridge and
+is parallel to $e_1$. It meets the edge between the two opposite vertices
+at $\beta_j=b_j/(b_j+b_l)\in(0,1)$, cutting $P$ into two simplices.
+Each replaces one chosen facet by a facet parallel to $e_1$; all other
+facet normals retain their directions. Both new simplices therefore have
+$k-1$ facets not parallel to $e_1$.
 
 Write $E(Q)$ for the reconstruction error on the left of~\Cref{eq:simplex-reconstruction}. Let $P_+$ and $P_-$ be the two new simplices, let $R:=P_+\cap P_-$ be their common cutting facet, and write $F_1,F_2$ for the chosen facets and $R_F:=R\cap F$ for every other facet of $P$. With $s_F:=\operatorname{sgn}\langle\nu_F,e_1\rangle$, applying~\Cref{eq:support-cut} to $P$ and to every split facet gives the exact residual identity
 \begin{align}\label{eq:ridge-cut-residual}
@@ -1468,33 +1464,40 @@ Indeed, the inherited facets retain their signs, while the two copies of $R$ are
 \end{ProofOf}
 
 \paragraph{Conclusion for $f$.}
-Apply~\Cref{eq:simplex-reconstruction} to every simplex support-function term in the expansion of $f$, keeping its original coefficient. A facet $F$ parallel to $e_1$ has $\langle\nu_F,e_1\rangle=0$, so its term in the reconstruction formula is zero and can be omitted. For each remaining occurrence of a facet, choose $\nu_F$ outward from its simplex and put
-\begin{align}\label{eq:normalized-facet-normal}
-u_F:=\frac{\nu_F}{\langle\nu_F,e_1\rangle},\qquad \langle u_F,e_1\rangle=1.
-\end{align}
-Thus the coordinate with index $1$ is normalized to $1$; the coordinate with index $0$ remains zero because $u_F\in H_0$. Oppositely oriented parallel normals give the same $u_F$. Only the normal is rescaled: the support function and its coefficient are unchanged.
-
-Let $\mathcal U$ be the finite set of vectors $u_F$ obtained this way. For each $u\in\mathcal U$, define $G_u$ by adding all facet support-function terms with $u_F=u$, retaining their signs and weights. An occurrence of $F$ as a facet of $K_{\pi,S,\omega}$ contributes $(-1)^{N+|S|}\operatorname{sgn}\langle\nu_F,e_1\rangle\,h_F/N!$, while an occurrence as a facet of $\Delta$ contributes $-\operatorname{sgn}\langle\nu_F,e_1\rangle\,h_F$. These are precisely the terms with the same normalized normal, including all repetitions.
-
-More explicitly, define $\rho$ to be the sum of the linear apex terms and the weighted subdivision errors in~\Cref{eq:kuhn-support-error}. Then
+List the simplex terms obtained from \Cref{eq:kuhn-support-error},
+including $\Delta$ with coefficient $-1$, as $(a_j,P_j)$. Keeping every
+occurrence and its original coefficient gives
 \begin{align}\label{eq:simplex-support-expansion}
-f=\frac1{N!}\sum_\pi\sum_{\varnothing\ne S\subseteq\{1,\ldots,N-2\}}(-1)^{N+|S|}\sum_\omega h_{K_{\pi,S,\omega}}-h_\Delta+\rho,
-\qquad \rho\in\LS_{N-2}.
+ f=\sum_j a_j h_{P_j}+\rho,\qquad \rho\in\LS_{N-2}.
 \end{align}
-For a simplex $P$, collect its facets with normalized normal $u$ as
+For each facet $F$ not parallel to $e_1$, normalize its outward normal by
+\begin{align}\label{eq:normalized-facet-normal}
+ u_F:=\frac{\nu_F}{\langle\nu_F,e_1\rangle},\qquad
+ \langle u_F,e_1\rangle=1.
+\end{align}
+Oppositely oriented parallel normals give the same $u_F$; the sign of
+$\langle\nu_F,e_1\rangle$ is retained in the coefficient.
+Let $\mathcal U$ be the finite set of these normalized normals, and put
 \begin{align}\label{eq:single-facet-group}
-B_u(P):=\sum_{\substack{F\text{ facet of }P\\\langle\nu_F,e_1\rangle\ne0,\ u_F=u}}\operatorname{sgn}\langle\nu_F,e_1\rangle h_F.
+ B_u(P):=\sum_{\substack{F\text{ facet of }P\\
+ \langle\nu_F,e_1\rangle\ne0,\ u_F=u}}
+ \operatorname{sgn}\langle\nu_F,e_1\rangle h_F,
+ \qquad G_u:=\sum_j a_j B_u(P_j).
 \end{align}
-An empty sum is zero. If $\langle\nu_F,e_1\rangle>0$, the direction $u_F$ exposes $F$; if it is negative, $-u_F$ exposes $F$. The opposite face is a single vertex, so~\Cref{eq:simplex-isolate-facet} gives the signed facet term up to a linear function. If neither $u$ nor $-u$ exposes a facet of $P$, both exposed faces have dimension at most $N-3$. Thus $D_uh_P-B_u(P)\in\LS_{N-3}$. Applying this to the full weighted expansion, with the same permutations and nonempty cut sets as in~\Cref{eq:signed-word-sum}, gives
+For a simplex $P$, if $u$ or $-u$ exposes a facet,
+\Cref{eq:simplex-isolate-facet} gives $D_uh_P-B_u(P)\in\LS_0$;
+otherwise both exposed faces have dimension at most $N-3$.
+Together with $D_u\rho\in\LS_{N-3}$ this gives
 \begin{align}\label{eq:facet-group-bound}
-\begin{aligned}
-D_uf-G_u&=\sum_{\pi,S\ne\varnothing}\frac{(-1)^{N+|S|}}{N!}\sum_\omega\left(D_uh_{K_{\pi,S,\omega}}-B_u(K_{\pi,S,\omega})\right)\\
-&\quad-\left(D_uh_\Delta-B_u(\Delta)\right)+D_u\rho\in\LS_{N-3}
-\qquad(u\in\mathcal U).
-\end{aligned}
+ D_uf-G_u=\sum_j a_j\bigl(D_uh_{P_j}-B_u(P_j)\bigr)+D_u\rho
+ \in\LS_{N-3}\qquad(u\in\mathcal U).
 \end{align}
-Together with~\Cref{eq:facet-reduction}, relation~\Cref{eq:facet-group-bound} puts every $G_u$ in $\LS_{N-3}$. By linearity, the sum of the reconstructed facet terms is $\mathcal T(\sum_{u\in\mathcal U}G_u)$, which lies in $\LS_{N-2}$ by~\Cref{eq:sweep-dimension}. Its difference from $f$ consists of the reconstruction and subdivision remainders, also in $\LS_{N-2}$. Hence $f\in\LS_{N-2}$.
-This proves the implication used in \Cref{stp:reconstruction}.
+By \Cref{eq:facet-reduction}, each $G_u\in\LS_{N-3}$, and therefore
+$\mathcal T(\sum_{u\in\mathcal U}G_u)\in\LS_{N-2}$ by
+\Cref{eq:sweep-dimension}. Summing \Cref{eq:simplex-reconstruction} with
+the same coefficients shows that $f$ differs from this function by an
+element of $\LS_{N-2}$. Thus $f\in\LS_{N-2}$, proving the implication
+used in \Cref{stp:reconstruction}.
 
 
 \subsection{Coordinate deletion}\label{app:coordinate-deletion}
@@ -1565,6 +1568,8 @@ The Boolean alternating identity gives
 \sum_{a\in J}T_{\{a\}}=T_\varnothing+
 \sum_{\substack{A\subseteq J\\|A|\geq2}}(-1)^{|A|}T_A.
 \end{align}
+Indeed, if some $d_a\geq0$, toggling $a$ in $A$ pairs equal terms with
+opposite signs; if every $d_a<0$, all terms vanish.
 The empty term is a sum of support functions of segments. For $|A|\geq2$, the polytope with support function $T_A$ has one head direction and $q-|A|$ segment directions, hence dimension at most $1+q-|A|\leq q-1=N-3$. Thus the singleton sum lies in $\LS_{N-3}$; the sum of the linear apex coordinates lies in $\LS_0$. Each fixed-position exchange is a bijection on lower label orders, so
 \begin{align}\label{eq:root-star-average}
  q\sum_{\bar\pi}C_{\bar\pi,\varnothing}
@@ -2454,6 +2459,12 @@ The formalized vocabulary-dimension proof uses a third mixed difference;
 \Cref{app:quotient-lower} gives a shorter proof using the same germ as
 the count argument.
 
+The finite elimination in \Cref{clm:residual-reduction} also replaces
+induction on residual dimension in the formalization. The
+\href{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/f9f57af7cdd36cc9b9a1fb1faea52facecf2e336/MaxNN/Constructions/Paramid/Geom/Faces/Annihilate.lean}{relative face lemma}
+proves membership in the relative face span without an additional linear
+remainder; the previous statement follows by inclusion.
+
 The keyword \texttt{noncomputable} allows classical definitions of real
 quantities. The theorem is an exact representation statement; it does not
 by itself assert an efficient algorithm for extracting numerical weights.
@@ -2479,6 +2490,11 @@ and a fresh verification run. In particular, the rational evaluation system, the
 sharpened count bounds, and the source-orientation and face-closure, matching-number, and
 arbitrary-star extensions are mathematical arguments
 in this paper, not claims checked by the historical certificate.
+A separate
+\href{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/f9f57af7cdd36cc9b9a1fb1faea52facecf2e336/research/sN/simplify/LowerBoundStatements.lean}{exact-statement audit}
+checks the simplified lower-bound declarations, dictionary sufficiency,
+the class identity, and finite face elimination with the same permitted
+axioms.
 The mathematical arguments are provided in the main text and
 \Crefrange{app:dictionary}{app:lower}; the formalization is an
 additional certificate of the formal statements.

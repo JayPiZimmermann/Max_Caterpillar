@@ -504,9 +504,7 @@
   "errorPeeling": {
     "file": "MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean",
     "name": "exists_peel_rel",
-    "equations": [
-      "eq:error-peeling"
-    ]
+    "equations": []
   },
   "simplexVertexRemoval": {
     "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean",
@@ -532,16 +530,12 @@
   "simplexInductionUse": {
     "file": "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean",
     "name": "hS_mem_of_subset_simplexVerts",
-    "equations": [
-      "eq:simplex-induction-use"
-    ]
+    "equations": []
   },
   "residualInvariant": {
     "file": "MaxNN/Constructions/Paramid/Geom/Faces.lean",
     "name": "mem_GSpanRel_sup_of_lt_finrank",
-    "equations": [
-      "eq:residual-invariant"
-    ]
+    "equations": []
   },
   "supportCut": {
     "file": "MaxNN/Constructions/Paramid/Geom/Sweep/Support.lean",
@@ -1144,6 +1138,13 @@
     "source_url": "https://arxiv.org/pdf/2610.28587v1#page=31",
     "equations": [
       "eq:bsy-combinatorial"
+    ]
+  },
+  "paper_finite_face_elimination": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/f9f57af7cdd36cc9b9a1fb1faea52facecf2e336/research/sN/simplify/dictionary_shape_review.md",
+    "equations": [
+      "eq:face-annihilation"
     ]
   }
 }
