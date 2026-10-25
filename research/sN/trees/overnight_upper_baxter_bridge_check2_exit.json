@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_baxter_bridge_check.py"
+  ],
+  "started_utc": "2026-10-25T04:47:57.707427+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_baxter_bridge_check2.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 26.161241740999685,
+  "finished_utc": "2026-10-25T04:48:23.868668+00:00"
+}

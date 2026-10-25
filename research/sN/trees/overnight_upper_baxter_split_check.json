@@ -1,0 +1,58 @@
+{
+  "status": "INDEPENDENT_INVERSE_MATRIX_SPLIT_GATES_PASSED",
+  "results": [
+    {
+      "label": 0,
+      "status": "IDENTITY_REPLAYED"
+    },
+    {
+      "label": 1,
+      "status": "EXACT_GAP_REPLAYED",
+      "ranks": [
+        80,
+        81
+      ],
+      "kernels": 32
+    },
+    {
+      "label": 2,
+      "status": "EXACT_GAP_REPLAYED",
+      "ranks": [
+        80,
+        81
+      ],
+      "kernels": 32
+    },
+    {
+      "label": 3,
+      "status": "EXACT_GAP_REPLAYED",
+      "ranks": [
+        44,
+        45
+      ],
+      "kernels": 16
+    },
+    {
+      "label": 3,
+      "status": "EXACT_GAP_REPLAYED",
+      "ranks": [
+        58,
+        59
+      ],
+      "kernels": 26
+    }
+  ],
+  "inputs": [
+    {
+      "path": "overnight_upper_baxter_vertex_split.json",
+      "sha256": "0d6c7102ecda1b413c971037fad9622ab5428d97e703bc317d494a2fc4c53ac7"
+    },
+    {
+      "path": "overnight_upper_baxter_vertex_completion.json",
+      "sha256": "a6c27d446e4e9ad37d9a1a51a3289980c3ac751ef13241a3d895dbe92d1bd910"
+    }
+  ],
+  "checker_sha256": "15c37e69131a35063afec05bbd8a81a99bb252625bcb246500b846675654b27a",
+  "seconds": 0.7272655519991531,
+  "scope": "Recomputes every sampled entry with inverse coordinates, proves every rational null relation, and checks null-vector independence. The general max-substitution Fourier law is the mathematical bridge."
+}

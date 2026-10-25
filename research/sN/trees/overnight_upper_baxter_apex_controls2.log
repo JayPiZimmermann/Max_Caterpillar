@@ -1,0 +1,8 @@
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3)), 'head': (-2, 2, 0, 0), 'facets': 12, 'forest_atoms': 3, 'exact_rational_points': 3} SECONDS 0.12480166699970141
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3)), 'head': (-4, 4, 0, 0), 'facets': 12, 'forest_atoms': 5, 'exact_rational_points': 3} SECONDS 0.2513679960029549
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3)), 'head': (-3, 0, 0, 3), 'facets': 12, 'forest_atoms': 3, 'exact_rational_points': 3} SECONDS 0.3459789440021268
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3)), 'head': (2, -1, -1, 0), 'facets': 12, 'forest_atoms': 3, 'exact_rational_points': 3} SECONDS 0.43977083999925526
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)), 'head': (-2, 2, 0, 0), 'facets': 14, 'forest_atoms': 3, 'exact_rational_points': 3} SECONDS 1.1823985830051242
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)), 'head': (-4, 4, 0, 0), 'facets': 14, 'forest_atoms': 8, 'exact_rational_points': 3} SECONDS 1.7487168420047965
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)), 'head': (-3, 0, 0, 3), 'facets': 14, 'forest_atoms': 0, 'exact_rational_points': 3} SECONDS 2.3113535580050666
+DIRECT POLYTOPE CONTROL {'graph': ((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)), 'head': (2, -1, -1, 0), 'facets': 14, 'forest_atoms': 4, 'exact_rational_points': 3} SECONDS 2.8768017850015895

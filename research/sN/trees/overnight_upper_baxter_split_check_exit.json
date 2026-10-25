@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_baxter_split_check.py"
+  ],
+  "started_utc": "2026-10-25T04:46:47.507918+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_baxter_split_check.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.8163819449982839,
+  "finished_utc": "2026-10-25T04:46:48.324300+00:00"
+}

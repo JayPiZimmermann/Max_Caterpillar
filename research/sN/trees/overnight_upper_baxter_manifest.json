@@ -1,0 +1,451 @@
+{
+  "status": "FROZEN_SPARSE_CYCLIC_BRIDGES_AND_LOCAL_RULE_GATES",
+  "files": [
+    {
+      "path": "research/sN/best5/overnight_fixed_cross_net9_18.json",
+      "bytes": 2866,
+      "sha256": "bc06b1f5244170bb27c8819598f79602629f4162451aff31001db9d9f2b48a26"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_actual_support.json",
+      "bytes": 4399,
+      "sha256": "4eadc4f29d1858e51fe045c2391121903d2160bd7e4a02f46a18f209bb9e379b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_actual_support.log",
+      "bytes": 1931,
+      "sha256": "93eec1d61a56087f30d70690129de4d8b31af91097cf6df155b9a552cfbd18a0"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_actual_support.md",
+      "bytes": 1090,
+      "sha256": "f56291c91cbf15d7f5f89b10c327a08893f683e8d00b15a993e3500842b5bcd3"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_actual_support.py",
+      "bytes": 3456,
+      "sha256": "862891120a6a2e9d76d60f97a11ec33f9e872cd2289ba422fbe8001bbcd3b492"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_actual_support_exit.json",
+      "bytes": 451,
+      "sha256": "84eed84894a0647dde25f1c61a1b943bec121b18f3195fd603a05c1bf55bc4a2"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_controls.json",
+      "bytes": 4009,
+      "sha256": "071facec6d27ba5221f15fa282ef7ea3845e141373a75b7b8a2b816ccc6a8e83"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_controls.log",
+      "bytes": 1147,
+      "sha256": "b09965545e35daa1114121ad97bd60f4c9fc1bf8f746658fad7bbf97dfed461f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_controls.py",
+      "bytes": 2372,
+      "sha256": "43bfd74bbeb313c09859c6375839922cac34bc82cf13bbc225f1761a28e26780"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_controls2.log",
+      "bytes": 1532,
+      "sha256": "0a949fddcbeacf3c8d4f6450b2c8336e84805bbe116a8a7db50cf5c32aad44b6"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_controls2_exit.json",
+      "bytes": 463,
+      "sha256": "6cd1d13602c3d6fcc6114f8e0ce576dd0cbed11f10d881f0edf206ac80dee458"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_controls_exit.json",
+      "bytes": 464,
+      "sha256": "2681901019aee3d0d6a8513f6454f94fdf581d300a38df44425c9f78c868aebe"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_geometry.md",
+      "bytes": 6048,
+      "sha256": "3ea72d74921c26d97d78207392eef5b275d2d7ee3da8a6757deff20b55a4bf79"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_geometry.py",
+      "bytes": 7510,
+      "sha256": "885e2e0ac2e1a1e83ed4d8afeac843571c132477474071623addf8af0e718178"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_probe.json",
+      "bytes": 21116,
+      "sha256": "e056719aeffe9619b15660114aa04d2339b59109cc341493a46f2d0aeaab0d68"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_probe.log",
+      "bytes": 108,
+      "sha256": "eb617c1379a200fa0f10bd7e2cb0f24748afa262b7e47314fbf1751b26f14cbc"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_probe.py",
+      "bytes": 5295,
+      "sha256": "e21cb861c927f0be918be2113be9386d51fc34ecad4584f4f47ea2d15f5b870e"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_apex_probe_exit.json",
+      "bytes": 458,
+      "sha256": "37e085cbe65881541727cc2d9756642873669681bee8d76394346a4d869ee038"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_bridge_check.json",
+      "bytes": 1169,
+      "sha256": "aa365dfab893d130d5e13093ca8159d105c1d9bb77d113ebbc21c3690b10bdb6"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_bridge_check.log",
+      "bytes": 198,
+      "sha256": "c0b6f076f84f2d44ab1b3d92769028677ccf9b5c136781a6070942f2b1ff6e65"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_bridge_check.py",
+      "bytes": 5622,
+      "sha256": "9717e108f87904ccd2d5b04cd9361621bbfcbb0ffd2f723aea0ffb01bc756dc1"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_bridge_check2.log",
+      "bytes": 198,
+      "sha256": "68b7013e60ec5ff61b3dabf2297b10f16837763305050eff2d8e792595e29de9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_bridge_check2_exit.json",
+      "bytes": 463,
+      "sha256": "07bb4eeb02110a339cdc7472fef76f59070b990d21fe8ad0f4bcaf7f9f7c0309"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_bridge_check_exit.json",
+      "bytes": 462,
+      "sha256": "ffd20a936c89c17e3f416cc6c9f7e93c6603670e50f1445c5f7d2e0bb86ff994"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_bridges.md",
+      "bytes": 7082,
+      "sha256": "a664ba16f5a8a1ec43d770f555c1851a3aa58ff8b41e0bf0254875304793aec3"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_forest_states.json",
+      "bytes": 2505,
+      "sha256": "64e9e768752098e013f9c90067b2548d5593d57b238e85a0cec56587692559d4"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_forest_states.log",
+      "bytes": 137,
+      "sha256": "94bfd46bd7ac61ba6c81e0c2b527478ad0b197b6c0e1803d0d8c135b037a51a3"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_forest_states.py",
+      "bytes": 5593,
+      "sha256": "cf69f46f1edc05efb3a12c5a3fa803f522017ef109b310336a30e53437ee14ea"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_forest_states_exit.json",
+      "bytes": 463,
+      "sha256": "f382475809a573ababada5a3b1486a3adc86dac07d0eb89343db0bbd45cc6326"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_locality.json",
+      "bytes": 3835,
+      "sha256": "b92e1e8d655a49985aa5f20b2979baa907a2e5406e26b210176ff69715a8a794"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_locality.log",
+      "bytes": 1245,
+      "sha256": "069f4fa89d38f351b11900549315f0463d8d2ae11ea953bef90d21e20bba2cc8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_locality.md",
+      "bytes": 3420,
+      "sha256": "e4e02192edc14deee7796ab575b7d63dc49fe4e1db0d32f07fdc4771e012e307"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_locality.py",
+      "bytes": 3511,
+      "sha256": "59e08f7c7c74899408445cdba69b88f92ef86fe2a6017c64a1af82c1beafa0b4"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_locality2.log",
+      "bytes": 72,
+      "sha256": "5eaea10aebf3e11395da7ea6bae8ad4c86bc0a5f555210959b6106e72539877b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_locality2_exit.json",
+      "bytes": 423,
+      "sha256": "b134a96db03f326b06b8833e21d8069004dd6ec7514418dfc05628fe7f3b7197"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_locality_exit.json",
+      "bytes": 421,
+      "sha256": "d5134737c87a972c3d3072edcd54fdcbc917d637e046dddaee4f6deafc4e9f13"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_manifest.py",
+      "bytes": 2546,
+      "sha256": "5a0680c1a0f34599e58890f1d46c24d09d4fe34a4da3c500b7203ac6434c9651"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_max5_control.json",
+      "bytes": 17674,
+      "sha256": "92c260b8b2891c06591330be2b02830682dbc65c5d6bbdfed95200e3e2c32d7b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_max5_control.log",
+      "bytes": 560,
+      "sha256": "bca8e98636cdb91f11967276563af31ce939303bb78d03725ed66a9da2e234f4"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_max5_control.py",
+      "bytes": 7996,
+      "sha256": "6164bd0cb7c37a8cf752434dbb2ca0a0eff28b98e2ac158638169a7787c2fe1d"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_max5_control2.log",
+      "bytes": 122,
+      "sha256": "3c202b0bdf65a46b5d48e9f5f189bc86ff36c80dc44db0e17d24c319d5f80d25"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_max5_control2_exit.json",
+      "bytes": 463,
+      "sha256": "83c28e1dcf68670f658797d4bc7be7a953d3dfc5f1834966480e8cfe9b779046"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_max5_control_exit.json",
+      "bytes": 462,
+      "sha256": "0610d9c4fdb46e397f805806e2aec86c05a89432517c46dd45c408311c444448"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding.json",
+      "bytes": 467429,
+      "sha256": "e5d07e91412094229b925527d0692968dcd987f5836659b03b464a2d78c0a4fd"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding.log",
+      "bytes": 408,
+      "sha256": "8e653d104ad027f7d77fcd8ece8dccdc4e9cc7785c309c38db06906d776dc809"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding.py",
+      "bytes": 5274,
+      "sha256": "e5eb94ac8412b9b23857dbb21732adfe49d5193e147e3c0aca946f36a28cf2bc"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding2.log",
+      "bytes": 132,
+      "sha256": "f6ed0a9ae1919d2a987be9ba02b4fbee941f57fa7dfd91272d5e4def3151ff11"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding2_exit.json",
+      "bytes": 465,
+      "sha256": "479b5264e93d054100e419456520d606d224f79f3f327baa7d665aab9b4b3b2a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding3.log",
+      "bytes": 132,
+      "sha256": "d36770e0805be9960cb04d306d02426387dc74aa46a80c3352fc934559b43278"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding3_exit.json",
+      "bytes": 465,
+      "sha256": "ea1beb08363a0839fc71b09e120a332ce11bc73df2783c25e6d51d0f53a4db32"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding4.log",
+      "bytes": 132,
+      "sha256": "0f9a7018e4fb73b87647d69bcbf67a2960c141eb80064ebf3ac892224b336604"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding4_exit.json",
+      "bytes": 465,
+      "sha256": "c4eb6b5e4161d6207fd6fe7743173258f4e8ef814ceb998071c67f3faf5734b6"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_nc7_embedding_exit.json",
+      "bytes": 431,
+      "sha256": "87b3cc805eb172d0029bdaae40c788fc274666ece635bb342b3ad9dafd1c57ed"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_pole_search.json",
+      "bytes": 647,
+      "sha256": "74ecb94e00eda389658659a4df3ffb7735a6e5240c07330dd425e6e95369498a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_pole_search.log",
+      "bytes": 167,
+      "sha256": "9997528a9cbb4e1a1e303fa3cf9c5eba0f942c434005b541d1ecec22c9ca8c76"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_pole_search.py",
+      "bytes": 4480,
+      "sha256": "a17ca54e33e87e672e2519bb38de8038bada3d50d64c975631b56979f9f7f507"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_pole_search_exit.json",
+      "bytes": 460,
+      "sha256": "772348df89b7e822fcfb548f1e93af0f098eccfa1976cb40fc9ce4436bac8c95"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_split_check.json",
+      "bytes": 1368,
+      "sha256": "6583ee8bfaf7959ffd112cc5f1231f1e7c5438a944093ccad77038e3eefd9bd6"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_split_check.log",
+      "bytes": 73,
+      "sha256": "8b3b8f87c36d3653d51a7c56af8ea046e924383f6c6c6eb088e31c54603362b1"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_split_check.py",
+      "bytes": 3743,
+      "sha256": "15c37e69131a35063afec05bbd8a81a99bb252625bcb246500b846675654b27a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_split_check_exit.json",
+      "bytes": 460,
+      "sha256": "02d1177c6e6c5ae02786617cb7b4b3c3dd2bc9a3497abee79a6ff28a4829776c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_swap_head.json",
+      "bytes": 105237,
+      "sha256": "b7b016c6f32f97bd1d2e96f1a7c17279d572efec6ec21101bc430f5d8c2b996a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_swap_head.log",
+      "bytes": 84,
+      "sha256": "222fa61804c7ee9cad2fb61a53e49d15812eb48e72b0952c1d2d38485cdf574a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_swap_head.py",
+      "bytes": 3490,
+      "sha256": "d5cf4dd98d38329bb686b52d05e177071ad2bcbbef743cba349d2d9c6a1ae9f9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_swap_head_exit.json",
+      "bytes": 456,
+      "sha256": "7d314aa78752447e156f79a81d58f88acfa9b1a9377e4ed1202f95e131b7a5e9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union.json",
+      "bytes": 61373,
+      "sha256": "e694a415faef37e847cc66a78959ac3834ca6f9514be61c6c947f8119d85c306"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union.log",
+      "bytes": 124,
+      "sha256": "289b2c3f0c9c86e91729641808c237c5401e901d86fc0199f39d43bd19574afc"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union.py",
+      "bytes": 6023,
+      "sha256": "84e4de4c7fc27d4b229a0b10155d83d5458b0feaac20c022b4901fcdbdf78b48"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union_exact.json",
+      "bytes": 24222,
+      "sha256": "accca2c99001e68d6dc8ea2a2c9372ed8154ebcb01c511f754fa02b1230c2df1"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union_exact.log",
+      "bytes": 2156,
+      "sha256": "3485d80e50d8689e5813e7cf8cc01b7e740db779ceb3e44f3fbc6fd2cc0351ad"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union_exact.py",
+      "bytes": 3245,
+      "sha256": "d5866cf7472a56f47566a265a0dafbb6f8bb114060aa702012753b2d0d3f6476"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union_exact_exit.json",
+      "bytes": 460,
+      "sha256": "d9b4cb7a6a9c615881a56e08baa2a68ca9a45b36bcad0b53a4d5492e2dfd8ebd"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_union_exit.json",
+      "bytes": 449,
+      "sha256": "f7b8dbc50c45fb9af0c34889a9b10039195b443ea67c3acb0ad2c513df7fcc89"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_completion.json",
+      "bytes": 33115,
+      "sha256": "a6c27d446e4e9ad37d9a1a51a3289980c3ac751ef13241a3d895dbe92d1bd910"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_completion.log",
+      "bytes": 81,
+      "sha256": "0f69a73ba86ac4874fb48d6bca3a2ac07f16331f2ad7dc55f1de4944ab07414f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_completion.py",
+      "bytes": 3893,
+      "sha256": "3df794ccdc3072a326524e5ca9d900fa27f72357d210d8cfc6d48fdec28e7223"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_completion_exit.json",
+      "bytes": 472,
+      "sha256": "19adfd111793d4234411b66a1f1787c4496f8158d3ecca942ff740f3d274298e"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_split.json",
+      "bytes": 149461,
+      "sha256": "0d6c7102ecda1b413c971037fad9622ab5428d97e703bc317d494a2fc4c53ac7"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_split.log",
+      "bytes": 447,
+      "sha256": "03161551f6bb4669d9f3d40944865bab1167561720c15f39cd867f8f4f29a08f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_split.py",
+      "bytes": 5269,
+      "sha256": "7030cb3b333a65506d642605e0bab00473110614b32ed77d828c37edfd665656"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_vertex_split_exit.json",
+      "bytes": 461,
+      "sha256": "6cf1f69d08d139720627f7d9a2b38f9e5b2f331e6a9bc646317f312639c5ba11"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_root_incidence.json",
+      "bytes": 201156,
+      "sha256": "df74c4eb446a81d6d96c87619ab7b2e1a2308e5f6734d5ee49f0ecd537ed1733"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_root_incidence.log",
+      "bytes": 83,
+      "sha256": "bddceed5438f3955ba6fe14cd2ca8260cfd38b712677599a9a49dfdee58bc4ae"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_root_incidence.md",
+      "bytes": 3095,
+      "sha256": "44e4641999b59ab14a7a8b27637c2cf04f26bea0e2f172197654bd4ae4b899db"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_root_incidence.py",
+      "bytes": 6592,
+      "sha256": "8a6b9b16dbeaebf8ccd2e4c46f53ca1ff58978107c1e0c0359aeabf9a10c569f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_root_incidence_exit.json",
+      "bytes": 452,
+      "sha256": "6563beaa45a9873e256aaa57f800c9b04c97d5a2c1cb97a97257d518af8266fa"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_root_transfer_manifest.json",
+      "bytes": 4249,
+      "sha256": "083e6b618bd0adf4b5112ec312a2f59aa7ce7e171959c713ea6a1ce82d2940b1"
+    }
+  ],
+  "bytes": 1234233,
+  "base_manifest": "research/sN/trees/overnight_upper_root_transfer_manifest.json",
+  "positive_replay": [
+    "research/sN/trees/overnight_upper_baxter_bridge_check.py"
+  ],
+  "negative_replay": [
+    "research/sN/trees/overnight_upper_baxter_split_check.py"
+  ],
+  "compactness": "No raw matrices or full NC7 search inventory. The compact NC7 receipt contains every supported unit/coefficient and is a complete replay seed.",
+  "historical_failures": "Initial apex-controls, locality, max5 conversion and NC7 embedding attempts have failed log/exit records; the later successful receipts and independent replays carry the claims.",
+  "scope": "Uniform scalar identities, graphic tiling/count lemmas and an opaque-offset no-go; exact finite N5/N7 positive top-class bridges and local-rule exclusions. No exponential all-N construction and no new Lean claim."
+}

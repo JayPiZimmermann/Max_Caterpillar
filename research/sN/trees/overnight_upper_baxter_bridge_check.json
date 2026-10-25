@@ -1,0 +1,33 @@
+{
+  "status": "INDEPENDENT_EXACT_BAXTER_POSITIVE_BRIDGES_PASSED",
+  "scalar_formal_sign_cases": [
+    [
+      "negative",
+      false
+    ],
+    [
+      "length_two",
+      false
+    ],
+    [
+      "negative",
+      true
+    ],
+    [
+      "length_two",
+      true
+    ]
+  ],
+  "max5_forest_atoms": 59,
+  "max5_principal_parts": 74,
+  "nc7_direct": 6878,
+  "nc7_reflected": 31,
+  "nc7_used_graphs": 113,
+  "nc7_principal_parts": 5248,
+  "max5_receipt_sha256": "92c260b8b2891c06591330be2b02830682dbc65c5d6bbdfed95200e3e2c32d7b",
+  "nc7_receipt_sha256": "e5d07e91412094229b925527d0692968dcd987f5836659b03b464a2d78c0a4fd",
+  "checker_sha256": "9717e108f87904ccd2d5b04cd9361621bbfcbb0ffd2f723aea0ffb01bc756dc1",
+  "seconds": 26.00458934400376,
+  "independence": "Coordinate-matrix inversion replaces all graph-cut Fourier formulas; iterative BST insertion replaces recursive BST splitting. Shared exact rational identity engine is an audited principal-part algorithm.",
+  "scope": "The scalar conversions are whole-function identities. The graphic forests and reflected NC7 embeddings certify top-class identities; lower-dimensional network corrections remain separate."
+}

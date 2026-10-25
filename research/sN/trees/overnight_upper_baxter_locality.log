@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_baxter_locality.py", line 74, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_baxter_locality.py", line 49, in main
+    pairs=[(bst(w),bst(w[::-1])) for w in words]
+            ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_baxter_locality.py", line 15, in bst
+    return tuple(sorted(bst(left)+bst(right)+((r,left[0]),)*bool(left)+((r,right[0]),)*bool(right)))
+                        ^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_baxter_locality.py", line 15, in bst
+    return tuple(sorted(bst(left)+bst(right)+((r,left[0]),)*bool(left)+((r,right[0]),)*bool(right)))
+                                  ^^^^^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_baxter_locality.py", line 15, in bst
+    return tuple(sorted(bst(left)+bst(right)+((r,left[0]),)*bool(left)+((r,right[0]),)*bool(right)))
+                                                 ~~~~^^^
+IndexError: tuple index out of range

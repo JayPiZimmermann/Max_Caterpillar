@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETED_BOUNDED_BAXTER_POLE_ORDER_SEARCH",
+  "records": [
+    {
+      "extra_poles_at_most": 1,
+      "columns": 132,
+      "ranks": [
+        115,
+        116
+      ],
+      "status": "FILTERED_MODULAR_GAP"
+    },
+    {
+      "extra_poles_at_most": 2,
+      "columns": 855,
+      "ranks": [
+        749,
+        750
+      ],
+      "status": "FILTERED_MODULAR_GAP"
+    }
+  ],
+  "producer_sha256": "a17ca54e33e87e672e2519bb38de8038bada3d50d64c975631b56979f9f7f507",
+  "scope": "Search filters within one unchanged complete five-state family; a negative stage is not a complete-family exclusion.",
+  "seconds": 11.760823630000232
+}

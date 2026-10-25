@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_baxter_max5_control.py", line 164, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_baxter_max5_control.py", line 138, in main
+    residual[target_key]-=target_c
+    ~~~~~~~~^^^^^^^^^^^^
+KeyError: ((0, 0, 0, 0, 1), 0, (((0, 0, 0, 1, 0), 1), ((0, 0, 1, 0, 0), 1), ((0, 1, 0, 0, 0), 1), ((1, 0, 0, 0, 0), 1), ((1, 1, 1, 1, 0), 1)))

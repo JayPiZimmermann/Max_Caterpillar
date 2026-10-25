@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "research/sN/trees/overnight_upper_baxter_locality.py"
+  ],
+  "started_utc": "2026-10-25T04:01:37.941981+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_baxter_locality.log",
+  "returncode": 1,
+  "timed_out": false,
+  "elapsed_seconds": 0.11528830499446485,
+  "finished_utc": "2026-10-25T04:01:38.057286+00:00"
+}
