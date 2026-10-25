@@ -1,0 +1,25 @@
+{
+  "status": "INDEPENDENT_EXACT_ROOT_SLIDE_REPAIR_REFUTATION",
+  "oriented_tree": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "sum_repair_head_exchange_defect": 3,
+  "average_repair_head_exchange_defect": "-2/3",
+  "scope": "Every state in each slide orbit is the same whole function. The single-head kernel sum is zero by the uniform head-exchange identity. Nonzero repaired score sums therefore refute both assignments on the full two-component kernel algebra.",
+  "seconds": 0.007002051999734249
+}

@@ -1,0 +1,11 @@
+compiled 96 1484 194880 2.8753885159967467
+evaluated 320 rows; 96 columns; 194880 distinct monomials
+rank [40, 40, 0]
+rank [80, 80, 0]
+rank [120, 120, 0]
+rank [160, 130, 1]
+rank [200, 130, 1]
+rank [240, 130, 1]
+rank [280, 130, 1]
+rank [320, 130, 1]
+DONE True 5.02539540399448

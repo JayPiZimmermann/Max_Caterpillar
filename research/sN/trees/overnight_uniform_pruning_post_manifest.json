@@ -1,0 +1,237 @@
+{
+  "status": "FROZEN_POST_PRUNING_RESEARCH_CHECKPOINT",
+  "scope": "Uniform algebraic identities, exact refutations, and explicitly labelled finite diagnostics. No unrestricted exponential lower bound or Lean claim.",
+  "files": [
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_biforest.cpp",
+      "bytes": 2045,
+      "sha256": "f8688f9106ef7a8f1a653162d3dc8c1c152f082779655d0856e5ea0feb3aef46"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_biforest.json",
+      "bytes": 78794,
+      "sha256": "df2d4eb0fe0db2697094b97126243326cfbd3e13893ddb64a79821549c48c916"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_biforest.log",
+      "bytes": 276,
+      "sha256": "74018792b9e1a1d4e99f89c4573fc4a87fd518f332915ab5ef62066f66e38298"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_biforest.py",
+      "bytes": 3901,
+      "sha256": "8a1eb7028030a8383cf4a0a0eaab2199678ccaf8ae1718d69b24e0615e5ae249"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_biforest_check.json",
+      "bytes": 4464,
+      "sha256": "f16b22757b0b12e2946b7abbdc832c2be811f8a78f48634a9c9aa1de79d2632c"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_biforest_check.log",
+      "bytes": 68,
+      "sha256": "d056a1bc49ff1eaf160c01f60fc59564efdf8574e934ec84155a274371091ad0"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_biforest_check.py",
+      "bytes": 2070,
+      "sha256": "58f42a86b83f2dab1d6b3e19f6509f3d87370b1e640c4968f0df94f6406b4491"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_candidate_target.json",
+      "bytes": 1922,
+      "sha256": "7da996b12e68dc13dea7c9395fc35ba235e2ef74fd1b3e9dc83f6ca04d18b76f"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_candidate_target.log",
+      "bytes": 1250,
+      "sha256": "5d9a9431182ef215afc99621ddd6d45449e4d3771e1712b0966cbd37465c1145"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_candidate_target.md",
+      "bytes": 4040,
+      "sha256": "1a2cc5ff49207500ebbea040f261f3952daebabf412a18d033244d683365d5fc"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_candidate_target.py",
+      "bytes": 3701,
+      "sha256": "c096a3ab461e209e3c40ca802b288516bf0f07a4e594113b52366710ec41eed2"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_current_no_go.md",
+      "bytes": 4535,
+      "sha256": "5339ebc9b114b5298cc64afc0d91a2ade8fabfec2bfc48a21ac757045ffe3678"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_current_relation_check.json",
+      "bytes": 3393,
+      "sha256": "787143e2720d55c0d41df9cc5fe143fad2decddc183eb8ce61194c6b4107ce8e"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_current_relation_check.log",
+      "bytes": 3393,
+      "sha256": "787143e2720d55c0d41df9cc5fe143fad2decddc183eb8ce61194c6b4107ce8e"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_current_relation_check.py",
+      "bytes": 3782,
+      "sha256": "f94a3646798c392e5a8d53af190ab0c8c65e14b22bb6dfaa382807136eabfe53"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current.json",
+      "bytes": 10687,
+      "sha256": "966bdd2b90a33eff541f2d54810a557fd1869e2a3cae2e557102d7923ca9ac90"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current.log",
+      "bytes": 68,
+      "sha256": "a1d02c779e6eee4a68ab3a22e3743edfccce1b854c7fe447e8eaa560f0ff4267"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current.md",
+      "bytes": 5573,
+      "sha256": "e8b77f6137cf0d55816f877509233d2746ade69d89f9261026082ad607de6d9d"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current.py",
+      "bytes": 4202,
+      "sha256": "a547614460566c518381d9d2e12552700d3b5b8e08bafcd099547c0c54e9be8e"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_check.json",
+      "bytes": 1372,
+      "sha256": "dcf1cdb1981921f9a304c09853f15828564ac45b2ede5dc7be05b26c0b847e6c"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_check.log",
+      "bytes": 1372,
+      "sha256": "dcf1cdb1981921f9a304c09853f15828564ac45b2ede5dc7be05b26c0b847e6c"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_check.py",
+      "bytes": 2144,
+      "sha256": "b876a3a1bb609d6ff82383cabd4d9ebc00990580a06f601f9160d67fe1c64392"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_repair.json",
+      "bytes": 2934,
+      "sha256": "7d3865799298a19018f01e7adb98f25301a5e685d1c20467bf5b5d6cfa026b69"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_repair.log",
+      "bytes": 840,
+      "sha256": "5c007caefdc29cd606d78eb754d47139eb051b9de90aa6188218011899fb60af"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_repair.py",
+      "bytes": 4450,
+      "sha256": "bd64f5a040dba244a8ea0ad78b36b13a57a3de09559d6722ad4c5df6fd25c125"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_repair_check.json",
+      "bytes": 4459,
+      "sha256": "cd317bfef221fa2bbeb498caa37e2707127d984e30f84dac769ab4713765fe19"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_repair_check.log",
+      "bytes": 586,
+      "sha256": "7c1d4482f3ade89a0bb210e79dccd9deecc62533ad59de2f0b33f44ce5bd7e26"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_repair_check.py",
+      "bytes": 3151,
+      "sha256": "486874c034926bacbb28cc6e24ba8866e8345a228d503c4f738deb26a615ed55"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_space.json",
+      "bytes": 7430,
+      "sha256": "2c7255e1a31746e9c612080f3c6d850263041ae7da5cf23c73893ece61f78067"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_space.log",
+      "bytes": 7430,
+      "sha256": "2c7255e1a31746e9c612080f3c6d850263041ae7da5cf23c73893ece61f78067"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_edge_current_space.py",
+      "bytes": 7435,
+      "sha256": "9413cdc1acedd876232403dc6908ab1f712b7a8ca41486be4797bcecdd12c436"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_generator_gate.json",
+      "bytes": 80666,
+      "sha256": "5dbb30de3f1100d9dcefa12256d5f1552b039bf2bb57133911a8021f763cc2cf"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_generator_gate.log",
+      "bytes": 307,
+      "sha256": "6186e045cad819350dcfb08fd0ca574eb5d3edad293a1e36bea7e054fbac521d"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_generator_gate.py",
+      "bytes": 4818,
+      "sha256": "d57d22b6923edaaf3503cb2f594ec071e4004bdb8567ec33ea5a7a02c0875a26"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_generator_gate_rows.json",
+      "bytes": 41941,
+      "sha256": "9780073fcf206548d3fc325feb7df82a1282ec16ec78d56ffd965f7f268b9dfa"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_marked_algebra.md",
+      "bytes": 9470,
+      "sha256": "0f114c7f47330a118e3d0e5e509a3c3906fa9d99b3d6c538dc08926f3d23ddd2"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_scalar_relative_obstruction.md",
+      "bytes": 4866,
+      "sha256": "097a0d6cfd368ee7947cf8b15fc84aabb6e7438992ad2642696ae34ad337f395"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_shuffle_check.json",
+      "bytes": 593,
+      "sha256": "48aa94fb1b63cfc9094d8d8d84ebd3b53ce149977dd352ac5de4c3c2352dfeaf"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_shuffle_check.log",
+      "bytes": 593,
+      "sha256": "48aa94fb1b63cfc9094d8d8d84ebd3b53ce149977dd352ac5de4c3c2352dfeaf"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_shuffle_check.py",
+      "bytes": 1565,
+      "sha256": "a91b6e238a7e861897205ec0666b4fa9ba51e7daf45d617cce143e2c85ad6a52"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_shuffle_product.md",
+      "bytes": 4927,
+      "sha256": "2de8beb1a3360c8897544956c3c2b0bf381762752be07e2b51f7b3008a44e67e"
+    },
+    {
+      "path": "research/sN/trees/overnight_uniform_pruning_FROZEN2.txt",
+      "bytes": 2665,
+      "sha256": "c005ad7131074690b34c53f3975d0c09a7ce890faa29a061ed09e95f49d5ad50"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_head_current.py",
+      "bytes": 7009,
+      "sha256": "5dc707232abbc55e9b790784e0ddfe2ab7a11dd9bfd9e0ecd0b827c75f9cae12"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_head_current.json",
+      "bytes": 1843,
+      "sha256": "418224b226f03e0c9a063ababd4042e741d97dd16c8dbd6b7baa586cf7e14ec4"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_head_current.log",
+      "bytes": 1359,
+      "sha256": "03f4427dc3bda2dc299dfe9382967940ae67d6ce3fde6da0f12b398d377dd9c3"
+    },
+    {
+      "path": "research/sN/trees/overnight_root_current_refutations_fresh.json",
+      "bytes": 12286,
+      "sha256": "b1db49963e61f53b09d9785244ad3245eff0858f531c18d99266074eeaa4c6ac"
+    }
+  ],
+  "fresh_replay": "research/sN/trees/overnight_root_current_refutations_fresh.json"
+}

@@ -1,0 +1,6 @@
+{'arity': 3, 'descriptions': 1, 'nonzero_scores': 1, 'signed_sum': '-675/4', 'necessary_target_response': '-225/8', 'positive_part': '0', 'negative_part': '-675/4', 'elapsed_seconds': 0.00013975900219520554}
+{'arity': 5, 'descriptions': 7, 'nonzero_scores': 3, 'signed_sum': '120', 'necessary_target_response': '1', 'positive_part': '120', 'negative_part': '0', 'elapsed_seconds': 0.000987717998214066}
+{'arity': 7, 'descriptions': 31, 'nonzero_scores': 8, 'signed_sum': '180', 'necessary_target_response': '1/28', 'positive_part': '1110', 'negative_part': '-930', 'elapsed_seconds': 0.0038406290041166358}
+{'arity': 9, 'descriptions': 127, 'nonzero_scores': 16, 'signed_sum': '120', 'necessary_target_response': '1/3024', 'positive_part': '8100', 'negative_part': '-7980', 'elapsed_seconds': 0.011529308998433407}
+{'arity': 11, 'descriptions': 511, 'nonzero_scores': 32, 'signed_sum': '-3120', 'necessary_target_response': '-13/166320', 'positive_part': '58200', 'negative_part': '-61320', 'elapsed_seconds': 0.04425608000019565}
+{'arity': 13, 'descriptions': 2047, 'nonzero_scores': 64, 'signed_sum': '-40320', 'necessary_target_response': '-1/154440', 'positive_part': '423360', 'negative_part': '-463680', 'elapsed_seconds': 0.15427597900270484}

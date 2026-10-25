@@ -1,0 +1,469 @@
+{
+  "status": "EXACT_N5_ARBITRARY_CURRENT_SPACE_GATE",
+  "cases": 48,
+  "incompatible_cases": 14,
+  "first_failure": {
+    "oriented_tree": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "J": [
+      0,
+      0,
+      0,
+      -1,
+      1
+    ],
+    "compatible": false,
+    "rank": 2,
+    "contradiction": {
+      "zero_sum": "1",
+      "head (0, 3)": "1",
+      "head (4, 0)": "1"
+    },
+    "pairing": "-2",
+    "rows": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "rhs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -4
+    ],
+    "labels": [
+      "zero_sum",
+      "automorphism (0, 1, 2, 3, 4) vertex 0",
+      "automorphism (0, 1, 2, 3, 4) vertex 1",
+      "automorphism (0, 1, 2, 3, 4) vertex 2",
+      "automorphism (0, 1, 2, 3, 4) vertex 3",
+      "automorphism (0, 1, 2, 3, 4) vertex 4",
+      "head (1, 2)",
+      "head (0, 3)",
+      "head (4, 0)"
+    ]
+  },
+  "architecture": {
+    "constraints": 122,
+    "rank": 21,
+    "target_forced_zero": false,
+    "signed_caterpillar_vector": [
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "exact_grid_intersection": {
+      "dimension": 2,
+      "target_responses": [
+        "0",
+        "0"
+      ],
+      "scope": "No nonzero response here closes the current architecture only after the load-bearing grid relations are proved as all-frequency identities."
+    },
+    "prior_proved_relation_alone_forces_zero": false,
+    "load_bearing_grid_relations": [
+      {
+        "0": "-1/2",
+        "1": "-1",
+        "3": "3/2",
+        "17": "1"
+      }
+    ],
+    "conditional_contradiction_combination": [
+      {
+        "weight": "1",
+        "reason": "deficient 17",
+        "row": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "1",
+        "reason": "deficient 18",
+        "row": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "1",
+        "reason": "deficient 23",
+        "row": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "3",
+        "reason": "equal function (2, 1)",
+        "row": [
+          "0",
+          "-1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "1",
+        "reason": "equal function (10, 0)",
+        "row": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "-1",
+        "reason": "equal function (11, 1)",
+        "row": [
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "4",
+        "reason": "current on [(1, 0), (1, 2), (0, 3), (0, 4)]",
+        "row": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "-4",
+        "reason": "current on [(1, 0), (2, 1), (0, 3), (0, 4)]",
+        "row": [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "weight": "-2",
+        "reason": "grid_relation 0",
+        "row": [
+          "-1/2",
+          "-1",
+          "0",
+          "3/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ]
+  },
+  "scope": "The first-failure test concerns the particular certified N5 score. The architecture test instead permits every score obeying deficient vanishing, whole-function head slides, and arbitrary alternating current vectors; target_forced_zero excludes all such current-based separators at N5 using the proved signed caterpillar identity.",
+  "seconds": 4.404188958003942
+}

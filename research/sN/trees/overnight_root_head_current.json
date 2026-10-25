@@ -1,0 +1,87 @@
+{
+  "status": "EXACT_HEAD_CURRENT_COMBINATORIAL_CONTROLS_AND_DESCENT_REFUTATION_PASS",
+  "labelled_trees": 128,
+  "oriented_trees": 2012,
+  "deficient_head_checks": 1280,
+  "targets": [
+    {
+      "arity": 3,
+      "signed_caterpillar_sum": -1,
+      "necessary_full_orbit_response": "-1/6",
+      "nonzero_descriptions": 1
+    },
+    {
+      "arity": 5,
+      "signed_caterpillar_sum": 1,
+      "necessary_full_orbit_response": "1/120",
+      "nonzero_descriptions": 2
+    },
+    {
+      "arity": 7,
+      "signed_caterpillar_sum": -1,
+      "necessary_full_orbit_response": "-1/5040",
+      "nonzero_descriptions": 3
+    },
+    {
+      "arity": 9,
+      "signed_caterpillar_sum": 1,
+      "necessary_full_orbit_response": "1/362880",
+      "nonzero_descriptions": 8
+    },
+    {
+      "arity": 11,
+      "signed_caterpillar_sum": -1,
+      "necessary_full_orbit_response": "-1/39916800",
+      "nonzero_descriptions": 15
+    },
+    {
+      "arity": 13,
+      "signed_caterpillar_sum": 1,
+      "necessary_full_orbit_response": "1/6227020800",
+      "nonzero_descriptions": 32
+    }
+  ],
+  "seconds": 1.4482051619997947,
+  "source_sha256": "5dc707232abbc55e9b790784e0ddfe2ab7a11dd9bfd9e0ecd0b827c75f9cae12",
+  "exact_counterexample": {
+    "first_edges": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "second_edges": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "root": 1,
+    "relabel": [
+      0,
+      2,
+      1,
+      4,
+      3
+    ],
+    "first_score": -1,
+    "second_score": 0
+  },
+  "scope": "Head exchange and matching vanishing pass. Exact root-slide equality refutes rational-kernel descent. Target responses are only formal necessary values of the refuted score."
+}

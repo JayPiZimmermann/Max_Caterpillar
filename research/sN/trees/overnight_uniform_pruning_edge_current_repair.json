@@ -1,0 +1,180 @@
+{
+  "status": "ROOT_SLIDE_REPAIRED_CURRENT_GATE",
+  "N5": {
+    "sum": {
+      "score_compatible": false,
+      "rank": 12,
+      "relation": {
+        "0": "-1/2",
+        "1": "-1",
+        "3": "3/2",
+        "17": "1"
+      },
+      "pairing": "5",
+      "values": [
+        "-4",
+        "-3",
+        "-3",
+        "0",
+        "-4",
+        "-5",
+        "0",
+        "0",
+        "1",
+        "0",
+        "-4",
+        "-3",
+        "-1",
+        "-2",
+        "-4",
+        "-5",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "average": {
+      "score_compatible": false,
+      "rank": 12,
+      "relation": {
+        "0": "-1/2",
+        "1": "-1",
+        "3": "3/2",
+        "17": "1"
+      },
+      "pairing": "3/2",
+      "values": [
+        "-1",
+        "-1",
+        "-1",
+        "0",
+        "-2",
+        "-5/2",
+        "0",
+        "0",
+        "1",
+        "0",
+        "-1",
+        "-1",
+        "-1",
+        "-2",
+        "-2",
+        "-5/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "head_exchange": {
+    "oriented_augmented_trees_tested": 48,
+    "first_failures": {
+      "sum": {
+        "oriented_tree": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "head_scores": [
+          [
+            "4",
+            3
+          ],
+          [
+            "-2",
+            1
+          ],
+          [
+            "4",
+            4
+          ],
+          [
+            "-3",
+            3
+          ]
+        ],
+        "head_sum": "3"
+      },
+      "average": {
+        "oriented_tree": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "head_scores": [
+          [
+            "4",
+            3
+          ],
+          [
+            "-2",
+            1
+          ],
+          [
+            "4",
+            4
+          ],
+          [
+            "-3",
+            3
+          ]
+        ],
+        "head_sum": "-2/3"
+      }
+    }
+  },
+  "N7": {
+    "sum": {
+      "status": "MODULAR_ONLY",
+      "score_compatible": false,
+      "target_response_if_compatible": 9623
+    },
+    "average": {
+      "status": "MODULAR_ONLY",
+      "score_compatible": false,
+      "target_response_if_compatible": 617649
+    }
+  },
+  "seconds": 0.4509268260007957,
+  "scope": "Any nonzero head-exchange sum is an exact analytic refutation, independently of Fourier rows. Canonical matrix gates retain their exact-grid/modular status."
+}

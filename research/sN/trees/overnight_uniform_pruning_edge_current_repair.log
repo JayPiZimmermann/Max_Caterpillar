@@ -1,0 +1,6 @@
+N5 sum {'score_compatible': False, 'rank': 12, 'relation': {'0': '-1/2', '1': '-1', '3': '3/2', '17': '1'}, 'pairing': '5'}
+N5 average {'score_compatible': False, 'rank': 12, 'relation': {'0': '-1/2', '1': '-1', '3': '3/2', '17': '1'}, 'pairing': '3/2'}
+head exchange {'oriented_augmented_trees_tested': 48, 'first_failures': {'sum': {'oriented_tree': [(1, 0), (1, 2), (0, 3), (3, 4)], 'head_scores': [['4', 3], ['-2', 1], ['4', 4], ['-3', 3]], 'head_sum': '3'}, 'average': {'oriented_tree': [(1, 0), (1, 2), (0, 3), (3, 4)], 'head_scores': [['4', 3], ['-2', 1], ['4', 4], ['-3', 3]], 'head_sum': '-2/3'}}}
+N7 sum {'status': 'MODULAR_ONLY', 'score_compatible': False, 'target_response_if_compatible': 9623}
+N7 average {'status': 'MODULAR_ONLY', 'score_compatible': False, 'target_response_if_compatible': 617649}
+seconds 0.4509268260007957

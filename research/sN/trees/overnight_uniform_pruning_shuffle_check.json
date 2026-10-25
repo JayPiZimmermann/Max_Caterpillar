@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_VANDERMONDE_OPERATION_CONTROLS_PASS",
+  "chamber_constants": {
+    "2": "1/2",
+    "4": "3/16"
+  },
+  "polarization_points": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "mixed_coefficient": "-2",
+  "scope": "The cone-integral argument proves the single-count identity uniformly. The four-variable example rules out a generic constant-coefficient extraction of two independent Vandermonde projections from a diagonal product, not every operation on the special tree kernels.",
+  "seconds": 0.038766475998272654
+}

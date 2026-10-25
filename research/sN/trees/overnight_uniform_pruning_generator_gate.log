@@ -1,0 +1,7 @@
+exact rows complete 0.09059190600237343
+eps -1 PASS finite source relation gate
+eps 1 PASS finite source relation gate
+mixed positives 1 PASS finite source relation gate
+mixed positives 2 PASS finite source relation gate
+mixed positives 3 PASS finite source relation gate
+rank 16 seconds 0.4849912920035422

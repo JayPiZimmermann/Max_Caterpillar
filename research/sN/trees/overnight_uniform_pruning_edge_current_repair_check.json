@@ -1,0 +1,306 @@
+{
+  "status": "INDEPENDENT_EXACT_ROOT_SLIDE_REPAIR_REFUTATION",
+  "oriented_tree": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "head_states": [
+    {
+      "head": [
+        1,
+        0
+      ],
+      "slide_states": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              3
+            ]
+          ]
+        ]
+      ],
+      "scores": [
+        2,
+        0,
+        2
+      ],
+      "sum": 4,
+      "count": 3
+    },
+    {
+      "head": [
+        1,
+        2
+      ],
+      "slide_states": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ]
+      ],
+      "scores": [
+        -2
+      ],
+      "sum": -2,
+      "count": 1
+    },
+    {
+      "head": [
+        0,
+        3
+      ],
+      "slide_states": [
+        [
+          [
+            0,
+            3
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              4,
+              3
+            ]
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              4,
+              3
+            ]
+          ]
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "sum": 4,
+      "count": 4
+    },
+    {
+      "head": [
+        3,
+        4
+      ],
+      "slide_states": [
+        [
+          [
+            0,
+            4
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        ]
+      ],
+      "scores": [
+        -1,
+        0,
+        -2
+      ],
+      "sum": -3,
+      "count": 3
+    }
+  ],
+  "sum_repair_head_exchange_defect": 3,
+  "average_repair_head_exchange_defect": "-2/3",
+  "scope": "Every state in each slide orbit is the same whole function. The single-head kernel sum is zero by the uniform head-exchange identity. Nonzero repaired score sums therefore refute both assignments on the full two-component kernel algebra.",
+  "seconds": 0.007002051999734249
+}
