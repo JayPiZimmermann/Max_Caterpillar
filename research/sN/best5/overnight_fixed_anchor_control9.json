@@ -1,0 +1,15 @@
+{
+  "N": 5,
+  "braid_cones": 120,
+  "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+  "comparison_rows": 7,
+  "coordinate_anchors": [
+    0
+  ],
+  "h1": 9,
+  "h2": 14,
+  "interior_wall_groups": 8,
+  "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+  "seconds": 0.08516757300094469,
+  "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+}

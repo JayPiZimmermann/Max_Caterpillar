@@ -1,0 +1,111 @@
+{
+  "status": "ROOT_FRESH_CYCLE9_WITNESSES_AND_PHYSICAL_VERIFIER_PASS",
+  "manifest_sha256": "b5d918daf07508cea2e5c1821ec45dfebab6563117f08d9c46dfef8922dbc29d",
+  "receipts": [
+    {
+      "command": [
+        "python3",
+        "overnight_fixed_cycle9_witnesses_verify.py"
+      ],
+      "seconds": 0.030983816999651026,
+      "receipt": {
+        "certificate_sha256": "c848fcf271c6b5f3b73cb9adf0dad5d0d81345df2d302c4863528448702646c9",
+        "checker_sha256": "3311f550eb8708e9079173abc1aba4b950216ef7d6c1c59e51b1107ffccbff70",
+        "feature_factorisations": 6,
+        "impossible_first_layers": 26,
+        "scope": "26 orientations fail for every possible second hidden layer. Six admit an explicit continuous factorization; a finite ReLU completion is still not established.",
+        "seconds": 0.0016413890043622814,
+        "status": "INDEPENDENT_EXACT_ALL32_CYCLE9_ORIENTATIONS_PASS"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "overnight_fixed_anchor_verify.py",
+        "netB_10_6.json",
+        "fresh10.json"
+      ],
+      "seconds": 0.07188825799676124,
+      "receipt": {
+        "N": 5,
+        "braid_cones": 120,
+        "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+        "comparison_rows": 8,
+        "coordinate_anchors": [
+          1
+        ],
+        "h1": 10,
+        "h2": 6,
+        "interior_wall_groups": 32,
+        "network_sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+        "seconds": 0.04185776299709687,
+        "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "overnight_fixed_anchor_verify.py",
+        "overnight_fixed_cross_net9_14_simple.json",
+        "fresh9.json"
+      ],
+      "seconds": 0.1379768989936565,
+      "receipt": {
+        "N": 5,
+        "braid_cones": 120,
+        "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+        "comparison_rows": 7,
+        "coordinate_anchors": [
+          0
+        ],
+        "h1": 9,
+        "h2": 14,
+        "interior_wall_groups": 8,
+        "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+        "seconds": 0.1059822079987498,
+        "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "overnight_fixed_anchor_controls.py"
+      ],
+      "seconds": 0.08089738100534305,
+      "receipt": {
+        "exact_reencoding": "\u03c3(x2\u2212x1)\u2212\u03c3(x1\u2212x2)=x2\u2212x1, moved into nonzero coefficients on both anchor pairs",
+        "negative_controls": [
+          {
+            "mutation": "anchor_pair",
+            "reason": "",
+            "rejected": true
+          },
+          {
+            "mutation": "comparison_gradient",
+            "reason": "('UNCANCELLED_INTERIOR_WALL', (0, 2, 3, 1, 4), {(Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(0, 1)): Fraction(1, 1)})",
+            "rejected": true
+          }
+        ],
+        "positive_control": {
+          "N": 5,
+          "braid_cones": 120,
+          "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+          "comparison_rows": 8,
+          "coordinate_anchors": [
+            1,
+            2
+          ],
+          "h1": 12,
+          "h2": 6,
+          "interior_wall_groups": 32,
+          "network_sha256": "8d7bdea8b0cd0de1d582f2c52cf59eb763520c5ea8d7054d9cedb3820984dde4",
+          "seconds": 0.04197316699719522,
+          "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+        },
+        "producer_sha256": "3205b812fff7681b186a6c3d9f048b59bb7765d6058d26bcf3ae5eb270a3c2a4",
+        "status": "INDEPENDENT_MULTI_ANCHOR_CONTROLS_PASS"
+      }
+    }
+  ],
+  "temporary_directory": "/tmp/max_cycle9_root_fresh_0buger4o"
+}

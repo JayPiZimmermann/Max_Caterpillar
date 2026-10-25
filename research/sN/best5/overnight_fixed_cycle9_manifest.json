@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_cross_net9_14_simple.json": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2"
+  },
+  "files": {
+    "overnight_fixed_anchor_control10.json": "4b8cd02670a482d1e55548927a4b4f604e8d3e03bdc2e3cc9940d73a65b91faa",
+    "overnight_fixed_anchor_control10.log": "6d33cd2694fdc6e49bba3090dd78baf96b644e332e4875593fb2b41a8ac8d4c3",
+    "overnight_fixed_anchor_control12_network.json": "8d7bdea8b0cd0de1d582f2c52cf59eb763520c5ea8d7054d9cedb3820984dde4",
+    "overnight_fixed_anchor_control9.json": "ff2743bb2f075a381d73f9eeb0abd3e4ff10697df038cf1ea5e5709ae8fef7f1",
+    "overnight_fixed_anchor_control9.log": "5a9e4f74498a27cd91e4096b4f9501d153de0fbf89aaa83db71cfff225abfa4b",
+    "overnight_fixed_anchor_control_bad_anchor_pair.json": "e97db841ba91bb9394e690142c1324393be279ea51e88e3d1ae8ce579ea9853d",
+    "overnight_fixed_anchor_control_bad_comparison_gradient.json": "958f0b87b350508cc185e37aad2fce6e5d6a987b6164b915ef7fcb62949cb1f3",
+    "overnight_fixed_anchor_controls.json": "86e1b456e055ed0f24c719b7f31c4c3628439cb32a4463e67e7abd8be304c3da",
+    "overnight_fixed_anchor_controls.log": "3498173c643cd8d4b8fb377f982967d1be02c3511a784aaa01e06f581dd6629b",
+    "overnight_fixed_anchor_controls.py": "3205b812fff7681b186a6c3d9f048b59bb7765d6058d26bcf3ae5eb270a3c2a4",
+    "overnight_fixed_anchor_verify.py": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+    "overnight_fixed_cycle9.md": "782824c34afbc969ead181b213babb1363303cd9c00dee798fc6d55260ca88e5",
+    "overnight_fixed_cycle9_orientations.json": "4d5f68968732db713d233c9408db7974501c42b2b3b9c275536e103c4d39db0a",
+    "overnight_fixed_cycle9_orientations.log": "facbe1d92de1e09759b21b3dbbdad4c8d718a3593138a2df706cf8cc939c3aa8",
+    "overnight_fixed_cycle9_orientations.py": "1c2d787441981a9451f254995ebf2dbd6c5106ba6ed4d71a64ebf95e7843ae43",
+    "overnight_fixed_cycle9_witnesses.json": "c848fcf271c6b5f3b73cb9adf0dad5d0d81345df2d302c4863528448702646c9",
+    "overnight_fixed_cycle9_witnesses.log": "482ae7d87ba43cd8b0c6ab282122978512aad2771ae85ba40ec9248edf333fcd",
+    "overnight_fixed_cycle9_witnesses.py": "2548ded2449ebdfbaf91b4458b8125d14273f3c64f9977e9e9da0ac0951f2292",
+    "overnight_fixed_cycle9_witnesses_check.json": "98e6be48a68fb77e2a2a8d3191c5cae09905d80f3091186f5171140e7f9d377b",
+    "overnight_fixed_cycle9_witnesses_verify.log": "ca04e73a92d76e4ab1d8f179ab794107d24c1b818cc05a8196f45d5cefc3e525",
+    "overnight_fixed_cycle9_witnesses_verify.py": "3311f550eb8708e9079173abc1aba4b950216ef7d6c1c59e51b1107ffccbff70"
+  },
+  "scope": "26 impossible orientations; six explicit continuous feature factorizations. No finite ReLU completion or matched second-width construction yet. Global verifier and multi-anchor controls pass.",
+  "status": "FROZEN_CYCLE9_ORIENTATION_AND_GLOBAL_VERIFIER_GATE"
+}
