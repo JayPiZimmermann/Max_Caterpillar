@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "MaxCaterpillar/Frontier/MaxMinSubspace.lean": "a15f183e4ccdf28f8eb70e94f3138af5f60be5a6fec341e7d76f29413a06cdbc",
+    "research/sN/best5/overnight_fixed_unrestricted.md": "43bdb6cf1d5a88928d97e8af3b0ae563a280bb4ee543a27f51b56e3e7250e6b4",
+    "research/sN/frontierN/overnight_general_antipodal.lean": "710673ff92a7edf041066eb1610ce2eec0b59937274fa665db09c84c65b96d1b",
+    "research/sN/frontierN/overnight_general_antipodal.md": "2bfe391ad9b69892899f50608f225a8935b12411d3ba4a44b555261ba3ec8a7c"
+  },
+  "files": {
+    "overnight_fixed_second4_controls.json": "0ab4383c0fe8e4332419ae26cd99e088d2e9eb12e17292264860c898de50d10c",
+    "overnight_fixed_second4_controls.lean": "ebf206bfc7f085f22f6a9054465cc3d9b7b47b89821274d8967ded3eb9b3b1d4",
+    "overnight_fixed_second4_controls.log": "0381e8a7c3c27305bc3bb0b82782831897ee2928a6c039c8050392ca2a05ff1d",
+    "overnight_fixed_second4_equality.md": "b8b0f40c3a605b6fc654c0164742ff94fe6d2fbd9aa7ed05d46f39c6df9cb45b"
+  },
+  "scope": "Independently reviewed15-chart equality geometry and two-core obstruction under explicit fixed signs on winner cones; elementary Lean controls pass. General N5 second-width bound remains4..6.",
+  "status": "FROZEN_UNRESTRICTED_SECOND4_EQUALITY_REDUCTION"
+}

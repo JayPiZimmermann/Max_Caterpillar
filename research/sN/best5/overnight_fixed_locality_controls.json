@@ -1,0 +1,28 @@
+{
+  "checker_sha256": "86d1bbc902cedbbe805d41ffc537ad542598f790168bda1b9c16a11dabb16b67",
+  "controls": [
+    {
+      "boolean_values": 31,
+      "free_units": 4,
+      "generic_ties": 26,
+      "network": "netB_10_6.json",
+      "network_sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432"
+    },
+    {
+      "boolean_values": 31,
+      "free_units": 12,
+      "generic_ties": 26,
+      "network": "overnight_fixed_cross_net9_14_simple.json",
+      "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2"
+    },
+    {
+      "boolean_values": 31,
+      "free_units": 4,
+      "generic_ties": 26,
+      "network": "overnight_fixed_anchor_control12_network.json",
+      "network_sha256": "8d7bdea8b0cd0de1d582f2c52cf59eb763520c5ea8d7054d9cedb3820984dde4"
+    }
+  ],
+  "seconds": 0.018138908002583776,
+  "status": "INDEPENDENT_EXACT_LINEAR_ANCHOR_LOCALITY_CONTROLS_PASS"
+}

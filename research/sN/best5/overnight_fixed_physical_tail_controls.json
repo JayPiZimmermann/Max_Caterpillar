@@ -1,0 +1,71 @@
+{
+  "checker_sha256": "6799ddfcbb636299c698956129efdd05a9f0a969bd60b6955213133d4767b7e0",
+  "controls": [
+    {
+      "network": "netB_10_6.json",
+      "sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+      "tails": [
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": 1
+        },
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": -1
+        }
+      ]
+    },
+    {
+      "network": "overnight_fixed_cross_net9_14_simple.json",
+      "sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+      "tails": [
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": 1
+        },
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": -1
+        }
+      ]
+    },
+    {
+      "network": "overnight_fixed_anchor_control12_network.json",
+      "sha256": "8d7bdea8b0cd0de1d582f2c52cf59eb763520c5ea8d7054d9cedb3820984dde4",
+      "tails": [
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": 1
+        },
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": -1
+        }
+      ]
+    },
+    {
+      "network": "overnight_fixed_physical_nonlinearhead_control.json",
+      "sha256": "6ecc4170c24d1d4924155c73bed5ad7b3fece910d4866d735548f3256b36d4d9",
+      "tails": [
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": 1
+        },
+        {
+          "finite_difference_controls": 34,
+          "generic_ties": 26,
+          "tail": -1
+        }
+      ]
+    }
+  ],
+  "seconds": 0.12593001400091453,
+  "status": "INDEPENDENT_EXACT_PHYSICAL_TAIL_CONTROLS_PASS"
+}

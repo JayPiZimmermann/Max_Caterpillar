@@ -1,0 +1,22 @@
+{
+  "campaign_budget_seconds": 180,
+  "coefficients": "all real, unbounded",
+  "construction": null,
+  "constructive_tail_pattern": "one active carrier at each end; four common zero-slope neurons; two inactive carrier slopes nonpositive",
+  "counterexamples": 15,
+  "orientation": 2,
+  "per_step_budget_seconds": 60,
+  "physical_widths": [
+    9,
+    6
+  ],
+  "positive_outputs": 4,
+  "prescribed_linear_head": false,
+  "producer_sha256": "7f66932abda03a3626a5bbab73845c9073f6a57bf1b4c9df81c50609c931cbd2",
+  "scope": "Necessary physical-network and both translation-tail identities; only a successful independent global720-cone check is a construction. Solver UNSAT is diagnostic pending independent proof.",
+  "seconds": 185.00511925899627,
+  "smt_sha256": "a11d0fe3ffb69a268853adeabbb14badd1941ba26ae01b8badabba2b4fe0a405",
+  "status": "SOLVER_UNKNOWN",
+  "steps": 16,
+  "steps_sha256": "3b38e2133951c794925e640ebccc5e73d8b65cfb6bc4f8233af83ecd5932c5b0"
+}

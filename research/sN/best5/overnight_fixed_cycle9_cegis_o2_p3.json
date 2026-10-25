@@ -1,0 +1,40 @@
+{
+  "campaign_budget_seconds": 180,
+  "comparison_edges": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "construction": null,
+  "exact_counterexamples": 15,
+  "iterations": 16,
+  "max_iterations": 32,
+  "negative_units": 1,
+  "orientation_index": 2,
+  "per_iteration_budget_seconds": 30,
+  "positive_units": 3,
+  "producer_sha256": "7a8a3570db8995efa385cfe9174ec134ba4339f42f3ad38351b2ff93f83815f1",
+  "scope": "Unbounded real four-core C5 synthesis. Every cut is an exact rational input/output counterexample; only a complete independent global check certifies a construction. UNSAT is a solver diagnostic pending an independent proof certificate.",
+  "seconds": 63.65506907999952,
+  "smt_sha256": "055ad414070be319f4f5d42b931a2c4f58645bc19593069d5ba339e34802a5b2",
+  "status": "SOLVER_UNKNOWN",
+  "steps_sha256": "9237e8d68b25b0b7d51fa3861a95e015a9b0f009f943677a72c4f27993cdfce3",
+  "z3_version": "5.3.1"
+}

@@ -1,0 +1,201 @@
+{
+  "status": "ROOT_FRESH_CYCLE9_SYNTHESIS_WITNESSES_PHYSICAL_AND_TAIL_CONTROLS_PASS",
+  "manifest_sha256": "29e67237a3e6b4db3b6d7e95f3145ad1f08eb04ee0f61e493965d591ccd9d1aa",
+  "receipts": {
+    "overnight_fixed_cycle9_counterexamples_verify": {
+      "campaigns": [
+        {
+          "campaign": "overnight_fixed_cycle9_cegis_o2_p3",
+          "exact_counterexamples": 15,
+          "status": "SOLVER_UNKNOWN"
+        },
+        {
+          "campaign": "overnight_fixed_cycle9_cellcegis_o2_p3",
+          "exact_counterexamples": 3,
+          "status": "SOLVER_UNKNOWN"
+        },
+        {
+          "campaign": "overnight_fixed_cycle9_cellcegis_o0_p2",
+          "exact_counterexamples": 0,
+          "status": "UNSAT_GENUINE_NECESSARY_SYSTEM"
+        },
+        {
+          "campaign": "overnight_fixed_cycle9_cellcegis_o0_p3",
+          "exact_counterexamples": 0,
+          "status": "UNSAT_GENUINE_NECESSARY_SYSTEM"
+        },
+        {
+          "campaign": "overnight_fixed_cycle9_cellcegis_o1_p3",
+          "exact_counterexamples": 2,
+          "status": "SOLVER_UNKNOWN"
+        },
+        {
+          "campaign": "overnight_fixed_cycle9_gradcegis_o2_p3",
+          "exact_counterexamples": 0,
+          "status": "SOLVER_UNKNOWN"
+        },
+        {
+          "campaign": "overnight_fixed_cycle9_physical_o2_p4",
+          "exact_counterexamples": 0,
+          "status": "SOLVER_UNKNOWN"
+        },
+        {
+          "campaign": "overnight_fixed_cycle9_physicaltail_o2_p4",
+          "exact_counterexamples": 15,
+          "status": "SOLVER_UNKNOWN"
+        }
+      ],
+      "checker_sha256": "89a008d9004f8a523621919339cf7b6033f8954189e72ba3a710d574412ac79d",
+      "counterexamples": 35,
+      "seconds": 0.018402456000330858,
+      "status": "INDEPENDENT_EXACT_SYNTHESIS_COUNTEREXAMPLES_PASS"
+    },
+    "overnight_fixed_physical_controls": {
+      "checker_sha256": "2ed94c2d8689233838adabbf499eb95dba721c40db8944881ef4f25e84da4956",
+      "negative": [
+        {
+          "failure": "('UNCANCELLED_INTERIOR_WALL', (0, 1, 3, 4, 5, 2), {(Fraction(1, 1), Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1)): Fraction(1, 1)})",
+          "network": "overnight_fixed_anchor_control_bad_anchor_pair.json",
+          "network_sha256": "e97db841ba91bb9394e690142c1324393be279ea51e88e3d1ae8ce579ea9853d"
+        },
+        {
+          "failure": "('UNCANCELLED_INTERIOR_WALL', (0, 2, 3, 1, 4, 5), {(Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(0, 1)): Fraction(1, 1)})",
+          "network": "overnight_fixed_anchor_control_bad_comparison_gradient.json",
+          "network_sha256": "958f0b87b350508cc185e37aad2fce6e5d6a987b6164b915ef7fcb62949cb1f3"
+        }
+      ],
+      "positive": [
+        {
+          "network": "netB_10_6.json",
+          "receipt": {
+            "N": 5,
+            "augmented_braid_cones": 720,
+            "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+            "h1": 10,
+            "h2": 6,
+            "interior_wall_groups": 192,
+            "network_sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+            "seconds": 0.42373620199941797,
+            "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+          }
+        },
+        {
+          "network": "overnight_fixed_cross_net9_14_simple.json",
+          "receipt": {
+            "N": 5,
+            "augmented_braid_cones": 720,
+            "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+            "h1": 9,
+            "h2": 14,
+            "interior_wall_groups": 303,
+            "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+            "seconds": 0.8605756820034003,
+            "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+          }
+        },
+        {
+          "network": "overnight_fixed_anchor_control12_network.json",
+          "receipt": {
+            "N": 5,
+            "augmented_braid_cones": 720,
+            "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+            "h1": 12,
+            "h2": 6,
+            "interior_wall_groups": 192,
+            "network_sha256": "8d7bdea8b0cd0de1d582f2c52cf59eb763520c5ea8d7054d9cedb3820984dde4",
+            "seconds": 0.43918996499996865,
+            "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+          }
+        },
+        {
+          "network": "overnight_fixed_physical_nonlinearhead_control.json",
+          "receipt": {
+            "N": 5,
+            "augmented_braid_cones": 720,
+            "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+            "h1": 10,
+            "h2": 7,
+            "interior_wall_groups": 192,
+            "network_sha256": "6ecc4170c24d1d4924155c73bed5ad7b3fece910d4866d735548f3256b36d4d9",
+            "seconds": 0.45606580800085794,
+            "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+          }
+        }
+      ],
+      "seconds": 2.205440206002095,
+      "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_CONTROLS_PASS"
+    },
+    "overnight_fixed_physical_tail_controls": {
+      "checker_sha256": "6799ddfcbb636299c698956129efdd05a9f0a969bd60b6955213133d4767b7e0",
+      "controls": [
+        {
+          "network": "netB_10_6.json",
+          "sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+          "tails": [
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": 1
+            },
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": -1
+            }
+          ]
+        },
+        {
+          "network": "overnight_fixed_cross_net9_14_simple.json",
+          "sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+          "tails": [
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": 1
+            },
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": -1
+            }
+          ]
+        },
+        {
+          "network": "overnight_fixed_anchor_control12_network.json",
+          "sha256": "8d7bdea8b0cd0de1d582f2c52cf59eb763520c5ea8d7054d9cedb3820984dde4",
+          "tails": [
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": 1
+            },
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": -1
+            }
+          ]
+        },
+        {
+          "network": "overnight_fixed_physical_nonlinearhead_control.json",
+          "sha256": "6ecc4170c24d1d4924155c73bed5ad7b3fece910d4866d735548f3256b36d4d9",
+          "tails": [
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": 1
+            },
+            {
+              "finite_difference_controls": 34,
+              "generic_ties": 26,
+              "tail": -1
+            }
+          ]
+        }
+      ],
+      "seconds": 0.13223888599895872,
+      "status": "INDEPENDENT_EXACT_PHYSICAL_TAIL_CONTROLS_PASS"
+    }
+  },
+  "temporary_directory": "/tmp/max_cycle9_synthesis_root_fresh_uqthgpcx"
+}

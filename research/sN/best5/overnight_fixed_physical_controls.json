@@ -1,0 +1,75 @@
+{
+  "checker_sha256": "2ed94c2d8689233838adabbf499eb95dba721c40db8944881ef4f25e84da4956",
+  "negative": [
+    {
+      "failure": "('UNCANCELLED_INTERIOR_WALL', (0, 1, 3, 4, 5, 2), {(Fraction(1, 1), Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1)): Fraction(1, 1)})",
+      "network": "overnight_fixed_anchor_control_bad_anchor_pair.json",
+      "network_sha256": "e97db841ba91bb9394e690142c1324393be279ea51e88e3d1ae8ce579ea9853d"
+    },
+    {
+      "failure": "('UNCANCELLED_INTERIOR_WALL', (0, 2, 3, 1, 4, 5), {(Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(0, 1)): Fraction(1, 1)})",
+      "network": "overnight_fixed_anchor_control_bad_comparison_gradient.json",
+      "network_sha256": "958f0b87b350508cc185e37aad2fce6e5d6a987b6164b915ef7fcb62949cb1f3"
+    }
+  ],
+  "positive": [
+    {
+      "network": "netB_10_6.json",
+      "receipt": {
+        "N": 5,
+        "augmented_braid_cones": 720,
+        "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+        "h1": 10,
+        "h2": 6,
+        "interior_wall_groups": 192,
+        "network_sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+        "seconds": 0.390902343999187,
+        "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+      }
+    },
+    {
+      "network": "overnight_fixed_cross_net9_14_simple.json",
+      "receipt": {
+        "N": 5,
+        "augmented_braid_cones": 720,
+        "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+        "h1": 9,
+        "h2": 14,
+        "interior_wall_groups": 303,
+        "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+        "seconds": 0.8880686330012395,
+        "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+      }
+    },
+    {
+      "network": "overnight_fixed_anchor_control12_network.json",
+      "receipt": {
+        "N": 5,
+        "augmented_braid_cones": 720,
+        "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+        "h1": 12,
+        "h2": 6,
+        "interior_wall_groups": 192,
+        "network_sha256": "8d7bdea8b0cd0de1d582f2c52cf59eb763520c5ea8d7054d9cedb3820984dde4",
+        "seconds": 0.47437725700001465,
+        "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+      }
+    },
+    {
+      "network": "overnight_fixed_physical_nonlinearhead_control.json",
+      "receipt": {
+        "N": 5,
+        "augmented_braid_cones": 720,
+        "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+        "h1": 10,
+        "h2": 7,
+        "interior_wall_groups": 192,
+        "network_sha256": "6ecc4170c24d1d4924155c73bed5ad7b3fece910d4866d735548f3256b36d4d9",
+        "seconds": 0.513355376002437,
+        "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+      }
+    }
+  ],
+  "seconds": 2.294326268005534,
+  "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_CONTROLS_PASS"
+}

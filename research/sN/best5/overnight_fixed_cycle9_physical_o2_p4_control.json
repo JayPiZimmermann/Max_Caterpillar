@@ -1,0 +1,34 @@
+{
+  "campaign_budget_seconds": 60,
+  "coefficients": "all real, unbounded",
+  "construction": {
+    "network": "overnight_fixed_cycle9_physical_o2_p4_control_candidate_00.json",
+    "receipt": {
+      "N": 5,
+      "augmented_braid_cones": 720,
+      "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+      "h1": 10,
+      "h2": 6,
+      "interior_wall_groups": 192,
+      "network_sha256": "58c76d2e297de1bfbbdf56c1a928b57912010088c32213400aeae21a7b387897",
+      "seconds": 0.4079958930014982,
+      "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+    }
+  },
+  "counterexamples": 0,
+  "orientation": 2,
+  "per_step_budget_seconds": 30,
+  "physical_widths": [
+    10,
+    6
+  ],
+  "positive_outputs": 4,
+  "prescribed_linear_head": false,
+  "producer_sha256": "ffe6b018fbe6d637286da4594b437b96f281f2fcb50b20272c869dbdabb7247d",
+  "scope": "Necessary physical-network and both translation-tail identities; only a successful independent global720-cone check is a construction. Solver UNSAT is diagnostic pending independent proof.",
+  "seconds": 0.9626141260014265,
+  "smt_sha256": "7dc3f2a7c8e1687a518fd5cdb029aba140c956b2e28d96d56936c05107ca5693",
+  "status": "GLOBALLY_CERTIFIED_CONSTRUCTION",
+  "steps": 1,
+  "steps_sha256": "d172b50cfced996e75668f3865e822e0b9c92def03f494ca3297800de36fb4c9"
+}

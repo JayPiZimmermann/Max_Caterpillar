@@ -1,0 +1,43 @@
+{
+  "campaign_budget_seconds": 180,
+  "comparison_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "construction": null,
+  "exact_cells": [],
+  "exact_counterexamples": 0,
+  "iterations": 1,
+  "max_iterations": 32,
+  "negative_units": 2,
+  "nonlinear": false,
+  "orientation_index": 0,
+  "per_iteration_budget_seconds": 30,
+  "positive_units": 2,
+  "producer_sha256": "577669384a0a3181b76605a97f7290459c80232efd57640da5171e5f5c9a1e8e",
+  "scope": "Unbounded real four-core C5 synthesis. Every cut follows an exact counterexample and adds valid whole-cell constraints, with exact collinearity on revisited cells. Only a complete independent global check certifies a construction. UNSAT is a solver diagnostic pending an independent proof certificate.",
+  "seconds": 0.6652234189969022,
+  "selected_cells": [],
+  "smt_sha256": "f267fd536074ed62b9154c9fb9c14f7b0c741466b6ce0312d5af89c185f1b238",
+  "status": "UNSAT_GENUINE_NECESSARY_SYSTEM",
+  "steps_sha256": "642ae26868dd671e67e396ceed934cb6b7b1d9ab4590eec5dc578324d7358892",
+  "z3_version": "5.3.1"
+}

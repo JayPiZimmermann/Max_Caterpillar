@@ -1,0 +1,17 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "command": "lake env lean -j1 research/sN/best5/overnight_fixed_second4_controls.lean",
+  "declarations": [
+    "OvernightSecondFour.no_linear_pair_selector",
+    "OvernightSecondFour.diamond_bound"
+  ],
+  "leaf_sha256": "ebf206bfc7f085f22f6a9054465cc3d9b7b47b89821274d8967ded3eb9b3b1d4",
+  "lean_version": "leanprover/lean4:v4.4.0",
+  "log_sha256": "0381e8a7c3c27305bc3bb0b82782831897ee2928a6c039c8050392ca2a05ff1d",
+  "scope": "The equality classification and fixed-winner-sign K2 obstruction are independently reviewed mathematical proofs; this leaf verifies only their two named elementary inequalities. No new unrestricted width lower bound.",
+  "status": "LEAN_VERIFIED_ELEMENTARY_CONTROLS_ONLY"
+}

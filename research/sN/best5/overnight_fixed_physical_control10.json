@@ -1,0 +1,11 @@
+{
+  "N": 5,
+  "augmented_braid_cones": 720,
+  "checker_sha256": "9d19bd73ec203b3701271d29055a20d3f1476f9c15a86bc3e87c04f80b04ddf9",
+  "h1": 10,
+  "h2": 6,
+  "interior_wall_groups": 192,
+  "network_sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+  "seconds": 0.4728127289999975,
+  "status": "INDEPENDENT_EXACT_FULL_PHYSICAL_NETWORK_PASS"
+}

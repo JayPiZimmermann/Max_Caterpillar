@@ -1,0 +1,2 @@
+'OvernightSecondFour.no_linear_pair_selector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OvernightSecondFour.diamond_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
