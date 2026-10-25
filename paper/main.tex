@@ -234,7 +234,8 @@
 \DeclareSourceEquation{eq:weighted-forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight\_pseudoforest\_matching.md}
 \DeclareSourceEquation{eq:matching-witnesses}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight\_pseudoforest\_matching.md}
 \DeclareSourceEquation{eq:bounded-excess-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/61b26cf955427ab7fbc6919a51623c98fded4740/research/sN/trees/overnight\_bounded\_excess.md}
-\DeclareSourceEquation{eq:weighted-isolates}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/6bd6f73902686fae54968dc339b92fa94fdbbd59/research/sN/trees/overnight\_read\_degree.md}
+\DeclareSourceEquation{eq:bounded-degree-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight\_upper\_connected\_coefficients.md}
+\DeclareSourceEquation{eq:connected-capacity}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight\_upper\_connected\_coefficients.md}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -845,12 +846,11 @@ $b_N=1+N+\binom N2$ and $c_k=1+k/3+\binom k2/9$. Then
 \begin{align}\label{eq:weighted-forest-count}
  |K|\geq\frac{1-b_N2^{-N}}{c_k}\left(\frac43\right)^k.
 \end{align}
-If the maximum degrees are at most $\Delta$, one may take
-$k=\lceil N/(\Delta+1)\rceil$, giving
-$|K|=\Omega_\Delta((4/3)^{N/(\Delta+1)}/N^2)$.
-For arbitrary comparison graphs of maximum degree at most $\Delta\geq1$, put
-$q_\Delta=\Delta^\Delta/(\Delta+1)^{\Delta+1}$. The corresponding bound is
-$\Omega_\Delta((1-q_\Delta)^{-N/(\Delta+1)}/N^{2/(\Delta+1)})$.
+For arbitrary comparison graphs of maximum degree at most $\Delta\geq3$, put
+$y_\Delta=(\Delta-2)^{\Delta-2}/(\Delta-1)^{\Delta-1}$. Then
+\begin{align}\label{eq:bounded-degree-count}
+ |K|=\Omega_\Delta\bigl((1+y_\Delta)^N\bigr).
+\end{align}
 These bounds also hold for the number of distinct comparison graphs used.
 \end{theorem}
 
@@ -923,6 +923,13 @@ subdivided once. More generally, a tree on $n\geq2$ vertices with $L$ leaves
 has a matching of size at least $(n-L+1)/2$, so a fixed positive fraction of
 nonleaf vertices suffices. The enlarged dictionary still spans the maximum
 because it contains the original caterpillar dictionary.
+
+Arbitrary weighted comparison graphs of bounded degree can also be added to
+both original dictionaries, with no restriction on their number of cycles.
+For maximum degree at most three, the enlarged dictionary requires
+$\Omega((7/6)^N/\sqrt N)$ functions. For any fixed $\Delta\geq4$, the bound is
+$\Omega_\Delta((1+y_\Delta)^N)$. These mixture bounds follow from the same
+connected-set count in \Cref{app:count-exponential}.
 
 \paragraph{Stars with arbitrary orientations.}
 All star face functions can also be adjoined, with arbitrary head roots,
@@ -1974,37 +1981,31 @@ most a fraction $(3/4)^k c_k$ of all subsets. Since
 $\Pr(|T|\geq3)=1-b_N2^{-N}$, the union bound proves
 \Cref{eq:weighted-forest-count}.
 
-For the degree bound, fix a maximum matching in any graph of maximum degree
-$\Delta\geq2$. Unmatched vertices are independent. The two endpoints of a
-matched edge cannot have distinct unmatched neighbors, since those four
-vertices would give an augmenting path. Hence each matched edge has at
-most $\Delta-1$ distinct unmatched neighbors: either all attach to one
-endpoint, or both endpoints share a single unmatched neighbor. Every
-nonisolated unmatched vertex attaches to a matched edge, so
-$N-z(G)-2\nu(G)\leq(\Delta-1)\nu(G)$.
-Thus $\nu(G)+z(G)\geq\lceil N/(\Delta+1)\rceil$; degrees zero and one
-are immediate.
-
-For general graphs of bounded degree, put $r=\Delta+1$ and select labels
-independently with probability $1/r$. Let $Z_v$ indicate that $v$ is selected
-and isolated in $G[T]$. Then $\Pr(Z_v=1)\geq q_\Delta$, and each input bit
-affects at most $r$ of these indicators. The product inequality
-$\mathbb E\prod_v f_v\leq\prod_v(\mathbb E f_v^r)^{1/r}$ applies whenever
-each independent input occurs in at most $r$ nonnegative factors.
-To prove it, condition on all but one input, apply H\"older to the incident
-factors, and induct on the remaining inputs. This also gives the usual
-concentration bound for this dependence pattern~\cite{GavinskyEtAl}.
-
-Apply the inequality with $f_v=\exp(-tZ_v)$ to obtain
-$\mathbb E\exp(-t\sum_v Z_v)\leq(1-q_\Delta+q_\Delta e^{-rt})^{N/r}$.
-Since $c(G[T])\leq2$ forces $\sum_v Z_v\leq2$, exponential Markov with
-$t=(\log N)/r$ gives
-\begin{align}\label{eq:weighted-isolates}
- \Pr\bigl(c(G[T])\leq2\bigr)
- \leq N^{2/r}(1-q_\Delta+q_\Delta/N)^{N/r}
- =O_\Delta\bigl(N^{2/r}(1-q_\Delta)^{N/r}\bigr).
+For the degree bound, fix neighbor orders in an arbitrary graph $G$ of
+maximum degree $\Delta\geq3$. A connected vertex set containing a specified
+root has a deterministic breadth-first spanning tree. Encode each child by
+its neighbor slot, omitting the parent slot at nonroot vertices. The root
+has at most $\Delta$ slots and the other vertices at most $d=\Delta-1$.
+Following the slots recovers the original set, so this encoding is injective.
+The planted-tree and root generating series satisfy
+$B=z(1+B)^d$ and $R=z(1+B)^{d+1}=B+B^2$. Lagrange inversion and Stirling give
+\[
+ r_m:=[z^m]R
+ =\frac1m\left(\binom{dm}{m-1}+2\binom{dm}{m-2}\right)
+ =O_\Delta(\alpha^m m^{-3/2}),\qquad \alpha=1/y_\Delta.
+\]
+If $C_m$ counts connected $m$-vertex sets, rooting each set at all its vertices
+gives $C_m\leq Nr_m/m$. The number $P_m$ of sets with at most two induced
+components therefore satisfies
+\begin{align}\label{eq:connected-capacity}
+ P_m\leq C_m+\frac12\sum_{j=1}^{m-1}C_jC_{m-j}
+ =O_\Delta(N^2\alpha^m m^{-5/2}).
 \end{align}
-Now $\Pr(|T|\geq3)\to1$, so the same union bound proves the stated estimate.
+Here the convolution has the same power $m^{-5/2}$ because
+$\sum_{j\geq1}j^{-5/2}$ converges. Take $m$ nearest $N/(1+\alpha)$.
+Then $P_m=O_\Delta(N^{-1/2}\alpha^m)$, while
+$\binom Nm\alpha^{-m}=\Theta_\Delta((1+y_\Delta)^N/\sqrt N)$.
+Since $\binom Nm\leq |K|P_m$, this proves \Cref{eq:bounded-degree-count}.
 Repeating a graph with different heads and weights
 adds no tied sets to its coverage, so these bounds also count distinct graphs.
 \end{Proof}
@@ -2020,6 +2021,17 @@ binomial variable with parameters $k$ and $1/4$. Apply the same union bound.
 The exponential conclusions follow from the binomial lower-tail estimate;
 when $b=o(k)$ its probability is at most
 $\exp[-(\log(4/3)-o(1))k]$.
+
+For mixtures with the original caterpillar and rooted-star face dictionaries,
+their normalized size-$m$ capacity is at most $6^m$. Thus the total number
+$Z$ of functions satisfies
+$\binom Nm\leq Z(6^m+O_\Delta(N^2\alpha^m m^{-5/2}))$.
+For added graphs of degree at most three, use $\alpha=4$ and $m$ nearest
+$N/7$; the $6^m$ term dominates and gives
+$Z=\Omega((7/6)^N/\sqrt N)$.
+For $\Delta\geq4$, we have $\alpha\geq27/4>6$; take $m$ nearest
+$N/(1+\alpha)$, and the connected-set term gives
+$Z=\Omega_\Delta((1+y_\Delta)^N)$ as above.
 
 \paragraph{Arbitrary tree shapes with a source orientation.}
 The block argument also works with a subforest $R$ of the reduced forest:
@@ -2828,11 +2840,6 @@ Hans Freudenthal.
 \newblock Simplizialzerlegungen von beschr\"ankter Flachheit.
 \newblock \emph{Annals of Mathematics}, 43(3):580--582, 1942.
 \newblock \href{https://doi.org/10.2307/1968813}{doi:10.2307/1968813}.
-\bibitem[GLSS15]{GavinskyEtAl}
-Dmitry Gavinsky, Shachar Lovett, Michael Saks, and Srikanth Srinivasan.
-\newblock A tail bound for read-$k$ families of functions.
-\newblock \emph{Random Structures \& Algorithms}, 47(1):99--108, 2015.
-\newblock \href{https://doi.org/10.1002/rsa.20532}{doi:10.1002/rsa.20532}.
 \bibitem[GHL25]{GrilloEtAl}
 Moritz Grillo, Christoph Hertrich, and Georg Loho.
 \newblock Depth-bounds for neural networks via the braid arrangement.
