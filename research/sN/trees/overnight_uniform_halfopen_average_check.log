@@ -1,0 +1,7 @@
+{
+  "status": "INDEPENDENT_ARITHMETIC_PARAMETERIZATION_PASS",
+  "star_average": "-368789/151200",
+  "maximum_average": "1/80",
+  "checker_sha256": "6e579451ecf9bb80bea77e4cb2710086bc7d68708d499b15c1e81755e4b1cfe4",
+  "scope": "Rooted-cut/Gaussian/product-Laurent replay, independent of the averaging producer closed-star/Cramer/single-quotient route. Not independent of the initial unsymmetrized gate."
+}

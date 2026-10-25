@@ -1,0 +1,9 @@
+{
+  "status": "INDEPENDENT_EXACT_HALFOPEN_CONSTANT_REFUTATION",
+  "outward_star_full_orbit_value": "-57047/3360",
+  "maximum_value": "1/16",
+  "surviving_basis_terms": 97,
+  "rank_two_complete_circuit_checked": true,
+  "checker_sha256": "805714667ca03d55c292cdaea54e88caf802b487c48f0ece9d3f39ee4e70b595",
+  "scope": "The selected torsion constant fails already for the outward star. The half-open lift itself respects full circuit relations by the separate cone-valuation proof."
+}

@@ -1,0 +1,171 @@
+{
+  "receipts": {
+    "overnight_uniform_halfopen_average_check": {
+      "checker_sha256": "6e579451ecf9bb80bea77e4cb2710086bc7d68708d499b15c1e81755e4b1cfe4",
+      "maximum_average": "1/80",
+      "scope": "Rooted-cut/Gaussian/product-Laurent replay, independent of the averaging producer closed-star/Cramer/single-quotient route. Not independent of the initial unsymmetrized gate.",
+      "star_average": "-368789/151200",
+      "status": "INDEPENDENT_ARITHMETIC_PARAMETERIZATION_PASS"
+    },
+    "overnight_uniform_halfopen_verify": {
+      "checker_sha256": "805714667ca03d55c292cdaea54e88caf802b487c48f0ece9d3f39ee4e70b595",
+      "maximum_value": "1/16",
+      "outward_star_full_orbit_value": "-57047/3360",
+      "rank_two_complete_circuit_checked": true,
+      "scope": "The selected torsion constant fails already for the outward star. The half-open lift itself respects full circuit relations by the separate cone-valuation proof.",
+      "status": "INDEPENDENT_EXACT_HALFOPEN_CONSTANT_REFUTATION",
+      "surviving_basis_terms": 97
+    },
+    "overnight_uniform_multiplicative": {
+      "lattice_rows": [
+        {
+          "inner_variables": 0,
+          "lattice_points": 5,
+          "mixed_forward_difference_identity": true
+        },
+        {
+          "inner_variables": 1,
+          "lattice_points": 25,
+          "mixed_forward_difference_identity": true
+        },
+        {
+          "inner_variables": 2,
+          "lattice_points": 125,
+          "mixed_forward_difference_identity": true
+        },
+        {
+          "inner_variables": 3,
+          "lattice_points": 625,
+          "mixed_forward_difference_identity": true
+        },
+        {
+          "inner_variables": 4,
+          "lattice_points": 3125,
+          "mixed_forward_difference_identity": true
+        }
+      ],
+      "max2_and_max3_normalizations": true,
+      "multiplicative_six_term_fay_identity": true,
+      "producer_sha256": "5454c96f4c7fab1a50ee1539ad34d719c5e9d6c15e591134c70d992f924c1b66",
+      "scope": "Finite and symbolic controls of the uniform proof in the companion note. No outward-twin separator or exponential lower bound is established.",
+      "seconds": 4.468179388000863,
+      "status": "EXACT_MULTIPLICATIVE_KERNEL_LOCAL_CONTROLS",
+      "uniform_logarithmic_derivative_assembly": true
+    },
+    "overnight_uniform_multiplicative_residue": {
+      "direct_rational_derivative_controls": [
+        5,
+        7,
+        9
+      ],
+      "producer_sha256": "27032fa64d8a66747907773307f33b37ee5d772dec1c06d83b1e6c066ab94154",
+      "rows": [
+        {
+          "arity": 5,
+          "center_mark_residue": "-3/128",
+          "center_other_residue": "-9/256",
+          "full_star_orbit_residue": "-99/32",
+          "maximum_residue": "1/64"
+        },
+        {
+          "arity": 7,
+          "center_mark_residue": "5/1024",
+          "center_other_residue": "1325/27648",
+          "full_star_orbit_residue": "4225/24",
+          "maximum_residue": "1/384"
+        },
+        {
+          "arity": 9,
+          "center_mark_residue": "-35/32768",
+          "center_other_residue": "-21973/131072",
+          "full_star_orbit_residue": "-48494565/1024",
+          "maximum_residue": "1/2048"
+        },
+        {
+          "arity": 11,
+          "center_mark_residue": "63/262144",
+          "center_other_residue": "38679783/32768000",
+          "full_star_orbit_residue": "98693698887/2560",
+          "maximum_residue": "1/10240"
+        },
+        {
+          "arity": 13,
+          "center_mark_residue": "-231/4194304",
+          "center_other_residue": "-87675988367/6115295232",
+          "full_star_orbit_residue": "-1856539702007375/24576",
+          "maximum_residue": "1/49152"
+        },
+        {
+          "arity": 15,
+          "center_mark_residue": "429/33554432",
+          "center_other_residue": "3105159138237/11509170176",
+          "full_star_orbit_residue": "8766970492143617325/28672",
+          "maximum_residue": "1/229376"
+        },
+        {
+          "arity": 17,
+          "center_mark_residue": "-6435/2147483648",
+          "center_other_residue": "-125274791881613/17179869184",
+          "full_star_orbit_residue": "-1199843512973201286815625/524288",
+          "maximum_residue": "1/1048576"
+        },
+        {
+          "arity": 19,
+          "center_mark_residue": "12155/17179869184",
+          "center_other_residue": "271861192234273125467/1014454095446016",
+          "full_star_orbit_residue": "34407822942619372743406034125/1179648",
+          "maximum_residue": "1/4718592"
+        },
+        {
+          "arity": 21,
+          "center_mark_residue": "-46189/274877906944",
+          "center_other_residue": "-22089356029967436691359/1717986918400000",
+          "full_star_orbit_residue": "-6232199305713471243811718261091891/10485760",
+          "maximum_residue": "1/20971520"
+        },
+        {
+          "arity": 23,
+          "center_mark_residue": "88179/2199023255552",
+          "center_other_residue": "2284550065178016837519387/2926899953139712",
+          "full_star_orbit_residue": "26563255577044995281359318913271301875/1441792",
+          "maximum_residue": "1/92274688"
+        },
+        {
+          "arity": 25,
+          "center_mark_residue": "-676039/70368744177664",
+          "center_other_residue": "-8748781037173216981514116538939/149587343098087735296",
+          "full_star_orbit_residue": "-504090602984097128730465286206501813706114375/603979776",
+          "maximum_residue": "1/402653184"
+        }
+      ],
+      "scope": "The uniform nonvanishing proof is in the companion note. This refutes only the declared first logarithmic residue, not the multiplicative deformation or the lower bound.",
+      "status": "EXACT_CONTROLS_FOR_UNIFORM_STAR_RESIDUE_REFUTATION"
+    }
+  },
+  "source_hashes": {
+    "research/sN/trees/dfs_review_fourier.py": "d69c151d3fdf85eb5c9c1c63917f336503d94679b992ae1c94969645a10e39b4",
+    "research/sN/trees/overnight_uniform_halfopen.md": "d9282200eb7402bc3f2644006a56932fdaddb5f5ff385b9e1211eb4060c84e2d",
+    "research/sN/trees/overnight_uniform_halfopen_average.json": "06a616511fb1e190498e878000fc5f77b71841a25b16d6321c4ac6dffc27d922",
+    "research/sN/trees/overnight_uniform_halfopen_average.log": "7205d6424f9ca8bbdae533b88e0a7258aae4732c6e91ccc4f091a712d24f0dff",
+    "research/sN/trees/overnight_uniform_halfopen_average.py": "100c87aa78dab55cb01fa58793cab69ec61a06b9f32b18d0cd56b969c55b5bef",
+    "research/sN/trees/overnight_uniform_halfopen_average_check.json": "4d37599885b3ef93a4ea861308bb98886975a2fe017a680d1cbe32aaffe0198c",
+    "research/sN/trees/overnight_uniform_halfopen_average_check.log": "4d37599885b3ef93a4ea861308bb98886975a2fe017a680d1cbe32aaffe0198c",
+    "research/sN/trees/overnight_uniform_halfopen_average_check.py": "6e579451ecf9bb80bea77e4cb2710086bc7d68708d499b15c1e81755e4b1cfe4",
+    "research/sN/trees/overnight_uniform_halfopen_gate.json": "c26467ca067370097f15405b7e881f6137c9e17ad15ae0d0ad203900a571fa7d",
+    "research/sN/trees/overnight_uniform_halfopen_gate.log": "ea288bf7931898d47d2f5844d180366f1fc1cbccf031a1c9bb232f4c7d1ac887",
+    "research/sN/trees/overnight_uniform_halfopen_gate.py": "e9ef13cca7d480117d69073b7a7264cff9b8e47d463e0b2f31f884e866fba2c6",
+    "research/sN/trees/overnight_uniform_halfopen_verify.json": "ee75e2e5a84f08bfec872aa1b45aea340c1db345ac6e708e38defdab0d92c59c",
+    "research/sN/trees/overnight_uniform_halfopen_verify.log": "ee75e2e5a84f08bfec872aa1b45aea340c1db345ac6e708e38defdab0d92c59c",
+    "research/sN/trees/overnight_uniform_halfopen_verify.py": "805714667ca03d55c292cdaea54e88caf802b487c48f0ece9d3f39ee4e70b595",
+    "research/sN/trees/overnight_uniform_multiplicative.json": "57fea76d96d890f78e3c0b02d718fb21989d6c0a7338cd8daf9557b1fbf76f87",
+    "research/sN/trees/overnight_uniform_multiplicative.log": "57fea76d96d890f78e3c0b02d718fb21989d6c0a7338cd8daf9557b1fbf76f87",
+    "research/sN/trees/overnight_uniform_multiplicative.md": "fa29e4a0c28c87324b5f7fa5fdf60c94f179bc35ab8f54b035b9a4a2200a9b14",
+    "research/sN/trees/overnight_uniform_multiplicative.py": "5454c96f4c7fab1a50ee1539ad34d719c5e9d6c15e591134c70d992f924c1b66",
+    "research/sN/trees/overnight_uniform_multiplicative_residue.json": "0c6d3099548da023ba46ad7c823a1529397fe73568c683cf2c2083fff8528cf8",
+    "research/sN/trees/overnight_uniform_multiplicative_residue.log": "0c6d3099548da023ba46ad7c823a1529397fe73568c683cf2c2083fff8528cf8",
+    "research/sN/trees/overnight_uniform_multiplicative_residue.md": "c40e8001f96bf9e3a7980e5930b839eee4f4b6b8cc0d9caa91097614b143a386",
+    "research/sN/trees/overnight_uniform_multiplicative_residue.py": "27032fa64d8a66747907773307f33b37ee5d772dec1c06d83b1e6c066ab94154"
+  },
+  "status": "HALF_OPEN_AND_FAITHFUL_MULTIPLICATIVE_KERNEL_ROOT_REPLAYS_PASS",
+  "temporary_directory": "/tmp/max_torus_root_fresh_9gi8qoed"
+}

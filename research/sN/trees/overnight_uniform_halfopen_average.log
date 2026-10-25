@@ -1,0 +1,16 @@
+{
+  "status": "EXACT_N5_LABEL_AVERAGED_HALFOPEN_CONSTANT_GATE",
+  "eta_orbit_representative": [
+    0,
+    1,
+    10,
+    100,
+    1000
+  ],
+  "star_full_orbit_average": "-368789/151200",
+  "maximum_average": "1/80",
+  "annihilates_outward_star": false,
+  "seconds": 4.5896929829978035,
+  "producer_sha256": "100c87aa78dab55cb01fa58793cab69ec61a06b9f32b18d0cd56b969c55b5bef",
+  "scope": "Only the scalar constant coefficient at the declared parity torsion curve, with a common boundary vector averaged over labels."
+}

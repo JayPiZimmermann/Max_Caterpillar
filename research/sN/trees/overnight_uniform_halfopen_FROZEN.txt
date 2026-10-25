@@ -1,0 +1,13 @@
+research/sN/trees/overnight_uniform_halfopen.md
+research/sN/trees/overnight_uniform_halfopen_gate.py
+research/sN/trees/overnight_uniform_halfopen_gate.json
+research/sN/trees/overnight_uniform_halfopen_gate.log
+research/sN/trees/overnight_uniform_halfopen_verify.py
+research/sN/trees/overnight_uniform_halfopen_verify.json
+research/sN/trees/overnight_uniform_halfopen_verify.log
+research/sN/trees/overnight_uniform_halfopen_average.py
+research/sN/trees/overnight_uniform_halfopen_average.json
+research/sN/trees/overnight_uniform_halfopen_average.log
+research/sN/trees/overnight_uniform_halfopen_average_check.py
+research/sN/trees/overnight_uniform_halfopen_average_check.json
+research/sN/trees/overnight_uniform_halfopen_average_check.log

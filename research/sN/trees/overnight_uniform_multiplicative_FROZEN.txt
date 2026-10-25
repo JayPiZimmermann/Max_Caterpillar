@@ -1,0 +1,8 @@
+research/sN/trees/overnight_uniform_multiplicative.md
+research/sN/trees/overnight_uniform_multiplicative.py
+research/sN/trees/overnight_uniform_multiplicative.json
+research/sN/trees/overnight_uniform_multiplicative.log
+research/sN/trees/overnight_uniform_multiplicative_residue.md
+research/sN/trees/overnight_uniform_multiplicative_residue.py
+research/sN/trees/overnight_uniform_multiplicative_residue.json
+research/sN/trees/overnight_uniform_multiplicative_residue.log

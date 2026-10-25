@@ -1,0 +1,36 @@
+{
+  "status": "EXACT_MULTIPLICATIVE_KERNEL_LOCAL_CONTROLS",
+  "lattice_rows": [
+    {
+      "inner_variables": 0,
+      "lattice_points": 5,
+      "mixed_forward_difference_identity": true
+    },
+    {
+      "inner_variables": 1,
+      "lattice_points": 25,
+      "mixed_forward_difference_identity": true
+    },
+    {
+      "inner_variables": 2,
+      "lattice_points": 125,
+      "mixed_forward_difference_identity": true
+    },
+    {
+      "inner_variables": 3,
+      "lattice_points": 625,
+      "mixed_forward_difference_identity": true
+    },
+    {
+      "inner_variables": 4,
+      "lattice_points": 3125,
+      "mixed_forward_difference_identity": true
+    }
+  ],
+  "multiplicative_six_term_fay_identity": true,
+  "uniform_logarithmic_derivative_assembly": true,
+  "max2_and_max3_normalizations": true,
+  "seconds": 4.548564538999926,
+  "producer_sha256": "5454c96f4c7fab1a50ee1539ad34d719c5e9d6c15e591134c70d992f924c1b66",
+  "scope": "Finite and symbolic controls of the uniform proof in the companion note. No outward-twin separator or exponential lower bound is established."
+}
