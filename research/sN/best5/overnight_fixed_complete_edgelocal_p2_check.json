@@ -1,0 +1,21 @@
+{
+  "locality_receipt": {
+    "boolean_values": 31,
+    "free_units": 3,
+    "generic_ties": 26,
+    "network": "overnight_fixed_complete_edgelocal_p2_network.json",
+    "network_sha256": "1d9a6767f9f4deeb32911bfd47c760773fe665ab623cf68323f62cc44f052815"
+  },
+  "network_sha256": "1d9a6767f9f4deeb32911bfd47c760773fe665ab623cf68323f62cc44f052815",
+  "network_value": "25/8",
+  "point": [
+    "4",
+    "2",
+    "3",
+    "1",
+    "0"
+  ],
+  "scope": "All31Boolean values and26generic tie identities pass, but the full-domain identity fails. Do not extend this necessary-system-only branch.",
+  "status": "EXACT_LOCALITY_SURVIVOR_WITH_VERIFIED_GLOBAL_COUNTEREXAMPLE",
+  "target_value": "4"
+}

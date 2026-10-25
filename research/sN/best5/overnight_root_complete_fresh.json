@@ -1,0 +1,56 @@
+{
+  "status": "ROOT_FRESH_COMPLETE_MODEL_CONTROLS_AND_DOMAIN_CHECKS_PASS",
+  "manifest_sha256": "dd586da476eb33e96c2a4616efcc5c8c4c56ee75a1932898bf6f8d6d6dd42645",
+  "distinct_global_positive_controls": {
+    "overnight_fixed_complete_braid_control4_network.json": {
+      "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS",
+      "N": 4,
+      "h1": 11,
+      "h2": 3,
+      "coordinate_anchors": [
+        3
+      ],
+      "comparison_rows": 9,
+      "braid_cones": 24,
+      "interior_wall_groups": 0,
+      "seconds": 0.0027137349970871583,
+      "network_sha256": "7426777b5a948aacaf6a7fdd0167718c2b6b3000b8f0f6e8955ecfa8c461d02f",
+      "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e"
+    },
+    "overnight_fixed_complete_decide_control10_network.json": {
+      "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS",
+      "N": 5,
+      "h1": 16,
+      "h2": 6,
+      "coordinate_anchors": [
+        4
+      ],
+      "comparison_rows": 14,
+      "braid_cones": 120,
+      "interior_wall_groups": 32,
+      "seconds": 0.053425278994836845,
+      "network_sha256": "aff63ada1c5cc78e4268e6fe75d764286708f567a0666f309f9cf7f368fa1ead",
+      "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e"
+    }
+  },
+  "orbit_cover": {
+    "assignments": 59049,
+    "checker_sha256": "a1a3b4c4238591dc78049814734ac1df5482e71fd5973dbee95bbda02c059415",
+    "inventory_sha256": "cf37cc1f48e68ba39eb38b6d8fc053e03f225438010acfdb51591c83288bb465",
+    "orbits": 142,
+    "seconds": 0.1083913459951873,
+    "status": "INDEPENDENT_EXACT_EDGE_COLOR_ORBIT_COVER_PASS"
+  },
+  "false_candidate": {
+    "input": [
+      "4",
+      "2",
+      "3",
+      "1",
+      "0"
+    ],
+    "output": "25/8",
+    "target": "4"
+  },
+  "scope": "Checks exact domain bookkeeping, positive controls and the local-only false survivor; no unrestricted K3 solver verdict."
+}

@@ -1,0 +1,24 @@
+{
+  "N": 5,
+  "budget_seconds": 30,
+  "core_units": 3,
+  "generic_tie_equations": 26,
+  "incidence_counts": {
+    "all_fixed": 88,
+    "merged_sign_free": 44,
+    "pair_merged": 16,
+    "pair_single": 16
+  },
+  "merged_positive_pair": [
+    0,
+    1
+  ],
+  "nested_pairs": 150,
+  "positive_core_outputs": 2,
+  "producer_sha256": "8ad7a22133ecfcac03ef71c0e725e71a3e2c95213947acda1f51034dc1966e2a",
+  "real_variables": 56,
+  "scope": "Complete comparison span, unbounded real coefficients. Three positive core neurons from the known four-core construction are merged in one declared pair; exact whole-cone cancellation assignments and stable signs are retained while every coefficient changes. Only globally checked SAT is a construction; UNSAT excludes this incidence family only.",
+  "seconds": 0.6494788210038678,
+  "smt_sha256": "de31dd403e0b3fcf47eb2433b370ddd4f2cdd0a8c1eabb0db1c69d0b23fd7499",
+  "status": "unsat"
+}

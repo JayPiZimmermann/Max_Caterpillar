@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "exit_code": 0,
+      "mode": "merge0",
+      "seconds": 0.6494788210038678,
+      "status": "unsat"
+    },
+    {
+      "exit_code": 0,
+      "mode": "merge1",
+      "seconds": 0.6904077650033287,
+      "status": "unsat"
+    },
+    {
+      "exit_code": 0,
+      "mode": "merge2",
+      "seconds": 0.6319293139968067,
+      "status": "unsat"
+    }
+  ],
+  "scope": "three whole-cone merged-incidence construction subfamilies, all coefficients real and unbounded",
+  "seconds": 2.2512255199981155
+}

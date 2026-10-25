@@ -1,0 +1,30 @@
+{
+  "N": 5,
+  "budget_seconds": 30,
+  "core_units": 4,
+  "generic_tie_equations": 26,
+  "global_check": {
+    "N": 5,
+    "braid_cones": 120,
+    "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+    "comparison_rows": 14,
+    "coordinate_anchors": [
+      4
+    ],
+    "h1": 16,
+    "h2": 6,
+    "interior_wall_groups": 32,
+    "network_sha256": "aff63ada1c5cc78e4268e6fe75d764286708f567a0666f309f9cf7f368fa1ead",
+    "seconds": 0.06913243199960561,
+    "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+  },
+  "nested_pairs": 150,
+  "network": "overnight_fixed_complete_decide_control10_network.json",
+  "positive_core_outputs": 3,
+  "producer_sha256": "5469fa8c6d495272c5572480fb9515887e42dd49ff469c58ba1fbd28e1818b66",
+  "real_variables": 56,
+  "scope": "Complete real-parameter K3 model in the full comparison span, using the independently reviewed no-all-mixed-chamber lemma. Both mixed output-sign counts are needed. Whole-cone pair disjunctions retain all weak/zero boundaries. Remainder eliminated by exact Boolean-quadratic interpolation; explicit locality covers included. Only independently globally checked SAT is a construction; bare solver UNSAT is diagnostic pending a proof checker.",
+  "seconds": 1.0703435089963023,
+  "smt_sha256": "8bcb74a0b7e0899bd7798dd23a48049507af65d863eebd1bee1853f99b672e80",
+  "status": "GLOBALLY_CERTIFIED_CONSTRUCTION"
+}

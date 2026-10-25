@@ -1,0 +1,17 @@
+{
+  "distinct_coverage_masks": 10273,
+  "lower_bound_S5_orbits": 89198163,
+  "nonzero_flats": 32752,
+  "ordered_covers": {
+    "1": 0,
+    "2": 195922,
+    "3": 64222089456
+  },
+  "producer_sha256": "d0bfe5ff16a6ab2d102e553de66c871cee78356c3f4cdd620b7aac268e31f0a3",
+  "scope": "All nonzero closed vanishing flats, arbitrary real coefficients. Count uses the independently proved15-circuit. No infeasibility or construction claim.",
+  "seconds": 0.12501915499888128,
+  "signed_cases_before_label_symmetry": 85630236296,
+  "status": "EXACT_COMBINATORIAL_INVENTORY_ONLY",
+  "unordered_covering_triples": 10703779537,
+  "upper_bound_S5_orbits": 10703779537
+}

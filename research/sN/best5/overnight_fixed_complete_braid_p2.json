@@ -1,0 +1,13 @@
+{
+  "N": 5,
+  "budget_seconds": 120,
+  "core_units": 3,
+  "nested_pairs": 150,
+  "positive_core_outputs": 2,
+  "producer_sha256": "862e5c772af67b6eec49044a06048f9e8cf6ecd205b85851a108440432cc67fb",
+  "real_variables": 56,
+  "scope": "Complete comparison span; all real coefficients unbounded; each core preactivation has fixed weak sign on each braid chamber. This excludes internal-cancellation constructions from the search. Solver UNSAT remains diagnostic.",
+  "seconds": 51.63190394100093,
+  "smt_sha256": "676f576fd7d389470a0a0be3964fa4d1901415745d8996ea2915bf0722e94aad",
+  "status": "unsat"
+}

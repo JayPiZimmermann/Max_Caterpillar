@@ -1,0 +1,30 @@
+{
+  "N": 5,
+  "budget_seconds": 30,
+  "core_units": 4,
+  "generic_tie_equations": 26,
+  "global_check": {
+    "N": 5,
+    "braid_cones": 120,
+    "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+    "comparison_rows": 14,
+    "coordinate_anchors": [
+      4
+    ],
+    "h1": 16,
+    "h2": 6,
+    "interior_wall_groups": 32,
+    "network_sha256": "aff63ada1c5cc78e4268e6fe75d764286708f567a0666f309f9cf7f368fa1ead",
+    "seconds": 0.05289010399428662,
+    "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+  },
+  "nested_pairs": 150,
+  "network": "overnight_fixed_complete_pairlocal_control10_network.json",
+  "positive_core_outputs": 3,
+  "producer_sha256": "dca741b5638ce9205aaa18bc79284e627ffb9e78912cdb123b683684708d3bdc",
+  "real_variables": 70,
+  "scope": "Complete comparison span, unbounded real coefficients, whole-cone pairwise cancellation allowed. Genuine three-way proportional cancellation is excluded. Boolean-ray equations plus the declared cone conditions imply global equality. Solver UNSAT is diagnostic for this constructive restriction only.",
+  "seconds": 1.089442179996695,
+  "smt_sha256": "812e0caf2202a1e56b20af66f4e213ff81575829247c0754b552b52aff469e45",
+  "status": "GLOBALLY_CERTIFIED_CONSTRUCTION"
+}

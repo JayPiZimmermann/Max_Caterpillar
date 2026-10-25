@@ -1,0 +1,14 @@
+{
+  "N": 5,
+  "budget_seconds": 180,
+  "core_units": 3,
+  "generic_tie_equations": 26,
+  "nested_pairs": 150,
+  "positive_core_outputs": 2,
+  "producer_sha256": "df5cefed0e5522cbdb915b31e2480194b18aa81f10bce3d13ad8508c65565f36",
+  "real_variables": 43,
+  "scope": "Declared complete-comparison K3 subfamily with negative preactivation a positive unknown scalar multiple of the known10,6 negative core. Both positive preactivations and the shallow remainder are otherwise fully free. Whole-cone pair cancellation is necessary by the no-all-mixed lemma. Only global-check SAT is a construction; UNSAT remains diagnostic and would exclude this shape only.",
+  "seconds": 0.6294664979941444,
+  "smt_sha256": "9978a0f791bf53eaabd304d475757534da2ee05cc2407a4d30177d449aef0e27",
+  "status": "unsat"
+}

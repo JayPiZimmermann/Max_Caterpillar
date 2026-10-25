@@ -1,0 +1,77 @@
+{
+  "budget_seconds": 30,
+  "core_units": 4,
+  "edge_coefficients": [
+    [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "1/2",
+      "0",
+      "0",
+      "0",
+      "-1/2",
+      "1/2",
+      "-1/2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1/2",
+      "0",
+      "0",
+      "0",
+      "-1/2",
+      "-1/2",
+      "1/2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-1/2",
+      "1",
+      "0",
+      "0",
+      "-1/2",
+      "1/2",
+      "1/2",
+      "0",
+      "0",
+      "-1"
+    ]
+  ],
+  "global_check": {
+    "N": 5,
+    "braid_cones": 120,
+    "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+    "comparison_rows": 14,
+    "coordinate_anchors": [
+      4
+    ],
+    "h1": 16,
+    "h2": 6,
+    "interior_wall_groups": 32,
+    "network_sha256": "aff63ada1c5cc78e4268e6fe75d764286708f567a0666f309f9cf7f368fa1ead",
+    "seconds": 0.05181117599568097,
+    "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+  },
+  "network": "overnight_fixed_complete_edge_control10_network.json",
+  "positive_outputs": 3,
+  "producer_sha256": "ecd8dc991ed0502cec96d8d42c527eada43b5e750c84ca6e5cd0d307412ef179",
+  "real_variables": 40,
+  "scope": "All four-label tie values zero, arbitrary real edge coefficients, closed edge-zero cover and whole-cone pair cancellation. A constructive subfamily; genuine three-way cancellation excluded. UNSAT is diagnostic only.",
+  "seconds": 0.8399892439992982,
+  "smt_sha256": "3699a81e0dc9011d3e5535808e5ce5b7b8fb8ab48828a7b973f3af179b8aa49b",
+  "status": "GLOBALLY_CERTIFIED_CONSTRUCTION"
+}

@@ -1,0 +1,2 @@
+ENCODED p2 real 30 assertions 179 budget 180
+{"budget_seconds": 180, "core_units": 3, "positive_outputs": 2, "producer_sha256": "ecd8dc991ed0502cec96d8d42c527eada43b5e750c84ca6e5cd0d307412ef179", "real_variables": 30, "scope": "All four-label tie values zero, arbitrary real edge coefficients, closed edge-zero cover and whole-cone pair cancellation. A constructive subfamily; genuine three-way cancellation excluded. UNSAT is diagnostic only.", "seconds": 55.897868562999065, "smt_sha256": "a4d709a83b0e9a18664c425693fc26a3cc51de82e93b6d14087ecb9c993495b2", "status": "unsat"}

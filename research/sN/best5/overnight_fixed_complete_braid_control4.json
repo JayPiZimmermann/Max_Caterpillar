@@ -1,0 +1,29 @@
+{
+  "N": 4,
+  "budget_seconds": 30,
+  "core_units": 1,
+  "global_check": {
+    "N": 4,
+    "braid_cones": 24,
+    "checker_sha256": "b910281b4413203343a002890e581bb57650b662a6f65d55eaedb4aeb9389d5e",
+    "comparison_rows": 9,
+    "coordinate_anchors": [
+      3
+    ],
+    "h1": 11,
+    "h2": 3,
+    "interior_wall_groups": 0,
+    "network_sha256": "7426777b5a948aacaf6a7fdd0167718c2b6b3000b8f0f6e8955ecfa8c461d02f",
+    "seconds": 0.0022887990053277463,
+    "status": "INDEPENDENT_EXACT_GLOBAL_ANCHOR_NETWORK_PASS"
+  },
+  "nested_pairs": 36,
+  "network": "overnight_fixed_complete_braid_control4_network.json",
+  "positive_core_outputs": 1,
+  "producer_sha256": "862e5c772af67b6eec49044a06048f9e8cf6ecd205b85851a108440432cc67fb",
+  "real_variables": 18,
+  "scope": "Complete comparison span; all real coefficients unbounded; each core preactivation has fixed weak sign on each braid chamber. This excludes internal-cancellation constructions from the search. Solver UNSAT remains diagnostic.",
+  "seconds": 0.022427276999223977,
+  "smt_sha256": "03a6184c27652e2309e493b04ab67b78e6221cbbb52aaa7d9b59c68b555b3e68",
+  "status": "GLOBALLY_CERTIFIED_CONSTRUCTION"
+}

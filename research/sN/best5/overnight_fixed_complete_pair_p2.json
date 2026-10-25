@@ -1,0 +1,14 @@
+{
+  "N": 5,
+  "budget_seconds": 180,
+  "core_units": 3,
+  "nested_pairs": 150,
+  "positive_core_outputs": 2,
+  "producer_sha256": "f97825b5032104264513b69346a13bdcec2ee7e22a872f30d5edb302dcfb9151",
+  "real_variables": 56,
+  "reason_unknown": "timeout",
+  "scope": "Complete comparison span, unbounded real coefficients, whole-cone pairwise cancellation allowed. Genuine three-way proportional cancellation is excluded. Boolean-ray equations plus the declared cone conditions imply global equality. Solver UNSAT is diagnostic for this constructive restriction only.",
+  "seconds": 180.4646956150027,
+  "smt_sha256": "4bb5381d30c33c8ad8ea634dcb326bf04954a3fc217ccf0790983bccd0867d7a",
+  "status": "unknown"
+}

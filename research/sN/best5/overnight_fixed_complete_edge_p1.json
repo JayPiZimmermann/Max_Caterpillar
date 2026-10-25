@@ -1,0 +1,11 @@
+{
+  "budget_seconds": 180,
+  "core_units": 3,
+  "positive_outputs": 1,
+  "producer_sha256": "ecd8dc991ed0502cec96d8d42c527eada43b5e750c84ca6e5cd0d307412ef179",
+  "real_variables": 30,
+  "scope": "All four-label tie values zero, arbitrary real edge coefficients, closed edge-zero cover and whole-cone pair cancellation. A constructive subfamily; genuine three-way cancellation excluded. UNSAT is diagnostic only.",
+  "seconds": 2.6702612309964024,
+  "smt_sha256": "1b58d8912c4abbac4ab4ea6cf65223479da17296a9233eb01121abb2a5de30a9",
+  "status": "unsat"
+}
