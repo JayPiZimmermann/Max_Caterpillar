@@ -1,0 +1,171 @@
+{
+  "status": "ROOT_FRESH_TORSION_TRACE_REPLAYS_PASS",
+  "seconds": 0.17887940199580044,
+  "source_hashes": {
+    "research/sN/trees/overnight_uniform_torsion_trace.md": "fbb6d0d8fd5e6980c1242e2985ef4970285aabcb0e80fbaebdbedecd55eab71b",
+    "research/sN/trees/overnight_uniform_torsion_trace.py": "3bcb0fc67dbe3e9d5bf1b3c9fe90626bcc7766653e62c4947e170287cec73048",
+    "research/sN/trees/overnight_uniform_torsion_trace.json": "8dcf8af50ec87a74114f1737a690f4e75360bd60fed1dc29a09df0404c1ce45c",
+    "research/sN/trees/overnight_uniform_torsion_trace.log": "8dcf8af50ec87a74114f1737a690f4e75360bd60fed1dc29a09df0404c1ce45c",
+    "research/sN/trees/overnight_uniform_torsion_trace_verify.py": "fe5624117139f7bcb5dd42c59a2b368059971b21d74b7f34d3bbe7025ceb992b",
+    "research/sN/trees/overnight_uniform_torsion_trace_verify.json": "484a8a304247d7a7b9be6a182124c3ddfb555d590da7cb68bcb7746e46654e0e",
+    "research/sN/trees/overnight_uniform_torsion_trace_verify.log": "484a8a304247d7a7b9be6a182124c3ddfb555d590da7cb68bcb7746e46654e0e"
+  },
+  "receipts": {
+    "overnight_uniform_torsion_trace": {
+      "status": "EXACT_QUADRATIC_TORSION_TRACE_STAR_REFUTATION",
+      "normal": [
+        -40,
+        1,
+        3,
+        9,
+        27
+      ],
+      "constant_variable": "tau; z_i=chi_i*exp(HEIGHT_i*tau)",
+      "character_level_sums": {
+        "0": "7210557/208754",
+        "2": "519060327/1356901",
+        "4": "502268953/2713802"
+      },
+      "full_gaussian_star_value": "-221057230/1356901",
+      "full_gaussian_maximum_value": -4,
+      "nontrivial_gaussian_star_value": "-76550243/387686",
+      "nontrivial_gaussian_maximum_value": -5,
+      "rows": [
+        {
+          "negative_labels": [],
+          "full_star_orbit_value": "7210557/208754"
+        },
+        {
+          "negative_labels": [
+            0,
+            1
+          ],
+          "full_star_orbit_value": "693/20"
+        },
+        {
+          "negative_labels": [
+            0,
+            2
+          ],
+          "full_star_orbit_value": "4959/140"
+        },
+        {
+          "negative_labels": [
+            0,
+            3
+          ],
+          "full_star_orbit_value": "4959/140"
+        },
+        {
+          "negative_labels": [
+            0,
+            4
+          ],
+          "full_star_orbit_value": "693/20"
+        },
+        {
+          "negative_labels": [
+            1,
+            2
+          ],
+          "full_star_orbit_value": "20988/403"
+        },
+        {
+          "negative_labels": [
+            1,
+            3
+          ],
+          "full_star_orbit_value": "19908/481"
+        },
+        {
+          "negative_labels": [
+            1,
+            4
+          ],
+          "full_star_orbit_value": "43452/1147"
+        },
+        {
+          "negative_labels": [
+            2,
+            3
+          ],
+          "full_star_orbit_value": "44748/1183"
+        },
+        {
+          "negative_labels": [
+            2,
+            4
+          ],
+          "full_star_orbit_value": "14796/403"
+        },
+        {
+          "negative_labels": [
+            3,
+            4
+          ],
+          "full_star_orbit_value": "17556/481"
+        },
+        {
+          "negative_labels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full_star_orbit_value": "58839597/298220"
+        },
+        {
+          "negative_labels": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "full_star_orbit_value": "78919413/875420"
+        },
+        {
+          "negative_labels": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "full_star_orbit_value": "103902077/2200380"
+        },
+        {
+          "negative_labels": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "full_star_orbit_value": "105872453/2683980"
+        },
+        {
+          "negative_labels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "full_star_orbit_value": "-23819/126"
+        }
+      ],
+      "producer_sha256": "3bcb0fc67dbe3e9d5bf1b3c9fe90626bcc7766653e62c4947e170287cec73048",
+      "scope": "Only the canonical weight (-1)^(number_of_negative_labels/2), with a uniform normalized constant coefficient. No fitted weight family was searched."
+    },
+    "overnight_uniform_torsion_trace_verify": {
+      "status": "INDEPENDENT_QUADRATIC_TORSION_TRACE_CHECK_PASS",
+      "character_level_sums": {
+        "0": "7210557/208754",
+        "2": "519060327/1356901",
+        "4": "502268953/2713802"
+      },
+      "gaussian_value": "-221057230/1356901",
+      "nontrivial_value": "-76550243/387686",
+      "checker_sha256": "fe5624117139f7bcb5dd42c59a2b368059971b21d74b7f34d3bbe7025ceb992b",
+      "scope": "No producer import. Uses the unsimplified multiplicative kernel, binomial t-1 expansion, and logarithmic residue conversion rather than exponential series of the simplified star fraction."
+    }
+  },
+  "temporary_directory": "/tmp/max_torsion_trace_fresh_j4y7wnki"
+}

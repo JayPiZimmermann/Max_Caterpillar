@@ -1,0 +1,12 @@
+{
+  "status": "INDEPENDENT_QUADRATIC_TORSION_TRACE_CHECK_PASS",
+  "character_level_sums": {
+    "0": "7210557/208754",
+    "2": "519060327/1356901",
+    "4": "502268953/2713802"
+  },
+  "gaussian_value": "-221057230/1356901",
+  "nontrivial_value": "-76550243/387686",
+  "checker_sha256": "fe5624117139f7bcb5dd42c59a2b368059971b21d74b7f34d3bbe7025ceb992b",
+  "scope": "No producer import. Uses the unsimplified multiplicative kernel, binomial t-1 expansion, and logarithmic residue conversion rather than exponential series of the simplified star fraction."
+}
