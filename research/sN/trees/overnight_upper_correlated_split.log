@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_correlated_split.py", line 69, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_correlated_split.py", line 55, in main
+    assert r['sources']==[dict(head=states[k][1],edges=[list(e) for e in states[k][2]]) for k in keys]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

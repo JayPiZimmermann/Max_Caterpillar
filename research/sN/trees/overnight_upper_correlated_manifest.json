@@ -1,0 +1,93 @@
+{
+  "status": "FROZEN_COMPLETE_CORRELATED_FIXED_PATH_GATES",
+  "files": [
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_manifest.json",
+      "bytes": 17675,
+      "sha256": "8efc70048cb2c1fb37361011bbe34c251c5a4bc11b4a90864a33df6907031d09"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_channels.json",
+      "bytes": 5807,
+      "sha256": "b47d61475f39d63849aa1780391faa7c4a50d95817e6820874300780b1de5ce0"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_channels.log",
+      "bytes": 115,
+      "sha256": "ac4cd46af83850f042a320a76d2aa93c1c2eca010a17c1a0128e603aa042cf39"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_channels.py",
+      "bytes": 3719,
+      "sha256": "50165375ce8a311f25d8abc6d6837de083e21a994a137f800f2a8d6d0408fec3"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_channels_exit.json",
+      "bytes": 463,
+      "sha256": "dcad96765f723d58a81f02c9e357391701ecd59f462799f32272eefc40ca7e02"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_head_closure.json",
+      "bytes": 15220,
+      "sha256": "1abb56cff5af613981cb3c89162fa7b21117fd4bd713746d502d9ef28488a81f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_head_closure.log",
+      "bytes": 98,
+      "sha256": "b8bf5c7d33beb31dd187b11cecb4b376b9cdaf2afa0d96a9781b7b8024de1228"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_head_closure.py",
+      "bytes": 4122,
+      "sha256": "b25d6672edd26507db391a7a924906af194bcec15178457135a6d478df1debf8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_head_closure_exit.json",
+      "bytes": 471,
+      "sha256": "c7ac9f647436b09ba9e911beb53b94ae5c519b235a7bc219484fb5fd8c013f8f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_manifest.py",
+      "bytes": 1530,
+      "sha256": "1ec81c1a1e1a9a41821800b1a132f14dcbe3a9a2585d1a32fc4a675d1a5e7bed"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_split.json",
+      "bytes": 28845,
+      "sha256": "16344cf3f0be6f3f2989872d788373f3f5a3487807a9d34170e7698d45df85d1"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_split.log",
+      "bytes": 570,
+      "sha256": "97d1966b4ca65655ab6be30e99d96a38a35d2578d686d844ffadaceb821483b9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_split.py",
+      "bytes": 4048,
+      "sha256": "5ef56021f2e99b4ff3b4f6382d092c4f785c5fcda243ede624af071795c8b1ef"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_split2.log",
+      "bytes": 317,
+      "sha256": "c88882ccaec4e537131e2a0ca882907a4eb036f95db4e693be607478a5ead5ef"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_split2_exit.json",
+      "bytes": 457,
+      "sha256": "5dd24b3ae914ad03dee8c7310a2c7cac8812665355f7855d506c99d4c0d6a5c9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_split_exit.json",
+      "bytes": 455,
+      "sha256": "2842d97759fb8f9084649179d6785559882cdd933e76b856fd71f4745944300c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_correlated_states.md",
+      "bytes": 3311,
+      "sha256": "8689a11c2a7f5bc5f6882081615bf6e1966d6a49f0222c1b9d090b2d70ac40bb"
+    }
+  ],
+  "bytes": 87223,
+  "base_manifest": "research/sN/trees/overnight_upper_baxter_manifest.json",
+  "scope": "Exact finite intersection calculation. The specified local rule closes precisely the isolated-apex subspace of the fixed-path canonical input span; graph-mixed and broader cyclic states remain open."
+}

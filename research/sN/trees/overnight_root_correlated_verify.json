@@ -1,0 +1,29 @@
+{
+  "status": "INDEPENDENT_EXACT_FIXED_PATH_INTERSECTION_PASS",
+  "input_descriptions": 24,
+  "input_rank": 8,
+  "source_rank": 44,
+  "joint_rank": 48,
+  "intersection_rank": 4,
+  "isolated_apex_rank": 4,
+  "input_nulls": 16,
+  "source_nulls": 16,
+  "four_orientation_extension_rank": 48,
+  "inputs": [
+    {
+      "path": "overnight_upper_baxter_vertex_split.json",
+      "sha256": "0d6c7102ecda1b413c971037fad9622ab5428d97e703bc317d494a2fc4c53ac7"
+    },
+    {
+      "path": "overnight_upper_correlated_head_closure.json",
+      "sha256": "1abb56cff5af613981cb3c89162fa7b21117fd4bd713746d502d9ef28488a81f"
+    },
+    {
+      "path": "overnight_upper_correlated_channels.json",
+      "sha256": "b47d61475f39d63849aa1780391faa7c4a50d95817e6820874300780b1de5ce0"
+    }
+  ],
+  "checker_sha256": "3e0e36ffe8bedea5092e5ff22d89ed2a6ce3145495ae01e6a18b365c9b16c9fd",
+  "seconds": 0.32385533599881455,
+  "scope": "Finite top-kernel intersection only; no exclusion of graph-mixed sums or general exponential constructions."
+}
