@@ -1,0 +1,253 @@
+{
+  "status": "EXACT_COMPLETE_FLAG_TRANSFER_OBSTRUCTION",
+  "core_unit": {
+    "apex": 0,
+    "root": 1,
+    "edges": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        3
+      ]
+    ]
+  },
+  "grafted_edges": [
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      8,
+      1
+    ]
+  ],
+  "grafted_matching_number": 2,
+  "weighted_six_flag_transfer_coefficient": "-1",
+  "base_separator_core_value": "60",
+  "base_separator_target_value": "120",
+  "composed_grafted_bad_tree_value": "-60",
+  "composed_maximum_value": "-120",
+  "rows": [
+    {
+      "flag": {
+        "directions": [
+          [
+            4,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            3,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            2,
+            -1,
+            -1
+          ]
+        ],
+        "final_coordinate": 3,
+        "weight": "-1"
+      },
+      "zero_fiber_coefficient": 1,
+      "grafted_tree_transfer_exact": true,
+      "simplex_transfer_exact": true
+    },
+    {
+      "flag": {
+        "directions": [
+          [
+            4,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            5,
+            1,
+            -3,
+            -3
+          ],
+          [
+            0,
+            2,
+            -4,
+            1,
+            1
+          ]
+        ],
+        "final_coordinate": 3,
+        "weight": "3"
+      },
+      "zero_fiber_coefficient": 0,
+      "grafted_tree_transfer_exact": true,
+      "simplex_transfer_exact": true
+    },
+    {
+      "flag": {
+        "directions": [
+          [
+            4,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            5,
+            1,
+            -3,
+            -3
+          ],
+          [
+            0,
+            3,
+            -6,
+            7,
+            -4
+          ]
+        ],
+        "final_coordinate": 1,
+        "weight": "30"
+      },
+      "zero_fiber_coefficient": 0,
+      "grafted_tree_transfer_exact": true,
+      "simplex_transfer_exact": true
+    },
+    {
+      "flag": {
+        "directions": [
+          [
+            7,
+            2,
+            -3,
+            -3,
+            -3
+          ],
+          [
+            1,
+            -2,
+            3,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -2,
+            -1,
+            1,
+            1
+          ]
+        ],
+        "final_coordinate": 3,
+        "weight": "3"
+      },
+      "zero_fiber_coefficient": 0,
+      "grafted_tree_transfer_exact": true,
+      "simplex_transfer_exact": true
+    },
+    {
+      "flag": {
+        "directions": [
+          [
+            3,
+            3,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            3,
+            -3,
+            4,
+            -2,
+            -2
+          ],
+          [
+            2,
+            -2,
+            -2,
+            1,
+            1
+          ]
+        ],
+        "final_coordinate": 3,
+        "weight": "-3"
+      },
+      "zero_fiber_coefficient": 0,
+      "grafted_tree_transfer_exact": true,
+      "simplex_transfer_exact": true
+    },
+    {
+      "flag": {
+        "directions": [
+          [
+            3,
+            3,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            3,
+            -3,
+            4,
+            -2,
+            -2
+          ],
+          [
+            3,
+            -3,
+            -3,
+            5,
+            -2
+          ]
+        ],
+        "final_coordinate": 0,
+        "weight": "-12"
+      },
+      "zero_fiber_coefficient": 0,
+      "grafted_tree_transfer_exact": true,
+      "simplex_transfer_exact": true
+    }
+  ],
+  "scope": "These are exact identities of virtual polytopes after four exposed-face differences and merging the deleted coordinates. The general proof uses the identical zero-vertex normal cones of the cube and simplex, and applies to every complete block flag. It excludes a fixed-block/single-anchor scalar transfer, not all pairing-indexed flag assemblies.",
+  "seconds": 0.13490937800088432
+}

@@ -1,0 +1,93 @@
+{
+  "status": "EXACT_FULL_S9_FLAG_LIFT_COUNTEREXAMPLE",
+  "grafted_tree": {
+    "apex": 0,
+    "root": 1,
+    "edges": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        1
+      ]
+    ]
+  },
+  "retained_subset_classes": {
+    "retained_path": 5,
+    "disconnected_retained_tree": 55,
+    "retained_star": 10,
+    "apex_removed": 56
+  },
+  "retained_paths": [
+    [
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      1,
+      2,
+      3,
+      5
+    ],
+    [
+      1,
+      2,
+      3,
+      6
+    ],
+    [
+      1,
+      2,
+      3,
+      7
+    ],
+    [
+      1,
+      2,
+      3,
+      8
+    ]
+  ],
+  "orthant_flag_indices": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "weighted_transfer_coefficient": "-1",
+  "base_separator_values": {
+    "path": "60",
+    "star": "0",
+    "maximum": "120"
+  },
+  "unaveraged_full_S9_graft_value": "-864000",
+  "unaveraged_full_S9_maximum_value": "-43545600",
+  "scope": "Exact full-label symmetrization of the actual filtration-dropping six-flag lift, followed by the certified five-label separator. This fixed lift fails on a canonical tree of matching number2. It does not exclude other complete-flag/tensor assemblies.",
+  "seconds": 0.07818970800144598
+}

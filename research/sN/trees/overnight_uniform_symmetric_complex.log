@@ -1,0 +1,52 @@
+{
+  "status": "EXACT_FINITE_GRAPH_COMPLEX_CONTROLS",
+  "rows": [
+    {
+      "k": 1,
+      "top_basis": 1,
+      "source_basis": 0,
+      "adjacent_swap_graph_connected": true,
+      "every_source_has_two_equal_sign_outputs": true,
+      "pfaffian_annihilates_every_source": true,
+      "top_cokernel_rank": 1
+    },
+    {
+      "k": 2,
+      "top_basis": 3,
+      "source_basis": 3,
+      "adjacent_swap_graph_connected": true,
+      "every_source_has_two_equal_sign_outputs": true,
+      "pfaffian_annihilates_every_source": true,
+      "top_cokernel_rank": 1
+    },
+    {
+      "k": 3,
+      "top_basis": 15,
+      "source_basis": 30,
+      "adjacent_swap_graph_connected": true,
+      "every_source_has_two_equal_sign_outputs": true,
+      "pfaffian_annihilates_every_source": true,
+      "top_cokernel_rank": 1
+    },
+    {
+      "k": 4,
+      "top_basis": 105,
+      "source_basis": 315,
+      "adjacent_swap_graph_connected": true,
+      "every_source_has_two_equal_sign_outputs": true,
+      "pfaffian_annihilates_every_source": true,
+      "top_cokernel_rank": 1
+    },
+    {
+      "k": 5,
+      "top_basis": 945,
+      "source_basis": 3780,
+      "adjacent_swap_graph_connected": true,
+      "every_source_has_two_equal_sign_outputs": true,
+      "pfaffian_annihilates_every_source": true,
+      "top_cokernel_rank": 1
+    }
+  ],
+  "producer_sha256": "65e623ea93072ecaaefeed0f31eff067540a3945725ba69293ad760142273e5d",
+  "scope": "Graph algebra only. No map from CPWL functions, support functions, or opposite-face flags is asserted."
+}
