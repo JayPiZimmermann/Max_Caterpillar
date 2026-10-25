@@ -1,0 +1,7 @@
+{
+  "status": "ROOT_FRESH_REFLECTED_HEAD_GAUGE_PASS",
+  "manifest_sha256": "b4e4dec61614452e242716f96cd8cc6949fc11baf707e2b2e1654332db55ac24",
+  "stdout": "EXACT_REFLECTED_APEX_STAR_HEAD_GAUGE_CONTROLS_PASSED MEMBERSHIP_CHECKS 60084 CUBE_CHECKS 1092",
+  "seconds": 2.0924924469945836,
+  "scope": "Uniform whole-function head-motion lemma independently reviewed; no complete simplex construction or iterative width bound."
+}

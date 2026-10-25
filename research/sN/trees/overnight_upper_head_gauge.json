@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_REFLECTED_APEX_STAR_HEAD_GAUGE_CONTROLS_PASSED",
+  "records": [
+    {
+      "labels": 3,
+      "spanning_trees": 3,
+      "all_head_subset_orientation_checks": 36
+    },
+    {
+      "labels": 4,
+      "spanning_trees": 8,
+      "all_head_subset_orientation_checks": 448
+    },
+    {
+      "labels": 5,
+      "spanning_trees": 21,
+      "all_head_subset_orientation_checks": 5040
+    },
+    {
+      "labels": 6,
+      "spanning_trees": 55,
+      "all_head_subset_orientation_checks": 54560
+    }
+  ],
+  "cube_identity_sign_checks": 1092,
+  "producer_sha256": "0f3869bce2257b5ba7faa4a643f1769fbd8e6768876b191b275fded95048b5d7",
+  "scope": "Controls of the uniform tree/absent-star-edge proof and exact cube cover. The reflected five-state family is closed under this head gauge; no Hopf-product intertwining or all-N simplex identity is inferred."
+}

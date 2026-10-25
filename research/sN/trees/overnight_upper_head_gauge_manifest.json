@@ -1,0 +1,37 @@
+{
+  "status": "FROZEN_EXACT_REFLECTED_APEX_STAR_HEAD_GAUGE",
+  "files": [
+    {
+      "path": "research/sN/trees/overnight_upper_head_gauge.json",
+      "bytes": 869,
+      "sha256": "e1a425b7f7d226a5d5430d7fb3416e9c06f616e584f52789cab30d67c1d1e8a5"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_head_gauge.log",
+      "bytes": 94,
+      "sha256": "39f3422387d056b6f3b269dda27728eb7650b2a9f86eb213a8f8f17797c7710d"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_head_gauge.md",
+      "bytes": 4645,
+      "sha256": "7a053e9413fdddc0870bcc9f4044e641b35ab3a351af5162f56acae22333c53c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_head_gauge.py",
+      "bytes": 3483,
+      "sha256": "0f3869bce2257b5ba7faa4a643f1769fbd8e6768876b191b275fded95048b5d7"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_head_gauge_exit.json",
+      "bytes": 409,
+      "sha256": "b8da1628d7738312b045b2aa004643da2cba19b6a280a0a569b978ac3ac47634"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_head_gauge_manifest.py",
+      "bytes": 1449,
+      "sha256": "02c12c4253827cd99d0eac3b1ac1345901c21ea9495af8cb59b1c91861e6c539"
+    }
+  ],
+  "bytes": 10949,
+  "scope": "Uniform exact head-subset realization and head-centering identity, all lower-dimensional corrections retained. No product intertwiner or all-arity simplex construction claimed."
+}
