@@ -1,0 +1,28 @@
+{
+  "claim": "The unrestricted second-hidden-layer lower bound six remains open.",
+  "diagnostic_scope": "The fixed-pattern LP mentioned in the note is not a logical dependency or a certified lower bound.",
+  "evidence": "Written structural lemmas and exact global identity controls; no Lean verification.",
+  "files": [
+    {
+      "bytes": 16290,
+      "path": "overnight_fixed_unrestricted.md",
+      "sha256": "43bdb6cf1d5a88928d97e8af3b0ae563a280bb4ee543a27f51b56e3e7250e6b4"
+    },
+    {
+      "bytes": 5542,
+      "path": "overnight_fixed_selector_control.py",
+      "sha256": "0679252103f9d65daa469d095d0604f775d3d1dcd23cd4f85063c1618b1416f7"
+    },
+    {
+      "bytes": 1361,
+      "path": "overnight_fixed_selector_control.json",
+      "sha256": "dd39f6bfc6a10654b658ed37a67cf6c39607753c40f707f0ec030526bb37e14c"
+    },
+    {
+      "bytes": 1916,
+      "path": "overnight_fixed_selector_control.log",
+      "sha256": "7cdeb78958f5a7adb4779a5937bcd605be03a4780d3109074321b13b7846576e"
+    }
+  ],
+  "status": "FROZEN_STRUCTURAL_PROOF_SEARCH_CHECKPOINT"
+}

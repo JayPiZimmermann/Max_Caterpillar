@@ -1,0 +1,44 @@
+{
+  "status": "EXACT_BOUNDED_EXCESS_CONTROLS_PASS",
+  "records": [
+    {
+      "vertices": 1,
+      "graphs": 1,
+      "nonpseudoforests": 0,
+      "selected_sets": 2
+    },
+    {
+      "vertices": 2,
+      "graphs": 2,
+      "nonpseudoforests": 0,
+      "selected_sets": 8
+    },
+    {
+      "vertices": 3,
+      "graphs": 8,
+      "nonpseudoforests": 0,
+      "selected_sets": 64
+    },
+    {
+      "vertices": 4,
+      "graphs": 64,
+      "nonpseudoforests": 7,
+      "selected_sets": 1024
+    },
+    {
+      "vertices": 5,
+      "graphs": 1024,
+      "nonpseudoforests": 416,
+      "selected_sets": 32768
+    },
+    {
+      "vertices": 6,
+      "graphs": 32768,
+      "nonpseudoforests": 24244,
+      "selected_sets": 2097152
+    }
+  ],
+  "seconds": 5.909975886999746,
+  "source_sha256": "860284b02a5c749fc4e50096ba5955570f61e8b5e7848b4b291ca6967e14bd9e",
+  "scope": "Finite controls of the uniform mathematical proof."
+}

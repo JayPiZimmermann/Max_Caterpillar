@@ -1,0 +1,1 @@
+{"status": "NECESSARY_GATES_PASS", "source_rank": 16, "source_columns": 26, "source_relations": 10, "seconds": 0.983, "scope": "Finite necessary tests only; neither quotient descent nor an all-tree lower bound is proved."}

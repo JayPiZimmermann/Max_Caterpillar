@@ -1,0 +1,16 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_product_family.py",
+    "6"
+  ],
+  "started_utc": "2026-10-25T00:53:18.550424+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_product_family_6.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 1.6733670510002412,
+  "finished_utc": "2026-10-25T00:53:20.223787+00:00"
+}

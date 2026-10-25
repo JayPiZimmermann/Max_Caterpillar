@@ -1,0 +1,48 @@
+{
+  "status": "SPECIFIC_EXTENSION_REFUTED",
+  "target": "120",
+  "canonical_oriented_controls": 32,
+  "tested": 13,
+  "counterexamples": [
+    {
+      "head": [
+        -3,
+        -2,
+        0
+      ],
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "value": "-6"
+    },
+    {
+      "head": [
+        -2,
+        -2,
+        -1
+      ],
+      "weights": [
+        1,
+        1,
+        2
+      ],
+      "value": "-36"
+    },
+    {
+      "head": [
+        -2,
+        -2,
+        -2
+      ],
+      "weights": [
+        1,
+        2,
+        3
+      ],
+      "value": "-12"
+    }
+  ],
+  "seconds": 0.663
+}
