@@ -1,0 +1,1 @@
+{"counts": {"branches": 11, "leaves": 23, "nodes": 34}, "flats": [14388, 22948, 23655, 32316], "producer_sha256": "3214d608ca37a3de4dcaca238e8c582373bdbe1553769f80044dedb6a88badfd", "seconds": 2.788634965996607, "signs": [-1, 1, 1, 1], "status": "EXACT_CLOSED_TRIANGLE_PROOF"}

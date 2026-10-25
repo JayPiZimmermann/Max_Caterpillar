@@ -1,0 +1,300 @@
+{
+  "checker_sha256": "90a2c417795dfa91146648b309f21774dce83bc0aef787331c324cad3871e1e5",
+  "equations_checked": 49,
+  "first_violations": [
+    {
+      "absolute_values": [
+        "175/81",
+        "161/81",
+        "58/27"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        0,
+        1,
+        2
+      ],
+      "strict_triangle_slacks": [
+        "160/81",
+        "188/81",
+        "2"
+      ]
+    },
+    {
+      "absolute_values": [
+        "14/27",
+        "217/81",
+        "223/81"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        3,
+        10,
+        11
+      ],
+      "strict_triangle_slacks": [
+        "398/81",
+        "16/27",
+        "4/9"
+      ]
+    },
+    {
+      "absolute_values": [
+        "211/81",
+        "211/81",
+        "98/81"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        4,
+        6,
+        8
+      ],
+      "strict_triangle_slacks": [
+        "98/81",
+        "98/81",
+        "4"
+      ]
+    },
+    {
+      "absolute_values": [
+        "211/81",
+        "217/81",
+        "266/81"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        4,
+        10,
+        12
+      ],
+      "strict_triangle_slacks": [
+        "272/81",
+        "260/81",
+        "2"
+      ]
+    },
+    {
+      "absolute_values": [
+        "211/81",
+        "266/81",
+        "17/9"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        4,
+        14,
+        16
+      ],
+      "strict_triangle_slacks": [
+        "208/81",
+        "98/81",
+        "4"
+      ]
+    },
+    {
+      "absolute_values": [
+        "254/81",
+        "217/81",
+        "91/27"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        5,
+        10,
+        13
+      ],
+      "strict_triangle_slacks": [
+        "236/81",
+        "310/81",
+        "22/9"
+      ]
+    },
+    {
+      "absolute_values": [
+        "211/81",
+        "217/81",
+        "266/81"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        6,
+        10,
+        14
+      ],
+      "strict_triangle_slacks": [
+        "272/81",
+        "260/81",
+        "2"
+      ]
+    },
+    {
+      "absolute_values": [
+        "211/81",
+        "266/81",
+        "17/9"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        6,
+        12,
+        16
+      ],
+      "strict_triangle_slacks": [
+        "208/81",
+        "98/81",
+        "4"
+      ]
+    },
+    {
+      "absolute_values": [
+        "80/27",
+        "217/81",
+        "259/81"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        7,
+        10,
+        15
+      ],
+      "strict_triangle_slacks": [
+        "236/81",
+        "94/27",
+        "22/9"
+      ]
+    },
+    {
+      "absolute_values": [
+        "98/81",
+        "217/81",
+        "17/9"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        8,
+        10,
+        16
+      ],
+      "strict_triangle_slacks": [
+        "272/81",
+        "34/81",
+        "2"
+      ]
+    },
+    {
+      "absolute_values": [
+        "128/81",
+        "217/81",
+        "49/27"
+      ],
+      "block": 0,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 14388,
+      "forms": [
+        9,
+        10,
+        17
+      ],
+      "strict_triangle_slacks": [
+        "236/81",
+        "58/81",
+        "22/9"
+      ]
+    },
+    {
+      "absolute_values": [
+        "2",
+        "11/9",
+        "11/9"
+      ],
+      "block": 1,
+      "circuit": [
+        1,
+        1,
+        -1
+      ],
+      "flat": 22948,
+      "forms": [
+        2,
+        3,
+        6
+      ],
+      "strict_triangle_slacks": [
+        "4/9",
+        "2",
+        "2"
+      ]
+    }
+  ],
+  "ray_weights": 17,
+  "scope": "The necessary linear ray-cone system is feasible. This particular witness cannot arise from one preactivation per flat: three linearly dependent real numbers force one weighted absolute value to equal the sum of the other two.",
+  "seconds": 0.21298624300106894,
+  "status": "EXACT_RAY_CONVEXIFICATION_SURVIVOR_VERIFIED",
+  "violated_exact_triangle_disjunctions": 13,
+  "witness_sha256": "cec9028f7012c2be92fff9095a602796f42184d37ac46a198787638dfe75bcbe"
+}

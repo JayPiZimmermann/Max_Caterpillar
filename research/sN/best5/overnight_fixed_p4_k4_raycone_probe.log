@@ -1,0 +1,24 @@
+{
+  "equation_template": [
+    [
+      24,
+      "-1/2"
+    ]
+  ],
+  "flats": [
+    23655,
+    30836,
+    31220,
+    32316
+  ],
+  "producer_sha256": "f0e415c7c3b121f7a987e8aa5c5ded98c3ac790b328fc81ac2f561b6c4d243c6",
+  "ray_variables": 38,
+  "seconds": 0.0884422400049516,
+  "signs": [
+    1,
+    -1,
+    1,
+    1
+  ],
+  "status": "EXACT_RAYCONE_EXCLUSION"
+}

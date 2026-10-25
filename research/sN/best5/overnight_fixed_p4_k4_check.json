@@ -1,0 +1,30 @@
+{
+  "arrangement_rays": 13066,
+  "checker_sha256": "f4455bf24fc36161bb91dce03982715531213a088466720652343b02415dc38e",
+  "closed_facet_cases": 20,
+  "core_lower_bound": 5,
+  "covered_normal_subsets": 270850,
+  "covering_quadruples": 296861,
+  "facet_tree_counts": {
+    "branches": 143,
+    "leaves": 306,
+    "nodes": 449
+  },
+  "fixed_second_hidden_layer_lower_bound": 7,
+  "flats_including_zero": 383,
+  "hashes": {
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_cross_net9_17.json": "9d6cc7ee37699e452bc52adee66b09baac91dfc4d84e0af43dece807c1546482",
+    "overnight_fixed_p4_flat_rays.jsonl": "ad053c733a2a2b584c8102adaa97ee454c62bd8faf98e6371696ff463da04657",
+    "overnight_fixed_p4_k4_certificate.json": "fbe74f35a7b4b9ce0589e6471eb5e8adae958ae5745a1fd850bbd50641b69041",
+    "overnight_root9_equations.py": "a44cce496d20e027b44fa5a01cfc1c05166ef0b9b4352ec33b5b39402b072d13",
+    "overnight_root9_inventory.json": "3cdf6426f9cacb115c025c4710b9381a1ee07d9011b1ce9d9237db1808c5abf8"
+  },
+  "relevant_hyperplanes": 10,
+  "scope": "Certified finite real-parameter exclusion for the fixed seven-feature P4 span modulo arbitrary linear remainder. Established two-carrier bridge gives h2>=7 for that fixed nine-row first hidden layer. Not an unrestricted h1=9 theorem; not Lean; upper bound14 remains unmatched.",
+  "seconds": 12.266094017999421,
+  "sign_cases": 4749776,
+  "status": "INDEPENDENT_EXACT_P4_FOUR_FREE_TERMS_EXCLUDED",
+  "template_exclusions": 4749756,
+  "templates": 266
+}

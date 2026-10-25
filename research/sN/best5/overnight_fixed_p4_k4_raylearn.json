@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "checked": 1493,
+    "lp": 10,
+    "template_skipped": 1483,
+    "templates": 9
+  },
+  "data_sha256": "1635139b3ad460f2c57ef7a820e183d854113024f9178e4052fe2fbcaef9d727",
+  "producer_sha256": "c318f8d85fced4a1da1b178efe2d67776445180be68fc6af5200ab552dc970dd",
+  "proof_sha256": "770881cf083770472665d9566ba2eeaed5a6bd732edd6e1b6798fc2999ee9f61",
+  "seconds": 9.713119406005717,
+  "status": "EXACT_RAYCONE_RELAXATION_SURVIVOR"
+}

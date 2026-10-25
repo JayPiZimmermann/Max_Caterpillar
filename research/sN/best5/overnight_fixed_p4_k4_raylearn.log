@@ -1,0 +1,12 @@
+LEARNED {'checked': 1, 'template_skipped': 0, 'lp': 1, 'templates': 1} seconds 8.962857133003126
+LEARNED {'checked': 33, 'template_skipped': 31, 'lp': 2, 'templates': 2} seconds 9.00263567300135
+LEARNED {'checked': 111, 'template_skipped': 108, 'lp': 3, 'templates': 3} seconds 9.037706128001446
+LEARNED {'checked': 125, 'template_skipped': 121, 'lp': 4, 'templates': 4} seconds 9.07287655500113
+LEARNED {'checked': 199, 'template_skipped': 194, 'lp': 5, 'templates': 5} seconds 9.100614594004583
+LEARNED {'checked': 347, 'template_skipped': 341, 'lp': 6, 'templates': 6} seconds 9.164993467005843
+LEARNED {'checked': 348, 'template_skipped': 341, 'lp': 7, 'templates': 7} seconds 9.217735598002037
+LEARNED {'checked': 1466, 'template_skipped': 1458, 'lp': 8, 'templates': 8} seconds 9.42144792900217
+LEARNED {'checked': 1474, 'template_skipped': 1465, 'lp': 9, 'templates': 9} seconds 9.605472841001756
+EXACT_SURVIVOR {'status': 'EXACT_RAYCONE_RELAXATION_SURVIVOR', 'flats': [14388, 22948, 23655, 32316], 'signs': (-1, 1, 1, 1), 'weights': [[15, '13/27'], [49, '20/81'], [55, '7/81'], [61, '10/81'], [66, '17/81'], [99, '5/27'], [103, '14/27'], [159, '13/27'], [177, '43/81'], [215, '4/27'], [241, '2/27'], [250, '2/9'], [254, '1'], [268, '1'], [273, '1'], [274, '1'], [279, '1']], 'ray_counts': [246, 21, 7, 7], 'scope': 'Exact nonnegative mixture of ray vectors; not actual single-preactivation feasibility and not a network.'}
+StopIteration 
+{"counts": {"checked": 1493, "lp": 10, "template_skipped": 1483, "templates": 9}, "data_sha256": "1635139b3ad460f2c57ef7a820e183d854113024f9178e4052fe2fbcaef9d727", "producer_sha256": "c318f8d85fced4a1da1b178efe2d67776445180be68fc6af5200ab552dc970dd", "proof_sha256": "770881cf083770472665d9566ba2eeaed5a6bd732edd6e1b6798fc2999ee9f61", "seconds": 9.713119406005717, "status": "EXACT_RAYCONE_RELAXATION_SURVIVOR"}

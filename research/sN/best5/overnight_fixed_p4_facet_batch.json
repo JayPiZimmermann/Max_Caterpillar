@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "branches": 143,
+    "cases_seen": 10952,
+    "leaves": 345,
+    "nodes": 488,
+    "proved_cases": 59,
+    "template_exclusions": 10893
+  },
+  "final_templates": 266,
+  "initial_templates": 153,
+  "open_witness": null,
+  "producer_sha256": "45209c8d7f2036a26d77a3c88d66a1c9d55cfdb28d81dbdb17cff329fca3e57d",
+  "proof_sha256": "a4e5bee8e30c87a7a2dd36240bace0e48d41a0f44b4ce07fd81a81e2d1dfa17f",
+  "scope": "Bounded targeted proof batch. Only saved complete trees are exclusions; no whole-domain lower bound unless independent coverage replay closes every remaining case.",
+  "seconds": 39.68057189400133,
+  "status": "COMPLETE_INPUT_DOMAIN",
+  "templates_sha256": "206009dd3638dcea27f567ed2a8ca80d8c924bd10e07ba3131ecc15d397408f4"
+}

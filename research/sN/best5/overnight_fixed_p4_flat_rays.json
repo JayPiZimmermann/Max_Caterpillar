@@ -1,0 +1,12 @@
+{
+  "completed_flats": 382,
+  "data_sha256": "ad053c733a2a2b584c8102adaa97ee454c62bd8faf98e6371696ff463da04657",
+  "expected_flats": 382,
+  "maximum_flat_rays": 817,
+  "producer_sha256": "f0fdec2233d35f554815d155f61214985367a58db9b5f77f528a511b009b7ed4",
+  "scope": "Exact generator inventory for a necessary convex cone; no network-width lower bound yet.",
+  "seconds": 56.588552116001665,
+  "status": "COMPLETE_EXACT_P4_FLAT_RAY_INVENTORY",
+  "total_enumerated_normal_subsets": 270850,
+  "total_rays": 13066
+}

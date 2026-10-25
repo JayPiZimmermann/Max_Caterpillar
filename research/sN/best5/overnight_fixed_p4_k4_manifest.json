@@ -1,0 +1,31 @@
+{
+  "checker_dependencies": {
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_cross_net9_14_simple.json": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+    "overnight_fixed_cross_net9_17.json": "9d6cc7ee37699e452bc52adee66b09baac91dfc4d84e0af43dece807c1546482",
+    "overnight_fixed_p4_flat_rays.jsonl": "ad053c733a2a2b584c8102adaa97ee454c62bd8faf98e6371696ff463da04657",
+    "overnight_root9_equations.py": "a44cce496d20e027b44fa5a01cfc1c05166ef0b9b4352ec33b5b39402b072d13",
+    "overnight_root9_inventory.json": "3cdf6426f9cacb115c025c4710b9381a1ee07d9011b1ce9d9237db1808c5abf8"
+  },
+  "files": {
+    "overnight_fixed_p4_facet_batch.json": "8c53dcb18a4c649a30dd312566aa9f05b48dac37680e74527a28cab2dce761b2",
+    "overnight_fixed_p4_facet_batch.log": "56b02332e80c29dfb285370c1e0998517e82b14fb9dbf34299032ecbbd166866",
+    "overnight_fixed_p4_facet_batch.py": "45209c8d7f2036a26d77a3c88d66a1c9d55cfdb28d81dbdb17cff329fca3e57d",
+    "overnight_fixed_p4_facet_batch_check.json": "ba9c10b21f7ff393b0c453de2b28c4b537de9cc6263286a1a7bc5133ede387bd",
+    "overnight_fixed_p4_facet_batch_proofs.jsonl": "a4e5bee8e30c87a7a2dd36240bace0e48d41a0f44b4ce07fd81a81e2d1dfa17f",
+    "overnight_fixed_p4_facet_batch_remaining.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "overnight_fixed_p4_facet_batch_templates.json": "206009dd3638dcea27f567ed2a8ca80d8c924bd10e07ba3131ecc15d397408f4",
+    "overnight_fixed_p4_facet_batch_verify.log": "26a7d01ee5c477d9539b6faac8d227bb0e35ccc5e05f1f291a995d540dc76c47",
+    "overnight_fixed_p4_facet_batch_verify.py": "470a3ff0575f3e71bc7592c35e70a0ba291ee1411dc00ee5dd90a40ddc3a6e3f",
+    "overnight_fixed_p4_k4.md": "88c32389642b6c3844de8f714bda1ba54ffb9357983edef8eb6c78fd5857dc1c",
+    "overnight_fixed_p4_k4_certificate.json": "fbe74f35a7b4b9ce0589e6471eb5e8adae958ae5745a1fd850bbd50641b69041",
+    "overnight_fixed_p4_k4_check.json": "dfd1db13db0d24a183701f6f544ff0acfae3f4f6e8116351a4de1d2797d5fe63",
+    "overnight_fixed_p4_k4_control.json": "e545d1ca4b928582e236b6d5e5b05ddcd7c3904ea39552e1e5c764c5b774c003",
+    "overnight_fixed_p4_k4_control.log": "db0eeb2dd7615e20700ca6ad1a44e9b75cd51d1d3e87f3222bee483a80932b0b",
+    "overnight_fixed_p4_k4_control.py": "2dce6f4d61d28c54899d81c54b74316e0e0732ea23cb2e518bf3ecbec3086fd0",
+    "overnight_fixed_p4_k4_verify.log": "c4f73b60afd55ea891853a4857625c25bca89dbf5c3af5ec081419426a74f2b3",
+    "overnight_fixed_p4_k4_verify.py": "f4455bf24fc36161bb91dce03982715531213a088466720652343b02415dc38e"
+  },
+  "scope": "For the fixed P4 first hidden layer, core width at least5 and second hidden layer width at least7; known upper14 remains unmatched. Arbitrary real weights/biases. Not unrestricted and not Lean.",
+  "status": "FROZEN_EXACT_P4_K4_EXCLUSION"
+}
