@@ -236,6 +236,8 @@
 \DeclareSourceEquation{eq:bounded-excess-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/61b26cf955427ab7fbc6919a51623c98fded4740/research/sN/trees/overnight\_bounded\_excess.md}
 \DeclareSourceEquation{eq:bounded-degree-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight\_upper\_connected\_coefficients.md}
 \DeclareSourceEquation{eq:connected-capacity}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight\_upper\_connected\_coefficients.md}
+\DeclareSourceEquation{eq:matching-mixture-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/397f6784da9c61952bdc182cdfe594c52471375a/research/sN/trees/overnight\_matching\_mixture\_coefficients.md}
+\DeclareSourceEquation{eq:matching-mode-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/397f6784da9c61952bdc182cdfe594c52471375a/research/sN/trees/overnight\_matching\_mixture\_mode.md}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -906,13 +908,17 @@ replacing edges by linear terms can create many out-leaves at one vertex.
 
 \paragraph{Large matchings with arbitrary heads and weights.}
 The matching argument also works in mixtures containing the original
-constructions. Let $N\geq3$ and $0\leq2k\leq N$.
+constructions. Let $N\geq12$ and $0\leq2k\leq N$.
 Adjoin to the caterpillar and rooted-star face dictionaries all functions of
 the form \Cref{eq:degree-two-unit} whose comparison pseudoforest on the $N$ labels
 has a matching of size at least $k$. The heads and all coefficients may be
 arbitrary real numbers. Every expansion of $\maxn_N$ in this enlarged dictionary,
-with an auxiliary remainder, uses at least
-$(169/147)^k/(N+1)^2$ functions. The proof at the end of
+with an auxiliary remainder, uses a number $Z$ of functions satisfying
+\begin{align}\label{eq:matching-mixture-count}
+ Z\geq\frac{(16/13)^k}{20d_k},\qquad
+ d_k=1+\frac{3k}{13}+\frac9{169}\binom k2.
+\end{align}
+The proof at the end of
 \Cref{app:count-exponential} is mathematical; this extension is not yet
 formalized in Lean.
 
@@ -934,10 +940,12 @@ connected-set count in \Cref{app:count-exponential}.
 \paragraph{Stars with arbitrary orientations.}
 All star face functions can also be adjoined, with arbitrary head roots,
 edge orientations, and face states. The caterpillar dictionary together
-with this entire star family still requires at least
-$(7/6)^N/(N+1)^4$ nonstar terms for $N\geq5$.
-If the matching class above is included as well, the corresponding bound
-is $(169/147)^k/(N+1)^4$ on the terms outside the added star family.
+with this entire star family requires
+$\Omega((7/6)^N/\sqrt N)$ nonstar terms. The bounded-degree mixture bounds
+just stated remain valid after adjoining this star family as well, counting
+only terms outside it.
+If the matching class above is included, \Cref{eq:matching-mixture-count}
+holds for $N\geq20$, again counting only terms outside the added star family.
 This follows by propagating an exactly checked five-label separator through
 coordinate deletions; the argument is given in \Cref{app:count-exponential}.
 It is not yet a Lean result. Nonstar trees with sublinear matching number
@@ -2073,26 +2081,44 @@ For the added functions, the rank argument in
 \Cref{eq:matching-witnesses} bounds their weighted coverage independently
 of the heads, coefficients, and outside order.
 
-Divide by $m!(N-m)!$, multiply by $y^m$, and sum over $3\leq m\leq N$.
-Take $y=2/11$, so $p=y/(1+y)=2/13$ and $\rho=147/169$, and put
+Use one tied size $m=\lfloor N/4\rfloor$. Put $p=1/4$, $\rho=13/16$,
+$P_m=\binom Nm p^m(1-p)^{N-m}$, and $Z=|K_0|+|K_1|$.
+After division by $m!(N-m)!$, multiply coverage by $p^m(1-p)^{N-m}$.
+Each added function contributes at most $\rho^k d_k$ by
+\Cref{eq:matching-witnesses}. Each base function contributes at most
 \[
- E=(13/11)^N\rho^k,\qquad
- d_k=1+\frac{22}{147}k+\left(\frac{22}{147}\right)^2\binom k2,
- \qquad Z=|K_0|+|K_1|.
+ 6^m p^m(1-p)^{N-m}=(3/4)^N2^m
+ \leq\rho^{N/2}\leq\rho^k;
 \]
-Each added function contributes at most $E d_k$, whereas each base
-function contributes at most $(N-2)(12/11)^N$. Since $2k\leq N$ and
-$147\geq144$, we have $E\geq(12/11)^N\geq1$.
-Also $Z\geq1$, since auxiliary functions cannot supply a three-label
-simplex germ. Consequently coverage gives
-\[
- (13/11)^N\leq
- \left(1+\frac{2N}{11}+\frac4{121}\binom N2+N-2+d_k\right)EZ
- \leq(N+1)^2 EZ.
-\]
-For the last inequality, bound the first three terms and $d_k$ separately
-by $1+N/2+N^2/8$; the resulting bracket is at most $2N+N^2/4$.
-Canceling $(13/11)^N$ proves $Z\geq(169/147)^k/(N+1)^2$.
+the first inequality reduces to $162\leq169$ after taking fourth powers
+of the exponential bases. Hence the elementary mode bound is
+\begin{align}\label{eq:matching-mode-count}
+ Z\geq\frac{P_m}{\rho^k d_k}
+ \geq\frac{(16/13)^k}{(N+1)d_k}.
+\end{align}
+Here $m$ is a mode of $\operatorname{Bin}(N,1/4)$, so $P_m\geq1/(N+1)$.
+
+A coefficient estimate removes the additional factor $N+1$.
+For exactly $j$ matching witnesses, the selected-set counting polynomial is
+$\binom kj z^j(1+z+z^2)^{k-j}(1+z)^{N-2k}$.
+Normalize at $z=1/3$. Its coefficient distribution is a sum of
+$N-2k$ Bernoulli variables with probabilities $(3/4,1/4)$ and $k-j$
+variables with probabilities $(9,3,1)/13$, shifted by $j$.
+Each characteristic function has modulus at most
+$\exp[-(30/169)(1-\cos\theta)]$.
+For $j\leq2$ and $N\geq12$, there are at least $N/4$ factors; Fourier
+inversion and $1-\cos\theta\geq2\theta^2/\pi^2$ on $[-\pi,\pi]$
+bound every point mass by $3/\sqrt N$.
+Also $P_m\geq1/(4\sqrt N)$: Chebyshev puts probability at least $3/4$
+in an interval containing at most $3\sqrt N$ integers, and $m$ is a mode.
+Thus an added graph covers at most a fraction $12\rho^k d_k$ of all
+size-$m$ sets. The base fraction is at most
+$4\sqrt N\rho^{N/2}(162/169)^{N/4}<20\rho^k$.
+Summing these capacities proves \Cref{eq:matching-mixture-count}.
+If each added graph instead has excess at most $b=o(N)$, replace $d_k$
+by $\sum_{j=0}^{\min(k,b+2)}\binom kj(3/13)^j$; the same proof applies
+once $b+2\leq N/4$. For $k=\Omega(N)$ this gives
+$Z\geq\exp[k\log(16/13)-o(N)]$.
 Finally, for a tree on $n$ vertices, the leaf criterion follows from a minimum vertex cover $C$ of
 size equal to the maximum matching number $\nu$. The nonleaf vertices
 outside $C$ form an independent set $I$; their at least $2|I|$ incident
@@ -2138,17 +2164,14 @@ star: each untied component has a unique attachment to the tied subtree,
 and summing its zero frozen coefficients transports the head to that
 attachment if it contains the original root. Apply the separator to
 the local expansion. Every added star term vanishes, so a term from the
-other classes must cover the locality. The preceding weighted count now
-starts at $m=5$. With caterpillars alone, $y=1/6$ gives
-$(7/6)^N-\sum_{j=0}^4\binom Nj6^{-j}\leq(N-4)|K_0|$.
-There is at least one nonstar term, and
-$\sum_{j=0}^4\binom Nj6^{-j}+N-4\leq(N+1)^4$ for $N\geq5$,
-which proves the first assertion. For the matching class, the same
-choice $y=2/11$ and the same $E$ as above give
-$(13/11)^N\leq
-\bigl(\sum_{j=0}^4\binom Nj(2/11)^j+N-4+d_k\bigr)EZ
-\leq(N+1)^4EZ$.
-This proves the stated bound without counting the added star terms.
+other classes must cover the locality. With caterpillars alone, count at
+$m$ nearest $N/7$ to obtain $\binom Nm\leq6^m|K_0|$ and hence
+$|K_0|=\Omega((7/6)^N/\sqrt N)$.
+The bounded-degree mixture proofs use tied sizes growing linearly with
+$N$, so they too apply unchanged once $m\geq5$.
+For the matching class, $m=\lfloor N/4\rfloor\geq5$ when $N\geq20$;
+the proof of \Cref{eq:matching-mixture-count} therefore gives the same
+bound without counting the added star terms.
 
 \subsection{Proof of the dimension bound}\label{app:quotient-lower}
 
