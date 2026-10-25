@@ -231,7 +231,8 @@
 \DeclareSourceEquation{eq:degree-two-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight\_degree\_two.md}
 \DeclareSourceEquation{eq:degree-two-capacity}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight\_degree\_two.md}
 \DeclareSourceEquation{eq:fixed-five-rays}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight\_fixed\_bowtie\_pairs.md}
-\DeclareSourceEquation{eq:weighted-forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/84eb935304c04e4b5a878adf219fbcede5758b83/research/sN/trees/overnight\_bounded\_degree.md}
+\DeclareSourceEquation{eq:weighted-forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight\_pseudoforest\_matching.md}
+\DeclareSourceEquation{eq:matching-witnesses}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight\_pseudoforest\_matching.md}
 \DeclareSourceEquation{eq:weighted-isolates}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/84eb935304c04e4b5a878adf219fbcede5758b83/research/sN/trees/overnight\_bounded\_degree.md}
 \makeatletter
 \AtBeginDocument{%
@@ -830,21 +831,25 @@ The conclusion remains valid when biases are allowed.
 \end{theorem}
 
 The comparison graphs in \Cref{thm:degree-two-weighted} may be disconnected
-unions of paths and cycles. The same locality argument also gives an
-exponential bound for arbitrary weighted forests of bounded degree.
+unions of paths and cycles. The same locality argument extends to
+\emph{pseudoforests}: graphs with at most one cycle in each connected component.
 
-\begin{theorem}[Bounded degree with arbitrary weights, {\Cref{pf:thm:weighted-forest}}]\label{thm:weighted-forest}
-Let $N\geq3$ and $\Delta\geq0$ be integers. Use the representation and coefficient assumptions of
-\Cref{thm:degree-two-weighted}, and put $a_N=1+N/2+\binom N2/4$.
-If each comparison graph is a forest of maximum degree at most $\Delta$,
-then
+\begin{theorem}[Weighted pseudoforests, {\Cref{pf:thm:weighted-forest}}]\label{thm:weighted-forest}
+Let $N\geq3$. Use the representation and coefficient assumptions of
+\Cref{thm:degree-two-weighted}, with comparison pseudoforests $G_j$.
+Write $\nu(G_j)$ for their maximum matching sizes and $z(G_j)$ for their
+numbers of isolated vertices. If $\nu(G_j)+z(G_j)\geq k$ for a nonnegative
+integer $k$ and every $j$, put
+$b_N=1+N+\binom N2$ and $c_k=1+k/3+\binom k2/9$. Then
 \begin{align}\label{eq:weighted-forest-count}
- |K|\geq\frac{1-a_N(2/3)^N}{a_N}
-       \left(\frac{27}{23}\right)^{N/(\Delta+1)}.
+ |K|\geq\frac{1-b_N2^{-N}}{c_k}\left(\frac43\right)^k.
 \end{align}
-For arbitrary comparison graphs of maximum degree at most $\Delta$, the
-same bound holds with the exponential factor replaced by
-$(1-(2/3)^\Delta/3)^{-N/(\Delta^2+1)}$.
+If the maximum degrees are at most $\Delta$, one may take
+$k=\lceil N/(\Delta+1)\rceil$, giving
+$|K|=\Omega_\Delta((4/3)^{N/(\Delta+1)}/N^2)$.
+For arbitrary comparison graphs of maximum degree at most $\Delta$, including
+cycles, the corresponding bound is
+$\Omega_\Delta((1-(2/3)^\Delta/3)^{-N/(\Delta^2+1)}/N^2)$.
 These bounds also hold for the number of distinct comparison graphs used.
 \end{theorem}
 
@@ -852,8 +857,10 @@ Degree in these two theorems refers to the full graph, before any leaf
 deletion. Every fixed $\Delta$ therefore gives an exponential lower bound,
 with arbitrary orientations, heads, weights, and biases. The proofs use the
 rank of the comparisons at a tied maximum and elementary counting; they are
-not yet formalized in Lean. The exponent in \Cref{eq:weighted-forest-count}
-depends on $\Delta$, so this does not settle the unrestricted all-tree bound.
+not yet formalized in Lean. A matching of linear size in each pseudoforest
+also gives an exponential bound without restricting the maximum degree.
+Trees of unbounded degree and
+sublinear matching number remain outside this exponential regime.
 
 \paragraph[Trees with few out-leaves]{Trees with few out-leaves (\leandecl{MaxCaterpillar/Count/Main.lean}{228}{outLeaf_unified_exponential}).}
 There is also an exponential bound without restricting internal branching.
@@ -883,21 +890,19 @@ This includes every underlying tree shape.
 It does not include arbitrary face functions of those added trees:
 replacing edges by linear terms can create many out-leaves at one vertex.
 
-\paragraph{Arbitrary orientations and large matchings.}
-A different argument removes the orientation restriction completely when
-the original trees have sufficiently many disjoint edges. Let $N\geq3$ and
-let $k$ be an integer with $0\leq2k\leq N-1$.
-Adjoin to the caterpillar and rooted-star face dictionaries
-all tree face functions whose original $(N-1)$-vertex tree contains a
-matching of size at least $k$, meaning $k$ edges with pairwise disjoint
-endpoints. Use any head $x_r-x_a$, any edge orientations, and any of the
-three face states. Every expansion of $\maxn_N$ in this enlarged dictionary,
+\paragraph{Large matchings with arbitrary heads and weights.}
+The matching argument also works in mixtures containing the original
+constructions. Let $N\geq3$ and $0\leq2k\leq N$.
+Adjoin to the caterpillar and rooted-star face dictionaries all functions of
+the form \Cref{eq:degree-two-unit} whose comparison pseudoforest on the $N$ labels
+has a matching of size at least $k$. The heads and all coefficients may be
+arbitrary real numbers. Every expansion of $\maxn_N$ in this enlarged dictionary,
 with an auxiliary remainder, uses at least
 $(169/147)^k/(N+1)^2$ functions. The proof at the end of
 \Cref{app:count-exponential} is mathematical; this extension is not yet
 formalized in Lean.
 
-Thus every orientation and every face state is covered when
+In particular, every canonical tree orientation and face state is covered when
 $k\geq\varepsilon(N-1)$ for a fixed $\varepsilon>0$. This includes all trees
 with a perfect or near-perfect matching, and every star whose edges are
 subdivided once. More generally, a tree on $n\geq2$ vertices with $L$ leaves
@@ -1931,41 +1936,57 @@ $\Theta(2^N/\sqrt N)$, giving the stated asymptotic bound.
 \begin{Proof}{Theorem}{thm:weighted-forest}
 The locality argument in the proof of \Cref{thm:degree-two-weighted} shows that every
 label set $T$ with $|T|\geq3$ needs a comparison graph $G$ for which $G[T]$
-has at most two components. Select each label independently with probability
-$1/3$. A vertex $v$
-is selected and isolated in $G[T]$ with probability
-$p_v=(2/3)^{\deg(v)}/3$. These events are independent for vertices in any set
-$C$ with pairwise disjoint closed neighborhoods. Since $p_v/(1-p_v)\leq1/2$,
-the probability of at most two such events is bounded by
-\begin{align}\label{eq:weighted-isolates}
+has at most two components. Give a pseudoforest $G$ an auxiliary orientation
+of indegree at most one: orient tree components away from a root, cycles
+cyclically, and attached trees away from the cycle. This orientation is
+independent of the ReLU orientations. Every connected induced subgraph has
+at most one vertex of indegree zero, since their number is $|V|-|E|$.
+Fix a matching. If a matched parent is absent from $T$ and its child is
+present, that child has indegree zero in $G[T]$. Different matching edges
+therefore give different components. With independent vertex selection
+of probability $p$, these events are independent and have probability
+$p(1-p)$. Thus, for a matching of size $k$ and $\rho=1-p(1-p)$,
+\begin{align}\label{eq:matching-witnesses}
  \Pr\bigl(c(G[T])\leq2\bigr)
- &\leq\left(1+\frac{|C|}{2}+\frac14\binom{|C|}{2}\right)
- \prod_{v\in C}(1-p_v)
- \leq a_N\prod_{v\in C}(1-p_v).
+ \leq\rho^k\left(1+k\frac{1-\rho}{\rho}
+             +\binom k2\left(\frac{1-\rho}{\rho}\right)^2\right).
 \end{align}
 
-The square of a forest of maximum degree $\Delta$ has a coloring with
-$\Delta+1$ colors. Root each component and color in breadth-first order:
-only the parent, grandparent, and earlier siblings can forbid colors, at
-most $\Delta$ in total. Each color class has disjoint closed neighborhoods.
-Since a forest has at most $N$ edges,
-$\prod_v p_v=3^{-N}(2/3)^{2|E|}\geq(4/27)^N$.
-The arithmetic-geometric mean inequality gives first
-$N^{-1}\sum_v p_v\geq4/27$, and then
-$\prod_v(1-p_v)\leq(1-N^{-1}\sum_v p_v)^N\leq(23/27)^N$.
-The color classes partition this product, so one class $C$ has
-$\prod_{v\in C}(1-p_v)\leq(23/27)^{N/(\Delta+1)}$.
-By \Cref{eq:weighted-isolates}, one graph consequently serves a fraction
-at most $a_N(23/27)^{N/(\Delta+1)}$ of all subsets.
-The probability of size at least three is $1-a_N(2/3)^N$; applying the union
-bound proves \Cref{eq:weighted-forest-count}.
+At $p=1/2$, selected isolated vertices give additional independent component
+witnesses of probability $1/2$, on labels disjoint from the matching.
+Replacing their probability by $1/4$ only increases the probability of at
+most two witnesses. A pseudoforest with $\nu(G)+z(G)\geq k$ therefore serves at
+most a fraction $(3/4)^k c_k$ of all subsets. Since
+$\Pr(|T|\geq3)=1-b_N2^{-N}$, the union bound proves
+\Cref{eq:weighted-forest-count}.
 
-For an arbitrary graph of maximum degree $\Delta$, its square has maximum
-degree at most $\Delta^2$ and hence admits $\Delta^2+1$ colors. Also
-$p_v\geq(2/3)^\Delta/3$ for every vertex. A largest color class has at least
-$N/(\Delta^2+1)$ vertices; bound its product factor by factor and repeat the argument.
-Finally, repeated units with the same graph serve no additional tied sets,
-so both union bounds may count distinct graphs instead of units.
+For the degree bound, fix a maximum matching in any graph of maximum degree
+$\Delta\geq2$. Unmatched vertices are independent. The two endpoints of a
+matched edge cannot have distinct unmatched neighbors, since those four
+vertices would give an augmenting path. Hence each matched edge has at
+most $\Delta-1$ distinct unmatched neighbors: either all attach to one
+endpoint, or both endpoints share a single unmatched neighbor. Every
+nonisolated unmatched vertex attaches to a matched edge, so
+$N-z(G)-2\nu(G)\leq(\Delta-1)\nu(G)$.
+Thus $\nu(G)+z(G)\geq\lceil N/(\Delta+1)\rceil$; degrees zero and one
+are immediate.
+
+For general graphs of bounded degree, instead select labels with probability $1/3$.
+A vertex $v$ is selected and isolated in $G[T]$ with probability
+$p_v=(2/3)^{\deg(v)}/3$. These events are independent when the closed
+neighborhoods of the chosen vertices are disjoint. Since
+$p_v/(1-p_v)\leq1/2$, any such set $C$ gives, with
+$a_N=1+N/2+\binom N2/4$,
+\begin{align}\label{eq:weighted-isolates}
+ \Pr\bigl(c(G[T])\leq2\bigr)
+ \leq a_N\prod_{v\in C}(1-p_v).
+\end{align}
+The square graph has maximum degree at most $\Delta^2$, so it has a coloring
+with $\Delta^2+1$ colors. A largest color class supplies at least
+$N/(\Delta^2+1)$ disjoint closed neighborhoods. Bound each factor by
+$1-(2/3)^\Delta/3$ and apply the same union bound to obtain the stated
+asymptotic estimate. Repeating a graph with different heads and weights
+adds no tied sets to its coverage, so these bounds also count distinct graphs.
 \end{Proof}
 
 \paragraph{Arbitrary tree shapes with a source orientation.}
@@ -1998,59 +2019,37 @@ edges. Thus $R$ has maximum degree two. This gives the per-unit factor $6^m$
 for every $U_{a,s,r,T}$, and hence the stated $(7/6)^N/(N+1)$ bound for mixtures
 with the existing caterpillar and rooted-star face dictionaries.
 
-\paragraph{Arbitrary orientations and large matchings.}
-Write $n=N-1$. For a tree $G$ on $n$ vertices with a matching of size $k$,
-and $y>0$, the sum of $y^{|S|}$ over nonempty connected vertex sets $S$ is
-at most $n(1+y)^{n-2k}(1+y+y^2)^k$. Indeed, root $G$ at a chosen vertex
-$v$. A connected set containing $v$ contains every ancestor of each of its
-vertices. On each matching edge, the state with the parent absent and the
-child present is forbidden. The other three states have total weight
-$1+y+y^2$. Since the edges are disjoint, their weights multiply; every
-remaining vertex contributes $1+y$. Summing over the $n$ choices of $v$
-counts every nonempty connected set at least once.
-
-Choose the common integer $B$ in \Cref{eq:base-point} large enough for
-every unit in the enlarged finite expansion. At an $m$-element tie,
-$m\geq3$, fix one tied perturbation coordinate to zero and consider the
-local functions modulo $\LS_{m-2}$ on the remaining $m-1$ coordinates. The maximum
-has the nonzero simplex class, whereas the auxiliary functions vanish.
-If a tree unit's outer argument is nonzero at the base point, its local
-function is zero or a sum of linear functions and segment support
-functions, so its class vanishes. If the outer argument is zero, the digit
-argument already used above makes every frozen coordinate coefficient
-zero. The apex coefficient is $-1$, so the apex must be tied. If the
-retained hinges on the other $m-1$ tied labels are disconnected, there are
-at most $m-3$ such hinges; adjoining the head gives dimension at most
-$m-2$. Thus a nonzero class requires those labels to form a connected
-subset of the original tree. This condition is independent of edge
-orientation and remains necessary with omitted or linear edges.
-
+\paragraph{Large matchings with arbitrary heads and weights.}
 Let $K_0$ count the caterpillar and rooted-star face functions, and $K_1$
-the added functions with matching number at least $k$. At each permutation
-locality, at least one unit has a nonzero class. Such a unit satisfies the
-balance and activity conditions above: every nonapex tied label has a
-retained neighbour, and the isolated apex has coefficient $-1$.
-Consequently a function counted by $K_0$ contributes at most
-$6^m m!(N-m)!$ localities of size $m$. Divide the covering count by
-$m!(N-m)!$, multiply by $y^m$, and sum over $3\leq m\leq N$.
-Putting $\rho=(1+y+y^2)/(1+y)^2$, the connected-set estimate bounds the
-contribution of each function counted by $K_1$ by
-$ny(1+y)^n\rho^k$; the extra factor $y$ accounts for its fixed apex.
-We obtain
-$(1+y)^N-1-Ny-\binom N2y^2
-\leq |K_0|\sum_{m=3}^N(6y)^m+|K_1|ny(1+y)^n\rho^k$.
+the added weighted-pseudoforest functions with matching number at least $k$.
+At each permutation locality, some unit has a nonzero top class. The base
+functions contribute at most $6^m m!(N-m)!$ localities of size $m$.
+For the added functions, the rank argument in
+\Cref{thm:weighted-forest} requires at most two induced components;
+\Cref{eq:matching-witnesses} bounds their weighted coverage independently
+of the heads, coefficients, and outside order.
 
-Take $y=2/11$, so $\rho=147/169$, and put
-$E=(13/11)^N\rho^k$ and $Z=|K_0|+|K_1|$.
-Since $2k\leq N-1$ and $147\geq12^2$, we have
-$E=(13/11)^{N-2k}(147/121)^k\geq(12/11)^N\geq1$.
-Also $Z\geq1$, since the auxiliary functions alone cannot give the simplex
-class at a three-element tie. The preceding inequality therefore yields
-$(13/11)^N\leq
-\bigl(1+2N/11+4\binom N2/121+N-2+2n/13\bigr)EZ
-\leq(N+1)^2EZ$.
+Divide by $m!(N-m)!$, multiply by $y^m$, and sum over $3\leq m\leq N$.
+Take $y=2/11$, so $p=y/(1+y)=2/13$ and $\rho=147/169$, and put
+\[
+ E=(13/11)^N\rho^k,\qquad
+ d_k=1+\frac{22}{147}k+\left(\frac{22}{147}\right)^2\binom k2,
+ \qquad Z=|K_0|+|K_1|.
+\]
+Each added function contributes at most $E d_k$, whereas each base
+function contributes at most $(N-2)(12/11)^N$. Since $2k\leq N$ and
+$147\geq144$, we have $E\geq(12/11)^N\geq1$.
+Also $Z\geq1$, since auxiliary functions cannot supply a three-label
+simplex germ. Consequently coverage gives
+\[
+ (13/11)^N\leq
+ \left(1+\frac{2N}{11}+\frac4{121}\binom N2+N-2+d_k\right)EZ
+ \leq(N+1)^2 EZ.
+\]
+For the last inequality, bound the first three terms and $d_k$ separately
+by $1+N/2+N^2/8$; the resulting bracket is at most $2N+N^2/4$.
 Canceling $(13/11)^N$ proves $Z\geq(169/147)^k/(N+1)^2$.
-Finally, the leaf criterion follows from a minimum vertex cover $C$ of
+Finally, for a tree on $n$ vertices, the leaf criterion follows from a minimum vertex cover $C$ of
 size equal to the maximum matching number $\nu$. The nonleaf vertices
 outside $C$ form an independent set $I$; their at least $2|I|$ incident
 edges lie in the forest on $I\cup C$, which has at most $|I|+\nu-1$
@@ -2103,7 +2102,7 @@ $\sum_{j=0}^4\binom Nj6^{-j}+N-4\leq(N+1)^4$ for $N\geq5$,
 which proves the first assertion. For the matching class, the same
 choice $y=2/11$ and the same $E$ as above give
 $(13/11)^N\leq
-\bigl(\sum_{j=0}^4\binom Nj(2/11)^j+N-4+2n/13\bigr)EZ
+\bigl(\sum_{j=0}^4\binom Nj(2/11)^j+N-4+d_k\bigr)EZ
 \leq(N+1)^4EZ$.
 This proves the stated bound without counting the added star terms.
 
