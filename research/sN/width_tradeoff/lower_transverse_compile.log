@@ -1,0 +1,47 @@
+'MaxCaterpillar.Frontier.WidthTradeoff.dependent_shift_sign_failure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@normalized_tails_kernel_odd : ∀ {N : ℕ} {ι : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  (f u v : Point N → ℝ) (w : ι → Point N → ℝ),
+  OddLin u →
+    OddLin v →
+      (∀ (i : ι), OddLin (w i)) →
+        (∀ (i : ι), Continuous (w i)) →
+          ∀ (alpha beta : Point N) (delta : ι → Point N) (s : ι → ℝ),
+            (∀ (i : ι), s i ≠ 0) →
+              (∀ (x : Point N), f x = u x + lin alpha x - relu (v x) + ∑ i : ι, s i * relu (w i x + lin (delta i) x)) →
+                (∀ (x : Point N), f x = -v x - lin beta x + relu (u x) + ∑ i : ι, s i * relu (w i x)) →
+                  ∀ (y : ι → Point N),
+                    (∀ (i j : ι), lin (delta j) (y i) = if j = i then 1 else 0) →
+                      ∃ c, ∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → f x - f (-x) = lin c x
+'MaxCaterpillar.Frontier.WidthTradeoff.normalized_tails_kernel_odd' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@transverse_sign_family : ∀ {N : ℕ} {ι : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι] (w : ι → Point N → ℝ)
+  (L : Point N) (delta : ι → Point N) (s : ι → ℝ),
+  (∀ (x : Point N), 0 ≤ lin L x + ∑ j : ι, s j * (relu (w j x + lin (delta j) x) - relu (w j x))) →
+    ∀ (i : ι),
+      Continuous (w i) →
+        s i ≠ 0 →
+          ∀ (y : Point N),
+            (∀ (j : ι), lin (delta j) y = if j = i then 1 else 0) →
+              (∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → 0 ≤ w i x) ∨
+                ∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → w i x ≤ 0
+'MaxCaterpillar.Frontier.WidthTradeoff.transverse_sign_family' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@transverse_folds_linearize : ∀ {N : ℕ} {ι : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  (w : ι → Point N → ℝ),
+  (∀ (i : ι), Continuous (w i)) →
+    ∀ (L : Point N) (delta : ι → Point N) (s : ι → ℝ),
+      (∀ (i : ι), s i ≠ 0) →
+        (∀ (x : Point N), 0 ≤ lin L x + ∑ j : ι, s j * (relu (w j x + lin (delta j) x) - relu (w j x))) →
+          ∀ (y : ι → Point N),
+            (∀ (i j : ι), lin (delta j) (y i) = if j = i then 1 else 0) →
+              ∃ c,
+                (∀ (i : ι), c i = 0 ∨ c i = s i) ∧
+                  ∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → ∑ i : ι, s i * relu (w i x) = ∑ i : ι, c i * w i x
+'MaxCaterpillar.Frontier.WidthTradeoff.transverse_folds_linearize' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+EXIT_CODE=0

@@ -1,0 +1,7 @@
+@first_width_ge_add_two : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  4 ≤ N → ∀ (net : Network N h₁ h₂), (∀ (x : Point N), Network.eval net x = Maximum N x) → N + 2 ≤ h₁
+@first_width_ge_seven_max5 : ∀ {h₁ h₂ : ℕ} (net : Network 5 h₁ h₂),
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) → 7 ≤ h₁
+'MaxCaterpillar.Frontier.first_width_ge_add_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.first_width_ge_seven_max5' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0

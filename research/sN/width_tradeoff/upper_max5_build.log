@@ -1,0 +1,2 @@
+'MaxCaterpillar.WidthTradeoff.max_five_ten_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
