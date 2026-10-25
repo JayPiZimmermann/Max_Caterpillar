@@ -1,0 +1,11 @@
+{
+  "status": "SOLVER_TIMEOUT_WITH_POST_RESULT_RECEIPT_SERIALIZATION_FAILURE",
+  "result": "unknown (TIMEOUT)",
+  "budget_seconds": 300,
+  "seconds_to_result": 300.39921767600026,
+  "source_smt": "overnight_fixed_complete_decide_p2.smt2",
+  "source_sha256": "78d1b17f272a8f49ae87d8cb1875edeca7bfacce003046514a792b3f7c0b2ce3",
+  "log_sha256": "8ba84f6c5f883e9caf73af9eba60c89e614dc0fe191b221c87855e5d7676b1ab",
+  "failure": "The first runner received the solver version as bytes, then failed while serializing its receipt. The solver had already returned TIMEOUT. Later runner controls and the fixednegative certificate use the corrected version.",
+  "scope": "No feasibility conclusion."
+}

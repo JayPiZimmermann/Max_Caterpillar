@@ -1,0 +1,192 @@
+{
+  "status": "EXTERNAL_ETHOS_PROOF_AND_REFERENCE_CHECK_PASS",
+  "checker_version": "0.2.5",
+  "solver_version": "1.4.2-modified",
+  "source": "research/sN/best5/overnight_fixed_complete_fixednegative_p2.smt2",
+  "source_sha256": "9978a0f791bf53eaabd304d475757534da2ee05cc2407a4d30177d449aef0e27",
+  "proof": "research/sN/best5/overnight_root_complete_cvc5_fixednegative_p2.proof.txt",
+  "proof_sha256": "6d8be5b399a7f1b473f3beba7f6c797619183b6703068329e4f8d2d7b42e8fd2",
+  "checker_url": "https://github.com/cvc5/ethos/releases/download/ethos-0.2.5/ethos-linux-x86_64.zip",
+  "checker_archive_sha256": "5d9c41e53d97d918ccd682b0012032ba26994d964309328cddb4a20df116e296",
+  "checker_binary_sha256": "939147a0a40b6ba78dc32dfd2f8d9fe9686154057773c023984ebe0b0168e3d1",
+  "signatures": [
+    {
+      "path": "Cpc.eo",
+      "sha256": "d13767eb873649c9f40482c99242c42081cf25308962f11c1981ce8e878770ad",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/Cpc.eo"
+    },
+    {
+      "path": "programs/AciNorm.eo",
+      "sha256": "66ab9a368d82892237d1a72a74e75202f79c993952ad4d4528eba7ba390f5f4a",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/AciNorm.eo"
+    },
+    {
+      "path": "programs/Arith.eo",
+      "sha256": "097bb17888fc657b13ea2cd5bd67a0b3afa30161d7e343d3052d51ef289cdbc9",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/Arith.eo"
+    },
+    {
+      "path": "programs/BitVectors.eo",
+      "sha256": "229465f2488b4f190fffd857f49105699d58ab7778f38107f25b15ef074f59e6",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/BitVectors.eo"
+    },
+    {
+      "path": "programs/Bitblasting.eo",
+      "sha256": "458e1e3083ec490c5d6eb94382da478bd825db0f461ad44f619850923cd46947",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/Bitblasting.eo"
+    },
+    {
+      "path": "programs/Datatypes.eo",
+      "sha256": "84e24a98dcd2e2620e98f3759ebd0e1e36941335c3266d8d0612e4091de0286e",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/Datatypes.eo"
+    },
+    {
+      "path": "programs/DistinctValues.eo",
+      "sha256": "64a9f4307c382651362e0b38e36962aaca83cf2949b095ea8dece101033ad11a",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/DistinctValues.eo"
+    },
+    {
+      "path": "programs/Nary.eo",
+      "sha256": "170477989330e70f4faee5640bcb8e356ca0f576b6bc393eda19e2fcf2502d99",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/Nary.eo"
+    },
+    {
+      "path": "programs/PolyNorm.eo",
+      "sha256": "4fc6537f7cae8c12dcd301cd0b228d4d5407e232348805b5175726aa9ca8ef83",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/PolyNorm.eo"
+    },
+    {
+      "path": "programs/Quantifiers.eo",
+      "sha256": "16c1df0740fb13b61c1a572c0890190d42939fbe5daf3ab9c0c1e1217ca3989e",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/Quantifiers.eo"
+    },
+    {
+      "path": "programs/Strings.eo",
+      "sha256": "5751baba973cd7aa6edf1ad402442c8ec569ab7176b3156f11ad091e82a3b420",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/Strings.eo"
+    },
+    {
+      "path": "programs/Utils.eo",
+      "sha256": "1e143a23cc38b3d8ae82379bb6670f9d39580ebe6b2a703aff3dea88c23a12da",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/programs/Utils.eo"
+    },
+    {
+      "path": "rules/Arith.eo",
+      "sha256": "17f46d9d6aa24a5b3af56549e1b6d1b97eb9801941d8cb7fe2cecf8fc972bea6",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Arith.eo"
+    },
+    {
+      "path": "rules/ArithBvConv.eo",
+      "sha256": "cd352c8dfcf440bc7dbacb0923c1f50daa87780d50921fafe88c1e0ef7fa5147",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/ArithBvConv.eo"
+    },
+    {
+      "path": "rules/Arrays.eo",
+      "sha256": "25ab88d9ff813251d8040819308a7c429aff24088bf615e073206892ad09cff1",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Arrays.eo"
+    },
+    {
+      "path": "rules/BitVectors.eo",
+      "sha256": "a03968ee5791774d422b4ee6fa0d6fa65a8ea6a87529e064ec51280ffbfb7d31",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/BitVectors.eo"
+    },
+    {
+      "path": "rules/Booleans.eo",
+      "sha256": "f4d4e6942eb0c1a1b577bf07060bfedf283e6f25456dd20d127645ca2113ae82",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Booleans.eo"
+    },
+    {
+      "path": "rules/Builtin.eo",
+      "sha256": "ef5a3a9f4abadf9f19304f7074a2ce7fc96bdd35d89bfe8a9c8ebe0606982c90",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Builtin.eo"
+    },
+    {
+      "path": "rules/Datatypes.eo",
+      "sha256": "164a7e6d16c798620041dbe4c786a5f680365b28f6562053abf88d423ffa5152",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Datatypes.eo"
+    },
+    {
+      "path": "rules/Quantifiers.eo",
+      "sha256": "b87309c2de0b5f0ceec2b3ba34ee5bdfafa5b5f7f18d737a38ce0ed9de513f85",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Quantifiers.eo"
+    },
+    {
+      "path": "rules/Rewrites.eo",
+      "sha256": "3de9e84915cb0387412e669d9403474f0f14c9f4746a0fd858d288009c55f79e",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Rewrites.eo"
+    },
+    {
+      "path": "rules/Sets.eo",
+      "sha256": "0903dd5ab928bfb7bad57fc8ec9080a9cfd59a433172e9de9c182e41129b1221",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Sets.eo"
+    },
+    {
+      "path": "rules/Strings.eo",
+      "sha256": "3eae0ba1a1340d942561cb04aef4886c4e7bc6007c5e6accc855ea97ccf97c08",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Strings.eo"
+    },
+    {
+      "path": "rules/Uf.eo",
+      "sha256": "4a9ed4f6b3eba78ef82a59773c0f4b60507dee00d35577a5597b23b3d6190fe8",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/rules/Uf.eo"
+    },
+    {
+      "path": "theories/Arith.eo",
+      "sha256": "3834226540bba0c741ea63de0344fc3255135aa542347ecd67586a4cb02ed3dd",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Arith.eo"
+    },
+    {
+      "path": "theories/ArithBvConv.eo",
+      "sha256": "05fcdf74c797ad8c2087fb9005a462608b35ea1aaf27f94d1fbc9ad5424a7d70",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/ArithBvConv.eo"
+    },
+    {
+      "path": "theories/Arrays.eo",
+      "sha256": "aaaf8e1b811c7711dcc102271bc911cb2d97ad41ac9bb7da5903d868b7f4789a",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Arrays.eo"
+    },
+    {
+      "path": "theories/BitVectors.eo",
+      "sha256": "9a4dd5abaff20be2a048e4da69558145f47d98dd655b8dfb799af27abc641e83",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/BitVectors.eo"
+    },
+    {
+      "path": "theories/Builtin.eo",
+      "sha256": "8e2d97257aefdbffc2955da63a0a35666f535f4d6d0f7b7f75378cad99199d7a",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Builtin.eo"
+    },
+    {
+      "path": "theories/Datatypes.eo",
+      "sha256": "880f57565db9fb2a59dc3a6e3d3e0133eee55773dea39f0f77249c57f14b1983",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Datatypes.eo"
+    },
+    {
+      "path": "theories/Ints.eo",
+      "sha256": "237da42cbf00996532a921772d33998a8dfa500f24c6dfc81121a211d1b0eddd",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Ints.eo"
+    },
+    {
+      "path": "theories/Quantifiers.eo",
+      "sha256": "c8723077df95d264cea72f3c1dbcb8b34959452e5926f26a69d5c7bd8ab40c62",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Quantifiers.eo"
+    },
+    {
+      "path": "theories/Reals.eo",
+      "sha256": "d0e67e757a8232f2b5583abe7d7941c6d18e3c33c1ff37efa176157c2be42b0f",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Reals.eo"
+    },
+    {
+      "path": "theories/Sets.eo",
+      "sha256": "d1dd145a7e41b72e53d89733cd57378dfcc19b2e7cf61cf58a253527a686617a",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Sets.eo"
+    },
+    {
+      "path": "theories/Strings.eo",
+      "sha256": "9b92523b67acf53c4b8b6e5e3065c2032edda2f2a7b8ba625cec1986440dabb0",
+      "url": "https://raw.githubusercontent.com/cvc5/cvc5/cvc5-1.4.2/proofs/eo/cpc/theories/Strings.eo"
+    }
+  ],
+  "normalization": "Remove only unary +, *, and, or; unwrap the API outer list around the CPC command sequence. No proof step or assertion is dropped.",
+  "result": "correct",
+  "scope": "No complete-comparison three-core representation of max5 can preserve the known negative-core shape up to scaling and sign, with two otherwise arbitrary positive cores and a shallow remainder. Depends on the separately reviewed finite-model bridge. No unrestricted K3 exclusion and no new Lean network theorem."
+}

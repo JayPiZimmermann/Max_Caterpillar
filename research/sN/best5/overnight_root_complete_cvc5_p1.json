@@ -1,0 +1,14 @@
+{
+  "status": "unknown (TIMEOUT)",
+  "solver_version": "1.4.2-modified",
+  "budget_seconds": 300,
+  "commands": 234,
+  "assertions": 191,
+  "unary_operations_removed": 159,
+  "source_smt": "/home/jzimmermann/code/Max_Caterpillar/research/sN/best5/overnight_fixed_complete_decide_p1.smt2",
+  "source_sha256": "2fd43e5908c9ec479a22d19dccb6514e0b8db87d7040cbf48812fd0bca107d42",
+  "producer_sha256": "ce3f9a252cb79f8e8304a68cbbb8d3600687ff25fd138f15ac4e1159263e2e86",
+  "scope": "Independent solver diagnostic of the complete pair-cone formulation. No new construction or lower bound without the separate exact certificate gate.",
+  "unknown_explanation": "UnknownExplanation.TIMEOUT",
+  "seconds": 300.22556451100536
+}

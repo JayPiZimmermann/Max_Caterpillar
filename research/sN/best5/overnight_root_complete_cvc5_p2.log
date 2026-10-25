@@ -1,0 +1,25 @@
+PARSED 234 ASSERTIONS 191 BUDGET 300
+RESULT unknown (TIMEOUT) SECONDS 300.39921767600026
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/best5/overnight_root_complete_cvc5.py", line 76, in <module>
+    prefix.with_suffix('.json').write_text(json.dumps(out,indent=2)+'\n')
+                        ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/best5/overnight_root_complete_cvc5.py", line 73, in main
+    else:
+          
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable

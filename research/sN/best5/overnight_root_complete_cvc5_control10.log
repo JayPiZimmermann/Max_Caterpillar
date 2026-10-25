@@ -1,0 +1,3 @@
+PARSED 314 ASSERTIONS 257 BUDGET 20
+RESULT sat SECONDS 0.3177797690004809
+{"assertions": 257, "budget_seconds": 20, "commands": 314, "producer_sha256": "ce3f9a252cb79f8e8304a68cbbb8d3600687ff25fd138f15ac4e1159263e2e86", "scope": "Independent solver diagnostic of the complete pair-cone formulation. No new construction or lower bound without the separate exact certificate gate.", "seconds": 0.3194463980034925, "solver_version": "1.4.2-modified", "source_sha256": "8bcb74a0b7e0899bd7798dd23a48049507af65d863eebd1bee1853f99b672e80", "source_smt": "/home/jzimmermann/code/Max_Caterpillar/research/sN/best5/overnight_fixed_complete_decide_control10.smt2", "status": "sat", "unary_operations_removed": 149}

@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN_EXTERNAL_FIXED_NEGATIVE_CERTIFICATE_AND_FULL_MODEL_DIAGNOSTICS",
+  "files": {
+    "research/sN/best5/overnight_root_complete_cvc5.py": "ce3f9a252cb79f8e8304a68cbbb8d3600687ff25fd138f15ac4e1159263e2e86",
+    "research/sN/best5/overnight_root_complete_cvc5_control10.json": "2d12d134cb76901b0aa37ae0f70f6ecd0fed7564c7fd2b1e269f31fc368d90ab",
+    "research/sN/best5/overnight_root_complete_cvc5_control10.log": "2bb5371961d866d20c377a61d7140b9817219fecaaf85968aa35cecb10d6dff1",
+    "research/sN/best5/overnight_root_complete_cvc5_fixednegative_p2.core.txt": "dce15c5d9b624989d7a737d5e02db44da70d741396600a05a361bffaa552d974",
+    "research/sN/best5/overnight_root_complete_cvc5_fixednegative_p2.json": "592c4c054dc82bb1119cb7886beaecb43386e7a007a8a749230cd69d7080fb9d",
+    "research/sN/best5/overnight_root_complete_cvc5_fixednegative_p2.log": "4bbcecfde9fcad72efb9ab51b9f179bdd8e935c69c2f84215ec36d1aa38523c3",
+    "research/sN/best5/overnight_root_complete_cvc5_fixednegative_p2.proof.txt": "6d8be5b399a7f1b473f3beba7f6c797619183b6703068329e4f8d2d7b42e8fd2",
+    "research/sN/best5/overnight_root_complete_cvc5_p1.json": "558b1f9b79010f8bfcf2ea8d21399cce7d03f07371391bbcc15bf018c76485ba",
+    "research/sN/best5/overnight_root_complete_cvc5_p1.log": "66e0425c8508f19c90d1236f909f42919e769f4ce303315ab085e51363d80a82",
+    "research/sN/best5/overnight_root_complete_cvc5_p2.json": "a767035a7311b22db80614d53ef58fe63fed655f48f300b6cf5e73c03af7b52f",
+    "research/sN/best5/overnight_root_complete_cvc5_p2.log": "8ba84f6c5f883e9caf73af9eba60c89e614dc0fe191b221c87855e5d7676b1ab",
+    "research/sN/best5/overnight_root_complete_ethos.md": "25994a5a37c4aa580705f097f3d2a045bcf87a5925f8cbc12e5974e94c3439f9",
+    "research/sN/best5/overnight_root_complete_ethos_fixednegative.log": "844cd17a64dffb0b93be849979ecbc677a8e98a1b595a402ec08ce1b4f683166",
+    "research/sN/best5/overnight_root_complete_ethos_manifest.json": "86aba548a6e612df96e8fb06858a8a03c0b2c4abf7a2ed1acda7f1d3a00aff67",
+    "research/sN/best5/overnight_root_complete_ethos_replay.log": "5064633e00afd3925f73cde7f7eefab485e2bbf8aa822ebf31a467a06967c9d0",
+    "research/sN/best5/overnight_root_complete_ethos_verify.py": "1b736618678422b260458334e917ddbb53f17e180fa3899b8957c55b2a4fd303",
+    "research/sN/best5/overnight_root_complete_fresh.json": "2bf4663cc7dbc48d57eb2fa8dfad7f303679496c3b2c52dd53d9cdf2d0f397d2",
+    "research/sN/best5/overnight_root_complete_mixed_lean.log": "b2e91d4a6dcd0260c0f500616fa0864b587b025f2ecfae3843f0c7d3d301d614"
+  },
+  "dependencies": {
+    "research/sN/best5/overnight_fixed_complete_manifest.json": "dd586da476eb33e96c2a4616efcc5c8c4c56ee75a1932898bf6f8d6d6dd42645",
+    "research/sN/best5/overnight_fixed_complete_mixed_manifest.json": "2a3e2825d211bdbe9fc1ed7d5bd7533c6593f4118e162e0b00b1376d1ad4a07f",
+    "research/sN/best5/overnight_fixed_complete_fixednegative_p2.smt2": "9978a0f791bf53eaabd304d475757534da2ee05cc2407a4d30177d449aef0e27"
+  },
+  "scope": "Externally checked Ethos refutation of one fixed-negative-shape subfamily. Both full K3 sign cases remain open after solver timeouts."
+}
