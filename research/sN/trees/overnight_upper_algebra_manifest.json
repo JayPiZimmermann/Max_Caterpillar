@@ -1,0 +1,62 @@
+{
+  "status": "FROZEN_LOGARITHMIC_AND_FINITE_MARKED_EULERIAN_IDENTITIES",
+  "files": [
+    {
+      "path": "research/sN/trees/overnight_upper_algebra_manifest.py",
+      "bytes": 1481,
+      "sha256": "824b560d84cc3edc987d1f0350af2bed9535f71b508ad4cf5a1dd25b3e68844d"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_logarithmic_states.json",
+      "bytes": 4542,
+      "sha256": "df5a1cbf856710f402abc9b3ac04fba8e85cf8e7faccd5d10661e6f88ad0dce9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_logarithmic_states.log",
+      "bytes": 77,
+      "sha256": "0592b6f5c1c7e16d83a171da307dd5c9d58deac2396f4c45f3009ba6868b3a8f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_logarithmic_states.md",
+      "bytes": 3992,
+      "sha256": "c3809508227b01470db4bf15cf52512a569c8fa1ded182c9fb09d8e944060f5c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_logarithmic_states.py",
+      "bytes": 2122,
+      "sha256": "59d87350f1b409129a8914ba33ebdb6ae6ca2710de1166b968adadf3c229ca08"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_logarithmic_states_exit.json",
+      "bytes": 428,
+      "sha256": "90b37e15c96719d10040a81a371d35aca75011eeccfb6287dda66b5281f100a8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_eulerian.json",
+      "bytes": 3383,
+      "sha256": "dfee1685e6a336bba7085429d190d5a7fedc087eb71d9bc67504047bf4369b5e"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_eulerian.log",
+      "bytes": 88,
+      "sha256": "640713870c3dc8b58d59a2d5bdb907d1b82aa3d5735ba29fb7dfb0d77604efba"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_eulerian.md",
+      "bytes": 3483,
+      "sha256": "adfb1c5dbc9c8fa3d37dbd018f8e498026ca53d26c11e6f62c7a63cb3fcf740b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_eulerian.py",
+      "bytes": 2753,
+      "sha256": "a9537fef57c7b5fa84caa9f6cfebf3e43bb0c49c59548d8314909a9d3642096b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_marked_eulerian_exit.json",
+      "bytes": 420,
+      "sha256": "0a759248b4859f29078ba5a7c3f0932c2f2d1f18c721a0e3fc03b9df70dd42b4"
+    }
+  ],
+  "bytes": 22769,
+  "scope": "Uniform formal identities, finite-truncation obstructions and standard-library exact controls. No geometric Hopf intertwiner or exponential network claim."
+}

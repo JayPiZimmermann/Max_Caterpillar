@@ -1,0 +1,15 @@
+{
+  "status": "ROOT_FRESH_LOGARITHMIC_AND_MARKED_EULERIAN_CONTROLS_PASS",
+  "manifest_sha256": "11c3ee181865bbe1decf017e96c76b66e94dbd1863162648777f4a8690a14764",
+  "results": {
+    "overnight_upper_logarithmic_states": {
+      "stdout": "EXACT_LOGARITHMIC_CUTOFF_CONTROLS_PASSED DIFFERENCE_ORDERS 13 LOG_DEGREES 12",
+      "seconds": 0.025743099002283998
+    },
+    "overnight_upper_marked_eulerian": {
+      "stdout": "EXACT_MARKED_EULERIAN_CONVOLUTION_CONTROLS_PASSED MARKED_DEGREES 13 UNMARKED_DEGREES 17",
+      "seconds": 0.16384464900329476
+    }
+  },
+  "scope": "Uniform algebraic proofs independently reviewed. No geometric realization or exponential construction follows."
+}

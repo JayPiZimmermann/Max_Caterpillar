@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "research/sN/trees/overnight_upper_logarithmic_states.py"
+  ],
+  "started_utc": "2026-10-25T05:11:14.377419+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_logarithmic_states.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.033232556997973006,
+  "finished_utc": "2026-10-25T05:11:14.410653+00:00"
+}

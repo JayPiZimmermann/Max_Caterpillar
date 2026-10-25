@@ -1,0 +1,299 @@
+{
+  "status": "EXACT_LOGARITHMIC_CUTOFF_CONTROLS_PASSED",
+  "translation_differences": [
+    {
+      "order": 0,
+      "cleared_numerator": 1,
+      "denominator_roots": [
+        0,
+        1
+      ]
+    },
+    {
+      "order": 1,
+      "cleared_numerator": 2,
+      "denominator_roots": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "order": 2,
+      "cleared_numerator": 6,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "order": 3,
+      "cleared_numerator": 24,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "order": 4,
+      "cleared_numerator": 120,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "order": 5,
+      "cleared_numerator": 720,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "order": 6,
+      "cleared_numerator": 5040,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "order": 7,
+      "cleared_numerator": 40320,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "order": 8,
+      "cleared_numerator": 362880,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "order": 9,
+      "cleared_numerator": 3628800,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "order": 10,
+      "cleared_numerator": 39916800,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "order": 11,
+      "cleared_numerator": 479001600,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "order": 12,
+      "cleared_numerator": 6227020800,
+      "denominator_roots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  ],
+  "truncated_log_defects": [
+    {
+      "log_degree": 1,
+      "witness_monomial": [
+        1,
+        -1
+      ],
+      "coefficient": "1",
+      "terms": 4
+    },
+    {
+      "log_degree": 2,
+      "witness_monomial": [
+        2,
+        -2
+      ],
+      "coefficient": "-1/2",
+      "terms": 7
+    },
+    {
+      "log_degree": 3,
+      "witness_monomial": [
+        3,
+        -3
+      ],
+      "coefficient": "1/3",
+      "terms": 10
+    },
+    {
+      "log_degree": 4,
+      "witness_monomial": [
+        4,
+        -4
+      ],
+      "coefficient": "-1/4",
+      "terms": 13
+    },
+    {
+      "log_degree": 5,
+      "witness_monomial": [
+        5,
+        -5
+      ],
+      "coefficient": "1/5",
+      "terms": 16
+    },
+    {
+      "log_degree": 6,
+      "witness_monomial": [
+        6,
+        -6
+      ],
+      "coefficient": "-1/6",
+      "terms": 19
+    },
+    {
+      "log_degree": 7,
+      "witness_monomial": [
+        7,
+        -7
+      ],
+      "coefficient": "1/7",
+      "terms": 22
+    },
+    {
+      "log_degree": 8,
+      "witness_monomial": [
+        8,
+        -8
+      ],
+      "coefficient": "-1/8",
+      "terms": 25
+    },
+    {
+      "log_degree": 9,
+      "witness_monomial": [
+        9,
+        -9
+      ],
+      "coefficient": "1/9",
+      "terms": 28
+    },
+    {
+      "log_degree": 10,
+      "witness_monomial": [
+        10,
+        -10
+      ],
+      "coefficient": "-1/10",
+      "terms": 31
+    },
+    {
+      "log_degree": 11,
+      "witness_monomial": [
+        11,
+        -11
+      ],
+      "coefficient": "1/11",
+      "terms": 34
+    },
+    {
+      "log_degree": 12,
+      "witness_monomial": [
+        12,
+        -12
+      ],
+      "coefficient": "-1/12",
+      "terms": 37
+    }
+  ],
+  "producer_sha256": "59d87350f1b409129a8914ba33ebdb6ae6ca2710de1166b968adadf3c229ca08",
+  "scope": "Finite controls of two displayed uniform elementary identities. No finite logarithmic chain or exponential network construction is asserted."
+}
