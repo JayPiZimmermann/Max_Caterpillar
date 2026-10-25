@@ -1,0 +1,78 @@
+{
+  "status": "EXACT_WHOLE_FUNCTION_PROPOSAL_GATES",
+  "results": [
+    {
+      "proposal": 0,
+      "support": 16,
+      "score_pairing": "-588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 3412 nonzero_mixed_walls 2605 linear 0 0 0 0 24 -120 70 -66 92"
+    },
+    {
+      "proposal": 1,
+      "support": 18,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 4340 nonzero_mixed_walls 4210 linear 0 0 -2160 1440 1656 1068 260 -1078 -1186"
+    },
+    {
+      "proposal": 2,
+      "support": 18,
+      "score_pairing": "-588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 9547 nonzero_mixed_walls 8922 linear 0 0 -2160 1080 2952 1068 -68 -1708 -1164"
+    },
+    {
+      "proposal": 3,
+      "support": 19,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 4392 nonzero_mixed_walls 3658 linear 0 0 -2160 1320 1224 636 312 -826 -506"
+    },
+    {
+      "proposal": 4,
+      "support": 19,
+      "score_pairing": "-588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 9291 nonzero_mixed_walls 7686 linear 0 0 -2160 960 2424 504 -296 -1098 -334"
+    },
+    {
+      "proposal": 5,
+      "support": 20,
+      "score_pairing": "-588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 4198 nonzero_mixed_walls 2962 linear 0 0 0 0 24 -114 106 -166 150"
+    },
+    {
+      "proposal": 6,
+      "support": 20,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 6970 nonzero_mixed_walls 5971 linear 0 10080 -7920 -7680 -4248 -1020 1642 3689 5457"
+    },
+    {
+      "proposal": 7,
+      "support": 21,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 20906 nonzero_mixed_walls 15213 linear 0 10080 -720 -10200 -10968 -6102 -332 6459 11783"
+    },
+    {
+      "proposal": 8,
+      "support": 26,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 17045 nonzero_mixed_walls 14328 linear 0 -10080 -1440 8160 9120 5382 1086 -3428 -8800"
+    },
+    {
+      "proposal": 9,
+      "support": 27,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 9326 nonzero_mixed_walls 8800 linear 0 20160 -7200 -13320 -11280 -6150 -302 4900 13192"
+    },
+    {
+      "proposal": 10,
+      "support": 32,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 23666 nonzero_mixed_walls 19074 linear 0 -10080 1440 7920 7056 3582 236 -3362 -6792"
+    },
+    {
+      "proposal": 11,
+      "support": 32,
+      "score_pairing": "588",
+      "chamber_summary": "permutations 362880 distinct_mixed_walls 10958 nonzero_mixed_walls 9491 linear 0 -10080 1440 8520 6720 3366 574 -3351 -7189"
+    }
+  ],
+  "scope": "Zero generic Fourier samples do not imply a zero whole function. These are necessary diagnostics only until the residual lower-dimensional structure is proved."
+}

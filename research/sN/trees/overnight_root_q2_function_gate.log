@@ -1,0 +1,11 @@
+wall -50 0 0 0 0 0 0 1 -2 1
+wall 5 0 0 0 0 0 1 -2 0 1
+wall 5 0 0 0 0 0 1 -2 1 0
+wall -55 0 0 0 0 0 1 -1 -1 1
+wall -10 0 0 0 0 0 1 0 -2 1
+wall 4 0 0 0 0 1 -2 0 0 1
+wall 4 0 0 0 0 1 -2 0 1 0
+wall -4 0 0 0 0 1 -2 1 -1 1
+wall 4 0 0 0 0 1 -2 1 0 0
+wall -8 0 0 0 0 1 -2 1 1 -1
+permutations 362880 distinct_mixed_walls 3412 nonzero_mixed_walls 2605 linear 0 0 0 0 24 -120 70 -66 92

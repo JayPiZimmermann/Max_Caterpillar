@@ -1,0 +1,27 @@
+permutations 50000 seconds 1.775549027006491
+permutations 100000 seconds 3.594677971006604
+permutations 150000 seconds 5.351654261001386
+permutations 200000 seconds 7.137802791003196
+permutations 250000 seconds 8.930187486999785
+permutations 300000 seconds 10.705117962002987
+permutations 350000 seconds 12.800283286000194
+{
+  "status": "INDEPENDENT_EXACT_N9_Q2_PROPOSAL_IS_NONZERO_WHOLE_FUNCTION",
+  "arity": 9,
+  "units": 16,
+  "all_label_permutations": 362880,
+  "distinct_mixed_gap_walls": 3412,
+  "nonzero_wall_coefficients": 2605,
+  "linear_gap_coefficients": [
+    -72,
+    -60,
+    36,
+    296,
+    278,
+    108,
+    -280,
+    -614
+  ],
+  "scope": "The unaveraged symmetric sixteen-term proposal is a nonzero whole function by exact ReLU wall consolidation. This does not decide whether its generic Fourier kernel is zero or whether it belongs to the lower-dimensional span. No frequency samples or rank assumptions.",
+  "seconds": 13.392627156004892
+}
