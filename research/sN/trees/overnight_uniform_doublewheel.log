@@ -1,0 +1,267 @@
+{
+  "status": "EXACT_N5_SYMMETRIC_OUTWARD_TWIN_DOUBLEWHEEL_INJECTIVITY",
+  "frequency_chart": "(a,s-a,t-a,b,a-b-s-t)",
+  "residue_order": [
+    "s",
+    "t"
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "cuts": [
+          [
+            [
+              2,
+              3,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              3
+            ],
+            1
+          ],
+          [
+            [
+              4
+            ],
+            1
+          ]
+        ]
+      },
+      "two_pole_terms": 12,
+      "residue": "-12*(a**2 - a*b + b**2)/(a*b*(a - b)*(a + b)*(2*a - b))"
+    },
+    {
+      "index": 3,
+      "unit": {
+        "root": 1,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "cuts": [
+          [
+            [
+              2,
+              3,
+              4
+            ],
+            -1
+          ],
+          [
+            [
+              3
+            ],
+            1
+          ],
+          [
+            [
+              4
+            ],
+            1
+          ]
+        ]
+      },
+      "two_pole_terms": 12,
+      "residue": "4*(12*a**4 - 14*a**3*b + 13*a**2*b**2 + 2*a*b**3 - b**4)/(a*b*(a - b)*(a + b)*(2*a - b)*(2*a + b)*(3*a - b))"
+    },
+    {
+      "index": 6,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "cuts": [
+          [
+            [
+              1
+            ],
+            -1
+          ],
+          [
+            [
+              3
+            ],
+            1
+          ],
+          [
+            [
+              4
+            ],
+            1
+          ]
+        ]
+      },
+      "two_pole_terms": 12,
+      "residue": "8/(a*b*(a - b))"
+    },
+    {
+      "index": 9,
+      "unit": {
+        "root": 2,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "cuts": [
+          [
+            [
+              1
+            ],
+            1
+          ],
+          [
+            [
+              3
+            ],
+            1
+          ],
+          [
+            [
+              4
+            ],
+            1
+          ]
+        ]
+      },
+      "two_pole_terms": 12,
+      "residue": "-12*(a**2 - a*b + b**2)/(a*b*(a - b)*(a + b)*(2*a - b))"
+    }
+  ],
+  "common_denominator": "12*a**6*b - 4*a**5*b**2 - 15*a**4*b**3 + 5*a**3*b**4 + 3*a**2*b**5 - a*b**6",
+  "coefficient_monomials": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "coefficient_matrix": [
+    [
+      12,
+      -4,
+      8
+    ],
+    [
+      -24,
+      8,
+      -16
+    ],
+    [
+      -48,
+      52,
+      -56
+    ],
+    [
+      60,
+      -56,
+      64
+    ],
+    [
+      -72,
+      48,
+      96
+    ]
+  ],
+  "rank": 3,
+  "arrangement_controls": [
+    {
+      "labels": 5,
+      "localized_forms": 23,
+      "only_B2_lines": true,
+      "outside_apex_only_two_wheel_lines": true
+    },
+    {
+      "labels": 6,
+      "localized_forms": 27,
+      "only_B2_lines": true,
+      "outside_apex_only_two_wheel_lines": true
+    },
+    {
+      "labels": 7,
+      "localized_forms": 31,
+      "only_B2_lines": true,
+      "outside_apex_only_two_wheel_lines": true
+    },
+    {
+      "labels": 8,
+      "localized_forms": 35,
+      "only_B2_lines": true,
+      "outside_apex_only_two_wheel_lines": true
+    },
+    {
+      "labels": 9,
+      "localized_forms": 39,
+      "only_B2_lines": true,
+      "outside_apex_only_two_wheel_lines": true
+    }
+  ],
+  "producer_sha256": "d486d02ed324a34c79cc5244e63f61bda2e8d74dec08fabc6e46514cbc170f86",
+  "scope": "Exact injectivity on the symmetric N5 outward-twin span only. Uniform injectivity is not proved; the arrangement lemma is proved separately."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "INDEPENDENT_N5_DOUBLEWHEEL_CHECK_PASS",
+  "rows": [
+    {
+      "unit_index": 0,
+      "residue": "-12*(a**2 - a*b + b**2)/(a*b*(a - b)*(a + b)*(2*a - b))",
+      "outside_apex_terms_zero": 48
+    },
+    {
+      "unit_index": 1,
+      "residue": "4*(12*a**4 - 14*a**3*b + 13*a**2*b**2 + 2*a*b**3 - b**4)/(a*b*(a - b)*(a + b)*(2*a - b)*(2*a + b)*(3*a - b))",
+      "outside_apex_terms_zero": 48
+    },
+    {
+      "unit_index": 2,
+      "residue": "8/(a*b*(a - b))",
+      "outside_apex_terms_zero": 48
+    }
+  ],
+  "independence": "unique poles b=-2a, then b=-a, then nonzero remaining function",
+  "checker_sha256": "0340f79f7d4b677d00a6e0ba2dff098743434268146243317ae03461731e9d33",
+  "scope": "No producer import. Uses positive-endpoint components with a root-dependent head shift and actual successive rational limits, including all120 permutations per unit."
+}

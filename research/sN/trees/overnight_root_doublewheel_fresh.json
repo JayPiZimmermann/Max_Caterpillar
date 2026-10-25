@@ -1,0 +1,2546 @@
+{
+  "status": "ROOT_FRESH_DOUBLEWHEEL_AND_TORUS_CYCLE_REPLAYS_PASS",
+  "source_hashes": {
+    "research/sN/trees/overnight_uniform_doublewheel.json": "27dc7d3281d752470a62387a71410f0999f866ef90cec775c81b3cbc43361ed6",
+    "research/sN/trees/overnight_uniform_doublewheel.log": "27dc7d3281d752470a62387a71410f0999f866ef90cec775c81b3cbc43361ed6",
+    "research/sN/trees/overnight_uniform_doublewheel.md": "1cb9342b0b5d9c92247274e39186b50ab30278609076a14f041c2a6a42d4e5f1",
+    "research/sN/trees/overnight_uniform_doublewheel.py": "d486d02ed324a34c79cc5244e63f61bda2e8d74dec08fabc6e46514cbc170f86",
+    "research/sN/trees/overnight_uniform_doublewheel7.json": "d0576831346bdd9f00a7e21ddc5d7b1fc5842e910cb3ed8dab235481f3aded59",
+    "research/sN/trees/overnight_uniform_doublewheel7.log": "599ef2dceafcb24539e13b86041cd7a8dd96816b8a3321332598bdfbb6f88034",
+    "research/sN/trees/overnight_uniform_doublewheel7.py": "e7dfc84407a4c2f1a7ea1a3a1cbb3301e9a11441ec764d09fba4c12a447ebf71",
+    "research/sN/trees/overnight_uniform_doublewheel7_branches.json": "5c2503cb4f26c523108398052936479bc0487a72108297e15e17524a55439e97",
+    "research/sN/trees/overnight_uniform_doublewheel7_branches.log": "4e9b0d543f6d257344df5ee68a549506165a571de5758d4d24a200c02de79386",
+    "research/sN/trees/overnight_uniform_doublewheel7_branches.py": "b7bd031f4d098208efde2a27855d724982bdbdd91bda824d6c48a2ac22eb1a31",
+    "research/sN/trees/overnight_uniform_doublewheel7_crossapex.json": "a5e0b0bdc89089f733e7adf837bc43a1d6454f8d4d005cb8c554743ad3d92e58",
+    "research/sN/trees/overnight_uniform_doublewheel7_crossapex.log": "f27a2c7a82b233b33f96429d041411dcd05bb673ed6b9bf5fba59cc96fbbd539",
+    "research/sN/trees/overnight_uniform_doublewheel7_crossapex.py": "e97a485a3d4e7b6b4d8dbbddade1965391803d6c3cc74e80d13d73bac855da6e",
+    "research/sN/trees/overnight_uniform_doublewheel7_crossapex_verify.json": "155ff154bd070241a257904a1f24263a709eddf801ecb7fa58605559771b9353",
+    "research/sN/trees/overnight_uniform_doublewheel7_crossapex_verify.log": "155ff154bd070241a257904a1f24263a709eddf801ecb7fa58605559771b9353",
+    "research/sN/trees/overnight_uniform_doublewheel7_crossapex_verify.py": "391fb4795b52195a9284fbd1a445cb32b24ddc13b37a1a1f98a522cb13787b17",
+    "research/sN/trees/overnight_uniform_doublewheel7_cutcancel.json": "0e584430ed42131aa2c02dc30b635980cc909943993b91e7207212eff63af6f5",
+    "research/sN/trees/overnight_uniform_doublewheel7_cutcancel.log": "0e584430ed42131aa2c02dc30b635980cc909943993b91e7207212eff63af6f5",
+    "research/sN/trees/overnight_uniform_doublewheel7_cutcancel.py": "911bf5f15fb5e5b23e5f76809267dfe6e0d665290060ffb7b426fe3e40616b7a",
+    "research/sN/trees/overnight_uniform_doublewheel7_fractions.json": "1bdc86b0819bd06c5ca9d28faa03c72e790f59f6fce973209ab10fd42158e7a7",
+    "research/sN/trees/overnight_uniform_doublewheel7_single.json": "fe323a82d9ba36befdce19baaeac764f9c010f851bda3fd76fc6c1b72719ea6a",
+    "research/sN/trees/overnight_uniform_doublewheel7_single.log": "fc23f4fc4c3b559f5c9a94feb1c255c05ad3a4ae9821eb91b7d3250e5223c0d0",
+    "research/sN/trees/overnight_uniform_doublewheel7_single.py": "996315faca94bdbc09119a19684151d83eb4b2540502681a88c2386d743f69e4",
+    "research/sN/trees/overnight_uniform_doublewheel7_verify.json": "bfdb12a67af931df2325ddf007e93f02e0f220b2b276587c27e9f153456add40",
+    "research/sN/trees/overnight_uniform_doublewheel7_verify.log": "2ceed1d07f1c6816f71c0bef0207718811d506c4390d6d976d8877ec06d40aba",
+    "research/sN/trees/overnight_uniform_doublewheel7_verify.py": "3662d395bdc11e499027ba8bafdcf07dbf1804d5c89c9bd4875eab6de0ff6681",
+    "research/sN/trees/overnight_uniform_doublewheel_verify.json": "aef131d285c8b2fd1233f9bee59abf76266692f5d1dcbc08abeeec91ba721016",
+    "research/sN/trees/overnight_uniform_doublewheel_verify.log": "aef131d285c8b2fd1233f9bee59abf76266692f5d1dcbc08abeeec91ba721016",
+    "research/sN/trees/overnight_uniform_doublewheel_verify.py": "0340f79f7d4b677d00a6e0ba2dff098743434268146243317ae03461731e9d33",
+    "research/sN/trees/overnight_uniform_torus_cycle.json": "571accb66b31559def4fc42c01fb4a2bcce1e6755a2ba463cec75fc02644d69d",
+    "research/sN/trees/overnight_uniform_torus_cycle.log": "857080333e5f4354070efa042f56c638caa2e100b2d1188e6fde3d0ba4acd14b",
+    "research/sN/trees/overnight_uniform_torus_cycle.md": "0e603a9e6e3880fc115c6eb5635d9549c8eaec5ad991a0c510a8577a1fb750ab",
+    "research/sN/trees/overnight_uniform_torus_cycle.py": "468851a322db8089fc54efb697265e7229c061a9742aee1d739db45e09875f35",
+    "research/sN/trees/overnight_uniform_torus_cycle_verify.json": "6cf80c5a8391e3563ef22406d7afc4be3da737e6fa9f277f921773ce1fc4b155",
+    "research/sN/trees/overnight_uniform_torus_cycle_verify.log": "6cf80c5a8391e3563ef22406d7afc4be3da737e6fa9f277f921773ce1fc4b155",
+    "research/sN/trees/overnight_uniform_torus_cycle_verify.py": "d4ed52b1d5c2da812cc0e22b13b58c40e3c18d766b499bb97e683c57047b1703"
+  },
+  "receipts": {
+    "overnight_uniform_doublewheel_verify": {
+      "status": "INDEPENDENT_N5_DOUBLEWHEEL_CHECK_PASS",
+      "rows": [
+        {
+          "unit_index": 0,
+          "residue": "-12*(a**2 - a*b + b**2)/(a*b*(a - b)*(a + b)*(2*a - b))",
+          "outside_apex_terms_zero": 48
+        },
+        {
+          "unit_index": 1,
+          "residue": "4*(12*a**4 - 14*a**3*b + 13*a**2*b**2 + 2*a*b**3 - b**4)/(a*b*(a - b)*(a + b)*(2*a - b)*(2*a + b)*(3*a - b))",
+          "outside_apex_terms_zero": 48
+        },
+        {
+          "unit_index": 2,
+          "residue": "8/(a*b*(a - b))",
+          "outside_apex_terms_zero": 48
+        }
+      ],
+      "independence": "unique poles b=-2a, then b=-a, then nonzero remaining function",
+      "checker_sha256": "0340f79f7d4b677d00a6e0ba2dff098743434268146243317ae03461731e9d33",
+      "scope": "No producer import. Uses positive-endpoint components with a root-dependent head shift and actual successive rational limits, including all120 permutations per unit."
+    },
+    "overnight_uniform_doublewheel7_verify": {
+      "status": "EXACT_NONZERO_OUTWARD_TWIN_FUNCTION_WITH_ZERO_LEAF_DOUBLEWHEELS",
+      "units": [
+        {
+          "root": 1,
+          "apex": 0,
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ]
+        },
+        {
+          "root": 1,
+          "apex": 0,
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ]
+        }
+      ],
+      "weights": [
+        -3,
+        2
+      ],
+      "orbit_convention": "Unaveraged fullS7 sums; every labelled permutation included.",
+      "residue_chart": "(a,s-a,t-a,b,c,d,a-b-c-d-s-t)",
+      "fraction_counts": [
+        36,
+        36
+      ],
+      "common_fraction_count": 36,
+      "every_fraction_coefficient_cancels": true,
+      "outside_apex_terms_checked": [
+        2880,
+        2880
+      ],
+      "nonzero_point": [
+        -33,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "individual_values": [
+        "-8473128079308598300229668331/13368122966379207523376880000000",
+        "89431280477857210889795702369/521121301415530983372965760000000"
+      ],
+      "nonzero_value": "1023022803722705038478750493973/455746540313582618712131520000000",
+      "fraction_coefficients": [
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1,
+              1
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              -1,
+              0,
+              0
+            ],
+            [
+              3,
+              -1,
+              0,
+              0
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              -1,
+              0,
+              -1
+            ],
+            [
+              3,
+              -1,
+              0,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              -1,
+              -1,
+              0
+            ],
+            [
+              3,
+              -1,
+              -1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1,
+              1
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              -1,
+              0
+            ],
+            [
+              3,
+              0,
+              -1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              -1,
+              -1
+            ],
+            [
+              3,
+              0,
+              -1,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              -1,
+              -1,
+              0
+            ],
+            [
+              3,
+              -1,
+              -1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              -1,
+              0,
+              0
+            ],
+            [
+              3,
+              -1,
+              0,
+              0
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              -1,
+              0
+            ],
+            [
+              3,
+              0,
+              -1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              -1,
+              0,
+              -1
+            ],
+            [
+              3,
+              -1,
+              0,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              -1,
+              -1
+            ],
+            [
+              3,
+              0,
+              -1,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              2,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              2,
+              1,
+              0,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1,
+              1
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              -1
+            ],
+            [
+              3,
+              0,
+              0,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              -1,
+              -1
+            ],
+            [
+              3,
+              0,
+              -1,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              -1,
+              0,
+              -1
+            ],
+            [
+              3,
+              -1,
+              0,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              -1,
+              0,
+              0
+            ],
+            [
+              3,
+              -1,
+              0,
+              0
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              -1
+            ],
+            [
+              3,
+              0,
+              0,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              -1,
+              -1,
+              0
+            ],
+            [
+              3,
+              -1,
+              -1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              -1,
+              -1
+            ],
+            [
+              3,
+              0,
+              -1,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              2,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              -1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              2,
+              1,
+              1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              -1,
+              0
+            ],
+            [
+              3,
+              0,
+              -1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              -1
+            ],
+            [
+              3,
+              0,
+              0,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "-4",
+            "-6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              -1,
+              -1,
+              0
+            ],
+            [
+              3,
+              -1,
+              -1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              -1,
+              0,
+              -1
+            ],
+            [
+              3,
+              -1,
+              0,
+              -1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              2,
+              1,
+              0,
+              1
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        },
+        {
+          "denominator": [
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              2,
+              1,
+              1,
+              0
+            ]
+          ],
+          "coefficients": [
+            "4",
+            "6"
+          ]
+        }
+      ],
+      "seconds": 0.15938554799504345,
+      "checker_sha256": "3662d395bdc11e499027ba8bafdcf07dbf1804d5c89c9bd4875eab6de0ff6681",
+      "scope": "Refutes injectivity of the complete leaf-double-wheel leading map on the symmetric outward-twin span atN7. Does not put the maximum in that span or refute outward-twin separation."
+    },
+    "overnight_uniform_doublewheel7_crossapex_verify": {
+      "status": "INDEPENDENT_ROOTED_CUT_CROSS_APEX_AND_SPLITTING_CHECK_PASS",
+      "rows": [
+        {
+          "size": 3,
+          "order": 0,
+          "individual_values": [
+            "5512019473/411163418391115500000",
+            "0"
+          ],
+          "witness_value": "-5512019473/137054472797038500000"
+        },
+        {
+          "size": 3,
+          "order": 1,
+          "individual_values": [
+            "5512019473/411163418391115500000",
+            "0"
+          ],
+          "witness_value": "-5512019473/137054472797038500000"
+        },
+        {
+          "size": 4,
+          "order": 0,
+          "individual_values": [
+            "0",
+            "3359973/341632714423000000"
+          ],
+          "witness_value": "3359973/170816357211500000"
+        },
+        {
+          "size": 4,
+          "order": 1,
+          "individual_values": [
+            "0",
+            "3359973/341632714423000000"
+          ],
+          "witness_value": "3359973/170816357211500000"
+        }
+      ],
+      "inward_edge_factorization_controls": [
+        {
+          "root": 1,
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "child": 4,
+          "hub": 1,
+          "detached_size": 1,
+          "residue": "1/9121427993016000"
+        },
+        {
+          "root": 1,
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "child": 3,
+          "hub": 1,
+          "detached_size": 1,
+          "residue": "-1/203042987124536160"
+        },
+        {
+          "root": 1,
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "child": 2,
+          "hub": 1,
+          "detached_size": 3,
+          "residue": "-11881/8595397751143536000"
+        },
+        {
+          "root": 1,
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "child": 3,
+          "hub": 1,
+          "detached_size": 1,
+          "residue": "-1/476941896361425600"
+        },
+        {
+          "root": 1,
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "child": 2,
+          "hub": 1,
+          "detached_size": 4,
+          "residue": "13924/13224834437633435475"
+        }
+      ],
+      "seconds": 0.9313613819977036,
+      "checker_sha256": "391fb4795b52195a9284fbd1a445cb32b24ddc13b37a1a1f98a522cb13787b17",
+      "scope": "Exact controls for the nonzero residue and the displayed general cut-matching proof. Does not claim injectivity of the enlarged residue map."
+    },
+    "overnight_uniform_doublewheel7_cutcancel": {
+      "status": "EXACT_COMMON_DENOMINATOR_ORDINARY_THREE_CUT_CANCELLATION",
+      "fraction_records": 60,
+      "common_linear_forms": 28,
+      "common_denominator_degree": 28,
+      "zero_polynomial": true,
+      "seconds": 0.17160014300316107,
+      "checker_sha256": "911bf5f15fb5e5b23e5f76809267dfe6e0d665290060ffb7b426fe3e40616b7a",
+      "scope": "Completes the exact ordinary noncoordinate cut-pole cancellation for this two-term symmetric N7 witness; no statement about coordinate poles or shifted-minus poles vanishing."
+    },
+    "overnight_uniform_torus_cycle_verify": {
+      "status": "INDEPENDENT_ITERATED_TORUS_RESIDUE_CHECK_PASS",
+      "rows": [
+        {
+          "character": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            -1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            -1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            -1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            -1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "value": "60"
+        },
+        {
+          "character": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "value": "60"
+        },
+        {
+          "character": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "value": "36"
+        },
+        {
+          "character": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "value": "84"
+        }
+      ],
+      "all_character_value": "672",
+      "nontrivial_value": "636",
+      "seconds": 15.235676026000874,
+      "checker_sha256": "d4ed52b1d5c2da812cc0e22b13b58c40e3c18d766b499bb97e683c57047b1703",
+      "scope": "Starts from unsimplified multiplicative G and uses direct symbolic residues. No producer import or custom Taylor-quotient recurrence."
+    }
+  },
+  "temporary_directory": "/tmp/max_doublewheel_root_fresh_ifbydt8t"
+}

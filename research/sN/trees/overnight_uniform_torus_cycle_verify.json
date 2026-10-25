@@ -1,0 +1,170 @@
+{
+  "status": "INDEPENDENT_ITERATED_TORUS_RESIDUE_CHECK_PASS",
+  "rows": [
+    {
+      "character": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "value": "60"
+    },
+    {
+      "character": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "value": "60"
+    },
+    {
+      "character": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "value": "36"
+    },
+    {
+      "character": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "value": "84"
+    }
+  ],
+  "all_character_value": "672",
+  "nontrivial_value": "636",
+  "seconds": 15.242386013000214,
+  "checker_sha256": "d4ed52b1d5c2da812cc0e22b13b58c40e3c18d766b499bb97e683c57047b1703",
+  "scope": "Starts from unsimplified multiplicative G and uses direct symbolic residues. No producer import or custom Taylor-quotient recurrence."
+}

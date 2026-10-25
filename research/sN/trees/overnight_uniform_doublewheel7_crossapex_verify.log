@@ -1,0 +1,191 @@
+{
+  "status": "INDEPENDENT_ROOTED_CUT_CROSS_APEX_AND_SPLITTING_CHECK_PASS",
+  "rows": [
+    {
+      "size": 3,
+      "order": 0,
+      "individual_values": [
+        "5512019473/411163418391115500000",
+        "0"
+      ],
+      "witness_value": "-5512019473/137054472797038500000"
+    },
+    {
+      "size": 3,
+      "order": 1,
+      "individual_values": [
+        "5512019473/411163418391115500000",
+        "0"
+      ],
+      "witness_value": "-5512019473/137054472797038500000"
+    },
+    {
+      "size": 4,
+      "order": 0,
+      "individual_values": [
+        "0",
+        "3359973/341632714423000000"
+      ],
+      "witness_value": "3359973/170816357211500000"
+    },
+    {
+      "size": 4,
+      "order": 1,
+      "individual_values": [
+        "0",
+        "3359973/341632714423000000"
+      ],
+      "witness_value": "3359973/170816357211500000"
+    }
+  ],
+  "inward_edge_factorization_controls": [
+    {
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "child": 4,
+      "hub": 1,
+      "detached_size": 1,
+      "residue": "1/9121427993016000"
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "child": 3,
+      "hub": 1,
+      "detached_size": 1,
+      "residue": "-1/203042987124536160"
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "child": 2,
+      "hub": 1,
+      "detached_size": 3,
+      "residue": "-11881/8595397751143536000"
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "child": 3,
+      "hub": 1,
+      "detached_size": 1,
+      "residue": "-1/476941896361425600"
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "child": 2,
+      "hub": 1,
+      "detached_size": 4,
+      "residue": "13924/13224834437633435475"
+    }
+  ],
+  "seconds": 0.9507297750024009,
+  "checker_sha256": "391fb4795b52195a9284fbd1a445cb32b24ddc13b37a1a1f98a522cb13787b17",
+  "scope": "Exact controls for the nonzero residue and the displayed general cut-matching proof. Does not claim injectivity of the enlarged residue map."
+}

@@ -1,0 +1,10 @@
+{
+  "status": "EXACT_COMMON_DENOMINATOR_ORDINARY_THREE_CUT_CANCELLATION",
+  "fraction_records": 60,
+  "common_linear_forms": 28,
+  "common_denominator_degree": 28,
+  "zero_polynomial": true,
+  "seconds": 0.16613845100073377,
+  "checker_sha256": "911bf5f15fb5e5b23e5f76809267dfe6e0d665290060ffb7b426fe3e40616b7a",
+  "scope": "Completes the exact ordinary noncoordinate cut-pole cancellation for this two-term symmetric N7 witness; no statement about coordinate poles or shifted-minus poles vanishing."
+}

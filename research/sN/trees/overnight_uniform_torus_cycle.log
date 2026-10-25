@@ -1,0 +1,32 @@
+{"character": [1, 1, 1, 1, 1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.433
+{"character": [-1, 1, 1, 1, -1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.433
+{"character": [-1, 1, 1, -1, 1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.434
+{"character": [1, 1, 1, -1, -1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.434
+{"character": [-1, 1, -1, 1, 1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.479
+{"character": [1, 1, -1, 1, -1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.479
+{"character": [1, 1, -1, -1, 1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.526
+{"character": [-1, 1, -1, -1, -1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.536
+{"character": [-1, -1, 1, 1, 1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.91
+{"character": [1, -1, 1, 1, -1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.91
+{"character": [1, -1, 1, -1, 1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.91
+{"character": [-1, -1, 1, -1, -1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 0.911
+{"character": [1, -1, -1, 1, 1], "full_star_orbit_value": "60", "maximum_value": 1} seconds 1.237
+{"character": [-1, -1, -1, 1, -1], "full_star_orbit_value": "60", "maximum_value": 1} seconds 1.244
+{"character": [-1, -1, -1, -1, 1], "full_star_orbit_value": "36", "maximum_value": 1} seconds 1.334
+{"character": [1, -1, -1, -1, -1], "full_star_orbit_value": "84", "maximum_value": 1} seconds 1.341
+{
+  "status": "EXACT_N5_ITERATED_TORUS_CYCLE_GATE",
+  "coordinate_order": [
+    "z1",
+    "z2",
+    "z3",
+    "z4"
+  ],
+  "all_character_star_value": "672",
+  "all_character_maximum_value": 16,
+  "nontrivial_character_star_value": "636",
+  "nontrivial_character_maximum_value": 15,
+  "seconds": 1.340740977000678,
+  "producer_sha256": "468851a322db8089fc54efb697265e7229c061a9742aee1d739db45e09875f35",
+  "scope": "Iterated residues F(z)*product_i dz_i/(z_i-chi_i), with z0=(z1*z2*z3*z4)^-1. All wheel/test-pole collisions include their derivative residues. One fixed coordinate order and uniform character sums only."
+}

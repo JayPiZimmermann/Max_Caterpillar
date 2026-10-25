@@ -1,0 +1,4 @@
+{"subset_size": 3, "order": "s_then_t", "symbolic_fraction_dictionary_zero": false, "surviving_fraction_records": 6, "individual_values": ["5512019473/411163418391115500000", "0"], "witness_value": "-5512019473/137054472797038500000"}
+{"subset_size": 3, "order": "t_then_s", "symbolic_fraction_dictionary_zero": false, "surviving_fraction_records": 6, "individual_values": ["5512019473/411163418391115500000", "0"], "witness_value": "-5512019473/137054472797038500000"}
+{"subset_size": 4, "order": "s_then_t", "symbolic_fraction_dictionary_zero": false, "surviving_fraction_records": 4, "individual_values": ["0", "3359973/341632714423000000"], "witness_value": "3359973/170816357211500000"}
+{"subset_size": 4, "order": "t_then_s", "symbolic_fraction_dictionary_zero": false, "surviving_fraction_records": 4, "individual_values": ["0", "3359973/341632714423000000"], "witness_value": "3359973/170816357211500000"}

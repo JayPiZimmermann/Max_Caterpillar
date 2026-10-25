@@ -1,0 +1,59 @@
+{
+  "status": "EXACT_CROSS_APEX_CUT_POLE_CONTROL",
+  "rows": [
+    {
+      "subset_size": 3,
+      "order": "s_then_t",
+      "symbolic_fraction_dictionary_zero": false,
+      "surviving_fraction_records": 6,
+      "individual_values": [
+        "5512019473/411163418391115500000",
+        "0"
+      ],
+      "witness_value": "-5512019473/137054472797038500000"
+    },
+    {
+      "subset_size": 3,
+      "order": "t_then_s",
+      "symbolic_fraction_dictionary_zero": false,
+      "surviving_fraction_records": 6,
+      "individual_values": [
+        "5512019473/411163418391115500000",
+        "0"
+      ],
+      "witness_value": "-5512019473/137054472797038500000"
+    },
+    {
+      "subset_size": 4,
+      "order": "s_then_t",
+      "symbolic_fraction_dictionary_zero": false,
+      "surviving_fraction_records": 4,
+      "individual_values": [
+        "0",
+        "3359973/341632714423000000"
+      ],
+      "witness_value": "3359973/170816357211500000"
+    },
+    {
+      "subset_size": 4,
+      "order": "t_then_s",
+      "symbolic_fraction_dictionary_zero": false,
+      "surviving_fraction_records": 4,
+      "individual_values": [
+        "0",
+        "3359973/341632714423000000"
+      ],
+      "witness_value": "3359973/170816357211500000"
+    }
+  ],
+  "free_frequency_point": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "frequency_rule": "H1=omega_a-sum_S=s; H2=omega_b-sum_S=t, a,b outside S",
+  "seconds": 0.25963177099765744,
+  "producer_sha256": "e97a485a3d4e7b6b4d8dbbddade1965391803d6c3cc74e80d13d73bac855da6e",
+  "scope": "A nonzero value detects this witness only; no injectivity or separator claim."
+}

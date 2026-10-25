@@ -1,0 +1,95 @@
+{"first_subset_size": 1, "second_subset_size": 1, "second_sign": 1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["-61970780439871563665032502906331958831/1089508903802922033494670086128941829912024650000", "-61970780439871563665032502906331958831/726339269201948022329780057419294553274683100000"], "witness_value": "0"} seconds 0.149
+{"first_subset_size": 1, "second_subset_size": 1, "second_sign": 1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["-61970780439871563665032502906331958831/1089508903802922033494670086128941829912024650000", "-61970780439871563665032502906331958831/726339269201948022329780057419294553274683100000"], "witness_value": "0"} seconds 0.15
+{"first_subset_size": 2, "second_subset_size": 1, "second_sign": 1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["41029337/3019469777824500000", "41029337/2012979851883000000"], "witness_value": "0"} seconds 0.284
+{"first_subset_size": 2, "second_subset_size": 1, "second_sign": 1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["41029337/3019469777824500000", "41029337/2012979851883000000"], "witness_value": "0"} seconds 0.284
+{"first_subset_size": 3, "second_subset_size": 1, "second_sign": 1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["100899101/6224519775474000000", "100899101/4149679850316000000"], "witness_value": "0"} seconds 0.42
+{"first_subset_size": 3, "second_subset_size": 1, "second_sign": 1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["100899101/6224519775474000000", "100899101/4149679850316000000"], "witness_value": "0"} seconds 0.42
+{"first_subset_size": 2, "second_subset_size": 2, "second_sign": 1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 0.554
+{"first_subset_size": 2, "second_subset_size": 2, "second_sign": 1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 0.554
+{"first_subset_size": 4, "second_subset_size": 1, "second_sign": 1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["-233498854679159247249785113244260749515531231/5279923416972177769833162282064887900095167627034400000", "-233498854679159247249785113244260749515531231/3519948944648118513222108188043258600063445084689600000"], "witness_value": "0"} seconds 0.695
+{"first_subset_size": 4, "second_subset_size": 1, "second_sign": 1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["-233498854679159247249785113244260749515531231/5279923416972177769833162282064887900095167627034400000", "-233498854679159247249785113244260749515531231/3519948944648118513222108188043258600063445084689600000"], "witness_value": "0"} seconds 0.696
+{"first_subset_size": 3, "second_subset_size": 2, "second_sign": 1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 0.84
+{"first_subset_size": 3, "second_subset_size": 2, "second_sign": 1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 0.84
+{"first_subset_size": 1, "second_subset_size": 1, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["-233498854679159247249785113244260749515531231/5279923416972177769833162282064887900095167627034400000", "-233498854679159247249785113244260749515531231/3519948944648118513222108188043258600063445084689600000"], "witness_value": "0"} seconds 0.987
+{"first_subset_size": 1, "second_subset_size": 1, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 0.987
+{"first_subset_size": 1, "second_subset_size": 2, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["1773863/104207730957000000", "1773863/69471820638000000"], "witness_value": "0"} seconds 1.14
+{"first_subset_size": 1, "second_subset_size": 2, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.14
+{"first_subset_size": 1, "second_subset_size": 3, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["3667333997/273017422482304500000", "3667333997/182011614988203000000"], "witness_value": "0"} seconds 1.264
+{"first_subset_size": 1, "second_subset_size": 3, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.264
+{"first_subset_size": 1, "second_subset_size": 4, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["-61970780439871563665032502906331958831/1089508903802922033494670086128941829912024650000", "-61970780439871563665032502906331958831/726339269201948022329780057419294553274683100000"], "witness_value": "0"} seconds 1.397
+{"first_subset_size": 1, "second_subset_size": 4, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.397
+{"first_subset_size": 2, "second_subset_size": 1, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.534
+{"first_subset_size": 2, "second_subset_size": 1, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.534
+{"first_subset_size": 2, "second_subset_size": 2, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.659
+{"first_subset_size": 2, "second_subset_size": 2, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.659
+{"first_subset_size": 2, "second_subset_size": 3, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["41029337/3019469777824500000", "41029337/2012979851883000000"], "witness_value": "0"} seconds 1.782
+{"first_subset_size": 2, "second_subset_size": 3, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.782
+{"first_subset_size": 3, "second_subset_size": 1, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.907
+{"first_subset_size": 3, "second_subset_size": 1, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 1.907
+{"first_subset_size": 3, "second_subset_size": 2, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["100899101/6224519775474000000", "100899101/4149679850316000000"], "witness_value": "0"} seconds 2.033
+{"first_subset_size": 3, "second_subset_size": 2, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 2.034
+{"first_subset_size": 4, "second_subset_size": 1, "second_sign": -1, "order": "s_then_t", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["-233498854679159247249785113244260749515531231/5279923416972177769833162282064887900095167627034400000", "-233498854679159247249785113244260749515531231/3519948944648118513222108188043258600063445084689600000"], "witness_value": "0"} seconds 2.166
+{"first_subset_size": 4, "second_subset_size": 1, "second_sign": -1, "order": "t_then_s", "symbolic_fraction_dictionary_zero": true, "surviving_fraction_records": 0, "individual_values": ["0", "0"], "witness_value": "0"} seconds 2.166
+{
+  "status": "EXACT_BRANCH_WHEEL_CONTROLS_ON_THE_TWO_TERM_WITNESS",
+  "frequency_rule": "H1=a+sum_S=s; H2=a+sign*sum_T=t; free(a,b,c,d)=(1,10,100,1000)",
+  "units": [
+    {
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    }
+  ],
+  "weights": [
+    -3,
+    2
+  ],
+  "seconds": 2.1657614409996313,
+  "producer_sha256": "b7bd031f4d098208efde2a27855d724982bdbdd91bda824d6c48a2ac22eb1a31",
+  "scope": "Dictionary-zero rows are exact rational identities. A nonzero rational evaluation proves that branch detects this witness. Zero evaluations with surviving dictionary entries alone would be inconclusive."
+}
