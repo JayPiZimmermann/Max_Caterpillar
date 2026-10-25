@@ -1,0 +1,31 @@
+{
+  "status": "INDEPENDENT_EXACT_COMPLETE_AFFINE_TWO_PAGE_OBSTRUCTION",
+  "lower_coverage": [
+    {
+      "k": 2,
+      "columns": 3,
+      "rank": 3,
+      "complete_kernel": 0
+    },
+    {
+      "k": 3,
+      "columns": 16,
+      "rank": 15,
+      "complete_kernel": 1
+    },
+    {
+      "k": 4,
+      "columns": 135,
+      "rank": 120,
+      "complete_kernel": 15
+    }
+  ],
+  "all_fifth_graphs": 1581,
+  "two_page_fifth_graphs": 1509,
+  "gauge_directions": 16,
+  "separator_terms": 31,
+  "target_pairing": "1",
+  "certificate_sha256": "9e9f29a3e9d4dd4aff8caa92e457bef293d2aa0b55922e1884fa9d3fc9f642e3",
+  "checker_sha256": "6303ff068682ff04883d1d18f4c8096eb9062d59b5f7e10f850b13b04d3dd163",
+  "seconds": 0.2654076420003548
+}

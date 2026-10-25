@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_ordered_sparse_homotopy.py"
+  ],
+  "started_utc": "2026-10-25T03:09:23.360622+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_ordered_sparse_homotopy.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 2.632409917001496,
+  "finished_utc": "2026-10-25T03:09:25.993036+00:00"
+}

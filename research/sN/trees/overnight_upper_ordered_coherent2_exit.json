@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_ordered_coherent.py"
+  ],
+  "started_utc": "2026-10-25T02:43:30.564348+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_ordered_coherent2.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.11571796799398726,
+  "finished_utc": "2026-10-25T02:43:30.680066+00:00"
+}

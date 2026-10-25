@@ -1,0 +1,165 @@
+{
+  "status": "EXACT_NORMALIZED_GRAPH_COMPLEX_CONTROLS",
+  "records": [
+    {
+      "exterior_degree": 2,
+      "dimensions": [
+        0,
+        0,
+        3,
+        3
+      ],
+      "differential_ranks": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "exact_in_every_normalized_degree": true,
+      "source_graphs": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "target_graphs": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "differential": [
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "1",
+          "-1"
+        ],
+        [
+          "1",
+          "0",
+          "-1"
+        ]
+      ],
+      "inverse": [
+        [
+          "1/2",
+          "-1/2",
+          "1/2"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "-1/2",
+          "-1/2"
+        ]
+      ]
+    },
+    {
+      "exterior_degree": 3,
+      "dimensions": [
+        0,
+        0,
+        1,
+        16,
+        30,
+        15
+      ],
+      "differential_ranks": [
+        0,
+        0,
+        1,
+        15,
+        15,
+        0
+      ],
+      "exact_in_every_normalized_degree": true
+    },
+    {
+      "exterior_degree": 4,
+      "dimensions": [
+        0,
+        0,
+        0,
+        15,
+        135,
+        330,
+        315,
+        105
+      ],
+      "differential_ranks": [
+        0,
+        0,
+        0,
+        15,
+        120,
+        210,
+        105,
+        0
+      ],
+      "exact_in_every_normalized_degree": true
+    }
+  ],
+  "producer_sha256": "642e3495c7991c6168e89d5ab96086b74a14ad19d7c090e1155b64c20cd5146d",
+  "scope": "Exact graph-model differential and acyclicity controls for exterior degrees2,3,4. The uniform EZ proof and quantitative homotopy still require a separate argument."
+}

@@ -1,0 +1,4 @@
+ALL PARTITION IDENTITIES PASS 633 SECONDS 0.2541165699949488
+SPARSE GRAPH HOMOTOPY {'exterior_degree': 2, 'graphs_checked': 6, 'complete': True, 'max_primitive_terms': 3, 'maximum_graph': (4, ((0, 1), (2, 3)))} SECONDS 0.2593211409985088
+SPARSE GRAPH HOMOTOPY {'exterior_degree': 3, 'graphs_checked': 62, 'complete': True, 'max_primitive_terms': 25, 'maximum_graph': (6, ((0, 1), (2, 4), (3, 5)))} SECONDS 0.4353268279955955
+SPARSE GRAPH HOMOTOPY {'exterior_degree': 4, 'graphs_checked': 115, 'complete': False, 'max_primitive_terms': 113, 'maximum_graph': (8, ((0, 2), (1, 6), (3, 5), (4, 7)))} SECONDS 2.532895323995035

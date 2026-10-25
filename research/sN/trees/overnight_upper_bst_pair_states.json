@@ -1,0 +1,534 @@
+{
+  "status": "BOUNDED_COUPLED_BST_GEOMETRIC_ADMISSIBILITY_CONTROLS",
+  "records": [
+    {
+      "n": 3,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "character": "plain",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 8,
+      "failure": null
+    },
+    {
+      "n": 3,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "character": "signed",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 8,
+      "failure": null
+    },
+    {
+      "n": 3,
+      "first": [
+        0,
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "character": "plain",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 7,
+      "failure": null
+    },
+    {
+      "n": 3,
+      "first": [
+        0,
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "character": "signed",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 8,
+      "failure": null
+    },
+    {
+      "n": 3,
+      "first": [
+        2,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "second": [
+        2,
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "character": "plain",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 8,
+      "failure": null
+    },
+    {
+      "n": 3,
+      "first": [
+        2,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "second": [
+        2,
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "character": "signed",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 8,
+      "failure": null
+    },
+    {
+      "n": 3,
+      "first": [
+        2,
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "second": [
+        2,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "character": "plain",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 7,
+      "failure": null
+    },
+    {
+      "n": 3,
+      "first": [
+        2,
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ],
+      "second": [
+        2,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "character": "signed",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 8,
+      "failure": null
+    },
+    {
+      "n": 4,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "character": "plain",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 24,
+      "failure": null
+    },
+    {
+      "n": 4,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      ],
+      "character": "signed",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 43,
+      "failure": null
+    },
+    {
+      "n": 4,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "character": "plain",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 23,
+      "failure": null
+    },
+    {
+      "n": 4,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "character": "signed",
+      "status": "NECESSARY_ITERATED_POLE_CONTROL_PASS",
+      "visited_states": 45,
+      "failure": null
+    },
+    {
+      "n": 4,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ],
+      "character": "plain",
+      "status": "EXACT_NON_CPWL_ITERATED_POLE",
+      "visited_states": 2,
+      "failure": {
+        "trace": [
+          "a1 + a2"
+        ],
+        "dimension": 3,
+        "expression": "4*a0*(a0**2*a2 + 2*a0**2*a3 - a2**2*a3)/(a2*a3**2*(a0 - a3)*(a0 + a3)*(2*a0 - a2)*(2*a0 + a2)*(a2 + a3))",
+        "repeated_factor": "a3",
+        "order": 2
+      }
+    },
+    {
+      "n": 4,
+      "first": [
+        0,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "second": [
+        0,
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ],
+      "character": "signed",
+      "status": "EXACT_NON_CPWL_ITERATED_POLE",
+      "visited_states": 2,
+      "failure": {
+        "trace": [
+          "a1 + a2"
+        ],
+        "dimension": 3,
+        "expression": "-4*a0**2*(2*a0**2 - a2*a3)/(a2*a3**2*(a0 - a3)*(a0 + a3)*(2*a0 - a2)*(2*a0 + a2)*(a2 + a3))",
+        "repeated_factor": "a3",
+        "order": 2
+      }
+    }
+  ],
+  "seconds": 14.493652944001951,
+  "producer_sha256": "d1e7c175d1a3a64fe27f42efd2ce3e885b38d3c89dab47beaf539d3b7466b5b8",
+  "scope": "A failure is an exact necessary CPWL-pole obstruction. Passing all tested flags is not a sufficiency theorem or a paramid representation."
+}

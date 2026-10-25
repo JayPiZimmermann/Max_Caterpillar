@@ -1,0 +1,213 @@
+{
+  "status": "EXACT_SPARSE_PARTITION_AND_GRAPH_HOMOTOPY_CONTROLS",
+  "partition_checks": 633,
+  "records": [
+    {
+      "exterior_degree": 2,
+      "graphs_checked": 6,
+      "complete": true,
+      "max_primitive_terms": 3,
+      "maximum_graph": [
+        4,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "exterior_degree": 3,
+      "graphs_checked": 62,
+      "complete": true,
+      "max_primitive_terms": 25,
+      "maximum_graph": [
+        6,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      ]
+    },
+    {
+      "exterior_degree": 4,
+      "graphs_checked": 115,
+      "complete": false,
+      "max_primitive_terms": 113,
+      "maximum_graph": [
+        8,
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      ]
+    }
+  ],
+  "two_edge_inverse": [
+    {
+      "graph": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "primitive": [
+        [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "1"
+        ],
+        [
+          [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "1/2"
+        ],
+        [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "1/2"
+        ]
+      ]
+    },
+    {
+      "graph": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "primitive": [
+        [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "-1/2"
+        ],
+        [
+          [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "-1/2"
+        ]
+      ]
+    },
+    {
+      "graph": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "primitive": [
+        [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "1/2"
+        ],
+        [
+          [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "-1/2"
+        ]
+      ]
+    }
+  ],
+  "producer_sha256": "09d4ccbe2db9d33247ad4cee82ca21d6476572f202aa86824048f8af717a6d33",
+  "seconds": 2.5332020319983712,
+  "scope": "The displayed formulas have an algebraic uniform homotopy proof; these are exact finite convention controls. Polynomial primitive branching per input graph is not a total exponential network-width bound."
+}

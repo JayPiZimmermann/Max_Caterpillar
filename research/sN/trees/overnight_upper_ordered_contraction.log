@@ -1,0 +1,6 @@
+ORDERED FILL INPUT 4 OLD 3 FACET 9 CORRECTED 41 SECONDS 0.002810582001984585
+ORDERED FILL COMPLETE {'simplex_dimension': 4, 'target_scalar': 2, 'cubes': 48, 'facet_cubes': 9, 'corrected_cubes': 41, 'contraction': {'input_cubes': 41, 'forward_basis_terms': 119, 'contracted_basis_terms': 65, 'output_cubes': 48, 'seconds': 0.0031967120012268424}, 'max_head_l1': 4, 'max_coefficient_bits': 3} SECONDS 0.006626193004194647
+ORDERED FILL INPUT 5 OLD 48 FACET 190 CORRECTED 1614 SECONDS 0.0824243530005333
+ORDERED FILL COMPLETE {'simplex_dimension': 5, 'target_scalar': 12, 'cubes': 6146, 'facet_cubes': 190, 'corrected_cubes': 1614, 'contraction': {'input_cubes': 1614, 'forward_basis_terms': 7158, 'contracted_basis_terms': 6206, 'output_cubes': 6146, 'seconds': 0.23134780200052774}, 'max_head_l1': 11, 'max_coefficient_bits': 6} SECONDS 0.4028430449980078
+ORDERED FILL INPUT 6 OLD 6146 FACET 29612 CORRECTED 478162 SECONDS 13.18517422900186
+DONE 4 SECONDS 13.185364668002876

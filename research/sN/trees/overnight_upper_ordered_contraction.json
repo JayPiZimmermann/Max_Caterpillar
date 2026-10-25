@@ -1,0 +1,60 @@
+{
+  "status": "EXACT_ORDERED_CUBICAL_RECURRENCE_CONTROLS",
+  "records": [
+    {
+      "simplex_dimension": 3,
+      "target_scalar": 1,
+      "contraction": {
+        "input_cubes": 6,
+        "forward_basis_terms": 6,
+        "contracted_basis_terms": 3,
+        "output_cubes": 3,
+        "seconds": 0.00021145999926375225
+      },
+      "equals_three_cube_base": true,
+      "cubes": 3
+    },
+    {
+      "simplex_dimension": 4,
+      "target_scalar": 2,
+      "cubes": 48,
+      "facet_cubes": 9,
+      "corrected_cubes": 41,
+      "contraction": {
+        "input_cubes": 41,
+        "forward_basis_terms": 119,
+        "contracted_basis_terms": 65,
+        "output_cubes": 48,
+        "seconds": 0.0031967120012268424
+      },
+      "max_head_l1": 4,
+      "max_coefficient_bits": 3
+    },
+    {
+      "simplex_dimension": 5,
+      "target_scalar": 12,
+      "cubes": 6146,
+      "facet_cubes": 190,
+      "corrected_cubes": 1614,
+      "contraction": {
+        "input_cubes": 1614,
+        "forward_basis_terms": 7158,
+        "contracted_basis_terms": 6206,
+        "output_cubes": 6146,
+        "seconds": 0.23134780200052774
+      },
+      "max_head_l1": 11,
+      "max_coefficient_bits": 6
+    },
+    {
+      "simplex_dimension": 6,
+      "status": "PREDECLARED_SUPPORT_OR_TIME_STOP",
+      "facet_cubes": 29612,
+      "corrected_cubes": 478162
+    }
+  ],
+  "independent_translated_cycle_controls": 6,
+  "producer_sha256": "59910f5217089e01cbc6e4d03944fb04eb057c8f846d0996f927e31e5e4fdae8",
+  "seconds": 13.185364668002876,
+  "scope": "Every completed recurrence equality is checked as an exact integer cubical chain. Support measurements do not prove an exponential width bound."
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_ordered_contraction.py",
+    "6"
+  ],
+  "started_utc": "2026-10-25T02:45:48.016773+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_ordered_contraction.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 13.354157131994725,
+  "finished_utc": "2026-10-25T02:46:01.370932+00:00"
+}

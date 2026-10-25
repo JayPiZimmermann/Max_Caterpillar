@@ -1,0 +1,120 @@
+{
+  "status": "EXACT_NONZERO_ORDERED_TETRAHEDRAL_BASE_CONTROL",
+  "triangle_cube_count": 3,
+  "tetrahedral_cube_count": 6,
+  "tetrahedral_cubes": [
+    {
+      "head": [
+        -1,
+        0,
+        1,
+        0
+      ],
+      "edges": [
+        [
+          0,
+          0,
+          -1,
+          1
+        ]
+      ],
+      "coefficient": 1
+    },
+    {
+      "head": [
+        -1,
+        1,
+        0,
+        0
+      ],
+      "edges": [
+        [
+          0,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "coefficient": -1
+    },
+    {
+      "head": [
+        -1,
+        1,
+        0,
+        0
+      ],
+      "edges": [
+        [
+          0,
+          -1,
+          1,
+          0
+        ]
+      ],
+      "coefficient": 1
+    },
+    {
+      "head": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "edges": [
+        [
+          0,
+          0,
+          -1,
+          1
+        ]
+      ],
+      "coefficient": -1
+    },
+    {
+      "head": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edges": [
+        [
+          0,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "coefficient": 1
+    },
+    {
+      "head": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "edges": [
+        [
+          0,
+          -1,
+          1,
+          0
+        ]
+      ],
+      "coefficient": -1
+    }
+  ],
+  "target_triangle_count": 4,
+  "boundary_zero": true,
+  "augmentation_zero": true,
+  "delta_squared_zero": true,
+  "explicit_X3_cube_count": 3,
+  "ordered_Y4_cube_count": 9,
+  "ordered_Y4_factorization": "-Gamma_{012;root2,reflection-} * Gamma_{234;root2,reflection+}",
+  "coning_orientation": "BHR edges-wedge-head; X2 is minus the oriented triangle boundary.",
+  "facet_maps": "Linear root-lattice maps e_j-e_i -> e_mu(j)-e_mu(i); every face resets its own first vertex to zero.",
+  "producer_sha256": "ec6d3468f0ce99b6d342a4202d7c512a3c0a6d49821a22536bdec0c7d9ea1e52",
+  "scope": "Exact base check for a coherent ordered recurrence. Does not bound the support growth of repeated fillings."
+}

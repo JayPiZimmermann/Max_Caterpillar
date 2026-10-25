@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_ordered_noncrossing_seed.py"
+  ],
+  "started_utc": "2026-10-25T03:04:38.853503+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_ordered_noncrossing_seed.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 1.5748543919980875,
+  "finished_utc": "2026-10-25T03:04:40.428361+00:00"
+}

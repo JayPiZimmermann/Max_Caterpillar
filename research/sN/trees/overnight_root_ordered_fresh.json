@@ -1,0 +1,371 @@
+{
+  "manifest_sha256": "bdca0217b734c80d022ca8f9dff1db39efb0b64d55ac6a2078dc45b719bc224a",
+  "receipts": {
+    "ainfty_check": {
+      "all_fifth_graphs": 1581,
+      "certificate_sha256": "9e9f29a3e9d4dd4aff8caa92e457bef293d2aa0b55922e1884fa9d3fc9f642e3",
+      "checker_sha256": "6303ff068682ff04883d1d18f4c8096eb9062d59b5f7e10f850b13b04d3dd163",
+      "gauge_directions": 16,
+      "lower_coverage": [
+        {
+          "columns": 3,
+          "complete_kernel": 0,
+          "k": 2,
+          "rank": 3
+        },
+        {
+          "columns": 16,
+          "complete_kernel": 1,
+          "k": 3,
+          "rank": 15
+        },
+        {
+          "columns": 135,
+          "complete_kernel": 15,
+          "k": 4,
+          "rank": 120
+        }
+      ],
+      "seconds": 0.3286758539979928,
+      "separator_terms": 31,
+      "status": "INDEPENDENT_EXACT_COMPLETE_AFFINE_TWO_PAGE_OBSTRUCTION",
+      "target_pairing": "1",
+      "two_page_fifth_graphs": 1509
+    },
+    "coherent": {
+      "augmentation_zero": true,
+      "boundary_zero": true,
+      "coning_orientation": "BHR edges-wedge-head; X2 is minus the oriented triangle boundary.",
+      "delta_squared_zero": true,
+      "explicit_X3_cube_count": 3,
+      "facet_maps": "Linear root-lattice maps e_j-e_i -> e_mu(j)-e_mu(i); every face resets its own first vertex to zero.",
+      "ordered_Y4_cube_count": 9,
+      "ordered_Y4_factorization": "-Gamma_{012;root2,reflection-} * Gamma_{234;root2,reflection+}",
+      "producer_sha256": "ec6d3468f0ce99b6d342a4202d7c512a3c0a6d49821a22536bdec0c7d9ea1e52",
+      "scope": "Exact base check for a coherent ordered recurrence. Does not bound the support growth of repeated fillings.",
+      "status": "EXACT_NONZERO_ORDERED_TETRAHEDRAL_BASE_CONTROL",
+      "target_triangle_count": 4,
+      "tetrahedral_cube_count": 6,
+      "tetrahedral_cubes": [
+        {
+          "coefficient": 1,
+          "edges": [
+            [
+              0,
+              0,
+              -1,
+              1
+            ]
+          ],
+          "head": [
+            -1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": -1,
+          "edges": [
+            [
+              0,
+              -1,
+              0,
+              1
+            ]
+          ],
+          "head": [
+            -1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 1,
+          "edges": [
+            [
+              0,
+              -1,
+              1,
+              0
+            ]
+          ],
+          "head": [
+            -1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": -1,
+          "edges": [
+            [
+              0,
+              0,
+              -1,
+              1
+            ]
+          ],
+          "head": [
+            0,
+            -1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 1,
+          "edges": [
+            [
+              0,
+              -1,
+              0,
+              1
+            ]
+          ],
+          "head": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": -1,
+          "edges": [
+            [
+              0,
+              -1,
+              1,
+              0
+            ]
+          ],
+          "head": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "triangle_cube_count": 3
+    },
+    "sparse_homotopy": {
+      "partition_checks": 633,
+      "producer_sha256": "09d4ccbe2db9d33247ad4cee82ca21d6476572f202aa86824048f8af717a6d33",
+      "records": [
+        {
+          "complete": true,
+          "exterior_degree": 2,
+          "graphs_checked": 6,
+          "max_primitive_terms": 3,
+          "maximum_graph": [
+            4,
+            [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          ]
+        },
+        {
+          "complete": true,
+          "exterior_degree": 3,
+          "graphs_checked": 62,
+          "max_primitive_terms": 25,
+          "maximum_graph": [
+            6,
+            [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "complete": false,
+          "exterior_degree": 4,
+          "graphs_checked": 115,
+          "max_primitive_terms": 113,
+          "maximum_graph": [
+            8,
+            [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7
+              ]
+            ]
+          ]
+        }
+      ],
+      "scope": "The displayed formulas have an algebraic uniform homotopy proof; these are exact finite convention controls. Polynomial primitive branching per input graph is not a total exponential network-width bound.",
+      "seconds": 2.4877440920026856,
+      "status": "EXACT_SPARSE_PARTITION_AND_GRAPH_HOMOTOPY_CONTROLS",
+      "two_edge_inverse": [
+        {
+          "graph": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "primitive": [
+            [
+              [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "1"
+            ],
+            [
+              [
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "1/2"
+            ],
+            [
+              [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2
+                ]
+              ],
+              "1/2"
+            ]
+          ]
+        },
+        {
+          "graph": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "primitive": [
+            [
+              [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2
+                ]
+              ],
+              "-1/2"
+            ],
+            [
+              [
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "-1/2"
+            ]
+          ]
+        },
+        {
+          "graph": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "primitive": [
+            [
+              [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2
+                ]
+              ],
+              "1/2"
+            ],
+            [
+              [
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ],
+              "-1/2"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "status": "ORDERED_BASE_SPARSE_HOMOTOPY_AND_SUPPORT_OBSTRUCTION_ROOT_REPLAY_PASS",
+  "temporary_directory": "/tmp/max_ordered_root_fresh_ngbt4uz6"
+}

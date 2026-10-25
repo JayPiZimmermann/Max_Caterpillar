@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_ordered_undoubled.py"
+  ],
+  "started_utc": "2026-10-25T02:57:20.478839+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_ordered_undoubled.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 14.086630320998665,
+  "finished_utc": "2026-10-25T02:57:34.565471+00:00"
+}

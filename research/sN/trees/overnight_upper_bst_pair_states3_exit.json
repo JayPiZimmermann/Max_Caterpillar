@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h4-general-neurons/venv/bin/python",
+    "research/sN/trees/overnight_upper_bst_pair_states.py"
+  ],
+  "started_utc": "2026-10-25T02:33:24.254357+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_bst_pair_states3.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 15.12430905799556,
+  "finished_utc": "2026-10-25T02:33:39.378662+00:00"
+}
