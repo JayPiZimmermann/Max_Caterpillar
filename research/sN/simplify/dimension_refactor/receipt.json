@@ -1,0 +1,39 @@
+{
+  "status": "PASS_LOCAL_BUILD_AND_EXACT_TYPES",
+  "scope": "Three existing proof bodies in Dimension.lean; no definitions or signatures changed. Parent task owns reverse consumers and public verification.",
+  "baseline_commit": "e1ebfc0d22ba9097ef0aa0fb322104cca80af660",
+  "source": "MaxCaterpillar/Dimension.lean",
+  "source_sha256": "5015c192a8394c58a633e2c660111b5cd9cc816f04db8cab2362b6c5dbc7b6e5",
+  "baseline_source_sha256": "6915db2dbafe94dcf0e0189dec048eec6a592950c023544250ab5b7bfe199fa9",
+  "declaration_headers_unchanged": 41,
+  "lines_before": 402,
+  "lines_after": 380,
+  "commands": [
+    "scripts/lean_lock.sh lake env lean -o .lake/build/lib/MaxCaterpillar/Dimension.olean -i .lake/build/lib/MaxCaterpillar/Dimension.ilean MaxCaterpillar/Dimension.lean",
+    "scripts/lean_lock.sh lake env lean research/sN/simplify/dimension_refactor/Check.lean"
+  ],
+  "checked_theorems": [
+    "exists_descent",
+    "detector_self",
+    "detector_other",
+    "factorial_le_quotientDim"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence": {
+    "research/sN/simplify/dimension_refactor/Check.lean": "ffc0ca35ae9a026370d2725525ed1b25184bfe61ffaff5a8c22e3185519bb9ee",
+    "research/sN/simplify/dimension_refactor/final_build3.log": "a3ca58f3a74e653f8a892fa671d69f669408ae4cdc6265e279f6ba5fd479c62a",
+    "research/sN/simplify/dimension_refactor/final_build3.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/simplify/dimension_refactor/exact_check_fresh.log": "14632beea5ff518dd4f503d7291dc324286ef0cb12fc23816311a5992624dc3d",
+    "research/sN/simplify/dimension_refactor/exact_check_fresh.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "diagnostic_only": [
+    "final_build.log",
+    "final_build2.log",
+    "exact_check.log"
+  ],
+  "diagnostic_note": "The first two final_build attempts failed in a discarded arithmetic shortcut. exact_check used the old .olean and is not consumed as evidence. Fresh source build and fresh exact check both completed successfully."
+}

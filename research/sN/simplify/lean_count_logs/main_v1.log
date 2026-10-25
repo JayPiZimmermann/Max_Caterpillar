@@ -1,0 +1,33 @@
+[1981/2138] Building MaxCaterpillar.Count.BlockSum
+[2128/2138] Building MaxCaterpillar.Count.TreeFace
+[2130/2138] Building MaxCaterpillar.Count.Defs
+stdout:
+./././MaxCaterpillar/Count/BlockSum.lean:112:51: warning: unused variable `l` [linter.unusedVariables]
+./././MaxCaterpillar/Count/BlockSum.lean:174:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Count/BlockSum.lean:186:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+[2132/2138] Building MaxCaterpillar.Audit.CaterpillarTree
+[2132/2138] Building MaxCaterpillar.Count.Passing
+stdout:
+./././MaxCaterpillar/Audit/CaterpillarTree.lean:267:10: warning: this tactic is never executed [linter.unreachableTactic]
+./././MaxCaterpillar/Audit/CaterpillarTree.lean:268:10: warning: this tactic is never executed [linter.unreachableTactic]
+[2134/2138] Building MaxCaterpillar.Count.TreeForest
+[2134/2138] Building MaxCaterpillar.Count.PerUnit
+stdout:
+./././MaxCaterpillar/Count/TreeForest.lean:26:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Count/TreeForest.lean:31:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Count/TreeForest.lean:70:7: warning: unused variable `hvEV` [linter.unusedVariables]
+stdout:
+./././MaxCaterpillar/Count/PerUnit.lean:158:17: warning: unused variable `h` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:219:29: warning: unused variable `hΦdef` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:226:53: warning: unused variable `hI` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:245:12: warning: unused variable `hi` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:245:17: warning: unused variable `hj` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:279:12: warning: unused variable `hi` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:347:92: warning: unused variable `hμ` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:584:7: warning: unused variable `h2` [linter.unusedVariables]
+[2136/2138] Building MaxCaterpillar.Count.Classes
+stdout:
+./././MaxCaterpillar/Count/Classes.lean:55:9: warning: unused variable `hp` [linter.unusedVariables]
+./././MaxCaterpillar/Count/Classes.lean:167:13: warning: unused variable `hrP` [linter.unusedVariables]
+./././MaxCaterpillar/Count/Classes.lean:167:18: warning: unused variable `haP` [linter.unusedVariables]
+[2137/2138] Building MaxCaterpillar.Count.Main

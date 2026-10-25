@@ -1,0 +1,151 @@
+[2011/2215] Building MaxNN.Constructions.Paramid.Geom.Faces.ConeOnly.SimplexGerm
+[2107/2215] Building MaxNN.Constructions.Paramid.Geom.Faces.ConeOnly.LocalIdentity
+[2108/2215] Building MaxNN.Constructions.Paramid.Geom.Faces.ConeOnly
+[2109/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Formula
+[2110/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.Defs
+[2110/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.FullDim
+[2111/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.FiniteCombinatorics
+[2111/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.HeadOrder
+[2111/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.Count
+stdout:
+./././MaxNN/Constructions/Paramid/Caterpillar/Corrections/FullDim.lean:81:11: warning: unused variable `j` [linter.unusedVariables]
+[2112/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Class
+[2115/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.ClosedCount
+[2116/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Table
+[2116/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Formula.Correctness
+[2119/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Normalize
+[2120/2215] Building MaxCaterpillar.Definitions
+[2120/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.NormalizeFaces
+[2120/2215] Building MaxCaterpillar.CountLower.Keys
+[2121/2215] Building MaxCaterpillar.Internal.Network
+[2121/2215] Building MaxCaterpillar.Frontier.Basic
+[2121/2215] Building MaxCaterpillar.Asymptotics
+[2121/2215] Building MaxCaterpillar.Competing.Defs
+[2122/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Reversal
+[2122/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.NetworkCoefficients
+[2122/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Count
+[2124/2215] Building MaxCaterpillar.Competing.Relation
+stdout:
+./././MaxCaterpillar/CountLower/Keys.lean:66:13: warning: unused variable `i` [linter.unusedVariables]
+[2127/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Network
+[2127/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.CompactFeatures
+[2129/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.AbsorbHinges
+[2129/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Canonical.Table
+[2131/2215] Building MaxCaterpillar.Competing.Support
+stdout:
+./././MaxNN/Constructions/Paramid/Caterpillar/Corrections/Reversal.lean:207:9: warning: unused variable `hjle` [linter.unusedVariables]
+./././MaxNN/Constructions/Paramid/Caterpillar/Corrections/Reversal.lean:338:29: warning: unused variable `hr` [linter.unusedVariables]
+[2132/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.ReversalBounds
+[2132/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.HingeCount
+[2132/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.GraphKey
+[2133/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.CompactCovariance
+[2134/2215] Building MaxCaterpillar.Frontier.Asymptotics
+[2138/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.Reversal
+[2139/2215] Building MaxCaterpillar.Frontier.Claw
+[2139/2215] Building MaxCaterpillar.Frontier.FirstWidth
+[2139/2215] Building MaxCaterpillar.Frontier.SecondWidth
+[2140/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.WordEncoding
+[2142/2215] Building MaxCaterpillar.Frontier.SecondWidthN
+[2143/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Spine.Global
+stdout:
+Try this: ring_nf
+[2147/2215] Building MaxCaterpillar.Frontier.FirstWidthN
+[2148/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.Canonical.Sparse
+[2148/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Construction
+[2148/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.CompactCanonical
+[2149/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Bounds
+[2150/2215] Building MaxCaterpillar.Frontier.SecondWidthPlus
+[2152/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Reduction
+[2154/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Corrections.CompactTransport
+[2155/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Compact
+[2156/2215] Building MaxNN.Constructions.Paramid.Caterpillar.Essential
+[2157/2215] Building MaxNN.Constructions.Paramid.Caterpillar.HingeBounds
+[2158/2215] Building MaxNN.Constructions.Paramid.Caterpillar.ConeBoundTransport
+[2158/2215] Building MaxNN.Constructions.Paramid.Caterpillar.AllArities
+[2161/2215] Building MaxNN.Constructions.Paramid.Caterpillar.SpineBound
+[2162/2215] Building MaxCaterpillar.Construction
+[2163/2215] Building MaxCaterpillar.Lemmas
+[2163/2215] Building MaxCaterpillar.Compilation
+[2164/2215] Building MaxCaterpillar.Sharing
+[2165/2215] Building MaxCaterpillar.RationalWidth
+[2165/2215] Building MaxCaterpillar.CountLower
+[2165/2215] Building MaxCaterpillar.Frontier.Constructions
+[2165/2215] Building MaxCaterpillar.Count.Locality
+[2166/2215] Building MaxCaterpillar.Core
+[2166/2215] Building MaxCaterpillar.SmallArity
+[2167/2215] Building MaxCaterpillar.Count.TreeFace
+[2168/2215] Building MaxCaterpillar.Quotient
+[2168/2215] Building MaxCaterpillar.Audit.Expansion
+[2169/2215] Building MaxCaterpillar.CPWL
+stdout:
+./././MaxCaterpillar/Count/Locality.lean:280:80: warning: unused variable `hB` [linter.unusedVariables]
+[2171/2215] Building MaxCaterpillar.Frontier.Main
+[2172/2215] Building MaxCaterpillar.KMPS
+[2172/2215] Building MaxCaterpillar.SharingRational
+[2173/2215] Building MaxCaterpillar.Count.Defs
+[2176/2215] Building MaxCaterpillar.Retained
+[2176/2215] Building MaxCaterpillar.Dimension
+[2177/2215] Building MaxCaterpillar.Audit.CaterpillarTree
+[2177/2215] Building MaxCaterpillar.Count.Passing
+stdout:
+./././MaxCaterpillar/Audit/CaterpillarTree.lean:267:10: warning: this tactic is never executed [linter.unreachableTactic]
+./././MaxCaterpillar/Audit/CaterpillarTree.lean:268:10: warning: this tactic is never executed [linter.unreachableTactic]
+[2181/2215] Building MaxCaterpillar.CPWLRational
+[2184/2215] Building MaxCaterpillar.Count.TreeForest
+[2184/2215] Building MaxCaterpillar.Count.PerUnit
+stdout:
+./././MaxCaterpillar/Count/TreeForest.lean:26:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Count/TreeForest.lean:31:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Count/TreeForest.lean:70:7: warning: unused variable `hvEV` [linter.unusedVariables]
+stdout:
+./././MaxCaterpillar/Count/PerUnit.lean:158:17: warning: unused variable `h` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:219:29: warning: unused variable `hΦdef` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:226:53: warning: unused variable `hI` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:245:12: warning: unused variable `hi` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:245:17: warning: unused variable `hj` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:279:12: warning: unused variable `hi` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:347:92: warning: unused variable `hμ` [linter.unusedVariables]
+./././MaxCaterpillar/Count/PerUnit.lean:584:7: warning: unused variable `h2` [linter.unusedVariables]
+[2186/2215] Building MaxCaterpillar.Count.Classes
+stdout:
+./././MaxCaterpillar/Count/Classes.lean:55:9: warning: unused variable `hp` [linter.unusedVariables]
+./././MaxCaterpillar/Count/Classes.lean:167:13: warning: unused variable `hrP` [linter.unusedVariables]
+./././MaxCaterpillar/Count/Classes.lean:167:18: warning: unused variable `haP` [linter.unusedVariables]
+[2187/2215] Building MaxCaterpillar.Count.Main
+[2188/2215] Building MaxCaterpillar.Theorems
+[2189/2215] Building MaxCaterpillar.Frontier.GeneralN
+[2190/2215] Building MaxCaterpillar.Frontier.GeneralN2
+[2191/2215] Building MaxCaterpillar.Frontier
+[2192/2215] Builerror: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/SmallN/Max5Lns27/Cells4.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells4.olean -i ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells4.ilean -c ./.lake/build/ir/MaxCaterpillar/SmallN/Max5Lns27/Cells4.c
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/SmallN/Max5Lns27/Cells2.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells2.olean -i ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells2.ilean -c ./.lake/build/ir/MaxCaterpillar/SmallN/Max5Lns27/Cells2.c
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/SmallN/Max5Lns27/Cells3.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells3.olean -i ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells3.ilean -c ./.lake/build/ir/MaxCaterpillar/SmallN/Max5Lns27/Cells3.c
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/SmallN/Max5Lns27/Cells1.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells1.olean -i ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells1.ilean -c ./.lake/build/ir/MaxCaterpillar/SmallN/Max5Lns27/Cells1.c
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/SmallN/Max5Lns27/Cells0.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells0.olean -i ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells0.ilean -c ./.lake/build/ir/MaxCaterpillar/SmallN/Max5Lns27/Cells0.c
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 143
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 143
+error: > LEAN_PATH=./.lake/packages/std/.lake/build/lib:./.lake/packages/Qq/.lake/build/lib:./.lake/packages/aesop/.lake/build/lib:./.lake/packages/proofwidgets/.lake/build/lib:./.lake/packages/Cli/.lake/build/lib:./.lake/packages/mathlib/.lake/build/lib:./.lake/build/lib LD_LIBRARY_PATH=./.lake/build/lib /home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean ./././MaxCaterpillar/SmallN/Max5Lns27/Cells5.lean -R ././. -o ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells5.olean -i ./.lake/build/lib/MaxCaterpillar/SmallN/Max5Lns27/Cells5.ilean -c ./.lake/build/ir/MaxCaterpillar/SmallN/Max5Lns27/Cells5.c
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 143
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 143
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 143
+error: external command `/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean` exited with code 143
+ding MaxCaterpillar.Audit.Widths
+stdout:
+./././MaxCaterpillar/Audit/Widths.lean:37:75: warning: this tactic is never executed [linter.unreachableTactic]
+./././MaxCaterpillar/Audit/Widths.lean:37:88: warning: this tactic is never executed [linter.unreachableTactic]
+[2193/2215] Building MaxCaterpillar.Audit
+[2195/2215] Building MaxCaterpillar.SmallN.Common
+[2196/2215] Building MaxCaterpillar.SmallN.Max4Test.Defs
+[2196/2215] Building MaxCaterpillar.SmallN.Max5General4.Defs
+[2196/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Defs
+[2197/2215] Building MaxCaterpillar.SmallN.Max4Test.Cells0
+[2198/2215] Building MaxCaterpillar.SmallN.Max5General4.Cells1
+[2198/2215] Building MaxCaterpillar.SmallN.Max5General4.Cells0
+[2199/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Cells1
+[2199/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Cells6
+[2199/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Cells2
+[2199/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Cells4
+[2199/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Cells5
+[2200/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Cells3
+[2201/2215] Building MaxCaterpillar.SmallN.Max5Lns27.Cells0
+[2202/2215] Building MaxCaterpillar.SmallN.Max4Test
+[2204/2215] Building MaxCaterpillar.SmallN.Max5General4

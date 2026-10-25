@@ -1,0 +1,28 @@
+research/sN/simplify/LowerBoundStatements.lean:3:0: error: import MaxCaterpillar.OneBasis failed, environment already contains 'MaxCaterpillar.mem_essentialKeys' from MaxCaterpillar.Retained
+research/sN/simplify/LowerBoundStatements.lean:4:5: error: unknown namespace 'BigOperators'
+research/sN/simplify/LowerBoundStatements.lean:5:5: error: unknown namespace 'MaxNN'
+research/sN/simplify/LowerBoundStatements.lean:8:35: error: unexpected token '+'; expected ')', ',' or ':'
+research/sN/simplify/LowerBoundStatements.lean:13:14: error: unknown constant 'MaxCaterpillar.unified_choose_le'
+research/sN/simplify/LowerBoundStatements.lean:15:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:21:14: error: unknown constant 'MaxCaterpillar.unified_exponential'
+research/sN/simplify/LowerBoundStatements.lean:24:54: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:27:14: error: unknown constant 'MaxCaterpillar.caterpillar_expansion_choose_le'
+research/sN/simplify/LowerBoundStatements.lean:29:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:33:14: error: unknown constant 'MaxCaterpillar.caterpillar_expansion_exponential'
+research/sN/simplify/LowerBoundStatements.lean:35:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:39:14: error: unknown constant 'MaxCaterpillar.brunck_expansion_exponential'
+research/sN/simplify/LowerBoundStatements.lean:41:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:47:14: error: unknown constant 'MaxCaterpillar.hingeDeg_expansion_exponential'
+research/sN/simplify/LowerBoundStatements.lean:49:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:55:14: error: unknown constant 'MaxCaterpillar.outLeaf_expansion_exponential'
+research/sN/simplify/LowerBoundStatements.lean:57:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:61:14: error: unknown constant 'MaxCaterpillar.caterpillar_expansion_quadratic'
+research/sN/simplify/LowerBoundStatements.lean:63:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:66:14: error: unknown constant 'MaxCaterpillar.caterpillarDim_ge'
+research/sN/simplify/LowerBoundStatements.lean:69:128: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:71:14: error: unknown constant 'MaxNN.ParamidGeom.Faces.mem_GSpanRel_of_lt_finrank'
+research/sN/simplify/LowerBoundStatements.lean:73:5: error: unknown namespace 'MaxNN.ParamidGeom'
+research/sN/simplify/LowerBoundStatements.lean:75:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:79:14: error: unknown constant 'MaxCaterpillar.maximum_mem_dictionary'
+research/sN/simplify/LowerBoundStatements.lean:81:28: error: expected token
+research/sN/simplify/LowerBoundStatements.lean:84:14: error: unknown constant 'MaxCaterpillar.class_identity'

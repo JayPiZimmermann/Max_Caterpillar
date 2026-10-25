@@ -492,6 +492,12 @@
     {
       "declaration": "MaxCaterpillar.Audit.free_neurons_satisfiable",
       "type": "∀ (N : ℕ) [NeZero N], ∃ (m K : ℕ) (c : Point N) (a : Fin m → ℝ) (B : Fin m → Point N) (d : Fin K → ℝ) (C : Fin K → Point N) (W : Fin K → Fin m → ℝ), ∀ x, Maximum N x = Frontier.lin c x + ∑ j, a j * MaxCaterpillar.relu (Frontier.lin (B j) x) + ∑ k, d k * MaxCaterpillar.relu (Frontier.lin (C k) x + ∑ j, W k j * MaxCaterpillar.relu (Frontier.lin (B j) x))"
+    },
+    {
+      "id": "dictionary-finite-face-elimination",
+      "module": "MaxNN.Constructions.Paramid.Geom.Faces.Annihilate",
+      "declaration": "MaxNN.ParamidGeom.Faces.mem_GSpanRel_of_lt_finrank",
+      "type": "∀ {m : ℕ} (U : Submodule ℝ (Fin m → ℝ)) {𝔉 : Set (Finset (Fin m → ℝ))}, ParamidGeom.Faces.FaceClosed 𝔉 → ∀ {d : ℕ}, d < FiniteDimensional.finrank ℝ U → ∀ {g : (Fin m → ℝ) → ℝ}, g ∈ ParamidGeom.Faces.FSpan 𝔉 → g ∈ ParamidGeom.LSpan m d → g ∈ ParamidGeom.Faces.GSpanRel 𝔉 U"
     }
   ]
 }

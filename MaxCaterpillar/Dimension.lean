@@ -216,24 +216,16 @@ theorem exists_descent {g : Equiv.Perm (Fin (r + 1 + 1))} (h0 : g 0 = 0) (hg : g
   by_contra hno
   push_neg at hno
   apply hg
-  have hmono : StrictMono g := by
-    rw [Fin.strictMono_iff_lt_succ]
+  have hmono : Monotone g := by
+    rw [Fin.monotone_iff_le_succ]
     intro i
     refine Fin.cases ?_ (fun j => ?_) i
-    · have h1 : g (Fin.succ 0) ≠ 0 := fun h =>
-        Fin.succ_ne_zero (0 : Fin (r + 1)) (g.injective (h.trans h0.symm))
-      show g 0 < g (Fin.succ 0)
-      rw [h0]
-      exact lt_of_le_of_ne (Fin.zero_le _) (Ne.symm h1)
-    · have hcs : (Fin.succ j).castSucc = j.castSucc.succ := Fin.ext rfl
-      rw [hcs]
-      refine lt_of_le_of_ne (hno j) fun he => ?_
-      have := congrArg Fin.val (g.injective he)
-      simp at this
+    · simpa only [Fin.castSucc_zero, h0] using Fin.zero_le (g (Fin.succ 0))
+    · exact hno j
   have hid : (g : Fin (r + 1 + 1) → Fin (r + 1 + 1)) = id :=
-    Fin.strictMono_unique hmono strictMono_id (by rw [Set.range_id, Equiv.range_eq_univ])
-  ext a
-  exact congrArg Fin.val (congrFun hid a)
+    Fin.strictMono_unique (hmono.strictMono_of_injective g.injective) strictMono_id
+      (by rw [Set.range_id, Equiv.range_eq_univ])
+  exact Equiv.ext (congrFun hid)
 
 /-! ## The detectors -/
 
@@ -323,52 +315,42 @@ theorem detector_other (hr : 1 ≤ r) {π ρ : PathIdx r} (hne : π ≠ ρ) :
   apply Λ_congr h0l h0c hlc
   intro x hx
   -- a descent of `ρ⁻¹ π` gives a hinge at least `1` on the box
-  let g : Equiv.Perm (Fin (r + 1 + 1)) := π.1.trans ρ.1.symm
-  have hg0 : g 0 = 0 := by
-    show ρ.1.symm (π.1 0) = 0; rw [π.map_zero, Equiv.symm_apply_eq, ρ.map_zero]
-  have hg1 : g ≠ 1 := fun h => hne (Subtype.ext (Equiv.ext fun a => by
-    have h2 : g a = a := by rw [h]; rfl
+  let g : PathIdx r := ⟨π.1.trans ρ.1.symm, fun a ha => by
+    change ρ.1.symm (π.1 a) = a
+    rw [π.2 a ha, Equiv.symm_apply_eq, ρ.2 a ha]⟩
+  have hg1 : g.1 ≠ 1 := fun h => hne (Subtype.ext (Equiv.ext fun a => by
+    have h2 : g.1 a = a := by rw [h]; rfl
     exact (Equiv.symm_apply_eq _).mp h2))
-  obtain ⟨j, hj⟩ := exists_descent hg0 hg1
-  have hm1 : Middle r (g j.castSucc.succ) := by
-    refine (PathIdx.middle ⟨ρ.1.symm, fun a ha => ?_⟩ (π.middle (middle_of_val
-      (by simp) (by simp; exact j.isLt))))
-    rw [Equiv.symm_apply_eq, ρ.2 a ha]
-  have hz : ∀ k, π.1 k = ρ.1 (g k) := fun k => by
-    show π.1 k = ρ.1 (ρ.1.symm (π.1 k)); rw [Equiv.apply_symm_apply]
-  clear_value g
-  have hm2 : Middle r (g j.succ.succ) := by
-    refine middle_of_val ?_ ?_
-    · rcases Nat.eq_zero_or_pos (g j.succ.succ : ℕ) with h | h
-      · exfalso
-        have : g j.succ.succ = 0 := Fin.ext h
-        exact Fin.succ_ne_zero _ (g.injective (this.trans hg0.symm))
-      · exact h
-    · have := hm1.2; have hlt : (g j.succ.succ : ℕ) < g j.castSucc.succ := hj
-      have hle : (g j.castSucc.succ : ℕ) ≤ r + 1 := Nat.lt_succ_iff.mp (g j.castSucc.succ).isLt
-      have hne : (g j.castSucc.succ : ℕ) ≠ r + 1 := fun h => this (Fin.ext (h.trans (Fin.val_last _).symm))
-      exact Nat.le_of_lt_succ (lt_trans hlt (lt_of_le_of_ne hle hne))
+  obtain ⟨j, hj⟩ := exists_descent g.map_zero hg1
+  have hm1 : Middle r (g.1 j.castSucc.succ) :=
+    g.middle (middle_of_val (by simp) (by simp; exact j.isLt))
+  have hm2 : Middle r (g.1 j.succ.succ) := by
+    refine ⟨fun h => Fin.succ_ne_zero _ (g.1.injective (h.trans g.map_zero.symm)), ?_⟩
+    intro h
+    rw [h] at hj
+    exact not_lt_of_ge (Fin.le_last _) hj
+  have hz : ∀ k, π.1 k = ρ.1 (g.1 k) := fun k => (Equiv.apply_symm_apply _ _).symm
   have h1 := (hx (π.1 j.castSucc.succ)).1
   have h2 := (hx (π.1 j.succ.succ)).2
   rw [hz, testZ_apply ρ hm1] at h1
   rw [hz, testZ_apply ρ hm2] at h2
-  have hgap : ((g j.succ.succ : ℕ) : ℝ) + 1 ≤ (g j.castSucc.succ : ℕ) := by
-    exact_mod_cast (show (g j.succ.succ : ℕ) + 1 ≤ g j.castSucc.succ from hj)
+  have hgap : ((g.1 j.succ.succ : ℕ) : ℝ) + 1 ≤ (g.1 j.castSucc.succ : ℕ) := by
+    exact_mod_cast (show (g.1 j.succ.succ : ℕ) + 1 ≤ g.1 j.castSucc.succ from hj)
   have hterm : 1 ≤ hinge j x := by
     refine le_trans ?_ (le_max_right _ _)
-    rw [hz, hz]; linarith
-  have hsum : hinge j x ≤ ∑ j, hinge j x :=
-    Finset.single_le_sum (f := fun j => hinge j x) (fun _ _ => le_max_left _ _)
-      (Finset.mem_univ j)
+    rw [hz, hz]
+    linarith only [h1, h2, hgap]
+  have hsum : 1 ≤ ∑ j, hinge j x := hterm.trans
+    (Finset.single_le_sum (f := fun j => hinge j x) (fun _ _ => le_max_left _ _)
+      (Finset.mem_univ j))
   have hb := (hx (Fin.last (r + 1))).1
   have h0 := (hx 0).2
   rw [testZ_last] at hb
   rw [testZ_zero] at h0
-  have hsum' : 1 ≤ ∑ j : Fin r, relu (x (π.1 j.castSucc.succ) - x (π.1 j.succ.succ)) :=
-    le_trans hterm hsum
+  change 1 ≤ ∑ j : Fin r, relu (x (π.1 j.castSucc.succ) - x (π.1 j.succ.succ)) at hsum
   rw [pathUnit_apply, π.map_last, π.map_zero]
   show max 0 _ = _
-  rw [max_eq_right (by linarith)]
+  rw [max_eq_right (by linarith only [hb, h0, hsum])]
   simp only [Pi.add_apply, Finset.sum_apply]
 
 /-! ## The bound -/
@@ -382,18 +364,14 @@ theorem factorial_le_quotientDim (r : ℕ) (hr : 1 ≤ r) : r.factorial ≤ quot
   have hli : LinearIndependent ℝ (fun σ => Aq.mkQ (v σ)) := by
     rw [Fintype.linearIndependent_iff]
     intro c hc τ
-    have h0 : Aq.mkQ (∑ σ, c σ • v σ) = 0 := by
-      rw [map_sum]
-      simpa only [map_smul] using hc
-    have hmem : (∑ σ, c σ • pathUnit hr σ.1) ∈ auxSpan (r + 1 + 1) := by
-      have h1 := (Submodule.Quotient.mk_eq_zero Aq).mp h0
-      rw [Submodule.mem_comap] at h1
-      change ((∑ σ, c σ • v σ : vocabularySpan r) : (P r) → ℝ) ∈ _ at h1
-      rw [Submodule.coe_sum] at h1
-      simpa only [Submodule.coe_smul] using h1
-    have hL := LinearMap.mem_ker.mp (detector_aux hr τ hmem)
-    rw [map_sum, Finset.sum_eq_single τ (fun σ _ hσ => by rw [map_smul, detector_other hr hσ,
-      smul_zero]) (fun h => absurd (Finset.mem_univ τ) h), map_smul, detector_self, smul_eq_mul,
+    -- The detector kills the auxiliary span, so it acts directly on the quotient.
+    let L := Aq.liftQ ((detector τ).comp (vocabularySpan r).subtype)
+      (fun _ hx => detector_aux hr τ hx)
+    have hL := congrArg L hc
+    simp only [map_sum, map_smul, map_zero] at hL
+    change (∑ σ, c σ • detector τ (pathUnit hr σ.1)) = 0 at hL
+    rw [Finset.sum_eq_single τ (fun σ _ hσ => by rw [detector_other hr hσ,
+      smul_zero]) (fun h => absurd (Finset.mem_univ τ) h), detector_self, smul_eq_mul,
       mul_one] at hL
     exact hL
   have h := FiniteDimensional.fintype_card_le_finrank_of_linearIndependent hli

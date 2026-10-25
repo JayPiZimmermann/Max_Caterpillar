@@ -1,0 +1,5 @@
+'MaxCaterpillar.Dimension.exists_descent' depends on axioms: [Quot.sound, propext, Classical.choice]
+'MaxCaterpillar.Dimension.detector_self' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Dimension.detector_other' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Dimension.factorial_le_quotientDim' depends on axioms: [Quot.sound, propext, Classical.choice]
+2.51 seconds; 2127264 KB

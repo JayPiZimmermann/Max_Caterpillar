@@ -1,12 +1,14 @@
 import MaxNN.Constructions.Paramid.Geom.Faces.Defs
 import MaxNN.Constructions.Paramid.Geom.Faces.Peel
+import MaxNN.Constructions.Paramid.Geom.Faces.Annihilate
 
 /-!
 # The Face Lemma relative to a subspace
 
 Module L6 of `work/depth2_simplex/smallest/PLAN_SMALLEST_GENERAL_N_2026-10-14.md` (Section 4.3,
-Face Lemma; target statements in Section 8.1, Group B).  Facade of `Geom/Faces/Defs.lean` and
-`Geom/Faces/Peel.lean`.
+Face Lemma; target statements in Section 8.1, Group B). The finite elimination
+proof is in `Geom/Faces/Annihilate.lean`; `Geom/Faces/Peel.lean` remains imported
+for compatibility with its existing consumers.
 
 * `LSpan_zero_eq`: the support functions of point sets of affine dimension `0` span exactly the
   linear forms, `LSpan m 0 = span {⟨p, ·⟩}`.
@@ -22,13 +24,13 @@ Face Lemma; target statements in Section 8.1, Group B).  Facade of `Geom/Faces/D
   functions of their proper faces.
 * `face_lemma_top`: the case `U = ℝ^m` (the Face Lemma in span form, all nonzero directions).
 
-*Proof of `face_lemma_rel`* (`mem_GSpanRel_sup_of_lt_finrank`).  Induction on `d < dim U` for
-`g ∈ FSpan 𝔉 ∩ LSpan m d`.  For `d = 0`, `g ∈ LSpan m 0`.  For `d + 1 < dim U`, Lemma P
-(`exists_peel_rel`) gives a finite set `E` of directions, none annihilating `U`, with
-`T = ∑_{e ∈ E} germ g e − g ∈ LSpan m d`.  The sum of germs lies in `GSpanRel 𝔉 U`
-(`sum_germ_mem_GSpanRel`), hence, by face-closure, in `FSpan 𝔉` (`GSpanRel_le_FSpan`).  So
-`T ∈ FSpan 𝔉 ∩ LSpan m d`, the induction hypothesis applies to `T`, and
-`g = ∑_{e ∈ E} germ g e − T`.
+*Proof of `face_lemma_rel`* (`mem_GSpanRel_of_lt_finrank`). Write `g` as a finite
+lower-dimensional support-function sum. For each summand choose a direction
+orthogonal to its direction space but not to `U`, and subtract the current germ.
+This kills the summand and every subset support function produced from it by
+earlier operations. The final residual is zero, and every subtracted germ lies
+in `GSpanRel 𝔉 U`. The historical theorem with an added linear remainder follows
+immediately; simultaneous generic directions and dimension induction are unnecessary.
 -/
 
 namespace MaxNN.ParamidGeom.Faces
@@ -64,30 +66,12 @@ theorem LSpan_zero_eq : LSpan m 0 = Submodule.span ℝ (Set.range fun p : Fin m 
 
 /-! ## The Face Lemma relative to a subspace -/
 
-/-- The induction behind `face_lemma_rel`: for `d < dim U`, every function of
-`FSpan 𝔉 ∩ LSpan m d` lies in `GSpanRel 𝔉 U ⊔ LSpan m 0`. -/
+/-- Compatibility form of finite face elimination: for `d < dim U`, every
+function of `FSpan 𝔉 ∩ LSpan m d` lies in `GSpanRel 𝔉 U ⊔ LSpan m 0`. -/
 theorem mem_GSpanRel_sup_of_lt_finrank (U : Submodule ℝ (Fin m → ℝ)) (h𝔉 : FaceClosed 𝔉)
     {d : ℕ} (hd : d < finrank ℝ U) {g : (Fin m → ℝ) → ℝ} (hgF : g ∈ FSpan 𝔉)
-    (hgL : g ∈ LSpan m d) : g ∈ GSpanRel 𝔉 U ⊔ LSpan m 0 := by
-  induction d generalizing g with
-  | zero => exact Submodule.mem_sup_right hgL
-  | succ d ih =>
-    obtain ⟨E, hE, hT⟩ := exists_peel_rel U (d := d) hd hgL
-    have hsum : (fun y => ∑ e in E, germ g e y) ∈ GSpanRel 𝔉 U :=
-      sum_germ_mem_GSpanRel U hgF hE
-    have e1 : (fun y => ∑ e in E, germ g e y - g y) = (fun y => ∑ e in E, germ g e y) - g := by
-      funext y
-      rw [Pi.sub_apply]
-    have hTF : (fun y => ∑ e in E, germ g e y - g y) ∈ FSpan 𝔉 := by
-      rw [e1]
-      exact Submodule.sub_mem _ (GSpanRel_le_FSpan h𝔉 U hsum) hgF
-    have hTmem := ih (Nat.lt_of_succ_lt hd) hTF hT
-    have e2 : g = (fun y => ∑ e in E, germ g e y) - fun y => ∑ e in E, germ g e y - g y := by
-      funext y
-      rw [Pi.sub_apply]
-      ring
-    rw [e2]
-    exact Submodule.sub_mem _ (Submodule.mem_sup_left hsum) hTmem
+    (hgL : g ∈ LSpan m d) : g ∈ GSpanRel 𝔉 U ⊔ LSpan m 0 :=
+  Submodule.mem_sup_left (mem_GSpanRel_of_lt_finrank U h𝔉 hd hgF hgL)
 
 /-- **Face Lemma relative to a subspace.**  Let `𝔉` be face-closed and `dim U ≥ 1`.  A
 combination `f` of support functions of members of `𝔉` that lies in `LSpan m (dim U − 1)` is a

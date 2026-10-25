@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "evidence": "Diagnostic exact-type and axiom audit of working-tree sources; public clean-closure verification is separate.",
+  "baseline_commit": "e1ebfc0d22ba9097ef0aa0fb322104cca80af660",
+  "commands": [
+    "scripts/lean_lock.sh lake build MaxCaterpillar.Count.Main",
+    "scripts/lean_lock.sh lake env lean research/sN/simplify/CountSimplificationCheck.lean"
+  ],
+  "claims": [
+    {
+      "declaration": "MaxCaterpillar.caterpillar_choose_three_le",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "exact_baseline_type": "PASS"
+    },
+    {
+      "declaration": "MaxCaterpillar.caterpillar_count_lower",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "exact_baseline_type": "PASS"
+    },
+    {
+      "declaration": "MaxCaterpillar.Trees.choose_three_le_of_good",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "exact_baseline_type": "PASS"
+    },
+    {
+      "declaration": "MaxCaterpillar.Trees.count_lower_of_good",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "exact_baseline_type": "PASS"
+    },
+    {
+      "declaration": "MaxCaterpillar.Count.star_weight_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exact_baseline_type": "PASS"
+    },
+    {
+      "declaration": "MaxCaterpillar.Count.unified_choose_le",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "exact_baseline_type": "PASS"
+    }
+  ],
+  "sha256": {
+    "MaxCaterpillar/CountLower.lean": "f199d95816b4f2fd917bf5a46491742269d7a783f3e791800ee41001d6845e49",
+    "MaxCaterpillar/Count/TreeFace.lean": "e8037b271b3bdc88a6a9191757af233c496a15ba784952595c3177df3c09a2d2",
+    "MaxCaterpillar/Count/BlockSum.lean": "4d4022916403f0ffb90f164018eba1d09ee564ee10db8d8c4557ee567050886d",
+    "MaxCaterpillar/Count/Main.lean": "64345fc5c6b0158936ca7f2d78297062ec3bc19df3ccb3d33ce1931c8ad5ab89",
+    "research/sN/simplify/CountSimplificationCheck.lean": "c6ee6af258b95696dc3b00e270ca0beed63152007fb2a79502d90be715bba2c6"
+  }
+}

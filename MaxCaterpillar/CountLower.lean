@@ -20,22 +20,21 @@ namespace MaxCaterpillar
 
 open MaxNN MaxNN.Caterpillar MaxNN.Width CountLower
 
-/-- The count with three-sets: `C(N,3) ≤ |K| (N - 2)` for `N = r + 2`. -/
-theorem caterpillar_choose_three_le (r : ℕ)
-    (K : Finset (Caterpillar.Corrections.RealKey (r + 1)))
-    (hK : K ⊆ Caterpillar.Corrections.normalizedKeys r)
-    (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ)
-    (h : ∀ x, Maximum (r + 1 + 1) x =
-      ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) :
+namespace Trees
+
+/-! ## One count for all functions with a good description -/
+
+/-- `C(N,3) ≤ |K| (N - 2)` for every expansion by functions with a `Good` description. -/
+theorem choose_three_le_of_good (r : ℕ) {ι : Type*} (K : Finset ι)
+    (U : ι → (Fin (r + 1 + 1) → ℝ) → ℝ)
+    (hU : ∀ i ∈ K, ∃ (D : Descr (r + 1 + 1)) (apex : Fin (r + 1 + 1)),
+      Good D apex ∧ ∀ y, U i y = D.unit y)
+    (d : ι → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ)
+    (h : ∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * U k x + auxiliary a x) :
     (r + 1 + 1).choose 3 ≤ K.card * r := by
   classical
-  have hkey : ∀ k ∈ Caterpillar.Corrections.normalizedKeys r,
-      ∃ (D : Descr (r + 1 + 1)) (apex : Fin (r + 1 + 1)),
-        Good D apex ∧ ∀ y, Caterpillar.Corrections.realUnitY k y = D.unit y :=
-    fun k hk => exists_descr hk
   haveI : Inhabited (Descr (r + 1 + 1)) := ⟨⟨0, ∅⟩⟩
-  choose! D apex hgood hunit using hkey
-  -- the constants of the test functional
+  choose! D apex hgood hunit using hU
   let B : ℕ := 2 + ∑ k in K, (∑ o, ((D k).h o).natAbs + (D k).M.card)
   let S : ℝ := ∑ k in K, (∑ o, |((D k).h o : ℝ)| + 4 * (D k).M.card)
   let η : ℝ := 1 / (3 * (1 + S))
@@ -73,7 +72,6 @@ theorem caterpillar_choose_three_le (r : ℕ)
         hSk hk
     rw [hη3, div_mul_eq_mul_div, one_mul, div_le_one (by linarith)]
     linarith
-  -- every three-set is admitted by some face function of `K`
   have hcover : Finset.powersetCard 3 (Finset.univ : Finset (Fin (r + 1 + 1))) ⊆
       K.biUnion fun k => allowed (D k) (apex k) := by
     intro T hT
@@ -83,13 +81,12 @@ theorem caterpillar_choose_three_le (r : ℕ)
     have hq : q ∈ T := by rw [hTe]; simp
     have hc : c ∈ T := by rw [hTe]; simp
     have hsplit : Λ T B p q η (MAX (r + 1 + 1)) =
-        ∑ k in K, d k * Λ T B p q η (Caterpillar.Corrections.realUnitY k) +
+        ∑ k in K, d k * Λ T B p q η (U k) +
           Λ T B p q η (fun x => ∑ j, a j * feat (r + 1 + 1) x j) := by
       unfold Λ
       have e : (fun α β => MAX (r + 1 + 1) (pt T B p q α β)) = fun α β =>
-          (∑ k in K, (fun k α β => d k * Caterpillar.Corrections.realUnitY k
-            (pt T B p q α β)) k α β) + (fun x => ∑ j, a j * feat (r + 1 + 1) x j)
-              (pt T B p q α β) := by
+          (∑ k in K, (fun k α β => d k * U k (pt T B p q α β)) k α β) +
+            (fun x => ∑ j, a j * feat (r + 1 + 1) x j) (pt T B p q α β) := by
         funext α β
         exact h _
       rw [e, Φ_add, Φ_sum]
@@ -97,26 +94,57 @@ theorem caterpillar_choose_three_le (r : ℕ)
       exact Finset.sum_congr rfl fun k _ => Φ_mul η (d k) _
     rw [Λ_MAX hη.le hp hq hc hpq (Ne.symm hpc) (Ne.symm hqc),
       Λ_auxiliary hη.le hη1 hB2 hp hq hpq, add_zero] at hsplit
-    have hne : ∑ k in K, d k * Λ T B p q η (Caterpillar.Corrections.realUnitY k) ≠ 0 := by
+    have hne : ∑ k in K, d k * Λ T B p q η (U k) ≠ 0 := by
       rw [← hsplit]
       exact (mul_pos two_pos hη).ne'
     obtain ⟨k, hk, hk0⟩ := Finset.exists_ne_zero_of_sum_ne_zero hne
-    have hU : Λ T B p q η (D k).unit ≠ 0 := by
-      have e : Caterpillar.Corrections.realUnitY k = (D k).unit :=
-        funext (hunit k (hK hk))
+    have hUk : Λ T B p q η (D k).unit ≠ 0 := by
+      have e : U k = (D k).unit := funext (hunit k hk)
       rw [← e]
       exact right_ne_zero_of_mul hk0
-    have hpass := pass_of_Λ_unit_ne (D k) hη hη1 hB2 hp hq hpq (hbdk k hk) hU
+    have hpass := pass_of_Λ_unit_ne (D k) hη hη1 hB2 hp hq hpq (hbdk k hk) hUk
     exact Finset.mem_biUnion.mpr
-      ⟨k, hk, mem_allowed (hgood k (hK hk)) hTe hpq hpc hqc (hBk k hk) hpass⟩
+      ⟨k, hk, mem_allowed (hgood k hk) hTe hpq hpc hqc (hBk k hk) hpass⟩
   have h1 := Finset.card_le_of_subset hcover
   rw [Finset.card_powersetCard, Finset.card_univ, Fintype.card_fin] at h1
   calc (r + 1 + 1).choose 3 ≤ (K.biUnion fun k => allowed (D k) (apex k)).card := h1
     _ ≤ ∑ k in K, (allowed (D k) (apex k)).card := Finset.card_biUnion_le
     _ ≤ ∑ _k in K, r := Finset.sum_le_sum fun k hk => by
-        have := card_allowed (hgood k (hK hk))
+        have := card_allowed (hgood k hk)
         simpa using this
     _ = K.card * r := by rw [Finset.sum_const, smul_eq_mul]
+
+/-- `N(N-1) ≤ 6|K|` for every expansion by functions with a `Good` description. -/
+theorem count_lower_of_good (r : ℕ) (hr : 1 ≤ r) {ι : Type*} (K : Finset ι)
+    (U : ι → (Fin (r + 1 + 1) → ℝ) → ℝ)
+    (hU : ∀ i ∈ K, ∃ (D : Descr (r + 1 + 1)) (apex : Fin (r + 1 + 1)),
+      Good D apex ∧ ∀ y, U i y = D.unit y)
+    (d : ι → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ)
+    (h : ∀ x, Maximum (r + 1 + 1) x = ∑ k in K, d k * U k x + auxiliary a x) :
+    (r + 1 + 1) * (r + 1) ≤ 6 * K.card := by
+  have h3 := choose_three_le_of_good r K U hU d a h
+  have hdesc : (r + 1 + 1).descFactorial 3 = (r + 1 + 1) * (r + 1) * r := by
+    simp only [Nat.succ_descFactorial_succ, Nat.descFactorial_one]
+    ring
+  have hfac : (r + 1 + 1).descFactorial 3 = 6 * (r + 1 + 1).choose 3 :=
+    Nat.descFactorial_eq_factorial_mul_choose _ _
+  have h6 : (r + 1 + 1) * (r + 1) * r ≤ 6 * K.card * r := by
+    rw [← hdesc, hfac, mul_assoc]
+    exact Nat.mul_le_mul_left 6 h3
+  exact le_of_mul_le_mul_right h6 (by omega)
+
+end Trees
+
+/-- The count with three-sets: `C(N,3) ≤ |K| (N - 2)` for `N = r + 2`. -/
+theorem caterpillar_choose_three_le (r : ℕ)
+    (K : Finset (Caterpillar.Corrections.RealKey (r + 1)))
+    (hK : K ⊆ Caterpillar.Corrections.normalizedKeys r)
+    (d : Caterpillar.Corrections.RealKey (r + 1) → ℝ) (a : Fin (Width.W (r + 1 + 1)) → ℝ)
+    (h : ∀ x, Maximum (r + 1 + 1) x =
+      ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) :
+    (r + 1 + 1).choose 3 ≤ K.card * r := by
+  exact Trees.choose_three_le_of_good r K Caterpillar.Corrections.realUnitY
+    (fun k hk => exists_descr (hK hk)) d a h
 
 /-- **Lower bound on the number of face functions.** Any expansion of the
 maximum of `N = r + 2` coordinates by normalized caterpillar face functions
@@ -128,15 +156,7 @@ theorem caterpillar_count_lower (r : ℕ) (hr : 1 ≤ r)
     (h : ∀ x, Maximum (r + 1 + 1) x =
       ∑ k in K, d k * Caterpillar.Corrections.realUnitY k x + auxiliary a x) :
     (r + 1 + 1) * (r + 1) ≤ 6 * K.card := by
-  have h3 := caterpillar_choose_three_le r K hK d a h
-  have hdesc : (r + 1 + 1).descFactorial 3 = (r + 1 + 1) * (r + 1) * r := by
-    simp only [Nat.succ_descFactorial_succ, Nat.descFactorial_one]
-    ring
-  have hfac : (r + 1 + 1).descFactorial 3 = 6 * (r + 1 + 1).choose 3 :=
-    Nat.descFactorial_eq_factorial_mul_choose _ _
-  have h6 : (r + 1 + 1) * (r + 1) * r ≤ 6 * K.card * r := by
-    rw [← hdesc, hfac, mul_assoc]
-    exact Nat.mul_le_mul_left 6 h3
-  exact le_of_mul_le_mul_right h6 (by omega)
+  exact Trees.count_lower_of_good r hr K Caterpillar.Corrections.realUnitY
+    (fun k hk => exists_descr (hK hk)) d a h
 
 end MaxCaterpillar

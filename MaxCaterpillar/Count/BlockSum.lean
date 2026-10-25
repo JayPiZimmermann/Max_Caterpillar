@@ -161,42 +161,32 @@ theorem star_weight_le_one {Δ s : ℕ} (hΔ : 2 ≤ Δ) (hs1 : 1 ≤ s) (hsΔ :
   have hy0 : 0 < y := by rw [hy]; positivity
   have hy6 : y ≤ 1 / 6 := by
     rw [hy]; apply div_le_div_of_le_left (by norm_num) (by norm_num); linarith
-  have hys : y ^ s ≤ y := by
-    calc y ^ s ≤ y ^ 1 := pow_le_pow_of_le_one hy0.le (by linarith) hs1
-      _ = y := pow_one y
   rcases Nat.lt_or_ge s 2 with hs2 | hs2
-  · -- `s = 1`
-    have : s = 1 := by omega
+  · have : s = 1 := by omega
     subst this
     rw [pow_one, pow_one]
-    have hyy : y * y ≤ y / 6 := by nlinarith
-    nlinarith
+    nlinarith only [hy0, hy6, sq_nonneg (y - 1 / 6)]
   have hys2 : y ^ s ≤ y ^ 2 := pow_le_pow_of_le_one hy0.le (by linarith) hs2
-  have hmono : (1 + y) ^ s ≤ (1 + y) ^ Δ := pow_le_pow_right (by linarith) hsΔ
-  rcases Nat.lt_or_ge Δ 4 with hΔ4 | hΔ4
-  · -- `Δ ∈ {2, 3}`: direct
-    have hcases : Δ = 2 ∨ Δ = 3 := by omega
-    have hb : (1 / 2 + y) * (1 + y) ^ Δ + y ^ 2 / 2 ≤ 1 := by
-      rcases hcases with h | h <;> subst h <;> rw [hy] <;> norm_num
-    have : (1 / 2 + y) * (1 + y) ^ s ≤ (1 / 2 + y) * (1 + y) ^ Δ :=
-      mul_le_mul_of_nonneg_left hmono (by linarith)
-    linarith
-  · -- `Δ ≥ 4`: `(1+y)^Δ ≤ e^(Δ y) ≤ e^(1/2) < 1.65` and `y ≤ 1/10`
-    have hΔr4 : (4 : ℝ) ≤ Δ := by exact_mod_cast hΔ4
-    have hy10 : y ≤ 1 / 10 := by
-      rw [hy]; apply div_le_div_of_le_left (by norm_num) (by norm_num); linarith
-    have hΔy : (Δ : ℝ) * y ≤ 1 / 2 := by
-      rw [hy, mul_one_div, div_le_iff (by positivity)]; linarith
-    have hexp : (1 + y) ^ Δ ≤ Real.exp (1 / 2) := by
-      calc (1 + y) ^ Δ ≤ (Real.exp y) ^ Δ := by
-            apply pow_le_pow_left (by linarith)
-            linarith [Real.add_one_le_exp y]
-        _ = Real.exp (Δ * y) := by rw [← Real.exp_nat_mul]
-        _ ≤ Real.exp (1 / 2) := Real.exp_le_exp.mpr hΔy
-    have h1 : (1 / 2 + y) * (1 + y) ^ s ≤ (1 / 2 + y) * (33 / 20) := by
-      apply mul_le_mul_of_nonneg_left _ (by linarith)
-      linarith [exp_half_lt]
-    have hy2 : y ^ 2 ≤ y / 10 := by rw [sq]; nlinarith
-    linarith
+  -- Keep the dependence between the coefficient and the exponent: Δy = 1/2 - y.
+  have hΔy : (Δ : ℝ) * y = 1 / 2 - y := by
+    rw [hy]
+    field_simp
+    <;> ring
+  have hexp : (1 + y) ^ s ≤ Real.exp (1 / 2 - y) := by
+    calc (1 + y) ^ s ≤ (Real.exp y) ^ s :=
+          pow_le_pow_left (by linarith) (by linarith [Real.add_one_le_exp y]) _
+      _ = Real.exp (s * y) := by rw [← Real.exp_nat_mul]
+      _ ≤ Real.exp (Δ * y) := Real.exp_le_exp.mpr
+          (mul_le_mul_of_nonneg_right (by exact_mod_cast hsΔ) hy0.le)
+      _ = Real.exp (1 / 2 - y) := by rw [hΔy]
+  -- A quadratic Taylor bound works uniformly, without special cases for Δ.
+  have htaylor : Real.exp (1 / 2 - y) ≤
+      1 + (1 / 2 - y) + (1 / 2 - y) ^ 2 * 3 / 4 := by
+    convert Real.exp_bound' (x := 1 / 2 - y) (by linarith) (by linarith)
+      (show 0 < 2 by decide) using 1 <;> norm_num [sum_range_succ]
+  have hprod := mul_le_mul_of_nonneg_left (hexp.trans htaylor)
+    (show 0 ≤ 1 / 2 + y by linarith)
+  have hcube : y ^ 3 ≤ (1 / 6 : ℝ) ^ 3 := pow_le_pow_left hy0.le hy6 3
+  linarith only [hprod, hys2, hcube, hy6, sq_nonneg y]
 
 end MaxCaterpillar.Count

@@ -10,6 +10,19 @@ historical evidence; its public manifest and exact-statement gate still need
 to be reconciled with the surviving declarations. See
 `research/sN/cleanup/PROGRESS.md` for the current build status.
 
+## Scoped proof-refactor check, 25 October 2026
+
+The lower-bound simplification and finite face-elimination proof were rebuilt
+through `All`. Exact checks preserve the nine public lower-bound statements,
+dictionary sufficiency, and the class identity, and verify the new relative
+face-elimination lemma and the historical compatibility statement. The checked
+axioms are only `propext`, `Classical.choice`, and `Quot.sound`.
+See the [scoped receipt](../research/sN/simplify/lower_public_refactor/receipt.json)
+and [exact statements](../research/sN/simplify/LowerBoundStatements.lean).
+This scoped audit does not replace the historical full-manifest certificate.
+The initial broad build was interrupted under memory pressure; the successful
+retry compiled the generated cell modules two at a time before rebuilding `All`.
+
 The public interface and dependency closure contain the caterpillar
 construction of $\operatorname{MAX}_N$, the Version 2–4 proofs,
 the restored Wang–Sun formalization under `MaxNN/CPWL`,

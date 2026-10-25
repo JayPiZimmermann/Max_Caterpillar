@@ -151,15 +151,11 @@ theorem unified_choose_le {K₁ : Finset (FaceKey r)} {K₂ : Finset (TreeFace (
     (r + 1 + 1).choose m ≤ (2 * Δ + 2) ^ m * (K₁.card + K₂.card) := by
   classical
   obtain ⟨hsub, d₁, d₂, a, h⟩ := hK
-  have hex : ∀ k : FaceKey r, ∃ F : TreeFace (r + 1 + 1),
-      (k ∈ caterpillarDescriptions r →
-        TreeFace.IsUpCaterpillar F ∧ caterpillarFunction k = F.unit) := by
-    intro k
-    by_cases hk : k ∈ caterpillarDescriptions r
-    · obtain ⟨F, hF, he⟩ := caterpillarFunction_eq_upTree hk
-      exact ⟨F, fun _ => ⟨hF, he⟩⟩
-    · exact ⟨Trees.starFace 0 1 (by simp), fun h => absurd h hk⟩
-  choose f hf using hex
+  haveI : Inhabited (TreeFace (r + 1 + 1)) := ⟨Trees.starFace 0 1 (by simp)⟩
+  have hex : ∀ k ∈ K₁, ∃ F : TreeFace (r + 1 + 1),
+      TreeFace.IsUpCaterpillar F ∧ caterpillarFunction k = F.unit :=
+    fun k hk => caterpillarFunction_eq_upTree (hsub hk)
+  choose! f hf hunit using hex
   set K : Finset (FaceKey r ⊕ TreeFace (r + 1 + 1)) := K₁.disjSum K₂
   set G : FaceKey r ⊕ TreeFace (r + 1 + 1) → TreeFace (r + 1 + 1) := Sum.elim f id
   have hωK : ∀ i ∈ K, OmegaLe (G i).descr Δ := by
@@ -168,7 +164,7 @@ theorem unified_choose_le {K₁ : Finset (FaceKey r)} {K₂ : Finset (TreeFace (
     | inl k =>
       have hk : k ∈ K₁ := by simpa [K] using hi
       exact omegaLe_of_redDeg (by omega)
-        (fun v => ((TreeFace.redDeg_of_isUpCaterpillar _ (hf k (hsub hk)).1) v).trans hΔ)
+        (fun v => ((TreeFace.redDeg_of_isUpCaterpillar _ (hf k hk)) v).trans hΔ)
     | inr F => exact hω F (by simpa [K] using hi)
   have hexp : ∀ x, Maximum (r + 1 + 1) x =
       ∑ i in K, Sum.elim d₁ d₂ i * (G i).descr.unit x + auxiliary a x := by
@@ -177,7 +173,7 @@ theorem unified_choose_le {K₁ : Finset (FaceKey r)} {K₂ : Finset (TreeFace (
     simp only [G, Sum.elim_inl, Sum.elim_inr, TreeFace.descr_unit, id]
     congr 2
     refine sum_congr rfl fun k hk => ?_
-    rw [(hf k (hsub hk)).2]
+    rw [hunit k hk]
   have hc := choose_le_of_unit_bound r K (fun i => (G i).descr) (fun i _ => (G i).descr_lt)
     (2 * Δ + 2) hm hmN (fun i hi => treeFace_card_passes_le (G i) hΔ (hωK i hi) hmN)
     (Sum.elim d₁ d₂) a hexp
