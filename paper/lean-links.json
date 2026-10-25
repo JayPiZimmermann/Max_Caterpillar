@@ -1255,9 +1255,7 @@
   {
     "file": "MaxCaterpillar/Rationality.lean",
     "name": "exists_rat_coeff_of_mem_span",
-    "equations": [
-      "eq:rational-coordinate"
-    ],
+    "equations": [],
     "key": "rationalCoordinate",
     "line": 64,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Rationality.lean#L64",
@@ -1277,9 +1275,7 @@
   {
     "file": "MaxCaterpillar/Quotient.lean",
     "name": "quotient_compression",
-    "equations": [
-      "eq:quotient-width"
-    ],
+    "equations": [],
     "key": "quotientCompression",
     "line": 57,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Quotient.lean#L57",
@@ -1353,9 +1349,7 @@
   {
     "file": "MaxCaterpillar/Theorems.lean",
     "name": "caterpillar_expansion_choose_le",
-    "equations": [
-      "eq:count-binomial"
-    ],
+    "equations": [],
     "key": "countBinomial",
     "line": 113,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Theorems.lean#L113",
@@ -1364,9 +1358,7 @@
   {
     "file": "MaxCaterpillar/Theorems.lean",
     "name": "caterpillar_expansion_exponential",
-    "equations": [
-      "eq:count-exponential"
-    ],
+    "equations": [],
     "key": "countExponential",
     "line": 121,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Theorems.lean#L121",
@@ -1375,9 +1367,7 @@
   {
     "file": "MaxCaterpillar/Theorems.lean",
     "name": "caterpillar_expansion_quadratic",
-    "equations": [
-      "eq:count-quadratic"
-    ],
+    "equations": [],
     "key": "countQuadratic",
     "line": 155,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Theorems.lean#L155",
@@ -1404,9 +1394,7 @@
   {
     "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "basePt",
-    "equations": [
-      "eq:base-point"
-    ],
+    "equations": [],
     "key": "draft_countexp-basept",
     "line": 39,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Locality.lean#L39",
@@ -1415,9 +1403,7 @@
   {
     "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "Balanced",
-    "equations": [
-      "eq:balanced"
-    ],
+    "equations": [],
     "key": "draft_countexp-balanced",
     "line": 82,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Locality.lean#L82",
@@ -1426,9 +1412,7 @@
   {
     "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "Active",
-    "equations": [
-      "eq:active"
-    ],
+    "equations": [],
     "key": "draft_countexp-active",
     "line": 88,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Locality.lean#L88",
@@ -1437,12 +1421,8 @@
   {
     "file": "MaxCaterpillar/Count/Passing.lean",
     "name": "descr_balanced_of_arg_eq_zero",
-    "equations": [
-      "eq:preactivation-digits"
-    ],
-    "steps": [
-      "stp:count-digits"
-    ],
+    "equations": [],
+    "steps": [],
     "key": "draft_countexp-digits",
     "line": 198,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Passing.lean#L198",
@@ -1451,9 +1431,7 @@
   {
     "file": "MaxCaterpillar/Count/PerUnit.lean",
     "name": "tie_eq_of_inter_block",
-    "steps": [
-      "stp:count-admissible"
-    ],
+    "steps": [],
     "key": "draft_countexp-admissible",
     "line": 172,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/PerUnit.lean#L172",
@@ -1463,12 +1441,8 @@
   {
     "file": "MaxCaterpillar/Count/Passing.lean",
     "name": "card_balanced_fiber_of_matching",
-    "equations": [
-      "eq:order-count"
-    ],
-    "steps": [
-      "stp:count-orders"
-    ],
+    "equations": [],
+    "steps": [],
     "key": "draft_countexp-orders",
     "line": 541,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Passing.lean#L541",
@@ -1477,12 +1451,8 @@
   {
     "file": "MaxCaterpillar/Count/PerUnit.lean",
     "name": "card_passes_le_cover",
-    "equations": [
-      "eq:path-weight"
-    ],
-    "steps": [
-      "stp:count-transfer"
-    ],
+    "equations": [],
+    "steps": [],
     "key": "draft_countexp-transfer",
     "line": 211,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/PerUnit.lean#L211",
@@ -1491,12 +1461,8 @@
   {
     "file": "MaxCaterpillar/Count/Main.lean",
     "name": "pow_le_of_choose_le",
-    "equations": [
-      "eq:binomial-sum"
-    ],
-    "steps": [
-      "stp:count-corollary"
-    ],
+    "equations": [],
+    "steps": [],
     "key": "draft_countexp-corollary",
     "line": 69,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Main.lean#L69",
@@ -1506,9 +1472,7 @@
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "factorial_le_quotientDim",
     "equations": [],
-    "steps": [
-      "stp:quotient-independence"
-    ],
+    "steps": [],
     "key": "draft_quotlower-theorem",
     "line": 379,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Dimension.lean#L379",
@@ -1520,9 +1484,7 @@
     "equations": [
       "eq:path-unit"
     ],
-    "steps": [
-      "stp:quotient-path-units"
-    ],
+    "steps": [],
     "key": "draft_quotlower-path-unit",
     "line": 177,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Dimension.lean#L177",
@@ -1531,9 +1493,7 @@
   {
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "testZ",
-    "equations": [
-      "eq:test-configuration"
-    ],
+    "equations": [],
     "key": "draft_quotlower-test",
     "line": 241,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Dimension.lean#L241",
@@ -1542,9 +1502,7 @@
   {
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "auxSpan_le_ker",
-    "steps": [
-      "stp:quotient-auxiliary"
-    ],
+    "steps": [],
     "key": "draft_quotlower-auxiliary",
     "line": 92,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Dimension.lean#L92",
@@ -1554,12 +1512,8 @@
   {
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "detector_self",
-    "equations": [
-      "eq:path-functional"
-    ],
-    "steps": [
-      "stp:quotient-path-values"
-    ],
+    "equations": [],
+    "steps": [],
     "key": "draft_quotlower-values",
     "line": 278,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Dimension.lean#L278",
@@ -1771,12 +1725,8 @@
   {
     "file": "MaxCaterpillar/Count/Main.lean",
     "name": "choose_le_of_unit_bound",
-    "equations": [
-      "eq:forest-count"
-    ],
-    "steps": [
-      "stp:count-assembly"
-    ],
+    "equations": [],
+    "steps": [],
     "key": "forestCount",
     "line": 26,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/Main.lean#L26",
@@ -1785,9 +1735,7 @@
   {
     "file": "MaxCaterpillar/Count/BlockSum.lean",
     "name": "star_sum",
-    "equations": [
-      "eq:block-weight"
-    ],
+    "equations": [],
     "key": "blockWeight",
     "line": 95,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxCaterpillar/Count/BlockSum.lean#L95",
@@ -1822,92 +1770,42 @@
   },
   {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/rational_caterpillar_coefficient_choice.md",
     "equations": [
-      "eq:bounded-degree-count"
+      "eq:coefficient-choice",
+      "eq:rational-coordinate"
     ],
-    "key": "paper_source_bounded_degree_count",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md"
+    "key": "paper_source_rational_coefficient_choice",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/rational_caterpillar_coefficient_choice.md"
   },
   {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/61b26cf955427ab7fbc6919a51623c98fded4740/research/sN/trees/overnight_bounded_excess.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower_count_elegance_routes.md",
     "equations": [
-      "eq:bounded-excess-count"
+      "eq:count-exponential",
+      "eq:forest-count",
+      "eq:weighted-unit",
+      "eq:matching-mixture-count",
+      "eq:tie-test",
+      "eq:balanced",
+      "eq:active",
+      "eq:coverage-sum",
+      "eq:block-weight",
+      "eq:star-block-weight",
+      "eq:matching-witnesses",
+      "eq:matching-cover"
     ],
-    "key": "paper_source_bounded_excess_count",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/61b26cf955427ab7fbc6919a51623c98fded4740/research/sN/trees/overnight_bounded_excess.md"
+    "key": "paper_source_one_germ_counting",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower_count_elegance_routes.md"
   },
   {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/dimension_germ_simplification.md",
     "equations": [
-      "eq:connected-capacity"
+      "eq:test-configuration",
+      "eq:path-functional"
     ],
-    "key": "paper_source_connected_capacity",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md"
-  },
-  {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
-    "equations": [
-      "eq:degree-two-capacity"
-    ],
-    "key": "paper_source_degree_two_capacity",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md"
-  },
-  {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
-    "equations": [
-      "eq:degree-two-count"
-    ],
-    "key": "paper_source_degree_two_count",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md"
-  },
-  {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
-    "equations": [
-      "eq:degree-two-unit"
-    ],
-    "key": "paper_source_degree_two_unit",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md"
-  },
-  {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#compact-matching-mixture-without-anti-concentration",
-    "equations": [
-      "eq:matching-mixture-count"
-    ],
-    "key": "paper_source_matching_mixture_count",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#compact-matching-mixture-without-anti-concentration"
-  },
-  {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md",
-    "equations": [
-      "eq:matching-witnesses"
-    ],
-    "key": "paper_source_matching_witnesses",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md"
-  },
-  {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#the-common-local-test",
-    "equations": [
-      "eq:tie-test"
-    ],
-    "key": "paper_source_tie_test",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#the-common-local-test"
-  },
-  {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md",
-    "equations": [
-      "eq:weighted-forest-count"
-    ],
-    "key": "paper_source_weighted_forest_count",
-    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md"
+    "key": "paper_source_dimension_germ",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/dimension_germ_simplification.md"
   }
 ]

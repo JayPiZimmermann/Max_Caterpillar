@@ -787,9 +787,7 @@
   "rationalCoordinate": {
     "file": "MaxCaterpillar/Rationality.lean",
     "name": "exists_rat_coeff_of_mem_span",
-    "equations": [
-      "eq:rational-coordinate"
-    ]
+    "equations": []
   },
   "quotientDim": {
     "file": "MaxCaterpillar/Quotient.lean",
@@ -801,9 +799,7 @@
   "quotientCompression": {
     "file": "MaxCaterpillar/Quotient.lean",
     "name": "quotient_compression",
-    "equations": [
-      "eq:quotient-width"
-    ]
+    "equations": []
   },
   "cpwlTwo": {
     "file": "MaxCaterpillar/CPWL.lean",
@@ -845,23 +841,17 @@
   "countBinomial": {
     "file": "MaxCaterpillar/Theorems.lean",
     "name": "caterpillar_expansion_choose_le",
-    "equations": [
-      "eq:count-binomial"
-    ]
+    "equations": []
   },
   "countExponential": {
     "file": "MaxCaterpillar/Theorems.lean",
     "name": "caterpillar_expansion_exponential",
-    "equations": [
-      "eq:count-exponential"
-    ]
+    "equations": []
   },
   "countQuadratic": {
     "file": "MaxCaterpillar/Theorems.lean",
     "name": "caterpillar_expansion_quadratic",
-    "equations": [
-      "eq:count-quadratic"
-    ]
+    "equations": []
   },
   "caterpillarExpansion": {
     "file": "MaxCaterpillar/Definitions.lean",
@@ -876,79 +866,53 @@
   "draft_countexp-basept": {
     "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "basePt",
-    "equations": [
-      "eq:base-point"
-    ]
+    "equations": []
   },
   "draft_countexp-balanced": {
     "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "Balanced",
-    "equations": [
-      "eq:balanced"
-    ]
+    "equations": []
   },
   "draft_countexp-active": {
     "file": "MaxCaterpillar/Count/Locality.lean",
     "name": "Active",
-    "equations": [
-      "eq:active"
-    ]
+    "equations": []
   },
   "draft_countexp-digits": {
     "file": "MaxCaterpillar/Count/Passing.lean",
     "name": "descr_balanced_of_arg_eq_zero",
-    "equations": [
-      "eq:preactivation-digits"
-    ],
-    "steps": [
-      "stp:count-digits"
-    ]
+    "equations": [],
+    "steps": []
   },
   "draft_countexp-admissible": {
     "file": "MaxCaterpillar/Count/PerUnit.lean",
     "name": "tie_eq_of_inter_block",
-    "steps": [
-      "stp:count-admissible"
-    ],
+    "steps": [],
     "equations": []
   },
   "draft_countexp-orders": {
     "file": "MaxCaterpillar/Count/Passing.lean",
     "name": "card_balanced_fiber_of_matching",
-    "equations": [
-      "eq:order-count"
-    ],
-    "steps": [
-      "stp:count-orders"
-    ]
+    "equations": [],
+    "steps": []
   },
   "draft_countexp-transfer": {
     "file": "MaxCaterpillar/Count/PerUnit.lean",
     "name": "card_passes_le_cover",
-    "equations": [
-      "eq:path-weight"
-    ],
-    "steps": [
-      "stp:count-transfer"
-    ]
+    "equations": [],
+    "steps": []
   },
   "draft_countexp-corollary": {
     "file": "MaxCaterpillar/Count/Main.lean",
     "name": "pow_le_of_choose_le",
-    "equations": [
-      "eq:binomial-sum"
-    ],
-    "steps": [
-      "stp:count-corollary"
-    ]
+    "equations": [],
+    "steps": []
   },
   "draft_quotlower-theorem": {
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "factorial_le_quotientDim",
     "equations": [],
-    "steps": [
-      "stp:quotient-independence"
-    ]
+    "steps": []
   },
   "draft_quotlower-path-unit": {
     "file": "MaxCaterpillar/Dimension.lean",
@@ -956,34 +920,24 @@
     "equations": [
       "eq:path-unit"
     ],
-    "steps": [
-      "stp:quotient-path-units"
-    ]
+    "steps": []
   },
   "draft_quotlower-test": {
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "testZ",
-    "equations": [
-      "eq:test-configuration"
-    ]
+    "equations": []
   },
   "draft_quotlower-auxiliary": {
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "auxSpan_le_ker",
-    "steps": [
-      "stp:quotient-auxiliary"
-    ],
+    "steps": [],
     "equations": []
   },
   "draft_quotlower-values": {
     "file": "MaxCaterpillar/Dimension.lean",
     "name": "detector_self",
-    "equations": [
-      "eq:path-functional"
-    ],
-    "steps": [
-      "stp:quotient-path-values"
-    ]
+    "equations": [],
+    "steps": []
   },
   "bsy-hyperplane": {
     "file": "MaxCaterpillar/Competing/Defs.lean",
@@ -1115,19 +1069,13 @@
   "forestCount": {
     "file": "MaxCaterpillar/Count/Main.lean",
     "name": "choose_le_of_unit_bound",
-    "equations": [
-      "eq:forest-count"
-    ],
-    "steps": [
-      "stp:count-assembly"
-    ]
+    "equations": [],
+    "steps": []
   },
   "blockWeight": {
     "file": "MaxCaterpillar/Count/BlockSum.lean",
     "name": "star_sum",
-    "equations": [
-      "eq:block-weight"
-    ]
+    "equations": []
   },
   "quadraticRefinement": {
     "file": "MaxCaterpillar/CountLower.lean",
@@ -1144,74 +1092,38 @@
     "name": "tree_expansion_quadratic",
     "equations": []
   },
-  "paper_source_bounded_degree_count": {
+  "paper_source_rational_coefficient_choice": {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/rational_caterpillar_coefficient_choice.md",
     "equations": [
-      "eq:bounded-degree-count"
+      "eq:coefficient-choice",
+      "eq:rational-coordinate"
     ]
   },
-  "paper_source_bounded_excess_count": {
+  "paper_source_one_germ_counting": {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/61b26cf955427ab7fbc6919a51623c98fded4740/research/sN/trees/overnight_bounded_excess.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower_count_elegance_routes.md",
     "equations": [
-      "eq:bounded-excess-count"
+      "eq:count-exponential",
+      "eq:forest-count",
+      "eq:weighted-unit",
+      "eq:matching-mixture-count",
+      "eq:tie-test",
+      "eq:balanced",
+      "eq:active",
+      "eq:coverage-sum",
+      "eq:block-weight",
+      "eq:star-block-weight",
+      "eq:matching-witnesses",
+      "eq:matching-cover"
     ]
   },
-  "paper_source_connected_capacity": {
+  "paper_source_dimension_germ": {
     "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/06d5a6b507f075499531445e88c1cee1f45e89fd/research/sN/trees/overnight_upper_connected_coefficients.md",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/dimension_germ_simplification.md",
     "equations": [
-      "eq:connected-capacity"
-    ]
-  },
-  "paper_source_degree_two_capacity": {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
-    "equations": [
-      "eq:degree-two-capacity"
-    ]
-  },
-  "paper_source_degree_two_count": {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
-    "equations": [
-      "eq:degree-two-count"
-    ]
-  },
-  "paper_source_degree_two_unit": {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/3ef5d3f673b8b31572155490711343017b6aa3f0/research/sN/trees/overnight_degree_two.md",
-    "equations": [
-      "eq:degree-two-unit"
-    ]
-  },
-  "paper_source_matching_mixture_count": {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#compact-matching-mixture-without-anti-concentration",
-    "equations": [
-      "eq:matching-mixture-count"
-    ]
-  },
-  "paper_source_matching_witnesses": {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md",
-    "equations": [
-      "eq:matching-witnesses"
-    ]
-  },
-  "paper_source_tie_test": {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/1cc17e51aa6eb979bc28257a294e9f78679c8e37/research/sN/trees/lower_bound_common_germ.md#the-common-local-test",
-    "equations": [
-      "eq:tie-test"
-    ]
-  },
-  "paper_source_weighted_forest_count": {
-    "kind": "proof",
-    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight_pseudoforest_matching.md",
-    "equations": [
-      "eq:weighted-forest-count"
+      "eq:test-configuration",
+      "eq:path-functional"
     ]
   }
 }
