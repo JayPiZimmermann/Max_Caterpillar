@@ -233,6 +233,7 @@
 \DeclareSourceEquation{eq:fixed-five-rays}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/b5615d0745f8b064dc6ee374c6ae584a0957bc10/research/sN/best5/overnight\_fixed\_bowtie\_pairs.md}
 \DeclareSourceEquation{eq:weighted-forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight\_pseudoforest\_matching.md}
 \DeclareSourceEquation{eq:matching-witnesses}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/4c9fbe4f63066e44d1f68bc184edc929d00a937b/research/sN/trees/overnight\_pseudoforest\_matching.md}
+\DeclareSourceEquation{eq:bounded-excess-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/61b26cf955427ab7fbc6919a51623c98fded4740/research/sN/trees/overnight\_bounded\_excess.md}
 \DeclareSourceEquation{eq:weighted-isolates}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/84eb935304c04e4b5a878adf219fbcede5758b83/research/sN/trees/overnight\_bounded\_degree.md}
 \makeatletter
 \AtBeginDocument{%
@@ -861,6 +862,18 @@ not yet formalized in Lean. A matching of linear size in each pseudoforest
 also gives an exponential bound without restricting the maximum degree.
 Trees of unbounded degree and
 sublinear matching number remain outside this exponential regime.
+
+The same argument permits additional cycles. For a comparison graph $G$, let
+$b(G)=\sum_C\max\{0,|E(C)|-|V(C)|\}$, summed over its connected components.
+If every graph has $\nu(G)+z(G)\geq k$ and $b(G)\leq b$, then
+\begin{align}\label{eq:bounded-excess-count}
+ |K|\geq\frac{1-b_N2^{-N}}
+ {\Pr\bigl(\operatorname{Bin}(k,1/4)\leq b+2\bigr)}.
+\end{align}
+Thus a matching of linear size and $b=o(N)$ still give an exponential
+bound, without any degree restriction. More generally it suffices that
+$k=\Omega(N)$ and $\limsup b/k<1/4$. The proof is in
+\Cref{app:count-exponential}.
 
 \paragraph[Trees with few out-leaves]{Trees with few out-leaves (\leandecl{MaxCaterpillar/Count/Main.lean}{228}{outLeaf_unified_exponential}).}
 There is also an exponential bound without restricting internal branching.
@@ -1988,6 +2001,18 @@ $1-(2/3)^\Delta/3$ and apply the same union bound to obtain the stated
 asymptotic estimate. Repeating a graph with different heads and weights
 adds no tied sets to its coverage, so these bounds also count distinct graphs.
 \end{Proof}
+
+For \Cref{eq:bounded-excess-count}, extend a maximum matching of $G$ to a
+spanning forest, then add one omitted edge in each originally cyclic
+component. The resulting pseudoforest $P$ preserves the matching and all
+isolated vertices, and omits exactly $b(G)$ edges. Restoring an edge merges
+at most two induced components, so $c(G[T])\geq c(P[T])-b(G)$.
+The independent matching and isolate witnesses in the preceding proof
+therefore show that $c(G[T])\leq2$ requires at most $b+2$ successes in a
+binomial variable with parameters $k$ and $1/4$. Apply the same union bound.
+The exponential conclusions follow from the binomial lower-tail estimate;
+when $b=o(k)$ its probability is at most
+$\exp[-(\log(4/3)-o(1))k]$.
 
 \paragraph{Arbitrary tree shapes with a source orientation.}
 The block argument also works with a subforest $R$ of the reduced forest:
