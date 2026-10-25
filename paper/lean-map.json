@@ -23,10 +23,7 @@
   "faces": {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean",
     "name": "faceKey",
-    "equations": [
-      "eq:faces",
-      "eq:face-description"
-    ]
+    "equations": []
   },
   "span": {
     "file": "MaxCaterpillar/Lemmas.lean",
@@ -1104,10 +1101,7 @@
     "kind": "proof",
     "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower_count_elegance_routes.md",
     "equations": [
-      "eq:count-exponential",
-      "eq:forest-count",
       "eq:weighted-unit",
-      "eq:matching-mixture-count",
       "eq:tie-test",
       "eq:balanced",
       "eq:active",
@@ -1124,6 +1118,32 @@
     "equations": [
       "eq:test-configuration",
       "eq:path-functional"
+    ]
+  },
+  "paper_source_face_closure": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/source_face_closure_audit.md",
+    "equations": [
+      "eq:faces",
+      "eq:face-description",
+      "eq:source-face-charge",
+      "eq:source-face-capacity"
+    ]
+  },
+  "paper_source_face_closed_bounds": {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower_count_elegance_routes.md",
+    "equations": [
+      "eq:count-exponential",
+      "eq:forest-count",
+      "eq:matching-mixture-count"
+    ]
+  },
+  "paper_source_bsy_combinatorial": {
+    "kind": "literature",
+    "source_url": "https://arxiv.org/pdf/2610.28587v1#page=31",
+    "equations": [
+      "eq:bsy-combinatorial"
     ]
   }
 }

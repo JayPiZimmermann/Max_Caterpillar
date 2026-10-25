@@ -75,8 +75,6 @@
 \DeclareLeanEquation{eq:width}{MaxCaterpillar/Theorems.lean}{41}
 \DeclareLeanEquation{eq:count}{MaxCaterpillar/Definitions.lean}{63}
 \DeclareLeanEquation{eq:word}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}
-\DeclareLeanEquation{eq:faces}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}
-\DeclareLeanEquation{eq:face-description}{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}
 \DeclareLeanEquation{eq:dictionary-span}{MaxCaterpillar/Lemmas.lean}{54}
 \DeclareLeanEquation{eq:class-identity}{MaxCaterpillar/Lemmas.lean}{48}
 \DeclareLeanEquation{stp:class}{MaxCaterpillar/Lemmas.lean}{48}
@@ -190,10 +188,7 @@
 \DeclareLeanEquation{stp:bsy-star}{MaxCaterpillar/Competing/Support.lean}{454}
 \DeclareSourceEquation{eq:coefficient-choice}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/rational\_caterpillar\_coefficient\_choice.md}
 \DeclareSourceEquation{eq:rational-coordinate}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/rational\_caterpillar\_coefficient\_choice.md}
-\DeclareSourceEquation{eq:count-exponential}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
-\DeclareSourceEquation{eq:forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
 \DeclareSourceEquation{eq:weighted-unit}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
-\DeclareSourceEquation{eq:matching-mixture-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
 \DeclareSourceEquation{eq:tie-test}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
 \DeclareSourceEquation{eq:balanced}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
 \DeclareSourceEquation{eq:active}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
@@ -204,6 +199,14 @@
 \DeclareSourceEquation{eq:matching-cover}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower\_count\_elegance\_routes.md}
 \DeclareSourceEquation{eq:test-configuration}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/dimension\_germ\_simplification.md}
 \DeclareSourceEquation{eq:path-functional}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/dimension\_germ\_simplification.md}
+\DeclareSourceEquation{eq:faces}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/source\_face\_closure\_audit.md}
+\DeclareSourceEquation{eq:face-description}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/source\_face\_closure\_audit.md}
+\DeclareSourceEquation{eq:source-face-charge}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/source\_face\_closure\_audit.md}
+\DeclareSourceEquation{eq:source-face-capacity}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/source\_face\_closure\_audit.md}
+\DeclareSourceEquation{eq:count-exponential}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower\_count\_elegance\_routes.md}
+\DeclareSourceEquation{eq:forest-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower\_count\_elegance\_routes.md}
+\DeclareSourceEquation{eq:matching-mixture-count}{https://github.com/JayPiZimmermann/Max\_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower\_count\_elegance\_routes.md}
+\DeclareSourceEquation{eq:bsy-combinatorial}{https://arxiv.org/pdf/2610.28587v1\#page=31}
 \makeatletter
 \AtBeginDocument{%
 \let\paper@linked@tagform\tagform@
@@ -416,7 +419,7 @@ hidden layers.
 \end{theorem}
 Their first proof proceeds by induction on dimension, using homological algebra to construct a linear combination of support functions of pyramids over zonotopes that agrees with the simplex support function modulo lower-dimensional terms. Our construction restricts these building blocks to an explicitly specified finite family, the caterpillar polytopes; we deliver a geometric proof of the corresponding identity.
 
-Independently and concurrently, they developed a second proof based on combinatorial cancellation, with building blocks closely related to ours. \Cref{app:bsy} identifies them exactly: for nonempty marked sets their pyramids are translated caterpillar polytopes, and the remaining pyramids are rooted stars, which are not caterpillar functions. We do not claim that their coefficients agree with ours. We establish explicit width bounds for the first and second hidden layers; their paper states no widths.
+Independently and concurrently, they developed a second proof based on combinatorial cancellation, with building blocks closely related to ours. \Cref{app:bsy} identifies them exactly: for nonempty marked sets their pyramids are translated caterpillar polytopes, and the remaining pyramids are rooted stars, which are not caterpillar functions. The comparison identifies their building blocks and faces; it does not identify their final correction coefficients. We establish explicit width bounds for the first and second hidden layers; their paper states no widths.
 
 
 \section{The Caterpillar Net}\label{sec:construction}
@@ -468,22 +471,27 @@ apex label, $r\ne a$ is the head root, and $L$ is an arbitrary orientation
 of a tree on all labels other than $a$.
 If every edge of an underlying tree $T$ points away from a source $s$,
 write $U_{a,s,r,T}$ and call the function \emph{source-oriented}.
-A \emph{rooted-star function} has a star centred at $r$, oriented away
-from $r$. An \emph{oriented-star function} allows any edge orientations
-and any head root in the star.
+Use the same indices on its face functions, $U^\tau_{a,s,r,T}$.
+A \emph{rooted-star function} has a star centred at its head root,
+with all edges directed away from that root. Write
+\begin{align}\label{eq:rooted-star}
+ S_{a,c}(x):=\relu\Bigl(x_c-x_a+\sum_{l\notin\{a,c\}}\relu(x_c-x_l)\Bigr).
+\end{align}
+An \emph{oriented-star function} allows any edge orientations and any
+head root in the star.
 
-For a unit-weight graph function, an \emph{edge state}
+For a graph function, an \emph{edge state}
 $\tau(\ell)\in\{0,\ell,\relu\circ\ell\}$ omits an edge, keeps it
 linearly, or retains $x\mapsto\relu(x_i-x_j)$, respectively. Put
 \begin{align}\label{eq:faces}
- U^{\tau}_{h,L}(x):=\relu\Bigl(h(x)+\sum_{\ell\in L}\tau(\ell)(x)\Bigr).
+ U^{\tau}_{h,L,c}(x):=\relu\Bigl(h(x)+\sum_{\ell\in L}c_\ell\tau(\ell)(x)\Bigr).
 \end{align}
-For canonical trees these are the \emph{face functions}, with the
-geometric interpretation below. Every edge-state function is already
-a graph function from \Cref{def:graph-function}:
+Write $U^\tau_{h,L}$ for unit coefficients. For canonical trees these
+are the \emph{face functions}, with the geometric interpretation below.
+Every edge-state function is already a graph function from \Cref{def:graph-function}:
 \begin{align}\label{eq:face-description}
- U^{\tau}_{h,L}=U_{h',M},\qquad
- h':=h+\sum_{\tau(\ell)=\ell}\ell,\qquad
+ U^{\tau}_{h,L,c}=U_{h',M,c|_M},\qquad
+ h':=h+\sum_{\tau(\ell)=\ell}c_\ell\ell,\qquad
  M:=\{\ell\in L:\tau(\ell)=\relu\circ\ell\}.
 \end{align}
 \end{definition}
@@ -493,8 +501,8 @@ $G_M$ can be disconnected: omitting or linearizing a tree edge splits
 its component. The linear state also changes the head, as in
 \Cref{eq:face-description}. Thus tree face functions are forest
 functions, with heads determined by their original tree and edge states.
-Their reduced forests are computed from $(h',M)$, not from the original
-$(h,L)$. Equivalently, one may keep $L$ and give every nonretained
+For unit weights their reduced forests are computed from $(h',M)$.
+Equivalently, one may keep $L$ and give every nonretained
 comparison coefficient zero; this describes the same function with the
 original graph available for bounds on its matching number.
 
@@ -809,6 +817,39 @@ w_3^\top\relu(W_2\Phi(x))=\sum_{k\in K}d_kU_k(x)+\relu(R(x))-\relu(-R(x))=\maxn_
 This completes the rational Caterpillar Net. \Cref{sec:size} bounds $q_N$
 by counting its possible normalized descriptions.
 
+\subsection{The combinatorial construction of Brunck et al.}\label{sec:bsy-construction}
+
+The additional building blocks in the direct combinatorial proof of
+\cite{BSY} are the rooted-star functions from \Cref{eq:rooted-star}.
+In our notation their signed identity is the following.
+
+\begin{theorem}[Brunck et al., {\cite[Theorem~25]{BSY}}]\label{thm:bsy-combinatorial}
+For $N\geq3$, there is a linear combination $R_N$ of support functions
+of polytopes of affine dimension at most $N-2$ such that
+\begin{align}\label{eq:bsy-combinatorial}
+\begin{split}
+ \maxn_N(x)=\frac{(-1)^N}{N!}\sum_{\pi\in\operatorname{Sym}\{0,\ldots,N-1\}}
+ \Biggl[&x_{\pi(0)}+S_{\pi(0),\pi(1)}(x)\\
+ &+\sum_{\varnothing\ne S\subseteq\{1,\ldots,N-2\}}
+ (-1)^{|S|}\bigl(x_{\pi(0)}+U_{\pi,S}(x)\bigr)\Biggr]+R_N(x).
+\end{split}
+\end{align}
+\end{theorem}
+
+Their construction handles the lower-dimensional remainder by induction.
+\Cref{thm:bsy-relation} proves the exact identification of their pyramid
+summands: nonempty marked sets give translated caterpillar polytopes;
+the empty marked set gives the translated rooted-star polytope.
+Translation adds only a linear function, also for every face.
+Nontrivial faces containing the apex give our caterpillar or rooted-star
+face functions, up to that linear term. The apex vertex and all base
+faces have support functions in $A_N$, since base faces are translated
+zonotopes generated by coordinate differences.
+Thus both papers' pyramid families, with all their faces, lie in the
+joint vocabulary used below. The lower bounds allow arbitrary signed
+coefficients and arbitrary corrections within that vocabulary; they do
+not assume either paper's displayed coefficients.
+
 \section{Lower bounds}\label{sec:lower}
 
 One local test proves both kinds of lower bound: at a tied maximum, take
@@ -818,16 +859,18 @@ the ties each unit can detect. For dictionary dimension, we exhibit one
 locality that detects each path order separately.
 
 \begin{theorem}[Exponential count, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
-Put $y_0=\sqrt{3/2}-1$. Every caterpillar expansion of $\maxn_N$, $N\geq3$,
-satisfies
+Put $y_0=\sqrt{3/2}-1$. Every expansion of $\maxn_N$, $N\geq3$,
+using caterpillar and rooted-star face functions satisfies
 \begin{align}\label{eq:count-exponential}
  |K|\geq(1+y_0)^N-1-Ny_0-\binom N2y_0^2
       =\Omega\bigl((3/2)^{N/2}\bigr).
 \end{align}
 \end{theorem}
 
-The bound includes auxiliary remainders and arbitrary signed output
-coefficients. It also holds for broader tree dictionaries described below.
+Every expansion-size bound in this section permits all face states of its stated
+building blocks, auxiliary remainders, and arbitrary signed output
+coefficients. In particular, the bound includes the joint face vocabulary
+of both constructions in \Cref{sec:bsy-construction}.
 It does not give a lower bound for unrestricted two-hidden-layer networks.
 
 \begin{theorem}[Vocabulary dimension, \leandecl{MaxCaterpillar/Theorems.lean}{192}{caterpillarDim_ge}, {\Cref{pf:thm:quotient-lower}}]\label{thm:quotient-lower}
@@ -841,9 +884,12 @@ expansion of the maximum may have smaller support.
 
 \paragraph{Broader forest dictionaries.}
 \begin{theorem}[Forest expansions, {\Cref{pf:thm:forest-count}}]\label{thm:forest-count}
-Suppose every term of an expansion is a unit-weight forest function
-whose reduced forest, as in \Cref{def:graph-function}, has maximum degree
-at most $\Delta\geq2$.
+Consider an expansion using arbitrary edge states of unit-weight forest
+functions whose original reduced forests have maximum degree at most
+$\Delta\geq2$. All face functions of source-oriented canonical trees
+may also be included. In particular, the expansion may freely mix these
+additional functions with caterpillars and the building blocks of Brunck
+et al., including all their faces.
 Set $y=(2\Delta+2)^{-1}$; when $\Delta=2$, one may instead use
 $y=y_0=\sqrt{3/2}-1$. Then
 \begin{align}\label{eq:forest-count}
@@ -852,32 +898,33 @@ $y=y_0=\sqrt{3/2}-1$. Then
 \end{align}
 \end{theorem}
 
-Caterpillar face functions have reduced degree at most two; rooted-star
-face functions have reduced degree zero. These include disconnected
-retained forests in both cases. Consequently the stronger rate in
-\Cref{eq:count-exponential} counts every term in any mixture of our
-building blocks and those of the direct combinatorial construction in
-\cite{BSY}; \Cref{app:bsy} identifies the latter exactly.
-The real-head extension and the stronger aggregate estimates are proved
+The reduced-degree hypothesis is checked before taking faces: face
+selection cannot increase it. Caterpillars have reduced degree at most
+two, and rooted stars have reduced degree zero, so neither family is
+subject to a bound on its original tree degree. The estimates count
+all terms in the mixture, including both papers' face functions.
+An ordinary maximum-degree bound also implies the stated reduced-degree
+bound. The real-head extension and the stronger aggregate estimates are proved
 mathematically here; the existing Lean count theorem gives a weaker bound.
 
 \paragraph{Arbitrary tree shapes with a source orientation.}
-All source-oriented canonical tree functions $U_{a,s,r,T}$ from
-\Cref{def:canonical-tree} may be adjoined to the reduced-degree-two
-forest family without changing \Cref{eq:count-exponential}. Indeed,
-$\kappa_v=\deg_T(v)-1+\mathbf1_{v=s}+\mathbf1_{v=r}$, so only $s$ and $r$
-can be degree-one vertices with $\kappa_v=1$.
-The proof selects a degree-two covering subforest and uses the same
-block count. This includes every tree shape, with an arbitrary head root.
-It does not include arbitrary face states of these added trees:
-linearizing an edge can change the leaf coefficients.
+The source-oriented extension in \Cref{thm:forest-count} includes every
+$U^\tau_{a,s,r,T}$, for every tree shape, source, head root, and face state.
+At any locality detected by such a face, its retained forest reduces
+to one smaller source-oriented tree. \Cref{eq:source-face-capacity}
+transfers the same counting bounds without a loss. Thus the family
+including all these face functions satisfies \Cref{eq:count-exponential}.
 
 \paragraph{Large matchings with arbitrary orientations and weights.}
-Start with any mixture of the reduced-degree-two forest functions and
-the source-oriented functions above. Adjoin weighted pseudoforest
-functions $U_{h_j,L_j,c_j}$ from \Cref{def:graph-function}.
-Suppose each added graph has a matching of size
+Start with any mixture of caterpillars and the building blocks of Brunck
+et al., including all their faces. More generally, the base family may contain all
+edge states of reduced-degree-two unit-weight forest functions and all
+source-oriented canonical tree face functions. Adjoin arbitrary edge
+states of weighted pseudoforest functions $U_{h_j,L_j,c_j}$.
+Suppose each added original graph $G_{L_j}$ has a matching of size
 at least $k$, where $k$ is a nonnegative integer with $2k\leq N$.
+This matching hypothesis applies only to the added graphs; caterpillar,
+rooted-star, and the other base-family face functions remain unrestricted.
 For $N\geq9$, every expansion of the maximum in this mixture, with an
 arbitrary shallow remainder, uses a total number $Z$ of terms satisfying
 \begin{align}\label{eq:matching-mixture-count}
@@ -1669,7 +1716,12 @@ including when that label is the anchor $t_0$.
 
 \begin{Proof}{Theorem}{thm:count-exponential}
 \phantomsection\label[proof]{pf:thm:forest-count}
-We prove \Cref{thm:forest-count} and specialize to caterpillars.
+We first prove the reduced-degree case of \Cref{thm:forest-count}.
+Taking an edge state cannot increase reduced degree: an original pendant
+whose edge is retained keeps the same head coefficient and remains a
+pendant; if its edge is not retained, it is isolated. Thus every new
+reduced edge was already an old reduced edge. It suffices to bound the
+resulting forest functions.
 For a unit-weight forest function $U_{h,L}$, use $\kappa$ from
 \Cref{def:graph-function}.
 At an ordered top tie $T$, let $u(o)$ count the neighbours of $o$ with
@@ -1680,8 +1732,10 @@ coefficient $\kappa_t$. By \Cref{lem:tie-detection}, detection requires
  u(o)&=\kappa_o &&(o\notin T),\label{eq:balanced}\\
  \kappa_t&\ne0 &&(t\in T\text{ with no neighbour in }T).\label{eq:active}
 \end{align}
-Call a unit \emph{passing} when these conditions hold. Every ordered tie
-of size at least three is passed by some unit in the expansion.
+Call a unit \emph{passing} when these conditions hold and its induced
+comparison graph on $T$ has at most two components. All three conditions
+are necessary by \Cref{lem:tie-detection}. Every ordered tie of size at
+least three is therefore passed by some unit in the expansion.
 
 \paragraph{A tie set is determined by the reduced forest.}
 Let $F=G_L$ and let $\Phi$ contain the nonisolated vertices that are not
@@ -1697,7 +1751,8 @@ For fixed $T$, balance prescribes the out-degrees of $F-T$ when edges
 point towards the higher endpoint. A forest orientation is uniquely
 determined by its out-degrees: orient the edge at a leaf, delete the leaf,
 and repeat. Let $a_U(T)$ be the fraction of outside orders passed by $U$.
-For $0<y\leq1$, set $F_U(y)=\sum_T a_U(T)y^{|T|}$.
+For $0<y\leq1$, set
+$F_U(y)=\sum_{|T|\geq3}a_U(T)y^{|T|}$.
 Averaging the covering inequality over outside orders and summing over
 all tied sizes gives
 \begin{align}\label{eq:coverage-sum}
@@ -1745,14 +1800,18 @@ factors at most $2/3$ and $31/36$. For $2\leq s\leq\Delta$,
 $W_s(y)\leq(1/2+y)e^{1/2-y}+y^2/2
 \leq(2/3)e^{1/3}+1/72<1$.
 Hence again $F_U(y)\leq1$, proving \Cref{eq:forest-count}.
-Caterpillar face functions have reduced degree at most two, as required.
+Removing pendants leaves at most the spine of a caterpillar, and no
+edge of a rooted star.
+The face-stability argument therefore proves \Cref{eq:count-exponential}
+for both families and all their faces.
 \end{Proof}
 
-\paragraph{Arbitrary tree shapes with a source orientation.}
-The same path blocks work whenever a covering subforest on $\Phi$ has
-maximum degree two and each isolated vertex either has a pendant
-neighbour or is forced into every passed tie set. A forced singleton
-has factor $y$.
+\paragraph{All faces of source-oriented trees.}
+We first bound a full source-oriented function, then transfer the bound
+to every face. The same path blocks work whenever a covering subforest
+on $\Phi$ has maximum degree two and each isolated vertex either has a
+pendant neighbour or is forced into every passed tie set. A forced
+singleton has factor $y$.
 For $U_{a,s,r,T}$, only the source $s$ and head root $r$ can be
 \emph{out-leaves}, meaning leaves with $\kappa=1$.
 Root the tree at $r$. Include every out-leaf edge, then choose one child
@@ -1764,7 +1823,54 @@ a child had no selected child edge. It also has at most one parent edge.
 The covering forest therefore has maximum degree two. Its isolated
 vertices in $\Phi$ either have a pendant neighbour or are leaves with
 $\kappa\notin\{0,1\}$, which balance forces into $T$.
-Thus $F_U(y_0)\leq1$ for this family too, proving the asserted extension.
+Thus $F_U(y_0)\leq1$ for full source-oriented functions.
+At $y=1/2$, the same blocks give $F_U(1/2)\leq(\sqrt7/2)^N$, as checked
+in the matching argument below.
+
+Now take an arbitrary face $U^\tau_{a,s,r,T}=U_{h',M}$, and let $F$
+be its retained forest on the nonapex labels, including isolates.
+For each such vertex put $e_v=\kappa_v-\deg_F(v)+1$.
+Initially $e=\mathbf1_s+\mathbf1_r$.
+Fixing an edge $i\to j$ linearly adds one to $e_i$; omitting it adds one
+to $e_j$. Thus the $e_v$ are nonnegative integers, and every component
+$D$ of $F$ satisfies
+\begin{align}\label{eq:source-face-charge}
+ \sum_{v\in D}e_v=1+\sum_{v\in D}h'_v.
+\end{align}
+This follows by summing $\kappa_v=h'_v+\operatorname{outdeg}_F(v)$
+and using $|E(D)|=|D|-1$.
+
+At a passed tie $B$, the apex must be tied, since its coefficient is
+$-1$ and it has no comparison edge. The component condition forces
+$B\setminus\{a\}$ into one retained component $C$.
+Every other component is wholly untied; summing its balance equations
+gives $\sum_{v\in D}h'_v=0$. Since the nonapex head coefficients sum
+to $1$, the component $C$ has head sum $1$.
+By \Cref{eq:source-face-charge}, it has total charge two and every other
+component has charge one. This identifies $C$ independently of the tie.
+If there is no such unique component, or if $C$ is a singleton, the
+face passes no tie of size at least three.
+
+Otherwise $e|_C=\mathbf1_u+\mathbf1_v$, allowing $u=v$.
+Reverse the comparisons in $C$ to point away from $u$, adjusting the
+head by \Cref{eq:hinge-reversal}. This preserves $\kappa$, and the new
+head coefficient at $w\in C$ is
+$\kappa_w-(\deg_C(w)-1+\mathbf1_{w=u})=\mathbf1_{w=v}$.
+Together with the apex this is a canonical source-oriented function
+$U_C$ on the smaller label set $C\cup\{a\}$.
+Every passed outside order restricts to a passed order for $U_C$.
+A uniform outside order induces a uniform relative order on these
+labels, so no interleaving factor is lost:
+\begin{align}\label{eq:source-face-capacity}
+\begin{aligned}
+ F_{U^\tau}(y)&\leq F_{U_C}(y),\qquad F_{U^\tau}(y_0)\leq1,\\
+ F_{U^\tau}(1/2)&\leq(\sqrt7/2)^{|C|+1}\leq(\sqrt7/2)^N.
+\end{aligned}
+\end{align}
+For $y=(2\Delta+2)^{-1}\leq y_0$, monotonicity also gives
+$F_{U^\tau}(y)\leq1$. This proves the source-oriented face extension
+of \Cref{thm:forest-count} and supplies its capacity in the mixed bound.
+
 
 \paragraph{Large matchings in the same counting argument.}
 First remove biases, if present, by taking the recession function
@@ -1787,10 +1893,15 @@ vertex. These independent events each have probability $p(1-p)$, so
 \end{align}
 Set $p=1/3$, equivalently $y=p/(1-p)=1/2$, so $\rho=7/9$ and $a=2/7$.
 The added units cover probability at most $\rho^k d_k$.
-For the base units put $\tau=\sqrt7/2$.
+For a weighted edge state, absorb its linear terms into the real head
+and retain nonretained comparisons in the original graph with coefficient
+zero, as in \Cref{eq:face-description}. Thus the matching hypothesis is
+unchanged. For the base units put $\tau=\sqrt7/2$.
 The singleton factors at $y=1/2$ are at most $\tau$, while
 $E(1/2)=7/4=\tau^2$ and $P(1/2)=53/24\leq\tau^3$.
-Hence $F_U(1/2)\leq\tau^{|\Phi|}\leq\tau^N$, and a base unit covers
+Hence $F_U(1/2)\leq\tau^{|\Phi|}\leq\tau^N$ for reduced-degree-two
+units and full source-oriented units. \Cref{eq:source-face-capacity}
+gives the same bound for all source-oriented faces. A base unit covers
 probability at most $(2/3)^N\tau^N=\rho^{N/2}\leq\rho^k$.
 Multiplying \Cref{eq:coverage-sum} by $(2/3)^N$ consequently yields
 \begin{align}\label{eq:matching-cover}
@@ -1937,11 +2048,8 @@ parent of a position $i$ are
  q:=\max(\{1\}\cup M),\qquad
  r(i):=\max\bigl(\{1\}\cup\{j\in M:j<i\}\bigr)\qquad(2\leq i\leq N-1).
 \end{align}
-For $M\neq\varnothing$, $q=\max M$. For labels $a\neq c$, the \emph{rooted
-star} with apex $a$ and root $c$ is
-\begin{align}\label{eq:rooted-star}
- S_{a,c}(x):=\relu\Bigl(x_c-x_a+\sum_{l\notin\{a,c\}}\relu(x_c-x_l)\Bigr).
-\end{align}
+For $M\neq\varnothing$, $q=\max M$. Rooted stars are as in
+\Cref{eq:rooted-star}.
 \end{definition}
 
 \Needspace{12\baselineskip}
@@ -2368,7 +2476,7 @@ are available in the linked
 The subsequent consolidation of the Lean modules is not covered by that
 certificate: the current sources require an updated exact-statement manifest
 and a fresh verification run. In particular, the rational evaluation system, the common local test, the
-sharpened count bounds, and the source-orientation, matching-number, and
+sharpened count bounds, and the source-orientation and face-closure, matching-number, and
 arbitrary-star extensions are mathematical arguments
 in this paper, not claims checked by the historical certificate.
 The mathematical arguments are provided in the main text and

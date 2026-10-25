@@ -35,10 +35,7 @@
   {
     "file": "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean",
     "name": "faceKey",
-    "equations": [
-      "eq:faces",
-      "eq:face-description"
-    ],
+    "equations": [],
     "key": "faces",
     "line": 29,
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/039d68443bca6a324955031992db10b6e896f2d4/MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean#L29",
@@ -1782,10 +1779,7 @@
     "kind": "proof",
     "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/lower_count_elegance_routes.md",
     "equations": [
-      "eq:count-exponential",
-      "eq:forest-count",
       "eq:weighted-unit",
-      "eq:matching-mixture-count",
       "eq:tie-test",
       "eq:balanced",
       "eq:active",
@@ -1807,5 +1801,37 @@
     ],
     "key": "paper_source_dimension_germ",
     "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/2d5dc1342959e243478641027deb369b2ca3e51c/research/sN/trees/dimension_germ_simplification.md"
+  },
+  {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/source_face_closure_audit.md",
+    "equations": [
+      "eq:faces",
+      "eq:face-description",
+      "eq:source-face-charge",
+      "eq:source-face-capacity"
+    ],
+    "key": "paper_source_face_closure",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/source_face_closure_audit.md"
+  },
+  {
+    "kind": "proof",
+    "source_url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower_count_elegance_routes.md",
+    "equations": [
+      "eq:count-exponential",
+      "eq:forest-count",
+      "eq:matching-mixture-count"
+    ],
+    "key": "paper_source_face_closed_bounds",
+    "url": "https://github.com/JayPiZimmermann/Max_Caterpillar/blob/46366f777665390d0cfcd327698076ed008cecf1/research/sN/trees/lower_count_elegance_routes.md"
+  },
+  {
+    "kind": "literature",
+    "source_url": "https://arxiv.org/pdf/2610.28587v1#page=31",
+    "equations": [
+      "eq:bsy-combinatorial"
+    ],
+    "key": "paper_source_bsy_combinatorial",
+    "url": "https://arxiv.org/pdf/2610.28587v1#page=31"
   }
 ]
