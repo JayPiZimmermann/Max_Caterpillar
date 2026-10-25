@@ -1,0 +1,345 @@
+{
+  "status": "EXACT_ROWS_AND_INDEPENDENT_KERNELS_PASS",
+  "completed_rows": 1971,
+  "expected_rows": 1971,
+  "completed_chunks": 83,
+  "expected_chunks": 83,
+  "exact_column_rank_upper_bound": 1970,
+  "next_gate": "Independent modular augmented-minor rank check and reviewed counting bridge",
+  "config_sha256": "9ec7231385c5d1eadd6327a61cc86f14963539ae7f65beef27ebadbce31ee190",
+  "seconds": 1289.0812796719983,
+  "chunk_receipts": [
+    {
+      "first_row": 0,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 24,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 48,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 72,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 96,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 120,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 144,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 168,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 192,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 216,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 240,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 264,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 288,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 312,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 336,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 360,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 384,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 408,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 432,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 456,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 480,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 504,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 528,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 552,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 576,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 600,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 624,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 648,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 672,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 696,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 720,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 744,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 768,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 792,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 816,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 840,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 864,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 888,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 912,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 936,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 960,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 984,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1008,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1032,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1056,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1080,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1104,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1128,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1152,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1176,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1200,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1224,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1248,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1272,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1296,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1320,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1344,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1368,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1392,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1416,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1440,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1464,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1488,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1512,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1536,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1560,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1584,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1608,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1632,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1656,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1680,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1704,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1728,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1752,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1776,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1800,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1824,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1848,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1872,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1896,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1920,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1944,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    },
+    {
+      "first_row": 1968,
+      "status": "DOUBLE_EXACT_ARITHMETIC_AND_KERNELS_PASS"
+    }
+  ]
+}

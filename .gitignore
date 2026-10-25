@@ -47,9 +47,8 @@ verification/logs/
 # Reproducible overnight matching-search matrices and exact-row caches.
 /research/sN/trees/overnight_lower_*.u32
 /research/sN/trees/overnight_lower_*.bin
-/research/sN/trees/overnight_lower_exact9_chunks/*.jsonl
-/research/sN/trees/overnight_lower_exact9_chunks/*.jsonl.gz
-/research/sN/trees/overnight_lower_exact9_chunks/*.points.txt
+# Reference receipts are archived outside this regenerated cache directory.
+/research/sN/trees/overnight_lower_exact9_chunks/
 
 # Reproducible affine-cycle evaluator caches.
 /research/sN/cycles/overnight_cycle_affine_*.u32

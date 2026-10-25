@@ -1,0 +1,189 @@
+{
+  "bytes": 6345052,
+  "files": [
+    {
+      "bytes": 4454,
+      "path": "research/sN/trees/overnight_lower_exact9_README.md",
+      "sha256": "d518fc960079fe3ec8f5ab755380b32fc048a1073ee611838a3bb5220de41f36"
+    },
+    {
+      "bytes": 4731,
+      "path": "research/sN/trees/overnight_lower_nine_bridge.md",
+      "sha256": "786e39670b79931cc2f084c2cc642e381cd7221a92e77db3c98d69a1fa3cbd31"
+    },
+    {
+      "bytes": 3942,
+      "path": "research/sN/trees/overnight_lower_dp_README.md",
+      "sha256": "8db8d0453999d3d9fbc26a4d8093275ab886b74dae444f81800a64687f118264"
+    },
+    {
+      "bytes": 4517948,
+      "path": "research/sN/trees/overnight_lower_inventory_9.json",
+      "sha256": "7650f12cf96844ba6aa2be1254776458af53160e0c29e80d0f51453a5741c9c9"
+    },
+    {
+      "bytes": 5643,
+      "path": "research/sN/trees/overnight_lower_inventory_check.py",
+      "sha256": "a5a6d03a3f6e175d2c5f5c4eec33ea7e03b4c5a453b77b02c1f1cab1bb2fd71c"
+    },
+    {
+      "bytes": 574,
+      "path": "research/sN/trees/overnight_lower_inventory_check_9.json",
+      "sha256": "dc82c04b3501b856d9d0f4603f37611c93c1e90ebe689054223ceb9e0d86130f"
+    },
+    {
+      "bytes": 603,
+      "path": "research/sN/trees/overnight_lower_inventory_check_9.log",
+      "sha256": "15ed4263ff311184e3bf7f77dbbacce4c426f4d1c6d66f48d135453e0105c840"
+    },
+    {
+      "bytes": 10095,
+      "path": "research/sN/trees/overnight_lower_dp.py",
+      "sha256": "77819738af10d5db091c7b7b45ae486961725d7644223a1567fdf845f11a3369"
+    },
+    {
+      "bytes": 6326,
+      "path": "research/sN/trees/overnight_lower_dp_engine.cpp",
+      "sha256": "aefe528627cade2749d914d3c118c4176dc02e3469f4a5df189ea9231a0adabf"
+    },
+    {
+      "bytes": 46197,
+      "path": "research/sN/trees/overnight_lower_dp_9_compile.json",
+      "sha256": "fad0250d1c7cbdb73723d5c33da80f632b39798998e68f78962d09d6ec1dc75c"
+    },
+    {
+      "bytes": 986,
+      "path": "research/sN/trees/overnight_lower_dag_manifest.py",
+      "sha256": "b9b8f307e9af67a9ff2e56121a75eebf8706b96e9db130ac10b565fec6f4be3a"
+    },
+    {
+      "bytes": 401243,
+      "path": "research/sN/trees/overnight_lower_dag_manifest_9.json.gz",
+      "sha256": "0dd3fffc38c5977a7e4e3681bc656915ea71c74f76a065cc1a146410e28b4189"
+    },
+    {
+      "bytes": 5315,
+      "path": "research/sN/trees/overnight_lower_dag_check.py",
+      "sha256": "95b7f30094b18fde978c0d43a1912f8395637548689bca515ba6f114099589ac"
+    },
+    {
+      "bytes": 592,
+      "path": "research/sN/trees/overnight_lower_dag_check_9.json",
+      "sha256": "df58f6cf1a31bae508d46bec43f000c8f8a925b3eb20ac791892e75640e69dc6"
+    },
+    {
+      "bytes": 592,
+      "path": "research/sN/trees/overnight_lower_dag_check_9.log",
+      "sha256": "df58f6cf1a31bae508d46bec43f000c8f8a925b3eb20ac791892e75640e69dc6"
+    },
+    {
+      "bytes": 6053,
+      "path": "research/sN/trees/overnight_lower_rational_dp.cpp",
+      "sha256": "0e10963ec32576a3f111ac6fb04976fdaf91ebd789d6d2db08894e1d9b7ac389"
+    },
+    {
+      "bytes": 6398,
+      "path": "research/sN/trees/overnight_lower_integer_dp.cpp",
+      "sha256": "92477f78a98f36331d6007e157a17a40e0ec19f10d313145d17f25b2b982e890"
+    },
+    {
+      "bytes": 243014,
+      "path": "research/sN/trees/overnight_lower_matching_rank_9.json",
+      "sha256": "7a27f363930a76e59ae6afb9d51811e6bf7cfa24c2db504de6daf0cdf383db8c"
+    },
+    {
+      "bytes": 111773,
+      "path": "research/sN/trees/overnight_lower_matching_points_9.txt",
+      "sha256": "8f8c1254c1c1803eff37e0c9d9039310938d7fec1571ece3a8520b4ee13d44f7"
+    },
+    {
+      "bytes": 792227,
+      "path": "research/sN/trees/overnight_lower_kernel9_crt.jsonl.gz",
+      "sha256": "87de6847c69f66e3755c00fd057b313d5cec75fc95404f18eb91bb5b5fee1068"
+    },
+    {
+      "bytes": 9016,
+      "path": "research/sN/trees/overnight_lower_kernel9_crt.json",
+      "sha256": "e49368b0a90c5e7eb6764b530b563ccd820a030d07bfb5ae14d38f01a5764afb"
+    },
+    {
+      "bytes": 2895,
+      "path": "research/sN/trees/overnight_lower_minor_check.cpp",
+      "sha256": "f9bb9d316394853336d3df065be24cb8de2cc4867956630cf8be312ee5d469b1"
+    },
+    {
+      "bytes": 2071,
+      "path": "research/sN/trees/overnight_lower_minor_check.py",
+      "sha256": "079555d651d3fbcb31b1d6c6d6cb11f90320e27e21849912e48d0d0790760ec8"
+    },
+    {
+      "bytes": 730,
+      "path": "research/sN/trees/overnight_lower_minor_check_9.json",
+      "sha256": "0a665f8a3e697e17b6f80a47100aec59c3238fd29c34f3dcf2f57e1f04ee0de2"
+    },
+    {
+      "bytes": 1198,
+      "path": "research/sN/trees/overnight_lower_minor_check_9.log",
+      "sha256": "db47d085e3c3d40590e25cc1ed9ab63a1c735f512e5047590ee860b05c5cf9c5"
+    },
+    {
+      "bytes": 2501,
+      "path": "research/sN/trees/overnight_lower_exact9_prepare.py",
+      "sha256": "501c3f71b02b78db1fec6bba679f4dd1711240065cc5d4df3d1b14a161a64f99"
+    },
+    {
+      "bytes": 9226,
+      "path": "research/sN/trees/overnight_lower_exact9_run.py",
+      "sha256": "20ab7df1bfac5faa1cbfbb0efceabbfba47bc7c9960cb925fb6626932e953e6a"
+    },
+    {
+      "bytes": 8444,
+      "path": "research/sN/trees/overnight_lower_exact9_run.json",
+      "sha256": "72dd9c6fa9b660b6c95ceb129863944c1f8cc859a829a4344273a06ce713b2e7"
+    },
+    {
+      "bytes": 8663,
+      "path": "research/sN/trees/overnight_lower_exact9_run.log",
+      "sha256": "32f6dba3829a4eb76c3e422860150d89aa0de8b8650e6a0c2e022e8f958bb8f2"
+    },
+    {
+      "bytes": 8279,
+      "path": "research/sN/trees/overnight_lower_exact9_campaign1.json",
+      "sha256": "485ee603a670d5fdd8d8c8698467b9a265ace3ad1179c405d38a4fa18c31873d"
+    },
+    {
+      "bytes": 11607,
+      "path": "research/sN/trees/overnight_lower_exact9_campaign1.log",
+      "sha256": "0e8b8356baf116443bbe49d2ac43768a0ffbf625f81b103ab549c56a6a35283e"
+    },
+    {
+      "bytes": 8830,
+      "path": "research/sN/trees/overnight_lower_exact9_verify.py",
+      "sha256": "3d6d02aab3f1993c037e31a410d1c1a3a9da842f31cc4fa44b65c8f5e6ff1733"
+    },
+    {
+      "bytes": 21145,
+      "path": "research/sN/trees/overnight_lower_exact9_verify.json",
+      "sha256": "1071d2bb807bd1be14eab2ba24beb5b51b54e8d45424a1b199be38206a0a5a0a"
+    },
+    {
+      "bytes": 3322,
+      "path": "research/sN/trees/overnight_lower_exact9_verify.log",
+      "sha256": "cb50021456b0f7bbde34952ca7388480c442dedc6bcbd0599c7cd0f807b38d60"
+    },
+    {
+      "bytes": 73730,
+      "path": "research/sN/trees/overnight_lower_exact9_receipts.json",
+      "sha256": "c4677a7fa4aa2f3d0377b16c0014d98c1434d7df097b1890d7200aa0d84ae402"
+    },
+    {
+      "bytes": 4689,
+      "path": "research/sN/trees/overnight_lower_kernel9.py",
+      "sha256": "62c027802bf2d42f0e29bf83fef0bda37f58dc786e49505c1ab6e6cb9853e270"
+    }
+  ],
+  "large_generated_caches": "The DAG binary, modular matrices, minor binary and 83 compressed rational row files are regenerated by the documented commands, not stored in git. Archived receipts bind canonical uncompressed row hashes.",
+  "result": "For N >= 9, at least binom(N,5)/126 canonical tree terms with original matching number >= 4 are needed, with all shapes, orientations, roots and face states. Arbitrarily many original matching-number <= 3 terms are free. The auxiliary shallow span is allowed.",
+  "status": "FROZEN_COMPLETE_EXACT_N9_ALL_CANONICAL_TREE_CERTIFICATE",
+  "trust_scope": "Computer-assisted exact rational finite separator plus independently reviewed generic Fourier/head-flow and matching-count bridges. Not Lean. Not weighted arbitrary-head trees. Not exponential."
+}
