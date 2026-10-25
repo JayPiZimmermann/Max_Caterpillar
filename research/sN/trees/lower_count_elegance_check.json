@@ -1,0 +1,63 @@
+{
+  "status": "EXACT_SMALL_CONTROLS_PASS",
+  "blocks": [
+    {
+      "vertices": 2,
+      "coefficients": [
+        "1/2",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "vertices": 3,
+      "coefficients": [
+        "1/3",
+        "2",
+        "3",
+        "1"
+      ]
+    }
+  ],
+  "cross_size": {
+    "labels": 4,
+    "forest_kappa_cases": 9296,
+    "passed_ties": 18992,
+    "cross_size_injective": true,
+    "p_one_third_bound": true,
+    "y_one_sixth_bound": true
+  },
+  "source_cover": {
+    "source_root_tree_cases": 50068,
+    "maximum_cover_degree": 2
+  },
+  "tails": [
+    {
+      "N": 12,
+      "p": "1/4",
+      "threshold": 3,
+      "tail": "10222777/16777216"
+    },
+    {
+      "N": 20,
+      "p": "1/4",
+      "threshold": 5,
+      "tail": "160847143015/274877906944"
+    },
+    {
+      "N": 9,
+      "p": "1/3",
+      "threshold": 3,
+      "tail": "12259/19683"
+    },
+    {
+      "N": 15,
+      "p": "1/3",
+      "threshold": 5,
+      "tail": "8551019/14348907"
+    }
+  ],
+  "seconds": 5.454095556007815,
+  "producer_sha256": "3c48d91babad17edebfb70105ca6f22b188ba5a1128e549c955df32f2cd8ddd5",
+  "scope": "Finite independent order enumeration and whole-stratum combinatorial controls. The uniform proof is in lower_count_elegance_routes.md; no Lean verification claimed."
+}
