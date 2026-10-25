@@ -1,0 +1,7 @@
+{'vertices': 1, 'graphs': 1, 'selected_sets': 2}
+{'vertices': 2, 'graphs': 2, 'selected_sets': 8}
+{'vertices': 3, 'graphs': 8, 'selected_sets': 64}
+{'vertices': 4, 'graphs': 64, 'selected_sets': 1024}
+{'vertices': 5, 'graphs': 1024, 'selected_sets': 32768}
+{'vertices': 6, 'graphs': 32768, 'selected_sets': 2097152}
+{"status": "EXACT_CONNECTED_DEGREE_CONTROLS_PASS", "records": [{"vertices": 1, "graphs": 1, "selected_sets": 2}, {"vertices": 2, "graphs": 2, "selected_sets": 8}, {"vertices": 3, "graphs": 8, "selected_sets": 64}, {"vertices": 4, "graphs": 64, "selected_sets": 1024}, {"vertices": 5, "graphs": 1024, "selected_sets": 32768}, {"vertices": 6, "graphs": 32768, "selected_sets": 2097152}], "seconds": 4.135054088998004, "source_sha256": "2bdaf1c2808d4488cae9ea3ca0947e5194f1c71c0cf378bf43f76499aa93ae47", "scope": "Finite controls of the uniform proof in overnight_connected_degree.md."}
