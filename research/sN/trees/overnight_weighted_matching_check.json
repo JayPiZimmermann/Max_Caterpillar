@@ -1,0 +1,38 @@
+{
+  "status": "EXACT_EXHAUSTIVE_FOREST_WITNESS_CONTROLS_PASS",
+  "records": [
+    {
+      "vertices": 1,
+      "labelled_forests": 1,
+      "selected_sets": 2
+    },
+    {
+      "vertices": 2,
+      "labelled_forests": 2,
+      "selected_sets": 8
+    },
+    {
+      "vertices": 3,
+      "labelled_forests": 7,
+      "selected_sets": 56
+    },
+    {
+      "vertices": 4,
+      "labelled_forests": 38,
+      "selected_sets": 608
+    },
+    {
+      "vertices": 5,
+      "labelled_forests": 291,
+      "selected_sets": 9312
+    },
+    {
+      "vertices": 6,
+      "labelled_forests": 2932,
+      "selected_sets": 187648
+    }
+  ],
+  "seconds": 0.5202054420005879,
+  "source_sha256": "4a591d98b357fea18ad5d4ef6f6adcee94beda8559b0982007fa78a44d69f3cd",
+  "scope": "Finite implementation controls only; the uniform proof is in overnight_weighted_matching.md."
+}
