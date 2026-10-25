@@ -433,6 +433,71 @@ identity reverses hinges to merge units in \Cref{sec:size}.
 
 \Needspace{10\baselineskip}
 Fix $N\geq3$ and write $x=(x_0,\ldots,x_{N-1})\in\R^N$.
+\begin{definition}[Graph, forest, and tree functions]\label{def:graph-function}
+For distinct labels $i,j$, put
+\begin{align}\label{eq:edge-comparison}
+ \ell_{ij}(x):=x_i-x_j.
+\end{align}
+Let $L$ be a set of these comparisons, containing at most one orientation
+of each unordered pair. Given a real linear head $h(x)=\sum_i h_ix_i$
+and real coefficients $c=(c_\ell)_{\ell\in L}$, define the \emph{graph function}
+\begin{align}\label{eq:weighted-unit}
+ U_{h,L,c}(x):=\relu\!\left(h(x)+\sum_{\ell\in L}c_\ell\relu(\ell(x))\right).
+\end{align}
+Its \emph{comparison graph} $G_L$ has all $N$ input labels as vertices
+and an edge $\{i,j\}$ for each $\ell_{ij}\in L$; the head is not an edge.
+We call this a \emph{forest function} when $G_L$ is acyclic, and a
+\emph{tree function} when its nonisolated part is a tree. A
+\emph{pseudoforest function} allows at most one cycle in each component.
+Isolated labels remain in all induced-graph and component counts.
+The graph is part of the description: zero coefficients may be retained
+in $L$ when a bound concerns the original graph. Opposite orientations
+of the same comparison can be combined using \Cref{eq:hinge-reversal}.
+
+Write $U_{h,L}$ when every $c_\ell=1$, and call $(h,L)$ its
+\emph{head--hinge pair}. For such a unit-weight forest function, set
+$\kappa_i=h_i+|\{j:\ell_{ij}\in L\}|$.
+A degree-one vertex with $\kappa_i=0$ is a \emph{pendant}.
+The \emph{reduced forest} is obtained by deleting all pendants
+simultaneously; newly created leaves are not deleted again.
+\end{definition}
+
+\begin{definition}[Canonical trees and face functions]\label{def:canonical-tree}\label{def:face-functions}
+A \emph{canonical tree function} is $U_{\ell_{ra},L}$, where $a$ is the
+apex label, $r\ne a$ is the head root, and $L$ is an arbitrary orientation
+of a tree on all labels other than $a$.
+If every edge of an underlying tree $T$ points away from a source $s$,
+write $U_{a,s,r,T}$ and call the function \emph{source-oriented}.
+A \emph{rooted-star function} has a star centred at $r$, oriented away
+from $r$. An \emph{oriented-star function} allows any edge orientations
+and any head root in the star.
+
+For a unit-weight graph function, an \emph{edge state}
+$\tau(\ell)\in\{0,\ell,\relu\circ\ell\}$ omits an edge, keeps it
+linearly, or retains $x\mapsto\relu(x_i-x_j)$, respectively. Put
+\begin{align}\label{eq:faces}
+ U^{\tau}_{h,L}(x):=\relu\Bigl(h(x)+\sum_{\ell\in L}\tau(\ell)(x)\Bigr).
+\end{align}
+For canonical trees these are the \emph{face functions}, with the
+geometric interpretation below. Every edge-state function is already
+a graph function from \Cref{def:graph-function}:
+\begin{align}\label{eq:face-description}
+ U^{\tau}_{h,L}=U_{h',M},\qquad
+ h':=h+\sum_{\tau(\ell)=\ell}\ell,\qquad
+ M:=\{\ell\in L:\tau(\ell)=\relu\circ\ell\}.
+\end{align}
+\end{definition}
+
+Even when the original comparisons form a tree, the retained graph
+$G_M$ can be disconnected: omitting or linearizing a tree edge splits
+its component. The linear state also changes the head, as in
+\Cref{eq:face-description}. Thus tree face functions are forest
+functions, with heads determined by their original tree and edge states.
+Their reduced forests are computed from $(h',M)$, not from the original
+$(h,L)$. Equivalently, one may keep $L$ and give every nonretained
+comparison coefficient zero; this describes the same function with the
+original graph available for bounds on its matching number.
+
 \begin{definition}[Labelled caterpillar, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{24}{WordIndex}]\label{def:caterpillar}
 A \emph{caterpillar description} is a permutation--set pair
 \begin{align}\label{eq:caterpillar-data}
@@ -453,22 +518,15 @@ the spine positions with each remaining label attached as a leaf to its
 parent (\Cref{fig:caterpillar}). The apex is separate from the tree.
 \end{definition}
 
-\begin{definition}[Caterpillar function and face functions, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}{rawCone}, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}{faceKey}]\label{def:caterpillar-function}\label{def:face-functions}
-For labels $i,j$, for the tree edges, and for the head, put
+\begin{definition}[Caterpillar functions, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean}{130}{rawCone}, \leandecl{MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean}{29}{faceKey}]\label{def:caterpillar-function}
+For a caterpillar description $(\pi,S)$, use the comparisons and head
 \begin{align}
- \ell_{ij}(x)&:=x_i-x_j,\label{eq:edge-comparison}\\
  L_{\pi,S}&:=\bigl\{\ell_{\pi(p(j)+1),\pi(j+1)}:1\leq j\leq r\bigr\},\label{eq:edge-functions}\\
  h_{\pi,S}&:=\ell_{\pi(q+1),\pi(0)}.\label{eq:word-gamma}
 \end{align}
-The \emph{edge functions} $L_{\pi,S}$ subtract each child's coordinate from its parent's, one for each of the $r$ tree edges, and the \emph{head function} $h_{\pi,S}$ compares the last spine vertex with the apex.
-For a linear function $h$, a finite set $L$ of linear functions, and a \emph{state} $\tau(\ell)\in\{0,\ \ell,\ \relu\circ\ell\}$ chosen for every $\ell\in L$, define
-\begin{align}
- U^{\tau}_{h,L}(x)&:=\relu\Bigl(h(x)+\sum_{\ell\in L}\tau(\ell)(x)\Bigr).\label{eq:faces}
-\end{align}
-Each edge is omitted, kept linearly, or kept as a hinge. Write
-$U_{h,L}$ for the all-hinge state, and call $(h,L)$ its \emph{function
-description}, recording the head and inner hinges.
-The \emph{caterpillar function} of $(\pi,S)$ and its \emph{face functions} are
+These give a canonical tree function with apex $\pi(0)$, source $\pi(1)$,
+and head root $\pi(q+1)$. Its \emph{caterpillar function} and
+\emph{caterpillar face functions} are the specializations
 \begin{align}\label{eq:word}
  U_{\pi,S}:=U_{h_{\pi,S},L_{\pi,S}},\qquad
  U^{\tau}_{\pi,S}:=U^{\tau}_{h_{\pi,S},L_{\pi,S}}.
@@ -547,8 +605,8 @@ $e_0$ is represented by $0$.
 
 
 
-The head connects the apex label to the tree, so the head and $N-2$ edge
-functions are linearly independent. Thus the base is an $(N-2)$-dimensional
+For a canonical tree, the head connects the apex label to the tree, so
+the head and $N-2$ edge functions are linearly independent. Thus the base is an $(N-2)$-dimensional
 zonotope with affine hull avoiding $0$, and $Q_{h,L}$ is an
 $(N-1)$-dimensional pyramid. Each nontrivial face containing $0$ cones over
 a base face. Maximizing on each base segment selects $0$, $\ell$, or
@@ -568,7 +626,7 @@ The \emph{dictionary} $\D$ is the finite set of functions $\R^N\to\R$ consisting
  \end{aligned}
 \end{align}
 \end{definition}
-Heads and edge functions are coordinate differences, so face functions and the functions $x\mapsto\relu(x_i-x_j)$ are translation invariant: with $\one:=(1,\ldots,1)\in\R^N$,
+Caterpillar heads and edge functions are coordinate differences, so these face functions and the functions $x\mapsto\relu(x_i-x_j)$ are translation invariant: with $\one:=(1,\ldots,1)\in\R^N$,
 \begin{align}\label{eq:translation-invariance}
  U^{\tau}_{\pi,S}(x+t\one)=U^{\tau}_{\pi,S}(x)\qquad(t\in\R).
 \end{align}
@@ -617,13 +675,8 @@ coefficients.
 
 \subsection{The network}\label{sec:network}
 
-The network computes an expansion of $\maxn_N$ in face functions and
-auxiliary functions. To compile face functions, first absorb every linear edge of a face state into the head:
-\begin{align}\label{eq:face-description}
- U^{\tau}_{h,L}=U_{h',M},\qquad
- h':=h+\sum_{\tau(\ell)=\ell}\ell,\qquad
- M:=\{\ell\in L:\tau(\ell)=\relu\circ\ell\}.
-\end{align}
+The network uses the rational coefficients selected above.
+\Cref{eq:face-description} writes each selected face function as $U_{h',M}$.
 By~\Cref{eq:hinge-reversal}, reversing each remaining $\ell_{ij}$ with
 $i>j$ gives the same function with the \emph{normalized description}
 \begin{align}\label{eq:normalized-description}
@@ -637,8 +690,20 @@ head by the old generator. Normalization chooses a consistent orientation
 and a corresponding base corner; it does not rescale vectors or change the
 polytope (\Cref{fig:polytope-normalization}).
 Write $U_k:=U_{h,M}$ for a normalized description $k=(h,M)$, and let
-$\mathcal K_0$ be the set of normalized descriptions of all face functions.
-Use $A_N$ as defined in \Cref{sec:coefficients}.
+$\mathcal K_0$ be the set of normalized descriptions of all caterpillar
+face functions.
+\begin{definition}[Expansions]\label{def:expansion}\label{def:caterpillar-expansion}
+An \emph{expansion} of $\maxn_N$ is an identity
+$\maxn_N=\sum_{k\in K}d_kU_k+R$ with finitely many graph functions
+$U_k$, real coefficients $d_k$, and $R\in A_N$, unless a larger remainder
+space is specified. Its size is $|K|$. When $K\subseteq\mathcal K_0$
+indexes normalized caterpillar face functions, it is a
+\emph{caterpillar expansion}
+(\leandecl{MaxCaterpillar/Definitions.lean}{98}{IsCaterpillarExpansion}).
+A \emph{shallow} remainder is a linear combination of linear functions
+and functions $x\mapsto\relu(\ell(x))$ with $\ell$ linear.
+\end{definition}
+
 The network has three parts (\Cref{fig:architecture}).
 \begin{itemize}
 \item The \emph{first hidden layer} computes the shared features
@@ -752,12 +817,6 @@ For expansion size, every tie must be detected by some unit, so we count
 the ties each unit can detect. For dictionary dimension, we exhibit one
 locality that detects each path order separately.
 
-\begin{definition}[Caterpillar expansion, \leandecl{MaxCaterpillar/Definitions.lean}{98}{IsCaterpillarExpansion}]\label{def:caterpillar-expansion}
-A finite set $K\subseteq\mathcal K_0$ is a \emph{caterpillar expansion} of
-$\maxn_N$ if $\maxn_N=\sum_{k\in K}d_kU_k+R$ for real coefficients $d_k$
-and $R\in A_N$. Its size is $|K|$.
-\end{definition}
-
 \begin{theorem}[Exponential count, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
 Put $y_0=\sqrt{3/2}-1$. Every caterpillar expansion of $\maxn_N$, $N\geq3$,
 satisfies
@@ -781,15 +840,10 @@ This concerns the basis used in \Cref{sec:coefficients}; an individual
 expansion of the maximum may have smaller support.
 
 \paragraph{Broader forest dictionaries.}
-For a real head $h$ and a forest of oriented edges $M$, write
-$U(x)=\relu(\sum_i h_ix_i+\sum_{(i,j)\in M}\relu(x_i-x_j))$ and
-$\kappa_i=h_i+|\{j:(i,j)\in M\}|$.
-Delete simultaneously every degree-one vertex with $\kappa_i=0$;
-call the result the \emph{reduced forest}.
-
 \begin{theorem}[Forest expansions, {\Cref{pf:thm:forest-count}}]\label{thm:forest-count}
-Suppose $\maxn_N=\sum_{k\in K}d_kU_k+R$, with $R\in A_N$, real heads,
-and reduced forests of maximum degree at most $\Delta\geq2$.
+Suppose every term of an expansion is a unit-weight forest function
+whose reduced forest, as in \Cref{def:graph-function}, has maximum degree
+at most $\Delta\geq2$.
 Set $y=(2\Delta+2)^{-1}$; when $\Delta=2$, one may instead use
 $y=y_0=\sqrt{3/2}-1$. Then
 \begin{align}\label{eq:forest-count}
@@ -798,9 +852,9 @@ $y=y_0=\sqrt{3/2}-1$. Then
 \end{align}
 \end{theorem}
 
-Caterpillar face functions have reduced degree at most two. The rooted
-stars $\relu(x_c-x_a+\sum_{l\ne a,c}\relu(x_c-x_l))$ and all their face
-functions have reduced degree zero. Consequently the stronger rate in
+Caterpillar face functions have reduced degree at most two; rooted-star
+face functions have reduced degree zero. These include disconnected
+retained forests in both cases. Consequently the stronger rate in
 \Cref{eq:count-exponential} counts every term in any mixture of our
 building blocks and those of the direct combinatorial construction in
 \cite{BSY}; \Cref{app:bsy} identifies the latter exactly.
@@ -808,12 +862,9 @@ The real-head extension and the stronger aggregate estimates are proved
 mathematically here; the existing Lean count theorem gives a weaker bound.
 
 \paragraph{Arbitrary tree shapes with a source orientation.}
-Let $T$ be any tree on the labels other than an apex $a$, choose vertices
-$s,r$ of $T$, and orient all edges away from $s$. The functions
-$U_{a,s,r,T}(x)=\relu(x_r-x_a+
-\sum_{p\to q\text{ in }T}\relu(x_p-x_q))$
-may be adjoined to the reduced-degree-two family without changing
-\Cref{eq:count-exponential}. Indeed,
+All source-oriented canonical tree functions $U_{a,s,r,T}$ from
+\Cref{def:canonical-tree} may be adjoined to the reduced-degree-two
+forest family without changing \Cref{eq:count-exponential}. Indeed,
 $\kappa_v=\deg_T(v)-1+\mathbf1_{v=s}+\mathbf1_{v=r}$, so only $s$ and $r$
 can be degree-one vertices with $\kappa_v=1$.
 The proof selects a degree-two covering subforest and uses the same
@@ -823,14 +874,9 @@ linearizing an edge can change the leaf coefficients.
 
 \paragraph{Large matchings with arbitrary orientations and weights.}
 Start with any mixture of the reduced-degree-two forest functions and
-the source-oriented functions above. Adjoin units
-\begin{align}\label{eq:weighted-unit}
- U_j(x)=\relu\!\left(h_j(x)+
-             \sum_{(i,l)\in M_j}c_{j,il}\relu(x_i-x_l)\right),
-\end{align}
-where the heads are arbitrary real linear forms, the coefficients are
-arbitrary real numbers, and the comparison graph is a pseudoforest, meaning each connected component
-has at most one cycle. Suppose each added graph has a matching of size
+the source-oriented functions above. Adjoin weighted pseudoforest
+functions $U_{h_j,L_j,c_j}$ from \Cref{def:graph-function}.
+Suppose each added graph has a matching of size
 at least $k$, where $k$ is a nonnegative integer with $2k\leq N$.
 For $N\geq9$, every expansion of the maximum in this mixture, with an
 arbitrary shallow remainder, uses a total number $Z$ of terms satisfying
@@ -843,10 +889,10 @@ taking the recession function preserves the homogeneous target and the
 comparison graphs.
 
 Every orientation and face state of a canonical tree with matching number
-at least $k$ is included: omitted edges can be retained with coefficient
-zero, and linear edge terms absorbed into the head. Thus the matching
-condition concerns the original tree. This includes perfect and near-perfect
-matchings and stars with every edge subdivided once. More generally, a tree
+at least $k$ is included, using the original-graph description following
+\Cref{eq:face-description}. The matching condition concerns that original
+tree, even if its retained forest has a smaller matching. This includes
+perfect and near-perfect matchings and stars with every edge subdivided once. More generally, a tree
 on $n\geq2$ vertices with $L$ leaves has a matching of size at least
 $(n-L+1)/2$, so a fixed positive fraction of nonleaf vertices suffices.
 Additional cycles with total excess $b=o(N)$ are also permitted when
@@ -854,11 +900,9 @@ $k=\Omega(N)$; the proof gives the same exponential rate up to
 $\exp(o(N))$.
 
 \begin{corollary}[All tree orientations, \leandecl{MaxCaterpillar/Count/TreeFace.lean}{383}{tree_expansion_quadratic}]\label{cor:all-tree-quadratic}
-For $N\geq3$, every expansion of $\maxn_N$ by canonical tree face functions
-and a remainder in $A_N$ has at least $N(N-1)/6$ terms.
-The head is $x_r-x_a$ for distinct root and apex labels; the tree on the
-other labels, all edge orientations, and all omitted, linear, or ReLU
-edge states are arbitrary. Output coefficients may have either sign.
+For $N\geq3$, every expansion by canonical tree face functions from
+\Cref{def:face-functions} has at least $N(N-1)/6$ terms.
+All tree shapes, edge orientations, and face states are allowed.
 \end{corollary}
 
 \paragraph{Adding all oriented stars.}
@@ -1275,8 +1319,13 @@ cannot give subexponential second widths. Reducing our upper bound
 $2^{O(N\log N)}$ to $2^{O(N)}$ remains open. The factorial dimension bound
 in \Cref{thm:quotient-lower} limits compression by a basis of the entire
 dictionary; it does not give a factorial lower bound for representing the
-single function $\maxn_N$. Whether the maximum has
-two-hidden-layer representations of subexponential width with other
+single function $\maxn_N$.
+All caterpillar face states, including those with disconnected retained
+forests, are already included in the construction. More generally, a family of $2^{O(N)}$ oriented
+canonical tree descriptions still has only $2^{O(N)}$ face descriptions:
+each tree contributes at most $3^{N-2}$ edge states. A uniform spanning
+identity for such an exponential-size family remains open. Whether the
+maximum has two-hidden-layer representations of subexponential width with other
 second-layer functions remains open.
 \label{main-text-end}
 
@@ -1569,11 +1618,10 @@ Taking logarithms gives the asymptotic bounds in~\Cref{thm:main}.
 
 \subsection{Proof of the exponential count bound}\label{app:count-exponential}
 
-A shallow function is a linear combination of linear functions and
-functions $x\mapsto\relu(\ell(x))$ with $\ell$ linear; these form $\LS_1$.
+The shallow functions of \Cref{def:expansion} form $\LS_1$.
 
 \begin{lemma}[A common test at a tied maximum]\label{lem:tie-detection}
-Fix a finite family of units of the form \Cref{eq:weighted-unit}, a set
+Fix a finite family of graph functions $U_{h,L,c}$, a set
 $T$ of $m\geq3$ labels, and a strict order of the other labels.
 There is a point $p$ with $p_t=1$ for $t\in T$ and distinct coordinates
 below $1$ outside $T$, in the prescribed order, with the following property.
@@ -1584,9 +1632,9 @@ Let $\iota_T$ extend vectors by zero outside $T$, fix $t_0\in T$, and define
        \pmod{\LS_{m-2}}.
 \end{align}
 This linear test annihilates every shallow function and is nonzero on
-$\maxn_N$. For $U=\relu(A)$, a nonzero test requires that $A$ vanish
-identically on this ordered tie stratum. Its tied germ then has the form
-$\relu(H(y)+\sum_{i,j\in T}c_{ij}\relu(y_i-y_j))$, with
+$\maxn_N$. For a graph function with preactivation $A$, a nonzero test
+requires that $A$ vanish identically on this ordered tie stratum. Its tied germ then has the form
+$\relu(H(y)+\sum_{\ell_{ij}\in L,\ i,j\in T}c_{\ell_{ij}}\relu(y_i-y_j))$, with
 $H(\one_T)=0$, and the induced comparison graph on $T$ has at most two
 connected components. An isolated tied label must have nonzero
 coefficient in $H$.
@@ -1622,8 +1670,8 @@ including when that label is the anchor $t_0$.
 \begin{Proof}{Theorem}{thm:count-exponential}
 \phantomsection\label[proof]{pf:thm:forest-count}
 We prove \Cref{thm:forest-count} and specialize to caterpillars.
-For a unit-inner-weight forest function, put
-$\kappa_o=h_o+|\{j:(o,j)\in M\}|$.
+For a unit-weight forest function $U_{h,L}$, use $\kappa$ from
+\Cref{def:graph-function}.
 At an ordered top tie $T$, let $u(o)$ count the neighbours of $o$ with
 higher coordinate. Collecting the frozen coefficients gives
 $\kappa_o-u(o)$ for every $o\notin T$; an isolated tied label has head
@@ -1636,8 +1684,8 @@ Call a unit \emph{passing} when these conditions hold. Every ordered tie
 of size at least three is passed by some unit in the expansion.
 
 \paragraph{A tie set is determined by the reduced forest.}
-Call a degree-one vertex with $\kappa=0$ a \emph{pendant}, and let $\Phi$
-contain the nonisolated vertices that are not pendants.
+Let $F=G_L$ and let $\Phi$ contain the nonisolated vertices that are not
+pendants.
 For a passed tie set $T$, an original isolate is tied exactly when its
 $\kappa$ is nonzero. A pendant is tied exactly when its neighbour is:
 either mismatch violates \Cref{eq:balanced,eq:active}.
@@ -1721,8 +1769,8 @@ Thus $F_U(y_0)\leq1$ for this family too, proving the asserted extension.
 \paragraph{Large matchings in the same counting argument.}
 First remove biases, if present, by taking the recession function
 $\lim_{t\to\infty}F(tx)/t$. This preserves the target, comparison graphs,
-and number of terms. For an added weighted graph $G$, now let $a_U(T)$
-be the indicator that $G[T]$ has at most two components.
+and number of terms. For an added weighted pseudoforest function with
+graph $G=G_L$, now let $a_U(T)$ be the indicator that $G[T]$ has at most two components.
 Together with the base-family passing fractions, these capacities still
 satisfy \Cref{eq:coverage-sum}, by the common test.
 
