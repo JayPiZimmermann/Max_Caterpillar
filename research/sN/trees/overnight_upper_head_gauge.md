@@ -4,6 +4,10 @@ This is a positive closure lemma for the live sparse cyclic family.
 It changes head marks within a graph and keeps every correction explicit.
 It is not a product-intertwining theorem or an exponential construction.
 
+Assume $N\ge3$ throughout. The exact identities also hold at $N=2$,
+but preservation of the top class uses $L_1\subseteq L_{N-2}$ and
+therefore requires $N\ge3$.
+
 Let $G$ contain the complete star at a label $b$.
 Permit both signs of the canonical head $x_r-x_b$, and all five states
 of each graph edge: absent, either frozen linear orientation, or either

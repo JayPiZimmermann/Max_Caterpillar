@@ -13,8 +13,8 @@
     },
     {
       "path": "research/sN/trees/overnight_upper_head_gauge.md",
-      "bytes": 4645,
-      "sha256": "7a053e9413fdddc0870bcc9f4044e641b35ab3a351af5162f56acae22333c53c"
+      "bytes": 4808,
+      "sha256": "728de15dea9f0d16ae7b06d69396e5aff8e3f5a9601ef82bb654312f143682c4"
     },
     {
       "path": "research/sN/trees/overnight_upper_head_gauge.py",
@@ -32,6 +32,6 @@
       "sha256": "02c12c4253827cd99d0eac3b1ac1345901c21ea9495af8cb59b1c91861e6c539"
     }
   ],
-  "bytes": 10949,
+  "bytes": 11112,
   "scope": "Uniform exact head-subset realization and head-centering identity, all lower-dimensional corrections retained. No product intertwiner or all-arity simplex construction claimed."
 }

@@ -1,0 +1,7 @@
+{
+  "status": "HEAD_GAUGE_ARITY_BOUNDARY_CLARIFIED",
+  "previous_manifest_sha256": "b4e4dec61614452e242716f96cd8cc6949fc11baf707e2b2e1654332db55ac24",
+  "current_manifest_sha256": "0647e46129b7e7bba35c99577d3176201c4166e1343b65973a1693ac8ad2fe06",
+  "change": "Explicit N>=3 assumption for top-class preservation; exact identities continue to hold at N=2. No executable or finite check changed.",
+  "fresh_control_receipt": "overnight_root_head_gauge_fresh.json"
+}
