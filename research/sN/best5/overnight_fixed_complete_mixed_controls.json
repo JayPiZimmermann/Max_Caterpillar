@@ -1,0 +1,16 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "command": "lake env lean -j1 research/sN/best5/overnight_fixed_complete_mixed_controls.lean",
+  "declarations": [
+    "OvernightCompleteMixed.quadratic_cube_missing_corner",
+    "OvernightCompleteMixed.positive_gap_zero"
+  ],
+  "log_sha256": "b2e91d4a6dcd0260c0f500616fa0864b587b025f2ecfae3843f0c7d3d301d614",
+  "scope": "Elementary exact controls only. The complete geometric/network theorem is an independently reviewed written proof, not a Lean declaration.",
+  "source_sha256": "08b7534c3f7a0bb0d0828442af8d6df2a9914bea58784ca9ad2f8a7cd4befae3",
+  "status": "PASS"
+}

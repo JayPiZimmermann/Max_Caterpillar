@@ -1,0 +1,18 @@
+{
+  "claim": "For N>=5, max_N modulo the complete comparison span cannot have only2outerReLUs; with3outerReLUs, all interior cancellation is pairwise. Arbitrary real coefficients, weak/zero boundaries retained. This does not address arbitrary first-layer directions.",
+  "files": {
+    "overnight_fixed_complete_braid_closed.md": "f2c9fbeeedba6702585bd5de9079312cd9e6009f5c93ececd4d4e0d18c0a7e0d",
+    "overnight_fixed_complete_edge_lemma.md": "d7f3338c5daa4109a077e9206b5751b6e4e1c41291f8224ad1b50bf43753c528",
+    "overnight_fixed_complete_mixed_controls.json": "38d9ecb384188871a984d4377fa648ff2b890efd9adb50b5b5f56d7f3f60dcf8",
+    "overnight_fixed_complete_mixed_controls.lean": "08b7534c3f7a0bb0d0828442af8d6df2a9914bea58784ca9ad2f8a7cd4befae3",
+    "overnight_fixed_complete_mixed_controls.log": "b2e91d4a6dcd0260c0f500616fa0864b587b025f2ecfae3843f0c7d3d301d614",
+    "overnight_fixed_complete_mixed_lemma.md": "f8915ef312a1cd4075ff971faf68219a62014b68255cf81f6fe9ed668ba92856",
+    "overnight_fixed_complete_uniform_mixed.md": "5bc73bbd60e8e5881416d3e3c2a274d606b7800ce01c3bf37e8a125e2f20eca1"
+  },
+  "immutable_dependencies": {
+    "overnight_fixed.md": "173dbd273f6ea22d9613f727a649c1dba6534e7ef8d882688108785ae3b031bb",
+    "overnight_fixed_k2_verify.py": "e2e47f9d3bb64024daeb922ff834c12752219eba8aa5cd36036220365aafad92"
+  },
+  "status": "FROZEN_WRITTEN_PROOF_WITH_LEAN_ELEMENTARY_CONTROLS",
+  "trust_boundary": "Reviewed mathematical proof uses the cited GHL conforming theorem. Only two elementary algebraic lemmas are Leanverified. Earlier exact K2 certificate is preserved. No K3 feasibility or infeasibility verdict is claimed."
+}
