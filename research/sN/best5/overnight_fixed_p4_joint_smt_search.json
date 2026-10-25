@@ -1,0 +1,15 @@
+{
+  "assertions": 1836,
+  "boolean_variables": 1328,
+  "budget_seconds": 120,
+  "cells": 54,
+  "mode": "search",
+  "producer_sha256": "c9c0480d60534ab3079e3499423efc011cf39823e6e0039ebaf1b8b7fc08b2c7",
+  "real_variables": 42,
+  "scope": "Unbounded real coefficients, arbitrary target-wall groups, pairwise spurious cancellations only. UNSAT is not a general five-unit obstruction. Only independently globally checked SAT networks are constructions.",
+  "seconds": 36.6191986430058,
+  "smt_sha256": "82d50f6506ed0a43585ece1f19c84ca658bca4e643d64a940bdacf9fb394dc59",
+  "statistics": "(:added-eqs                   1652397\n :arith-bound-propagations-lp 1542756\n :arith-conflicts             1463\n :arith-fixed-eqs             481217\n :arith-lower                 1375820\n :arith-make-feasible         22475\n :arith-max-columns           5065\n :arith-max-rows              2757\n :arith-offset-eqs            941516\n :arith-upper                 1415662\n :binary-propagations         2413885\n :conflicts                   3255\n :decisions                   6360\n :del-clause                  3135\n :max-memory                  119.47\n :memory                      30.74\n :minimized-lits              55180\n :mk-bool-var                 12243\n :mk-clause                   3422\n :mk-clause-binary            21135\n :num-allocs                  7457076618.00\n :num-checks                  1\n :pb-conflicts                374\n :pb-predicates               810\n :pb-propagations             91485\n :pb-resolves                 374\n :propagations                2441543\n :restarts                    15\n :rlimit-count                39787561\n :time                        35.61)",
+  "status": "unsat",
+  "z3_version": "5.3.1"
+}

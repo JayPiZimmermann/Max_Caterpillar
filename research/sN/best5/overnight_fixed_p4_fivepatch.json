@@ -1,0 +1,1335 @@
+{
+  "cases": [
+    {
+      "config": 2,
+      "parameters": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "0",
+            "-1",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            3,
+            2,
+            1,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            false,
+            false
+          ],
+          "point": [
+            0,
+            2,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            1,
+            -1,
+            2,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "-1",
+            "1",
+            "-1",
+            "0",
+            "1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            4,
+            1,
+            -1,
+            -2
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "config": 6,
+      "parameters": [
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "0",
+            "1",
+            "-2",
+            "-1",
+            "2"
+          ],
+          "feature_active": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            5,
+            -1,
+            1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "-1",
+            "1",
+            "-1",
+            "-1",
+            "2"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            5,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            2,
+            1,
+            -2,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            1,
+            -2,
+            2,
+            -3
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "config": 8,
+      "parameters": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            false,
+            false
+          ],
+          "point": [
+            0,
+            2,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "correction_gradient": [
+            "2",
+            "-1",
+            "1",
+            "0",
+            "-2"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "0",
+            "1",
+            "0",
+            "-1",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            3,
+            2,
+            1,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            -1,
+            1,
+            -2
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "config": 10,
+      "parameters": [
+        0,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "0",
+            "-1",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            3,
+            2,
+            1,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            false,
+            false
+          ],
+          "point": [
+            0,
+            2,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -2,
+            1,
+            -1,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "0",
+            "1",
+            "-1",
+            "-1",
+            "1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            4,
+            2,
+            1,
+            -1
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -2,
+            -1,
+            1,
+            -3
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "config": 16,
+      "parameters": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "2",
+            "-1",
+            "0",
+            "-1",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            -1,
+            1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            false,
+            false
+          ],
+          "point": [
+            0,
+            2,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "-1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            2,
+            1,
+            -2,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -1,
+            1,
+            3,
+            -3
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "config": 18,
+      "parameters": [
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "2",
+            "-1",
+            "0",
+            "-1",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            -1,
+            1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "0",
+            "1",
+            "-1",
+            "-1",
+            "1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            4,
+            2,
+            1,
+            -1
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            2,
+            1,
+            -2,
+            -3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "0",
+            "1",
+            "-2",
+            "0",
+            "1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            3,
+            1,
+            2,
+            -1
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "config": 22,
+      "parameters": [
+        1,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "0",
+            "1",
+            "-2",
+            "-1",
+            "2"
+          ],
+          "feature_active": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            5,
+            -1,
+            1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "-1",
+            "1",
+            "-1",
+            "-1",
+            "2"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            5,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "2",
+            "-1",
+            "0",
+            "-1",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            -1,
+            1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            -1,
+            3,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            -1,
+            -2
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "config": 24,
+      "parameters": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "patches": [
+        {
+          "correction_gradient": [
+            "2",
+            "-2",
+            "1",
+            "-1",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            -1,
+            1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "3",
+            "-2",
+            "2",
+            "-1",
+            "-2"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "-2",
+            "1",
+            "0",
+            "0"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "point": [
+            0,
+            -3,
+            1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "-1"
+          ],
+          "feature_active": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false
+          ],
+          "point": [
+            0,
+            -1,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "correction_gradient": [
+            "1",
+            "1",
+            "0",
+            "-1",
+            "-1"
+          ],
+          "feature_active": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          "point": [
+            0,
+            4,
+            3,
+            1,
+            2
+          ]
+        }
+      ],
+      "positive_carriers": [
+        [
+          1,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ]
+      ]
+    }
+  ],
+  "producer_sha256": "53724ba447bb093d33bd1c67fe71513d3f5334a724ca6815977f4be22d475b40",
+  "seconds": 8.024140820001776,
+  "status": "EIGHT_EXACT_FIVE_PATCH_CERTIFICATES"
+}

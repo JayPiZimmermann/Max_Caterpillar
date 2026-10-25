@@ -1,0 +1,26 @@
+{
+  "assertions": 982,
+  "boolean_variables": 632,
+  "budget_seconds": 30,
+  "cells": 36,
+  "global_check": {
+    "N": 5,
+    "braid_cones": 120,
+    "cancelled_interior_hyperplane_groups": 32,
+    "checker_sha256": "0a1fbec1f71e25aed99a03ca3627a71485f6a3e967ee5ddc2ab414c33112987d",
+    "h1": 10,
+    "h2": 6,
+    "network_sha256": "30019495494af4285e35565baa076bec40beadaf5de31256048b4be706f3c831",
+    "seconds": 0.05166771400399739,
+    "status": "INDEPENDENT_EXACT_GLOBAL_COMPARISON_NETWORK_PASS"
+  },
+  "mode": "control",
+  "producer_sha256": "c9c0480d60534ab3079e3499423efc011cf39823e6e0039ebaf1b8b7fc08b2c7",
+  "real_variables": 40,
+  "scope": "Unbounded real coefficients, arbitrary target-wall groups, pairwise spurious cancellations only. UNSAT is not a general five-unit obstruction. Only independently globally checked SAT networks are constructions.",
+  "seconds": 0.6111361679941183,
+  "smt_sha256": "0fd1b8ba652a6dce82b6c02352f09c77404c0b4c666015f13ff116e87044af55",
+  "statistics": "(:added-eqs                   65\n :arith-bound-propagations-lp 26\n :arith-fixed-eqs             1\n :arith-lower                 254\n :arith-make-feasible         19\n :arith-max-columns           168\n :arith-max-rows              42\n :arith-offset-eqs            1\n :arith-upper                 250\n :binary-propagations         82\n :conflicts                   2\n :decisions                   15\n :del-clause                  16\n :final-checks                1\n :max-memory                  19.49\n :memory                      18.18\n :mk-bool-var                 1172\n :mk-clause                   16\n :mk-clause-binary            206\n :num-allocs                  1114864\n :num-checks                  1\n :pb-predicates               48\n :pb-propagations             18\n :propagations                82\n :rlimit-count                67633\n :time                        0.02)",
+  "status": "sat",
+  "z3_version": "5.3.1"
+}

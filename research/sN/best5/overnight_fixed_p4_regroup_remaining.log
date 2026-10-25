@@ -1,0 +1,9 @@
+FAMILY [0, 7] 1 {'nodes': 1, 'leaves': 1, 'splits': 0} EXACT_SIGN_EXCLUDED seconds 0.021150533997570165
+FAMILY [0, 7] 1 {'nodes': 1, 'leaves': 1, 'splits': 0} EXACT_SIGN_EXCLUDED seconds 0.03176400499796728
+FAMILY [2, 7] 2 {'nodes': 3, 'leaves': 2, 'splits': 1} EXACT_SIGN_EXCLUDED seconds 0.04382962099771248
+FAMILY [2, 7] 2 {'nodes': 3, 'leaves': 2, 'splits': 1} EXACT_SIGN_EXCLUDED seconds 0.056686774994886946
+FAMILY [6, 7] 2 {'nodes': 7, 'leaves': 4, 'splits': 3} EXACT_SIGN_EXCLUDED seconds 0.08180950599489734
+FAMILY [6, 7] 2 {'nodes': 7, 'leaves': 4, 'splits': 3} EXACT_SIGN_EXCLUDED seconds 0.10788046999368817
+FAMILY [7, 8] 3 {'nodes': 7, 'leaves': 4, 'splits': 3} EXACT_SIGN_EXCLUDED seconds 0.14465923799434677
+FAMILY [7, 8] 3 {'nodes': 7, 'leaves': 4, 'splits': 3} EXACT_SIGN_EXCLUDED seconds 0.17353036699933
+DONE 8 36 0.2222401729959529

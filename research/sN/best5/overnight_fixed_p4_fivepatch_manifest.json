@@ -1,0 +1,13 @@
+{
+  "files": {
+    "overnight_fixed_p4_fivepatch.json": "8804b3a66fcf87e0902e97a296ffd9fcc7d1613fdede2dcb5ba62a54fa610ee9",
+    "overnight_fixed_p4_fivepatch.log": "835d512645ca7d59caebb363f9b8607a1f7b7888b7887ba5ebef78d8340965b4",
+    "overnight_fixed_p4_fivepatch.md": "ab8d8a4d21d96ad6790d63adc101e566deab6742552ef0b668163674626fd6d2",
+    "overnight_fixed_p4_fivepatch.py": "53724ba447bb093d33bd1c67fe71513d3f5334a724ca6815977f4be22d475b40",
+    "overnight_fixed_p4_fivepatch_check.json": "987ecb15dcf5552c910929d71cc503281827322128da926bf5c8c545a545873f",
+    "overnight_fixed_p4_fivepatch_verify.log": "12ebb77a1c60d1834ad8b41c741ea5a0de4eed85967f64e2597630d57a9c5990",
+    "overnight_fixed_p4_fivepatch_verify.py": "2c229432b160fb7fdc25334bb227a512200ad690532f83ca9387f38511d91938"
+  },
+  "scope": "Eight fixed three-positive-carrier choices cannot be completed with two arbitrary negative outer ReLUs and a free W7 remainder. General five-term construction open.",
+  "status": "FROZEN_EIGHT_EXACT_FIVE_PATCH_OBSTRUCTIONS"
+}

@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "exact_lp.py": "8179ea1aac14d76e7609bc67a11f40a9caaecad167b96ed50fd3c0533fe4b240",
+    "netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_cross_net9_14_simple.json": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+    "overnight_fixed_cross_verify.py": "0a1fbec1f71e25aed99a03ca3627a71485f6a3e967ee5ddc2ab414c33112987d",
+    "overnight_fixed_k2_certify.py": "5527322adeb97c0bf1d7931e86f4082b290e6ed0417107cf7ff77d278763d80b"
+  },
+  "files": {
+    "overnight_fixed_p4_joint_smt.py": "c9c0480d60534ab3079e3499423efc011cf39823e6e0039ebaf1b8b7fc08b2c7",
+    "overnight_fixed_p4_joint_smt_control.json": "105229e3a293cfe49c130bee56b0e8adde338229a0ca24db7ff5be3b97ba1d82",
+    "overnight_fixed_p4_joint_smt_control.log": "5550f4ac5b40488acf74f63036d776880f3066e44cece4e2bcabc72462956f0c",
+    "overnight_fixed_p4_joint_smt_control.smt2": "0fd1b8ba652a6dce82b6c02352f09c77404c0b4c666015f13ff116e87044af55",
+    "overnight_fixed_p4_joint_smt_control_network.json": "30019495494af4285e35565baa076bec40beadaf5de31256048b4be706f3c831",
+    "overnight_fixed_p4_joint_smt_search.json": "36ab4e74f836331ec015ec6e67cc56a64df9c18c69f235b0f2a7a50fa091147e",
+    "overnight_fixed_p4_joint_smt_search.log": "34d0943a14ee3a715b4adc2dc10c1a77fba4a131e975452045513908877862fa",
+    "overnight_fixed_p4_joint_smt_search.smt2": "82d50f6506ed0a43585ece1f19c84ca658bca4e643d64a940bdacf9fb394dc59",
+    "overnight_fixed_p4_regroup.json": "953747d82f4e182eea55770393957bc0238d5f2005b352dd9527374f399110df",
+    "overnight_fixed_p4_regroup.log": "f57b1b58c15bde5f00756b524f0c96ed1ff8b6c28be8924e5a9bdc5bb3d7721b",
+    "overnight_fixed_p4_regroup.py": "41f69bc595916b73d01d433b7df93224039b00a4f40ee78bd8c88a59ad6577c0",
+    "overnight_fixed_p4_regroup_cells.json": "6c6b28e796c54ccb772b6c853b61def6ca1262b088986d394ccf5f1da27ff003",
+    "overnight_fixed_p4_regroup_cells.log": "f9ccb0ec78118c0e4fb920cb759d805d603b104b73a1bc24c9f42f11719890c1",
+    "overnight_fixed_p4_regroup_cells.py": "785c47b8cecc5e84d0b0be8f0d4e21a926b08991df5b6171841474a6c42b488a",
+    "overnight_fixed_p4_regroup_exact.json": "9c23827b38b6e4ea874d63109eef082428538d8fadc59ffbcedb6e65ba7d4838",
+    "overnight_fixed_p4_regroup_exact.log": "79ace02dde0c4248a0a3f27703e5a71348c991bf94e8dc7478dad7eaea4876c0",
+    "overnight_fixed_p4_regroup_exact.py": "4f463c9298aa096675fca54bc64b61778e16390dd21889bc914c97ec32059dbd",
+    "overnight_fixed_p4_regroup_remaining.json": "2d6d9391a115b458f1b7e69389a2497019ae8d2d897d37927f56bc0e4ca0e30c",
+    "overnight_fixed_p4_regroup_remaining.log": "d715e7c65589f86a61a28e2201c642fe1aa2191b005a470cc682b52eaff35fce",
+    "overnight_fixed_p4_regroup_remaining.py": "1499a2a4a19d17b93ed239540c8f4e1b1ac37570d170cff4daec0f3374717024",
+    "overnight_fixed_p4_regroup_routes.md": "78b2abe63cce3944bf3641269cca83f138ea6551793b7333cecca4327ea15842",
+    "overnight_fixed_p4_threecarriers.json": "8b90562117a14107f36ab10936ee50172b27a2504ff60b0b8e590e112b9a4b62",
+    "overnight_fixed_p4_threecarriers.log": "17afdcb5796e3352d30f983ea948ffed5edc334d32d5ba0f994968e114082ab1",
+    "overnight_fixed_p4_threecarriers.py": "1d0768f2f57cf094c7554998965646ba0670b2e518542ca9f6ece9afd0541363",
+    "overnight_fixed_p4_z3_install.log": "3c24a9dfa0f1a93a7f6af96309876bc8666e028a804d687d793bfbd3b0d888ef"
+  },
+  "scope": "Exact-arithmetic producer diagnostics and a restricted SMT UNSAT; no general five-core theorem. Independent five-patch certificates have their own manifest. Joint2:1 search remains active under separate filenames.",
+  "status": "FROZEN_RESTRICTED_CONSTRUCTION_ROUTE_BOUNDARIES"
+}

@@ -1,0 +1,11 @@
+{
+  "carrier_choices": 8,
+  "certificate_sha256": "8804b3a66fcf87e0902e97a296ffd9fcc7d1613fdede2dcb5ba62a54fa610ee9",
+  "checker_sha256": "2c229432b160fb7fdc25334bb227a512200ad690532f83ca9387f38511d91938",
+  "fresh_root_replay_directory": "/tmp/max_p4_routes_root_lpcuqqko",
+  "incompatible_pairs": 80,
+  "open_patches": 40,
+  "scope": "Each of the eight listed fixed three-positive-carrier choices requires at least five feature-linear planes in its correction, excluding two negative ReLUs plus arbitrary feature-linear remainder. Other five-term formulas remain open.",
+  "seconds": 0.027595840001595207,
+  "status": "INDEPENDENT_EXACT_FIVE_PATCH_OBSTRUCTIONS_PASS"
+}

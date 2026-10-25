@@ -1,0 +1,325 @@
+{
+  "candidates": [
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        7
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        1,
+        7
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        2,
+        7
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        2,
+        7
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        3,
+        7
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        3,
+        7
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        4,
+        7
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        5,
+        7
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        0,
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        6,
+        7
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        3,
+        8
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        3,
+        8
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        5,
+        8
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        6,
+        8
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        7,
+        8
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        2,
+        9
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        7,
+        9
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        2,
+        7,
+        9
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        7,
+        10
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        8,
+        10
+      ]
+    },
+    {
+      "curvature_sign": -1,
+      "indices": [
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        2,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        6,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        2,
+        6,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        7,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        2,
+        7,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        6,
+        7,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        2,
+        6,
+        7,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "curvature_sign": 1,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "counts": {
+    "mixed_curvature_signs": 518,
+    "multi_hyperplane": 3526,
+    "passes": 38
+  },
+  "first_layer_cells": 54,
+  "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+  "producer_sha256": "785c47b8cecc5e84d0b0be8f0d4e21a926b08991df5b6171841474a6c42b488a",
+  "scope": "Only replacing a subset of the existing12 fixed weighted units by one arbitrary W7 ReLU modulo W7. Passing candidates are not globally feasible; no general five-unit obstruction.",
+  "seconds": 0.2646600709995255,
+  "status": "EXACT_FIRST_LAYER_CELL_SINGLE_RELU_REGROUP_GATE"
+}
