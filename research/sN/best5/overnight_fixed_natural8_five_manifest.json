@@ -1,0 +1,16 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "files": {
+    "overnight_fixed_natural8_five.md": "2cb73e47078f206537c4be95a160115e61836b9e9c9210de501d7c99811b7e58",
+    "overnight_fixed_natural8_five_corner.lean": "0051c6726e9c215d2e2ab0ba0f44adf6aa58bcc3c6c90dc760a483a19c483c01",
+    "overnight_fixed_natural8_five_corner.log": "9f3dfe0d6ef1108a197e398bcfc7d72a85bc828c3887625431c96e0f328c5341"
+  },
+  "lean_scope": "Final normalized corner-inequality contradiction only; geometric reduction is independently reviewed prose",
+  "publication_scope": "Research only; no matching(8,8)construction yet",
+  "result": "k_W>=6; with the existing carrier bridge h2>=8 for the natural8 first hidden layer",
+  "status": "FROZEN_ANALYTIC_NATURAL8_FIVE_FREE_UNIT_EXCLUSION"
+}

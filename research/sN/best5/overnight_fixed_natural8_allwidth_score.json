@@ -1,0 +1,27 @@
+{
+  "localized_overlap_Q_scores": [
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "old_control_sha256": "ec1c12c0aa08b60db395bdb3905ee29c8d6d0b243c47c24199350e7d00039eb2",
+  "old_rayplane_control_scores": [
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "producer_sha256": "993bbe54f21cd5fc8caab11382b4b1a7fa6ed581db36b6d10da38e801870bd5d",
+  "scaled_unit_controls": 9604,
+  "scope": "Exact controls of the analytic all-finite-width obstruction; not a finite enumeration of possible networks.",
+  "sign_boundary_controls": 49,
+  "status": "PASS_EXACT_FULL_CORNER_SCORE_CONTROLS",
+  "target_mixed_score": 1,
+  "target_scores": [
+    "0",
+    "0",
+    "0",
+    "1"
+  ]
+}

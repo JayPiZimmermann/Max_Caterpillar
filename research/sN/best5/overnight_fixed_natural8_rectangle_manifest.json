@@ -1,0 +1,39 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependencies_from_repository_root": {
+    "MaxCaterpillar/Definitions.lean": "53c4011b28721f26cffe6978327dfd2b2b17c3f52150f71766af1e29db2ba3be",
+    "MaxCaterpillar/Frontier/Basic.lean": "47ff6904c8471b8bded4f4d4990de0d60cf23ceea727ffde66b8bfc425a19820",
+    "research/sN/best5/overnight_fixed_cross_net9_14_simple.json": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+    "research/sN/best5/overnight_fixed_cross_verify.py": "0a1fbec1f71e25aed99a03ca3627a71485f6a3e967ee5ddc2ab414c33112987d",
+    "research/sN/best5/overnight_fixed_rayplane_control_net.json": "ec1c12c0aa08b60db395bdb3905ee29c8d6d0b243c47c24199350e7d00039eb2",
+    "research/sN/frontierN/overnight_general.md": "5385e6f650b77ab5586f2b363b4e9f7cd82487cec85b812ed128a81de047f1dd",
+    "research/sN/frontierN/overnight_general_check.json": "de05126fd40b0bbd69ecd5945c4b364b4da26b5b2cb1c7ef184169375b9ef2be",
+    "research/sN/frontierN/overnight_general_check.py": "7101bb21906d23b9b3f3134b39b81ba461afc571cb7083d0a08a192bd4c1a28d",
+    "research/sN/frontierN/overnight_general_six.md": "0c94a7fb77d046a4f1fac5b10a4c9bf6e48ab6a5c34398fd5b5cfa797d6dee91",
+    "research/sN/frontierN/overnight_general_six_check.json": "01f671955c6d211501ac40220465fd7839b3aeb755789d5c7ca2d07ac85867e8",
+    "research/sN/frontierN/overnight_general_six_check.py": "2b14267750027ad66eb3365ca5ff49c1dfac7824693c6133a493f6b0d3bf5644",
+    "research/sN/frontierN/overnight_general_six_global.json": "4f72c752f82ce1299aed36933c5f99a30759e1b56d117411d4d4a53d8999d8e3",
+    "research/sN/frontierN/overnight_general_six_pairpeeling.json": "0d00d7f03d193ff2d4a0c3d7c3f9ff500753a7d1a5d7c57dce890037897b55b5",
+    "research/sN/frontierN/overnight_general_six_supports.json": "9f86924da89ba88318aac4ddf30856255bf5591205b54a8a5c835362fadd7f92"
+  },
+  "files": {
+    "overnight_fixed_natural8_allwidth_score.json": "3c37c6eeeb153e38189504054941cd1c002d7846a7a493687283858bf3b87921",
+    "overnight_fixed_natural8_allwidth_score.log": "3c37c6eeeb153e38189504054941cd1c002d7846a7a493687283858bf3b87921",
+    "overnight_fixed_natural8_allwidth_score.py": "993bbe54f21cd5fc8caab11382b4b1a7fa6ed581db36b6d10da38e801870bd5d",
+    "overnight_fixed_natural8_rectangle.lean": "3a100970493ab7c4f86bdde94d07850c8581337dc759440f4b9a669a39a00fd4",
+    "overnight_fixed_natural8_rectangle.log": "ce2b4e0f2de2648eee7d66224578825b5dd0579c20ad7c406667c38f2ea681eb",
+    "overnight_fixed_natural8_rectangle.md": "bb6a0a1163686a7222038a2be65d192af17b126538c25af5cea40141f62f98e0"
+  },
+  "lean_scope": "Finite signed rectangle-score identity and fixed-sign vanishing only; geometric and classification bridges are separately stated.",
+  "optimality_scope": "First hidden layer width only; second width14 is an upper bound, not claimed optimal.",
+  "replay_from_repository_root": [
+    "lake env lean research/sN/best5/overnight_fixed_natural8_rectangle.lean",
+    "python3 research/sN/best5/overnight_fixed_natural8_allwidth_score.py"
+  ],
+  "result": "Natural8 cannot compute max5 at any finite second width; combined with the exact first-layer classification and certified9,14 upper, minimum possible first hidden layer width is9.",
+  "status": "FROZEN_ANALYTIC_NATURAL8_ALL_FINITE_WIDTH_OBSTRUCTION"
+}

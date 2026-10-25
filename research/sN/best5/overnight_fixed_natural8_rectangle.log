@@ -1,0 +1,1 @@
+'NaturalEightRectangle.no_finite_target_scores' depends on axioms: [propext, Quot.sound, Classical.choice]

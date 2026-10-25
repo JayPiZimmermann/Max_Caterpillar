@@ -1,0 +1,1 @@
+'NaturalEightFiveCorner.corner_compatibility_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
