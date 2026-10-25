@@ -1,0 +1,20 @@
+{
+  "status": "INDEPENDENT_EXACT_NINE_ROW_K3_EXCLUSION_PASS",
+  "relevant_hyperplanes": 10,
+  "flats_including_zero": 383,
+  "covering_pairs": 0,
+  "covering_triples": 217,
+  "sign_cases": 1736,
+  "second_hidden_layer_lower_bound": 6,
+  "seconds": 1.5389909529985744,
+  "checker_sha256": "4371916b435057fca3b1bdaa93a1fcbc18c5b9a59222ad19b379660f88b7772b",
+  "hashes": {
+    "overnight_root9_inventory.json": "3cdf6426f9cacb115c025c4710b9381a1ee07d9011b1ce9d9237db1808c5abf8",
+    "overnight_root9_triples.json": "fcbeff25d8fc9de662def398c1f4a931a940dffd7ff1c7795180a938c44b582d",
+    "overnight_root9_cones.jsonl": "7fe98f99ae7be5c1b4cd9287ba0248e219ea274577974f9cbafd18292e7ef376",
+    "overnight_root9_equations.py": "a44cce496d20e027b44fa5a01cfc1c05166ef0b9b4352ec33b5b39402b072d13",
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_cross_net9_17.json": "9d6cc7ee37699e452bc52adee66b09baac91dfc4d84e0af43dece807c1546482"
+  },
+  "scope": "All real preactivations and remainder in this fixed seven-feature span; translation-carrier bridge gives h2>=6. Matching construction remains open; not Lean."
+}

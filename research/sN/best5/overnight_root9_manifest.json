@@ -1,0 +1,26 @@
+{
+  "status": "EXACT_FIXED_NINE_ROW_SECOND_WIDTH_AT_LEAST_SIX",
+  "scope": "All real weights and biases on the specified first hidden layer. Upper bound fourteen. Unmatched research result; no paper or optimality claim.",
+  "new_files": {
+    "overnight_root9_inventory.py": "5d7596679c3b1a95520ba521d3079a4bbf49f4ca830b6346f892b4e77a561e9f",
+    "overnight_root9_inventory.json": "3cdf6426f9cacb115c025c4710b9381a1ee07d9011b1ce9d9237db1808c5abf8",
+    "overnight_root9_inventory.log": "72a417447e2f38c6a63cfaf129eacc5ba04115dc10467ec56c1f247f2699d64b",
+    "overnight_root9_triples.json": "fcbeff25d8fc9de662def398c1f4a931a940dffd7ff1c7795180a938c44b582d",
+    "overnight_root9_equations.py": "a44cce496d20e027b44fa5a01cfc1c05166ef0b9b4352ec33b5b39402b072d13",
+    "overnight_root9_cones.py": "684a0894ec47481318e85685926ccb35b2e77b866b1d2193acf70dec0912d029",
+    "overnight_root9_cones.json": "ac0bef4597c7d27dc3f76094fee0fc61d6ebf8079abe55b697ff3685b5d5c746",
+    "overnight_root9_cones.jsonl": "7fe98f99ae7be5c1b4cd9287ba0248e219ea274577974f9cbafd18292e7ef376",
+    "overnight_root9_cones.log": "e2eabed3e1f882780dc2ddb02680fe8bef4b25645d5d827e33efd6c4716d3f42",
+    "overnight_root9_verify.py": "4371916b435057fca3b1bdaa93a1fcbc18c5b9a59222ad19b379660f88b7772b",
+    "overnight_root9_check.json": "e6de481229d6c12b1f9d13d6f22f261668df33c48d663c2560b2e8c6cca44f67",
+    "overnight_root9_check.log": "95cd27378a07955b4a213b41bf3a67f1cc7d0c2277283a2c8e2a7f10b187e84b",
+    "overnight_root9.md": "c5d181dc19d37c803a7b2c75a531a583b6ff3a29cc6ef6941b52419b48edd07f",
+    "overnight_root9_fresh.json": "13e149f8cec191f61c09031dd913e6a93a434f6e9c0c607306ee56f08f29fc7a"
+  },
+  "existing_dependencies": {
+    "overnight_fixed_bowtie_verify.py": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+    "overnight_fixed_cross_net9_17.json": "9d6cc7ee37699e452bc52adee66b09baac91dfc4d84e0af43dece807c1546482",
+    "overnight_fixed_bowtie.md": "bec1a3aaf1c41ef375980a768ae54d1cec613c85ae87c91cfbac36fea4b30764"
+  },
+  "upper_manifest": "overnight_fixed_cross14_manifest.json"
+}

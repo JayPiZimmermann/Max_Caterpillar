@@ -1,0 +1,15 @@
+{
+  "claim": "An explicit rational (9,14) network equals max of five inputs globally. Preferred network uses only 0, plus/minus 1/2, plus/minus 1; no optimality claim.",
+  "existing_dependencies": {
+    "overnight_fixed_cross_manifest.json": "851a0b1b90a4c1820ced974319ecf3774506d880198905efcce5786de71573e9",
+    "overnight_fixed_cross_verify.py": "0a1fbec1f71e25aed99a03ca3627a71485f6a3e967ee5ddc2ab414c33112987d"
+  },
+  "new_files": {
+    "overnight_fixed_cross14.md": "95219e0ee6ecb2c5fc512d1391fb761f31a4bb2832a33d28b39e48ca9fe6c8bd",
+    "overnight_fixed_cross_net9_14.json": "124b9f39902f309bfe3b7defe59d80493e90352afd9aa95ebbfe7b54d4033556",
+    "overnight_fixed_cross_net9_14_check.json": "d74dcc8a8354af33169a9db1192986023df63ca88de94290f1d3af4d838024e6",
+    "overnight_fixed_cross_net9_14_simple.json": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+    "overnight_fixed_cross_net9_14_simple_check.json": "77fd30521f3717a824ab063b9d356e3ddf81b29f3bd45ecfee8b30216eb7c5d3"
+  },
+  "status": "INDEPENDENT_EXACT_NINE_FOURTEEN_CONSTRUCTION"
+}
