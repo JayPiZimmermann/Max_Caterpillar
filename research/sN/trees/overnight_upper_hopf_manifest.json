@@ -1,0 +1,92 @@
+{
+  "status": "FROZEN_COMPLETE_CLASS_BRIDGE_OBSTRUCTIONS",
+  "files": [
+    {
+      "path": "research/sN/trees/overnight_upper_baxter_manifest.json",
+      "bytes": 17675,
+      "sha256": "8efc70048cb2c1fb37361011bbe34c251c5a4bc11b4a90864a33df6907031d09"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_dense_class.json",
+      "bytes": 1052,
+      "sha256": "4758eba16e4d415ad487b0d90a96a871c35b6f6364cf8d28b6359e983e353b33"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_dense_class.log",
+      "bytes": 66,
+      "sha256": "c25b4743b0a10abb014a3b33b5b10528b0c86d534803942e36516c119ab48def"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_dense_class.md",
+      "bytes": 4421,
+      "sha256": "13e0779b039e1864e1f7f066dd3490f4cda77aeeb352c4b00fc927f1bd013a2f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_dense_class.py",
+      "bytes": 2607,
+      "sha256": "d3195473b5dcdbc3de0f223b274e15096d18e856160477648fdcd72605cf1e79"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_dense_class_exit.json",
+      "bytes": 423,
+      "sha256": "32a061bee5fc3863b27df39546d58417ae1025fdf8e62178050d3685e54b23d0"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_locality.json",
+      "bytes": 3078,
+      "sha256": "6894ac2c1d0d453cce42669e155b445244f8290a8c9ca295783fb6d50b8638d7"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_locality.log",
+      "bytes": 96,
+      "sha256": "c870e6643e63c0fa769cdcb3b23c5cb0e787a0afc9e04e882d4ac66247e20adb"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_locality.md",
+      "bytes": 3464,
+      "sha256": "9c6ed59f512bf730644084e765253e6bbe67f6f72bd49375a6b99c79b2db7774"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_locality.py",
+      "bytes": 3788,
+      "sha256": "4d783b4dea76e1cb0c96f0c7cda48c4b03dea662ca30bcce1f56704ff779536b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_locality_exit.json",
+      "bytes": 417,
+      "sha256": "6487ae521441420dfe15473642f1791335b1793a2ede6ca20f0c027a9fe6d608"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_manifest.py",
+      "bytes": 1785,
+      "sha256": "887b36bbc97e60638ab895aa124c194bcc0939b818df8dbfdcdc67d34fdc2f5d"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_residue.json",
+      "bytes": 153184,
+      "sha256": "aecb895aa8e39c57bcea81df86da59dce4e9edd992f12aec823a6557f2f5e52e"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_residue.log",
+      "bytes": 219,
+      "sha256": "803eb51a1abf315b68229cb8a10cdf3c979fab5e42b9542da0b59001890bf49d"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_residue.py",
+      "bytes": 5649,
+      "sha256": "dd11d3ab06c9f9a7ae4077d2fe821b25e8b5ba8630186e71c02e23a464ef3bdd"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_hopf_residue_exit.json",
+      "bytes": 447,
+      "sha256": "b4ce356c66d625268ed345cf2f937eb41b2cad50381dec4ac14457e1a52d088c"
+    }
+  ],
+  "bytes": 198371,
+  "base_manifest": "research/sN/trees/overnight_upper_baxter_manifest.json",
+  "primary_replay": [
+    "research/sN/trees/overnight_upper_hopf_locality.py",
+    "research/sN/trees/overnight_upper_hopf_dense_class.py"
+  ],
+  "scope": "The complete finite residue exclusion is superseded for the fixed graph by an arbitrary-real-head/weight two-flag proof. A uniform ascending-class theorem requires a quadratic total comparison graph. Neither excludes the global exponential family or the maximum itself."
+}

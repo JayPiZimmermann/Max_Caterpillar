@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "research/sN/trees/overnight_upper_hopf_dense_class.py"
+  ],
+  "started_utc": "2026-10-25T05:43:04.837418+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_hopf_dense_class.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.11509609599306714,
+  "finished_utc": "2026-10-25T05:43:04.952514+00:00"
+}

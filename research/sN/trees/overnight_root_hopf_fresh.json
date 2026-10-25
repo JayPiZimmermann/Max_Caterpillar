@@ -1,0 +1,343 @@
+{
+  "status": "ROOT_FRESH_ALL_REAL_CLASSWISE_OBSTRUCTIONS_PASS",
+  "manifest_sha256": "465db19ea2d6ebf162f047c51d934e05be8038ba039419a38e104e514c39255a",
+  "results": {
+    "overnight_upper_hopf_locality": {
+      "stdout": "EXACT_ALL_REAL_FIXED_BAXTER_WHEEL_OBSTRUCTION EXACT_DEFECT -1 JET_VALUES [-2, -2, -2, 0, 0, -3]",
+      "seconds": 0.027484177997394
+    },
+    "overnight_upper_hopf_dense_class": {
+      "stdout": "EXACT_UNIFORM_ASCENDING_CLASS_FLAG_CONTROLS_PASSED TOTAL_PAIRS 84",
+      "seconds": 0.11016243799531367
+    }
+  },
+  "independent_dense_flags": {
+    "status": "INDEPENDENT_EXACT_ASCENDING_CLASS_JET_FLAGS_PASS",
+    "records": [
+      {
+        "labels": 4,
+        "retained_pair": [
+          1,
+          2
+        ],
+        "jet_values": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 5,
+        "retained_pair": [
+          1,
+          2
+        ],
+        "jet_values": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 5,
+        "retained_pair": [
+          1,
+          3
+        ],
+        "jet_values": [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 5,
+        "retained_pair": [
+          2,
+          3
+        ],
+        "jet_values": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          2
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 6,
+        "retained_pair": [
+          1,
+          2
+        ],
+        "jet_values": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 6,
+        "retained_pair": [
+          1,
+          3
+        ],
+        "jet_values": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 6,
+        "retained_pair": [
+          1,
+          4
+        ],
+        "jet_values": [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 6,
+        "retained_pair": [
+          2,
+          3
+        ],
+        "jet_values": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          3
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 6,
+        "retained_pair": [
+          2,
+          4
+        ],
+        "jet_values": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          3
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 6,
+        "retained_pair": [
+          3,
+          4
+        ],
+        "jet_values": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          2
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          1,
+          2
+        ],
+        "jet_values": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          1,
+          3
+        ],
+        "jet_values": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          1,
+          4
+        ],
+        "jet_values": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          1,
+          5
+        ],
+        "jet_values": [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          2,
+          3
+        ],
+        "jet_values": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          3
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          2,
+          4
+        ],
+        "jet_values": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          3
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          2,
+          5
+        ],
+        "jet_values": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          3
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          3,
+          4
+        ],
+        "jet_values": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          3
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          3,
+          5
+        ],
+        "jet_values": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          3
+        ],
+        "defect": 1
+      },
+      {
+        "labels": 7,
+        "retained_pair": [
+          4,
+          5
+        ],
+        "jet_values": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          2
+        ],
+        "defect": 1
+      }
+    ],
+    "checker_sha256": "01fcb12aba45d927213e86595a81983b4aa7d38c89e19c9a97f1b3deb39c9ba1",
+    "seconds": 0.20198283600620925,
+    "scope": "Independent controls of the uniform written cut-survival proof; excludes one sparse graph per class, not the global family or maximum."
+  },
+  "scope": "Uniform written proof independently reviewed; fixed classwise graphs excluded, global family remains open."
+}

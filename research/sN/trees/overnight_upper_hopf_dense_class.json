@@ -1,0 +1,42 @@
+{
+  "status": "EXACT_UNIFORM_ASCENDING_CLASS_FLAG_CONTROLS_PASSED",
+  "records": [
+    {
+      "labels": 4,
+      "pairs_checked": 1,
+      "required_comparison_edges": 1
+    },
+    {
+      "labels": 5,
+      "pairs_checked": 3,
+      "required_comparison_edges": 3
+    },
+    {
+      "labels": 6,
+      "pairs_checked": 6,
+      "required_comparison_edges": 6
+    },
+    {
+      "labels": 7,
+      "pairs_checked": 10,
+      "required_comparison_edges": 10
+    },
+    {
+      "labels": 8,
+      "pairs_checked": 15,
+      "required_comparison_edges": 15
+    },
+    {
+      "labels": 9,
+      "pairs_checked": 21,
+      "required_comparison_edges": 21
+    },
+    {
+      "labels": 10,
+      "pairs_checked": 28,
+      "required_comparison_edges": 28
+    }
+  ],
+  "producer_sha256": "d3195473b5dcdbc3de0f223b274e15096d18e856160477648fdcd72605cf1e79",
+  "scope": "Complete finite convention checks throughN10 for the adjacent uniform cut-survival proof. Requires a quadratic total comparison graph for this individual class, not for the full maximum."
+}
