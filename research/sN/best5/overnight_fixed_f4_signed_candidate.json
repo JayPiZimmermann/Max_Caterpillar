@@ -1,0 +1,118 @@
+{
+  "base_function": 45,
+  "chambers": 1152,
+  "closure_rays_for_fold": 117,
+  "exact_fold_equality_contradiction": [
+    [
+      35,
+      "-3/32"
+    ],
+    [
+      45,
+      "3/32"
+    ],
+    [
+      73,
+      "3/32"
+    ],
+    [
+      83,
+      "-1/16"
+    ],
+    [
+      94,
+      "-1/32"
+    ],
+    [
+      137,
+      "1/16"
+    ],
+    [
+      160,
+      "1/32"
+    ],
+    [
+      170,
+      "-1/16"
+    ],
+    [
+      172,
+      "1/32"
+    ],
+    [
+      173,
+      "-1/32"
+    ],
+    [
+      187,
+      "1/16"
+    ],
+    [
+      198,
+      "-1/32"
+    ],
+    [
+      202,
+      "1/16"
+    ],
+    [
+      206,
+      "1/16"
+    ],
+    [
+      210,
+      "-1/32"
+    ],
+    [
+      216,
+      "1/32"
+    ],
+    [
+      217,
+      "-1/32"
+    ],
+    [
+      232,
+      "-1/32"
+    ],
+    [
+      233,
+      "3/32"
+    ],
+    [
+      235,
+      "-1/32"
+    ],
+    [
+      237,
+      "-1/16"
+    ]
+  ],
+  "impossible_nonnegative_pair": [
+    45,
+    1
+  ],
+  "kernel_signs": [
+    1,
+    -1
+  ],
+  "negative_functions": [
+    45
+  ],
+  "nonzero_ray_edge_count": 120,
+  "pointwise_ray_max": 2,
+  "pointwise_ray_min": 0,
+  "positive_functions": [
+    29,
+    30,
+    34,
+    37,
+    47
+  ],
+  "producer_sha256": "f1869ad3b36c7c478356dc6f6578f5c49a95c4680d0ef7b48d19ce4a30a58ef2",
+  "ray_count": 240,
+  "seconds": 0.05211629100085702,
+  "single_fold_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "single_fold_solver_status": 2,
+  "status": "EXACT_NONNEGATIVE_CONE_NOT_SATURATED"
+}

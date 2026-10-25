@@ -1,0 +1,8 @@
+full 2112 {'rank': 2112, 'score_in_sampled_rowspan': False, 'seconds': 14.335479960995144} stable False
+shape+target 308 {'rank': 304, 'score_in_sampled_rowspan': True, 'seconds': 0.5005085400043754, 'columns': 308}
+shape+target 592 {'rank': 582, 'score_in_sampled_rowspan': True, 'seconds': 1.1807003310022992, 'columns': 592}
+shape+target 308 {'rank': 289, 'score_in_sampled_rowspan': True, 'seconds': 0.4660808669941616, 'columns': 308}
+shape+target 344 {'rank': 340, 'score_in_sampled_rowspan': True, 'seconds': 0.3710612879949622, 'columns': 344}
+shape+target 156 {'rank': 152, 'score_in_sampled_rowspan': True, 'seconds': 0.11575539899786236, 'columns': 156}
+all PM+stars+target {'rank': 1260, 'score_in_sampled_rowspan': False, 'seconds': 4.599407779001922, 'score_pairing_mod': 180, 'support': 12, 'columns': 1644}
+DONE 21.972194420995947 688136

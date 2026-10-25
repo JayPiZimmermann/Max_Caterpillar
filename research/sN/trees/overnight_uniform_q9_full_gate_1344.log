@@ -1,0 +1,7 @@
+full 1344 {'rank': 1344, 'score_in_sampled_rowspan': False, 'seconds': 8.40460370099754} stable False
+shape+target 308 {'rank': 304, 'score_in_sampled_rowspan': True, 'seconds': 0.18099778999749105, 'columns': 308}
+shape+target 592 {'rank': 582, 'score_in_sampled_rowspan': True, 'seconds': 0.47431932899780804, 'columns': 592}
+shape+target 308 {'rank': 289, 'score_in_sampled_rowspan': True, 'seconds': 0.1651719180008513, 'columns': 308}
+shape+target 344 {'rank': 340, 'score_in_sampled_rowspan': True, 'seconds': 0.2633590749974246, 'columns': 344}
+shape+target 156 {'rank': 152, 'score_in_sampled_rowspan': True, 'seconds': 0.06915438100259053, 'columns': 156}
+DONE 9.789066078999895 462768

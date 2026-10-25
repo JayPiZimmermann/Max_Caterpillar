@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_triangle_ear.py"
+  ],
+  "started_utc": "2026-10-25T01:19:52.544126+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_triangle_ear.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 35.05963022400101,
+  "finished_utc": "2026-10-25T01:20:27.603758+00:00"
+}

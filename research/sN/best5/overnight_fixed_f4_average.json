@@ -1,0 +1,61 @@
+{
+  "contradiction_multipliers": [
+    "1/2",
+    "-3/2",
+    "0",
+    "3/2"
+  ],
+  "producer_sha256": "85ce5e47089c5031f8707451fae0fac2974e3a8110fa097567a431af43f179cc",
+  "ray_orbits": [
+    {
+      "long_absolute_sum": "24",
+      "orbit_size": 96,
+      "ray": [
+        -3,
+        -1,
+        -1,
+        -1
+      ],
+      "short_absolute_sum": "18",
+      "sum_48_q": "2"
+    },
+    {
+      "long_absolute_sum": "18",
+      "orbit_size": 96,
+      "ray": [
+        -2,
+        -1,
+        -1,
+        0
+      ],
+      "short_absolute_sum": "12",
+      "sum_48_q": "0"
+    },
+    {
+      "long_absolute_sum": "12",
+      "orbit_size": 24,
+      "ray": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "short_absolute_sum": "10",
+      "sum_48_q": "2"
+    },
+    {
+      "long_absolute_sum": "10",
+      "orbit_size": 24,
+      "ray": [
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "short_absolute_sum": "6",
+      "sum_48_q": "0"
+    }
+  ],
+  "scope": "The sum of the48 canonical orbit functions is outside the invariant shallow span. Averaging consequently excludes any nonzero nonnegative linear combination of the48 functions that is shallow. This does not exclude a positive outer-ReLU fold of several functions.",
+  "status": "EXACT_AVERAGED_ORBIT_NOT_SHALLOW_ON_F4_FAN"
+}

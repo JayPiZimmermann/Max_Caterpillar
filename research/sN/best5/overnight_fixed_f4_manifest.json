@@ -1,0 +1,20 @@
+{
+  "files": {
+    "overnight_fixed_f4.md": "d43061fdfed3dae8e08783c423d958f0b129c9961f874dffb8e0230c0c3ded9b",
+    "overnight_fixed_f4_average.json": "64864d56fb1b1a44c4e4760a09f25e8262122dd0e26a1d7a38e51bbd2b3b6735",
+    "overnight_fixed_f4_average.log": "64864d56fb1b1a44c4e4760a09f25e8262122dd0e26a1d7a38e51bbd2b3b6735",
+    "overnight_fixed_f4_average.py": "85ce5e47089c5031f8707451fae0fac2974e3a8110fa097567a431af43f179cc",
+    "overnight_fixed_f4_check.json": "2e790e7e76632eb0b692c41ff2c9a94379b6e8f489aa8f37bf1328048ab052d7",
+    "overnight_fixed_f4_check.log": "2e790e7e76632eb0b692c41ff2c9a94379b6e8f489aa8f37bf1328048ab052d7",
+    "overnight_fixed_f4_inventory.json": "38159153999a0c7fd4d1dadffefb70139916853cc7285a438d67142e0a6e14db",
+    "overnight_fixed_f4_inventory.log": "6d736c21b2eab86d1257bee61ae453df2c9b97e37a85d708be00d7a75007b35f",
+    "overnight_fixed_f4_inventory.py": "a94353adeb87017f16b0b07f0b229781259698babd729079faac124bc2070428",
+    "overnight_fixed_f4_relaxed_fold.json": "061c313a2e0cf2ae819990a1078dd9d0ab5c43217f2ac9d877d8f83e3f6a0e61",
+    "overnight_fixed_f4_relaxed_fold.log": "061c313a2e0cf2ae819990a1078dd9d0ab5c43217f2ac9d877d8f83e3f6a0e61",
+    "overnight_fixed_f4_relaxed_fold.py": "3eee9617a59ede5f88ece2478fcb67b788b16052f60a2fd66d59d1871df5e02a",
+    "overnight_fixed_f4_verify.py": "b434484054cbc367886d186ff8c0318ef1b3fc82b1853f08e1ff40a7691045c7"
+  },
+  "primary_independent_checker": "overnight_fixed_f4_verify.py",
+  "scope": "No nonzero nonnegative combination of48 orbit functions is one outer ReLU of any finite shallow preactivation. Not an unrestricted network-width lower bound.",
+  "status": "FROZEN_EXACT_F4_POSITIVE_FOLD_OBSTRUCTION"
+}

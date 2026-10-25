@@ -1,0 +1,2 @@
+{"status": "EXACT_FINITE_GROUP_AND_FAN_INVENTORY", "group_order": 1152, "function_orbit_size": 48, "frame_counts": [16, 16, 16], "base_function": 45, "seconds": 0.3343269499964663, "producer_sha256": "a94353adeb87017f16b0b07f0b229781259698babd729079faac124bc2070428"}
+hyperplanes 24 rays 240 base 45

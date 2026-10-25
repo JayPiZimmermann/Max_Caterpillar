@@ -1,0 +1,9 @@
+{
+  "status": "MODULAR_ROWS_READY",
+  "rows": 1344,
+  "matrix": "overnight_uniform_q9_rows1344.u32",
+  "points": "overnight_uniform_q9_points1344.json",
+  "new_rows": 768,
+  "seconds": 56.58685636199516,
+  "peak_rss_kib": 140952
+}

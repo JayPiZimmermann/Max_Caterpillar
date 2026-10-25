@@ -1,0 +1,245 @@
+{
+  "status": "FROZEN_COMPACT_TWO_PAGE_BOUNDARY_CHECKPOINT",
+  "files": [
+    {
+      "path": "research/sN/trees/all_tree_dfs/rational_identity.py",
+      "bytes": 7103,
+      "sha256": "d65665bbc8399194d96da0fc47bfe7929a1eba7dfd9d7005a9116a716c2d1f2c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ear_translations.log",
+      "bytes": 590,
+      "sha256": "fefe71a5f55deccc110314c5b052b5f7c0fdfc8f2db6aee684b5892ea447c3ef"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ear_translations.py",
+      "bytes": 6682,
+      "sha256": "c1e743d3423d5b517c50a97e1dc6aaec1a0144791a5c57b9b62b205579485b4f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_ear_translations_exit.json",
+      "bytes": 455,
+      "sha256": "a926a8822d59eba59d1936e4d9dce3654b68f9345f898de6b06b1ddf593c1a53"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_koszul_filling.md",
+      "bytes": 3262,
+      "sha256": "cfccf9445edcb741885fc0876d8eb9676d2ba9d826f5f37f0857d32df72a1fe1"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_product_congruence.json",
+      "bytes": 5266,
+      "sha256": "8158a449d5ad387a3434f9c68c0ca5e96f50cd83d05c273a2150233f9c4c582f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_product_congruence.log",
+      "bytes": 96,
+      "sha256": "ada6083d0225e4ad38b97f12bad97461b0efc0280128a1d3c4d0132cda9a69dc"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_product_congruence.py",
+      "bytes": 2947,
+      "sha256": "d0d47803534e61092e69ce8cb3b1e37f3e81828c84cdb5ef9355feee952f63d1"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_product_congruence_exit.json",
+      "bytes": 461,
+      "sha256": "946fe86cceb94e6891221f7aa6af799825169e6e2361e3cd066956dc025822aa"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_product_family.py",
+      "bytes": 9820,
+      "sha256": "42db60ac3bd712684358fa641a1c5793995690516911e01f8fc2af75b52664f8"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_run.py",
+      "bytes": 2207,
+      "sha256": "3192943205ead6986c3906691a7abef2b8b1101887e1296f642be51a9f620007"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachment_exact.log",
+      "bytes": 878,
+      "sha256": "b9fb26e0f4fbd96d053547b80e54922b284bed0a127d4defb840a66ec69373d3"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachment_exact.py",
+      "bytes": 4907,
+      "sha256": "7dc5ababd7db6916c86c139ad0b4e09897f88085d16fb7de147e6427e44b392a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachment_exact_exit.json",
+      "bytes": 473,
+      "sha256": "b9893d759f2f2114d0136f32416f7e40a5f3fdf6d8fd5df2ce9c20e3784e6f9d"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachments.log",
+      "bytes": 484,
+      "sha256": "c5754b4a9b4951a2fd551834c1b7adf1bd21f8646d186e96a91134f39ea50472"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachments.py",
+      "bytes": 7734,
+      "sha256": "5dd69fb813aaab9f166215a8b47e8a4058abc9b428fb57e997a8c5bbd94c3988"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachments_exit.json",
+      "bytes": 477,
+      "sha256": "f95333a5e528a8a40e04df97e3e2b42924ee497591c6aeecb8f6f9691f3785dd"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachments_inventory.log",
+      "bytes": 131,
+      "sha256": "88d074f372083adda6923180a787a207a29a14c77101c7103e232a696fbe661c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_attachments_inventory_exit.json",
+      "bytes": 474,
+      "sha256": "d6e470e3467f53f8046c0b5b721f0ec206c01a344250767a5a589fa93a02ef3b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_ear.log",
+      "bytes": 351,
+      "sha256": "d72eda5b61ca3e27324f2f5c9de1719344cd9435724ce343ac2e633769a22d89"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_ear.py",
+      "bytes": 2276,
+      "sha256": "d727db6d2a5e5c0453d610bd5bc0affb32e458d939efd3e4c26869d20a866279"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_ear_exact.log",
+      "bytes": 243,
+      "sha256": "ef9600b1e762d34ce10874b52449bcbcbe8a60402f7f24ac2350c7b1b89e705b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_ear_exact.py",
+      "bytes": 2805,
+      "sha256": "ade13645a9222a62f226f7505d9f317c5fff13b24e7381c20a0496887d2bc6bd"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_ear_exact_exit.json",
+      "bytes": 460,
+      "sha256": "512007b36ee4d7f61724019193aa85edb4facddc8ed635411b9186f4da4820db"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_ear_exit.json",
+      "bytes": 447,
+      "sha256": "76177d996d1d77af852c092d4e4304737d7b6d2a41263c2d8223140411002c85"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_fixed.log",
+      "bytes": 231,
+      "sha256": "fe6d38307400f8fcf04b93883c777db455d88232bd98c95aa30b6ffe7be18669"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_fixed.py",
+      "bytes": 6060,
+      "sha256": "a7cf0b9d3d352eb78e891ed963b319b1fe2a3b1e35d4bbdecf8f7632a280a41a"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_fixed_exact.log",
+      "bytes": 864,
+      "sha256": "ba63b888cf34b45f8469805dbee64257262eb1ad839dc949e7a6ac01717d8c0c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_fixed_exact.py",
+      "bytes": 2999,
+      "sha256": "70c4cbf2b6c5685009cc164d519e4766253ae5121e9b38b95a0bdc5ce33a2622"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_fixed_exact_exit.json",
+      "bytes": 463,
+      "sha256": "226176282d9ed75a5cac8962d8a6c589768896e7db05bf329f4f078826d05bbb"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_fixed_exit.json",
+      "bytes": 452,
+      "sha256": "3964fb69230cca2c777a11a0fe57f44a341e2273ba676e498181416c6ce8e007"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_two_pages.log",
+      "bytes": 418,
+      "sha256": "357b48bbd1ac33cfe07112f35f741d212739bb406b249c200f87a7e5fbce346e"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_two_pages.py",
+      "bytes": 3453,
+      "sha256": "1c82b7ac04f1389063425656b9abf12ad3001339ac303e72fdd79d62b63e693b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_triangle_two_pages_exit.json",
+      "bytes": 459,
+      "sha256": "1ee058acba3e5f472d0de5ba54f10628ef5d570702ae611b0dc9754311b05ec9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_boundary.md",
+      "bytes": 5738,
+      "sha256": "8786bd011f14f8c0f9fa01ba2ad42ed81f33410e70af10553c2cea60adc35b89"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_bundle.json",
+      "bytes": 534421,
+      "sha256": "d1c8e12d67233154f7da913161afc3331ff016547fa1acd851fe73a373a77989"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_bundle.py",
+      "bytes": 8939,
+      "sha256": "365bdfc0d5b8ab884de1e04cd49f1d1dea34afbcc265dadc34edad0ebc8e9309"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_bundle_coverage.log",
+      "bytes": 253,
+      "sha256": "032421f4df76e893bdc05f03e26c4e47bf524d9ceee01c9799380d50e894815c"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_bundle_coverage_exit.json",
+      "bytes": 479,
+      "sha256": "9c40604bfa12fbf992614eb3238088fd10a0447a78aaa31633542bb47675f696"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_bundle_replay.log",
+      "bytes": 253,
+      "sha256": "5e406868b8ccae50334d8de566aafd6ca502c67b39c4d91c1ad93011559e87eb"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_bundle_replay_exit.json",
+      "bytes": 477,
+      "sha256": "54fc734b0b4484e37ff2c95c1969194a7f765f71718ac8f48c75a07cdf6a060f"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_manifest.py",
+      "bytes": 3342,
+      "sha256": "c8f5eee3683183a9f2b57858183725beb7b2b596ccb9f1df94246754a78c29b9"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_witness.log",
+      "bytes": 601,
+      "sha256": "b992184b99527183634ad11714be975ab0ed11f5c28e0899765725f367defb2b"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_witness.py",
+      "bytes": 4570,
+      "sha256": "2065f231fd7b5ad9eab47f68d48b3faac478d1050a43a9bd299a64b5c2ed6504"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_witness_6.json",
+      "bytes": 4246,
+      "sha256": "c7e56fa63558b2b7678536651d69cfb215af7540d1540600ef8c41671cac72b6"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_witness_exit.json",
+      "bytes": 472,
+      "sha256": "64ac1c3b2f82aeb0db8767ce96e3891e71da556a631a153bf7963c1075d5d1ea"
+    },
+    {
+      "path": "research/sN/trees/overnight_upper_two_page_witness_replay_6.json",
+      "bytes": 600,
+      "sha256": "99eeff0fd67c1455da4cc62ef7fac205341a0e437875ff6bcf85961578a4986b"
+    }
+  ],
+  "total_bytes": 640819,
+  "scope": "Exact finite coherent-boundary identities and exclusions. No all-N exponential construction or Lean claim.",
+  "excluded": "Large sampled matrices and active non-ear graft/kernel-state searches. All needed selected minors, relations and positive witnesses are in two_page_bundle.json.",
+  "check": "python3 research/sN/trees/overnight_upper_two_page_manifest.py --check",
+  "replay": "research/sN/dfs/h5-growth/venv/bin/python research/sN/trees/overnight_upper_two_page_manifest.py --replay"
+}

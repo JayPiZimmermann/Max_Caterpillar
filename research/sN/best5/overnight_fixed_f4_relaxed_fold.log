@@ -1,0 +1,49 @@
+{
+  "certificate": {
+    "equality_multipliers": [
+      [
+        123,
+        "-1/2"
+      ],
+      [
+        136,
+        "-1/2"
+      ],
+      [
+        138,
+        "1/2"
+      ],
+      [
+        186,
+        "-1/2"
+      ],
+      [
+        188,
+        "1/2"
+      ],
+      [
+        208,
+        "-1/2"
+      ],
+      [
+        209,
+        "1/2"
+      ]
+    ],
+    "inequality_multipliers": [],
+    "weight_nonnegative_multipliers": [
+      [
+        29,
+        "1"
+      ]
+    ]
+  },
+  "equalities": 31,
+  "inequalities": 256,
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "producer_sha256": "3eee9617a59ede5f88ece2478fcb67b788b16052f60a2fd66d59d1871df5e02a",
+  "seconds": 0.10093699199933326,
+  "solver_status": 2,
+  "status": "EXACT_ALL_SUPPORT_POSITIVE_FOLD_EXCLUSION",
+  "variables": 75
+}

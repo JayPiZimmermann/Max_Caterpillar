@@ -1,0 +1,305 @@
+{
+  "status": "COMPACT_TWO_PAGE_N6_BOUNDARY_WITNESS",
+  "n": 6,
+  "selected": [
+    {
+      "coefficient": "-1/15",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          2,
+          -1
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          4,
+          -1
+        ]
+      ],
+      "page_colors": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "coefficient": "-1/20",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            0,
+            2,
+            4
+          ],
+          0,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          0,
+          -1
+        ]
+      ],
+      "page_colors": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "coefficient": "1/20",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            0,
+            3,
+            4
+          ],
+          0,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          0,
+          -1
+        ]
+      ],
+      "page_colors": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "coefficient": "1/20",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          2,
+          -1
+        ],
+        [
+          [
+            2,
+            4,
+            5
+          ],
+          5,
+          1
+        ]
+      ],
+      "page_colors": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "coefficient": "1/20",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          3,
+          1
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          2,
+          -1
+        ]
+      ],
+      "page_colors": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "coefficient": "-1/20",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          2,
+          -1
+        ],
+        [
+          [
+            2,
+            4,
+            5
+          ],
+          4,
+          -1
+        ]
+      ],
+      "page_colors": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "coefficient": "-1/20",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            0,
+            2,
+            4
+          ],
+          0,
+          1
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          0,
+          -1
+        ]
+      ],
+      "page_colors": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "coefficient": "1/20",
+      "descriptor": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          0,
+          -1
+        ],
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          2,
+          -1
+        ],
+        [
+          [
+            0,
+            3,
+            4
+          ],
+          4,
+          -1
+        ]
+      ],
+      "page_colors": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "averaging": "Alternating D6 sum, not full S6 averaging.",
+  "source_receipt_sha256": "74fa1653b51aca452a5bbc2a27f109e80e98a7824c99a9683bc40fb999cde7a7",
+  "scope": "Exact six-label coherent boundary lift. Augmentation correction and filling have not been emitted as a network. No all-N claim."
+}

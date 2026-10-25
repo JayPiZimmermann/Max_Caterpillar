@@ -1,0 +1,11 @@
+{
+  "dependency_proof": "overnight_fixed_f4.md",
+  "files": {
+    "overnight_fixed_f4_signed.md": "c09ac6b5b5750e1e27af1142367d84cb76d7d8e22e420c8ae5e4a981be2da60b",
+    "overnight_fixed_f4_signed_check.json": "537de788c5e06b180ad5da2bf3b3101d3394e75dab553d8b15cfd1e19ab7150c",
+    "overnight_fixed_f4_signed_check.log": "be69f6688d55e7da34b7f67eafac3998f22cd75fd3ac52b63fedc453b9fb0371",
+    "overnight_fixed_f4_signed_verify.py": "3c3a3498e8e16366da015444652e2e666de3eada02343e7caf3149d6a8483a85",
+    "overnight_fixed_f4_verify.py": "b434484054cbc367886d186ff8c0318ef1b3fc82b1853f08e1ff40a7691045c7"
+  },
+  "status": "FROZEN_EXACT_F4_SHALLOW_RELATION_CLASSIFICATION"
+}

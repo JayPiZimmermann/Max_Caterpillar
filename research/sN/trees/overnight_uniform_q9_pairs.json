@@ -1,0 +1,9 @@
+{
+  "status": "MODULAR_64_ROW_PROPORTIONAL_COLUMN_GATE",
+  "columns": 9498,
+  "normalized_column_groups": 5446,
+  "incompatible_pairs": [],
+  "incompatible_pair_count": 0,
+  "nonzero_score_on_zero_column": [],
+  "scope": "A discrepancy would require a separate rational identity check; agreement is only a necessary gate."
+}

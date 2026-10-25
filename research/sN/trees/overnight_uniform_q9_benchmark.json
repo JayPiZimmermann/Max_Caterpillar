@@ -1,0 +1,27 @@
+{
+  "status": "FULL_N9_MODULAR_GATE_BENCHMARK",
+  "columns": 9498,
+  "rows": 64,
+  "evaluation_seconds": 3.8794231450010557,
+  "seconds_per_evaluation_row": 0.060615986640641495,
+  "rref": [
+    {
+      "rows": 16,
+      "rank": 16,
+      "seconds": 0.035865272002411075
+    },
+    {
+      "rows": 32,
+      "rank": 32,
+      "seconds": 0.08026658200105885
+    },
+    {
+      "rows": 64,
+      "rank": 64,
+      "seconds": 0.17647265100094955
+    }
+  ],
+  "peak_rss_kib": 149080,
+  "seconds": 4.2889178109981,
+  "scope": "Resource estimate only, not score descent or separation."
+}

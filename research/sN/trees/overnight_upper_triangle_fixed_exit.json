@@ -1,0 +1,15 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_triangle_fixed.py"
+  ],
+  "started_utc": "2026-10-25T01:12:50.158752+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_triangle_fixed.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 14.732698733001598,
+  "finished_utc": "2026-10-25T01:13:04.891453+00:00"
+}

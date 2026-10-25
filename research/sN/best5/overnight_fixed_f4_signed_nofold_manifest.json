@@ -1,0 +1,10 @@
+{
+  "files": {
+    "overnight_fixed_f4_signed_nofold.md": "dc44f91765404c0e72db6305b043b80716e6defcca7db1f7820a495cd1b58eb7",
+    "overnight_fixed_f4_signed_nofold_check.json": "10f54681e822dc42715e6df7831f08d6b6ecbfd37161bfa756e59d0573bdf632",
+    "overnight_fixed_f4_signed_nofold_check.log": "10f54681e822dc42715e6df7831f08d6b6ecbfd37161bfa756e59d0573bdf632",
+    "overnight_fixed_f4_signed_nofold_verify.py": "fb2789fef180abc1c79b4ecad1a8c45a4bb7b1bf1a90020a24735b90ef30aae9"
+  },
+  "scope": "The particular signed six-term nonnegative state is not one ReLU of any finite shallow preactivation. No classification of all signed nonnegative states is claimed.",
+  "status": "FROZEN_EXACT_SIGNED_F4_ANY_SHALLOW_FOLD_EXCLUSION"
+}

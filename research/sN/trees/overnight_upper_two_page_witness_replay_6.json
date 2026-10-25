@@ -1,0 +1,14 @@
+{
+  "status": "EXACT_COMPACT_TWO_PAGE_N6_BOUNDARY_REPLAY",
+  "n": 6,
+  "product_orbits": 8,
+  "oriented_products": 96,
+  "formal_cube_support": 1006,
+  "support_planes": 18,
+  "plane_orbits_checked": 4,
+  "nonzero_augmentation_coefficients": 312,
+  "witness_sha256": "c7e56fa63558b2b7678536651d69cfb215af7540d1540600ef8c41671cac72b6",
+  "producer_sha256": "2065f231fd7b5ad9eab47f68d48b3faac478d1050a43a9bd299a64b5c2ed6504",
+  "seconds": 0.3444086029994651,
+  "scope": "Exact six-label coherent boundary lift. Augmentation correction and filling have not been emitted as a network. No all-N claim."
+}

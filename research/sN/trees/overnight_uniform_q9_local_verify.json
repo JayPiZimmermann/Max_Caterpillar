@@ -1,0 +1,390 @@
+{
+  "status": "INDEPENDENT_EXACT_Q_STAR_REFUTATION_N9",
+  "arity": 9,
+  "rational_identity_numerator_zero": true,
+  "common_cut_factors_identical": true,
+  "independent_connected_prefix_enumeration": true,
+  "score_pairing": -240,
+  "terms": [
+    {
+      "root": 1,
+      "edges": [
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "coefficient": 1,
+      "signed_root_counts": {
+        "1": 6,
+        "2": -6,
+        "3": 2,
+        "4": -2,
+        "5": -2,
+        "6": 2,
+        "7": -2,
+        "8": 2
+      },
+      "score": "3300",
+      "kappa": {
+        "1": 2,
+        "2": 2,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0
+      },
+      "epsilon": -1,
+      "moments": {
+        "D1": -96,
+        "D2": 32,
+        "K1": -336,
+        "D1chi": -128,
+        "K1chi": -752
+      }
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "coefficient": -1,
+      "signed_root_counts": {
+        "1": 6,
+        "2": -6,
+        "3": 2,
+        "4": -2,
+        "5": -2,
+        "6": 2,
+        "7": -2,
+        "8": 2
+      },
+      "score": "300",
+      "kappa": {
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0
+      },
+      "epsilon": -1,
+      "moments": {
+        "D1": -96,
+        "D2": 32,
+        "K1": -256,
+        "D1chi": -128,
+        "K1chi": -512
+      }
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "coefficient": -1,
+      "signed_root_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      },
+      "score": "0",
+      "kappa": {
+        "1": 1,
+        "2": 2,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0
+      },
+      "epsilon": 1,
+      "moments": {
+        "D1": 0,
+        "D2": 0,
+        "K1": 0,
+        "D1chi": 0,
+        "K1chi": 0
+      }
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "coefficient": 1,
+      "signed_root_counts": {
+        "1": 6,
+        "2": -6,
+        "3": -2,
+        "4": 2,
+        "5": -2,
+        "6": 2,
+        "7": -2,
+        "8": 2
+      },
+      "score": "660",
+      "kappa": {
+        "1": 1,
+        "2": 2,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0
+      },
+      "epsilon": 1,
+      "moments": {
+        "D1": -96,
+        "D2": 96,
+        "K1": -368,
+        "D1chi": -192,
+        "K1chi": -528
+      }
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "coefficient": 1,
+      "signed_root_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      },
+      "score": "0",
+      "kappa": {
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0
+      },
+      "epsilon": 1,
+      "moments": {
+        "D1": 0,
+        "D2": 0,
+        "K1": 0,
+        "D1chi": 0,
+        "K1chi": 0
+      }
+    },
+    {
+      "root": 1,
+      "edges": [
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "coefficient": -1,
+      "signed_root_counts": {
+        "1": 6,
+        "2": -6,
+        "3": -2,
+        "4": 2,
+        "5": -2,
+        "6": 2,
+        "7": -2,
+        "8": 2
+      },
+      "score": "3900",
+      "kappa": {
+        "1": 2,
+        "2": 2,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0
+      },
+      "epsilon": 1,
+      "moments": {
+        "D1": -96,
+        "D2": 96,
+        "K1": -320,
+        "D1chi": -192,
+        "K1chi": -832
+      }
+    }
+  ],
+  "scope": "The six individual kernels have an exact rational identity for every generic frequency. Full label symmetrization preserves it. Q_* assigns a nonzero value to that identity, so this formula cannot define a linear separator on the actual rational-function space. This does not refute the perfect-matching separator conjecture or the unrestricted exponential lower bound.",
+  "seconds": 0.1001731540018227
+}

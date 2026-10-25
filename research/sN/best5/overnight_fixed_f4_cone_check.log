@@ -1,0 +1,151 @@
+{
+  "checker_sha256": "dcfa235f4ffb9287d58b336257f07e06d26fb3ea0767d42859abdafa7a112efd",
+  "function": "sum of the four dominant transforms and the balanced transform, minus q",
+  "max_ray_value": "1",
+  "negative_function": 45,
+  "no_nonnegative_coefficient_reason": "The unique global zero relation has coefficient+1 at the negative base term and-1 at a zero coefficient. A nonnegative representative would require its scalar t>=1 and t<=0.",
+  "nonzero_ray_pairs": 120,
+  "opposite_kernel_zero_coefficient_function": 1,
+  "positive_frame_rows_twice": [
+    [
+      [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        -1
+      ]
+    ]
+  ],
+  "positive_functions": [
+    47,
+    34,
+    30,
+    29,
+    37
+  ],
+  "rays": 240,
+  "scope": "Nonnegative function in the48-q span with no nonnegative coefficient representative. This alone does not establish a shallow outer-ReLU fold.",
+  "status": "PASS_EXACT_F4_NONNEGATIVE_CONE_COUNTEREXAMPLE"
+}

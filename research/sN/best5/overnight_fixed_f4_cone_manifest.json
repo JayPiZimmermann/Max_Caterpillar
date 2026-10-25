@@ -1,0 +1,14 @@
+{
+  "dependency_proof": "overnight_fixed_f4_signed.md",
+  "files": {
+    "overnight_fixed_f4_cone.md": "271fe07ed6b32cf2dd09b94020af0a5061cbc8274e0665be25534d71d0385217",
+    "overnight_fixed_f4_cone_check.json": "b0a829fd14a23a7565da8c4fca32d16f27d23044b4f6936f12b3eb5020dc5c6a",
+    "overnight_fixed_f4_cone_check.log": "b0a829fd14a23a7565da8c4fca32d16f27d23044b4f6936f12b3eb5020dc5c6a",
+    "overnight_fixed_f4_cone_verify.py": "dcfa235f4ffb9287d58b336257f07e06d26fb3ea0767d42859abdafa7a112efd",
+    "overnight_fixed_f4_signed_candidate.json": "b87a754d4bfd6cf9098cc2b2fd3d1d581ef28da6032c4b1d978ae372b8e8f0b0",
+    "overnight_fixed_f4_signed_candidate.log": "b87a754d4bfd6cf9098cc2b2fd3d1d581ef28da6032c4b1d978ae372b8e8f0b0",
+    "overnight_fixed_f4_signed_candidate.py": "f1869ad3b36c7c478356dc6f6578f5c49a95c4680d0ef7b48d19ce4a30a58ef2"
+  },
+  "scope": "Nonnegative signed six-term state has no nonnegative coefficient representative; not a network construction.",
+  "status": "FROZEN_EXACT_F4_CONE_SATURATION_COUNTEREXAMPLE"
+}

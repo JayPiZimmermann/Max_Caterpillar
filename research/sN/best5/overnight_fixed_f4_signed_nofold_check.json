@@ -1,0 +1,84 @@
+{
+  "boundary_derivatives": [
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2"
+  ],
+  "boundary_positive_directions_in_coordinate4": [
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1
+  ],
+  "checker_sha256": "fb2789fef180abc1c79b4ecad1a8c45a4bb7b1bf1a90020a24735b90ef30aae9",
+  "feature_identity_coefficients": [
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    1,
+    -1
+  ],
+  "points": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      -1,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      2,
+      1
+    ],
+    [
+      -1,
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      0,
+      2,
+      1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      2
+    ],
+    [
+      -1,
+      -1,
+      3,
+      1
+    ]
+  ],
+  "potential_walls": 24,
+  "scope": "Together with the analytic classification of hyperplanes in the zero set, this excludes every finite shallow preactivation, with arbitrary real directions and biases.",
+  "status": "PASS_EXACT_SIGNED_F4_SEVEN_POINT_NO_FOLD",
+  "target_values": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1"
+  ]
+}
