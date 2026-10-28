@@ -1,0 +1,1 @@
+{"flats": [23750, 24007, 32510], "lp": [22949, 12756, 10193, 0], "seconds": 67.78682997600117, "signs": [-1, 1, 1], "stats": {"nodes": 21803, "strict_prunes": 800}, "status": "CHAMBER_EXCLUDED", "trust": "exact arithmetic search plus full-dimensional closure argument; no independent checker yet"}

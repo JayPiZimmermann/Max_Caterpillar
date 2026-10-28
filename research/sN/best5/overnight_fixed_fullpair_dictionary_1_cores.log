@@ -1,0 +1,3 @@
+{"stage": "CORES_READY", "cores": 2, "noncrossing_forms": 45, "seconds": 0.1887862329967902}
+{"stage": "REFINEMENT", "core": 0, "cases": 2, "found": false, "seconds": 0.9006187449995195}
+{"status": "FINITE_CORE_PATTERN_SEARCH_INCOMPLETE", "total_cores": 2, "seconds": 1.576910306001082, "producer_sha256": "214871f214c3d6335ae4ef471a61fa3d83e3578afba71cffe4931dfa547f9891"}

@@ -1,0 +1,45 @@
+{
+  "edges": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "forms": 37969,
+  "iterations": 1477,
+  "kink_rows": 17652,
+  "positive_control": {
+    "cones": 120,
+    "rays": 30,
+    "status": "EXACT_KNOWN_FIXED10_BRAID_CONTROL_PASS"
+  },
+  "producer_sha256": "03d8fe7236cbf82765fc11f3ef4c2a3ed870b196af0b0349f089558f94231093",
+  "residual_l2": 0.09137234172528405,
+  "residual_max": 0.008348904840409843,
+  "seconds": 31.30654438300553,
+  "status": "NUMERICAL_RESIDUAL"
+}

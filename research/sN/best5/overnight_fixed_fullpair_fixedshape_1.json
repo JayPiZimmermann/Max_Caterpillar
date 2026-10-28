@@ -1,0 +1,17 @@
+{
+  "bound": 8,
+  "constraints": 6146,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "positive_control": {
+    "constraints": 6776,
+    "solver_status": 0,
+    "status": "FIXED_NONTRIVIAL_THREE_CORE_CONTROL_PASS",
+    "variables": 901
+  },
+  "producer_sha256": "6181b3bbc489898c579683e75a54d5145cbd14058e18c92a88947a8287530c83",
+  "quadruple_values_zero": true,
+  "seconds": 180.19862933400145,
+  "solver_status": 1,
+  "status": "FIXED_SHAPE_CONSTRUCTION_SEARCH_INCOMPLETE",
+  "variables": 869
+}

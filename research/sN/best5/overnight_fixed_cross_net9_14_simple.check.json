@@ -1,0 +1,11 @@
+{
+  "N": 5,
+  "braid_cones": 120,
+  "cancelled_interior_hyperplane_groups": 8,
+  "checker_sha256": "0a1fbec1f71e25aed99a03ca3627a71485f6a3e967ee5ddc2ab414c33112987d",
+  "h1": 9,
+  "h2": 14,
+  "network_sha256": "2f7e9447cd1a9e0ca1065682d172ee1a3bf7c4df00f06c2aaf30fa73a641d2c2",
+  "seconds": 0.11566930700064404,
+  "status": "INDEPENDENT_EXACT_GLOBAL_COMPARISON_NETWORK_PASS"
+}

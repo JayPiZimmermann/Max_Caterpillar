@@ -1,0 +1,55 @@
+/home/jzimmermann/code/Max_Caterpillar/research/sN/best5/overnight_fixed_cross_correction_mip.py:65: RuntimeWarning: Unrecognized options detected: {'threads'}. These will be passed to HiGHS verbatim.
+  result=milp(c=np.r_[np.zeros(nb),np.ones(ng)],integrality=np.r_[np.zeros(nb,dtype=int),np.ones(ng,dtype=int)],
+Running HiGHS 1.12.0 (git hash: 4f96ee8): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP has 28039 rows; 5100 cols; 76613 nonzeros; 634 integer variables (634 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 8e+00]
+  Cost    [1e+00, 1e+00]
+  Bound   [1e+00, 8e+00]
+  RHS     [1e+00, 1e+01]
+Presolving model
+6956 rows, 2812 cols, 32575 nonzeros  0s
+5113 rows, 2590 cols, 27168 nonzeros  0s
+3343 rows, 2390 cols, 21377 nonzeros  0s
+3293 rows, 2366 cols, 21212 nonzeros  0s
+Presolve reductions: rows 3293(-24746); columns 2366(-2734); nonzeros 21212(-55401) 
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   3293 rows
+   2366 cols (546 binary, 0 integer, 0 implied int., 1820 continuous, 0 domain fixed)
+   21212 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   1               inf                  inf        0      0      0         0     0.4s
+         0       0         0   0.00%   1.53125         inf                  inf        0      0      0       493     0.4s
+ R       0       0         0   0.00%   8.03125         9                 10.76%      122     13      0       525     0.6s
+         1       0         1 100.00%   8.03125         9                 10.76%       94     13      0       525     0.6s
+
+Solving report
+  Status            Optimal
+  Primal bound      9
+  Dual bound        9
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0.000424544844362
+  Solution status   feasible
+                    9 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.57
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     525
+                    0 (strong br.)
+                    32 (separation)
+                    0 (heuristics)
+{"bound": 8, "cap": 10, "core": 2, "correction_neurons": 9, "free_width": 12, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "patterns": 317, "producer_sha256": "ee981ec461f870ec1978901b41eb17eeb76f74e9731e35bae2fa39c29f9b4f13", "rows": 28039, "seconds": 1.3659268460032763, "solver_status": 0, "status": "NUMERICAL_CORRECTION_CANDIDATE", "variables": 5100}

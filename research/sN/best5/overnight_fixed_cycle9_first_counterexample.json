@@ -1,0 +1,1 @@
+{"counterexample": {"braid_cone": [1, 0, 2, 3, 4], "network_value": "77233/15408", "point": ["771/214", "1199/214", "557/214", "343/214", "0"], "source": "UNCANCELLED_INTERIOR_WALL", "target_value": "1199/214"}, "global_check": null}

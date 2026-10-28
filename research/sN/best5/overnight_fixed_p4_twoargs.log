@@ -1,0 +1,10 @@
+{
+  "coefficient_bound": 16,
+  "feature_points": 303,
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "producer_sha256": "50c0c7ca70b310694b299bb97806d94557e52035c475dccc4279eb323d539220",
+  "scope": "Only the family with two fixed symmetric half-weight terms and two freely varied comparison forms; unsuccessful bounded search is not a mathematical exclusion.",
+  "seconds": 2.4609112920006737,
+  "solver_status": 2,
+  "status": "BOUNDED_CONTINUOUS_TWO_ARGUMENT_DIAGNOSTIC"
+}

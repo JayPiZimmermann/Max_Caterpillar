@@ -1,0 +1,89 @@
+{
+  "status": "EXACT_RESIDUE_DICTIONARY_FOR_ENDPOINT_Q2_PROPOSAL",
+  "subset_size": 1,
+  "relation": {
+    "8271": 2,
+    "0": -3,
+    "1": -2,
+    "5": 5,
+    "512": 4,
+    "513": 2,
+    "516": 2,
+    "517": -6,
+    "1216": -1,
+    "1217": -2,
+    "1220": 1,
+    "1472": 6,
+    "1473": 2,
+    "1476": 2,
+    "1477": -10,
+    "2492": -4,
+    "2493": -2,
+    "2495": -2,
+    "2496": 6,
+    "3204": -3,
+    "3205": -2,
+    "3207": 5,
+    "3696": 2,
+    "3697": 2,
+    "3701": -4,
+    "4229": -2,
+    "4640": -2,
+    "4641": -2,
+    "4643": -2,
+    "4644": 4,
+    "5924": -2,
+    "5925": -2,
+    "5927": 4,
+    "6855": 2,
+    "7139": 2,
+    "7625": 2
+  },
+  "proposal_score_pairing": "-448",
+  "full_permutation_terms": 5281920,
+  "linear_forms": 1107,
+  "surviving_records": 614880,
+  "dictionary_cancels": false,
+  "coefficient_common_scale": 1048576,
+  "progress": [
+    {
+      "units": 6,
+      "terms": 685440,
+      "raw_records": 171360,
+      "seconds": 5.594197343001724
+    },
+    {
+      "units": 12,
+      "terms": 1532160,
+      "raw_records": 332640,
+      "seconds": 9.16242072100431
+    },
+    {
+      "units": 18,
+      "terms": 2378880,
+      "raw_records": 453600,
+      "seconds": 12.696435097001086
+    },
+    {
+      "units": 24,
+      "terms": 3265920,
+      "raw_records": 655200,
+      "seconds": 16.479802876005124
+    },
+    {
+      "units": 30,
+      "terms": 4193280,
+      "raw_records": 816480,
+      "seconds": 20.3765528369986
+    },
+    {
+      "units": 36,
+      "terms": 5281920,
+      "raw_records": 876960,
+      "seconds": 24.891834111003845
+    }
+  ],
+  "seconds": 25.054244077000476,
+  "producer_sha256": "f54e5a54763dfec96ff978c0b475dbe94d3fb1f042c9ab466236b47d26be0f1e",
+  "scope": "An empty dictionary proves this full ordinary-cut residue is zero. A nonempty dictionary requires additional exact circuit reduction; no Q2 refutation or proof is inferred."
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_linear_groups.py",
+    "7",
+    "modular"
+  ],
+  "started_utc": "2026-10-24T21:28:43.793025+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_modular_group_7.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.2697632729978068,
+  "finished_utc": "2026-10-24T21:28:44.062788+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "assertions": 1116,
+  "boolean_variables": 860,
+  "budget_seconds": 120,
+  "cells": 30,
+  "comparison_edges": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "mode": "p3",
+  "orientation_index": 2,
+  "producer_sha256": "0e3bf9a42461867fdb7e81bf3e83360e1d7d0ae4b8da85883e29e89158029ec5",
+  "real_variables": 30,
+  "scope": "Constructive four-free-term core using five C5 comparison functions and the linear form x2\u2212x0; physical first layer has four coordinate-anchor rows. Unbounded real coefficients; arbitrary target-wall groups; pairs and2:1 merges only. No lower carrier bridge is claimed. Only independently globally checked SAT networks are constructions.",
+  "seconds": 13.218272557998716,
+  "smt_sha256": "9b9dbacd0ce946bad485bae06a5d11614612e364ef21e2c4aa97d6d83efd7b8e",
+  "statistics": "(:added-eqs                   602349\n :arith-bound-propagations-lp 1003166\n :arith-conflicts             1050\n :arith-fixed-eqs             257495\n :arith-lower                 992268\n :arith-make-feasible         15283\n :arith-max-columns           4457\n :arith-max-rows              2396\n :arith-offset-eqs            207888\n :arith-upper                 965237\n :binary-propagations         2122660\n :conflicts                   2610\n :decisions                   5559\n :del-clause                  2517\n :max-memory                  103.64\n :memory                      30.19\n :minimized-lits              32500\n :mk-bool-var                 10112\n :mk-clause                   2663\n :mk-clause-binary            19839\n :num-allocs                  1642936577\n :num-checks                  1\n :pb-conflicts                297\n :pb-predicates               360\n :pb-propagations             43544\n :pb-resolves                 295\n :propagations                2150416\n :restarts                    13\n :rlimit-count                26987959\n :time                        12.49)",
+  "status": "unsat",
+  "z3_version": "5.3.1"
+}

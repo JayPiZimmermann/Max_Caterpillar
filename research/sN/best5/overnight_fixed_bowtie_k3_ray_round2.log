@@ -1,0 +1,2 @@
+{"processed": 50, "counts": {"RAY_SIGN_EXCLUDED": 50}, "latest": {"flats": [24262, 32199, 32510], "signs": [-1, 1, 1], "status": "RAY_SIGN_EXCLUDED", "nodes": 83, "seconds": 0.13400522299707518}, "seconds": 378.0221484449976}
+{"status": "BATCH_COMPLETE", "processed": 61, "counts": {"RAY_SIGN_EXCLUDED": 61}, "seconds": 416.2820524969975}

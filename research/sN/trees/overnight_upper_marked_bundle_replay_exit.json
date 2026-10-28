@@ -1,0 +1,16 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_marked_bundle.py",
+    "--replay"
+  ],
+  "started_utc": "2026-10-25T02:16:52.732684+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_marked_bundle_replay.log",
+  "returncode": 1,
+  "timed_out": false,
+  "elapsed_seconds": 6.746904441002698,
+  "finished_utc": "2026-10-25T02:16:59.479589+00:00"
+}

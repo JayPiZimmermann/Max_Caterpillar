@@ -1,0 +1,104 @@
+{
+  "producer_sha256": "214871f214c3d6335ae4ef471a61fa3d83e3578afba71cffe4931dfa547f9891",
+  "records": [
+    {
+      "core": 0,
+      "equations": 273,
+      "free_width": 3,
+      "indices": [
+        22,
+        106,
+        95
+      ],
+      "inequalities": 130,
+      "initial_coverage": 20,
+      "keep": [
+        0,
+        1,
+        2
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "weights": [
+        "1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "core": 0,
+      "equations": 273,
+      "free_width": 3,
+      "indices": [
+        22,
+        106,
+        95
+      ],
+      "inequalities": 130,
+      "initial_coverage": 20,
+      "keep": [
+        0,
+        1,
+        2
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "weights": [
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "core": 1,
+      "equations": 299,
+      "free_width": 3,
+      "indices": [
+        111,
+        143,
+        99
+      ],
+      "inequalities": 128,
+      "initial_coverage": 12,
+      "keep": [
+        0,
+        1,
+        2
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "weights": [
+        "1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "core": 1,
+      "equations": 299,
+      "free_width": 3,
+      "indices": [
+        111,
+        143,
+        99
+      ],
+      "inequalities": 128,
+      "initial_coverage": 12,
+      "keep": [
+        0,
+        1,
+        2
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "weights": [
+        "-1",
+        "-1",
+        "1"
+      ]
+    }
+  ],
+  "seconds": 1.576910306001082,
+  "status": "FINITE_CORE_PATTERN_SEARCH_INCOMPLETE",
+  "total_cores": 2
+}

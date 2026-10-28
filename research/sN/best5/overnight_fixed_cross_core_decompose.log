@@ -1,0 +1,4 @@
+{"check": {"cones": 120, "curvature_groups": 8, "rays": 30}, "core": 0, "iteration": 0, "seconds": 0.20062945199606474, "status": "EXACT_GLOBAL_BRAID_PASS", "width": 14}
+{"check": {"cones": 120, "curvature_groups": 8, "rays": 30}, "core": 0, "iteration": 2, "seconds": 0.4204448960008449, "status": "EXACT_GLOBAL_BRAID_PASS", "width": 13}
+{"check": {"cones": 120, "curvature_groups": 8, "rays": 30}, "core": 0, "iteration": 19, "seconds": 1.820457121997606, "status": "EXACT_GLOBAL_BRAID_PASS", "width": 12}
+{"status": "EXACT_CORE_CORRECTION_SEARCH_COMPLETE", "best_free_width": 12, "seconds": 5.014380021995748, "producer_sha256": "935ec55c441770f9ec6c29cd00097feea6f451f285f71e889d8da9556c8d6396"}

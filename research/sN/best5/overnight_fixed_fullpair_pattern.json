@@ -1,0 +1,58 @@
+{
+  "positive_control": {
+    "N": 5,
+    "braid_cones": 120,
+    "cancelled_interior_hyperplane_groups": 32,
+    "checker_sha256": "0a1fbec1f71e25aed99a03ca3627a71485f6a3e967ee5ddc2ab414c33112987d",
+    "h1": 16,
+    "h2": 6,
+    "network_sha256": "c86c5ec36e0d9b9618454c3b77e0322adfeb3963cf2688a4eb164c72e60abc11",
+    "seconds": 0.05991351100237807,
+    "status": "INDEPENDENT_EXACT_GLOBAL_COMPARISON_NETWORK_PASS"
+  },
+  "producer_sha256": "c875403a66eb27ff230b8c9f53585b586b15e2b9dfc1f65ee0181043d00dd4ee",
+  "records": [
+    {
+      "core": 0,
+      "equations": 198,
+      "free_width": 3,
+      "inequalities": 117,
+      "keep": [
+        0,
+        1,
+        2
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2
+    },
+    {
+      "core": 1,
+      "equations": 209,
+      "free_width": 3,
+      "inequalities": 117,
+      "keep": [
+        0,
+        1,
+        2
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2
+    },
+    {
+      "core": 2,
+      "equations": 202,
+      "free_width": 3,
+      "inequalities": 117,
+      "keep": [
+        0,
+        1,
+        2
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2
+    }
+  ],
+  "scope": "Only three chosen cancellation patterns; negative results imply no general lower bound",
+  "seconds": 1.7937586010011728,
+  "status": "FULLPAIR_CORE_PATTERN_SEARCH_INCOMPLETE"
+}

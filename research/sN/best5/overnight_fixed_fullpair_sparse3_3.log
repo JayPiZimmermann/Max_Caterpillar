@@ -1,0 +1,2 @@
+{"stage": "MATRIX_READY", "forms": 2973, "equations": 11192, "seconds": 2.2406135970013565}
+{"bound": 3, "equations": 11192, "forms": 2973, "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)", "output_bound": 8, "positive_control": "KNOWN_FOUR_TERM_IDENTITY_EXACT_ROW_PASS", "producer_sha256": "73caccdee6e12de7e79d1cb6e76312ce7db408eddb24841b98c45d2402f1fd31", "seconds": 3.440494321999722, "solver_status": 2, "status": "FINITE_SPARSE_RAY_DICTIONARY_SEARCH", "support": 3}

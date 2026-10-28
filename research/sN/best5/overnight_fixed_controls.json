@@ -1,0 +1,20 @@
+{
+  "compressed_equations": 16,
+  "direct_equations": 26,
+  "flats": [
+    32510,
+    31942,
+    32199,
+    32199
+  ],
+  "network_sha256": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+  "ray_strengthened_equations": 38,
+  "scope": "instrument positive control; global construction was already independently certified",
+  "signs": [
+    1,
+    -1,
+    1,
+    1
+  ],
+  "status": "EXACT_K4_POSITIVE_CONTROL_PASS"
+}

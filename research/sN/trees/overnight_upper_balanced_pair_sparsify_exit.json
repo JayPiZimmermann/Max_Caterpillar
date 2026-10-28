@@ -1,0 +1,18 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_pair_sparsify.py",
+    "balanced",
+    "2",
+    "10000"
+  ],
+  "started_utc": "2026-10-24T22:17:21.165271+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_balanced_pair_sparsify.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 41.03750874999969,
+  "finished_utc": "2026-10-24T22:18:02.202779+00:00"
+}

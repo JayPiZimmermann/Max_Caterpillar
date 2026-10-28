@@ -1,0 +1,10 @@
+{
+  "status": "FRESH_PRIME_HELDOUT_CONTROL_PASS_NOT_EXACT_CERTIFICATE",
+  "prime": 1000000097,
+  "rows": 64,
+  "source_sha256": "cf91e207405bae3f776a5fa3e22ed156ed08f9bba16aac5d0cd20cfae2af7dc2",
+  "max_coefficient_bits": 86,
+  "common_denominator": "743355437963395145137200",
+  "max_numerator": "70748015610557162050987601",
+  "points_sha256": "80540dfbea367824d16b22763934ba1d58d5c2990a5b9363a41234f55698e9db"
+}

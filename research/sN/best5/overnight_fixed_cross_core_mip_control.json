@@ -1,0 +1,7 @@
+{
+  "control_sha256": "7280b1e649597d5b0f94a2cd8d7a1319fb9d4756a56a73bc632eea548cab427d",
+  "producer_sha256": "3756818b8e722d7ff964de5276b625f8eab9e6f5024cdd4e89fd65c298b24b84",
+  "rows": 3420,
+  "status": "EXACT_KNOWN_NETWORK_CORE_MIP_CONTROL_PASS",
+  "variables": 232
+}

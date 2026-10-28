@@ -1,0 +1,250 @@
+{
+  "absolute_bound": 16,
+  "producer_sha256": "f16aba45107552a60cee3f7835367dcaca833c109f5f858b7da714ba4e5ba0da",
+  "records": [
+    {
+      "case": 0,
+      "flats": [
+        6565,
+        16188,
+        23460,
+        23655
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 13,
+      "seconds": 0.04418690200691344,
+      "signs": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "solver_status": 2,
+      "variables": 85
+    },
+    {
+      "case": 1,
+      "flats": [
+        7271,
+        16188,
+        22565,
+        23532
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 14,
+      "seconds": 0.06486003100144444,
+      "signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 98
+    },
+    {
+      "case": 2,
+      "flats": [
+        7271,
+        16188,
+        22565,
+        23532
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 14,
+      "seconds": 0.06885936300386675,
+      "signs": [
+        1,
+        1,
+        -1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 98
+    },
+    {
+      "case": 3,
+      "flats": [
+        7271,
+        16188,
+        22565,
+        23532
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 14,
+      "seconds": 0.07276504100445891,
+      "signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 98
+    },
+    {
+      "case": 4,
+      "flats": [
+        7271,
+        16188,
+        22565,
+        23532
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 14,
+      "seconds": 0.07684179000352742,
+      "signs": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 98
+    },
+    {
+      "case": 5,
+      "flats": [
+        7783,
+        23085,
+        23532,
+        32316
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 11,
+      "seconds": 0.08457667200127617,
+      "signs": [
+        1,
+        -1,
+        1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 61
+    },
+    {
+      "case": 6,
+      "flats": [
+        15615,
+        23780,
+        23844,
+        32316
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 12,
+      "seconds": 0.09280013300303835,
+      "signs": [
+        1,
+        1,
+        -1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 72
+    },
+    {
+      "case": 7,
+      "flats": [
+        15615,
+        23780,
+        23844,
+        32316
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 12,
+      "seconds": 0.09605293800268555,
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 72
+    },
+    {
+      "case": 8,
+      "flats": [
+        23655,
+        23844,
+        30902,
+        32572
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 12,
+      "seconds": 0.10134830500464886,
+      "signs": [
+        1,
+        -1,
+        1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 66
+    },
+    {
+      "case": 9,
+      "flats": [
+        23655,
+        23844,
+        30902,
+        32572
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 12,
+      "seconds": 0.10385316600149963,
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 66
+    },
+    {
+      "case": 10,
+      "flats": [
+        23655,
+        30836,
+        31220,
+        32316
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 12,
+      "seconds": 0.12209100200561807,
+      "signs": [
+        1,
+        -1,
+        1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 64
+    },
+    {
+      "case": 11,
+      "flats": [
+        23655,
+        30836,
+        31220,
+        32316
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "parameter_dimension": 12,
+      "seconds": 0.13371758600260364,
+      "signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "solver_status": 2,
+      "variables": 64
+    }
+  ],
+  "scope": "Twelve sampled flat/sign patterns only; no negative theorem",
+  "seconds": 0.13380661100381985,
+  "status": "BOUNDED_SURVIVOR_SEARCH_COMPLETE",
+  "strict_margin": 0
+}

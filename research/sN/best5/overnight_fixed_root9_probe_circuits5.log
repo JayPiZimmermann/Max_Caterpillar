@@ -1,0 +1,13 @@
+{"case": 0, "flats": [6565, 16188, 23460, 23655], "signs": [-1, 1, 1, -1], "circuit_inequalities": 1864, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 1, "flats": [7271, 16188, 22565, 23532], "signs": [1, 1, 1, 1], "circuit_inequalities": 2632, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 2, "flats": [7271, 16188, 22565, 23532], "signs": [1, 1, -1, 1], "circuit_inequalities": 2632, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 3, "flats": [7271, 16188, 22565, 23532], "signs": [-1, 1, 1, 1], "circuit_inequalities": 2632, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 4, "flats": [7271, 16188, 22565, 23532], "signs": [-1, 1, -1, 1], "circuit_inequalities": 2632, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 5, "flats": [7783, 23085, 23532, 32316], "signs": [1, -1, 1, 1], "circuit_inequalities": 323, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 6, "flats": [15615, 23780, 23844, 32316], "signs": [1, 1, -1, 1], "circuit_inequalities": 845, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 7, "flats": [15615, 23780, 23844, 32316], "signs": [1, -1, -1, 1], "circuit_inequalities": 845, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 8, "flats": [23655, 23844, 30902, 32572], "signs": [1, -1, 1, 1], "circuit_inequalities": 780, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 9, "flats": [23655, 23844, 30902, 32572], "signs": [1, -1, -1, 1], "circuit_inequalities": 780, "status": "EXACT_CASE_EXCLUSION"}
+{"case": 10, "flats": [23655, 30836, 31220, 32316], "signs": [1, -1, 1, 1], "circuit_inequalities": 400, "status": "RELAXATION_SURVIVOR"}
+{"case": 11, "flats": [23655, 30836, 31220, 32316], "signs": [-1, -1, 1, 1], "circuit_inequalities": 400, "status": "EXACT_CASE_EXCLUSION"}
+{"status": "SAMPLED_SHORT_CIRCUIT_CHECK_COMPLETE", "exact_exclusions": 11, "sampled_cases": 12, "maximum_circuit_size": 5, "seconds": 1.4693431859996053, "producer_sha256": "eb3263e0fc9e4d2b90595aae022a633fbf9eaaef995a4462089d385c778ca593", "scope": "Only the twelve reported sampled K4 cases; not the complete K4 domain"}

@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "global_check": null,
+      "mode": "p4",
+      "seconds": 122.17723296600161,
+      "status": "unknown"
+    },
+    {
+      "global_check": null,
+      "mode": "p2",
+      "seconds": 123.31758781700046,
+      "status": "unknown"
+    },
+    {
+      "global_check": null,
+      "mode": "p5",
+      "seconds": 0.6981017799989786,
+      "status": "unsat"
+    },
+    {
+      "global_check": null,
+      "mode": "p1",
+      "seconds": 4.873229403005098,
+      "status": "unsat"
+    }
+  ],
+  "seconds": 251.5792322039997
+}

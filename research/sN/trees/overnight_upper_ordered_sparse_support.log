@@ -1,0 +1,12 @@
+NC COCYCLES {'k': 2, 'q': 3, 'noncrossing_source': 0, 'noncrossing_target': 3, 'all_target': 3, 'noncrossing_cycles': 0, 'ranks': [0, 0]}
+NC COCYCLES {'k': 2, 'q': 4, 'noncrossing_source': 3, 'noncrossing_target': 2, 'all_target': 3, 'noncrossing_cycles': 2, 'ranks': [3, 3]}
+NC COCYCLES {'k': 3, 'q': 3, 'noncrossing_source': 0, 'noncrossing_target': 1, 'all_target': 1, 'noncrossing_cycles': 0, 'ranks': [0, 0]}
+NC COCYCLES {'k': 3, 'q': 4, 'noncrossing_source': 1, 'noncrossing_target': 12, 'all_target': 16, 'noncrossing_cycles': 0, 'ranks': [1, 1]}
+NC COCYCLES {'k': 3, 'q': 5, 'noncrossing_source': 12, 'noncrossing_target': 15, 'all_target': 30, 'noncrossing_cycles': 4, 'ranks': [12, 15]}
+NC COCYCLES {'k': 3, 'q': 6, 'noncrossing_source': 15, 'noncrossing_target': 5, 'all_target': 15, 'noncrossing_cycles': 5, 'ranks': [11, 11]}
+NC COCYCLES {'k': 4, 'q': 4, 'noncrossing_source': 0, 'noncrossing_target': 9, 'all_target': 15, 'noncrossing_cycles': 0, 'ranks': [0, 0]}
+NC COCYCLES {'k': 4, 'q': 5, 'noncrossing_source': 9, 'noncrossing_target': 60, 'all_target': 135, 'noncrossing_cycles': 0, 'ranks': [9, 9]}
+NC COCYCLES {'k': 4, 'q': 6, 'noncrossing_source': 60, 'noncrossing_target': 99, 'all_target': 330, 'noncrossing_cycles': 0, 'ranks': [60, 60]}
+NC COCYCLES {'k': 4, 'q': 7, 'noncrossing_source': 99, 'noncrossing_target': 63, 'all_target': 315, 'noncrossing_cycles': 21, 'ranks': [99, 106]}
+NC COCYCLES {'k': 4, 'q': 8, 'noncrossing_source': 63, 'noncrossing_target': 14, 'all_target': 105, 'noncrossing_cycles': 14, 'ranks': [42, 42]}
+COMPLETE 0.18913521699869307 FIRST OBSTRUCTION (3, 5)

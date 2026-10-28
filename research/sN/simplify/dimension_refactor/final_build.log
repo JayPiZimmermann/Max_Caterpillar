@@ -1,0 +1,4 @@
+MaxCaterpillar/Dimension.lean:290:6: error: omega did not find a contradiction:
+[1] ∈ [1, ∞)
+Command exited with non-zero status 1
+4.99 seconds; 2181004 KB

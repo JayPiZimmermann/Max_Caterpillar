@@ -1,0 +1,39 @@
+{
+  "assertions": 1356,
+  "boolean_variables": 1100,
+  "budget_seconds": 120,
+  "cells": 30,
+  "comparison_edges": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "mode": "p3",
+  "orientation_index": 2,
+  "producer_sha256": "58a24ed3c50a7fdbfedf0b2829649b57d84fd8aac580a8d6204b19ad8a3d2de6",
+  "real_variables": 30,
+  "reason_unknown": "timeout",
+  "scope": "Constructive four-free-term core using five C5 comparison functions and the linear form x2\u2212x0; physical first layer has four coordinate-anchor rows. Unbounded real coefficients; arbitrary target-wall groups; arbitrary signed-group linear relaxation. Collinearity/common orientation are omitted and independently diagnosed. No lower carrier bridge is claimed. Only independently globally checked SAT networks are constructions.",
+  "seconds": 121.46611401900009,
+  "smt_sha256": "526abb5791880401ffca371dba33b76f68b95721d986574de432afef7efc8028",
+  "statistics": "(:added-eqs                   4500990\n :arith-bound-propagations-lp 7633806\n :arith-conflicts             4852\n :arith-fixed-eqs             2313212\n :arith-lower                 7091722\n :arith-make-feasible         72297\n :arith-max-columns           6711\n :arith-max-rows              3583\n :arith-offset-eqs            1654911\n :arith-upper                 7079231\n :binary-propagations         13416368\n :conflicts                   10343\n :decisions                   27763\n :del-clause                  6278\n :max-memory                  260.20\n :memory                      32.47\n :minimized-lits              292798\n :mk-bool-var                 14860\n :mk-clause                   10227\n :mk-clause-binary            25711\n :num-allocs                  52014931761.00\n :num-checks                  1\n :pb-conflicts                781\n :pb-predicates               360\n :pb-propagations             182775\n :pb-resolves                 775\n :propagations                13581398\n :restarts                    25\n :rlimit-count                167278514\n :time                        120.02)",
+  "status": "unknown",
+  "z3_version": "5.3.1"
+}

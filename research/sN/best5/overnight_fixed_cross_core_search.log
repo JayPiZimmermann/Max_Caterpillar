@@ -1,0 +1,9 @@
+{"iteration": 7, "cores": 1, "free_width": 3, "status": 2, "seconds": 13.792824408999877}
+{"iteration": 11, "cores": 2, "free_width": 4, "status": 2, "seconds": 20.302209260997188}
+{"iteration": 23, "cores": 3, "free_width": 4, "status": 2, "seconds": 39.079657035996206}
+{"iteration": 43, "cores": 4, "free_width": 4, "status": 2, "seconds": 72.01921652099554}
+{"iteration": 47, "cores": 5, "free_width": 4, "status": 2, "seconds": 77.94940500200028}
+{"iteration": 55, "cores": 6, "free_width": 4, "status": 2, "seconds": 90.22104330000002}
+{"iteration": 71, "cores": 7, "free_width": 3, "status": 2, "seconds": 115.1241891959944}
+{"iteration": 79, "cores": 8, "free_width": 3, "status": 2, "seconds": 127.56455411199568}
+{"status": "CORE_PATTERN_BATCH_COMPLETE", "seconds": 155.71732285699545, "producer_sha256": "6b83f66e03e2b41fa2bbdcbb01015caf55dc56a568b46b791ebc235e7712488f"}

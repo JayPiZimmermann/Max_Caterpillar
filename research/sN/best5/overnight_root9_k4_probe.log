@@ -1,0 +1,9 @@
+PROBED 1000 {'rational_cone_exclusions': 995, 'unresolved_relaxations': 5}
+PROBED 2000 {'rational_cone_exclusions': 1995, 'unresolved_relaxations': 5}
+PROBED 3000 {'rational_cone_exclusions': 2994, 'unresolved_relaxations': 6}
+PROBED 4000 {'rational_cone_exclusions': 3994, 'unresolved_relaxations': 6}
+PROBED 5000 {'rational_cone_exclusions': 4994, 'unresolved_relaxations': 6}
+PROBED 6000 {'rational_cone_exclusions': 5992, 'unresolved_relaxations': 8}
+PROBED 7000 {'rational_cone_exclusions': 6992, 'unresolved_relaxations': 8}
+PROBED 8000 {'rational_cone_exclusions': 7988, 'unresolved_relaxations': 12}
+{'status': 'INCOMPLETE_K4_CONE_DIAGNOSTIC_ONLY', 'seed': 2026102517, 'sampled_quadruples': 512, 'checked_sign_cases': 8192, 'counts': {'rational_cone_exclusions': 8180, 'unresolved_relaxations': 12}, 'seconds': 28.43853820899676, 'scope': 'Samples only512 of296861 covering quadruples. A relaxation survivor is not a network or proof of feasibility.'}

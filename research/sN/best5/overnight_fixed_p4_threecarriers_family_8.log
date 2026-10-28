@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/best5/overnight_fixed_p4_threecarriers_family.py", line 81, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/best5/overnight_fixed_p4_threecarriers_family.py", line 34, in main
+    double=[c for c in cells.values()if len(c['curvature'])==2];single=[c for c in cells.values()if len(c['curvature'])==1];assert double,'no double cells: separate argument needed'
+                                                                                                                                   ^^^^^^
+AssertionError: no double cells: separate argument needed

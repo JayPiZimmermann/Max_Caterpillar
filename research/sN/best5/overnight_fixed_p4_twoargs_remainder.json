@@ -1,0 +1,10 @@
+{
+  "coefficient_bound": 16,
+  "feature_points": 303,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "producer_sha256": "9faff1a151a233770dbac8440f0f623a66fc650867ed0344b7681d60f7941dc8",
+  "scope": "Only the family with two fixed symmetric half-weight terms and two freely varied comparison forms and a free linear remainder; unsuccessful bounded search is not a mathematical exclusion.",
+  "seconds": 50.02785779899568,
+  "solver_status": 1,
+  "status": "BOUNDED_CONTINUOUS_TWO_ARGUMENT_DIAGNOSTIC"
+}

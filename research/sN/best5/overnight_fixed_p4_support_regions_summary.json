@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "clique": [
+        22,
+        40,
+        30,
+        43,
+        19
+      ],
+      "config": 2,
+      "regions": 75,
+      "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"
+    },
+    {
+      "clique": [
+        34,
+        20,
+        19,
+        47,
+        33
+      ],
+      "config": 6,
+      "regions": 79,
+      "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"
+    },
+    {
+      "clique": [
+        25,
+        43,
+        46,
+        26,
+        66
+      ],
+      "config": 10,
+      "regions": 88,
+      "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"
+    },
+    {
+      "clique": [
+        57,
+        32,
+        35,
+        15,
+        50
+      ],
+      "config": 16,
+      "regions": 78,
+      "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"
+    },
+    {
+      "clique": [
+        61,
+        23,
+        43,
+        18,
+        25
+      ],
+      "config": 18,
+      "regions": 82,
+      "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"
+    },
+    {
+      "clique": [
+        34,
+        20,
+        65,
+        66,
+        47
+      ],
+      "config": 22,
+      "regions": 86,
+      "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"
+    },
+    {
+      "clique": [
+        53,
+        73,
+        35,
+        75,
+        22
+      ],
+      "config": 24,
+      "regions": 80,
+      "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"
+    }
+  ],
+  "seconds": 9.583149790996686
+}

@@ -1,0 +1,64 @@
+{
+  "status": "EXACT_FAMILY_ENUMERATION_NO_SPAN_CLAIM",
+  "records": [
+    {
+      "nonapex_vertices": 2,
+      "old_count": 1,
+      "balanced_count": 1,
+      "union_count": 1,
+      "new_beyond_old": 0,
+      "old_beyond_balanced": 0,
+      "new_perfect_matching": 0
+    },
+    {
+      "nonapex_vertices": 3,
+      "old_count": 3,
+      "balanced_count": 3,
+      "union_count": 3,
+      "new_beyond_old": 0,
+      "old_beyond_balanced": 0,
+      "new_perfect_matching": 0
+    },
+    {
+      "nonapex_vertices": 4,
+      "old_count": 8,
+      "balanced_count": 8,
+      "union_count": 8,
+      "new_beyond_old": 0,
+      "old_beyond_balanced": 0,
+      "new_perfect_matching": 0
+    },
+    {
+      "nonapex_vertices": 5,
+      "old_count": 65,
+      "balanced_count": 70,
+      "union_count": 70,
+      "new_beyond_old": 5,
+      "old_beyond_balanced": 0,
+      "new_perfect_matching": 0
+    },
+    {
+      "nonapex_vertices": 6,
+      "old_count": 96,
+      "balanced_count": 315,
+      "union_count": 315,
+      "new_beyond_old": 219,
+      "old_beyond_balanced": 0,
+      "new_perfect_matching": 84,
+      "new_perfect_orbits": 4708,
+      "new_deficient_orbits": 7566,
+      "all_balanced_orbits": 17666
+    },
+    {
+      "nonapex_vertices": 7,
+      "old_count": 980,
+      "balanced_count": 980,
+      "union_count": 980,
+      "new_beyond_old": 0,
+      "old_beyond_balanced": 0,
+      "new_perfect_matching": 0
+    }
+  ],
+  "elapsed_seconds": 3.7756079320024583,
+  "generator_sha256": "e7260f204628c4b29e430504a3afa93e113cd7553f1103889651effd7d996fa5"
+}

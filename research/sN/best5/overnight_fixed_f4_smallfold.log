@@ -1,0 +1,14 @@
+{
+  "bounds": {
+    "max_selected_copies": 6,
+    "max_weight": 20,
+    "min_preactivation_on_rays": -200
+  },
+  "constraints": 2017,
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "producer_sha256": "d7164ccddbc4e9b72a90da9102cd35ba4d3d66046d673f3f6c2c62d4d0feb6ee",
+  "seconds": 0.18534092299523763,
+  "solver_status": 2,
+  "status": "BOUNDED_SMALL_FOLD_DIAGNOSTIC",
+  "variables": 124
+}

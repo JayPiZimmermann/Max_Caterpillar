@@ -1,0 +1,21 @@
+{"flats": [19649, 24006, 32510], "signs": [1, 1, 1], "nodes": 7, "status": "NO_RATIONAL_WITNESS", "seconds": 0.04117023799699382}
+{"flats": [19649, 24006, 32510], "signs": [-1, 1, 1], "nodes": 7, "status": "NO_RATIONAL_WITNESS", "seconds": 0.028512662000139244}
+{"flats": [19649, 24014, 32510], "signs": [1, 1, 1], "nodes": 15, "status": "NO_RATIONAL_WITNESS", "seconds": 0.0602354379989265}
+{"flats": [19649, 24014, 32510], "signs": [-1, 1, 1], "nodes": 15, "status": "NO_RATIONAL_WITNESS", "seconds": 0.08584779699958744}
+{"flats": [19649, 24022, 32510], "signs": [1, 1, 1], "nodes": 15, "status": "NO_RATIONAL_WITNESS", "seconds": 0.04609959899971727}
+{"flats": [19649, 24022, 32510], "signs": [-1, 1, 1], "nodes": 15, "status": "NO_RATIONAL_WITNESS", "seconds": 0.04397635200075456}
+{"flats": [19649, 24030, 32510], "signs": [1, 1, 1], "nodes": 31, "status": "NO_RATIONAL_WITNESS", "seconds": 0.0725734920015384}
+{"flats": [19649, 24030, 32510], "signs": [-1, 1, 1], "nodes": 31, "status": "NO_RATIONAL_WITNESS", "seconds": 0.07103647999974783}
+{"flats": [19649, 24038, 28408], "signs": [1, 1, 1], "nodes": 255, "status": "NO_RATIONAL_WITNESS", "seconds": 0.4438212770000973}
+{"flats": [19649, 24038, 28408], "signs": [-1, 1, 1], "nodes": 383, "status": "NO_RATIONAL_WITNESS", "seconds": 0.7955127530003665}
+{"flats": [19649, 24046, 28408], "signs": [1, 1, 1], "nodes": 2047, "status": "NO_RATIONAL_WITNESS", "seconds": 3.925776849999238}
+{"flats": [19649, 24046, 28408], "signs": [-1, 1, 1], "nodes": 2943, "status": "NO_RATIONAL_WITNESS", "seconds": 6.23967324700061}
+{"flats": [19649, 24054, 28408], "signs": [1, 1, 1], "nodes": 2047, "status": "NO_RATIONAL_WITNESS", "seconds": 3.896154984999157}
+{"flats": [19649, 24054, 28408], "signs": [-1, 1, 1], "nodes": 3455, "status": "NO_RATIONAL_WITNESS", "seconds": 7.543338153998775}
+{"flats": [19649, 24062, 28408], "signs": [1, 1, 1], "nodes": 95, "status": "NO_RATIONAL_WITNESS", "seconds": 0.19326856900079292}
+{"flats": [19649, 24062, 28408], "signs": [-1, 1, 1], "nodes": 847, "status": "NO_RATIONAL_WITNESS", "seconds": 2.773458366998966}
+{"flats": [19649, 28376, 32230], "signs": [1, 1, 1], "nodes": 3711, "status": "NO_RATIONAL_WITNESS", "seconds": 15.074067606998142}
+{"flats": [19649, 28376, 32230], "signs": [-1, 1, 1], "nodes": 5247, "status": "NO_RATIONAL_WITNESS", "seconds": 16.2093360559993}
+{"flats": [19649, 28376, 32238], "signs": [1, 1, 1], "nodes": 15, "status": "NO_RATIONAL_WITNESS", "seconds": 0.048875873999350006}
+{"flats": [19649, 28376, 32238], "signs": [-1, 1, 1], "nodes": 231, "status": "NO_RATIONAL_WITNESS", "seconds": 0.5855861480013118}
+{"status": "BATCH_COMPLETE", "processed": 20, "seconds": 58.18315136599995}

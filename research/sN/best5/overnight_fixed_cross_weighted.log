@@ -1,0 +1,4 @@
+{"check": {"cones": 120, "curvature_groups": 26, "rays": 30}, "iteration": 0, "seconds": 2.5783910239988472, "solver_status": 0, "status": "EXACT_GLOBAL_BRAID_PASS", "support": 17}
+{"check": {"cones": 120, "curvature_groups": 69, "rays": 30}, "iteration": 6, "seconds": 15.027912212004594, "solver_status": 0, "status": "EXACT_GLOBAL_BRAID_PASS", "support": 16}
+{"check": {"cones": 120, "curvature_groups": 62, "rays": 30}, "iteration": 17, "seconds": 37.893877413000155, "solver_status": 0, "status": "EXACT_GLOBAL_BRAID_PASS", "support": 15}
+{"status": "WEIGHTED_POSITIVE_SEARCH_COMPLETE", "dictionary_size": 5370, "best_free_width": 15, "seconds": 48.16250259699882, "producer_sha256": "f40c2652b95a94881e6648f07c2ad2e23ac6f2f0a7311719cae4f88398f16993"}

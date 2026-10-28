@@ -1,0 +1,11 @@
+{"orbit_key": [[0, 0, 0, 0], [0, 0, 0, 0, 1]], "orbit_size": 5, "representative": [0, 0, 0, 1, 0, 0, 0], "selected_records": 14400, "surviving_records": 1728, "dictionary_cancels": false, "largest_pole_multiplicity": 1}
+{"orbit_key": [[0, 0, 0, 0], [0, 0, 0, 1, 1]], "orbit_size": 10, "representative": [0, 0, 0, 1, 1, 0, 0], "selected_records": 4968, "surviving_records": 1584, "dictionary_cancels": false, "largest_pole_multiplicity": 1}
+{"orbit_key": [[0, 0, 0, 0], [0, 1, 1, 1, 2]], "orbit_size": 10, "representative": [0, 0, 0, 1, -1, 0, 0], "selected_records": 504, "surviving_records": 0, "dictionary_cancels": true, "largest_pole_multiplicity": 0}
+{"orbit_key": [[0, 0, 0, 1], [0, 0, 0, 0, 0]], "orbit_size": 4, "representative": [1, 0, 0, 0, 0, 0, 0], "selected_records": 15840, "surviving_records": 10920, "dictionary_cancels": false, "largest_pole_multiplicity": 1}
+{"orbit_key": [[0, 0, 0, 1], [0, 0, 0, 0, 1]], "orbit_size": 20, "representative": [1, 0, 0, 1, 0, 0, 0], "selected_records": 1728, "surviving_records": 996, "dictionary_cancels": false, "largest_pole_multiplicity": 1}
+{"orbit_key": [[0, 0, 0, 1], [0, 0, 0, 1, 1]], "orbit_size": 40, "representative": [1, 0, 0, 1, 1, 0, 0], "selected_records": 378, "surviving_records": 0, "dictionary_cancels": true, "largest_pole_multiplicity": 0}
+{"orbit_key": [[0, 0, 0, 1], [0, 0, 1, 1, 1]], "orbit_size": 40, "representative": [1, 0, 0, -1, -1, 0, 0], "selected_records": 396, "surviving_records": 0, "dictionary_cancels": true, "largest_pole_multiplicity": 0}
+{"orbit_key": [[0, 0, 0, 1], [0, 1, 1, 1, 1]], "orbit_size": 20, "representative": [1, 0, 0, -1, 0, 0, 0], "selected_records": 2124, "surviving_records": 1176, "dictionary_cancels": false, "largest_pole_multiplicity": 1}
+{"orbit_key": [[0, 0, 1, 1], [0, 0, 0, 0, 0]], "orbit_size": 3, "representative": [1, 1, 0, 0, 0, 0, 0], "selected_records": 9600, "surviving_records": 0, "dictionary_cancels": true, "largest_pole_multiplicity": 0}
+{"orbit_key": [[0, 1, 1, 2], [0, 0, 0, 0, 0]], "orbit_size": 6, "representative": [1, -1, 0, 0, 0, 0, 0], "selected_records": 2640, "surviving_records": 0, "dictionary_cancels": true, "largest_pole_multiplicity": 0}
+seconds 0.8023559939974803 unresolved children 5

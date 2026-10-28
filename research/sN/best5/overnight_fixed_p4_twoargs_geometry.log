@@ -1,0 +1,188 @@
+{
+  "L_forms": [
+    {
+      "coefficients": [
+        "1",
+        "0",
+        "1",
+        "0",
+        "-1",
+        "-1",
+        "0"
+      ],
+      "signs": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "coefficients": [
+        "-1",
+        "0",
+        "-1",
+        "0",
+        "1",
+        "1",
+        "0"
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "M_forms": [
+    {
+      "coefficients": [
+        "1/2",
+        "-1/2",
+        "1",
+        "1/2",
+        "-1/2",
+        "-1",
+        "0"
+      ],
+      "signs": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "coefficients": [
+        "-1/2",
+        "1/2",
+        "-1",
+        "-1/2",
+        "1/2",
+        "1",
+        "0"
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "L_signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "M_signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "exact_counterexample": {
+        "actual": "3",
+        "target": "4",
+        "x": [
+          "0",
+          "4",
+          "4",
+          "2",
+          "-1"
+        ]
+      },
+      "index": 0,
+      "receipt": {
+        "error": "('UNCANCELLED_INTERIOR_HYPERPLANE', (1, 0, 2, 3, 4), {(Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1)): Fraction(1, 1), (Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(2, 1), Fraction(-2, 1)): Fraction(-1, 2)})"
+      },
+      "status": "EXACT_GLOBAL_FAIL"
+    },
+    {
+      "L_signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "M_signs": [
+        1,
+        1,
+        1
+      ],
+      "exact_counterexample": {
+        "actual": "3",
+        "target": "4",
+        "x": [
+          "0",
+          "4",
+          "4",
+          "2",
+          "-1"
+        ]
+      },
+      "index": 1,
+      "receipt": {
+        "error": "('UNCANCELLED_INTERIOR_HYPERPLANE', (1, 0, 2, 3, 4), {(Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1)): Fraction(1, 1), (Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(2, 1), Fraction(-2, 1)): Fraction(-1, 2)})"
+      },
+      "status": "EXACT_GLOBAL_FAIL"
+    },
+    {
+      "L_signs": [
+        1,
+        1,
+        1
+      ],
+      "M_signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "exact_counterexample": {
+        "actual": "3",
+        "target": "4",
+        "x": [
+          "0",
+          "4",
+          "4",
+          "2",
+          "-1"
+        ]
+      },
+      "index": 2,
+      "receipt": {
+        "error": "('UNCANCELLED_INTERIOR_HYPERPLANE', (1, 0, 2, 3, 4), {(Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1)): Fraction(1, 1), (Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(2, 1), Fraction(-2, 1)): Fraction(-1, 2)})"
+      },
+      "status": "EXACT_GLOBAL_FAIL"
+    },
+    {
+      "L_signs": [
+        1,
+        1,
+        1
+      ],
+      "M_signs": [
+        1,
+        1,
+        1
+      ],
+      "exact_counterexample": {
+        "actual": "3",
+        "target": "4",
+        "x": [
+          "0",
+          "4",
+          "4",
+          "2",
+          "-1"
+        ]
+      },
+      "index": 3,
+      "receipt": {
+        "error": "('UNCANCELLED_INTERIOR_HYPERPLANE', (1, 0, 2, 3, 4), {(Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1)): Fraction(1, 1), (Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(2, 1), Fraction(-2, 1)): Fraction(-1, 2)})"
+      },
+      "status": "EXACT_GLOBAL_FAIL"
+    }
+  ],
+  "producer_sha256": "e7b54d36421077a96a03cd19c5191c400047f1b9cfc8fb53610704359b4869b1",
+  "scope": "The family with the two symmetric half-weight terms fixed, arbitrary two remaining preactivations, and arbitrary first-feature linear remainder. The geometric crease-uniqueness bridge is required for completeness.",
+  "status": "EXACT_THREE_CELL_GEOMETRY_COMPLETE"
+}

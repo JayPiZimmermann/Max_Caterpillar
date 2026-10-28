@@ -1,0 +1,364 @@
+{
+  "base_function": 45,
+  "exact_folds": [],
+  "positive_control": "EXACT_LINEAR_RELU_RAY_CONTROL_PASS",
+  "producer_sha256": "76aeb94ad98afbaaa2679fb963b72fe638a9ed0f09cfc5e361500fc0a8c28a71",
+  "raw_triples": 256,
+  "records": [
+    {
+      "case": 0,
+      "functions": [
+        45,
+        16,
+        8
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 1,
+      "functions": [
+        45,
+        16,
+        9
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 2,
+      "functions": [
+        45,
+        16,
+        11
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 3,
+      "functions": [
+        45,
+        16,
+        15
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 4,
+      "functions": [
+        45,
+        16,
+        28
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 5,
+      "functions": [
+        45,
+        16,
+        29
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 6,
+      "functions": [
+        45,
+        16,
+        31
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 7,
+      "functions": [
+        45,
+        16,
+        47
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 8,
+      "functions": [
+        45,
+        17,
+        8
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 9,
+      "functions": [
+        45,
+        17,
+        9
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 10,
+      "functions": [
+        45,
+        17,
+        28
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 11,
+      "functions": [
+        45,
+        17,
+        29
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 12,
+      "functions": [
+        45,
+        18,
+        8
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 13,
+      "functions": [
+        45,
+        18,
+        9
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 14,
+      "functions": [
+        45,
+        18,
+        12
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 15,
+      "functions": [
+        45,
+        18,
+        13
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 16,
+      "functions": [
+        45,
+        18,
+        28
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 17,
+      "functions": [
+        45,
+        18,
+        29
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 18,
+      "functions": [
+        45,
+        18,
+        34
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 19,
+      "functions": [
+        45,
+        18,
+        35
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 20,
+      "functions": [
+        45,
+        22,
+        8
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 21,
+      "functions": [
+        45,
+        22,
+        9
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 22,
+      "functions": [
+        45,
+        22,
+        10
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 23,
+      "functions": [
+        45,
+        22,
+        14
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 24,
+      "functions": [
+        45,
+        22,
+        28
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 25,
+      "functions": [
+        45,
+        22,
+        29
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 26,
+      "functions": [
+        45,
+        22,
+        30
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 27,
+      "functions": [
+        45,
+        22,
+        36
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 28,
+      "functions": [
+        45,
+        37,
+        8
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 29,
+      "functions": [
+        45,
+        37,
+        9
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 30,
+      "functions": [
+        45,
+        37,
+        28
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    },
+    {
+      "case": 31,
+      "functions": [
+        45,
+        37,
+        29
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "solver_status": 2,
+      "status": "NO_STRICT_POSITIVE_FOLD_FOUND"
+    }
+  ],
+  "seconds": 0.30878287499945145,
+  "stabilizer_orbits": 32,
+  "status": "FINITE_THREE_FRAME_FOLD_SEARCH_COMPLETE"
+}

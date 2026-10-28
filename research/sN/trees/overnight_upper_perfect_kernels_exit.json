@@ -1,0 +1,17 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_probe.py",
+    "perfect",
+    "kernels"
+  ],
+  "started_utc": "2026-10-24T21:03:00.236691+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_perfect_kernels.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 885.5926155809975,
+  "finished_utc": "2026-10-24T21:17:45.829311+00:00"
+}

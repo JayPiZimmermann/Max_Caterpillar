@@ -1,0 +1,17 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_block.py",
+    "modular",
+    "finish"
+  ],
+  "started_utc": "2026-10-24T22:29:28.227695+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_modular_block_finish.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 221.59425370100507,
+  "finished_utc": "2026-10-24T22:33:09.821947+00:00"
+}
