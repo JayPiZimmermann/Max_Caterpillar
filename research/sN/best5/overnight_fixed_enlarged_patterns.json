@@ -1,0 +1,11 @@
+{
+  "groups": 90,
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "patterns": 45,
+  "producer_sha256": "8bf55ab56a1d0678d875c9b25f2192118f046b333f597e39d224455a24a67740",
+  "rays": 350,
+  "seconds": 24.109314783003356,
+  "solver_status": 2,
+  "status": "BOUNDED_ENLARGED_PATTERN_SEARCH_INCOMPLETE",
+  "value_bound": 8
+}

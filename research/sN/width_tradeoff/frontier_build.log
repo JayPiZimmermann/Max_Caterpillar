@@ -1,0 +1,11 @@
+'MaxCaterpillar.WidthTradeoff.leastPair_iff_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.coordinate_minima' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.strictTradeoff_iff_no_leastPair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.WidthTradeoff.eventual_constant_second_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.pareto_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.pareto_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.maximum_three_leastPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.maximum_four_leastPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0

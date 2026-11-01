@@ -1,0 +1,24 @@
+{
+  "arity": 9,
+  "columns": 3822,
+  "rows": 500,
+  "prime": 1000003,
+  "outliers": 2,
+  "x_start": 20,
+  "parameter_rule": "x=20+(row mod31),y=120+floor(row/31); base=(-x-y-6,1,1,1,1,1,1,y,x)",
+  "formal_slope": [
+    -21,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0,
+    0
+  ],
+  "wall_budget_seconds": 600,
+  "status": "MODULAR_COALESCENCE_DIAGNOSTIC_CONFIGURED",
+  "source_sha256": "dd23c202f6f624d2f9d53fb6f57c6559b1170dde8f05321b755de47b92a5f61b",
+  "dag_sha256": "53336bf5c1a974a007ad8ce44dc9c8fcd7b174cad3152f01f3dd6e6d0e494989"
+}

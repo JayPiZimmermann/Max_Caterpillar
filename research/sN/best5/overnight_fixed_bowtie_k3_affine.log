@@ -1,0 +1,1 @@
+{"flats": [23750, 24007, 32510], "lp": [1657, 1402, 255, 0], "seconds": 21.427896935998433, "signs": [-1, 1, 1], "stats": {"forced_signs": 930, "group_branches": 2804, "nodes": 2805}, "status": "AFFINE_EXCLUDED", "trust": "exact affine simplification and rational Farkas pruning; no independent checker yet"}

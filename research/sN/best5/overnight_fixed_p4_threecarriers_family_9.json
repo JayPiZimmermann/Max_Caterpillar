@@ -1,0 +1,23 @@
+{
+  "certified": [],
+  "complete": true,
+  "config": 9,
+  "families": [],
+  "family_counts": [
+    0,
+    0
+  ],
+  "parameters": [
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "producer_sha256": "b8cb8570b441b5a2c9ecefe687d886636d1090af7466d1a460a1bb78818cf8e8",
+  "scope": "Only \u03c3(a-c)+\u03c3(a-d)+\u03c3(q-r) with two arbitrary negative outer units and arbitrary W7 remainder. Does not decide general five-free-term construction.",
+  "seconds": 0.11839437500020722,
+  "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE",
+  "underdetermined_pairs": 0,
+  "unique_pairs": 0
+}

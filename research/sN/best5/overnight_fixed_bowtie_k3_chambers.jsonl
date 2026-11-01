@@ -1,0 +1,1 @@
+{"status":"CHAMBER_EXCLUDED","stats":{"nodes":21803,"strict_prunes":800},"flats":[23750,24007,32510],"signs":[-1,1,1],"seconds":67.78682997600117,"lp":[22949,12756,10193,0],"trust":"exact arithmetic search plus full-dimensional closure argument; no independent checker yet"}

@@ -1,0 +1,8 @@
+'MaxCaterpillar.Frontier.OvernightGeneral.transverse_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.OvernightGeneral.normalized_three_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.OvernightGeneral.second_width_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.OvernightGeneral.network_second_width_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

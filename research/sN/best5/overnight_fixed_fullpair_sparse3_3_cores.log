@@ -1,0 +1,18 @@
+{"stage": "CORES_READY", "cores": 3409, "noncrossing_forms": 175, "seconds": 36.41486223800166}
+{"stage": "REFINEMENT", "core": 0, "cases": 2, "found": false, "seconds": 37.69425231200148}
+{"stage": "REFINEMENT", "core": 20, "cases": 42, "found": false, "seconds": 57.8995179850026}
+{"stage": "REFINEMENT", "core": 40, "cases": 82, "found": false, "seconds": 74.33890732700092}
+{"stage": "REFINEMENT", "core": 60, "cases": 122, "found": false, "seconds": 91.25700476099883}
+{"stage": "REFINEMENT", "core": 80, "cases": 162, "found": false, "seconds": 109.77130412900442}
+{"stage": "REFINEMENT", "core": 100, "cases": 202, "found": false, "seconds": 130.39712062999752}
+{"stage": "REFINEMENT", "core": 120, "cases": 242, "found": false, "seconds": 145.7054991000041}
+{"stage": "REFINEMENT", "core": 140, "cases": 282, "found": false, "seconds": 159.9300454980039}
+{"stage": "REFINEMENT", "core": 160, "cases": 322, "found": false, "seconds": 175.16306969500147}
+{"stage": "REFINEMENT", "core": 180, "cases": 362, "found": false, "seconds": 190.10471464700095}
+{"stage": "REFINEMENT", "core": 200, "cases": 402, "found": false, "seconds": 204.67811018099746}
+{"stage": "REFINEMENT", "core": 220, "cases": 442, "found": false, "seconds": 219.84700885100028}
+{"stage": "REFINEMENT", "core": 240, "cases": 482, "found": false, "seconds": 235.39537910000217}
+{"stage": "REFINEMENT", "core": 260, "cases": 522, "found": false, "seconds": 251.7212299870007}
+{"stage": "REFINEMENT", "core": 280, "cases": 562, "found": false, "seconds": 267.42946823700186}
+DECLARED_BUDGET_REACHED
+{"status": "FINITE_CORE_PATTERN_SEARCH_INCOMPLETE", "total_cores": 3409, "seconds": 276.5056821620019, "producer_sha256": "1d17bcdd9f9af1be9196311c5dafb411545866226d3e3ab086c8cc3b55cd39c6"}

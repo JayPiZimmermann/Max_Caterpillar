@@ -1,0 +1,12 @@
+{
+  "check": {
+    "cones": 120,
+    "curvature_groups": 8,
+    "rays": 30
+  },
+  "final_free_width": 12,
+  "initial_free_width": 12,
+  "seconds": 8.306284755999513,
+  "status": "EXACT_GLOBAL_MERGE_PASS",
+  "steps": []
+}

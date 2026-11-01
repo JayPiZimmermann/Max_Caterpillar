@@ -1,0 +1,1 @@
+{"status":"AFFINE_EXCLUDED","stats":{"nodes":2805,"forced_signs":930,"group_branches":2804},"flats":[23750,24007,32510],"signs":[-1,1,1],"seconds":21.427896935998433,"lp":[1657,1402,255,0],"trust":"exact affine simplification and rational Farkas pruning; no independent checker yet"}

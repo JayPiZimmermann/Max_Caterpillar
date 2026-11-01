@@ -1,0 +1,2 @@
+{"config": 6, "five_clique": [34, 20, 19, 47, 33], "incompatible_pairs": 1061, "parameters": [0, 0, -1, -1, 0], "producer_sha256": "8d1cd99e9008548b85983dedaffe9c219daebc4c4c0ab755b2028514d1a6432d", "scope": "Only the specified three positive carriers. A five-clique rules out two negative correction ReLUs even with arbitrary W7 remainder.", "seconds": 0.7423557049987721, "status": "EXACT_FIVE_SUPPORTING_PLANE_OBSTRUCTION"}
+COUNTS 79 21

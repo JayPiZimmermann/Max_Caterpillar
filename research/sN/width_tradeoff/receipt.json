@@ -1,0 +1,325 @@
+{
+  "scope": "Local research proof leaves and exact-type/axiom audit; not the public verification certificate",
+  "base_commit": "78288c66acae572d8eb3a35b1015e84cb6da41cb",
+  "sources": {
+    "research/sN/width_tradeoff/AuditExisting.lean": "4ef392351bd1fe878961f80e5d0b7d9e48a3de743fbc8f2142f1bc76bca4fe0a",
+    "research/sN/width_tradeoff/AuditTent.lean": "1e33ac75f2e3d815f6f5776ef86d1f7ce010a65725b9432362657f9d812834dd",
+    "research/sN/width_tradeoff/Checks.lean": "bfd39d90400d0a9a7ebddcf05c89e2b4985a3fd3e3f741b61628711beb367d36",
+    "research/sN/width_tradeoff/Frontier.lean": "951dfd979a41b2f49c37a94fbec3750cdd7f5a67e947852e3e862e6c3060ecd2",
+    "research/sN/width_tradeoff/LowerFirst.lean": "4aa4f57ab72d584ae2b7520929c02422d50933d528ece1b5dfd7b0df01a14236",
+    "research/sN/width_tradeoff/LowerTransverse.lean": "16235493fc530ee63956478239aa7d31af98c40497f82fde698ec92c5ae7baa3",
+    "research/sN/width_tradeoff/UpperMax5.lean": "0fbba882e1c255b4509553cb31fa06833951357984f8b5870dc7642d66c28f34",
+    "research/sN/width_tradeoff/UpperNineCells0.lean": "42d268f90685009ba3eb314016f47029379e0620ac89b3a228ac219e391b7b04",
+    "research/sN/width_tradeoff/UpperNineCells1.lean": "2da53030a3f3f9949679a7df15dd8d10065e36d9da4a3eca0ac20899328a8716",
+    "research/sN/width_tradeoff/UpperNineCells2.lean": "2afd8127efa1740155b2c2495c561e8c6d0dcdbc7d9eb28356086134416efc3a",
+    "research/sN/width_tradeoff/UpperNineCells3.lean": "f235d8b4d078ae691df3fadd84cff862d5691bc07a3937c411f6d5b5cadc5e1d",
+    "research/sN/width_tradeoff/UpperNineDefs.lean": "6f1723aefb7e73cbadb586a9bc61554202d822dd0343b9d9a1ba9a72abd12694",
+    "research/sN/width_tradeoff/UpperNineIdentity.lean": "590acc7d323a9b3db60b3933ffb5047e18546508cd3c88767ca22ec1200e99a0",
+    "research/sN/width_tradeoff/UpperNineNetwork.lean": "ce5e2a1c45935b7126d92e0f59bba9ac9948eb728b1605c30471f6fa4c84b988",
+    "research/sN/width_tradeoff/upper_gen_nine.py": "55499a7eea8de1b9c24fc032f2ec827634c8d095ba476cd66255d5f5efa6202b",
+    "research/sN/width_tradeoff/verify.sh": "97b13e589553c1d8af5c726a9cf82d1c7d048bc9e30d69b3f5a6a980bbdc4537",
+    "research/sN/frontierN/overnight_general_antipodal.lean": "710673ff92a7edf041066eb1610ce2eec0b59937274fa665db09c84c65b96d1b"
+  },
+  "logs": {
+    "research/sN/width_tradeoff/frontier_build.log": "b714afc1e2166099f1dc31bcad317515b642bfd97565f1830cdad49d75d99904",
+    "research/sN/width_tradeoff/audit_tent.log": "2983970148ddbe8913b8fad95286a3084017d5879c91d6b8547b7408758d6ca8",
+    "research/sN/width_tradeoff/lower_first_compile.log": "ad305532865415e6447996b500d4c0b5daa96cb44e9a09ba65f522f236c7817e",
+    "research/sN/width_tradeoff/lower_transverse_compile.log": "197c4f12047b403a92677807d0243975174cacc250e40d403ef25f59bcd8b327",
+    "research/sN/width_tradeoff/upper_max5_build.log": "3fbc082048cc3514b88d254b739954871fdc17352378c70438d1e442276c9f50",
+    "research/sN/width_tradeoff/audit_antipodal.log": "02252b21b09daf89937b0a97ba15ef0af898200959a50984018a56e6b9f107ec",
+    "research/sN/width_tradeoff/upper_nine_identity_build.log": "1ca4a13146b2891c0e462123ac0cb848f92e6221f18b870a1b78c232d1956c35",
+    "research/sN/width_tradeoff/upper_nine_network_build.log": "d79ab747d4e8502cb8430ff637057f7c13e3004b42fecbacff6cb9b3707370e4",
+    "research/sN/width_tradeoff/final_check.log": "12bf7e6ba5ebd623180099c848513b704b6d9c494352adc039957a03ad02f74c"
+  },
+  "axiom_audits": [
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.leastPair_iff_rectangle",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.coordinate_minima",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.strictTradeoff_iff_no_leastPair",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.eventual_constant_second_width",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.pareto_below",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.pareto_bounded",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.maximum_three_leastPair",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.maximum_four_leastPair",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/frontier_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoffAudit.network11_mono_or_anti",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_tent.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_width_tradeoff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_tent.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_widths_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_tent.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_first_one_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_tent.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_first_two_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_tent.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoffAudit.no_tent_zero_first",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_tent.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoffAudit.no_tent_zero_second",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_tent.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.first_width_ge_add_two",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/lower_first_compile.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.first_width_ge_seven_max5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/lower_first_compile.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoff.dependent_shift_sign_failure",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/lower_transverse_compile.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoff.normalized_tails_kernel_odd",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/lower_transverse_compile.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoff.transverse_sign_family",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/lower_transverse_compile.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.WidthTradeoff.transverse_folds_linearize",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/lower_transverse_compile.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.max_five_ten_six",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/upper_max5_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.OvernightGeneral.second_width_half_plus_one",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_antipodal.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.OvernightGeneral.network_second_width_half_plus_one",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/audit_antipodal.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.P4.max_five_nine_fourteen",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/upper_nine_network_build.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.maximum_five_lower",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/final_check.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.maximum_five_minima_bounds",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/final_check.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.max_five_ten_six",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/final_check.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.P4.max_five_nine_fourteen",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/final_check.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.tent_strictTradeoff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/final_check.log"
+    },
+    {
+      "declaration": "MaxCaterpillar.WidthTradeoff.tent_has_no_leastPair",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "research/sN/width_tradeoff/final_check.log"
+    }
+  ],
+  "generator_reproduced_files": [
+    "UpperNineCells0.lean",
+    "UpperNineCells1.lean",
+    "UpperNineCells2.lean",
+    "UpperNineCells3.lean",
+    "UpperNineDefs.lean",
+    "UpperNineIdentity.lean",
+    "UpperNineNetwork.lean"
+  ],
+  "all_recorded_compilations_exit_zero": true
+}

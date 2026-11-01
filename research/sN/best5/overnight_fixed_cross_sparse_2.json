@@ -1,0 +1,7 @@
+{
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "producer_sha256": "006428f627fa68aaf45e20c1b9392dfcc33982440ea0a01dfeca418101759d1a",
+  "seconds": 328.3447744349978,
+  "solver_status": 1,
+  "status": "NO_SPARSE_CANDIDATE"
+}

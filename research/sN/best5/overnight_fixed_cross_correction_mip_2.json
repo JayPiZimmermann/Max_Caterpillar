@@ -1,0 +1,15 @@
+{
+  "bound": 8,
+  "cap": 10,
+  "core": 2,
+  "correction_neurons": 9,
+  "free_width": 12,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "patterns": 317,
+  "producer_sha256": "ee981ec461f870ec1978901b41eb17eeb76f74e9731e35bae2fa39c29f9b4f13",
+  "rows": 28039,
+  "seconds": 1.3659268460032763,
+  "solver_status": 0,
+  "status": "NUMERICAL_CORRECTION_CANDIDATE",
+  "variables": 5100
+}

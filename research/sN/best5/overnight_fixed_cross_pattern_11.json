@@ -1,0 +1,32 @@
+{
+  "extra": 11,
+  "producer_sha256": "d5d74a38f686f9889dd78f3dd934a22d10b38e05640eee3e94d5704b9d05ac63",
+  "records": [
+    {
+      "equations": 396,
+      "free_width": 15,
+      "inequalities": 430,
+      "keep": [
+        4,
+        10,
+        13,
+        14,
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12
+      ],
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "solver_status": 0
+    }
+  ],
+  "seconds": 2.1082987699992373,
+  "status": "EXACT_PATTERN_CANDIDATE"
+}

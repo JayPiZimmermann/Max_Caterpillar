@@ -1,0 +1,42 @@
+BST PAIR 3 (0, ((0, 1), (1, 2))) (0, ((0, 2), (2, 1))) plain NECESSARY_ITERATED_POLE_CONTROL_PASS 8 SECONDS 0.24454425900330534
+BST PAIR 3 (0, ((0, 1), (1, 2))) (0, ((0, 2), (2, 1))) signed NECESSARY_ITERATED_POLE_CONTROL_PASS 8 SECONDS 0.3733290899981512
+BST PAIR 3 (0, ((0, 2), (2, 1))) (0, ((0, 1), (1, 2))) plain NECESSARY_ITERATED_POLE_CONTROL_PASS 7 SECONDS 0.5453194319998147
+BST PAIR 3 (0, ((0, 2), (2, 1))) (0, ((0, 1), (1, 2))) signed NECESSARY_ITERATED_POLE_CONTROL_PASS 8 SECONDS 0.6747473470022669
+BST PAIR 3 (2, ((0, 1), (2, 0))) (2, ((1, 0), (2, 1))) plain NECESSARY_ITERATED_POLE_CONTROL_PASS 8 SECONDS 0.7981858080020174
+BST PAIR 3 (2, ((0, 1), (2, 0))) (2, ((1, 0), (2, 1))) signed NECESSARY_ITERATED_POLE_CONTROL_PASS 8 SECONDS 0.924698888004059
+BST PAIR 3 (2, ((1, 0), (2, 1))) (2, ((0, 1), (2, 0))) plain NECESSARY_ITERATED_POLE_CONTROL_PASS 7 SECONDS 1.058181707005133
+BST PAIR 3 (2, ((1, 0), (2, 1))) (2, ((0, 1), (2, 0))) signed NECESSARY_ITERATED_POLE_CONTROL_PASS 8 SECONDS 1.1626700140041066
+BST PAIR 4 (0, ((0, 1), (1, 2), (2, 3))) (0, ((0, 1), (1, 3), (3, 2))) plain NECESSARY_ITERATED_POLE_CONTROL_PASS 24 SECONDS 2.465335295004479
+BST PAIR 4 (0, ((0, 1), (1, 2), (2, 3))) (0, ((0, 1), (1, 3), (3, 2))) signed NECESSARY_ITERATED_POLE_CONTROL_PASS 43 SECONDS 5.137898029999633
+BST PAIR 4 (0, ((0, 1), (1, 2), (2, 3))) (0, ((0, 2), (2, 1), (2, 3))) plain NECESSARY_ITERATED_POLE_CONTROL_PASS 23 SECONDS 6.976253427004849
+BST PAIR 4 (0, ((0, 1), (1, 2), (2, 3))) (0, ((0, 2), (2, 1), (2, 3))) signed NECESSARY_ITERATED_POLE_CONTROL_PASS 45 SECONDS 9.422331260000647
+BST PAIR 4 (0, ((0, 1), (1, 2), (2, 3))) (0, ((0, 3), (1, 2), (3, 1))) plain EXACT_NON_CPWL_ITERATED_POLE 2 SECONDS 9.809184031000768
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_bst_pair_states.py", line 133, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_bst_pair_states.py", line 129, in main
+    (HERE/'overnight_upper_bst_pair_states.json').write_text(json.dumps(result,indent=2)+'\n')
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Integer is not JSON serializable

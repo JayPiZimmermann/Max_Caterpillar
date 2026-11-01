@@ -19,3 +19,13 @@ Do not hardcode their numbers or write manually formatted internal links.
 Apply requested wording improvements directly to the paper and rebuild its
 PDF. Do not merely paste proposed replacement text into chat, unless the user
 explicitly requests that instead.
+
+# Proof search and builds
+
+Use only Lean proof search for mathematical research. Do not run numerical
+fitting or solver searches, or present numerical observations or external
+certificates as evidence. Earlier research notes may suggest proof routes;
+report a result only after checking its exact statement and axioms in Lean.
+
+Run builds and verification locally. GitHub Actions is disabled at the
+user's request; do not enable it or run builds on GitHub.

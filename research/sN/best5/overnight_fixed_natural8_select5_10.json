@@ -1,0 +1,36 @@
+{
+  "bound": 10.0,
+  "budget": 300,
+  "chosen": [
+    [
+      12153,
+      1
+    ],
+    [
+      14645,
+      -1
+    ],
+    [
+      15935,
+      -1
+    ],
+    [
+      26865,
+      1
+    ],
+    [
+      27635,
+      1
+    ]
+  ],
+  "columns": 2060,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_gap": 0.0,
+  "objective": 5.0,
+  "patterns": 292,
+  "producer_sha256": "83d5e3610db0032a144ac6568b87af0a8a372e3ace16182a46f87c166141da4e",
+  "scope": "Bounded convexified mixed-integer pattern selector only",
+  "seconds": 5.93701995399897,
+  "solver_status": 0,
+  "status": "HEURISTIC_PATTERN_CANDIDATE"
+}

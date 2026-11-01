@@ -1,0 +1,191 @@
+{
+  "results": [
+    {
+      "certified": [],
+      "config": 1,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 2,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 3,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 4,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 5,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 6,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 7,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 8,
+      "families": 0,
+      "status": "FAILED"
+    },
+    {
+      "certified": [],
+      "config": 9,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 10,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 11,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 12,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 13,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 14,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 15,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 16,
+      "families": 1,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 17,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 18,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 19,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 20,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 21,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 22,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 23,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 24,
+      "families": 2,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 25,
+      "families": 0,
+      "status": "EXACT_CELL_CURVATURE_OBSTRUCTION"
+    },
+    {
+      "certified": [],
+      "config": 26,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 27,
+      "families": 0,
+      "status": "EXACT_CELL_CURVATURE_OBSTRUCTION"
+    },
+    {
+      "certified": [],
+      "config": 28,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 29,
+      "families": 0,
+      "status": "EXACT_CELL_CURVATURE_OBSTRUCTION"
+    },
+    {
+      "certified": [],
+      "config": 30,
+      "families": 0,
+      "status": "EXACT_THREE_CARRIER_CONTINUOUS_CURVATURE_GATE"
+    },
+    {
+      "certified": [],
+      "config": 31,
+      "families": 0,
+      "status": "EXACT_CELL_CURVATURE_OBSTRUCTION"
+    }
+  ],
+  "seconds": 6.527512016997207
+}

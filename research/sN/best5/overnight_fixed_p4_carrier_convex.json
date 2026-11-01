@@ -1,0 +1,392 @@
+{
+  "producer_sha256": "56c92a153968eae38ba16a6557c11d572abde7ca4f70ff3a3666b1565ab16f03",
+  "results": [
+    {
+      "config": 0,
+      "parameters": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 1,
+      "parameters": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 2,
+      "parameters": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 3,
+      "parameters": [
+        0,
+        0,
+        0,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 4,
+      "parameters": [
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 5,
+      "parameters": [
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 6,
+      "parameters": [
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 7,
+      "parameters": [
+        0,
+        0,
+        -1,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 8,
+      "parameters": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 9,
+      "parameters": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 10,
+      "parameters": [
+        0,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 11,
+      "parameters": [
+        0,
+        1,
+        0,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 12,
+      "parameters": [
+        0,
+        1,
+        -1,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 13,
+      "parameters": [
+        0,
+        1,
+        -1,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 14,
+      "parameters": [
+        0,
+        1,
+        -1,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 15,
+      "parameters": [
+        0,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 16,
+      "parameters": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 17,
+      "parameters": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 18,
+      "parameters": [
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 19,
+      "parameters": [
+        1,
+        0,
+        0,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 20,
+      "parameters": [
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 21,
+      "parameters": [
+        1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 22,
+      "parameters": [
+        1,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 23,
+      "parameters": [
+        1,
+        0,
+        -1,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 24,
+      "parameters": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 25,
+      "parameters": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 26,
+      "parameters": [
+        1,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 27,
+      "parameters": [
+        1,
+        1,
+        0,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 28,
+      "parameters": [
+        1,
+        1,
+        -1,
+        0,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 29,
+      "parameters": [
+        1,
+        1,
+        -1,
+        0,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 30,
+      "parameters": [
+        1,
+        1,
+        -1,
+        -1,
+        0
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    },
+    {
+      "config": 31,
+      "parameters": [
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "status": "SUPPORT_PLANE_TEST_SURVIVOR",
+      "witness": null
+    }
+  ],
+  "scope": "Only the32 explicitly specified positive-carrier choices. A witnessed case cannot be completed by any number of negative outer ReLUs plus a W7 remainder. No general five-free-term lower bound.",
+  "seconds": 2.867260285995144,
+  "status": "BOUNDED_NATURAL_CARRIER_SUPPORT_PLANE_GATE"
+}

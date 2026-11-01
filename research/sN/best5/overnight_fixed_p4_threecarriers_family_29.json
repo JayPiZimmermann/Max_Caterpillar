@@ -1,0 +1,52 @@
+{
+  "cell": [
+    false,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false
+  ],
+  "config": 29,
+  "curvature": [
+    [
+      [
+        "0",
+        "0",
+        "1",
+        "-1",
+        "0"
+      ],
+      "1"
+    ],
+    [
+      [
+        "1",
+        "-1",
+        "1",
+        "-1",
+        "0"
+      ],
+      "1"
+    ],
+    [
+      [
+        "1",
+        "-1",
+        "1",
+        "0",
+        "-1"
+      ],
+      "1"
+    ]
+  ],
+  "parameters": [
+    1,
+    1,
+    -1,
+    0,
+    1
+  ],
+  "status": "EXACT_CELL_CURVATURE_OBSTRUCTION"
+}

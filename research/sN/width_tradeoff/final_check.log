@@ -1,0 +1,18 @@
+@maximum_five_lower : ∀ {a b : ℕ} (net : Network 5 a b),
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) → 7 ≤ a ∧ 4 ≤ b
+maximum_five_minima_bounds : ∃ a b c d,
+  Feasible (Maximum 5) a b ∧
+    Feasible (Maximum 5) c d ∧ (∀ (p q : ℕ), Feasible (Maximum 5) p q → a ≤ p ∧ d ≤ q) ∧ 7 ≤ a ∧ a ≤ 9 ∧ 4 ≤ d ∧ d ≤ 6
+max_five_ten_six : ∃ net,
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+P4.max_five_nine_fourteen : ∃ net,
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+tent_strictTradeoff : StrictTradeoff fun x => WidthTradeoffAudit.tent (x 0)
+tent_has_no_leastPair : ¬∃ a b, LeastPair (fun x => WidthTradeoffAudit.tent (x 0)) a b
+'MaxCaterpillar.WidthTradeoff.maximum_five_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.maximum_five_minima_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.max_five_ten_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.P4.max_five_nine_fourteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.tent_strictTradeoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.tent_has_no_leastPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0

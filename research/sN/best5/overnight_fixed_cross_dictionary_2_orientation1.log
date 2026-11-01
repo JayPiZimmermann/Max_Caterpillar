@@ -1,0 +1,5 @@
+{"cones": 30, "kink_rows": 14612, "nonzeros": 427458, "seconds": 4.410743979999097}
+{"cones": 60, "kink_rows": 17248, "nonzeros": 815930, "seconds": 9.881686058004561}
+{"cones": 90, "kink_rows": 18068, "nonzeros": 1109099, "seconds": 14.344676041000639}
+{"cones": 120, "kink_rows": 19773, "nonzeros": 1393809, "seconds": 19.543793666001875}
+{"coefficient_box": 2, "cones": 120, "first_layer_edges": [[1, 0], [2, 0], [2, 1], [3, 0], [4, 0], [3, 4], [4, 2]], "forms": 37969, "iterations": 3229, "kink_rows": 19773, "nonzeros": 1885778, "orientation": 1, "positive_control": {"cones": 120, "rays": 30, "status": "EXACT_KNOWN_FIXED10_BRAID_CONTROL_PASS"}, "producer_sha256": "642f3ecaaa033f9db754524147bce7cfdd4cc7129b4bb10d9869fc6c5daad86b", "residual_l2": 0.07306072156693828, "residual_max": 0.0064505449350563855, "scope": "Finite integer dictionary; floating residuals do not prove existence or nonexistence", "seconds": 49.29012534900539, "shape": [19803, 37976], "solver_status": 2, "status": "NUMERICAL_RESIDUAL"}

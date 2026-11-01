@@ -1,0 +1,98 @@
+'MaxCaterpillar.WidthTradeoff.leastPair_iff_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.coordinate_minima' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.strictTradeoff_iff_no_leastPair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.WidthTradeoff.eventual_constant_second_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.pareto_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.pareto_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.maximum_three_leastPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.maximum_four_leastPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.network11_mono_or_anti' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_width_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_widths_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_first_one_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.tent_first_two_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.no_tent_zero_first' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.no_tent_zero_second' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@first_width_ge_add_two : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  4 ≤ N → ∀ (net : Network N h₁ h₂), (∀ (x : Point N), Network.eval net x = Maximum N x) → N + 2 ≤ h₁
+@first_width_ge_seven_max5 : ∀ {h₁ h₂ : ℕ} (net : Network 5 h₁ h₂),
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) → 7 ≤ h₁
+'MaxCaterpillar.Frontier.first_width_ge_add_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.first_width_ge_seven_max5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoff.dependent_shift_sign_failure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@normalized_tails_kernel_odd : ∀ {N : ℕ} {ι : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  (f u v : Point N → ℝ) (w : ι → Point N → ℝ),
+  OddLin u →
+    OddLin v →
+      (∀ (i : ι), OddLin (w i)) →
+        (∀ (i : ι), Continuous (w i)) →
+          ∀ (alpha beta : Point N) (delta : ι → Point N) (s : ι → ℝ),
+            (∀ (i : ι), s i ≠ 0) →
+              (∀ (x : Point N), f x = u x + lin alpha x - relu (v x) + ∑ i : ι, s i * relu (w i x + lin (delta i) x)) →
+                (∀ (x : Point N), f x = -v x - lin beta x + relu (u x) + ∑ i : ι, s i * relu (w i x)) →
+                  ∀ (y : ι → Point N),
+                    (∀ (i j : ι), lin (delta j) (y i) = if j = i then 1 else 0) →
+                      ∃ c, ∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → f x - f (-x) = lin c x
+'MaxCaterpillar.Frontier.WidthTradeoff.normalized_tails_kernel_odd' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@transverse_sign_family : ∀ {N : ℕ} {ι : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι] (w : ι → Point N → ℝ)
+  (L : Point N) (delta : ι → Point N) (s : ι → ℝ),
+  (∀ (x : Point N), 0 ≤ lin L x + ∑ j : ι, s j * (relu (w j x + lin (delta j) x) - relu (w j x))) →
+    ∀ (i : ι),
+      Continuous (w i) →
+        s i ≠ 0 →
+          ∀ (y : Point N),
+            (∀ (j : ι), lin (delta j) y = if j = i then 1 else 0) →
+              (∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → 0 ≤ w i x) ∨
+                ∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → w i x ≤ 0
+'MaxCaterpillar.Frontier.WidthTradeoff.transverse_sign_family' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@transverse_folds_linearize : ∀ {N : ℕ} {ι : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  (w : ι → Point N → ℝ),
+  (∀ (i : ι), Continuous (w i)) →
+    ∀ (L : Point N) (delta : ι → Point N) (s : ι → ℝ),
+      (∀ (i : ι), s i ≠ 0) →
+        (∀ (x : Point N), 0 ≤ lin L x + ∑ j : ι, s j * (relu (w j x + lin (delta j) x) - relu (w j x))) →
+          ∀ (y : ι → Point N),
+            (∀ (i j : ι), lin (delta j) (y i) = if j = i then 1 else 0) →
+              ∃ c,
+                (∀ (i : ι), c i = 0 ∨ c i = s i) ∧
+                  ∀ (x : Point N), (∀ (j : ι), lin (delta j) x = 0) → ∑ i : ι, s i * relu (w i x) = ∑ i : ι, c i * w i x
+'MaxCaterpillar.Frontier.WidthTradeoff.transverse_folds_linearize' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.WidthTradeoff.max_five_ten_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.OvernightGeneral.second_width_half_plus_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.OvernightGeneral.network_second_width_half_plus_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@maximum_five_lower : ∀ {a b : ℕ} (net : Network 5 a b),
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) → 7 ≤ a ∧ 4 ≤ b
+max_five_ten_six : ∃ net,
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+tent_strictTradeoff : StrictTradeoff fun x => WidthTradeoffAudit.tent (x 0)
+tent_has_no_leastPair : ¬∃ a b, LeastPair (fun x => WidthTradeoffAudit.tent (x 0)) a b
+'MaxCaterpillar.WidthTradeoff.maximum_five_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.max_five_ten_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.tent_strictTradeoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.WidthTradeoff.tent_has_no_leastPair' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,6 @@
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.max3_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.max4_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.max5_first_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.WidthTradeoffAudit.max5_16_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+EXIT_CODE=0

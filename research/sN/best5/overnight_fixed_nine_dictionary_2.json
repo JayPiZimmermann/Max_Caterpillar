@@ -1,0 +1,18 @@
+{
+  "coefficient_box": 2,
+  "iterations": 955,
+  "kink_rows": 5398,
+  "lsqr_status": 2,
+  "matrix_shape": [
+    5428,
+    37976
+  ],
+  "nonzeros": 732604,
+  "outer_forms": 37969,
+  "producer_sha256": "c88eaa8e6ad1c5ec9344d6873c0b7fc1d5dce46c1612131d69ed08decdedc671",
+  "residual_l2": 0.044201409221129875,
+  "residual_max": 0.0039818664947546935,
+  "scope": "Finite integer dictionary only; numerical solve is not an exclusion or a construction certificate",
+  "seconds": 7.026278647001163,
+  "status": "NUMERICAL_DICTIONARY_RESIDUAL"
+}

@@ -1,0 +1,72 @@
+{
+  "records": [
+    {
+      "core": 0,
+      "equations": 620,
+      "first_features": 29,
+      "flip": 1,
+      "free_width": 3,
+      "inequalities": 780,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "rays": 350,
+      "solver_status": 2
+    },
+    {
+      "core": 0,
+      "equations": 620,
+      "first_features": 29,
+      "flip": -1,
+      "free_width": 3,
+      "inequalities": 780,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "rays": 350,
+      "solver_status": 2
+    },
+    {
+      "core": 1,
+      "equations": 624,
+      "first_features": 29,
+      "flip": 1,
+      "free_width": 3,
+      "inequalities": 776,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "rays": 350,
+      "solver_status": 2
+    },
+    {
+      "core": 1,
+      "equations": 624,
+      "first_features": 29,
+      "flip": -1,
+      "free_width": 3,
+      "inequalities": 776,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "rays": 350,
+      "solver_status": 2
+    },
+    {
+      "core": 2,
+      "equations": 620,
+      "first_features": 29,
+      "flip": 1,
+      "free_width": 3,
+      "inequalities": 780,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "rays": 350,
+      "solver_status": 2
+    },
+    {
+      "core": 2,
+      "equations": 620,
+      "first_features": 29,
+      "flip": -1,
+      "free_width": 3,
+      "inequalities": 780,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "rays": 350,
+      "solver_status": 2
+    }
+  ],
+  "seconds": 0.5403266509965761,
+  "status": "ENLARGED_NINE_CORE_PATTERN_SEARCH_COMPLETE"
+}

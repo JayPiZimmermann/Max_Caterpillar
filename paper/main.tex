@@ -597,7 +597,6 @@ Define the \emph{support function} and the caterpillar polytope by
  Q_{h,L}&:=\operatorname{conv}\Bigl(\{0\}\cup\Bigl(h+\sum_{\ell\in L}[0,\ell]\Bigr)\Bigr),\qquad
  U_{h,L}=h_{Q_{h,L}}.\label{eq:unit-polytope}
 \end{align}
-Indeed, the segment $[0,\ell]$ has support function $\relu\circ\ell$, Minkowski sums add support functions, and adjoining $0$ applies the outer ReLU.
 The base is the translated zonotope $h+\sum_{\ell\in L}[0,\ell]$.
 For a state $\tau$ in~\Cref{eq:faces}, set
 $t_\ell=\mathds{1}_{\{\tau(\ell)=\ell\}}$, where $\mathds{1}$ denotes the indicator.
@@ -611,14 +610,10 @@ $e_0$ is represented by $0$.
 
 
 
-For a canonical tree, the head connects the apex label to the tree, so
-the head and $N-2$ edge functions are linearly independent. Thus the base is an $(N-2)$-dimensional
-zonotope with affine hull avoiding $0$, and $Q_{h,L}$ is an
-$(N-1)$-dimensional pyramid. Each nontrivial face containing $0$ cones over
-a base face. Maximizing on each base segment selects $0$, $\ell$, or
-$[0,\ell]$, with support functions $0$, $\ell$, and $\relu\circ\ell$;
-the outer ReLU adjoins the apex. These are precisely the three states
-in~\Cref{eq:faces}.
+For canonical trees, $Q_{h,L}$ is an $(N-1)$-dimensional pyramid,
+and its nontrivial faces containing $0$ are precisely the polytopes
+$Q^\tau_{h,L}$ from the three edge states.
+The geometric justification is in \Cref{app:dictionary-geometry}.
 
 \Needspace{8\baselineskip}
 \begin{definition}[Dictionary, \leandecl{MaxCaterpillar/Construction.lean}{68}{dictionary}]\label{def:dictionary}
@@ -637,7 +632,14 @@ Caterpillar heads and edge functions are coordinate differences, so these face f
  U^{\tau}_{\pi,S}(x+t\one)=U^{\tau}_{\pi,S}(x)\qquad(t\in\R).
 \end{align}
 Only $\relu(\pm x_i)$ change under this translation.
-\Cref{thm:dictionary} proves that $\D$ spans the maximum.
+\Needspace{8\baselineskip}
+\begin{theorem}[Dictionary sufficiency, \leandecl{MaxCaterpillar/Lemmas.lean}{54}{maximum_mem_dictionary}, {\Cref{pf:thm:dictionary}}]\label{thm:dictionary}
+For every $N\geq3$, the dictionary of \Cref{def:dictionary}
+satisfies
+\begin{align}\label{eq:dictionary-span}
+ \maxn_N\in\spn\D.
+\end{align}
+\end{theorem}
 
 \subsection{Rational coefficients}\label{sec:coefficients}
 
@@ -654,28 +656,18 @@ $E=(g_j(y_i))_{i,j}$ is invertible, and define
 \end{align}
 These are the coefficients used by the Caterpillar Net.
 
-\begin{lemma}[The coefficient identity]\label{lem:rational-coefficients}
+\begin{lemma}[The coefficient identity, {\Cref{pf:lem:rational-coefficients}}]\label{lem:rational-coefficients}
 The rational inputs can be chosen as stated, $c\in\mathbb Q^d$, and
 \begin{align}\label{eq:rational-coordinate}
  \maxn_N(x)=\sum_{j=1}^d c_jg_j(x)\qquad(x\in\mathbb R^N).
 \end{align}
 \end{lemma}
-\begin{proof}
-The vectors $(g_1(y),\ldots,g_d(y))$, $y\in\mathbb Q^N$, span
-$\mathbb R^d$: otherwise a nonzero linear functional annihilating them
-would give a nontrivial combination of the $g_j$ vanishing on the dense
-set $\mathbb Q^N$, hence everywhere by continuity. This contradicts
-independence. Select $d$ independent evaluation vectors as the rows of $E$.
-All entries of $E$ and the right side of \Cref{eq:coefficient-choice} are
-rational, so $c$ is rational. By \Cref{thm:dictionary}, $\maxn_N\in V_N$;
-its unique basis coordinates solve this same invertible system and
-therefore equal $c$.
-\end{proof}
+
 
 The first $a$ terms form the auxiliary remainder $R$; the other $q_N$
 terms give the retained face functions. We retain all these basis
-functions, including any with zero coefficient. Distinct basis functions
-cannot normalize to the same description, so $|K|=q_N$ below.
+functions, including any with zero coefficient, giving $|K|=q_N$
+normalized descriptions below.
 The following normalization and network assembly use these fixed rational
 coefficients.
 
@@ -691,10 +683,9 @@ $i>j$ gives the same function with the \emph{normalized description}
    h^+&:=h'+\sum_{\ell_{ij}\in M,\ i>j}\ell_{ij}.
 \end{aligned}
 \end{align}
-Geometrically, $[0,\ell]=\ell+[0,-\ell]$: reversing a generator shifts the
-head by the old generator. Normalization chooses a consistent orientation
-and a corresponding base corner; it does not rescale vectors or change the
-polytope (\Cref{fig:polytope-normalization}).
+Normalization chooses a consistent orientation and base corner, without
+rescaling the vectors or changing the polytope
+(\Cref{fig:polytope-normalization}).
 Write $U_k:=U_{h,M}$ for a normalized description $k=(h,M)$, and let
 $\mathcal K_0$ be the set of normalized descriptions of all caterpillar
 face functions.
@@ -726,31 +717,40 @@ $\sum_{k\in K}d_kU_k+\relu(R)-\relu(-R)$.
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm,>=stealth,
- box/.style={draw=black!60,rounded corners=2pt,fill=#1,inner sep=4pt,align=center,font=\small},
+ box/.style={draw=black!60,rounded corners=2pt,fill=#1,inner sep=3pt,align=center,font=\small},
+ feature/.style={box=blue!6,minimum width=2.85cm,minimum height=.6cm},
  head/.style={font=\small\bfseries,text=black!75},
- wt/.style={font=\footnotesize,text=black!70,fill=white,inner sep=1pt}]
-\node[head] at (0,2.75) {input};
-\node[head] at (3.6,2.75) {first hidden layer};
-\node[head] at (8.6,2.75) {second hidden layer};
-\node[head] at (13,2.75) {output};
-\node[box=black!4,minimum height=4.2cm] (in) at (0,0) {$x_0$\\$x_1$\\$\vdots$\\$x_{N-1}$};
-\node[box=blue!6] (f1) at (3.6,1.6) {$\relu(x_0),\ \relu(-x_0)$\\{\footnotesize $2$ neurons}};
-\node[box=blue!6] (f2) at (3.6,0) {$\relu(x_i-x_0)$, $i>0$\\{\footnotesize $N-1$ neurons}};
-\node[box=blue!6] (f3) at (3.6,-1.6) {$\relu(x_i-x_j)$, $i<j$\\{\footnotesize $\binom N2$ neurons}};
-\node[box=orange!8] (u) at (8.6,1.2) {$U_k=\relu\bigl(h(x)+\sum_{\ell\in M}\relu(\ell(x))\bigr)$\\{\footnotesize one neuron per $k=(h,M)\in K$}};
-\node[box=orange!8] (rp) at (8.6,-0.5) {$\relu(R(x))$};
-\node[box=orange!8] (rm) at (8.6,-1.6) {$\relu(-R(x))$};
-\node[box=black!4] (out) at (13,0) {$\maxn_N(x)$};
-\foreach \f in {f1,f2,f3} \draw[->,black!55] (in.east) -- (\f.west);
+ count/.style={font=\footnotesize,text=black!55,inner sep=0pt,anchor=south east},
+ wt/.style={font=\footnotesize,text=black!70,inner sep=1pt}]
+\node[head] at (0,1.5) {input};
+\node[head] at (4.2,1.5) {first hidden layer};
+\node[head] at (9.1,1.5) {second hidden layer};
+\node[head] at (13.4,1.5) {output};
+\node[box=black!4,minimum width=1.05cm,minimum height=2.4cm] (in) at (0,0) {};
+\node[font=\small] at (0,.98) {$x_0$};
+\node[font=\small] at (0,.33) {$x_1$};
+\node[font=\small] at (0,-.32) {$\vdots$};
+\node[font=\small] at (0,-.98) {$x_{N-1}$};
+\node[feature] (f1) at (4.2,.85) {$\relu(x_0),\ \relu(-x_0)$};
+\node[feature] (f2) at (4.2,0) {$\relu(x_i-x_0)$, $i>0$};
+\node[feature] (f3) at (4.2,-.85) {$\relu(x_i-x_j)$, $i<j$};
+\node[count,xshift=-3pt,yshift=3pt] at (f1.west) {$2$ neurons};
+\node[count,xshift=-3pt,yshift=3pt] at (f2.west) {$N-1$ neurons};
+\node[count,xshift=-3pt,yshift=3pt] at (f3.west) {$\binom N2$ neurons};
+\node[box=orange!8] (u) at (9.1,.85) {$U_k=\relu\bigl(h(x)+\sum_{\ell\in M}\relu(\ell(x))\bigr)$};
+\node[box=orange!8] (rp) at (9.1,0) {$\relu(R(x))$};
+\node[box=orange!8] (rm) at (9.1,-.85) {$\relu(-R(x))$};
+\node[box=black!4] (out) at (13.4,0) {$\maxn_N(x)$};
+% Center the incoming arrows; keep the exterior counts above them.
+\foreach \f in {f1,f2,f3}
+ \draw[->,black!55] (in.east |- \f.west) -- (\f.west);
 \foreach \f in {f1,f2,f3} \foreach \g in {u,rp,rm} \draw[->,black!30] (\f.east) -- (\g.west);
-\draw[->,black!60] (u.east) -- node[wt,pos=0.45,above right] {$d_k$} (out.west);
-\draw[->,black!60] (rp.east) -- node[wt,pos=0.5,above] {$+1$} (out.west);
-\draw[->,black!60] (rm.east) -- node[wt,pos=0.5,below right] {$-1$} (out.west);
-\node[wt] at (1.55,-2.45) {$W_1$};
-\node[wt] at (6.1,-2.45) {$W_2$};
-\node[wt] at (11.55,-2.45) {$w_3$};
-\node[font=\footnotesize,text=black!70] at (3.6,-3.05) {width $h_1=\binom N2+N+1$};
-\node[font=\footnotesize,text=black!70] at (8.6,-3.05) {width $|K|+2$};
+\draw[->,black!60] (u.east) -- node[wt,pos=.45,above=4pt] {$d_k$} (out.west);
+\draw[->,black!60] (rp.east) -- node[wt,pos=.55,above=4pt] {$+1$} (out.west);
+\draw[->,black!60] (rm.east) -- node[wt,pos=.55,below=4pt] {$-1$} (out.west);
+\node[wt] at (1.65,-1.45) {$W_1$};
+\node[wt] at (6.2,-1.45) {$W_2$};
+\node[wt] at (11.9,-1.45) {$w_3$};
 \end{tikzpicture}
 \caption{The Caterpillar Net. The first hidden layer is fixed. The second
 hidden layer has one neuron for every retained normalized description
@@ -772,48 +772,11 @@ in~\Cref{eq:network-assembly} computes $\maxn_N$. It has widths $h_1$ and
 $|K|+2=q_N+2$, rational weights, and zero biases.
 \end{lemma}
 
-\begin{Proof}{Lemma}{thm:compilation}
-The first hidden layer outputs $\Phi$ from~\Cref{eq:features}.
-Thus $W_1$ has rows $e_0^\top$ and $-e_0^\top$, then $e_i^\top-e_0^\top$ for $i>0$, then $e_i^\top-e_j^\top$ for $i<j$, using a fixed ordering within each block. Its row count is
-\begin{align}\label{eq:feature-count}
-\binom N2+(N-1)+2=\binom N2+N+1=h_1.
-\end{align}
-By~\Cref{eq:hinge-reversal}, these features recover all coordinates,
-\begin{align}\label{eq:recover-coordinates}
-\begin{aligned}
-x_0&=\relu(x_0)-\relu(-x_0),\\
-x_i&=x_0+\relu(x_i-x_0)-\relu(x_0-x_i)\qquad(i>0).
-\end{aligned}
-\end{align}
-For each $k=(h,M)\in K$, substitute~\Cref{eq:recover-coordinates} into $h(x)+\sum_{\ell\in M}\relu(\ell(x))$ and collect the coefficients of $\Phi(x)$ into a row vector $w_k^\top$. Every hinge in $M$ already has the orientation $i<j$, so its coefficient is added directly to the corresponding feature.
 
-To specify the remaining row, collect the auxiliary coefficients of $R$ as
-\begin{align}\label{eq:auxiliary-remainder}
-R(x)=\sum_i p_i\relu(x_i)+\sum_i n_i\relu(-x_i)+\sum_{i<j}s_{ij}\relu(x_i-x_j).
-\end{align}
-Each retained unit is translation invariant by~\Cref{eq:translation-invariance}, and $\maxn_N(x+t\one)=\maxn_N(x)+t$, so~\Cref{eq:compilation-hypothesis} gives
-\begin{align}\label{eq:remainder-translation}
-R(x+t\one)=R(x)+t,\qquad \sum_i p_i=1.
-\end{align}
-The coefficient sum follows by setting $x=0$ and $t=1$. Now choose $t$ large enough that every $x_i+t$ is nonnegative. Substituting the auxiliary expansion into~\Cref{eq:remainder-translation} cancels $t$ and gives
-\begin{align}\label{eq:compact-remainder}
-R(x)=\sum_i p_ix_i+\sum_{i<j}s_{ij}\relu(x_i-x_j).
-\end{align}
-Substitute~\Cref{eq:recover-coordinates} into this expression and collect the coefficients of $\Phi(x)$ into $w_R$. Thus both $w_k$ and $w_R$ are specified by finite sums of the previously defined coefficients. The entries of $W_1$ and of the rows $w_k$ are integers, because heads and hinges are integer combinations of coordinates. The row $w_R$ is a rational combination of the $p_i$ and $s_{ij}$, and $w_3$ consists of the $d_k$ and $\pm1$.
 
-Order $K$ and set the second hidden layer matrix and output layer vector to
-\begin{align}\label{eq:network-assembly}
-W_2=\begin{pmatrix}(w_k^\top)_{k\in K}\\w_R^\top\\-w_R^\top\end{pmatrix},\qquad
-w_3=\begin{pmatrix}(d_k)_{k\in K}\\1\\-1\end{pmatrix},\qquad b_1=b_2=b_3=0.
-\end{align}
-The second hidden layer outputs $U_k(x)$ and $\relu(\pm R(x))$. By~\Cref{eq:hinge-reversal} and~\Cref{eq:compilation-hypothesis},
-\begin{align}\label{eq:signed-remainder}
-w_3^\top\relu(W_2\Phi(x))=\sum_{k\in K}d_kU_k(x)+\relu(R(x))-\relu(-R(x))=\maxn_N(x).
-\end{align}
-\end{Proof}
-
-This completes the rational Caterpillar Net. \Cref{sec:size} bounds $q_N$
-by counting its possible normalized descriptions.
+The proofs of coefficient selection and network assembly are in
+\Cref{app:rational-coefficients,app:network-assembly}. The widths are
+summarized in \Cref{sec:size}.
 
 \subsection{The combinatorial construction of Brunck et al.}\label{sec:bsy-construction}
 
@@ -838,23 +801,15 @@ Their construction handles the lower-dimensional remainder by induction.
 \Cref{thm:bsy-relation} proves the exact identification of their pyramid
 summands: nonempty marked sets give translated caterpillar polytopes;
 the empty marked set gives the translated rooted-star polytope.
-Translation adds only a linear function, also for every face.
-Nontrivial faces containing the apex give our caterpillar or rooted-star
-face functions, up to that linear term. The apex vertex and all base
-faces have support functions in $A_N$, since base faces are translated
-zonotopes generated by coordinate differences.
-Thus both papers' pyramid families, with all their faces, lie in the
-joint vocabulary used below. The lower bounds allow arbitrary signed
+Both papers' pyramid families, with all their faces, belong to the joint
+vocabulary below, up to auxiliary terms; \Cref{app:bsy} gives the details. The lower bounds allow arbitrary signed
 coefficients and arbitrary corrections within that vocabulary; they do
 not assume either paper's displayed coefficients.
 
 \section{Lower bounds}\label{sec:lower}
 
-One local test proves both kinds of lower bound: at a tied maximum, take
-a directional germ and discard lower-dimensional support functions.
-For expansion size, every tie must be detected by some unit, so we count
-the ties each unit can detect. For dictionary dimension, we exhibit one
-locality that detects each path order separately.
+We bound the number of functions in an expansion of the maximum and the
+dimension of the dictionary span. All proofs are in \Cref{app:lower}.
 
 \begin{theorem}[Exponential count, {\Cref{pf:thm:count-exponential}}]\label{thm:count-exponential}
 Put $y_0=\sqrt{3/2}-1$. Every expansion of $\maxn_N$, $N\geq3$,
@@ -908,10 +863,8 @@ mathematically here; the existing Lean count theorem gives a weaker bound.
 \paragraph{Arbitrary tree shapes with a source orientation.}
 The source-oriented extension in \Cref{thm:forest-count} includes every
 $U^\tau_{a,s,r,T}$, for every tree shape, source, head root, and face state.
-At any locality detected by such a face, its retained forest reduces
-to one smaller source-oriented tree. \Cref{eq:source-face-capacity}
-transfers the same counting bounds without a loss. Thus the family
-including all these face functions satisfies \Cref{eq:count-exponential}.
+The whole family satisfies \Cref{eq:count-exponential}; the face extension
+is proved in \Cref{eq:source-face-capacity}.
 
 \paragraph{Large matchings with arbitrary orientations and weights.}
 Start with any mixture of caterpillars and the building blocks of Brunck
@@ -929,9 +882,7 @@ arbitrary shallow remainder, uses a total number $Z$ of terms satisfying
  Z\geq\frac{(9/7)^k}{2d_k},\qquad
  d_k=1+\frac{2k}{7}+\frac4{49}\binom k2.
 \end{align}
-Thus $k=\Omega(N)$ gives an exponential bound. Biases may also be allowed:
-taking the recession function preserves the homogeneous target and the
-comparison graphs.
+The bound is exponential when $k=\Omega(N)$ and also permits biases.
 
 Every orientation and face state of a canonical tree with matching number
 at least $k$ is included, using the original-graph description following
@@ -954,13 +905,98 @@ All tree shapes, edge orientations, and face states are allowed.
 Canonical oriented star face functions can be added while counting only
 nonstar terms in the following exponential bounds. The base-family rate remains
 $\Omega((3/2)^{N/2})$, and \Cref{eq:matching-mixture-count} holds for
-$N\geq15$, counting only nonstar terms. This uses a fixed exact separator
-and coordinate deletion, described at the end of
+$N\geq15$, counting only nonstar terms. The proof is at the end of
 \Cref{app:count-exponential}. The unrestricted all-tree exponential bound
 remains open.
 
-% Begin sections/dictionary.tex
-\section{Why the dictionary spans the maximum}\label{sec:dictionary}
+
+
+\section{Network size}\label{sec:size}
+
+The widths in \Cref{thm:main} are worst-case upper bounds: we count
+all possible descriptions after collecting linear terms into the head and
+orienting the remaining hinges consistently. The construction retains
+$q_N$ basis functions; zero padding realizes the stated widths.
+
+The quotient dimension satisfies
+$q_N\leq3^{N-2}C_N-N(N-1)$, with $C_N$ as in \Cref{eq:count}.
+The complete count and the resulting widths are proved in \Cref{app:widths}.
+
+\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{41}{caterpillar_net}).}
+The theorem and equation links identify supporting declarations or written
+proofs. \Cref{app:lean} prints the network definitions
+and the main theorem, and describes the verification certificate.
+
+\section{CPWL functions}\label{sec:sharing}
+
+By the Wang--Sun theorem, every CPWL function on $\R^d$ is a signed sum of
+maxima of $d+1$ affine functions. These affine functions can be taken from
+any finite family among which the function selects pointwise, without
+rescaling them.
+
+\begin{representationtheorem}[Koutschan--Moser--Ponomarchuk--Schicho, {\cite[Theorem~2.4]{KoutschanEtAl}}, \leandecl{MaxCaterpillar/KMPS.lean}{410}{kmps_of_continuous_selection}, \leandecl{MaxCaterpillar/KMPS.lean}{447}{kmps_pieces}]
+Let $f:\R^d\to\R$ be continuous, and let $g_1,\ldots,g_n:\R^d\to\R$ be affine
+with $f(x)\in\{g_1(x),\ldots,g_n(x)\}$ for every $x$. Then there are $T\in\mathbb N$,
+signs $\varepsilon_t\in\{-1,1\}$, and maps
+$\alpha_t:\{0,\ldots,d\}\to\{1,\ldots,n\}$ with
+\begin{align}\label{eq:kmps}
+ f(x)=\sum_{t=1}^T\varepsilon_t\maxn_{d+1}\bigl(g_{\alpha_t(0)}(x),\ldots,g_{\alpha_t(d)}(x)\bigr)
+ \qquad\text{for every }x\in\R^d.
+\end{align}
+\end{representationtheorem}
+The affine functions of every polyhedral description of a CPWL function
+satisfy the hypothesis. The application to the Caterpillar Net is the following.
+
+\begin{corollary}[Shared first hidden layer, \leandecl{MaxCaterpillar/CPWLRational.lean}{19}{cpwl_two_hidden_layers_pieces_rational}, \leandecl{MaxCaterpillar/Sharing.lean}{309}{card_imageSets_le_sum_choose}, {\Cref{pf:cor:cpwl-sharing}}]\label{cor:cpwl-sharing}
+Let $d\geq2$ and let $f$ have the representation in \Cref{eq:kmps} using
+$g_1,\ldots,g_n$. Let $s$ be the number of distinct argument sets
+$\alpha_t(\{0,\ldots,d\})$, and let $h_2$ be the second hidden layer width
+in \Cref{thm:main} for $N=d+1$.
+Then $f$ has a two-hidden-layer representation with widths
+$\binom n2+n+1$ and $s(h_2-2)+2$, where
+$s\leq\min\bigl(T,\sum_{m\leq d+1}\binom nm\bigr)$.
+The second hidden layer and output layer have rational weights and zero
+biases. Every first hidden layer neuron applies $\relu$ to
+$\pm(g_a-g_b)$ or $\pm g_a$; rational $g_i$ give rational weights and
+biases, and linear $g_i$ give zero biases.
+\end{corollary}
+
+\section{Conclusion}
+The Caterpillar Net uses $q_N$ caterpillar face functions with rational
+coefficients, giving second hidden layer width $q_N+2$ before padding.
+Conversely, every such expansion needs
+$\Omega((3/2)^{N/2})$ caterpillar functions (\Cref{thm:count-exponential}), so caterpillar building blocks
+cannot give subexponential second widths. Reducing our upper bound
+$2^{O(N\log N)}$ to $2^{O(N)}$ remains open. The factorial dimension bound
+in \Cref{thm:quotient-lower} limits compression by a basis of the entire
+dictionary; it does not give a factorial lower bound for representing the
+single function $\maxn_N$.
+All caterpillar face states, including those with disconnected retained
+forests, are already included in the construction. More generally, a family of $2^{O(N)}$ oriented
+canonical tree descriptions still has only $2^{O(N)}$ face descriptions:
+each tree contributes at most $3^{N-2}$ edge states. A uniform spanning
+identity for such an exponential-size family remains open. Whether the
+maximum has two-hidden-layer representations of subexponential width with other
+second-layer functions remains open.
+\label{main-text-end}
+
+\clearpage
+\appendix
+% Begin appendices/dictionary.tex
+\section{Why the dictionary spans the maximum}\label{app:dictionary}\label{sec:dictionary}
+
+\subsection{Geometric setup}\label{app:dictionary-geometry}
+
+For \Cref{eq:unit-polytope}, the segment $[0,\ell]$ has support function $\relu\circ\ell$, Minkowski sums add support functions, and adjoining $0$ applies the outer ReLU.
+
+For a canonical tree, the head connects the apex label to the tree, so
+the head and $N-2$ edge functions are linearly independent. Thus the base is an $(N-2)$-dimensional
+zonotope with affine hull avoiding $0$, and $Q_{h,L}$ is an
+$(N-1)$-dimensional pyramid. Each nontrivial face containing $0$ cones over
+a base face. Maximizing on each base segment selects $0$, $\ell$, or
+$[0,\ell]$, with support functions $0$, $\ell$, and $\relu\circ\ell$;
+the outer ReLU adjoins the apex. These are precisely the three states
+in~\Cref{eq:faces}.
 
 The maximum is the support function of a simplex. To work in its affine dimension, set
 \begin{align}\label{eq:simplex}
@@ -1023,14 +1059,7 @@ the required symmetry
 The signs cancel the extra exposed-face contributions modulo $\LS_{N-3}$,
 as proved below.
 
-\Needspace{8\baselineskip}
-\begin{theorem}[Dictionary sufficiency, \leandecl{MaxCaterpillar/Lemmas.lean}{54}{maximum_mem_dictionary}, {\Cref{pf:thm:dictionary}}]\label{thm:dictionary}
-For every $N\geq3$, the dictionary of \Cref{def:dictionary}
-satisfies
-\begin{align}\label{eq:dictionary-span}
- \maxn_N\in\spn\D.
-\end{align}
-\end{theorem}
+\subsection{Proof of dictionary sufficiency}
 
 \begin{Proof}{Theorem}{thm:dictionary}
 Define the error by
@@ -1280,95 +1309,6 @@ Both brackets lie in $\LS_{N-3}$, the first by
 \Cref{stp:reconstruction} now gives $f\in\LS_{N-2}$, and
 \Cref{stp:corrections} gives the dictionary representation.
 \end{Proof}
-% End sections/dictionary.tex
-
-\section{Network size}\label{sec:size}
-
-The widths in \Cref{thm:main} are worst-case upper bounds: we count
-all possible descriptions after collecting linear terms into the head and
-orienting the remaining hinges consistently. The construction retains
-$q_N$ basis functions; zero padding realizes the stated widths.
-
-The normalized description~\Cref{eq:normalized-description} of a caterpillar
-function depends only on its undirected
-spine, apex, and leaf attachments. For $m$ spine vertices these choices give
-the summand of $C_N$ in~\Cref{eq:count}. Each of the $N-2$ generators has
-three face states, giving at most $3^{N-2}C_N$ descriptions. The $N(N-1)$
-descriptions with no retained hinge and head $x_i-x_j$, $i\ne j$, can be
-combined with the auxiliary functions. By \Cref{thm:compilation}, the
-second width is the number of retained descriptions plus two;
-\Cref{app:widths} gives the complete count.
-
-\paragraph[Formalization]{Formalization (\leandecl{MaxCaterpillar/Theorems.lean}{41}{caterpillar_net}).}
-In this working draft, the theorem and equation links point to the local
-Lean sources. \Cref{app:lean} prints the network definitions
-and the main theorem, and describes the verification certificate.
-
-\section{CPWL functions}\label{sec:sharing}
-
-By the Wang--Sun theorem, every CPWL function on $\R^d$ is a signed sum of
-maxima of $d+1$ affine functions. These affine functions can be taken from
-any finite family among which the function selects pointwise, without
-rescaling them.
-
-\begin{representationtheorem}[Koutschan--Moser--Ponomarchuk--Schicho, {\cite[Theorem~2.4]{KoutschanEtAl}}, \leandecl{MaxCaterpillar/KMPS.lean}{410}{kmps_of_continuous_selection}, \leandecl{MaxCaterpillar/KMPS.lean}{447}{kmps_pieces}]
-Let $f:\R^d\to\R$ be continuous, and let $g_1,\ldots,g_n:\R^d\to\R$ be affine
-with $f(x)\in\{g_1(x),\ldots,g_n(x)\}$ for every $x$. Then there are $T\in\mathbb N$,
-signs $\varepsilon_t\in\{-1,1\}$, and maps
-$\alpha_t:\{0,\ldots,d\}\to\{1,\ldots,n\}$ with
-\begin{align}\label{eq:kmps}
- f(x)=\sum_{t=1}^T\varepsilon_t\maxn_{d+1}\bigl(g_{\alpha_t(0)}(x),\ldots,g_{\alpha_t(d)}(x)\bigr)
- \qquad\text{for every }x\in\R^d.
-\end{align}
-\end{representationtheorem}
-The affine functions of every polyhedral description of a CPWL function
-satisfy the hypothesis. The Lean proof follows Ovchinnikov's max--min form
-$f=\max_S\min_{j\in S}g_j$, expands it by inclusion--exclusion into an integer
-combination of maxima over subsets of $\{g_1,\ldots,g_n\}$, and reduces each
-maximum to subsets of at most $d+1$ functions by an affine dependence among
-$d+2$ gradients.
-
-\paragraph[Reusing the first hidden layer]{Reusing the first hidden layer (\leandecl{MaxCaterpillar/CPWLRational.lean}{19}{cpwl_two_hidden_layers_pieces_rational}, \leandecl{MaxCaterpillar/Sharing.lean}{309}{card_imageSets_le_sum_choose}).}
-Let $d\geq2$, and let $(h_1,h_2)$ be the widths of \Cref{thm:main} for
-$N=d+1$. Substituting the arguments of each term of~\Cref{eq:kmps} into the
-Caterpillar Net computes $f$. All terms use only the features
-$\relu(g_a-g_b)$ for $a<b$, $\relu(\pm g_1)$, and $\relu(g_a-g_1)$, so one
-first hidden layer of width $\binom n2+n+1$ serves every term. Terms with the
-same argument set $\alpha_t(\{0,\ldots,d\})$ compute the same maximum and are
-merged, and the auxiliary remainders of all terms form one pair
-$\relu(\pm R)$. The second hidden layer has width $s(h_2-2)+2$, where $s$ is the
-number of distinct argument sets and
-$s\leq\min\bigl(T,\sum_{m\leq d+1}\binom nm\bigr)$. Thus the second hidden layer
-holds one copy of the Caterpillar Net units for every distinct maximum;
-only the first hidden layer and the remainder pair are genuinely shared.
-The second hidden layer and output layer have rational weights and zero
-biases, and every first hidden layer neuron applies $\relu$ to
-$\pm(g_a-g_b)$ or $\pm g_a$. Hence rational $g_i$ give rational weights and
-biases, and linear $g_i$ give zero biases.
-
-\section{Conclusion}
-The Caterpillar Net uses $q_N$ caterpillar face functions with rational
-coefficients, giving second hidden layer width $q_N+2$ before padding.
-Conversely, every such expansion needs
-$\Omega((3/2)^{N/2})$ caterpillar functions (\Cref{thm:count-exponential}), so caterpillar building blocks
-cannot give subexponential second widths. Reducing our upper bound
-$2^{O(N\log N)}$ to $2^{O(N)}$ remains open. The factorial dimension bound
-in \Cref{thm:quotient-lower} limits compression by a basis of the entire
-dictionary; it does not give a factorial lower bound for representing the
-single function $\maxn_N$.
-All caterpillar face states, including those with disconnected retained
-forests, are already included in the construction. More generally, a family of $2^{O(N)}$ oriented
-canonical tree descriptions still has only $2^{O(N)}$ face descriptions:
-each tree contributes at most $3^{N-2}$ edge states. A uniform spanning
-identity for such an exponential-size family remains open. Whether the
-maximum has two-hidden-layer representations of subexponential width with other
-second-layer functions remains open.
-\label{main-text-end}
-
-\clearpage
-\appendix
-% Begin appendices/dictionary.tex
-\section{Supporting proofs for the dictionary theorem}\label{app:dictionary}
 
 \subsection{Finite elimination of the error}\label{app:residual}
 
@@ -1581,6 +1521,71 @@ Since $q>0$, the full empty-cut sum belongs to $\LS_{q-1}=\LS_{N-3}$. The empty-
 % Begin appendices/widths.tex
 \section{Network construction and width bounds}\label{app:widths}
 
+\subsection{Rational coefficients}\label{app:rational-coefficients}
+
+\begin{Proof}{Lemma}{lem:rational-coefficients}
+The vectors $(g_1(y),\ldots,g_d(y))$, $y\in\mathbb Q^N$, span
+$\mathbb R^d$: otherwise a nonzero linear functional annihilating them
+would give a nontrivial combination of the $g_j$ vanishing on the dense
+set $\mathbb Q^N$, hence everywhere by continuity. This contradicts
+independence. Select $d$ independent evaluation vectors as the rows of $E$.
+All entries of $E$ and the right side of \Cref{eq:coefficient-choice} are
+rational, so $c$ is rational. By \Cref{thm:dictionary}, $\maxn_N\in V_N$;
+its unique basis coordinates solve this same invertible system and
+therefore equal $c$.
+\end{Proof}
+
+\subsection{Network assembly}\label{app:network-assembly}
+
+\begin{Proof}{Lemma}{thm:compilation}
+Distinct chosen basis functions cannot normalize to the same description,
+so $|K|=q_N$.
+Geometrically, $[0,\ell]=\ell+[0,-\ell]$: reversing a generator shifts the
+head by the old generator. Normalization chooses a consistent orientation
+and a corresponding base corner; it does not rescale vectors or change the
+polytope (\Cref{fig:polytope-normalization}).
+
+The first hidden layer outputs $\Phi$ from~\Cref{eq:features}.
+Thus $W_1$ has rows $e_0^\top$ and $-e_0^\top$, then $e_i^\top-e_0^\top$ for $i>0$, then $e_i^\top-e_j^\top$ for $i<j$, using a fixed ordering within each block. Its row count is
+\begin{align}\label{eq:feature-count}
+\binom N2+(N-1)+2=\binom N2+N+1=h_1.
+\end{align}
+By~\Cref{eq:hinge-reversal}, these features recover all coordinates,
+\begin{align}\label{eq:recover-coordinates}
+\begin{aligned}
+x_0&=\relu(x_0)-\relu(-x_0),\\
+x_i&=x_0+\relu(x_i-x_0)-\relu(x_0-x_i)\qquad(i>0).
+\end{aligned}
+\end{align}
+For each $k=(h,M)\in K$, substitute~\Cref{eq:recover-coordinates} into $h(x)+\sum_{\ell\in M}\relu(\ell(x))$ and collect the coefficients of $\Phi(x)$ into a row vector $w_k^\top$. Every hinge in $M$ already has the orientation $i<j$, so its coefficient is added directly to the corresponding feature.
+
+To specify the remaining row, collect the auxiliary coefficients of $R$ as
+\begin{align}\label{eq:auxiliary-remainder}
+R(x)=\sum_i p_i\relu(x_i)+\sum_i n_i\relu(-x_i)+\sum_{i<j}s_{ij}\relu(x_i-x_j).
+\end{align}
+Each retained unit is translation invariant by~\Cref{eq:translation-invariance}, and $\maxn_N(x+t\one)=\maxn_N(x)+t$, so~\Cref{eq:compilation-hypothesis} gives
+\begin{align}\label{eq:remainder-translation}
+R(x+t\one)=R(x)+t,\qquad \sum_i p_i=1.
+\end{align}
+The coefficient sum follows by setting $x=0$ and $t=1$. Now choose $t$ large enough that every $x_i+t$ is nonnegative. Substituting the auxiliary expansion into~\Cref{eq:remainder-translation} cancels $t$ and gives
+\begin{align}\label{eq:compact-remainder}
+R(x)=\sum_i p_ix_i+\sum_{i<j}s_{ij}\relu(x_i-x_j).
+\end{align}
+Substitute~\Cref{eq:recover-coordinates} into this expression and collect the coefficients of $\Phi(x)$ into $w_R$. Thus both $w_k$ and $w_R$ are specified by finite sums of the previously defined coefficients. The entries of $W_1$ and of the rows $w_k$ are integers, because heads and hinges are integer combinations of coordinates. The row $w_R$ is a rational combination of the $p_i$ and $s_{ij}$, and $w_3$ consists of the $d_k$ and $\pm1$.
+
+Order $K$ and set the second hidden layer matrix and output layer vector to
+\begin{align}\label{eq:network-assembly}
+W_2=\begin{pmatrix}(w_k^\top)_{k\in K}\\w_R^\top\\-w_R^\top\end{pmatrix},\qquad
+w_3=\begin{pmatrix}(d_k)_{k\in K}\\1\\-1\end{pmatrix},\qquad b_1=b_2=b_3=0.
+\end{align}
+The second hidden layer outputs $U_k(x)$ and $\relu(\pm R(x))$. By~\Cref{eq:hinge-reversal} and~\Cref{eq:compilation-hypothesis},
+\begin{align}\label{eq:signed-remainder}
+w_3^\top\relu(W_2\Phi(x))=\sum_{k\in K}d_kU_k(x)+\relu(R(x))-\relu(-R(x))=\maxn_N(x).
+\end{align}
+\end{Proof}
+
+\subsection{Width bounds}
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/caterpillar-normalization.pdf}
@@ -1665,8 +1670,43 @@ h_1&\leq4N^2.\label{eq:first-growth}
 Taking logarithms gives the asymptotic bounds in~\Cref{thm:main}.
 \end{Proof}
 % End appendices/widths.tex
+\section{Application to CPWL functions}\label{app:sharing}
+
+\paragraph{Representation by existing affine pieces.}
+The affine functions of every polyhedral description of a CPWL function
+satisfy the hypothesis. The Lean proof follows Ovchinnikov's max--min form
+$f=\max_S\min_{j\in S}g_j$, expands it by inclusion--exclusion into an integer
+combination of maxima over subsets of $\{g_1,\ldots,g_n\}$, and reduces each
+maximum to subsets of at most $d+1$ functions by an affine dependence among
+$d+2$ gradients.
+
+\begin{Proof}{Corollary}{cor:cpwl-sharing}
+Let $d\geq2$, and let $(h_1,h_2)$ be the widths of \Cref{thm:main} for
+$N=d+1$. Substituting the arguments of each term of~\Cref{eq:kmps} into the
+Caterpillar Net computes $f$. All terms use only the features
+$\relu(g_a-g_b)$ for $a<b$, $\relu(\pm g_1)$, and $\relu(g_a-g_1)$, so one
+first hidden layer of width $\binom n2+n+1$ serves every term. Terms with the
+same argument set $\alpha_t(\{0,\ldots,d\})$ compute the same maximum and are
+merged, and the auxiliary remainders of all terms form one pair
+$\relu(\pm R)$. The second hidden layer has width $s(h_2-2)+2$, where $s$ is the
+number of distinct argument sets and
+$s\leq\min\bigl(T,\sum_{m\leq d+1}\binom nm\bigr)$. Thus the second hidden layer
+holds one copy of the Caterpillar Net units for every distinct maximum;
+only the first hidden layer and the remainder pair are genuinely shared.
+The second hidden layer and output layer have rational weights and zero
+biases, and every first hidden layer neuron applies $\relu$ to
+$\pm(g_a-g_b)$ or $\pm g_a$. Hence rational $g_i$ give rational weights and
+biases, and linear $g_i$ give zero biases.
+\end{Proof}
+
 % Begin appendices/lower.tex
 \section{Proofs of the lower bounds}\label{app:lower}
+
+One local test proves both kinds of lower bound: at a tied maximum, take
+a directional germ and discard lower-dimensional support functions.
+For expansion size, every tie must be detected by some unit, so we count
+the ties each unit can detect. For dictionary dimension, we exhibit one
+locality that detects each path order separately.
 
 \subsection{Proof of the exponential count bound}\label{app:count-exponential}
 
@@ -2177,6 +2217,15 @@ so the value is at most $1+(N-3)$. If $m=0$, the head contributes $0$,
 because $q\geq\min S>0$, so the value is at most $N-2$. Thus
 $U_k(e_c)\leq N-2<S_{a,c}(e_c)$.
 \end{Proof}
+
+\paragraph{Including all faces.}
+Translation adds only a linear function, also for every face.
+Nontrivial faces containing the apex give our caterpillar or rooted-star
+face functions, up to that linear term. The apex vertex and all base
+faces have support functions in $A_N$, since base faces are translated
+zonotopes generated by coordinate differences.
+Thus both papers' pyramid families, with all their faces, lie in the
+joint vocabulary of \Cref{sec:lower}.
 
 \section{Lean definitions and main theorem}\label{app:lean}
 

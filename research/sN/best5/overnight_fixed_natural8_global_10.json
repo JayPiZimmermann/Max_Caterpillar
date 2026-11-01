@@ -1,0 +1,16 @@
+{
+  "absolute_forms": 2068,
+  "bound": 10.0,
+  "constraints": 13850,
+  "groups": 292,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "nonzeros": 59648,
+  "one_neuron_per_flat_sign": true,
+  "parameters": 792,
+  "producer_sha256": "ce43407f10a61b238987167ffaa809c28c034dbaa134fc43fb252c6a8eae9bf8",
+  "seconds": 601.2243507000021,
+  "solver_status": 1,
+  "status": "BOUNDED_NO_CANDIDATE",
+  "strict_margin": "1/10000",
+  "variables": 5220
+}

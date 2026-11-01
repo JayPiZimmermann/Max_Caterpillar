@@ -1,0 +1,50 @@
+{
+  "bound": 8,
+  "producer_sha256": "3756818b8e722d7ff964de5276b625f8eab9e6f5024cdd4e89fd65c298b24b84",
+  "records": [
+    {
+      "auxsign": 1,
+      "core_index": 0,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 0.5067236719987704,
+      "status": 2
+    },
+    {
+      "auxsign": -1,
+      "core_index": 0,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 1.0446950830009882,
+      "status": 2
+    },
+    {
+      "auxsign": 1,
+      "core_index": 1,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 1.62563456800126,
+      "status": 2
+    },
+    {
+      "auxsign": -1,
+      "core_index": 1,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 2.1759195889972034,
+      "status": 2
+    },
+    {
+      "auxsign": 1,
+      "core_index": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 2.751708158000838,
+      "status": 2
+    },
+    {
+      "auxsign": -1,
+      "core_index": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 3.263615044001199,
+      "status": 2
+    }
+  ],
+  "seconds": 3.263721846997214,
+  "status": "BOUNDED_CORE_MIP_COMPLETE"
+}

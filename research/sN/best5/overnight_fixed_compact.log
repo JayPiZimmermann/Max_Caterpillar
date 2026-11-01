@@ -1,0 +1,13 @@
+{"processed": 1, "counts": {"constant": 1, "nonnegative": 0, "circuit4": 0, "survivor": 0}, "seconds": 0.0008307219977723435}
+{"processed": 401, "counts": {"constant": 385, "nonnegative": 14, "circuit4": 2, "survivor": 0}, "seconds": 0.5804861459982931}
+{"processed": 801, "counts": {"constant": 725, "nonnegative": 64, "circuit4": 12, "survivor": 0}, "seconds": 1.3001318239985267}
+{"processed": 1201, "counts": {"constant": 1067, "nonnegative": 118, "circuit4": 16, "survivor": 0}, "seconds": 1.6364666999979818}
+{"processed": 1601, "counts": {"constant": 1408, "nonnegative": 163, "circuit4": 24, "survivor": 6}, "seconds": 2.2484319519971905}
+{"processed": 2001, "counts": {"constant": 1765, "nonnegative": 200, "circuit4": 30, "survivor": 6}, "seconds": 2.7209580589988036}
+{"processed": 2401, "counts": {"constant": 2109, "nonnegative": 255, "circuit4": 31, "survivor": 6}, "seconds": 2.9801128969993442}
+{"processed": 2801, "counts": {"constant": 2465, "nonnegative": 299, "circuit4": 31, "survivor": 6}, "seconds": 3.1821181230006914}
+{"processed": 3201, "counts": {"constant": 2851, "nonnegative": 313, "circuit4": 31, "survivor": 6}, "seconds": 3.296170350000466}
+{"processed": 3601, "counts": {"constant": 3243, "nonnegative": 321, "circuit4": 31, "survivor": 6}, "seconds": 3.3775442999976804}
+{"processed": 4001, "counts": {"constant": 3635, "nonnegative": 329, "circuit4": 31, "survivor": 6}, "seconds": 3.500400521999836}
+{"processed": 4401, "counts": {"constant": 4035, "nonnegative": 329, "circuit4": 31, "survivor": 6}, "seconds": 3.5861543110004277}
+{"counts": {"circuit4": 31, "constant": 4406, "nonnegative": 329, "survivor": 6}, "lp": [403, 43, 360, 0], "seconds": 3.638983164997626, "status": "COMPLETE", "survivors": [[364, [1, 1]], [366, [1, 1]], [368, [1, 1]], [374, [1, 1]], [376, [1, 1]], [380, [1, 1]]]}

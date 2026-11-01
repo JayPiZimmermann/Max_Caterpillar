@@ -1,0 +1,86 @@
+{
+  "status": "EXACT_INTERVAL_ROOT_POSITION_RULE_OBSTRUCTION",
+  "n": 5,
+  "ranks": [
+    19,
+    20
+  ],
+  "columns": 26,
+  "exact_relations": [
+    [
+      [
+        0,
+        "-1"
+      ],
+      [
+        4,
+        "1"
+      ]
+    ],
+    [
+      [
+        8,
+        "-1"
+      ],
+      [
+        14,
+        "1"
+      ]
+    ],
+    [
+      [
+        11,
+        "-1"
+      ],
+      [
+        17,
+        "1"
+      ]
+    ],
+    [
+      [
+        8,
+        "-1"
+      ],
+      [
+        20,
+        "1"
+      ]
+    ],
+    [
+      [
+        11,
+        "-1"
+      ],
+      [
+        23,
+        "1"
+      ]
+    ],
+    [
+      [
+        12,
+        "-1"
+      ],
+      [
+        24,
+        "1"
+      ]
+    ],
+    [
+      [
+        13,
+        "-1"
+      ],
+      [
+        25,
+        "1"
+      ]
+    ]
+  ],
+  "independent_complete_DP_rows_checked": 2,
+  "source_sha256": "0f70fdc1921a98118ee88f0e2789807c6b2f2d1bdcaf9f5dd2619253b9ab9dfd",
+  "producer_sha256": "0e5f5f834a5747af1a0f8d711eaf97a969b6366097311477d3fe3d4e878b833e",
+  "scope": "Coefficients may depend on component size, both root positions relative to the interval boundaries, and both positive-away edge counts. Tree shapes and finer orientation placement are summed uniformly. Reflection and equal-size component exchange are exact orbit normalizations.",
+  "seconds": 0.42801975100155687
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_fast.py",
+    "prepare"
+  ],
+  "started_utc": "2026-10-24T21:57:07.385432+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_modular_fast_prepare.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 82.23930890599877,
+  "finished_utc": "2026-10-24T21:58:29.624738+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "overnight_fixed_p4_twoargs_geometry.json": "0075c10d7d500603b0f8a0c38cc7820044feb9871c91d6af6ea6431fff95008f",
+    "overnight_fixed_p4_twoargs_geometry.log": "0075c10d7d500603b0f8a0c38cc7820044feb9871c91d6af6ea6431fff95008f",
+    "overnight_fixed_p4_twoargs_geometry.md": "c8d44deb14d894b2e2fbd0e13cc0099728f2f62e2df7bd6111ec0379cdb53633",
+    "overnight_fixed_p4_twoargs_geometry.py": "e7b54d36421077a96a03cd19c5191c400047f1b9cfc8fb53610704359b4869b1",
+    "overnight_fixed_p4_twoargs_geometry_candidate_0.json": "fa55396c8f6f56544eabc383117b7439967cc34fdb2fc5a28476f60a1252d7c0",
+    "overnight_fixed_p4_twoargs_geometry_candidate_1.json": "a11cfcb6494cfdab70787f943a06962ea0c4400fa209421512e8639fae5a6dc0",
+    "overnight_fixed_p4_twoargs_geometry_candidate_2.json": "00aa01f8630599842c6af77a4923cd0cfb80a64bc1991e79e71240d17b1c0509",
+    "overnight_fixed_p4_twoargs_geometry_candidate_3.json": "8f6e42a75606e3b716e839093f15f294079def0fb3e30ae4333965944f205278"
+  },
+  "scope": "Restricted four-free-term template with arbitrary two comparison forms and arbitrary linear remainder; not all four-free-term P4 representations.",
+  "status": "FROZEN_EXACT_TWO_FIXED_SYMMETRIC_TERMS_EXCLUSION"
+}

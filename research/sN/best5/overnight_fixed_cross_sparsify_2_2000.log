@@ -1,0 +1,2 @@
+{"check": {"cones": 120, "curvature_groups": 109, "rays": 30}, "iteration": 0, "seconds": 0.6355178070007241, "status": "EXACT_GLOBAL_BRAID_PASS", "support": 16}
+{"status": "BOUNDED_SPARSE_SEARCH_COMPLETE", "best_free_width": 16, "seconds": 25.317280905997904, "producer_sha256": "f94f895d0804596c98533115c0408292a3828b1c741bed3d51401f473c5ca3ab"}

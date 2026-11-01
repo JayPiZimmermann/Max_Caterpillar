@@ -1,0 +1,17 @@
+{
+  "command": [
+    "research/sN/dfs/h5-growth/venv/bin/python",
+    "research/sN/trees/overnight_upper_block.py",
+    "balanced",
+    "prefix"
+  ],
+  "started_utc": "2026-10-24T21:39:28.020154+00:00",
+  "timeout_seconds": 1200,
+  "address_space_limit_bytes": 3221225472,
+  "threads": 1,
+  "log": "overnight_upper_balanced_block_prefix.log",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 198.46630962999916,
+  "finished_utc": "2026-10-24T21:42:46.486464+00:00"
+}

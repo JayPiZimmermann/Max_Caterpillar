@@ -1,0 +1,17 @@
+{"processed": 25, "found": false, "seconds": 11.721214164994308}
+{"processed": 50, "found": false, "seconds": 20.977806946000783}
+{"processed": 75, "found": false, "seconds": 32.09653390499443}
+{"processed": 100, "found": false, "seconds": 46.185549729998456}
+{"processed": 125, "found": false, "seconds": 56.754135297000175}
+{"processed": 150, "found": false, "seconds": 69.46349280099821}
+{"processed": 175, "found": false, "seconds": 80.81416783099849}
+{"processed": 200, "found": false, "seconds": 94.32148995700118}
+{"processed": 225, "found": false, "seconds": 106.93770125999436}
+{"processed": 250, "found": false, "seconds": 123.3239593939943}
+{"processed": 275, "found": false, "seconds": 137.3066517260013}
+{"processed": 300, "found": false, "seconds": 152.13365210199845}
+{"processed": 325, "found": false, "seconds": 167.70163818099536}
+{"processed": 350, "found": false, "seconds": 182.56372578100127}
+{"processed": 375, "found": false, "seconds": 197.0961847189974}
+{"processed": 400, "found": false, "seconds": 210.97737636899546}
+{"patterns": 206, "processed": 412, "producer_sha256": "afd5f6df9a71fd63ebec1d15f6bdb12406ca616e3d83ed2fd694d30d1087d5d5", "seconds": 216.11466564700095, "status": "PATTERN_BATCH_COMPLETE"}

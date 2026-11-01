@@ -1,0 +1,24 @@
+{
+  "checker_sha256": "4cff94516545f4818a9a95b7ed9da283b66832e1b9684420fd946a40dca229b9",
+  "counts": {
+    "cases": 1000,
+    "circuit_uses": 247,
+    "cone": 980,
+    "constant": 210,
+    "equation_spaces": 20,
+    "farkas": 222,
+    "split": 412,
+    "tree": 20
+  },
+  "hashes": {
+    "netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+    "overnight_fixed_bowtie_coverage.json": "1025f1e571a8e5db325dee16f738f5ec61657f92d5a05dcf4b26b78b4faa7c77",
+    "overnight_fixed_bowtie_coverage_triples.json": "f29a6c0c245bdea301f9e049665521a8c46654bd700c98d36a812ddef763e017",
+    "overnight_fixed_bowtie_inventory.json": "21f36c76b052776d5abec7a84409eb82da9e5f758ddb200bfae4996c00ecb5a1",
+    "overnight_fixed_bowtie_proof.jsonl.gz": "791c29908755280629921f51a0edca35135ee036c38b17f57ba2ed8cc2124873",
+    "overnight_fixed_k2_check.json": "286f7463b240218963ff7dc5abf8e3d2e233c1e0c86a0f3309ba736409624ee8"
+  },
+  "scope": "All real preactivations and remainder in the eight zero-sum first-layer feature span; mathematical locality/translation bridge; not Lean",
+  "seconds": 0.8249488789988391,
+  "status": "PARTIAL_PROOFS_VALID"
+}

@@ -1,0 +1,10 @@
+MARKED COMPLETE SOURCE COVERAGE PASS 2.47
+Traceback (most recent call last):
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_marked_bundle.py", line 293, in <module>
+    replay()
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_marked_bundle.py", line 227, in replay
+    check_minor(sector,columns)
+  File "/home/jzimmermann/code/Max_Caterpillar/research/sN/trees/overnight_upper_marked_bundle.py", line 110, in check_minor
+    assert row_digest(row) == record['sha256'], 'independently recomputed minor row'
+                              ~~~~~~^^^^^^^^^^
+KeyError: 'sha256'

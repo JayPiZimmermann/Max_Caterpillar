@@ -19,7 +19,7 @@ Combined with the certified four-free-neuron exclusion in
 h1 = 8  =>  h2 >= 7.
 ```
 
-Together with the separately established `h1>=8` and the uniform Lean-verified `h2>=ceil(N/2)+1`, every unrestricted five-input network therefore has total hidden width at least thirteen. The pairs `(8,4)`, `(8,5)`, and `(8,6)` are excluded, but `(9,4)` is not excluded by these results. The known `(10,6)` construction shows that the minimum second width can depend on the first width; the attained unrestricted tradeoff and Pareto frontier remain open.
+Together with the separately established `h1>=8` and the uniform Lean-verified `h2>=ceil(N/2)+1`, every unrestricted five-input network therefore has total hidden width at least thirteen. The pairs `(8,4)`, `(8,5)`, and `(8,6)` are excluded, but `(9,4)` is not excluded by these results. Comparing these exclusions with the `(10,6)` construction does **not** establish a tradeoff: this argument does not produce any network of first width eight. The later all-width rectangle obstruction in `../best5/overnight_fixed_natural8_rectangle.md` rules that first width out altogether. The attained unrestricted tradeoff and Pareto frontier remain open. Under the subsequent Lean-only evidence policy, the current checked statements are recorded in `../width_tradeoff/README.md`; the classification in this historical note is not a Lean theorem.
 
 ## Reduction to six zero-sum rows
 

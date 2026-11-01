@@ -1,0 +1,2 @@
+{"stage": "MATRIX_READY", "outer_forms": 45, "extra_first_hyperplanes": 15, "equations": 616, "seconds": 0.033001793002767954}
+{"extra_first_hyperplanes": 15, "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)", "outer_forms": 45, "producer_sha256": "9f94e0bdb382e860126ddac8e0de7a2fe75f2f6a9f749740939c69532386f801", "seconds": 0.317423967004288, "solver_status": 2, "status": "EXTRA_FIRST_HYPERPLANE_SEARCH_INCOMPLETE"}

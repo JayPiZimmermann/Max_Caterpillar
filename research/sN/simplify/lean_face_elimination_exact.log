@@ -1,0 +1,4 @@
+'MaxNN.ParamidGeom.Faces.mem_GSpanRel_of_lt_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxNN.ParamidGeom.Faces.mem_GSpanRel_sup_of_lt_finrank' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxNN.ParamidGeom.Faces.face_lemma_rel' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxNN.ParamidGeom.Faces.face_lemma_rel_proper' depends on axioms: [propext, Quot.sound, Classical.choice]

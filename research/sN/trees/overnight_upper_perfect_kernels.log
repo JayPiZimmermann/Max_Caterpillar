@@ -1,0 +1,51 @@
+symbolic calls 1000 depth 2 terms 10 elapsed 1.482670545578003
+symbolic calls 2000 depth 2 terms 10 elapsed 2.6468725204467773
+KERNELS 10 / 122 SECONDS 8.6
+symbolic calls 7000 depth 2 terms 12 elapsed 10.712651491165161
+KERNELS 20 / 122 SECONDS 16.9
+KERNELS 30 / 122 SECONDS 25.5
+symbolic calls 22000 depth 1 terms 6 elapsed 37.444191694259644
+KERNELS 40 / 122 SECONDS 71.6
+symbolic calls 38000 depth 1 terms 23 elapsed 76.79436254501343
+symbolic calls 40000 depth 1 terms 142 elapsed 82.24262714385986
+symbolic calls 41000 depth 1 terms 18 elapsed 83.61033082008362
+KERNELS 50 / 122 SECONDS 93.0
+symbolic calls 55000 depth 2 terms 28 elapsed 113.93125605583191
+KERNELS 60 / 122 SECONDS 119.5
+KERNELS 70 / 122 SECONDS 159.7
+symbolic calls 76000 depth 2 terms 40 elapsed 168.99829936027527
+symbolic calls 83000 depth 3 terms 11 elapsed 194.85244393348694
+symbolic calls 86000 depth 1 terms 55 elapsed 200.9888620376587
+symbolic calls 87000 depth 2 terms 35 elapsed 203.58569288253784
+symbolic calls 90000 depth 1 terms 190 elapsed 212.977459192276
+symbolic calls 93000 depth 2 terms 6 elapsed 224.223242521286
+symbolic calls 101000 depth 2 terms 98 elapsed 250.89328002929688
+symbolic calls 110000 depth 3 terms 16 elapsed 282.64523792266846
+KERNELS 80 / 122 SECONDS 303.6
+symbolic calls 125000 depth 2 terms 103 elapsed 340.6763434410095
+symbolic calls 132000 depth 1 terms 64 elapsed 357.2804021835327
+symbolic calls 133000 depth 1 terms 6 elapsed 359.1195755004883
+symbolic calls 135000 depth 2 terms 183 elapsed 391.9024131298065
+symbolic calls 137000 depth 3 terms 11 elapsed 395.98216915130615
+symbolic calls 139000 depth 3 terms 23 elapsed 399.95206212997437
+symbolic calls 149000 depth 3 terms 11 elapsed 423.86286211013794
+symbolic calls 153000 depth 2 terms 11 elapsed 432.7448101043701
+symbolic calls 154000 depth 2 terms 17 elapsed 434.6701121330261
+symbolic calls 155000 depth 2 terms 24 elapsed 436.3332257270813
+symbolic calls 158000 depth 2 terms 25 elapsed 457.18644094467163
+symbolic calls 159000 depth 3 terms 15 elapsed 460.8700077533722
+symbolic calls 160000 depth 3 terms 15 elapsed 463.06463098526
+KERNELS 90 / 122 SECONDS 484.6
+symbolic calls 181000 depth 1 terms 44 elapsed 545.211350440979
+symbolic calls 183000 depth 1 terms 12 elapsed 550.5636110305786
+KERNELS 100 / 122 SECONDS 550.7
+symbolic calls 196000 depth 3 terms 15 elapsed 626.5799331665039
+symbolic calls 203000 depth 3 terms 15 elapsed 646.635421037674
+symbolic calls 213000 depth 3 terms 12 elapsed 691.1970891952515
+symbolic calls 214000 depth 2 terms 52 elapsed 694.9666261672974
+KERNELS 110 / 122 SECONDS 699.9
+KERNELS 120 / 122 SECONDS 809.3
+symbolic calls 240000 depth 2 terms 103 elapsed 836.7306337356567
+symbolic calls 242000 depth 3 terms 14 elapsed 846.0916604995728
+symbolic calls 248000 depth 2 terms 46 elapsed 876.3780460357666
+DONE EXACT_SUBFAMILY_TOP_OBSTRUCTION 122 / 122

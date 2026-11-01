@@ -1,0 +1,9 @@
+{
+  "files": {
+    "overnight_fixed_p4_residual_one.md": "27f883df42adc63b6b581d55b6fa932ec363111dc69166a70b136d7ccda61597",
+    "overnight_fixed_p4_residual_one_check.json": "5ce02fcdffa3e5619654e66897fa8e53c15804f9454169f56def95a7e467a66f",
+    "overnight_fixed_p4_residual_one_check.log": "b631c75db07e5f6d00037793e614c5ca2d886a28f5aec7ba806b2dea87b74f97",
+    "overnight_fixed_p4_residual_one_check.py": "b1a4a2ba1defeddbbfef7424a0c9202b95fc5fbd4d8702cb2d27d6125fdcff6d"
+  },
+  "status": "FROZEN_EXACT_REPAIR_TEMPLATE_REFUTATION"
+}
