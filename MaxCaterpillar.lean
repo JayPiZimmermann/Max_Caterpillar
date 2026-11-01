@@ -15,3 +15,4 @@ import MaxCaterpillar.Dimension
 import MaxCaterpillar.SmallN
 import MaxCaterpillar.Frontier
 import MaxCaterpillar.Audit
+import MaxCaterpillar.Fiber

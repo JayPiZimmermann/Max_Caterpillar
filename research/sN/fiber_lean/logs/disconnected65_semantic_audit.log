@@ -1,0 +1,32 @@
+max4_6_5_at_least_two_components : Nontrivial (ConnectedComponents (SymmetryQuotient 4 6 5))
+max4_6_5_witness_components_ne : ConnectedComponents.mk (quotientMk Mixed65.mixedPoint) ≠
+  ConnectedComponents.mk (quotientMk Mixed65.paddedMinimalPoint)
+Mixed65.sector_isOpen : IsOpen Mixed65.sector
+Mixed65.normalizedCoefficientBound : Mixed65.NormalizedCoefficientBound
+Mixed65.physical_coefficient_bound : ∀ (net : Network 4 6 5) (t : ℝ),
+  0 < t →
+    net.W₁ = Mixed65.firstRows t →
+      (∀ (x : Point 4), Network.eval net x = Maximum 4 x) → 1 ≤ t * Mixed65.coefficientSize net
+Mixed65.physical_three_gate_extraction : ∀ (net : Network 4 6 5) (t : ℝ),
+  0 < t →
+    net.W₁ = Mixed65.firstRows t →
+      (∀ (y : Point 4), Network.eval net y = Maximum 4 y) →
+        ∃ S,
+          Finset.card S = 3 ∧
+            ∃ l,
+              ∀ (x : Mixed65.InvariantState),
+                Mixed65.invariantTarget x =
+                  (Finset.sum Finset.univ fun j => l j * Mixed65.physicalInvariantPart net t j x) +
+                    Finset.sum S fun j => Network.w₃ net j * relu (Mixed65.physicalInvariantPart net t j x)
+'MaxCaterpillar.Fiber.max4_6_5_mixed_sector_isClopen' depends on axioms: [Quot.sound, propext, Classical.choice]
+'MaxCaterpillar.Fiber.max4_6_5_at_least_two_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_raw_at_least_two_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_quotient_not_preconnected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_raw_not_preconnected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_not_one_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_witness_components_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Mixed65.physical_coefficient_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Mixed65.sector_isOpen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Mixed65.mixedPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Mixed65.paddedMinimalPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.max4_widths_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
