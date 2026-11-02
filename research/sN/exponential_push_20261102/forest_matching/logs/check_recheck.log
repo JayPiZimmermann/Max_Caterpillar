@@ -1,0 +1,29 @@
+@exists_cover_matching : ∀ {n : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+  SimpleGraph.IsAcyclic G → ∃ C M, IsVertexCover G C ∧ M ∈ matchings G (Finset.card M) ∧ Finset.card C ≤ Finset.card M
+@cover_card_le_of_no_matching : ∀ {n : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+  SimpleGraph.IsAcyclic G → ∀ (r : ℕ), (¬∃ B, B ∈ matchings G (r + 1)) → ∃ C, IsVertexCover G C ∧ Finset.card C ≤ r
+@matching_of_no_small_cover : ∀ {n : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+  SimpleGraph.IsAcyclic G →
+    ∀ (q : ℕ), (∀ (C : Finset (Fin n)), IsVertexCover G C → q ≤ Finset.card C) → ∃ B, B ∈ matchings G q
+@indexedGraph_oriented_cycle : ∀ {V : Type u_2} {ι : Type u_1} [inst : DecidableEq V] [inst : DecidableEq ι]
+  (A : Finset ι) (a b : ι → V),
+  ¬SimpleGraph.IsAcyclic (indexedGraph A a b) →
+    ∃ S ⊆ A,
+      Finset.Nonempty S ∧
+        ∃ reverse, ∀ (x : V → ℝ), (∑ i in S, if reverse i = true then -(x (a i) - x (b i)) else x (a i) - x (b i)) = 0
+'MaxCaterpillar.ExponentialPush.Forest.exists_leaf' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.exists_cover_matching' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.cover_card_le_of_no_matching' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.matching_of_no_small_cover' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.indexedGraph_oriented_cycle' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.Check.singleEdge_acyclic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

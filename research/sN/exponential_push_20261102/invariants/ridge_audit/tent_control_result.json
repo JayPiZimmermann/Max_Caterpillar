@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "evidence_kind": "Independent exact finite controls, not a substitute for the all-real Lean proof.",
+  "results": [
+    {
+      "n": 1,
+      "exact_input_increment_checks": 8
+    },
+    {
+      "n": 2,
+      "exact_input_increment_checks": 32
+    },
+    {
+      "n": 3,
+      "exact_input_increment_checks": 128
+    },
+    {
+      "n": 4,
+      "exact_input_increment_checks": 512
+    },
+    {
+      "n": 5,
+      "exact_input_increment_checks": 2048
+    }
+  ],
+  "total": 2728,
+  "negative_controls": [
+    "Nonpositive unequal increments need not satisfy the claimed positive-increment formula.",
+    "Two repeated diagonal differences annihilate MAX, so the non-diagonal condition is substantive."
+  ],
+  "elapsed_seconds": 0.7717961750458926,
+  "source_sha256": "4a41248089febfb0f3a48d7a670236b52fde5ce9e9c87989c8d23d99955447b2"
+}

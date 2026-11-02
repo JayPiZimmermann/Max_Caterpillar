@@ -1,0 +1,14 @@
+'MaxCaterpillar.ExponentialPush.FiniteIndex.inner_indexed' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.eval_indexed' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.rowSupport_indexed' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.rowSupport_card_le_indexed' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.translationNormalized_indexed' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.braidEdgeWeight_indexed' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

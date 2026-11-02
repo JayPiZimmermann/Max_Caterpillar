@@ -1,0 +1,49 @@
+{
+  "status": "Lean verified diagnostic research-only helper; uncommitted source; no publication-root integration or network bridge",
+  "created_utc": "2026-11-02T19:33:35.756612+00:00",
+  "lean_toolchain": "leanprover/lean4:v4.4.0",
+  "namespace": "MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment",
+  "declarations": [
+    "containsIndicator_insert",
+    "edgeFactor_nonneg",
+    "weighted_product_expansion",
+    "weighted_product_le",
+    "half_pow_outsideCount_le_product",
+    "weighted_matching_moment_le",
+    "weighted_q_matching_moment_le",
+    "uniform_permutation_matching_moment_le"
+  ],
+  "canonical_definitions": [
+    "containsIndicator",
+    "edgeFactor",
+    "outsideCount"
+  ],
+  "expected_type_check": "Source copied byte-for-byte as prefix of MatchingMomentCheck.lean, then independently stated forall expected types checked by := @theorem, followed by #check @theorem and #print axioms.",
+  "accepted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": [
+    "Explicit finite sample space \u03a9, literal selected:\u03a9\u2192Finset V, nonnegative weights w, actual weighted label-containment bounds for every finite I. Empty-I inclusion already bounds total mass\u22641; no normalization premise is needed.",
+    "Matching endpoint embedding e:(Fin q\u00d7Bool)\u21aaV enforces exactly 2q distinct labels. outsideCount literally counts edges whose two endpoints avoid selected labels.",
+    "Concrete uniform-permutation corollary uses existing GoodEvent.containment_fraction_le with 0<n and k\u2264n, selected labels = GoodEvent.smallRankGaps \u03c3 k.",
+    "No bridge from arbitrary unordered SimpleGraph matchings to the endpoint embedding, and no actual-network lower bound claimed."
+  ],
+  "commands": [
+    "flock /tmp/max_caterpillar_count65_small_lean_1.lock lake env lean research/sN/exponential_push_20261102/counting/MatchingMoment.lean",
+    "flock /tmp/max_caterpillar_count65_small_lean_1.lock lake env lean research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean"
+  ],
+  "exit_codes": {
+    "source": 0,
+    "exact_type_axiom_check": 0
+  },
+  "sha256": {
+    "research/sN/exponential_push_20261102/counting/MatchingMoment.lean": "372ebcf114221bc7c0502fd7f3feec1f01f08b60f89e03a72dc36365c1e1ce03",
+    "research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean": "feddecd61b1b7ea171adc0e872511d82681ce97a9a88fde2660de5be0f358ef2",
+    "research/sN/exponential_push_20261102/counting/MatchingMoment.check.log": "29c4308b171e998ea8315de948446c6469ad130015a5d9e4f15928c631a54e26",
+    "research/sN/exponential_push_20261102/counting/MatchingMoment.build.log": "4b3dab7e271fd4371a0dd973687be7ba7685a482e2c6987a1b91c6f7e6e02513",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.olean": "93b87acf2aa1025bd6562c440720731d628a674b042178e28e93ce21dfd6142d"
+  }
+}

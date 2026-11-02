@@ -1,0 +1,2 @@
+'MaxCaterpillar.ExponentialPush.Forest.acyclic_mono' depends on axioms: [propext, Quot.sound]
+'MaxCaterpillar.ExponentialPush.Forest.exists_leaf' depends on axioms: [propext, Quot.sound, Classical.choice]

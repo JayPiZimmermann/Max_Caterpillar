@@ -1,0 +1,22 @@
+@raw_nine_array_highrank : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  3 ≤ N →
+    ∀ (A : Fin h₁ → Point N) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Point N) (θ d : Fin h₂ → ℝ)
+      (B : Fin h₁ → ℝ) (L : Point N) (β : ℝ),
+      (∀ (x : Point N),
+          ∑ k : Fin h₂,
+                d k *
+                  relu (∑ j : Fin h₁, W k j * relu (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, U k i * x i + θ k) +
+              (∑ j : Fin h₁, B j * relu (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, L i * x i + β) =
+            Maximum N x) →
+        ∃ k,
+          d k ≠ 0 ∧
+            N - 1 ≤
+              FiniteDimensional.finrank ℝ
+                ↥(LinearMap.range (LinearMap.prod (linMap (U k)) (LinearMap.pi fun j => W k j • linMap (A j))))
+'MaxCaterpillar.ExponentialPush.Ridge.Check.raw_nine_array_highrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.exists_active_original_second_highrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.maxThreeNet_eval' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,32 @@
+research/sN/exponential_push_20261102/general_rows/AdaptiveOffset.lean:46:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+research/sN/exponential_push_20261102/general_rows/AdaptiveOffset.lean:86:2: warning: try 'simp at hf' instead of 'simpa using hf' [linter.unnecessarySimpa]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.original_inner_odd_part' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.offsetNet_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.no_first_row_internal' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.both_actual_survive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.actual_gradient_plus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.actual_gradient_minus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.every_tail_subset_sum_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.local_plus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.local_minus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.ExponentialPush.localized_offsets_differ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite actual ReLU/active-gradient/local-Boolean and literal A/B/C Good/Q controls; the all-N asymptotic proof is in SELECTOR.md, not a Lean theorem.",
+  "cases": [
+    {
+      "N": 11,
+      "P_size": 2,
+      "S": [
+        0,
+        1,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "gate_count": 21,
+      "conditional_selected_set_counts": {
+        "1": {
+          "base": 44,
+          "with_enough": 44,
+          "restricted_base": 8,
+          "restricted_with_enough": 8,
+          "raw_space": 576
+        },
+        "2": {
+          "base": 44,
+          "with_enough": 12,
+          "restricted_base": 8,
+          "restricted_with_enough": 2,
+          "raw_space": 576
+        },
+        "3": {
+          "base": 36,
+          "with_enough": 0,
+          "restricted_base": 6,
+          "restricted_with_enough": 0,
+          "raw_space": 576
+        }
+      }
+    },
+    {
+      "N": 12,
+      "P_size": 3,
+      "S": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        10
+      ],
+      "gate_count": 24,
+      "conditional_selected_set_counts": {
+        "1": {
+          "base": 1224,
+          "with_enough": 1224,
+          "restricted_base": 440,
+          "restricted_with_enough": 440,
+          "raw_space": 14400
+        },
+        "2": {
+          "base": 1224,
+          "with_enough": 552,
+          "restricted_base": 440,
+          "restricted_with_enough": 192,
+          "raw_space": 14400
+        },
+        "3": {
+          "base": 1152,
+          "with_enough": 0,
+          "restricted_base": 408,
+          "restricted_with_enough": 0,
+          "raw_space": 14400
+        },
+        "4": {
+          "base": 864,
+          "with_enough": 0,
+          "restricted_base": 288,
+          "restricted_with_enough": 0,
+          "raw_space": 14400
+        }
+      }
+    }
+  ],
+  "source_sha256": "bfd3e7220e77d8c04a22743a3d72b1d536adb5a83238a6d1d10f4ce27e4314e8"
+}
