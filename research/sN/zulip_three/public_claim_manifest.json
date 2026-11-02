@@ -1,0 +1,44 @@
+{
+  "root": "MaxCaterpillar",
+  "exact_expected_types": "verification/fiber/ZulipThreePublicCheck.lean",
+  "allowed_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "claims": [
+    {
+      "task": "extra-width-connectivity",
+      "module": "MaxCaterpillar.Fiber.Disconnected65",
+      "declaration": "MaxCaterpillar.Fiber.max4_6_5_at_least_two_components"
+    },
+    {
+      "task": "natural-activation-intervention",
+      "module": "MaxCaterpillar.Fiber.NaturalInterventions",
+      "declaration": "MaxCaterpillar.Fiber.NaturalInterventions.connected_natural_activation_counterexample"
+    },
+    {
+      "task": "regular-same-gate-representation-counterexample",
+      "module": "MaxCaterpillar.Fiber.GatingAbstractions.RegularCounterexample",
+      "declaration": "MaxCaterpillar.Fiber.GatingAbstractions.regular_same_gate_exact_counterexample"
+    },
+    {
+      "task": "binary-pattern-component-counterexample",
+      "module": "MaxCaterpillar.Fiber.BinaryPatterns",
+      "declaration": "MaxCaterpillar.Fiber.BinaryPatterns.strict_connected_binary_pattern_counterexample"
+    },
+    {
+      "task": "global-binary-map-output-sign-converse",
+      "module": "MaxCaterpillar.Fiber.BinaryPatterns.GlobalConvexitySigns",
+      "declaration": "MaxCaterpillar.Fiber.BinaryPatterns.joined_of_global_binary_maps_output_signs"
+    },
+    {
+      "task": "actual-max4-component-lower-count",
+      "module": "MaxCaterpillar.Fiber.Count65.AtLeast65",
+      "declaration": "MaxCaterpillar.Fiber.max4_6_5_at_least_65_components"
+    },
+    {
+      "task": "actual-max4-exact-component-count",
+      "module": "MaxCaterpillar.Fiber.Count65",
+      "declaration": "MaxCaterpillar.Fiber.max4_6_5_has_65_components"
+    }
+  ],
+  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. The gating regularity conclusion concerns the entire all-input zero-bias exact fiber in all 45 physical weights. No strengthened h2 network theorem is claimed.",
+  "helpers": "Leaf helpers remain governed by their respective exact-type/axiom receipts. This manifest promotes seven public headline claims; it does not replace the historical repository-wide manifest."
+}

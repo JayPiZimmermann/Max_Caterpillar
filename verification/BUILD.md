@@ -2,6 +2,32 @@
 
 Status: **historical verification receipt; the current cleanup needs a new gate**.
 
+## Scoped fiber counterexample and count gate, 2 November 2026
+
+The [seven-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
+has a separate [working-tree receipt](../research/sN/zulip_three/public_claim_receipt.json).
+Its gate rebuilds `MaxCaterpillar`, checks handwritten exact statements through
+that public root, checks compatibility with the existing fiber interface, scans
+the local import closure, and audits the three permitted foundational axioms.
+Run it with:
+
+```sh
+scripts/lean_lock.sh python3 research/sN/zulip_three/check_public_claims.py
+```
+
+The claims cover exactly 65 components after extra width, equal natural activations
+with different interchange responses, incomparable representation partitions
+at regular points with unchanged gates, and binary gate changes within one
+exact fiber component. A positive converse joins networks with equal complete
+labelled binary maps and matching nonzero output signs, with arbitrary first
+layers and biases. The regular all-input exact-fiber statement allows all
+45 physical weights to vary with biases fixed to zero; the separate empirical
+regularity theorem allows arbitrary biases on its specified four-input dataset.
+These checks do not establish the proposed stronger second-hidden-layer
+lower bound. They are content-bound workspace
+checks and do not replace a clean-commit publication gate or the historical
+repository-wide manifest below.
+
 The 122-statement receipt below predates the consolidation into
 `MaxCaterpillar/Count/`, `MaxCaterpillar/Dimension.lean`, and
 `MaxCaterpillar/Retained.lean`. Its source hashes do not certify the current
