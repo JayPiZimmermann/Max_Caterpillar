@@ -1,0 +1,13 @@
+@NormalizedTotalHalf.exists_model : ∀ {N n h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero n]
+  (net : NormalizedNetwork N h₁ h₂),
+  TranslationNormalized net →
+    (∀ (x : Point N), eval net x = Maximum N x) →
+      2 * n ≤ N →
+        ∃ S,
+          Finset.card S = n ∧
+            ∃ model,
+              (∀ (x : Point n), eval model x = Maximum n x) ∧
+                TranslationNormalized model ∧ 4 * fourthMoment model ≤ 81 * h₁ ∧ 4 * nonBraidCount model ≤ h₁
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedTotalHalf.exists_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

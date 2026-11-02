@@ -1,0 +1,85 @@
+@tail : {n : ℕ} → (S : Finset (Fin n)) → Fin (tailCount S) ↪ Fin n
+@tailIndex : {n : ℕ} → (S : Finset (Fin n)) → (v : Fin n) → v ∉ S → Fin (tailCount S)
+Sample : ℕ → Type
+@exists_common_gap_threshold : ∀ {n h₁ h₂ : ℕ} (net : NormalizedNetwork n h₁ h₂),
+  ∃ B, 2 ≤ B ∧ ∀ (T : ℝ), B ≤ T → CommonGapScale net T
+@fullPermutation_tail : ∀ {n : ℕ} (S : Finset (Fin n)) (τ : Equiv.Perm (Fin (tailCount S))) (j : Fin (tailCount S)),
+  (fullPermutation S τ).symm ((tailPosition S) j) = (tail S) (τ j)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.keep_image' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.tail_image' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.keep_keepIndex' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.tail_tailIndex' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.keepIndex_keep' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.tailIndex_tail' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.keep_range' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.tail_range' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.card_total' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.selected_sum' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.tail_sum' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.sum_labels' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.collapsedRow_none' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.actualPoint_selected_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.actualPoint_tail_negative' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.exists_common_gap_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.labelsEquiv' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.selectedPosition_val' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.tailPosition_val' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.fullPermutation_selected' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.fullPermutation_tail' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.fullPermutation_selectedLabels' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.rawConfig_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.average_rawConfig' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.sum_samples' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Sampling.card_samples' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

@@ -4,7 +4,7 @@ Status: **historical verification receipt; the current cleanup needs a new gate*
 
 ## Scoped fiber and second-width gate, 2 November 2026
 
-The [fifteen-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
+The [seventeen-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
 has a separate [working-tree receipt](../research/sN/zulip_three/public_claim_receipt.json).
 Its gate rebuilds `MaxCaterpillar`, checks handwritten exact statements through
 that public root, checks compatibility with the existing fiber interface, scans
@@ -32,6 +32,18 @@ check the actual network formula and all proof dependencies. The strongest full 
 feeding first neurons, has improved constant `1/40000000`, and has no first-width
 cap. Its [nine-array contract](h2/AffineFeedingSharpCheck.lean) and
 [receipt](../research/sN/jensen_bound/feeding_sharp_receipt.json) are separate.
+For total first width `h₁ ≤ N²`, the further [larger-cutoff theorem](../MaxCaterpillar/Frontier/RandomRestriction/QuadraticCutoff.lean#L123)
+proves `h₂ ≥ N²/10000000` for every `N ≥ 3`, also with all affine skips.
+Its [independent contract](h2/QuadraticCutoffCheck.lean) and
+[receipt](../research/sN/jensen_bound/quadratic_cutoff_receipt.json)
+instantiate the proved five-input obstruction.
+The seventeenth claim is explicitly conditional: the [Bernoulli affine theorem](../MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/AffineLowerBound.lean#L50)
+gives a square-root exponential lower bound at `h₁ ≤ C N²` from the displayed
+growing local matching obstruction `H(4q+1,q)`. The hypothesis `H` remains
+unproved. Its [expanded raw contract](h2/AffineBernoulliLowerBoundCheck.lean)
+and [receipt](../research/sN/jensen_bound/affine_bernoulli_receipt.json) check
+the original network formula and all normalization, restriction, probability
+and counting steps.
 The finite coefficient certificate is proved, not an extra hypothesis. See the
 [proof overview](../research/sN/jensen_bound/README.md).
 

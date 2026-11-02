@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "module": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters",
+  "scope": "Pure scalar and literal finite parameter estimates for the Bernoulli conditional route; actual probability laws, structural hypotheses and network event-union proofs are separate modules.",
+  "hypotheses": "d:Nat>=1 and n>=10^10*d^2.",
+  "literal_choices": "p=1/(1000*d*sqrt(n)), mu=sqrt(n)/(1000*d), delta=1/(1000*d^2), K=floor(delta*n), q=floor(mu/8), k0=4*q+1, cap=floor(2*mu), m0=n-cap, c0=7*K/(24*n^2).",
+  "floor_and_positivity": "mu>=100, q>=mu/9>=1, k0<=3mu/5, cap<=2mu, n<=2m0, m0>=400, delta*n/2<=K<=delta*n, 4<=K,100K<=m0, and k0<=cap. Exact p*n=mu,p^2*n=alpha^2 and K real-floor bridge are proved.",
+  "support_and_shortQ": "G<=1/1000 for 0<=L<=d^2*n^2 using actual descending factorial denominators;8K/m0<=16/1000.",
+  "envelope": "(p^2/c0)^q*exp(c0*cap*(n-1))<=exp(-(7/18-1/1000)*mu)<=exp(-3mu/8). The base48/7000 and shift<=mu/1000 are derived, not assumed.",
+  "conditioning": "2Mp^3<=2e-6*mu for M<=d^2*n^2; explicit admissible denominator>=.5exp(-2e-6*mu)>0 and exact conditioned selected-size ratio<=1/100.",
+  "coverage": "The three explicit bad-event upper formulas imply conditional remaining mass>=9/10.",
+  "width_scalar": "Given the finite conditional union inequality9/10<=h2*neuronEnvelope, h2>=(9/10)*exp(3mu/8), hence h2>=(1/2)*exp(3sqrt(n)/(8000d)). This antecedent is explicit and is proved by separate actual-model assembly.",
+  "audit_style": "Symbolic expected types and transitive axioms; no concrete numerical sqrt evaluation.",
+  "axiom_checks": {
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.parameter_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.supportBudget_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.shortQ_budget_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.neuronEnvelope_le_strong": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.neuronEnvelope_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.noInternalExponent_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.admissible_denominator_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.conditioned_size_ratio_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.coverage_from_explicit_budgets": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.conditional_width_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "project_source_count": 36,
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBias.lean": "56fd341de70bc3acced37fb94609013a82027125fa1e0869bc50f64d95210e03",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBiasConstants.lean": "e2235ebe52baf5caa30c132523b509cbb76875e07a99a4ba533da0a8f90e5f51",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinUniformity.lean": "306023fc21fbdf8378ba23f2e36760ce7a0b12cabf00877d633bbff77a675391",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesDefs.lean": "f7b5f7f8465a7813e6a97377154173966dc5951ad1a9f2ff5669fa701c251be5",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesGeometry.lean": "3f7adb96877fc48da14894892261384b7b20ad7c474b78cb93183e0e953e6903",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesPairs.lean": "515d28e6cce775955349aee9c60745479257540fd743c6995640e51919cb61e8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesProbability.lean": "d7f21be1d248213e3a9fb0763fb9a6d5cf654c1b75d5af987397eb282e51b2f4",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventGeometry.lean": "70c159b881fd6aee73dbd3d1688f40756fa1a05de5ed1d36a1ce82815b97512a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventMoments.lean": "03fdbf2c51f71fd6c7bc8910976481d3b4e93df465461a66de715c23e62c783d",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventRankMoments.lean": "2d096ab5f6bcd52925d75c215eb8fd3f40540d9d17ed58f6445b8255707d8532",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/Coverage.lean": "bf73d2c6e918c5d6e3e55226db58cb9fbbf4a970ab163ea1952ce381fedfa9ce",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/Defs.lean": "5e7bf088bcae2e2a8bd0789fc1872a74f2abff107bc625aae558d9523533a894",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/Exponential.lean": "7b8d798d052362dbc217443645df8ba24324481988e08bd6aa630a4c1289da16",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/ExponentialBasic.lean": "7596f2073c8f54bce3c4b373d0c994cd9dfacfea0eb22285e3797f58ff10bcf4",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/Floors.lean": "9ebd5aab55ae8254c6e40d01f5d8f660dcf49afa2ffcd3475f626ed61ffafcf0",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/SupportBudget.lean": "154900deb88a67e1159828e1c128c358c7f08261a12093aecd08b6fbcccc5b40",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters.lean": "e830366df7732fe5dc81869b6885ce24d2cf91675d73ba6a7cd183d01bfd4472",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ExpSeries.lean": "c0b7304454ff2ebc7e24d3d4922934cfbdfdd1f7e72713a3d2ea0101f41c5ec7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/Falling.lean": "13f46ff0fec8a3b13b988259a66472b7f478e403f6d923b4ccac74727825f5a7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean": "96a250ffa4af5d4eac760ac16ca68bef008093f54eb2a10c56c032dd9308cfef",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Selected.lean": "4db12f9634fa0cbee58c879c46abc5a666e523a23caf2a9e6a286488e0d410b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/TailEnvelope.lean": "786fe8d609c0b5217e70dad4d34aae47c83eb26a3c09903327be273a38e2669a",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingCoins.lean": "42d33bf5d0af21a711d4f199a84fc94c0bd3bbf4d24860eb91144c2a8a504189",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/AllGraphs.lean": "b1492c09ed372e63247fcb6de525c4d53b58a6499df1bc80eea4cc3e1a004153",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Counting.lean": "ab8e5fb577545b94e65b359dca7b6604d6b7e5062a4adf603f98bf4302160298",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Damage.lean": "0ba126736cb127054f360642d9ccf197337acbd032c65cbdab1bf03665e9d9a3",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Forcing.lean": "ae14a21f31a07382d457393064bff7d6a0d681d978c5aebc6914bcffc8d43e4f",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Identity.lean": "a3184641dd0994b5b3868f16f714c2a93e16a7ddb308bf2b423040df72b4ed39",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Laplace.lean": "5873b4f10b184e62f3c42ad711fc90b12b4101250f4a31c18a4c25749380a6f8",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Model.lean": "06127778a8e72ab0b708d249b35ce0015cd01c7ab28fa842a9281ac9206ba798",
+    "MaxCaterpillar/Frontier/RandomRestriction/PerNeuronMatching.lean": "86657ebdc6217a9244ab3e6c77e5a17adee3f5a9b5cb04e02096c82b1747befd",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/counting_routes/bernoulli_exponential_basic_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/bernoulli_exponential_basic_build.log": "e80a700f29d4a31ae1aec6f59944c843bc10f6b052e0563a34e17dc5977a5d80",
+    "research/sN/jensen_bound/counting_routes/bernoulli_exponential_final_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/bernoulli_exponential_final_build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameters_check.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameters_check.log": "b2d4918f201da15f67d98fcc142ff9bf947bafa0839973eeac4cc335aed83462",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameters_final_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameters_final_build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/sN/jensen_bound/counting_routes/transfer/bernoulli_parameters_receipt.py": "a1bdae5b1acc49114f6049246e869480a82ea57e99724a40b547f216ede0d123",
+    "verification/h2/BernoulliParametersCheck.lean": "37d967028fdde633e15d2043531bc93629e5d5afafd306a28265a7cde707c400"
+  }
+}

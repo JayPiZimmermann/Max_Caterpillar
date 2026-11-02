@@ -1,0 +1,47 @@
+@mean_exp_card : ∀ {n : ℕ} (p t : ℝ), (mean p fun S => Real.exp (t * ↑(Finset.card S))) = (1 - p + p * Real.exp t) ^ n
+@mean_exp_card_le : ∀ {n : ℕ} (p t : ℝ),
+  0 ≤ p → p ≤ 1 → (mean p fun S => Real.exp (t * ↑(Finset.card S))) ≤ Real.exp (↑n * p * (Real.exp t - 1))
+@mass_le_exp_markov : ∀ {n : ℕ} (p t a : ℝ),
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ (E : Finset (Finset (Fin n))),
+        (∀ S ∈ E, a ≤ t * ↑(Finset.card S)) → mass p E ≤ Real.exp (↑n * p * (Real.exp t - 1) - a)
+exp_half_le_five_thirds : Real.exp (1 / 2) ≤ 5 / 3
+exp_neg_half_le_five_eighths : Real.exp (-(1 / 2)) ≤ 5 / 8
+@mass_card_gt_two_mean_le : ∀ {n : ℕ} (p : ℝ),
+  0 ≤ p →
+    p ≤ 1 → mass p (Finset.filter (fun S => 2 * (↑n * p) < ↑(Finset.card S)) Finset.univ) ≤ Real.exp (-(↑n * p) / 3)
+@mass_card_le_three_fifths_mean_le : ∀ {n : ℕ} (p : ℝ),
+  0 ≤ p →
+    p ≤ 1 →
+      mass p (Finset.filter (fun S => ↑(Finset.card S) ≤ 3 * (↑n * p) / 5) Finset.univ) ≤ Real.exp (-3 * (↑n * p) / 40)
+@exp_neg_two_mul_le_one_sub : ∀ {x : ℝ}, 0 ≤ x → x ≤ 1 / 2 → Real.exp (-2 * x) ≤ 1 - x
+@exp_neg_two_sum_le_prod_one_sub : ∀ {ι : Type u_1} (J : Finset ι) (x : ι → ℝ),
+  (∀ i ∈ J, 0 ≤ x i) → (∀ i ∈ J, x i ≤ 1 / 2) → Real.exp (-2 * ∑ i in J, x i) ≤ ∏ i in J, (1 - x i)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_exp_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_exp_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_le_exp_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_half_le_five_thirds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_half_le_five_eighths' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_card_gt_two_mean_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_card_le_three_fifths_mean_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_two_mul_le_one_sub' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_two_sum_le_prod_one_sub' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

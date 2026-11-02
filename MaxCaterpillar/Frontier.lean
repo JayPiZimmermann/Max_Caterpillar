@@ -11,6 +11,8 @@ import MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension
 import MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension
 import MaxCaterpillar.Frontier.RandomRestriction.FeedingTransfer
 import MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp
+import MaxCaterpillar.Frontier.RandomRestriction.QuadraticCutoff
+import MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.AffineLowerBound
 
 /-! # Width frontiers for two-hidden-layer MAX networks
 
@@ -22,4 +24,9 @@ For arbitrary arity at least 1040, `RandomRestriction.FeedingSharp`
 proves `h₂ ≥ min(N², N⁴/h₁′) / 40000000` for real networks with all affine
 skips and arbitrary biases. Here h₁′ counts original first neurons feeding
 the second hidden layer. Its finite coefficient certificate is proved.
+For total first width at most N², `RandomRestriction.QuadraticCutoff`
+improves the quadratic constant to 1/10000000 for every N at least 3.
+`GrowingMatching.Bernoulli.Affine` gives a square-root exponential bound for
+quadratic total first width, conditional on its explicit growing local
+matching obstruction. That structural hypothesis is not proved here.
 -/

@@ -126,3 +126,30 @@ example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
 
 #print axioms Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff
 #print axioms Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic
+
+open Frontier.RandomRestriction.AffineSkipExtension in
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 3 ≤ N)
+    (net : AffineSkipNetwork N h₁ h₂) (hnet : ∀ x, eval net x = Maximum N x)
+    (hwidth : (h₁ : ℝ) ≤ (N : ℝ)^2) :
+    (1 / 10000000 : ℝ) * (N : ℝ)^2 ≤ (h₂ : ℝ) :=
+  Frontier.RandomRestriction.QuadraticCutoff.affine_quadratic hN net hnet hwidth
+
+#print axioms Frontier.RandomRestriction.QuadraticCutoff.affine_quadratic
+
+section ConditionalBernoulli
+local instance (q : ℕ) : NeZero (4*q+1) := ⟨Nat.succ_ne_zero _⟩
+open Frontier.RandomRestriction.AffineSkipExtension
+open Frontier.RandomRestriction.GrowingMatching
+
+example {N h₁ h₂ : ℕ} [NeZero N] (C : ℕ) (hC : 1 ≤ C)
+    (hsize : 10000000000*(20*C)^2 ≤ N/2)
+    (H : LocalMatchingObstruction
+      (4*Nat.floor (Real.sqrt ((N/2 : ℕ) : ℝ)/(160000*(C : ℝ)))+1)
+      (Nat.floor (Real.sqrt ((N/2 : ℕ) : ℝ)/(160000*(C : ℝ)))))
+    (net : AffineSkipNetwork N h₁ h₂) (hnet : ∀ x, eval net x = Maximum N x)
+    (hwidth : h₁ ≤ C*N^2) :
+    (1/2 : ℝ)*Real.exp (3*Real.sqrt ((N/2 : ℕ) : ℝ)/(160000*(C : ℝ))) ≤ (h₂ : ℝ) :=
+  Bernoulli.Affine.conditional_affine_sqrt_lower_bound_explicit C hC hsize H net hnet hwidth
+
+#print axioms Bernoulli.Affine.conditional_affine_sqrt_lower_bound_explicit
+end ConditionalBernoulli

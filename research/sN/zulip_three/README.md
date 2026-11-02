@@ -4,7 +4,11 @@ The [second-hidden-layer width theorem](../jensen_bound/README.md) proves
 `h₂ ≥ min(N²,N⁴/h₁′)/40000000` for `N ≥ 1040`, including arbitrary real
 weights, biases and affine skips. Here `h₁′` counts only original first neurons
 feeding the second layer. Thus quadratic feeding width forces quadratic
-second width.
+second width. For total first width `h₁ ≤ N²`, a further verified corollary
+improves the bound to `h₂ ≥ N²/10000000` for every `N ≥ 3`, with the same
+affine-skip scope. A further [Bernoulli theorem](../jensen_bound/counting_routes/transfer/BERNOULLI.md)
+proves a square-root exponential rate conditional on an explicitly stated
+growing local obstruction; that structural hypothesis remains unproved.
 
 The following Max4 theorems use ordinary real two-hidden-layer ReLU networks and equality
 on every real input. The exact component count includes arbitrary biases and

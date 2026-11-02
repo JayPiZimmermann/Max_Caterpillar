@@ -37,3 +37,9 @@
 'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.QuadraticCutoff.affine_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Affine.conditional_affine_sqrt_lower_bound_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

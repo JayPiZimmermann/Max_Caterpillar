@@ -1,0 +1,47 @@
+parameter_bounds : ∀ (n d : ℕ), 1 ≤ d → 10000000000 * d ^ 2 ≤ n → ParameterBounds n d
+@coverage_from_explicit_budgets : ∀ {n d : ℕ},
+  1 ≤ d →
+    10000000000 * d ^ 2 ≤ n →
+      ∀ (M L bsize bgood bshort : ℝ),
+        M ≤ ↑d ^ 2 * ↑n ^ 2 →
+          0 ≤ L →
+            L ≤ ↑d ^ 2 * ↑n ^ 2 →
+              bsize ≤
+                  Real.exp (-3 * bernoulliMean n d / 40) /
+                    (Real.exp (-2 * M * selectionProbability n d ^ 3) - Real.exp (-bernoulliMean n d / 3)) →
+                bgood ≤ supportBudget n d L →
+                  bshort ≤ 8 * ↑(rankCount n d) / ↑(minimumTail n d) → 9 / 10 ≤ 1 - bsize - bgood - bshort
+@conditional_width_bound : ∀ {n d : ℕ},
+  1 ≤ d →
+    10000000000 * d ^ 2 ≤ n →
+      ∀ (h₂ : ℕ), 9 / 10 ≤ ↑h₂ * neuronEnvelope n d → 1 / 2 * Real.exp (3 * Real.sqrt ↑n / (8000 * ↑d)) ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.parameter_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.supportBudget_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.shortQ_budget_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.neuronEnvelope_le_strong' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.neuronEnvelope_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.noInternalExponent_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.admissible_denominator_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.conditioned_size_ratio_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.coverage_from_explicit_budgets' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.conditional_width_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

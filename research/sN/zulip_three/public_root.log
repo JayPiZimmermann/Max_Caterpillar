@@ -1,7 +1,0 @@
-[5906/5914] Building MaxCaterpillar.Frontier
-[5911/5914] Building MaxCaterpillar.Audit.Widths
-stdout:
-./././MaxCaterpillar/Audit/Widths.lean:37:75: warning: this tactic is never executed [linter.unreachableTactic]
-./././MaxCaterpillar/Audit/Widths.lean:37:88: warning: this tactic is never executed [linter.unreachableTactic]
-[5912/5914] Building MaxCaterpillar.Audit
-[5913/5914] Building MaxCaterpillar

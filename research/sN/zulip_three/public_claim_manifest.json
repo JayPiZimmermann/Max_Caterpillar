@@ -81,8 +81,18 @@
       "task": "sharp-affine-skip-original-feeding-quadratic",
       "module": "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp",
       "declaration": "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic"
+    },
+    {
+      "task": "larger-cutoff-affine-quadratic-total-width",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.QuadraticCutoff",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.QuadraticCutoff.affine_quadratic"
+    },
+    {
+      "task": "conditional-bernoulli-affine-quadratic-width-sqrt-exponential",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.AffineLowerBound",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Affine.conditional_affine_sqrt_lower_bound_explicit"
     }
   ],
-  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. Gating regularity concerns the entire all-input zero-bias exact fiber in all 45 physical weights. For N>=1040, ordinary arbitrary-bias all-input exact MAX networks satisfy h2 >= min(N^2,N^4/h1)/400000000, with the h1<=N^2 quadratic corollary. Ordinary feeding width can replace total first width at the same constant. Fully affine skip networks satisfy the total-first-width tradeoff with constant 1/1600000000. The strengthened full affine-skip theorem charges original feeding width with constant 1/40000000, including its quadratic corollary and no first-width cap.",
-  "helpers": "Leaf helpers remain governed by their respective exact-type/axiom receipts. This manifest promotes fifteen public headline claims; it does not replace the historical repository-wide manifest. The width theorem additionally has an expanded six-array contract and a source-bound topical receipt."
+  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. Gating regularity concerns the entire all-input zero-bias exact fiber in all 45 physical weights. For N>=1040, ordinary arbitrary-bias all-input exact MAX networks satisfy h2 >= min(N^2,N^4/h1)/400000000, with the h1<=N^2 quadratic corollary. Ordinary feeding width can replace total first width at the same constant. Fully affine skip networks satisfy the total-first-width tradeoff with constant 1/1600000000. The strengthened full affine-skip theorem charges original feeding width with constant 1/40000000, including its quadratic corollary and no first-width cap. For total first width h1<=N^2, an improved all-affine theorem proves h2>=N^2/10000000 for every N>=3, using the proved local H(5,2) obstruction with no structural assumption. The Bernoulli affine theorem is CONDITIONAL: for h1<=C N^2 it proves a square-root exponential lower bound from the explicitly stated growing local matching obstruction H(4q+1,q). H remains unproved; no unconditional exponential bound or quadratic optimality is claimed. Its normalization, half restriction, event/counting/probability and literal parameter estimates are all proved.",
+  "helpers": "Leaf helpers remain governed by their respective exact-type/axiom receipts. This manifest promotes seventeen public headline claims; it does not replace the historical repository-wide manifest. The width theorem additionally has an expanded six-array contract and a source-bound topical receipt."
 }

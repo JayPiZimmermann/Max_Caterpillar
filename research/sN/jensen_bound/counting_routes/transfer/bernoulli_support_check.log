@@ -1,0 +1,30 @@
+generic_supportBudget_le : ∀ (m n K : ℕ) (D δ a p L : ℝ),
+  12 ≤ m →
+    n ≤ 2 * m →
+      100 * K ≤ m →
+        0 ≤ D →
+          0 ≤ δ →
+            0 ≤ p →
+              0 ≤ L →
+                L ≤ D * ↑n ^ 2 →
+                  ↑K ≤ δ * ↑n →
+                    p ^ 2 * ↑n = a ^ 2 →
+                      L * ↑K ^ 2 / ((1 - ↑K / ↑m) * ↑(Nat.descFactorial m 4)) +
+                            L * p * ↑K ^ 2 / (↑m * (1 - ↑K / ↑m) * ↑(Nat.descFactorial m 3)) +
+                          L * p ^ 2 * ↑K / (2 * ↑(Nat.descFactorial m 2)) ≤
+                        128 * D * δ ^ 2 + 64 * D * p * δ ^ 2 + 4 * D * a ^ 2 * δ
+@supportBudget_le : ∀ {n d : ℕ} {L : ℝ},
+  1 ≤ d → 10000000000 * d ^ 2 ≤ n → 0 ≤ L → L ≤ ↑d ^ 2 * ↑n ^ 2 → supportBudget n d L ≤ 1 / 1000
+@shortQ_budget_le : ∀ {n d : ℕ}, 1 ≤ d → 10000000000 * d ^ 2 ≤ n → 8 * ↑(rankCount n d) / ↑(minimumTail n d) ≤ 16 / 1000
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.generic_supportBudget_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.support_constants_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.supportBudget_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.shortQ_budget_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

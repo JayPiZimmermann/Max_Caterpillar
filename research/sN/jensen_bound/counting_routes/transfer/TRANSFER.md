@@ -173,8 +173,11 @@ No such cubic general-row consequence is claimed here.
 The square-root scale is what the present selected-matching/Laplace envelope
 reaches when k is proportional to q. It is a limitation of that estimate, not
 an upper bound for network width. Nor does the fixed-size support union bound
-make its n^(1/3) choice intrinsic. A separate Bernoulli-conditioning approach
-is under investigation, with no completed theorem claimed here.
+make its n^(1/3) choice intrinsic. The completed Bernoulli-conditioning
+transfer gives a stronger verified H-conditional exp(c_C*sqrt(N)) bound for
+actual original affine networks with h1<=C*N^2. Its standalone BERNOULLI.md
+note states the exact constants, raw-network scope and remaining open H.
+This is a stretched-exponential consequence under H.
 
 A true exp(c*n) lower bound would require further structural/counting progress.
 Nothing in these results establishes quadratic tightness or rules out such a

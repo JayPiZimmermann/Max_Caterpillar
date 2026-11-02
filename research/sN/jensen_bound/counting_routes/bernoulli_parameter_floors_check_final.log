@@ -1,0 +1,24 @@
+parameter_bounds : ∀ (n d : ℕ), 1 ≤ d → 10000000000 * d ^ 2 ≤ n → ParameterBounds n d
+probability_mul_total : ∀ (n d : ℕ), 0 < n → 1 ≤ d → selectionProbability n d * ↑n = bernoulliMean n d
+probability_sq_mul_total : ∀ (n d : ℕ), 0 < n → 1 ≤ d → selectionProbability n d ^ 2 * ↑n = alpha d ^ 2
+mean_sq : ∀ (n d : ℕ), bernoulliMean n d ^ 2 = alpha d ^ 2 * ↑n
+alpha_sq : ∀ (d : ℕ), alpha d ^ 2 = 1 / (1000000 * ↑d ^ 2)
+rankCount_eq_floor : ∀ (n d : ℕ), rankCount n d = ⌊↑n / (1000 * ↑d ^ 2)⌋₊
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.parameter_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.probability_mul_total' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.probability_sq_mul_total' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.mean_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.alpha_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.rankCount_eq_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

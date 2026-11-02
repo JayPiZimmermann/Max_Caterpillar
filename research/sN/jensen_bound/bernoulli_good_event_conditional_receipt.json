@@ -1,0 +1,281 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-02T16:33:58.981723+00:00",
+  "scope": "Actual downward-Bernoulli-conditioned A/B/C role probabilities and literal support/family bad-event cardinal fractions. The family bound has the explicit three rates and the sum of original support fourth falling factorials. Requires only valid Bernoulli p, positive downward conditioning mass, and the explicit uniform tail lower bound; no probability estimate is assumed.",
+  "not_claimed": "Outer-neuron survival or a final second-width lower bound. Intrinsic cleanliness has its own separate source and receipt.",
+  "modules": [
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.Conditional"
+  ],
+  "exact_type_driver": "verification/frontier/BernoulliGoodEventConditionalCheck.lean",
+  "axiom_checks": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_mono_on",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_const",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_const_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_sum",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_le_const",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_mem_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_pair_subset_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.caseARate_le_of_tail_lower_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.caseBRate_le_of_tail_lower_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.caseCRate_le_of_tail_lower_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.badSupportRate_eq_roleRates",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.conditional_caseAMean_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.conditional_caseBMean_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.conditional_caseCMean_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.conditional_supportBadFraction_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.GoodEvent.conditional_familyBadFraction_le",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ]
+    }
+  ],
+  "expected_type_examples": 9,
+  "source_sha256": {
+    "MaxCaterpillar/Definitions.lean": "53c4011b28721f26cffe6978327dfd2b2b17c3f52150f71766af1e29db2ba3be",
+    "MaxCaterpillar/Frontier/Asymptotics.lean": "74f2c827fef9c776c30ee902a756ef69d3dfa9a39a7272d4119d055032f7dc30",
+    "MaxCaterpillar/Frontier/Basic.lean": "47ff6904c8471b8bded4f4d4990de0d60cf23ceea727ffde66b8bfc425a19820",
+    "MaxCaterpillar/Frontier/Claw.lean": "5df047f990f65702990ef7370b8a2d9007285913e46add35eb304ecc8c3e9e94",
+    "MaxCaterpillar/Frontier/CoverCount.lean": "2b13de78e5d227401a2b7afb32046a685c951f68da61ab44a88fa40a57971a0d",
+    "MaxCaterpillar/Frontier/FirstWidthN.lean": "42e9b57fbc5d1a5312fb070be45f932249925c68b259e2c8d68b615a132d9810",
+    "MaxCaterpillar/Frontier/RandomRestriction/CartesianInorder.lean": "30f6822a723735f028972fe07dfbae025044459f1b46489121e40c8192a488a7",
+    "MaxCaterpillar/Frontier/RandomRestriction/CartesianRaw.lean": "eedc006eef25d1bfebc5a240cd859f5ee1bdc94a914e8dd0924193b56f5de90d",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/GapPolynomial.lean": "d9892966c78c2c6f12e56bed52fd15d59dd4250a8652501190bfeb8abdac10b6",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/LiftedPoint.lean": "080043342480108f9f9db2e83a1d166683fee09483d6b07e7463bfbabd2bdb88",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Linearization.lean": "8f782960379dbbc307bc51abed59811026a0f74e90e34071354eb3e65c537edb",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/NetworkRealization.lean": "6fa5cb819aaad38ba52a39f715995391432154cc877f9fb55269fdeefba53ebc",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Powers.lean": "bfe961316461720993d761645768e326ebc955a4173c4ba398e0576c3e9aa1e6",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Realization.lean": "0c0b9d5bd47d382dfd01bf7c483aa71235b9111601c8fe777e076173998770ce",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/SetRealization.lean": "263c55a99ccdba7eb6d98404ed0173f4e6e94afb506c228af8a3a9a03803beaf",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventGeometry.lean": "70c159b881fd6aee73dbd3d1688f40756fa1a05de5ed1d36a1ce82815b97512a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventMoments.lean": "03fdbf2c51f71fd6c7bc8910976481d3b4e93df465461a66de715c23e62c783d",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventRankMoments.lean": "2d096ab5f6bcd52925d75c215eb8fd3f40540d9d17ed58f6445b8255707d8532",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventRoles.lean": "587e071cf520dcd2f6b8d441df558f79539d29ce2bdfb04c5fc85cfec830f63e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Association.lean": "e4894e705ef320fec2fa3cfd85e86f7f588756db3a241f3f4f55309e7d04d261",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/Conditional.lean": "1d62bf2d126fa54059120ae4ce297b8f7933095d77d001efaf6f2a490d650669",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/Events.lean": "85dbd2d1f9d7664fc71659514868cd99382e8ed129ecb17283e5e7816818e4f2",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/Expectations.lean": "5f05cb6b4ac459d84f81a4c1d0d42bda49898dd8ef50b7232a2e8499cd3fa804",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/Pointwise.lean": "820759c3e6cb025bf63407eaa3cf9a3e2db90316699eede99292f6d3468490c7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/RateMonotonicity.lean": "005683b44acb1abf574f8aed07ab69a912f09c99b53168cd1100caf9351011ce",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/Rates.lean": "0fd959d4684edd72e5f043e9e788b5afc3b44b3899f3ebdcc817c673dbb25125",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/UniformPlacement.lean": "71ea0935efaeafa31e87a8719a70ad99621de070bd47f16607d8ae5d2285f3c3",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/UniformPlacementRank.lean": "3c85862d4db6459243b25901660037bb0922654c107b4d39a52e070d2433651c",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/GoodEvent/Union.lean": "14ac3d9675384091632629daf1bb413f0ddba483641f022a49d6595778bb308e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/SamplingGeometry.lean": "3b9c7618bbb99ecfd224ce15d4811010d6ef7ca72d1094661fa8eacee6d34ad2",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Weight.lean": "599a38f9d093f7e086c37c95dc814e6c8328224546f6197a69383618e498e27b",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/DirectionRule.lean": "9a999bccf04e5bff23d8afe0e60355f3f545015f0c9141b2c7cc1ddcf97c0d8e",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Directional.lean": "7197b086fd35fb5fc5761d0dfc32c71791da992d293468811041e948f238e261",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/FromZ.lean": "4133261887f1b079f0bfa0ac5fe3b62ae8b2acc96543910678d21d203c013900",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/LocalFirst.lean": "5d4deeb9be8929877989b1c526dc74e5f150486a22942e305452144941041de7",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Localization.lean": "db9bc216f58b12a529406e7423ca98d0ee9762cb1604acf4bfc72689431af83e",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Model.lean": "f93c46e75b9f7346fa181d3378f8e1dff5acab6486c96508ef975de010b14729",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Ordinary.lean": "7c14baef81ad30af267a1032b5f9c260d3b09f6068cdf73e093e7242b34bdb83",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Outer.lean": "554fe06270e58e043b859f9c2677e15b22f72c6fd06af8af3ee89cbf77a5082f",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Restriction.lean": "1d889b02ea96ad240e7c4ad0fb923293760c734c9a6be04ce9f23a07e6e8889d",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/SetRestriction.lean": "04bac05c073c373061a3a57be6273881a1f3ff33760352cdd1322f6ddd122051",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Support.lean": "c49740bd853bf77bbae62c79faa3d3edacb890d8dbac7e5d396af7072520a601",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/TiedMaximum.lean": "31c859a6f8659641183c157352e99937e3ca6210fd1ce68c760629d90053684c",
+    "MaxCaterpillar/Frontier/RandomRestriction/TiedPoint.lean": "85cf18c4fe0a4fedfc5f2a637e9ba7aa31a4b4c82b921c263b0d6e4f601a7e59",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuplesRoles.lean": "c401cea9120b7e66c76f4cc8b45b2548f8283ab0e3b118a2501be20b57f07630",
+    "MaxNN/Constructions/MaxN/Width/Class.lean": "8fcf78e6bf551328f5bdb31aa1eced4fe89e2df9313d73ac5985ac6b69a9b09c",
+    "MaxNN/Constructions/MaxN/Width/Layer/Coeffs.lean": "bab2a55966f763d6da851d25c2dc0e762e743aa2690c6f8feff6baead495d850",
+    "MaxNN/Constructions/MaxN/Width/Layer/Features.lean": "9a06e16ea76f77364fb9991406bd9b3a2f4426fe21af0441033944095e824849",
+    "MaxNN/Constructions/MaxN/Width/Layer/Pairs.lean": "f9831623ea1770d270c358fade362acdb6fd296e1cfbcfe09e5aec26eef88810",
+    "MaxNN/Constructions/MaxN/Width/Paramid/Unit.lean": "90a333f072a20e620e67b9768ab8726c42a5fc8a33b6728525be33ed2883f770",
+    "MaxNN/Constructions/MaxN/Width/Size/OneLayer.lean": "aea4c5f3035274088fb425a92114d7581747c81d120d0366f6045238db0d6b01",
+    "MaxNN/Constructions/MaxN/Width/TwoLayer.lean": "160512633f35b5c317b41f9dcb7d87e199c52a76b59a73059ff3b13849614bb8",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Class.lean": "79288acd2e7b16877c28a4a2ff3127f4c82ba2e518085e36ea72f29ab69aac05",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Formula.lean": "c0720731fb9a66108d3d5b6e549fe5d80e2842b4ec087aaa2cbeb7276b4054a4",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/FullDim.lean": "29f6ede101692c5463612519d87f62478b2499492237c25b56b21ba880cbf45a",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Keys.lean": "e3a2dea958657163cdea96e5bb0b8f8f08aab465bd9a415331bbb1c3fc22e83c",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Normalize.lean": "8b46c40712d256ca113fe631f2069859ef0f180ecd6906ae50ea54cc1b522c22",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Span.lean": "7c08b175357c7f85a42fb8cc1288b1acc34b336929429c32e7c0f3091b929dac",
+    "MaxNN/Constructions/Paramid/Caterpillar/Corrections/Table.lean": "8026607557cb0d4d41ea828879dc25e25d450d9db4f701d99ff4eb2dc2acd339",
+    "MaxNN/Constructions/Paramid/Caterpillar/Endpoint.lean": "6ea44351aa125b58450ecb07021fe1113f265eb29f52a93e8e19060a8761dc3f",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Simplex.lean": "3f2d1160d5a6d12b484bf7e7a0b5d7c94f59f864a30435c7fe8d7735a3f79e37",
+    "MaxNN/Constructions/Paramid/Caterpillar/Formula/Values.lean": "718497c776e1ef528981e75bbcc822529ffa5da331c8978967c219a421922941",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/BaseGerm.lean": "7510204dcd6eac14c0f8bfc45d1a8756670cce85070bb2f4b1e3153a55891603",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Pattern.lean": "317715241a1169ac9042b6b5411e8301bf509a50d68e7044edefee30b91e6f72",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Facets/Simplex.lean": "34f6a40d25e45c82f52feb45a1643be31cbfe01cc89dfae0b34a5aa5a302de14",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Germ.lean": "240306f9631e7dfa0bffc3bced5fd48ed6cd6988f01d145ce088fe6fc6e385cd",
+    "MaxNN/Constructions/Paramid/Caterpillar/Geometry/Paramid.lean": "5bccee0ce6dd9895da15bf5702f777580cdb9157e2152ffff5f2101a876e96a3",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words.lean": "95f3b53915233f0987c7d3d069363f383eb48fbc2ce72e28b78ca97a441f1546",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Crossing.lean": "5ca0ea5b9a1911e77ab62d39ac16f60d999ba10022503bc49ff18b592cbbeeb2",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Crossing/Base.lean": "cd7dd6d623dc275900c69ba9376b8976e3d82233b128548ef66196f62b3fe6a4",
+    "MaxNN/Constructions/Paramid/Caterpillar/Words/Translation.lean": "83a651081ca4fffdcab3c117adb4a419ebc67999acb9edd032ba033c6ab46c86",
+    "MaxNN/Constructions/Paramid/Chain/Root.lean": "725bc172431d1dd4a57386a89a889a7b67e9451a5ce919bec6dc326a569867bd",
+    "MaxNN/Constructions/Paramid/Geom/Boundary/ConeFaces.lean": "98feabc0105a54f4a7477ed4843b53833ec56689ede5578efd9fa62107d86dd1",
+    "MaxNN/Constructions/Paramid/Geom/Boundary/Facet.lean": "6209e54fe470bf2ac5216ced834384a8a52e75224807aaaa7a303a7045524eb8",
+    "MaxNN/Constructions/Paramid/Geom/Boundary/Sign.lean": "e5a12f3e92faffe777b5b2bd61f2f03ed168062ca0247a0a0cebefcf023b3a05",
+    "MaxNN/Constructions/Paramid/Geom/Complete.lean": "9179642484f3b946baf532e62c986d6a618acdcef25ff326f1afe1cfd315d618",
+    "MaxNN/Constructions/Paramid/Geom/Complete/Chart.lean": "7ee910cf11278b04188c03c0a404b9fb8c23d7f9c7d0a6b811d4757d69b9ae37",
+    "MaxNN/Constructions/Paramid/Geom/Coordinates.lean": "722b59889c48c16647d108921250bc0c6a5ddfd770e1d319c3340ca6aa39befa",
+    "MaxNN/Constructions/Paramid/Geom/Defs.lean": "8165f60bc8137f66fdab3f0b88b77a835823c55c43207e6aa51f465090ef7602",
+    "MaxNN/Constructions/Paramid/Geom/Doubling.lean": "f28f59f1e3176954f53812980b5f6206b8e8059eb5ae63a128d9f8af72d79803",
+    "MaxNN/Constructions/Paramid/Geom/Faces.lean": "a0f335f4392e0ac519e6abdb670f1b29b705ee268e089ea2f9bb6c25599b49ae",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Annihilate.lean": "a3e435c5707613d79ecb65e56e9eaedd95db0787984510d78fd1198a8795df5c",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Cone.lean": "139ec218a8d2c8bbc4f03524bec8049d10caf1a286fde3d083bb3ff81901255b",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Cone/Parallelepiped.lean": "cfe5bb0b30655de0421bb7a13ba41814e0a13f81fd6a0632c0c995c2e4c6f167",
+    "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly.lean": "61385b52393e6a537021d3d50eacb2f9ca5afc9eed514ce351e95eafe76e9ed0",
+    "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/LocalIdentity.lean": "4baf531de4d181b53b33d51bb080e697aaa093f6dbe246e5e4b8c13e14dc95e4",
+    "MaxNN/Constructions/Paramid/Geom/Faces/ConeOnly/SimplexGerm.lean": "dbe55876d21c44442819bfff72d4764afe557c1eef1eb20765ea0e45cb80c762",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Defs.lean": "136864a1cde265acfcd00f11411a381f67f8f8b2fb4aa37924c4cc4a14359cf8",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel.lean": "0cc8bef8fddb1436b4b7da448493fd6216971f1568129900f8b1e692b693fbad",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel/Annihilator.lean": "f2a20727aaf09c19e8e23d95ca9257c673805f24e214cc4cc196832cd6a500f9",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel/Generic.lean": "57aa527bedba5c014ef5264c01ffb48220e3dd155b0511cb8b112f89a18d00b2",
+    "MaxNN/Constructions/Paramid/Geom/Faces/Peel/Pieces.lean": "f547a7abad923d04a59dc72b4a5aed1fd3951e29d2bf049d58d11d7c479af93f",
+    "MaxNN/Constructions/Paramid/Geom/Flag.lean": "19ac4d5dcc28250b3400c1e9e1ce00cacd59d04c67c88cb1a8d00fca08bf29a9",
+    "MaxNN/Constructions/Paramid/Geom/Germ.lean": "bcf411f91b00276e314eb9eb82ed19ff7eccb155de797d7689aed03a3acfd4cd",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn.lean": "c7d7104a79d2581bbefeb9ebe5eccccf02ff876ef69450703161cf40e9ca68f0",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn/Chain.lean": "0d7632bcf6df74852bb3cb733d379b63c47b0021812d4bc37c8d5d30b620c614",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn/Hull.lean": "0f17c4b83e0ae138260a097a050fbebb3450ee81f378d839748caf0376748718",
+    "MaxNN/Constructions/Paramid/Geom/Kuhn/Staircase.lean": "06dbe12b8561e8aa8a38d31ea856239580f068c2260016181454f605ee08897f",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct.lean": "3fadef3bbdb615920b51ce11501f0e8a4883c4af94e81a999b4cba2d71de6499",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/FacetGerm.lean": "4eef6797d6dda44b462c6abe84fb769f45cb4a6000c6d7179d8b38ecce3c1d7c",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/Facets.lean": "f0f0ae76558b9537163ecbce5585eb8e27a4585c34c2b8401ec2295b850a08bd",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut.lean": "9328353931ca6390671a90a5638d59d852241142eb72863e3b35cb523f674e00",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut/Bary.lean": "584cfced9c4d358870da90726e759ebb032163c5093fe28135e824f17e55d77f",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut/CutSets.lean": "a08e67dd269c2d34c786dce8ee90c87f6823bd59315f96c881eb7095d09f9e27",
+    "MaxNN/Constructions/Paramid/Geom/Reconstruct/SimplexCut/SweepFacts.lean": "73fcf0666333d34ed9bd497d9b28986f2e845fa8bb36fa00caa541b73161da2b",
+    "MaxNN/Constructions/Paramid/Geom/SimplexMod.lean": "38ac53f84a64730f7a2ba21cc6c655ac359844817ea63f7de70f58679959b866",
+    "MaxNN/Constructions/Paramid/Geom/Sweep.lean": "67cc2f76f25cc8335eccd2783bedaa81dbc8b062cfa6b11307a820457989ea02",
+    "MaxNN/Constructions/Paramid/Geom/Sweep/Support.lean": "e468c494aaa712b11e1de4ecbce5dd35b20676ba49a1009471e98ed251c974c4",
+    "MaxNN/Constructions/Paramid/Geom/UnitGerm.lean": "25e587c89b3c8f90db566603f5aafe406126e60e23de7e575c03de3c9c5579cc",
+    "MaxNN/Constructions/Paramid/LowerDim.lean": "43b4ed8abd12982e8248b90588d4811768b356d67bbc091ba8d0d35fc7d86b7f",
+    "MaxNN/Constructions/Paramid/Unit.lean": "931e18c56d42ffcc0f28d8c1a3f7834b29afadba8ee64cc0a25f86255ef8d23e",
+    "MaxNN/Core/Affine.lean": "bb5a854f0b371ecc5b0488314ffb624198f96e870e46aa09c98c9b4986018b3f",
+    "MaxNN/Core/Class.lean": "9091406f7720a5f31c16de5c276d9f5bd2b60db3c842cf65e6876ef9d9794427",
+    "MaxNN/Core/Max.lean": "090dd71f2d73840b87b2c0f15dde2d7ff89fd3bb37d059146cc8076d7622142f",
+    "MaxNN/Core/Network.lean": "6a94e0a978b3660d5ecf42b628d64024c6ed1dc5b60052c2b929cd3417a96805",
+    "MaxNN/Core/Relu.lean": "98acff835fa4f1cc365f5d8f19c0b88eaa5178486c19cea633ca027e9f8d72ea",
+    "MaxNN/PolyhedralGeometry/SupportCut.lean": "a2963df5f6251ae8d44f14345b9c0b920d2ae5ff3845a912183d734274bf983a",
+    "MaxNN/PolyhedralGeometry/SupportCut/Dot.lean": "ac5f524c1f5edf901c7ac302c2f68083d45d849db5f1b058e2dfc5ae93e098f6",
+    "MaxNN/PolyhedralGeometry/SupportCut/Transport.lean": "fc05cf9bdf54dabd7edbdfd82795f9ec443c9100df9a7d54da1456b88f7e3bb2",
+    "verification/frontier/BernoulliGoodEventConditionalCheck.lean": "ede1bed845ceddba9f6e2b0ae6d2eb992116c648dae0326d536a32c1da385b01"
+  },
+  "project_import_closure_sources": 122,
+  "source_closure_stable_during_verification": true,
+  "exact_log_sha256": "a44e9ff1c4671e4cb1cd55403335eee11ecfcb3bd229cbcf13766589d22ca47b",
+  "recheck_script_sha256": "5ed45229423200f9faee62820aa7c32f8e47f689d8b69b03d0518e72f2ae41ed",
+  "toolchain_sha256": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+  "lake_manifest_sha256": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+  "receipt_kind": "Scoped working-tree module/type/axiom receipt; no clean publication gate is claimed.",
+  "reproduce": "python3 research/sN/jensen_bound/bernoulli_good_event_conditional_recheck.py"
+}
