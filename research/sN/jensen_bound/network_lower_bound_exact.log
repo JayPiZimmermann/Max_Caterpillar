@@ -1,0 +1,22 @@
+@second_width_tradeoff : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) → 1 / 400000000 * min (↑N ^ 2) (↑N ^ 4 / ↑h₁) ≤ ↑h₂
+@second_width_quadratic : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) → ↑h₁ ≤ ↑N ^ 2 → 1 / 400000000 * ↑N ^ 2 ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.actual_neuron_event_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.model_counting_of_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.half_model_count_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.actual_network_tradeoff_of_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

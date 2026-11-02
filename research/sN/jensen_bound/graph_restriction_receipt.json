@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-02T14:34:16.624574+00:00",
+  "receipt_kind": "scoped current owned-kernel-artifact exact-type and axiom audit",
+  "result": "For a genuine uniform label-to-position permutation, the five selected labels contain two disjoint ordinary graph edges with probability at most60eta^2/(N)_4. The same event is exactly failure of PairwiseIntersectingEdges for the actual five-label comap. Its probability is at most60eta^2/m^4 for N=m+5,m>0. The actual complementary tail graph from the same permutation has at least eta-5(m+4) edges.",
+  "scope": {
+    "graph": "arbitrary finite simple graph, including empty graphs",
+    "selected_set": "actual GoodEvent.smallRankGaps permutation5",
+    "permutation_convention": "label maps to position; selected/tail embeddings use inverse permutation",
+    "event": "actual two disjoint ordinary graph edges with all four endpoints selected",
+    "deletion": "actual complement induced graph, including its canonical Fin m relabeling"
+  },
+  "not_claimed": [
+    "No independence between selected-edge events is assumed",
+    "This graph package does not itself prove a complete neural-network counting inequality"
+  ],
+  "semantic_checks": [
+    "Four fixed distinct labels are selected with the exact actual fraction120/(N)_4",
+    "Graph edges are ordinary unordered Sym2 values in SimpleGraph.edgeFinset",
+    "The literal existential bad event is covered by unordered two-edge subsets with disjoint endpoints",
+    "There are at most choose(eta,2) witnesses; their four endpoint sets have cardinality4",
+    "The finite union bound gives120choose(eta,2)/(N)_4 and hence60eta^2/(N)_4",
+    "Failure of the existing PairwiseIntersectingEdges condition is proved equivalent to the actual selected-edge event",
+    "The selected graph and complementary tail graph are actual comaps of the same original graph and permutation",
+    "Exact inverse-permutation range lemmas identify selected and complementary vertices",
+    "Deleted edges are bounded by the sum of incident degrees at deleted vertices",
+    "Retained edge cardinality is proved equal to actual induced/comap graph edge cardinality",
+    "The real eta-5(m+4) lower bound is derived from a Nat addition inequality, including negative values",
+    "Separate child exact checks include five/six-vertex probability sanity cases, a genuine two-disjoint-edge graph, inverse-orientation cycle, and empty-tail boundary"
+  ],
+  "stale_or_missing_project_artifacts": [],
+  "project_artifact_sha256": {
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GoodEventConstants.olean": "28ec28c07091dc98e3c376c4934085d3e79167bb8766121a98c07d853d556ab3",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GoodEventGeometry.olean": "b50910874fe19aa0b315874e603c5a21b6c5b31799c14fe9b7a7b9a96f85fe15",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.olean": "93b87acf2aa1025bd6562c440720731d628a674b042178e28e93ce21dfd6142d",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction.olean": "1a32ceb24c38e99b61898cbe02b0c612a829c58520fe4466bcb150cb818bc5af",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Bounds.olean": "2ebe01c61d1028b23cf9fbd1edaa4526ecd010ad26f99c40604f8328b7e83d70",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Deletion.olean": "d21fcffd8b34c2909a7e95dac2247b73e6f77cce2cfc072934b83376583c58f4",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Intersecting.olean": "5244861f22c290b8c640336cc7714c4d509d26b5c7f15a257d805cdb762baf43",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/NativeEvent.olean": "b7cac685ed92200185d3d0b817733173373c2a4df1778e1a480453b00a6e0ca7",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/PermutationLabels.olean": "6dfe677c909afef314a79aaf544a339360b32c116ed5fd64b3a2a6c6df154a7e",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/SelectedFour.olean": "fe5bd3561d812f3ae4ee971bb511c62a21299f831c3f27f0f557ceab0ce11d9e",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges.olean": "837f976adf97ebfeed7b50c66ba11536d4f3bfd560f939eb60a23a50cd8f6995",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.olean": "62bcb3c9de0fd81a01f62f858de95c39473f77ad25837021807f8dd293e69637",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.olean": "27511e951cbf5b6ba864e27d2141bec349dff3f2a976a3c45eefff67dacee36c",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.olean": "ade4a939e8fa4ef5cb745845fd27f1d49a0a53b40c7aaf208fbca402699deaa1",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/UniformTuplesFiveTail.olean": "cf6518a24c0d01a73224863d67cade291230fc6f3ba9072e00e6a49d741cdfce",
+    ".lake/build/lib/MaxCaterpillar/Frontier/StarCertificate/SmallMatchingGraph.olean": "06a2aae379d00c322711a1c79bd2d9cc053fe50c566922a16b678961639d21e6"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "research/sN/zulip_three/lean_small_pool.py",
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction.lean"
+      ],
+      "exit_code": 0,
+      "log": "research/sN/jensen_bound/graph_restriction_module_build.log"
+    },
+    {
+      "command": [
+        "python3",
+        "research/sN/zulip_three/lean_small_pool.py",
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "verification/frontier/GraphRestrictionCheck.lean"
+      ],
+      "exit_code": 0,
+      "log": "research/sN/jensen_bound/graph_restriction_exact.log"
+    }
+  ],
+  "axiom_checks": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedFourSetEvent_fraction",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.twoEdgesEvent_card_mul_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.twoEdgesEvent_fraction_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.edge_card_le_retained_add",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.comap_edge_card_eq_retained",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.induce_edge_card_eq_retained",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.five_vertex_deletion_lower_bound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedLabelEmbedding_range",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.tailLabelEmbedding_range",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.tailGraph_edge_lower_bound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.not_pairwiseIntersecting_comap_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selected_graph_not_pairwise_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedGraphBadEvent_eq_twoEdgesEvent",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedGraphBadEvent_fraction_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedGraphBadEvent_fraction_le_tail",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "forbidden_constructs": [],
+  "project_source_closure_files": 17,
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventConstants.lean": "b55cd51db3fd5d0b529c3ecc9135ddcedd5a04a0773f796f9868a394dc544671",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventGeometry.lean": "70c159b881fd6aee73dbd3d1688f40756fa1a05de5ed1d36a1ce82815b97512a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction.lean": "117e65dfee132acee67ec6dab487abd47e6be7ad48f19f9d0d64c5e633c45282",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Bounds.lean": "535d79b697e2143b595434af1636451cfc2dfeda73ec5328711197faf19a7303",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Deletion.lean": "0afd322d837bcd7cec2e3cc8a8952b7351d565b1a19bd77e4a7f61fc665a1584",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Intersecting.lean": "04b4b9f053e84176983363683a0a56b58638d5d4dd61cd968ead0cd1631fd0cc",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/NativeEvent.lean": "1d97ed39e1a3388bc13627ea1a7890cc453e869ad13c846efa119fb8cc915509",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/PermutationLabels.lean": "ffbb4ee30f5d2241e7e775ff324fdd04c8ad3f83c789b57deeb3a0c10b090ff6",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/SelectedFour.lean": "3c132f4ec9d0e31573fc96fbc953fff720f7269260a63a0123704220a7763926",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges.lean": "06d4e365ee387d8f1f7fa737198feb2a25a07b8d6cc893caa9777b2c812e805e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuplesFiveTail.lean": "e9826508feb375b20f5afd736861c8558e3dafd82c383415461f6722db756408",
+    "MaxCaterpillar/Frontier/StarCertificate/SmallMatchingGraph.lean": "a2f38746094baed1347e98ca6d625ee63dc96853d0f1fe3c77784e4226182d09",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/graph_restriction_recheck.py": "31ba706e3d81b0d4215fa5c8583c4f5fe173552a1e5cea93d066fc5392007e4d",
+    "research/sN/zulip_three/lean_small_pool.py": "b77338cb63afb353264edb6cf9df156b44a9a3d45797ee182f0919e7ebfe52d3",
+    "scripts/lean_lock.sh": "4fbb8e63df2e6b540750fc10c0718706f996dbeb45961a50ff3f461057b06d9b",
+    "verification/frontier/GraphRestrictionCheck.lean": "f8901babc6e87b9252f199168c1978783275c24c4527692f964f4f523624b6a1"
+  },
+  "log_sha256": {
+    "module_build": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exact": "a869e0b4bf2f7796ad355eb8b5dae84399a7f2a03f6fe08f1cd391cdd5e83a35"
+  }
+}

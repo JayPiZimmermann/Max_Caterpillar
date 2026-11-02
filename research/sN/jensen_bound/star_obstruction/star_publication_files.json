@@ -1,0 +1,209 @@
+{
+  "success": true,
+  "production_import": "MaxCaterpillar.Frontier.StarCertificate.StarObstruction",
+  "lean_import_closure": "Included automatically by parent publication gate",
+  "exact_type_driver": "verification/h2/StarObstructionCheck.lean",
+  "final_receipt": "research/sN/jensen_bound/star_obstruction/star_obstruction_receipt.json",
+  "generator_freeze": "Complete; utility extraction produced byte-identical244-file regeneration",
+  "files": [
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/certificate_arithmetic.py",
+      "sha256": "a60d0ad102bb07ab9a95c01dba68cdccf1c8e641b21f48da1d2cb7b2f84f9903",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_xi_selectors.py",
+      "sha256": "e8a8ea8920efc444c3fee88bef3286763847b4806a0f30d5e99af22696daed43",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_integer_kappa.py",
+      "sha256": "5e0558b8f7e41efa4832153833bc0aff5c8f59f332a78ea4bcfb4a502bdd1257",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_selector_proofs.py",
+      "sha256": "25ea29a21e6355c297bfbf679bfbfa73b0da62f64d4ca362db2c925fccaf74e2",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_star_model_proofs.py",
+      "sha256": "3bba058b324c7e9161c7d2b383981cdc0103558f6ff60142a467f148f4e970ae",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_fast_selectors.py",
+      "sha256": "a53d41994b5aec5058171ad082389cba14e8da74672f4d99d37be6ccc544c39f",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_permutation_groups.py",
+      "sha256": "021e224bb78fc5e12f18d1d9ddcee3690e79158bf15c828cc5d6e1859508feed",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_orbit_data.py",
+      "sha256": "35600856eba43ecf224a32b88fe05665c49d78c993636b67285658e93b21c278",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_profile_targets.py",
+      "sha256": "a4f846a78bb01b0e74e5a642564c203fb3064c286685a64e8a405686e3f15d7c",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_representative_combiner.py",
+      "sha256": "369c621ce51acebe71ea2d998226e21a997a8d6b0195fec6d432ce922d12a937",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_xi_pairs.py",
+      "sha256": "a93470990cb20d4c8f69d897dc7bc3320ccd57e83a2412ba25a1fda97f9194b9",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_xi_fast_kappa.py",
+      "sha256": "25c7baaa3ce331c816ae58d2bef6df3fd64a50c035f9879962cbfbbd1e567648",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_xi_quad_kappa.py",
+      "sha256": "19801e92b22cfa6614f1ff12410bc13b135c127fd8221a732bc66a6078ab406f",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_compiled_selectors.py",
+      "sha256": "3becf1ceb98f2f89e1c0b5ac3a97f74e04554ff3b8f609fa985b448ba150bb2c",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_sparse_anova.py",
+      "sha256": "788e528eead9434cd0379aacfecebeb44b47bec492a4913d9a97a99bda681548",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_checker_tree.py",
+      "sha256": "282dd406ef343be85b30e36a4f6827c1b2a0650bf15f66a027c2e7de013ad032",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_functional_tree.py",
+      "sha256": "bbc917098648a0dcbc3c9f9f88b042a0dcd201e58a90abacf4dd72b8f7deac2d",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/emit_orbit_leaf_checks.py",
+      "sha256": "9b0c8288428372502e818c466fe4783cfc49e9a75548c82a47293950c2a6424b",
+      "role": "production_generator"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/certificate_small_candidate.json",
+      "sha256": "f09229099798f0e27d592cfc5cf493985a3d970aa73d7395338cbef7e80fe4b9",
+      "role": "canonical_certificate_data"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/exact_tree_candidate.json",
+      "sha256": "60e452b229052d38da6992c5a752f15ad5bd18a0c1f2548baca2f95e14bdb3be",
+      "role": "canonical_certificate_data"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/orbit_manifest.json",
+      "sha256": "74aa12d1bf2013c6bd3d09ef8c926ac6363fc07262c87cdc68fd2a79d50dd158",
+      "role": "canonical_certificate_data"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/profile_manifest.json",
+      "sha256": "4e2ccd106eeec68556f5f11701a8930108ccb8dfeec948fef4c3e218f5ebc633",
+      "role": "canonical_certificate_data"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/representative_profile_jobs.json",
+      "sha256": "37eba5e091e890bba754dd522a0f953a3722a00b670e6d83480b8ecc4526b272",
+      "role": "canonical_certificate_data"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/checker_leaf_catalogue.json",
+      "sha256": "0aa4c9f5dbaf0d7da6930ca9f8e26f6db94b1b78f4d1728c8d4051191ff8b87e",
+      "role": "canonical_certificate_data"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/check_discrete.py",
+      "sha256": "289723eb43d2dc35babe9924b5d212245a67e333e238e772261553fdd664bdde",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/build_profile_targets.py",
+      "sha256": "89e64a9d43defaf4a6762dedc305b00b52773084bd8cf4f807a9a110898f8381",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/star_obstruction_receipt.py",
+      "sha256": "4b9d578d05aa3db6f4a59d17005da9be8b868b7c2f60a2c937d5e4362a81e8ca",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/KernelCheckGood.lean",
+      "sha256": "79a0cb17d2508434a1f2470cde8d73fe5c06e81df64c29b70ad21f899beea50e",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/KernelCheckFalse.lean",
+      "sha256": "8055acd58effe543f48f6ad59269e2547fa8580c3a1e47e2ec2afc87341b9e8f",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/KernelCheckGood.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/KernelCheckFalse.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/KernelCheckGood.log",
+      "sha256": "5bcfe3b58bba87d409a1df7fbb0256c1f35edf9403bf0d993d7894c4cea7c533",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/KernelCheckFalse.log",
+      "sha256": "cf8d6f34372b40cf7730aea2297a4ed62b8f4ce918e8237b5f87453cabdec7a2",
+      "role": "audit_control"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/star_obstruction_receipt.json",
+      "sha256": "866bbde444550cf6b676f690073e51ce1b017798039e7c271d081306c27acf4f",
+      "role": "accepted_audit_evidence"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/star_obstruction_exact_check.log",
+      "sha256": "8c40f219b41aabb201570842e6cb3b4e7f0bca7eb842025a2c4841b1eb0c2a76",
+      "role": "accepted_audit_evidence"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/production_regeneration_receipt.json",
+      "sha256": "27164fd3e2752a286ee6de444cc99b5be7fc5e93462160c8d2d689d402d8dfe5",
+      "role": "accepted_audit_evidence"
+    },
+    {
+      "path": "research/sN/jensen_bound/star_obstruction/profile_targets_representatives_status.json",
+      "sha256": "d18b0a9a0175a2d2687cdb37b6526aa9b019236745edcfbba4e2779219e05168",
+      "role": "accepted_audit_evidence"
+    },
+    {
+      "path": "research/sN/zulip_three/lean_small_pool.py",
+      "sha256": "b77338cb63afb353264edb6cf9df156b44a9a3d45797ee182f0919e7ebfe52d3",
+      "role": "bounded_build_admission_control"
+    }
+  ],
+  "required_python": "Python3 standardlibrary for fixed-certificate emission/audit; external numerical search is not needed",
+  "ordinary_verification": "Build the production import and run verification/h2/StarObstructionCheck.lean",
+  "individual_job_logs": "Diagnostic timing paths in profile status are not inputs to emission or kernel verification",
+  "not_required": [
+    "emit_cached_targets.py",
+    "search NPZ/NPY intermediates",
+    "floating-point search logs",
+    "private PDF or correspondence"
+  ]
+}

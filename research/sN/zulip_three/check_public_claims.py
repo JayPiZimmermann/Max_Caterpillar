@@ -24,7 +24,7 @@ while pending:
         continue
     sources.add(path)
     code = verifier.uncomment(path.read_text())
-    assert not re.search(r'\b(sorry|admit|axiom|native_decide)\b', code), path
+    assert not re.search(r'\b(sorry|admit|axiom|native_decide|Lean\.ofReduceBool)\b', code), path
     for imports in re.findall(r'^import\s+([^\n]+)', code, re.M):
         for imported in imports.split():
             dependency = ROOT / (imported.replace('.', '/') + '.lean')

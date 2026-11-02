@@ -1,0 +1,56 @@
+@exists_ordinary_set_restriction : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) →
+    ∀ (S : Finset (Fin N)) [inst : NeZero (Finset.card S)],
+      ∃ model,
+        (∀ (x : Point (Finset.card S)), eval model x = Maximum (Finset.card S) x) ∧
+          TranslationNormalized model ∧
+            (∀ (j : Fin h₁),
+                A model j =
+                  if ∑ i : Fin N, Network.W₁ net j i = 0 ∧ rowSupport (Network.W₁ net j) ⊆ S then
+                    restrict (selectedEmbedding S) (Network.W₁ net j)
+                  else 0) ∧
+              (∀ (j : Fin h₁), Feeding model j → ∃ k, Network.W₂ net k j ≠ 0) ∧
+                ∀ (cost : ℕ → ℕ),
+                  (∑ j : Fin h₁,
+                      if 3 ≤ Finset.card (rowSupport (A model j)) then cost (Finset.card (rowSupport (A model j)))
+                      else 0) ≤
+                    ∑ j : Fin h₁,
+                      if 3 ≤ Finset.card (rowSupport (Network.W₁ net j)) ∧ rowSupport (Network.W₁ net j) ⊆ S then
+                        cost (Finset.card (rowSupport (Network.W₁ net j)))
+                      else 0
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.ofOrdinary_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.ofOrdinary_translation_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.ofOrdinary_exact_direction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.eventually_eval_direction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.exists_eval_direction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.directional_computes_max_of_tied' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.exists_generic_tied_point' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.exists_localized_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.exists_ordinary_restriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.exists_ordinary_set_restriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.normalizeOuter_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.normalizeOuter_translation_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

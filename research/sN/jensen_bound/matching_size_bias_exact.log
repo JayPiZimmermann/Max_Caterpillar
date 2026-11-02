@@ -1,0 +1,44 @@
+@forcingEquiv : {V : Type u_1} →
+  [inst : DecidableEq V] →
+    (p q a b : V) → p ≠ q → a ≠ b → Equiv.Perm V ≃ { σ // σ p = a ∧ σ q = b } × V × { s // s ≠ p }
+@forcing_preimage_card : ∀ {V : Type u_1} [inst : DecidableEq V] [inst_1 : Fintype V] (p q a b : V),
+  p ≠ q →
+    a ≠ b →
+      ∀ (σ : { σ // σ p = a ∧ σ q = b }),
+        Fintype.card { τ // forcePair τ p q a b = ↑σ } = Fintype.card V * (Fintype.card V - 1)
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.forcingEquiv' depends on axioms: [Quot.sound, propext]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.forcing_preimage_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.forcePair_apply_away' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.oriented_edge_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.uniform_permutation_marginal' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.finite_size_bias_identity' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matchingCount_forcePair_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.sampleCoupledCount_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.actual_matching_size_bias_coupling' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_geometric_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_geometric_le_edges' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_half_moment_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.actual_matching_counting_le_four_hundred' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

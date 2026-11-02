@@ -1,0 +1,116 @@
+[4040/4212] Building MaxCaterpillar.Frontier.RandomRestriction.EffectiveCoinDifference
+[4133/4212] Building MaxCaterpillar.Frontier.RandomRestriction.CoinUniformityRank
+[4140/4212] Building MaxCaterpillar.Frontier.RandomRestriction.MatchingAffine
+[4183/4212] Building MaxCaterpillar.Frontier.RandomRestriction.BraidCoinActivation
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.effectiveRow_eq_coin_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.effectiveRow_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.effectiveRow_sub_eq_braidCoinColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[4195/4212] Building MaxCaterpillar.Frontier.RandomRestriction.CleanActivation
+stdout:
+@conditional_affine_coin_card_mul : ∀ {ι : Type u_8} {Ω : Type u_7} {Data : Type u_6} {V : Type u_5} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : Fintype Ω] [inst_3 : AddCommGroup V] [inst_4 : Module ℝ V] (recorded : Ω → Data)
+  (coins : Ω → ι → Bool),
+  CoinFlipSystem recorded coins →
+    ∀ (d : Data) (offset target : V) (columns : ι → V) (s : Finset ι),
+      (LinearIndependent ℝ fun i => columns ↑i) →
+        Finset.card (coinEventFiber recorded coins d (affineCoinSolutions offset target columns)) * 2 ^ Finset.card s ≤
+          Finset.card (dataFiber recorded d)
+@conditional_affine_coin_fraction_le : ∀ {ι : Type u_8} {Ω : Type u_7} {Data : Type u_6} {V : Type u_5}
+  [inst : Fintype ι] [inst_1 : DecidableEq ι] [inst_2 : Fintype Ω] [inst_3 : AddCommGroup V] [inst_4 : Module ℝ V]
+  (recorded : Ω → Data) (coins : Ω → ι → Bool),
+  CoinFlipSystem recorded coins →
+    ∀ (d : Data),
+      0 < Finset.card (dataFiber recorded d) →
+        ∀ (offset target : V) (columns : ι → V) (s : Finset ι),
+          (LinearIndependent ℝ fun i => columns ↑i) →
+            ↑(Finset.card (coinEventFiber recorded coins d (affineCoinSolutions offset target columns))) /
+                ↑(Finset.card (dataFiber recorded d)) ≤
+              1 / 2 ^ Finset.card s
+'MaxCaterpillar.Frontier.RandomRestriction.conditional_affine_coin_card_mul' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.conditional_affine_coin_fraction_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+[4198/4212] Building MaxCaterpillar.Frontier.RandomRestriction.PerNeuronModel
+stdout:
+@affine_from_flip_differences : ∀ {ι : Type u_4} {V : Type u_3} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : AddCommGroup V] [inst_3 : Module ℝ V] {m : ℕ} (slot : ι × Bool ↪ Fin m) (u : Data ι m)
+  (F : Fiber slot u → V) (columns : ι → V) (base : Fiber slot u),
+  (∀ (i : ι) (p : Fiber slot u),
+      F ((fiberFlip slot u i) p) - F p =
+        ((coinCoefficient !fiberCoins slot u p i) - coinCoefficient (fiberCoins slot u p i)) • columns i) →
+    ∀ (p : Fiber slot u),
+      F p =
+        affineCoinEval (F base - ∑ j : ι, coinCoefficient (fiberCoins slot u base j) • columns j) columns
+          (fiberCoins slot u p)
+'MaxCaterpillar.Frontier.RandomRestriction.Matching.coin_sum_flip' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.Matching.affine_from_flip_differences' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+[4199/4212] Building MaxCaterpillar.Frontier.RandomRestriction.MatchingRank
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.activation_matchingSwap_of_not_dominant' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.actualClean_nonbraid_activation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+stdout:
+./././MaxCaterpillar/Frontier/RandomRestriction/PerNeuronModel.lean:61:10: warning: unused variable `hW` [linter.unusedVariables]
+[4201/4212] Building MaxCaterpillar.Frontier.RandomRestriction.PerNeuronGraph
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.Matching.value_solution_card_mul' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.Matching.value_solution_fraction_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+[4203/4212] Building MaxCaterpillar.Frontier.RandomRestriction.PerNeuronTail
+[4204/4212] Building MaxCaterpillar.Frontier.RandomRestriction.ActualMatchingRow
+[4205/4212] Building MaxCaterpillar.Frontier.RandomRestriction.PerNeuronCounting
+stdout:
+./././MaxCaterpillar/Frontier/RandomRestriction/PerNeuronCounting.lean:53:14: warning: unused variable `hσ` [linter.unusedVariables]
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.restrict_braidRoot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_sub_of_effective_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[4207/4212] Building MaxCaterpillar.Frontier.RandomRestriction.ActualMatchingFlip
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.actualEffectiveRow_matchingSwap_of_nonpair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_swap_of_nonpair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[4208/4212] Building MaxCaterpillar.Frontier.RandomRestriction.ActualMatchingCleanFlip
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.actualClean_nonpair_not_dominant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_swap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[4209/4212] Building MaxCaterpillar.Frontier.RandomRestriction.ActualMatchingRank
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_fiber_flip' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualClean_fiber_survival_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[4210/4212] Building MaxCaterpillar.Frontier.RandomRestriction.PerNeuronActual
+[4211/4212] Building MaxCaterpillar.Frontier.RandomRestriction.PerNeuron

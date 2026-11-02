@@ -1,0 +1,14 @@
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_swap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_fiber_flip' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualClean_fiber_survival_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ActualMatchingRankCheck.oneEdge_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualMatchingRankCheck.oneEdge_weight' depends on axioms: [propext, Classical.choice, Quot.sound]

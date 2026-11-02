@@ -1,0 +1,15 @@
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matchingCount_eq_zero_of_edge_card_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_moment_eq_one_of_edge_card_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_geometric_le_all_graphs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_half_moment_le_all_graphs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.actual_matching_counting_le_four_hundred_all_graphs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

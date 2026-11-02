@@ -1,7 +1,11 @@
 {
   "root": "MaxCaterpillar",
   "exact_expected_types": "verification/fiber/ZulipThreePublicCheck.lean",
-  "allowed_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
   "claims": [
     {
       "task": "extra-width-connectivity",
@@ -37,8 +41,18 @@
       "task": "actual-max4-exact-component-count",
       "module": "MaxCaterpillar.Fiber.Count65",
       "declaration": "MaxCaterpillar.Fiber.max4_6_5_has_65_components"
+    },
+    {
+      "task": "ordinary-network-second-width-tradeoff",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_tradeoff"
+    },
+    {
+      "task": "ordinary-network-quadratic-second-width",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic"
     }
   ],
-  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. The gating regularity conclusion concerns the entire all-input zero-bias exact fiber in all 45 physical weights. No strengthened h2 network theorem is claimed.",
-  "helpers": "Leaf helpers remain governed by their respective exact-type/axiom receipts. This manifest promotes seven public headline claims; it does not replace the historical repository-wide manifest."
+  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. Gating regularity concerns the entire all-input zero-bias exact fiber in all 45 physical weights. For N>=1040, ordinary arbitrary-bias all-input exact MAX networks satisfy h2 >= min(N^2,N^4/h1)/400000000, with the h1<=N^2 quadratic corollary.",
+  "helpers": "Leaf helpers remain governed by their respective exact-type/axiom receipts. This manifest promotes nine public headline claims; it does not replace the historical repository-wide manifest. The width theorem additionally has an expanded six-array contract and a source-bound topical receipt."
 }

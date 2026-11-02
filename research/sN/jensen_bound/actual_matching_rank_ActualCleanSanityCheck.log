@@ -1,0 +1,5 @@
+'ActualCleanSanityCheck.cancellationNet_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualCleanSanityCheck.cancellation_row_support' depends on axioms: [propext, Quot.sound, Classical.choice]
+'ActualCleanSanityCheck.last_gap_is_selected_isolated' depends on axioms: [propext, Quot.sound, Classical.choice]
+'ActualCleanSanityCheck.cancellation_row_dominant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualCleanSanityCheck.cancellation_example_not_clean' depends on axioms: [propext, Classical.choice, Quot.sound]

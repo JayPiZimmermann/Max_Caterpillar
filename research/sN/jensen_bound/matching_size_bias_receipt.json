@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-02T13:33:45.428351+00:00",
+  "receipt_kind": "scoped current owned-kernel-artifact exact-type and axiom audit",
+  "result": "For the actual number X of graph edges among fixed disjoint position pairs under an ordinary uniform vertex permutation, E theta^X is at most exp(-(2K|E|/(m(m-1)))*(1-theta^3)/3), for0<theta<=1,positiveKandedgecount. The actual forcing experiment satisfies the normalized size-bias identity and Y<=X+3. Its explicitly weighted counting expression is at most400/Kcutoff^2 under the recorded application hypotheses.",
+  "scope": {
+    "random_object": "ordinary uniform permutation of Fin m",
+    "graph": "arbitrary nonempty finite simple graph",
+    "selected_positions": "fixed injective Fin K times Fin2 map into Fin m",
+    "theta": "0<theta<=1",
+    "mean": "2K|E(H)|/[m(m-1)]",
+    "size_bias_coupling": "actual two-position-transposition forcing with constant conditional preimage count m(m-1)"
+  },
+  "not_claimed": [
+    "The plain unweighted moment need not be at most400/K^2 for arbitrary sparse graphs",
+    "The weighted400 theorem explicitly retains the edge-deletion, pair-count, arity and cutoff hypotheses",
+    "The c2 matching-level repair remains an unformalized future alternative",
+    "No complete neural-network lower bound follows from this probability package alone"
+  ],
+  "semantic_checks": [
+    "The variable matchingCount counts actual SimpleGraph adjacency at permuted selected endpoints",
+    "Oriented edges are canonical SimpleGraph.Dart values and their cardinality is proved twice the undirected edge count",
+    "The forcing map consists of two explicit position transpositions on ordinary permutations",
+    "An actual inverse proves the forcing equivalence and the constant conditional fiber cardinality",
+    "The finite incidence partition proves the true size-bias identity for every real test function",
+    "Uniform joint weights are normalized and their original-permutation marginal is proved for every test function",
+    "Endpoint injectivity proves at most three selected pair indicators can change",
+    "Neither a coupling identity nor a damage bound is a hypothesis of the headline",
+    "The analytic estimate is applied with the correct negative log-theta sign",
+    "The weighted400 theorem applies the exact actual half-moment bound before the verified scalar optimization",
+    "A separate child exact-type check supplies the nonempty m2,K1,complete-graph witness with X=Y=mu=1"
+  ],
+  "stale_or_missing_project_artifacts": [],
+  "project_artifact_sha256": {
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBias.olean": "e027a789ebbae3141eb3a40095fce7b73e8db298c48ff2e8f1273af45d791dad",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBiasConstants.olean": "1288e9499d23f17e2667c7d07119611b83ba7e17f074af1e7fb47c955dabb3aa",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias.olean": "573897c10b2927794bf5d2d5fbaf8329d714fa90f3f26b1913abf100e4ff2bba",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Counting.olean": "5beb57fcd41757eb252df93747a0051e2c0cb73414a1fe2822e203d71431dd9f",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Damage.olean": "3a03600177ad100137abe20699cf85237128ce35c51e639dbaf84c0734f19b62",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Forcing.olean": "561c7613cbfd292374b453d5d873f2da2aeadc94383038dcb71b35a92ce4cd37",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Identity.olean": "fa5d983e35abfb9b5347f180560f24eff4a80295a48f56c2cc4d5a80e29045cb",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Laplace.olean": "6e0a067872b85425a9f971e214d9dd9cde2d1b5ced94a9aaffe519a192db5b74",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Model.olean": "674e560b3e6610bfc99b2d7ecfb3160acff81efc6bd58bd1f87a959d377c2864"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "research/sN/zulip_three/lean_small_pool.py",
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias.lean"
+      ],
+      "exit_code": 0,
+      "log": "research/sN/jensen_bound/matching_size_bias_module_build.log"
+    },
+    {
+      "command": [
+        "python3",
+        "research/sN/zulip_three/lean_small_pool.py",
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "verification/frontier/MatchingSizeBiasCheck.lean"
+      ],
+      "exit_code": 0,
+      "log": "research/sN/jensen_bound/matching_size_bias_exact.log"
+    }
+  ],
+  "axiom_checks": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.forcingEquiv",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.forcing_preimage_card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.forcePair_apply_away",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.oriented_edge_card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.uniform_permutation_marginal",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.finite_size_bias_identity",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matchingCount_forcePair_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.sampleCoupledCount_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.actual_matching_size_bias_coupling",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_geometric_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_geometric_le_edges",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_half_moment_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.actual_matching_counting_le_four_hundred",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "forbidden_constructs": [],
+  "project_source_closure_files": 10,
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBias.lean": "56fd341de70bc3acced37fb94609013a82027125fa1e0869bc50f64d95210e03",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBiasConstants.lean": "e2235ebe52baf5caa30c132523b509cbb76875e07a99a4ba533da0a8f90e5f51",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias.lean": "4441e0c233e16f4c28bb2a7c0ed07f8144cb97a895d1605da750ccd0f956b0da",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Counting.lean": "ab8e5fb577545b94e65b359dca7b6604d6b7e5062a4adf603f98bf4302160298",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Damage.lean": "0ba126736cb127054f360642d9ccf197337acbd032c65cbdab1bf03665e9d9a3",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Forcing.lean": "ae14a21f31a07382d457393064bff7d6a0d681d978c5aebc6914bcffc8d43e4f",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Identity.lean": "a3184641dd0994b5b3868f16f714c2a93e16a7ddb308bf2b423040df72b4ed39",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Laplace.lean": "5873b4f10b184e62f3c42ad711fc90b12b4101250f4a31c18a4c25749380a6f8",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Model.lean": "06127778a8e72ab0b708d249b35ce0015cd01c7ab28fa842a9281ac9206ba798",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/matching_size_bias_recheck.py": "6ca3e300e89be2c72970701406d7c8cc1bb3db697e32378d780e53cba3c69f06",
+    "research/sN/zulip_three/lean_small_pool.py": "b77338cb63afb353264edb6cf9df156b44a9a3d45797ee182f0919e7ebfe52d3",
+    "scripts/lean_lock.sh": "4fbb8e63df2e6b540750fc10c0718706f996dbeb45961a50ff3f461057b06d9b",
+    "verification/frontier/MatchingSizeBiasCheck.lean": "6636ed7084028dc06dc3425c0094ffe372138c033b63ad590fe540bb155881c7"
+  },
+  "log_sha256": {
+    "module_build": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exact": "557a8f2d70ffc8d8a81c85fa9ac822562556080483a5122078ca0490eb9e106c"
+  }
+}

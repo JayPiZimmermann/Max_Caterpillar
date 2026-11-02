@@ -1,0 +1,32 @@
+@matching_geometric_le_all_graphs : ∀ {m K : ℕ} (G : SimpleGraph (Fin m)) [inst : DecidableRel G.Adj]
+  (P : Fin K × Fin 2 → Fin m),
+  Function.Injective P →
+    0 < K →
+      ∀ (θ : ℝ),
+        0 < θ →
+          θ ≤ 1 →
+            (↑(Fintype.card (Equiv.Perm (Fin m))))⁻¹ * ∑ τ : Equiv.Perm (Fin m), θ ^ matchingCount G P τ ≤
+              Real.exp (-(2 * ↑K * ↑(Finset.card (SimpleGraph.edgeFinset G)) / (↑m * (↑m - 1))) * (1 - θ ^ 3) / 3)
+@actual_matching_counting_le_four_hundred_all_graphs : ∀ {m : ℕ} (G : SimpleGraph (Fin m)) [inst : DecidableRel G.Adj]
+  {J : ℕ} (P : Fin J × Fin 2 → Fin m),
+  Function.Injective P →
+    ∀ (K η : ℝ),
+      400 ≤ ↑m →
+        0 < K →
+          K ≤ ↑m / 100 →
+            0 ≤ η →
+              K / 2 ≤ ↑J →
+                η - 5 * (↑m + 4) ≤ ↑(Finset.card (SimpleGraph.edgeFinset G)) →
+                  60 * η ^ 2 / ↑m ^ 4 *
+                      ((↑(Fintype.card (Equiv.Perm (Fin m))))⁻¹ *
+                        ∑ τ : Equiv.Perm (Fin m), (1 / 2) ^ matchingCount G P τ) ≤
+                    400 / K ^ 2
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matchingCount_eq_zero_of_edge_card_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_geometric_le_all_graphs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.actual_matching_counting_le_four_hundred_all_graphs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

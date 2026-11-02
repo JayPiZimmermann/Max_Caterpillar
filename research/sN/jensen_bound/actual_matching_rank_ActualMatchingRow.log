@@ -1,0 +1,9 @@
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.restrict_braidRoot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_sub_of_effective_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

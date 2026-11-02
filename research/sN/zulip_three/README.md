@@ -1,6 +1,10 @@
-# Verified Max4 fiber results
+# Verified width and Max4 fiber results
 
-These theorems use ordinary real two-hidden-layer ReLU networks and equality
+The [second-hidden-layer width theorem](../jensen_bound/README.md) proves
+`h₂ ≥ min(N²,N⁴/h₁)/400000000` for `N ≥ 1040`, including arbitrary real
+weights and biases. Thus quadratic first width forces quadratic second width.
+
+The following Max4 theorems use ordinary real two-hidden-layer ReLU networks and equality
 on every real input. The exact component count includes arbitrary biases and
 the quotient by positive hidden-neuron rescalings, hidden permutations, and
 input permutations.
@@ -12,6 +16,11 @@ input permutations.
 | Identical complete gates, incomparable representations, regular exact-fiber endpoints | [RegularCounterexample.lean](../../../MaxCaterpillar/Fiber/GatingAbstractions/RegularCounterexample.lean#L16) |
 | Strict binary gate changes within one exact component | [BinaryPatterns.lean](../../../MaxCaterpillar/Fiber/BinaryPatterns.lean#L200) |
 | Equal global binary maps and matching nonzero readout signs imply an exact path | [GlobalConvexity.lean](../../../MaxCaterpillar/Fiber/BinaryPatterns/GlobalConvexity.lean#L81) |
+
+The intervention example distinguishes suffix responses only at hidden vectors
+that no real input attains. It does not show different natural activation maps
+or establish algorithmic inequivalence. The representation-partition and binary
+gate examples do distinguish ordinary-input hidden representations.
 
 The regular all-input exact-fiber theorem allows all 45 weights to vary with
 biases fixed to zero. A separate [empirical version allowing arbitrary

@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-02T14:25:46.376573+00:00",
+  "receipt_kind": "scoped current owned-kernel-artifact exact-type and axiom audit",
+  "result": "The actual ordinary-permutation matching moment and explicitly weighted400/K^2 expression satisfy their bounds for every finite simple graph, including zero edges. Empty graphs have matchingCount identically0 and moment exactly1; no normalized size-bias coupling on the empty dart sample is asserted.",
+  "scope": {
+    "random_object": "ordinary uniform vertex permutation",
+    "graph": "all finite simple graphs, including zero edges",
+    "selected_positions": "fixed injective Fin K times Fin2 map",
+    "weighted_hypotheses": "m>=400,0<Kcutoff<=m/100,eta>=0,J>=Kcutoff/2,eta-5(m+4)<=|E(H)|"
+  },
+  "not_claimed": [
+    "No nonempty normalized dart coupling is claimed for the zero-edge graph",
+    "The400bound concerns the displayed weighted moment, not an arbitrary raw moment",
+    "This package alone is not a complete neural-network lower-bound assembly"
+  ],
+  "semantic_checks": [
+    "The all-graphs headlines have no positive graph-edge-cardinality premise",
+    "An actual adjacency would yield a dart and contradict zero edge cardinality",
+    "The empty-graph count is proved identically0 for every permutation",
+    "The ordinary uniform-permutation moment is proved exactly1 for every theta in the empty case",
+    "Nonempty cases use the frozen verified forcing/identity/damage/analytic route",
+    "The empty-case edge-deletion premise bounds eta, making the shifted exponential at least1",
+    "The same verified scalar400 bound applies after multiplying the nonnegative weight",
+    "A concrete injective Fin1 times Fin2 position model verifies the empty-graph boundary",
+    "All original c3 production files and their source-bound receipt are preserved unchanged"
+  ],
+  "stale_or_missing_project_artifacts": [],
+  "project_artifact_sha256": {
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBias.olean": "e027a789ebbae3141eb3a40095fce7b73e8db298c48ff2e8f1273af45d791dad",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBiasConstants.olean": "1288e9499d23f17e2667c7d07119611b83ba7e17f074af1e7fb47c955dabb3aa",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/AllGraphs.olean": "42acf3b8aefdc1ee8c8ff70df9a329c38d966e7a8590af56538e4fb630976af3",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Counting.olean": "5beb57fcd41757eb252df93747a0051e2c0cb73414a1fe2822e203d71431dd9f",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Damage.olean": "3a03600177ad100137abe20699cf85237128ce35c51e639dbaf84c0734f19b62",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Forcing.olean": "561c7613cbfd292374b453d5d873f2da2aeadc94383038dcb71b35a92ce4cd37",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Identity.olean": "fa5d983e35abfb9b5347f180560f24eff4a80295a48f56c2cc4d5a80e29045cb",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Laplace.olean": "6e0a067872b85425a9f971e214d9dd9cde2d1b5ced94a9aaffe519a192db5b74",
+    ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Model.olean": "674e560b3e6610bfc99b2d7ecfb3160acff81efc6bd58bd1f87a959d377c2864"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "research/sN/zulip_three/lean_small_pool.py",
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/AllGraphs.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/AllGraphs.lean"
+      ],
+      "exit_code": 0,
+      "log": "research/sN/jensen_bound/matching_all_graphs_module_build.log"
+    },
+    {
+      "command": [
+        "python3",
+        "research/sN/zulip_three/lean_small_pool.py",
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "verification/frontier/MatchingSizeBiasAllGraphsCheck.lean"
+      ],
+      "exit_code": 0,
+      "log": "research/sN/jensen_bound/matching_all_graphs_exact.log"
+    }
+  ],
+  "axiom_checks": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matchingCount_eq_zero_of_edge_card_zero",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_moment_eq_one_of_edge_card_zero",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_geometric_le_all_graphs",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.matching_half_moment_le_all_graphs",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.MatchingSizeBias.actual_matching_counting_le_four_hundred_all_graphs",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "forbidden_constructs": [],
+  "project_source_closure_files": 10,
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBias.lean": "56fd341de70bc3acced37fb94609013a82027125fa1e0869bc50f64d95210e03",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBiasConstants.lean": "e2235ebe52baf5caa30c132523b509cbb76875e07a99a4ba533da0a8f90e5f51",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/AllGraphs.lean": "b1492c09ed372e63247fcb6de525c4d53b58a6499df1bc80eea4cc3e1a004153",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Counting.lean": "ab8e5fb577545b94e65b359dca7b6604d6b7e5062a4adf603f98bf4302160298",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Damage.lean": "0ba126736cb127054f360642d9ccf197337acbd032c65cbdab1bf03665e9d9a3",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Forcing.lean": "ae14a21f31a07382d457393064bff7d6a0d681d978c5aebc6914bcffc8d43e4f",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Identity.lean": "a3184641dd0994b5b3868f16f714c2a93e16a7ddb308bf2b423040df72b4ed39",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Laplace.lean": "5873b4f10b184e62f3c42ad711fc90b12b4101250f4a31c18a4c25749380a6f8",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Model.lean": "06127778a8e72ab0b708d249b35ce0015cd01c7ab28fa842a9281ac9206ba798",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/matching_all_graphs_recheck.py": "11f5195e31f5de68e49164c4b50c59ac0516b50a0d9f204e20bcc3c189e658ee",
+    "research/sN/zulip_three/lean_small_pool.py": "b77338cb63afb353264edb6cf9df156b44a9a3d45797ee182f0919e7ebfe52d3",
+    "scripts/lean_lock.sh": "4fbb8e63df2e6b540750fc10c0718706f996dbeb45961a50ff3f461057b06d9b",
+    "verification/frontier/MatchingSizeBiasAllGraphsCheck.lean": "de22fb60b7b3d8171c9d0b0949b77fb186dd464932bf460707884d57f38d3c46"
+  },
+  "log_sha256": {
+    "module_build": "261a74fb786f294f995eb5f241d215f008c01462cc7becdbf9ac04fefde8378b",
+    "exact": "313f28da185e1e3545d87bcc88e4fc20e6d03cd25c15f9274c08b409c66704d3"
+  }
+}

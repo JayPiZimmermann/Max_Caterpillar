@@ -2,9 +2,9 @@
 
 Status: **historical verification receipt; the current cleanup needs a new gate**.
 
-## Scoped fiber counterexample and count gate, 2 November 2026
+## Scoped fiber and second-width gate, 2 November 2026
 
-The [seven-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
+The [nine-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
 has a separate [working-tree receipt](../research/sN/zulip_three/public_claim_receipt.json).
 Its gate rebuilds `MaxCaterpillar`, checks handwritten exact statements through
 that public root, checks compatibility with the existing fiber interface, scans
@@ -23,10 +23,18 @@ labelled binary maps and matching nonzero output signs, with arbitrary first
 layers and biases. The regular all-input exact-fiber statement allows all
 45 physical weights to vary with biases fixed to zero; the separate empirical
 regularity theorem allows arbitrary biases on its specified four-input dataset.
-These checks do not establish the proposed stronger second-hidden-layer
-lower bound. They are content-bound workspace
-checks and do not replace a clean-commit publication gate or the historical
-repository-wide manifest below.
+Two additional claims prove, for ordinary exact MAX networks with arbitrary
+real weights and biases and `N ≥ 1040`,
+`h₂ ≥ min(N²,N⁴/h₁)/400000000`, including its quadratic corollary when
+`h₁ ≤ N²`. The [expanded six-array contract](h2/NetworkLowerBoundCheck.lean)
+and [topical receipt](../research/sN/jensen_bound/network_lower_bound_receipt.json)
+check the actual network formula and all proof dependencies. The finite
+coefficient certificate is proved, not an extra hypothesis. See the
+[proof overview](../research/sN/jensen_bound/README.md).
+
+These are content-bound workspace checks. A publication must contain the
+same source contents; they do not replace the historical repository-wide
+manifest below.
 
 The 122-statement receipt below predates the consolidation into
 `MaxCaterpillar/Count/`, `MaxCaterpillar/Dimension.lean`, and

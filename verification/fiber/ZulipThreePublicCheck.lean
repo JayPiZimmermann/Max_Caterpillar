@@ -62,3 +62,17 @@ example {N h₁ h₂ : ℕ} [NeZero N] (a b : ExactFiber N h₁ h₂)
 #print axioms GatingAbstractions.regular_same_gate_exact_counterexample
 #print axioms BinaryPatterns.strict_connected_binary_pattern_counterexample
 #print axioms BinaryPatterns.joined_of_global_binary_maps_output_signs
+
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : Network N h₁ h₂) (hnet : ∀ x, net.eval x = Maximum N x) :
+    (1 / 400000000 : ℝ) * min ((N : ℝ)^2) ((N : ℝ)^4 / (h₁ : ℝ)) ≤ (h₂ : ℝ) :=
+  Frontier.RandomRestriction.NetworkLowerBound.second_width_tradeoff hN net hnet
+
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : Network N h₁ h₂) (hnet : ∀ x, net.eval x = Maximum N x)
+    (hwidth : (h₁ : ℝ) ≤ (N : ℝ)^2) :
+    (1 / 400000000 : ℝ) * (N : ℝ)^2 ≤ (h₂ : ℝ) :=
+  Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic hN net hnet hwidth
+
+#print axioms Frontier.RandomRestriction.NetworkLowerBound.second_width_tradeoff
+#print axioms Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic
