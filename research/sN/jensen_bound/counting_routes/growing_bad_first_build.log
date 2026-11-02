@@ -1,0 +1,20 @@
+[4052/4053] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst
+stdout:
+@badFirstEvent_fraction_le : ∀ {n k : ℕ} {κ : Type u_2} [inst : Fintype κ],
+  k ≤ n →
+    3 ≤ n →
+      ∀ (T : κ → Finset (Fin n)),
+        ↑(Finset.card (badFirstEvent k T)) / ↑(Fintype.card (Equiv.Perm (Fin n))) ≤
+          ↑(largeSupportCount T) * ↑(Nat.descFactorial k 3) / ↑(Nat.descFactorial n 3)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.support_containment_card_mul_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_card_mul_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_fraction_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_empty_of_arity_lt_three' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

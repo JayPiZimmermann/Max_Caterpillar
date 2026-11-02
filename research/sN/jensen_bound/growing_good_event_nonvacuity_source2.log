@@ -1,0 +1,22 @@
+every_selected_arity_has_isolated_dominant : ∀ (k : ℕ),
+  ∃ w σ ρ K g,
+    ∑ i : Fin (4 + k), w i = 0 ∧
+      3 ≤ Finset.card (NormalizedNetwork.rowSupport w) ∧
+        GapDominant (positionConfig ρ) (collapsedRow k σ w) g ∧ g ∈ isolatedGaps (smallRankGaps ρ K)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominanceNonvacuity.witnessRow_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominanceNonvacuity.witnessRow_support_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominanceNonvacuity.witnessRow_collapse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominanceNonvacuity.witness_isolated' depends on axioms: [propext,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominanceNonvacuity.witness_dominant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominanceNonvacuity.every_selected_arity_has_isolated_dominant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

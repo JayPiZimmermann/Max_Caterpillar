@@ -1,0 +1,9 @@
+[718/719] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.Floors
+stdout:
+braid_parameter_bounds : ∀ (n q : ℕ), 1 ≤ q → 160000 * q ^ 2 ≤ n → BraidParameterBounds n q
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braid_parameter_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braid_shift_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

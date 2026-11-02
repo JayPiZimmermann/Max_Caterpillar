@@ -1,0 +1,3 @@
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_coverage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

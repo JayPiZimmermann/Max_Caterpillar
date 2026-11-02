@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "checked_at_utc": "2026-11-02T15:00:52.245618+00:00",
-  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. Gating regularity concerns the entire all-input zero-bias exact fiber in all 45 physical weights. For N>=1040, ordinary arbitrary-bias all-input exact MAX networks satisfy h2 >= min(N^2,N^4/h1)/400000000, with the h1<=N^2 quadratic corollary.",
+  "checked_at_utc": "2026-11-02T16:19:09.961352+00:00",
+  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. Gating regularity concerns the entire all-input zero-bias exact fiber in all 45 physical weights. For N>=1040, ordinary arbitrary-bias all-input exact MAX networks satisfy h2 >= min(N^2,N^4/h1)/400000000, with the h1<=N^2 quadratic corollary. Ordinary feeding width can replace total first width at the same constant. Fully affine skip networks satisfy the total-first-width tradeoff with constant 1/1600000000. The strengthened full affine-skip theorem charges original feeding width with constant 1/40000000, including its quadratic corollary and no first-width cap.",
   "evidence_kind": "Rebuilt public-root working-tree exact-type and axiom gate; not a clean-commit publication receipt.",
   "commands": [
     {
@@ -83,6 +83,36 @@
       "propext"
     ],
     "MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips_unshifted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_tradeoff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic": [
       "Classical.choice",
       "Quot.sound",
       "propext"
@@ -570,6 +600,9 @@
     "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingFlip.lean": "fa2fa5279c44ff957688fe886c84b6364948ce6c3b2a8b5c1ecd70aa4a8e018e",
     "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRank.lean": "9d797b9a59b86e9dc20bb483dbf107f8a4d7449fc4defb20fcdcc47c4fcc7d49",
     "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRow.lean": "e341f71c32c673ab072e5c6ca2631a8f9f6ab2081507971aac3c9a10382e9d6e",
+    "MaxCaterpillar/Frontier/RandomRestriction/AffineSkipExtension.lean": "03d1c78bd284694c08cedae8bf7a2be7c128a4d4a24342e98f9050d25085bc94",
+    "MaxCaterpillar/Frontier/RandomRestriction/AffineSkipNormalization/Homogeneous.lean": "755cdae9cc7a0271674ef58e7ba83912687159b1585e5f53389936758809e196",
+    "MaxCaterpillar/Frontier/RandomRestriction/AffineSkipNormalization.lean": "0d2dcbc47a6a74bf5c7c2001458c97bf6117a399d4e8da6ca1612bdd0d2915a7",
     "MaxCaterpillar/Frontier/RandomRestriction/BadFirst.lean": "8b7a36300bd44ffcf9b32e65408b2437ad3500b8237783c6df9c2f2539fc7ddd",
     "MaxCaterpillar/Frontier/RandomRestriction/BadFirstModel.lean": "379434d41638d041dd11a5057890de67cb0698ae02111bf223934da5056ec162",
     "MaxCaterpillar/Frontier/RandomRestriction/BraidCoinActivation.lean": "27f91781361458362608fc2cf90650e83c17451348f998a6fb840d4f39e67d15",
@@ -609,6 +642,14 @@
     "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Realization.lean": "0c0b9d5bd47d382dfd01bf7c483aa71235b9111601c8fe777e076173998770ce",
     "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/SetRealization.lean": "263c55a99ccdba7eb6d98404ed0173f4e6e94afb506c228af8a3a9a03803beaf",
     "MaxCaterpillar/Frontier/RandomRestriction/EffectiveCoinDifference.lean": "5e93c6a8c7f18579f9686f62817125790073e5f833e2dc389cdb094b4841404a",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingCore.lean": "76b93147d12d62139f90f90e5a6300d9115cd79f295d57e945283e38dd0ee3ba",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingCounting.lean": "e2bf6d2a5d8fb2b416dc1578fad8f608a4b33a94241d30e1d71426baf80172bf",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingHalf.lean": "8480c5e024b9f0674d46627e111db9788ef698f134a61ea621340f39c272dabc",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingSharp.lean": "1b35281d64fc9a2a2d4078c00552980f83569a59d27d4edbb0b6bbf64d5b96b5",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingSharpScalar.lean": "e3ff3bf9a90183685851df097e6f9aa0da8468c66feab21117ee09984749f8ee",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingTransfer.lean": "0d5ecb7a9020aa185d3370280991f5af26c82add0ed69760278bdf180471524d",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingWidthExtension.lean": "0cc207b9ad1fdb0f0dc2d39326927f41fe0ec489288f0f10ec75105092f1a3f2",
+    "MaxCaterpillar/Frontier/RandomRestriction/FeedingWitness.lean": "8ad2a01691b77542277cf1bd67e2832338a152cb0da85206ed25bdeac7e8522b",
     "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesDefs.lean": "f7b5f7f8465a7813e6a97377154173966dc5951ad1a9f2ff5669fa701c251be5",
     "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesGeometry.lean": "3f7adb96877fc48da14894892261384b7b20ad7c474b78cb93183e0e953e6903",
     "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesPairs.lean": "515d28e6cce775955349aee9c60745479257540fd743c6995640e51919cb61e8",
@@ -1731,7 +1772,7 @@
     "MaxCaterpillar/Frontier/StarCertificate/XiTargetChecks/Leaf0850.lean": "570613703f31307bde49d09bba5b776e248ea7dac21ab7dbaad51720a303d7d8",
     "MaxCaterpillar/Frontier/StarCertificate/XiTargets.lean": "700ef7e02b5d3ecc9396a38df12175aaff985db1b6e52a3ab487cc5b794d4e08",
     "MaxCaterpillar/Frontier/StarCertificate/XiZeroPattern.lean": "8aeb5cd00c609188c1ee8c472444ed343151e7d9457478fc5235389fd9c61920",
-    "MaxCaterpillar/Frontier.lean": "dcbfda78f9dcf3adb8b871b3fee5d73e974cc3762d342edcb7cb0ad05314a7b8",
+    "MaxCaterpillar/Frontier.lean": "97ae263b76ad9c18092da8beb8a01c12886254a9b8bca1f0b8f77540718c3c25",
     "MaxCaterpillar/Internal/Network.lean": "fa4e14cbbe0ad5b39077e97bb08d52d4cd605b3ab36530b1f345b5f30750a980",
     "MaxCaterpillar/KMPS.lean": "fb3e708d732809661ab0a16db31e1851d4e3f1505dd16e0547c773d13bd913e7",
     "MaxCaterpillar/Lemmas.lean": "2d5b0b5bf9944953a8bb7848daf812ad46061be816ef489f72102ede98579a72",
@@ -1949,16 +1990,16 @@
     "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
     "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
     "research/sN/zulip_three/check_public_claims.py": "4c3c2bd4f185621bad28d888d9f401935b141bd9cd430e871e535870bbb0d64c",
-    "research/sN/zulip_three/public_claim_manifest.json": "af164b20af1991aa4ba83ecdc9f2e2700ab2c581172db38e8db3ad39087ea095",
+    "research/sN/zulip_three/public_claim_manifest.json": "9c551a91264349399f2c02f1947445e1b546d7865d695ea4f89f601913647238",
     "scripts/verify.py": "8271d6ec495e5bbfc67cde596cf445d6e7320fb650940a784b53009527c4b29c",
     "verification/fiber/PublicCheck.lean": "54e5790ad136f164abca3e5c67c574a2c3035ec9cd83c308e35bcf8d101bc39d",
-    "verification/fiber/ZulipThreePublicCheck.lean": "a24f20dfa0551a6ad9d4619a04720d5acd10d303aa8a1a29c330942f0d86b4a0"
+    "verification/fiber/ZulipThreePublicCheck.lean": "ad138e5c31a818d3e3f62710902a99138e34a4af18863d170b033c9cc4cc7191"
   },
   "source_unchanged": true,
   "log_sha256": {
-    "root": "ad3738d5727594d51a4795a612cdf5b68bdf59ecfaca387e8f85ded2480ddfe2",
-    "all": "521d3d05efa6c51aa3438b38b4c1e293eae10c14eb94921f881c67e3cb7eadfa",
-    "exact": "2631af69a4263bb1631560e3d376d5870ea7e4629c5ff4c6b26604478324543a",
+    "root": "aaccc591dd3e9a5c5f902a3f58ef22ffc6844ed3ef38556af559b2862422bcaf",
+    "all": "03518e02f0745cf401e9bd000d2c106b23b32ae339339199fdf79ee527472bdc",
+    "exact": "1d653e5d493c8baaf7db50395e1f37a8513a083cc46d949334dbbfdc04c91ea5",
     "compatibility": "b02f5fd31b8b1be85f89792d8bcdcccce3a58a481630bb54fc59a7e43830c1a3"
   }
 }

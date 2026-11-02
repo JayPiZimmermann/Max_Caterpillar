@@ -51,8 +51,38 @@
       "task": "ordinary-network-quadratic-second-width",
       "module": "MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound",
       "declaration": "MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic"
+    },
+    {
+      "task": "ordinary-feeding-width-tradeoff",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding"
+    },
+    {
+      "task": "full-affine-skip-width-tradeoff",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips_unshifted"
+    },
+    {
+      "task": "affine-skip-original-feeding-tradeoff",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.FeedingTransfer",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_tradeoff"
+    },
+    {
+      "task": "affine-skip-original-feeding-quadratic",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.FeedingTransfer",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_quadratic"
+    },
+    {
+      "task": "sharp-affine-skip-original-feeding-tradeoff",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff"
+    },
+    {
+      "task": "sharp-affine-skip-original-feeding-quadratic",
+      "module": "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp",
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic"
     }
   ],
-  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. Gating regularity concerns the entire all-input zero-bias exact fiber in all 45 physical weights. For N>=1040, ordinary arbitrary-bias all-input exact MAX networks satisfy h2 >= min(N^2,N^4/h1)/400000000, with the h1<=N^2 quadratic corollary.",
-  "helpers": "Leaf helpers remain governed by their respective exact-type/axiom receipts. This manifest promotes nine public headline claims; it does not replace the historical repository-wide manifest. The width theorem additionally has an expanded six-array contract and a source-bound topical receipt."
+  "scope": "Exact types are handwritten in the checked public-root consumer. Includes exact65 components of the full biased genuine symmetry quotient. Gating regularity concerns the entire all-input zero-bias exact fiber in all 45 physical weights. For N>=1040, ordinary arbitrary-bias all-input exact MAX networks satisfy h2 >= min(N^2,N^4/h1)/400000000, with the h1<=N^2 quadratic corollary. Ordinary feeding width can replace total first width at the same constant. Fully affine skip networks satisfy the total-first-width tradeoff with constant 1/1600000000. The strengthened full affine-skip theorem charges original feeding width with constant 1/40000000, including its quadratic corollary and no first-width cap.",
+  "helpers": "Leaf helpers remain governed by their respective exact-type/axiom receipts. This manifest promotes fifteen public headline claims; it does not replace the historical repository-wide manifest. The width theorem additionally has an expanded six-array contract and a source-bound topical receipt."
 }

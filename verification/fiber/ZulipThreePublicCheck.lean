@@ -76,3 +76,53 @@ example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
 
 #print axioms Frontier.RandomRestriction.NetworkLowerBound.second_width_tradeoff
 #print axioms Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic
+
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : Network N h₁ h₂) (hnet : ∀ x, net.eval x = Maximum N x) :
+    (1 / 400000000 : ℝ) * min ((N : ℝ)^2)
+      ((N : ℝ)^4 / (Frontier.RandomRestriction.FeedingWidthExtension.feedingCount net : ℝ)) ≤
+      (h₂ : ℝ) :=
+  Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding hN net hnet
+
+open Frontier.RandomRestriction.AffineSkipExtension in
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : AffineSkipNetwork N h₁ h₂) (hnet : ∀ x, eval net x = Maximum N x) :
+    (1 / 1600000000 : ℝ) * min ((N : ℝ)^2) ((N : ℝ)^4 / (h₁ : ℝ)) ≤ (h₂ : ℝ) :=
+  second_width_tradeoff_affine_skips_unshifted hN net hnet
+
+#print axioms Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding
+#print axioms Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips_unshifted
+
+open Frontier.RandomRestriction.AffineSkipExtension Frontier.RandomRestriction.FeedingCore in
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : AffineSkipNetwork N h₁ h₂) (hnet : ∀ x, eval net x = Maximum N x) :
+    (1 / 400000000 : ℝ) * min ((N : ℝ)^2)
+      ((N : ℝ)^4 / (affineFeedingCard net : ℝ)) ≤ (h₂ : ℝ) :=
+  affine_feeding_tradeoff hN net hnet
+
+open Frontier.RandomRestriction.AffineSkipExtension Frontier.RandomRestriction.FeedingCore in
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : AffineSkipNetwork N h₁ h₂) (hnet : ∀ x, eval net x = Maximum N x)
+    (hwidth : (affineFeedingCard net : ℝ) ≤ (N : ℝ)^2) :
+    (1 / 400000000 : ℝ) * (N : ℝ)^2 ≤ (h₂ : ℝ) :=
+  affine_feeding_quadratic hN net hnet hwidth
+
+#print axioms Frontier.RandomRestriction.FeedingCore.affine_feeding_tradeoff
+#print axioms Frontier.RandomRestriction.FeedingCore.affine_feeding_quadratic
+
+open Frontier.RandomRestriction.AffineSkipExtension Frontier.RandomRestriction.FeedingCore in
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : AffineSkipNetwork N h₁ h₂) (hnet : ∀ x, eval net x = Maximum N x) :
+    (1 / 40000000 : ℝ) * min ((N : ℝ)^2)
+      ((N : ℝ)^4 / (affineFeedingCard net : ℝ)) ≤ (h₂ : ℝ) :=
+  Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff hN net hnet
+
+open Frontier.RandomRestriction.AffineSkipExtension Frontier.RandomRestriction.FeedingCore in
+example {N h₁ h₂ : ℕ} [NeZero N] (hN : 1040 ≤ N)
+    (net : AffineSkipNetwork N h₁ h₂) (hnet : ∀ x, eval net x = Maximum N x)
+    (hwidth : (affineFeedingCard net : ℝ) ≤ (N : ℝ)^2) :
+    (1 / 40000000 : ℝ) * (N : ℝ)^2 ≤ (h₂ : ℝ) :=
+  Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic hN net hnet hwidth
+
+#print axioms Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff
+#print axioms Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic

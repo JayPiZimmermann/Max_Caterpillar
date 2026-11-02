@@ -1,0 +1,14 @@
+'MaxCaterpillar.Fiber.Count65.continuous_globalLabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Count65.globalLabel_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Count65.continuous_globalLabelFin65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Count65.globalLabelFin65_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Count65.zeroBiasComponentProjection65_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.fullComponentProjection65_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.zeroBiasComponentsEmbedding65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.Count65.fullComponentsEmbedding65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_at_least_65_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_component_cardinal_lower' depends on axioms: [Quot.sound, propext, Classical.choice]

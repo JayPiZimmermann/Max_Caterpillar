@@ -1,0 +1,26 @@
+hasStrictFDerivAt_eval : ∀ (p : Params) (x : Point 4),
+  (∀ (j : Fin 6), rawFirst x j p ≠ 0) →
+    (∀ (k : Fin 3), rawSecond x k p ≠ 0) → HasStrictFDerivAt (fun q => Network.eval (ofParams q) x) (evalD p x) p
+regular_empirical_max_fiber : ∀ (c : ℝ), 0 < c → HasRegularFiberChartAt empiricalMaxSet (familyPoint c)
+regular_same_gate_counterexample : SameCompleteGates (family 1) (family 2) ∧
+  ¬Refines (Network.secondHidden (family 1)) (Network.secondHidden (family 2)) ∧
+    ¬Refines (Network.secondHidden (family 2)) (Network.secondHidden (family 1)) ∧
+      HasRegularFiberChartAt empiricalMaxSet (familyPoint 1) ∧ HasRegularFiberChartAt empiricalMaxSet (familyPoint 2)
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.hasStrictFDerivAt_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.hasStrictFDerivAt_observations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.observationsD_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.regular_empirical_max_fiber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.empirical_kernel_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.regular_same_gate_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

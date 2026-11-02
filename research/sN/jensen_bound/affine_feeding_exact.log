@@ -1,0 +1,34 @@
+@affine_feeding_tradeoff : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) → 1 / 400000000 * min (↑N ^ 2) (↑N ^ 4 / ↑(affineFeedingCard net)) ≤ ↑h₂
+@affine_feeding_quadratic : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) → ↑(affineFeedingCard net) ≤ ↑N ^ 2 → 1 / 400000000 * ↑N ^ 2 ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.absorb_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.exists_original_matching_of_feeding_braid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.structural_witness_of_generic_embedding_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.model_counting_feeding_on_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.feedingCard_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.exists_feeding_half_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.normalized_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.normalized_feedingCard_le_original' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,7 @@
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.localMatchingObstruction_mono_arity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GrowingMatchingMonotoneChecks.expanded_actual_type' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrowingMatchingMonotoneChecks.equal_arity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrowingMatchingMonotoneChecks.known_five_two_upward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrowingMatchingMonotoneChecks.six_two' depends on axioms: [propext, Classical.choice, Quot.sound]

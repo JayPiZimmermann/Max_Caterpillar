@@ -1,0 +1,78 @@
+[4948/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.GeneralRows
+[5413/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.SmallFalling
+[5447/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.Half
+stdout:
+@exists_affine_half_model : ∀ {N n h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero n] (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+    2 * n ≤ N →
+      ∃ S,
+        Finset.card S = n ∧
+          ∃ model,
+            (∀ (x : Point n), NormalizedNetwork.eval model x = Maximum n x) ∧
+              TranslationNormalized model ∧ 4 * fourthMoment model ≤ 81 * h₁ ∧ 4 * nonBraidCount model ≤ h₁
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.exists_normalized_half_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.exists_affine_half_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+stdout:
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:23:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:23:80: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:34:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:34:80: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_three_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_four_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_parameter_bounds' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+[5450/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.GeneralRowsCoverage
+[5450/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.GeneralRowsEnvelope
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_envelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_coverage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5452/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GeneralRows
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows_of_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5453/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.Budgets
+stdout:
+@fourthMoment_le_quadratic_budget : ∀ {N h₁ h₂ : ℕ} (C : ℕ),
+  1 ≤ C →
+    0 < N / 2 →
+      h₁ ≤ C * N ^ 2 →
+        ∀ (model : NormalizedNetwork (N / 2) h₁ h₂),
+          4 * fourthMoment model ≤ 81 * h₁ → fourthMoment model ≤ quadraticParameter C ^ 2 * (N / 2) ^ 2
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.fourthMoment_le_quadratic_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.general_rows_budgets_of_fourthMoment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5454/5455] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows
+stdout:
+@conditional_affine_quadratic_width_lower_bound : ∀ {N h₁ h₂ : ℕ} (C q : ℕ) (hC : 1 ≤ C),
+  1 ≤ q →
+    ∀ (hsize : 8000 * quadraticParameter C ^ 2 ≤ N / 2),
+      1000 * quadraticParameter C ^ 2 * q ^ 3 ≤ N / 2 →
+        LocalMatchingObstruction (Parameters.braidArity q) q →
+          ∀ (net : AffineSkipNetwork N h₁ h₂),
+            (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+              h₁ ≤ C * N ^ 2 → 1 / 2 * (↑(N / 2) / (400000 * ↑(quadraticParameter C) * ↑q ^ 2)) ^ q ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.conditional_affine_quadratic_width_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

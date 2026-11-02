@@ -1,0 +1,11 @@
+[4058/4059] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirstConfigurations
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.mem_configurationBadFirstEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.configurationBadFirstEvent_fraction' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.configurationBadFirstEvent_fraction_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

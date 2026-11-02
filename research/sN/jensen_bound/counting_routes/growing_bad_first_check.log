@@ -1,0 +1,32 @@
+@badFirstEvent_fraction_le : ∀ {n k : ℕ} {κ : Type u_2} [inst : Fintype κ],
+  k ≤ n →
+    3 ≤ n →
+      ∀ (T : κ → Finset (Fin n)),
+        ↑(Finset.card (badFirstEvent k T)) / ↑(Fintype.card (Equiv.Perm (Fin n))) ≤
+          ↑(largeSupportCount T) * ↑(Nat.descFactorial k 3) / ↑(Nat.descFactorial n 3)
+@configurationBadFirstEvent_fraction_le : ∀ {κ : Type u_2} [inst : Fintype κ] (k m : ℕ),
+  3 ≤ m + k →
+    ∀ (T : κ → Finset (Fin (m + k))),
+      ↑(Finset.card (configurationBadFirstEvent k m T)) / ↑(Fintype.card (Configurations.Configuration k m)) ≤
+        ↑(largeSupportCount T) * ↑(Nat.descFactorial k 3) / ↑(Nat.descFactorial (m + k) 3)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.support_containment_card_mul_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_card_mul_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_fraction_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_empty_of_arity_lt_three' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_card_four_mul_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.mem_configurationBadFirstEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.configurationBadFirstEvent_fraction_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

@@ -1,0 +1,8 @@
+[4059/4060] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.Cardinality
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.support_bad_requires_card_four' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.support_bad_configuration_requires_card_four' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

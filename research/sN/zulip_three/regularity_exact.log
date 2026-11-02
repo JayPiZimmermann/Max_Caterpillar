@@ -1,0 +1,50 @@
+@eventual_fiber_iff_of_inverse_coordinates : ∀ {E : Type u_3} {V : Type u_2} {W : Type u_1}
+  [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] [inst_2 : CompleteSpace E] [inst_3 : NormedAddCommGroup V]
+  [inst_4 : NormedSpace ℝ V] [inst_5 : NormedAddCommGroup W] [inst_6 : NormedSpace ℝ W] (S : Set E) (F : E → V)
+  (g : E → W) (P : W → E) (a : E) (L : E ≃L[ℝ] V × W),
+  HasStrictFDerivAt (fun x => (F x, g x)) (↑L) a →
+    P (g a) = a →
+      ContinuousAt P (g a) →
+        ContinuousAt g a →
+          (∀ x ∈ S, F x = F a) →
+            (∀ᶠ (w : W) in nhds (g a), P w ∈ S) →
+              (∀ᶠ (w : W) in nhds (g a), g (P w) = w) → ∀ᶠ (x : E) in nhds a, x ∈ S ↔ F x = F a
+@regular_fiber_chart_of_inverse_coordinates : ∀ {E : Type u_3} {V : Type u_2} {W : Type u_1}
+  [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] [inst_2 : CompleteSpace E] [inst_3 : NormedAddCommGroup V]
+  [inst_4 : NormedSpace ℝ V] [inst_5 : NormedAddCommGroup W] [inst_6 : NormedSpace ℝ W] (S : Set E) (F : E → V)
+  (g : E → W) (P : W → E) (a : E) (L : E ≃L[ℝ] V × W),
+  HasStrictFDerivAt (fun x => (F x, g x)) (↑L) a →
+    P (g a) = a →
+      ContinuousAt P (g a) →
+        ContinuousAt g a →
+          (∀ x ∈ S, F x = F a) →
+            (∀ᶠ (w : W) in nhds (g a), P w ∈ S) → (∀ᶠ (w : W) in nhds (g a), g (P w) = w) → HasRegularFiberChartAt S a
+@regular_level_set_chart : ∀ {E : Type u_2} {V : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E]
+  [inst_2 : CompleteSpace E] [inst_3 : NormedAddCommGroup V] [inst_4 : NormedSpace ℝ V] [inst_5 : FiniteDimensional ℝ V]
+  (F : E → V) (a : E) (F' : E →L[ℝ] V),
+  HasStrictFDerivAt F F' a → LinearMap.range F' = ⊤ → HasRegularFiberChartAt {x | F x = F a} a
+rawHomeomorphZeroBiasExact : ↑RawExactSet ≃ₜ { net // Network.HasZeroBiases ↑net }
+'MaxCaterpillar.Fiber.GatingAbstractions.eventual_fiber_iff_of_inverse_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.regular_fiber_chart_of_inverse_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.regular_level_set_chart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.rawHomeomorphZeroBias' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.rawHomeomorphZeroBiasExact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.splitCoordinates' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Fiber.GatingAbstractions.smooth_regular_family_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.smooth_regular_family_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.regular_family_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.regular_family_two' depends on axioms: [propext, Classical.choice, Quot.sound]

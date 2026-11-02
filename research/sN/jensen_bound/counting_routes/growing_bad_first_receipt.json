@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "module": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirstConfigurations",
+  "scope": "Actual arbitrary selected arity k, all-permutation input event, finite row-support family, and exact three-configuration lift. No structural matching H or network lower bound is claimed here.",
+  "event": "B1(k,T) = {sigma | exists j, 3 <= card(Tj) and Tj subset smallRankGaps sigma k}; sigma maps labels to positions.",
+  "M": "Exact number of original indices with support cardinality at least three; no maximum support size or nonempty family assumption.",
+  "integer_bound": "|B1|*(n)_3 <= M*(k)_3*card(Perm Fin n), for k<=n.",
+  "fraction_bound": "|B1|/card(Perm Fin n) <= M*(k)_3/(n)_3, for k<=n and 3<=n.",
+  "quarter_bound": "4*M*(k)_3 <= (n)_3 implies 4*|B1| <= card(Perm Fin n).",
+  "proof_method": "One actual three-element subset per support, exact actual permutation containment law, finite union count; no all-triples overcount or assumed probability bound.",
+  "configuration_lift": "Literal product with all ranks, then actual effective-configuration pullback. Pointwise selected-set preservation proves event membership depends only on original sigma; exact fraction is preserved.",
+  "boundaries": [
+    "k<3 gives the empty bad event.",
+    "The indexed support family may be empty."
+  ],
+  "axiom_checks": {
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.support_containment_card_mul_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_card_mul_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_fraction_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_empty_of_arity_lt_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.badFirstEvent_card_four_mul_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.mem_configurationBadFirstEvent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BadFirst.configurationBadFirstEvent_fraction_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Deletion.lean": "0afd322d837bcd7cec2e3cc8a8952b7351d565b1a19bd77e4a7f61fc665a1584",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/BadFirst.lean": "ad9eae0d2b0f60b9f437f6c469fad7bf49563457a1546be6af4d82b420045dc9",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/BadFirstConfigurations.lean": "580cb56d094c3710586942a5b4a9574b6ff5728013f1327d363ac80f853dba5e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Configurations.lean": "a99075d77da3f8de70c2d0d0387bc02c45db9e6fc0d7699e87c52d97a5cf0cff",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsGeometry.lean": "73bca36b6f5c23aead42d396234973c84594569ea5824751312e2ece9b50cfae",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsSums.lean": "631ea60dc618ed2a53fc77f88e69530ff73144c9369e597a618684bda1a9521e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsUniform.lean": "d8cf2c0eb48a33b2986bacabafc02c25b61833b52b78a1d316d0bc7decdd693f",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Selected.lean": "4db12f9634fa0cbee58c879c46abc5a666e523a23caf2a9e6a286488e0d410b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/counting_routes/growing_bad_first_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/growing_bad_first_build.log": "a190aa3db3b4b07fa571600717f9704e82b3c636c24ce33f128c81be2019e8ed",
+    "research/sN/jensen_bound/counting_routes/growing_bad_first_check.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/growing_bad_first_check.log": "ac3033bb24a6baee378c3703bfa6bcc43cc27cd37c95d3e13de4180290e5cd28",
+    "research/sN/jensen_bound/counting_routes/growing_bad_first_configurations_final_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/growing_bad_first_configurations_final_build.log": "37f8fd9c967949c9881579b0f394b3fd4bfbd6bec0737fdb42cab75d99d821c1",
+    "research/sN/jensen_bound/counting_routes/growing_bad_first_receipt.py": "caabac85250d42af1032965506f6f76f2de08f3738fe598ff0f7d95c6e8284a6",
+    "verification/h2/GrowingBadFirstCheck.lean": "0c2e6bd181b42ad01f76e188d90445c7e5525a9028cdf57dd035931b7a592099"
+  }
+}

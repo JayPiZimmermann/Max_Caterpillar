@@ -1,8 +1,10 @@
 # Verified width and Max4 fiber results
 
 The [second-hidden-layer width theorem](../jensen_bound/README.md) proves
-`h₂ ≥ min(N²,N⁴/h₁)/400000000` for `N ≥ 1040`, including arbitrary real
-weights and biases. Thus quadratic first width forces quadratic second width.
+`h₂ ≥ min(N²,N⁴/h₁′)/40000000` for `N ≥ 1040`, including arbitrary real
+weights, biases and affine skips. Here `h₁′` counts only original first neurons
+feeding the second layer. Thus quadratic feeding width forces quadratic
+second width.
 
 The following Max4 theorems use ordinary real two-hidden-layer ReLU networks and equality
 on every real input. The exact component count includes arbitrary biases and

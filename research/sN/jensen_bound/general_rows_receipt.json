@@ -1,0 +1,362 @@
+{
+  "sources": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRows.lean": "10b47e3b9fbaf9cbca4f81394c20df1f8d75ea3f334d468d4393d452cb323d8b",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean": "96a250ffa4af5d4eac760ac16ca68bef008093f54eb2a10c56c032dd9308cfef",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsCoverage.lean": "aafd413a07c2a0f7a3ace12289a85972cb2145d0d5ca838d794145b843ae81c4",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsEnvelope.lean": "bf2d714c82d85fe378781e1d249cccb02cea1b290a92ad3795d1e8ba24e13f18",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GeneralRows.lean": "13ceeb65ee732192bbaddb263ae78fa7ee1b8e8e6c08e5c08c547857e9292f72"
+  },
+  "check": "verification/h2/GeneralRowsCheck.lean",
+  "check_sha256": "0389336a6860dc3625b3b1e53459c890d5464350691833d4c6693525048c2904",
+  "producer": "verification/h2/check_general_rows.py",
+  "producer_sha256": "529562301adf2559fcd26b65559e2568150d2921b6813c77910c38124b438462",
+  "project_source_closure": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRows.lean": "10b47e3b9fbaf9cbca4f81394c20df1f8d75ea3f334d468d4393d452cb323d8b",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/Floors.lean": "03742d802793c359e6c34e58bf535c059686550d520dc2f242ce5a696f95c76f",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean": "96a250ffa4af5d4eac760ac16ca68bef008093f54eb2a10c56c032dd9308cfef",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/Falling.lean": "13f46ff0fec8a3b13b988259a66472b7f478e403f6d923b4ccac74727825f5a7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/TailEnvelope.lean": "786fe8d609c0b5217e70dad4d34aae47c83eb26a3c09903327be273a38e2669a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Selected.lean": "4db12f9634fa0cbee58c879c46abc5a666e523a23caf2a9e6a286488e0d410b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ExpSeries.lean": "c0b7304454ff2ebc7e24d3d4922934cfbdfdd1f7e72713a3d2ea0101f41c5ec7",
+    "MaxCaterpillar/Frontier/RandomRestriction/PerNeuronMatching.lean": "86657ebdc6217a9244ab3e6c77e5a17adee3f5a9b5cb04e02096c82b1747befd",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingCoins.lean": "42d33bf5d0af21a711d4f199a84fc94c0bd3bbf4d24860eb91144c2a8a504189",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinUniformity.lean": "306023fc21fbdf8378ba23f2e36760ce7a0b12cabf00877d633bbff77a675391",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/AllGraphs.lean": "b1492c09ed372e63247fcb6de525c4d53b58a6499df1bc80eea4cc3e1a004153",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Counting.lean": "ab8e5fb577545b94e65b359dca7b6604d6b7e5062a4adf603f98bf4302160298",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Laplace.lean": "5873b4f10b184e62f3c42ad711fc90b12b4101250f4a31c18a4c25749380a6f8",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Identity.lean": "a3184641dd0994b5b3868f16f714c2a93e16a7ddb308bf2b423040df72b4ed39",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Forcing.lean": "ae14a21f31a07382d457393064bff7d6a0d681d978c5aebc6914bcffc8d43e4f",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Model.lean": "06127778a8e72ab0b708d249b35ce0015cd01c7ab28fa842a9281ac9206ba798",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBias.lean": "56fd341de70bc3acced37fb94609013a82027125fa1e0869bc50f64d95210e03",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingSizeBias/Damage.lean": "0ba126736cb127054f360642d9ccf197337acbd032c65cbdab1bf03665e9d9a3",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBiasConstants.lean": "e2235ebe52baf5caa30c132523b509cbb76875e07a99a4ba533da0a8f90e5f51",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesProbability.lean": "d7f21be1d248213e3a9fb0763fb9a6d5cf654c1b75d5af987397eb282e51b2f4",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesGeometry.lean": "3f7adb96877fc48da14894892261384b7b20ad7c474b78cb93183e0e953e6903",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesDefs.lean": "f7b5f7f8465a7813e6a97377154173966dc5951ad1a9f2ff5669fa701c251be5",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventRankMoments.lean": "2d096ab5f6bcd52925d75c215eb8fd3f40540d9d17ed58f6445b8255707d8532",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventMoments.lean": "03fdbf2c51f71fd6c7bc8910976481d3b4e93df465461a66de715c23e62c783d",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventGeometry.lean": "70c159b881fd6aee73dbd3d1688f40756fa1a05de5ed1d36a1ce82815b97512a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesPairs.lean": "515d28e6cce775955349aee9c60745479257540fd743c6995640e51919cb61e8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsCoverage.lean": "aafd413a07c2a0f7a3ace12289a85972cb2145d0d5ca838d794145b843ae81c4",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsEnvelope.lean": "bf2d714c82d85fe378781e1d249cccb02cea1b290a92ad3795d1e8ba24e13f18",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters.lean": "43b1dc54ac84e9823d05704bfda92d4450a9cefb9e2624673e5d26e04f522449",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/Shift.lean": "6031f8ddbfcd021ec22bc5d1c3b99548b1888826912f5e3cba606b18c5576603",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GeneralRows.lean": "13ceeb65ee732192bbaddb263ae78fa7ee1b8e8e6c08e5c08c547857e9292f72",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConditionalBound.lean": "e9d7b53549f48bb865d34fa854fb0c21187b68273563fed3590846b547579b0c",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventModel.lean": "5009238eea8c94a4cb60fc80481d4515c855cc472783b891ce506b49fcf9403b",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventProbability.lean": "b1c256b10929607b5a609fa14e4c8dd66a52ae45e2c68e902b417e33b6861413",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventMembership.lean": "e4a1b6e6bd08165b9f2764eeb772d5ddb8401be8df17b11991ffc482c37b1fc7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventPlacements.lean": "651334b144c078400979e5f5708b52e69289ae2bcc9a5669bcbb02445e14aeb7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsGeometry.lean": "73bca36b6f5c23aead42d396234973c84594569ea5824751312e2ece9b50cfae",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Deletion.lean": "0afd322d837bcd7cec2e3cc8a8952b7351d565b1a19bd77e4a7f61fc665a1584",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuplesRoles.lean": "c401cea9120b7e66c76f4cc8b45b2548f8283ab0e3b118a2501be20b57f07630",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventRoles.lean": "587e071cf520dcd2f6b8d441df558f79539d29ce2bdfb04c5fc85cfec830f63e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventDominance.lean": "f776daef8ac4de3421a77042865d53b9aadbaa3c16b91b57c3b95b0bcf9b98a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventDominance/Weights.lean": "5136b6613eaa8d4156a6021cd01605f4bcc515e9a02e921f0ee536e6cb1baa3b",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsSums.lean": "631ea60dc618ed2a53fc77f88e69530ff73144c9369e597a618684bda1a9521e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventDominance/Weights.lean": "1bb8afecd37eaf81da812b57f7b2982c4443c04470f2819489db9e3218aa6720",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuplesFiveTail.lean": "e9826508feb375b20f5afd736861c8558e3dafd82c383415461f6722db756408",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Realization.lean": "0c0b9d5bd47d382dfd01bf7c483aa71235b9111601c8fe777e076173998770ce",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Powers.lean": "bfe961316461720993d761645768e326ebc955a4173c4ba398e0576c3e9aa1e6",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/GapPolynomial.lean": "d9892966c78c2c6f12e56bed52fd15d59dd4250a8652501190bfeb8abdac10b6",
+    "MaxCaterpillar/Frontier/RandomRestriction/CartesianRaw.lean": "eedc006eef25d1bfebc5a240cd859f5ee1bdc94a914e8dd0924193b56f5de90d",
+    "MaxCaterpillar/Frontier/RandomRestriction/CartesianInorder.lean": "30f6822a723735f028972fe07dfbae025044459f1b46489121e40c8192a488a7",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/PrefixSwap.lean": "e2d5c976bbb57853443ea7f5cad408e0090099d163d490c1c093f1adefeefbe1",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Model.lean": "f93c46e75b9f7346fa181d3378f8e1dff5acab6486c96508ef975de010b14729",
+    "MaxCaterpillar/Frontier/Asymptotics.lean": "74f2c827fef9c776c30ee902a756ef69d3dfa9a39a7272d4119d055032f7dc30",
+    "MaxCaterpillar/Frontier/Basic.lean": "47ff6904c8471b8bded4f4d4990de0d60cf23ceea727ffde66b8bfc425a19820",
+    "MaxCaterpillar/Definitions.lean": "53c4011b28721f26cffe6978327dfd2b2b17c3f52150f71766af1e29db2ba3be",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventDominance/Roles.lean": "3034802e833b67dc4527abb32632f7dcf37373ca973fffbfbe68d56135894206",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventDominance/Cardinality.lean": "39e8f4591ce436b75c0283c21fbefead7e09df56e7fc6789a55ed5819212fae5",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventDominance/Isolated.lean": "54402e1f4099c2e7f2245d5f7d934cdd52c9f8acb30f23a8320b5a299b0e93e2",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventDominance/Runs.lean": "4837cf0974d8fca4455bc76fadec66120f57591af64dca4dc4e615d2e5c1fa26",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ActualModel.lean": "2fbead8b73c86689765c2c4f495762d9651fe4bf0c9783396cd05caefc5002f2",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Configurations.lean": "a99075d77da3f8de70c2d0d0387bc02c45db9e6fc0d7699e87c52d97a5cf0cff",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsUniform.lean": "d8cf2c0eb48a33b2986bacabafc02c25b61833b52b78a1d316d0bc7decdd693f",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/FiniteMeans.lean": "eafaafbb2bb6e1508366038041ef15d02d37fc0cfe16ebbb4a90450c90b46262",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ActualRank.lean": "f3898f910f0bb8d0481ea5597674c036620a67c79aedb1fe0388a81e25cfd8bd",
+    "MaxCaterpillar/Frontier/RandomRestriction/PerNeuronFibers.lean": "f2d1a07b5b1a72cff923ec2f74e01a609eb8d80decba4c4cf60779cab293904a",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRank.lean": "9d797b9a59b86e9dc20bb483dbf107f8a4d7449fc4defb20fcdcc47c4fcc7d49",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingCleanFlip.lean": "c20cf4c8edbe99143156f30a28cfe12f4773840aea26c28d4c9e2442b78a3865",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingFlip.lean": "fa2fa5279c44ff957688fe886c84b6364948ce6c3b2a8b5c1ecd70aa4a8e018e",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRow.lean": "e341f71c32c673ab072e5c6ca2631a8f9f6ab2081507971aac3c9a10382e9d6e",
+    "MaxCaterpillar/Frontier/RandomRestriction/CleanActivation.lean": "8f4aa5d1dc0a68d57bd768d6b65093f903a9df361f41472468ee5e0658b594f6",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualClean.lean": "374b31b5bdb9ddd1f134b3b408a957bc5c600d6acb01a6955d4222c41bda51c8",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingFiber.lean": "d9495f336349fe3b4992b6edf209082b8e495fde4f063804db7132634bfb5683",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/PrefixSwapDominance.lean": "8eb7ce7b621dd93e887e37e3bf0974be643ebe31c1c9d8fd26acb569dc5c141c",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/DominantSwap.lean": "0b52175c91008a5a58f429c0824ae29034e7301bf6bc6d21578046f7f5e1a4e2",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/LiftedPoint.lean": "080043342480108f9f9db2e83a1d166683fee09483d6b07e7463bfbabd2bdb88",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Directional.lean": "7197b086fd35fb5fc5761d0dfc32c71791da992d293468811041e948f238e261",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Linearization.lean": "8f782960379dbbc307bc51abed59811026a0f74e90e34071354eb3e65c537edb",
+    "MaxCaterpillar/Frontier/RandomRestriction/EffectiveCoinDifference.lean": "5e93c6a8c7f18579f9686f62817125790073e5f833e2dc389cdb094b4841404a",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidCoinColumn.lean": "5388fe1077a28b7d9870ac01bed86c5c1c8f46544798bc3def85e3f2a8eae285",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRank.lean": "1a9b7c4b8314b2f7834b78c87a371fed73f7f067f8b3ae52a6c633feebf28f71",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidCoinActivation.lean": "27f91781361458362608fc2cf90650e83c17451348f998a6fb840d4f39e67d15",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/NetworkRealization.lean": "6fa5cb819aaad38ba52a39f715995391432154cc877f9fb55269fdeefba53ebc",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/DominantPairSupport.lean": "7a77f7fe7bc1019144585847a8db5d893e7197d9e3edfd48e62c48cebf4dfe8b",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingColumnOrientation.lean": "4bab6ef8574c7301754e82b3f9bc1f8a7c8a54bd152f93f135522917d36c7ed1",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingColumns.lean": "3ba2e84f170484a65c3f4c03a9155d40cec96fb9546a6ca2247a2ee8b78ab3b2",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingRank.lean": "596171f2868661dd7bb7be4931fe1162a226e17264fe673f1243421bade2b9df",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingAffine.lean": "c3c0a0d5903e9f4539c989492ee67855e8f466859d6423915c2cc7e14c471263",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinUniformityRank.lean": "087174e19b7f5984e87e7960ceb9d9f5fc3e82fe8825520c04fa7d0ed98a258d",
+    "MaxCaterpillar/Frontier/RandomRestriction/StructuralWitness/Graph.lean": "5c1036e48aac2eeb7b6643e88cdc599045e31cd1c2641983e1f4650af818e2be",
+    "MaxCaterpillar/Frontier/StarCertificate/SmallMatchingGraph.lean": "a2f38746094baed1347e98ca6d625ee63dc96853d0f1fe3c77784e4226182d09",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Structural.lean": "7aa6e33c1f87aa95111496352a91feeec934c335c9adaa4fb2db2a59b9b9c95a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Transport.lean": "9bd8a564dbb6bad403899ff305a8d3f7a82d95f4d99121d973da1d543f5f7c17",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModelLocalized.lean": "263f731fcecc247aa446818f97bb5f20507ac61cd5eb0636031808a984f47b39",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModelInteraction.lean": "3269b5596c8c19006eedc49636691598bac65b3d1b1d33bc4fca870e2f27b9d5",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModel.lean": "231b724d4dbf13fd3d4b6e405f72d18c799624ed42911739737c20d61e6d4311",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModelChamber.lean": "b40589952819b64965ff6c644aec4c66730358a0b81c4157c587fd39404ce375",
+    "MaxCaterpillar/Frontier/StarCertificate/MobiusQuadratic.lean": "aef637da72905a386c9083a7cef60b220a53d73a50b9e6280ebf10e36e8ea161",
+    "MaxCaterpillar/Frontier/StarCertificate/Mobius.lean": "b3cc21df991cca3860c68dcfe3e8cbdc3545767d646097c38408f0bb97a3fe8b",
+    "MaxCaterpillar/Frontier/StarCertificate/StarModel.lean": "6fdf0afe42874d3fe8082c530eb18ed2a2556a69cd2fc1b9f5fb975731235763",
+    "MaxCaterpillar/Frontier/StarCertificate/XiTargets.lean": "700ef7e02b5d3ecc9396a38df12175aaff985db1b6e52a3ab487cc5b794d4e08",
+    "MaxCaterpillar/Frontier/StarCertificate/XiAnova.lean": "21567d35b33a29349b8ff51b0d7ff3cf8183bb270f48c3dedc9d2255997e2dd3",
+    "MaxCaterpillar/Frontier/StarCertificate/XiStar.lean": "a69736c6155c1346f16e252b6e1de99aa6be0d3c02e452fe6007832208434114",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorProofs.lean": "f7c99a71ab4e7a04b9f2400b5888f8840f9ffe2ac97fbe190dbad33c2532daf3",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk00.lean": "5f6a3a24d55d2281a61c4b6716354f44ddb4935d41f4b9a3d10b85166ad8d328",
+    "MaxCaterpillar/Frontier/StarCertificate/XiMasks.lean": "7ed9542a26d3537a245b07ad8e63787b570b44a0d8d3edf5b29fdc52223d05f9",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectors.lean": "afa5c9d0203dc50706d7528a27a7a12fd425f88b919b0e0a78fb1cd230a60e5e",
+    "MaxCaterpillar/Frontier/StarCertificate/Xi.lean": "69e918dabc73b004b930f87f97062d7b5face81fef33e8104ef096a36848f285",
+    "MaxCaterpillar/Frontier/StarCertificate/SignedForms.lean": "6eb174bc1c9520621bcd0f315cbd09ea21a0671febc5ac698a721be43faafdde",
+    "MaxCaterpillar/Frontier/StarCertificate/Checker/Basic.lean": "443c192c885242915dd88d8e16d74ba634b550820370737fbddc62dbc27ca1e8",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk01.lean": "eb7c5ed8d505076f072b78b6c843052100236593c2d2059a96139def556980b5",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk02.lean": "7b6e5e1cc0047ef81f187fa5e0b7f754eac61e51e16396fcfafa728acd7d6a50",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk03.lean": "8b488780ee759aa27aa28cff25ca10ee5d7ea5f26468a8a39c6c54ecd261f0fc",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk04.lean": "21c956f2059bf890df8db2d055b98b44d7725349b3ce95752c5bd2b50d1dca3f",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk05.lean": "d988da9f1d138898f1f33ffc5beb460335724087417cee871e11f4f34849d75d",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk06.lean": "0c43de9bc051046775e86bd05e754bdcff0c6bf5578b93eeaea9e2694d2b92a4",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk07.lean": "15e5430351525d0a66b1cd7db1d4051460966c2e9e9aa0ce2af4a15a48a2c9f5",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk08.lean": "e52b0d9fc2e5705db784a56e47b865aad351d974ca851c7a398456f7196fb788",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk09.lean": "633711c6fc21727d6f6824a3d967db302c311c9966166798e6aaa12464cd8ff8",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk10.lean": "f860f3989f227d4bc2acbe018bc093424c8f6a58d523f44ca2abedfa59eeddf4",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk11.lean": "eb0e2eb2284410ea7589b70d478ab06482571b137db8aca860af8ceee574a50b",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk12.lean": "adde7d65c3c836d7513ba96f6ffc016e42a65f55f6002fe9b7a707e4c82854e9",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk13.lean": "c8f5cc862062f61f261956bddcdfb2f5f43773565bd9be60b87487c5cd510898",
+    "MaxCaterpillar/Frontier/StarCertificate/XiSelectorChecks/Chunk14.lean": "2c9d6075a4f88d2485f44e1d411ddb4710e49bf72fad6daaf25a87add2ab3ce2",
+    "MaxCaterpillar/Frontier/StarCertificate/Anova.lean": "db799bbea7a286bf74fd3639b393b911a7bbf5a5fdb08371e69a89a275a99f61",
+    "MaxCaterpillar/Frontier/StarCertificate/XiPairs.lean": "ca86386e6671e5fba1333a0c23766268586c4b301a53650c5d74d85a1d974cde",
+    "MaxCaterpillar/Frontier/StarCertificate/XiInteger.lean": "6d4feed885ff37870cc65d0e1d2653a54bf10e6b1a01b2c9697775f72b047f16",
+    "MaxCaterpillar/Frontier/StarCertificate/XiIntegerData.lean": "5e7283d68a6cc93744b3746e383392efee4617abd507b7a5327c08f2b1161ac8",
+    "MaxCaterpillar/Frontier/StarCertificate/StarModelProofs.lean": "1c89a5d6c65f6afcd5b2234e345f7c9c84fa18e264a51845ffbfa87f5a7490a6",
+    "MaxCaterpillar/Frontier/StarCertificate/StarModelChecks/Chunk00.lean": "db47be27da4213e3b88a14ca490a938bc258ef96542cc37a488f3b217963b8c7",
+    "MaxCaterpillar/Frontier/StarCertificate/StarCoefficients.lean": "bf460eff08b8758a02c7a32fcca929d1d7e6d19bb58cb8cfb8a659a10585faf0",
+    "MaxCaterpillar/Frontier/StarCertificate/StarModelChecks/Chunk01.lean": "46a97cc542b2c53e162816f8eab476bebfa323f9c2554dc858aff92afbb31296",
+    "MaxCaterpillar/Frontier/StarCertificate/StarModelChecks/Chunk02.lean": "b71fc5fbb989da8b7242a3104595c63fe32bcea6f0d6d8f68f48b6a45cfa4693",
+    "MaxCaterpillar/Frontier/StarCertificate/StarModelChecks/Chunk03.lean": "4662a6a39b9a7f8f1d1d96cf833ba142cd64148cf94eb4d8f416cbb80f40353f",
+    "MaxCaterpillar/Frontier/StarCertificate/StarPermutations.lean": "5cf03e6fe44c47f4171077a42010c297e8d89bc03ccb92ce5c7fdd969319ddd7",
+    "MaxCaterpillar/Frontier/StarCertificate/XiPermutations.lean": "9c2de276ea0785301f59a0d8228f51e48008c0c11e449bb8b4c14b468319714c",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModelQuadratic.lean": "5348cb1611b9838086c6f4d468e6df02bf06b7a5410b5882285a53708fc1b2ff",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModelRow.lean": "70fbee824215addaa094e983cf94c4139619f508f8a8b794b4ed62a021c6a6a4",
+    "MaxCaterpillar/Frontier/StarCertificate/MobiusObstruction.lean": "58126620fcd299d5a156dfe4b031ab1cf505edc1165d071783f97e794ce34d16",
+    "MaxCaterpillar/Frontier/StarCertificate/MobiusCertificate.lean": "4f5c7f60d71a7ba7bc6f70770fdf9ce66402f412e22f5d32a7dbff9533db2a8f",
+    "MaxCaterpillar/Frontier/StarCertificate/MobiusCrease.lean": "a3d33fd509ec5d64b8a489c6af0d434a4b66003f16a1f08756e87562a2adc052",
+    "MaxCaterpillar/Frontier/StarCertificate/CreasePositive.lean": "7c65701fd3fc76ccaba43fd29d26e0f3685d745be82c37addadcb0361ec4e937",
+    "MaxCaterpillar/Frontier/StarCertificate/CreaseGeneric.lean": "7fc216b94fa7354dd0570cc0d278dd3b413ffc7e7621ee9f5890589567564708",
+    "MaxCaterpillar/Frontier/StarCertificate/CreaseLine.lean": "95341ae2df56c9fc68c08fa710c3942f3c48b99a515d9f9567096936bdec4116",
+    "MaxCaterpillar/Fiber/JumpBalance.lean": "5c1ef079802b012e02d196638737d271be8637a2d95f6b2ab4105f88ffaf3e27",
+    "MaxCaterpillar/Fiber/PositiveKink.lean": "77dd1696737aefb87e2219a6b48cc0e1854bea0bff36395fbf7e9c245e58cc24",
+    "MaxCaterpillar/Frontier/StarCertificate/SmallMatchingGraphQuadratic.lean": "33093158673d6f8f3333ceef6b36cc22702c9f9cbf81a895f715e7c7113d77a8",
+    "MaxCaterpillar/Frontier/StarCertificate/SmallMatchingGraphAlgebra.lean": "5029b3c3961905b5d0f82e6edb5cd050aaaca34cdfe47c4286d3c46faf01de9c",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModelRowInteraction.lean": "bab55f8322e163f5b925f23f29bac692af6b2b52f0b8178d4d41e4f513f31a25",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidModelRestriction.lean": "4817add7c675b15bf26b13acda7d589ba46ee90a81c693f23342a6ff640674c8",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Support.lean": "c49740bd853bf77bbae62c79faa3d3edacb890d8dbac7e5d396af7072520a601",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/AtPoint.lean": "22f57e2e82a3021a40eaad63a7a23383b8ce70110abe6ffe446344b9efc8c480",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Localization.lean": "db9bc216f58b12a529406e7423ca98d0ee9762cb1604acf4bfc72689431af83e",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/LocalFirst.lean": "5d4deeb9be8929877989b1c526dc74e5f150486a22942e305452144941041de7",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/DirectionRule.lean": "9a999bccf04e5bff23d8afe0e60355f3f545015f0c9141b2c7cc1ddcf97c0d8e",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Outer.lean": "554fe06270e58e043b859f9c2677e15b22f72c6fd06af8af3ee89cbf77a5082f",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/TiedMaximum.lean": "31c859a6f8659641183c157352e99937e3ca6210fd1ce68c760629d90053684c",
+    "MaxCaterpillar/Frontier/RandomRestriction/TiedPoint.lean": "85cf18c4fe0a4fedfc5f2a637e9ba7aa31a4b4c82b921c263b0d6e4f601a7e59",
+    "MaxCaterpillar/Frontier/FirstWidthN.lean": "42e9b57fbc5d1a5312fb070be45f932249925c68b259e2c8d68b615a132d9810",
+    "MaxCaterpillar/Frontier/Claw.lean": "5df047f990f65702990ef7370b8a2d9007285913e46add35eb304ecc8c3e9e94",
+    "MaxCaterpillar/Frontier/CoverCount.lean": "2b13de78e5d227401a2b7afb32046a685c951f68da61ab44a88fa40a57971a0d",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/EmbeddedLocalizedModel.lean": "6ad9e8fc7c3d2b372cd27bbd2658156f39d56f6dd531c78b33c9e8a52e8ffc78",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/LocalizedModel.lean": "9855bfd8682aded842c25e49c8bb010d51d6171e46f9d74b71b3ed9b70a678e3",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/SetRealization.lean": "263c55a99ccdba7eb6d98404ed0173f4e6e94afb506c228af8a3a9a03803beaf",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/SetRestriction.lean": "04bac05c073c373061a3a57be6273881a1f3ff33760352cdd1322f6ddd122051",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Restriction.lean": "1d889b02ea96ad240e7c4ad0fb923293760c734c9a6be04ce9f23a07e6e8889d",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Ordinary.lean": "7c14baef81ad30af267a1032b5f9c260d3b09f6068cdf73e093e7242b34bdb83",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/FromZ.lean": "4133261887f1b079f0bfa0ac5fe3b62ae8b2acc96543910678d21d203c013900",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/BadFirstConfigurations.lean": "580cb56d094c3710586942a5b4a9574b6ff5728013f1327d363ac80f853dba5e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/BadFirst.lean": "ad9eae0d2b0f60b9f437f6c469fad7bf49563457a1546be6af4d82b420045dc9",
+    "MaxCaterpillar/Frontier/RandomRestriction/CountingUnion.lean": "a8170d87fff1c1a3f6d81117fe596ee76698e2ba5b3c10f3bf23b9910d2ac03d",
+    "verification/h2/GeneralRowsCheck.lean": "0389336a6860dc3625b3b1e53459c890d5464350691833d4c6693525048c2904"
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "steps": [
+    {
+      "name": "Parameters_GeneralRows",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_general_rows_7_rrf986/MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRows.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRows.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_parameter_bounds": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ]
+      },
+      "log": "research/sN/jensen_bound/general_rows_Parameters_GeneralRows.log",
+      "log_sha256": "7fd3c6df4dc4b7127967f0f749b337d03e09a0ebdc73ce12cd7c867802443af7"
+    },
+    {
+      "name": "Parameters_SmallFalling",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_general_rows_7_rrf986/MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_three_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_four_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/general_rows_Parameters_SmallFalling.log",
+      "log_sha256": "900b41d07350fb3dde289ebd222bbf022aa6ad39cc864b8a9c56e287ec9b0e4c"
+    },
+    {
+      "name": "Parameters_GeneralRowsCoverage",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_general_rows_7_rrf986/MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsCoverage.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsCoverage.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_coverage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/general_rows_Parameters_GeneralRowsCoverage.log",
+      "log_sha256": "7cdb18ab395a89fd6bfb5f11b9e718454c775eb1d3bad8fece610cbeada41f32"
+    },
+    {
+      "name": "Parameters_GeneralRowsEnvelope",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_general_rows_7_rrf986/MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsEnvelope.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/GeneralRowsEnvelope.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_envelope": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/general_rows_Parameters_GeneralRowsEnvelope.log",
+      "log_sha256": "ff1c5ae694f60eada42a35e113ab30c399bd2c66c1c5338fee5502f273740011"
+    },
+    {
+      "name": "GeneralRows",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_general_rows_7_rrf986/MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GeneralRows.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GeneralRows.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows_of_tail": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/general_rows_GeneralRows.log",
+      "log_sha256": "31ada1f46d66aac3ad94f85a58164a0d8acb173c39bf42f253a4ecd400b9f73d"
+    },
+    {
+      "name": "exact_check",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "verification/h2/GeneralRowsCheck.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_parameter_bounds": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_three_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_four_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_coverage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_envelope": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows_of_tail": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/general_rows_exact_check.log",
+      "log_sha256": "7cec265741a9808328758f2d1e1346523e8a5adcf63930fe0165a562100de418"
+    }
+  ],
+  "scope": "Actual normalized network finite general-row corollary; local H(4q+1,q) remains explicit.",
+  "sources_unchanged": true,
+  "closure_unchanged": true,
+  "check_unchanged": true,
+  "owned_lexical_passed": true,
+  "axiom_audit_passed": true,
+  "success": true
+}

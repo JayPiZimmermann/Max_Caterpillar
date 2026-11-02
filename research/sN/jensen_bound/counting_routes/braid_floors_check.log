@@ -1,0 +1,20 @@
+braid_parameter_bounds : ∀ (n q : ℕ), 1 ≤ q → 160000 * q ^ 2 ≤ n → BraidParameterBounds n q
+braidArity_le_half_real : ∀ (n q : ℕ), 1 ≤ q → 160000 * q ^ 2 ≤ n → ↑(braidArity q) ≤ ↑n / 2
+braidRanks_upper_real : ∀ (n q : ℕ), 1 ≤ q → 160000 * q ^ 2 ≤ n → 100 * ↑(braidRanks n q) ≤ ↑(braidTail n q)
+braidRanks_lower_real : ∀ (n q : ℕ), 1 ≤ q → 160000 * q ^ 2 ≤ n → ↑n ≤ 400 * ↑(braidRanks n q)
+braid_shift_real : ∀ (n q : ℕ), 1 ≤ q → 160000 * q ^ 2 ≤ n → ↑n - 1 ≤ 3 * (↑(braidTail n q) - 1)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braid_parameter_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braidArity_le_half_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braidRanks_upper_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braidRanks_lower_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braid_shift_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

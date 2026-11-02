@@ -1,0 +1,22 @@
+verification/h2/GeneralRowsCheck.lean:60:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_parameter_bounds' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_three_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_four_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_coverage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.general_row_envelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows_of_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_general_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

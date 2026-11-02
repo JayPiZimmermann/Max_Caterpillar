@@ -4,7 +4,7 @@ Status: **historical verification receipt; the current cleanup needs a new gate*
 
 ## Scoped fiber and second-width gate, 2 November 2026
 
-The [nine-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
+The [fifteen-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
 has a separate [working-tree receipt](../research/sN/zulip_three/public_claim_receipt.json).
 Its gate rebuilds `MaxCaterpillar`, checks handwritten exact statements through
 that public root, checks compatibility with the existing fiber interface, scans
@@ -28,8 +28,11 @@ real weights and biases and `N ≥ 1040`,
 `h₂ ≥ min(N²,N⁴/h₁)/400000000`, including its quadratic corollary when
 `h₁ ≤ N²`. The [expanded six-array contract](h2/NetworkLowerBoundCheck.lean)
 and [topical receipt](../research/sN/jensen_bound/network_lower_bound_receipt.json)
-check the actual network formula and all proof dependencies. The finite
-coefficient certificate is proved, not an extra hypothesis. See the
+check the actual network formula and all proof dependencies. The strongest full affine-skip theorem additionally charges only the original
+feeding first neurons, has improved constant `1/40000000`, and has no first-width
+cap. Its [nine-array contract](h2/AffineFeedingSharpCheck.lean) and
+[receipt](../research/sN/jensen_bound/feeding_sharp_receipt.json) are separate.
+The finite coefficient certificate is proved, not an extra hypothesis. See the
 [proof overview](../research/sN/jensen_bound/README.md).
 
 These are content-bound workspace checks. A publication must contain the

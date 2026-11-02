@@ -1,0 +1,13 @@
+@tail_pow_le_descFactorial : ∀ {m k q : ℕ}, 2 * q ≤ k → m ^ (2 * q) ≤ Nat.descFactorial (m + k) (2 * q)
+@falling_tail_envelope_le : ∀ {m k K q : ℕ},
+  2 ≤ m →
+    0 < K →
+      2 * q ≤ k →
+        ↑(Nat.descFactorial k (2 * q)) / ↑(Nat.descFactorial (m + k) (2 * q)) * (tailRate m K ^ q)⁻¹ ≤
+          (24 * ↑k ^ 2 / (7 * ↑K)) ^ q
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.tail_pow_le_descFactorial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.falling_tail_envelope_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

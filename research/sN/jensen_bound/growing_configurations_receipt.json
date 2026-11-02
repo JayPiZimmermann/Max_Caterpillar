@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "scope": "Actual arbitrary selected-arity k configurations on Fin(m+k), with selectedLabels literally smallRankGaps sigma k. Selected and tail embeddings have exact selected/complement ranges and cards k,m. Actual graph deletion costs at most k*(N-1), with a natural-subtraction form for all sizes and real-subtraction form when N>=1. Independent full/tail/rank transport and fixed-outer uniform averaging are genuine finite equivalences, including empty selected and tail blocks. No structural matching hypothesis or network lower-bound conclusion is built into these definitions.",
+  "build_module": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations",
+  "exact_driver": "verification/h2audit/GrowingConfigurationsCheck.lean",
+  "axiom_checks": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedLabels_card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedEmbedding_range",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_range",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedEmbedding_image",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_image_complement_selectedLabels",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.complement_selectedLabels_card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.edge_card_le_baseTail_add",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_edge_card_lower_bound_nat",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_edge_card_lower_bound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.sum_full_positions",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.tailLift_selected",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.tailLift_tail",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.effectiveFullEquiv",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedLabels_effective",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.effectivePermutation_tail",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.configurationEquiv",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.pullbackEventEquiv",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.pullbackEvent_card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.pullbackEvent_fraction",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.average_fixedOuter",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.sum_configuration_by_outer",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.fixedOuterEquiv",
+      "axioms": []
+    }
+  ],
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventGeometry.lean": "70c159b881fd6aee73dbd3d1688f40756fa1a05de5ed1d36a1ce82815b97512a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Deletion.lean": "0afd322d837bcd7cec2e3cc8a8952b7351d565b1a19bd77e4a7f61fc665a1584",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Configurations.lean": "a99075d77da3f8de70c2d0d0387bc02c45db9e6fc0d7699e87c52d97a5cf0cff",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsGeometry.lean": "73bca36b6f5c23aead42d396234973c84594569ea5824751312e2ece9b50cfae",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsSums.lean": "631ea60dc618ed2a53fc77f88e69530ff73144c9369e597a618684bda1a9521e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsUniform.lean": "d8cf2c0eb48a33b2986bacabafc02c25b61833b52b78a1d316d0bc7decdd693f",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Selected.lean": "4db12f9634fa0cbee58c879c46abc5a666e523a23caf2a9e6a286488e0d410b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuplesFiveTail.lean": "e9826508feb375b20f5afd736861c8558e3dafd82c383415461f6722db756408",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "verification/h2audit/GrowingConfigurationsCheck.lean": "4059335f4984d0c18633476e9afd179ff9f7d8239d6a58998d339664d1aa822f"
+  },
+  "exact_log_sha256": "dad1d1b952f05a8d7083ec5261b0664d322fe202a5c44cea400f50167f656dd9"
+}

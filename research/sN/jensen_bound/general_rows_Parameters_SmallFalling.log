@@ -1,0 +1,10 @@
+MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:23:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:23:80: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:34:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/SmallFalling.lean:34:80: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_three_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.descFactorial_four_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

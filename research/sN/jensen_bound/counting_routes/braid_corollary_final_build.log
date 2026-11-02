@@ -1,0 +1,12 @@
+[4290/4291] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BraidCorollary
+stdout:
+@conditional_braid_integer_q_lower_bound : ∀ {n h₁ h₂ : ℕ} (q : ℕ) (hq : 1 ≤ q) (hsize : 160000 * q ^ 2 ≤ n),
+  LocalMatchingObstruction (braidArity q) q →
+    ∀ (net : NormalizedNetwork n h₁ h₂),
+      NormalizedNetwork.TranslationNormalized net →
+        (∀ (x : Point n), NormalizedNetwork.eval net x = Maximum n x) →
+          (∀ (j : Fin h₁), Finset.card (NormalizedNetwork.rowSupport (NormalizedNetwork.A net j)) ≤ 2) →
+            23 / 25 * 4 ^ q ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BraidCorollary.conditional_braid_integer_q_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

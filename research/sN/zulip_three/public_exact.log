@@ -19,3 +19,21 @@
 'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips_unshifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

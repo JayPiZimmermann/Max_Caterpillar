@@ -1,0 +1,11 @@
+verification/h2/GrowingMatchingAffineBraidCheck.lean:51:23: warning: try 'simp at hj' instead of 'simpa using hj' [linter.unnecessarySimpa]
+@conditional_affine_braid_integer_q_lower_bound : ∀ {N h₁ h₂ : ℕ} (q : ℕ) (hq : 1 ≤ q) (hsize : 160000 * q ^ 2 ≤ N),
+  LocalMatchingObstruction (Parameters.braidArity q) q →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) → BraidFirstLayer net → 23 / 25 * 4 ^ q ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineBraid.normalizedModel_support_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineBraid.conditional_affine_braid_integer_q_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

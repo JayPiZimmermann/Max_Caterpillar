@@ -1,0 +1,41 @@
+@exact_card_contract : ∀ {n k q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+  k ≤ n →
+    Nat.factorial q * (Finset.card (selectedEvent G k q) * Nat.descFactorial n (2 * q)) ≤
+      Finset.card (SimpleGraph.edgeFinset G) ^ q * (Nat.descFactorial k (2 * q) * Fintype.card (Equiv.Perm (Fin n)))
+@exact_fraction_contract : ∀ {n k q : ℕ} (G : SimpleGraph (Fin n)) [hG : DecidableRel G.Adj],
+  k ≤ n →
+    ↑(Finset.card
+            (Finset.filter
+              (fun σ =>
+                ∃ B ⊆ SimpleGraph.edgeFinset G,
+                  Finset.card B = q ∧
+                    (∀ e ∈ B,
+                        ∀ f ∈ B, e ≠ f → Disjoint (GraphRestriction.edgeVertices e) (GraphRestriction.edgeVertices f)) ∧
+                      GraphRestriction.pairVertices B ⊆ GoodEvent.smallRankGaps σ k)
+              Finset.univ)) /
+        ↑(Fintype.card (Equiv.Perm (Fin n))) ≤
+      ↑(Finset.card (SimpleGraph.edgeFinset G)) ^ q / ↑(Nat.factorial q) *
+        (↑(Nat.descFactorial k (2 * q)) / ↑(Nat.descFactorial n (2 * q)))
+'GrowingMatchingSelectedCheck.exact_card_contract' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GrowingMatchingSelectedCheck.exact_fraction_contract' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrowingMatchingSelectedCheck.one_edge_full_prefix' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GrowingMatchingSelectedCheck.empty_ground_zero_request' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GrowingMatchingSelectedCheck.oversized_request' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.containment_card_mul_descFactorial' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.matchingVertices_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_card_mul_le_matchings' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_card_mul_le_choose' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_fraction_le_choose' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,64 @@
+@baseTail_edge_card_lower_bound : ∀ {k m : ℕ} (G : SimpleGraph (Fin (m + k))) [inst : DecidableRel G.Adj]
+  (σ : FullPerm k m),
+  1 ≤ m + k →
+    ↑(Finset.card (SimpleGraph.edgeFinset G)) - ↑k * (↑m + ↑k - 1) ≤
+      ↑(Finset.card (SimpleGraph.edgeFinset (SimpleGraph.comap (⇑(baseTail σ)) G)))
+@pullbackEventEquiv : {k m : ℕ} →
+  (B : Finset (LiteralConfiguration k m)) → { x // x ∈ pullbackEvent B } ≃ TailPerm m × { x // x ∈ B }
+@fixedOuterEquiv : {k m : ℕ} → (σ : FullPerm k m) → (ρ : RankPerm m) → TailPerm m ≃ FixedOuter σ ρ
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedLabels_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedEmbedding_range' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_range' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedEmbedding_image' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_image_complement_selectedLabels' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.complement_selectedLabels_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.edge_card_le_baseTail_add' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_edge_card_lower_bound_nat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.baseTail_edge_card_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.sum_full_positions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.tailLift_selected' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.tailLift_tail' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.effectiveFullEquiv' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.selectedLabels_effective' depends on axioms: [propext,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.effectivePermutation_tail' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.configurationEquiv' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.pullbackEventEquiv' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.pullbackEvent_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.pullbackEvent_fraction' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.fixedOuterEquiv' does not depend on any axioms
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.average_fixedOuter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Configurations.sum_configuration_by_outer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

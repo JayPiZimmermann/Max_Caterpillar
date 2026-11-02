@@ -1,0 +1,9 @@
+[4285/4286] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.ConditionalBound
+stdout:
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConditionalBound.lean:102:12: warning: unused variable `i` [linter.unusedVariables]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.actual_event_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.conditional_finite_transfer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

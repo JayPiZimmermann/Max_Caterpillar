@@ -1,0 +1,36 @@
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.mixed_normalized_symmetry_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.star_normalized_symmetry_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.pairedSector_isClopen' depends on axioms: [Quot.sound,
+ propext,
+ Classical.choice]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.starSector_isClopen' depends on axioms: [Quot.sound,
+ propext,
+ Classical.choice]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.continuous_mixedZeroBiasLabel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.continuous_starZeroBiasLabel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.mixedZeroBiasLabel_canonical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.starZeroBiasLabel_canonical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.mixedZeroBiasLabel_some_covered' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.starZeroBiasLabel_some_covered' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.continuous_mixedFullLabel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Count65.SectorQuotient.continuous_starFullLabel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
