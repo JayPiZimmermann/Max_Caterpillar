@@ -1,0 +1,58 @@
+research/sN/max5_optimal_20261103/lower/segment_network/NoCrossStatements.lean:76:2: error: unsolved goals
+case refine_1.head
+⊢ (1 - if 3 = 4 then 1 else 0) = 0 ∨
+    (if 4 = 3 then 1 else 0) - 1 = 0 ∨ ((if 4 = 3 then 1 else 0) - if 3 = 4 then 1 else 0) = 0
+
+case refine_1.tail.head
+⊢ ¬3 = 4 ∨ (-if 3 = 4 then 1 else 0) + -1 = 0
+research/sN/max5_optimal_20261103/lower/segment_network/NoCrossStatements.lean:78:2: error: unsolved goals
+case refine_2
+⊢ ((if ((if 4 = 3 then 1 else 0) - if 3 = 4 then 1 else 0) = 0 then |1 - if 3 = 4 then 1 else 0| else 0) +
+      if (-if 3 = 4 then 1 else 0) + -1 = 0 then -|if 3 = 4 then 1 else 0| else 0) =
+    1
+research/sN/max5_optimal_20261103/lower/segment_network/NoCrossStatements.lean:79:2: error: unsolved goals
+case refine_3
+⊢ max 0 ((if 3 = 4 then 1 else 0) - 1) + -max 0 (if 3 = 4 then 1 else 0) = 0
+research/sN/max5_optimal_20261103/lower/segment_network/NoCrossStatements.lean:80:2: error: unsolved goals
+case refine_4
+⊢ max 0 (1 - if 4 = 3 then 1 else 0) + -1 = 0
+row_no_cross_midpoint_identity : ∀ (p q : ℝ),
+  p = 0 ∨ q = 0 ∨ p + q = 0 → 2 * rowCurve p q (1 / 2) = rowCurve p q 0 + rowCurve p q 1 - midpointWeight p q
+'MaxCaterpillar.Max5Optimal.SegmentNetwork.row_no_cross_midpoint_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@core_no_cross_midpoint_identity : ∀ {m : ℕ} (A : Fin m → Point 5) (c : Fin m → ℝ),
+  (∀ (j : Fin m), A j 3 = 0 ∨ A j 4 = 0 ∨ A j 3 + A j 4 = 0) →
+    2 * core A c (contactPoint (1 / 2)) =
+      core A c (-unitVec 4) + core A c (-unitVec 3) - ∑ j : Fin m, c j * midpointWeight (A j 3) (A j 4)
+'MaxCaterpillar.Max5Optimal.SegmentNetwork.core_no_cross_midpoint_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@no_cross_nonzero_midpoint_masses : ∀ {m mR : ℕ} (A : Fin m → Point 5) (c d : Fin m → ℝ) (aR : Point 5) (bR : ℝ)
+  (AR : Fin mR → Point 5) (βR cR : Fin mR → ℝ),
+  (∀ (j : Fin m), A j 3 = 0 ∨ A j 4 = 0 ∨ A j 3 + A j 4 = 0) →
+    ∑ j : Fin m, c j * midpointWeight (A j 3) (A j 4) ≠ 0 →
+      ∑ j : Fin m, d j * midpointWeight (A j 3) (A j 4) ≠ 0 →
+        core A c (-unitVec 3) = 0 →
+          core A c (-unitVec 4) = 0 →
+            core A d (-unitVec 3) = 0 →
+              core A d (-unitVec 4) = 0 →
+                (∀ (x : Point 5), shallow aR bR AR βR cR x + relu (core A c x) + relu (core A d x) = Maximum 5 x) →
+                  False
+'MaxCaterpillar.Max5Optimal.SegmentNetwork.no_cross_nonzero_midpoint_masses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@no_cross_unit_midpoint_masses : ∀ {m mR : ℕ} (A : Fin m → Point 5) (c d : Fin m → ℝ) (aR : Point 5) (bR : ℝ)
+  (AR : Fin mR → Point 5) (βR cR : Fin mR → ℝ),
+  (∀ (j : Fin m), A j 3 = 0 ∨ A j 4 = 0 ∨ A j 3 + A j 4 = 0) →
+    ∑ j : Fin m, c j * midpointWeight (A j 3) (A j 4) = 1 →
+      ∑ j : Fin m, d j * midpointWeight (A j 3) (A j 4) = 1 →
+        core A c (-unitVec 3) = 0 →
+          core A c (-unitVec 4) = 0 →
+            core A d (-unitVec 3) = 0 →
+              core A d (-unitVec 4) = 0 →
+                (∀ (x : Point 5), shallow aR bR AR βR cR x + relu (core A c x) + relu (core A d x) = Maximum 5 x) →
+                  False
+'MaxCaterpillar.Max5Optimal.SegmentNetwork.no_cross_unit_midpoint_masses' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,11 @@
+crossing_balanced : ∀ (u v c w z d A B : ℝ),
+  twoHinge u v c A B 0 = 0 →
+    twoHinge u v c A B 1 = 0 →
+      twoHinge w z d A B 0 = 0 →
+        twoHinge w z d A B 1 = 0 →
+          (∀ (t : ℝ), 0 < t → t < 1 → twoHinge u v c A B t = 0 ∨ twoHinge w z d A B t = 0) → A / 2 + B = 0
+'MaxCaterpillar.Max5Optimal.SegmentBalance.crossing_balanced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.SegmentBalance.balanced_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.SegmentBalance.coordinates_balanced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

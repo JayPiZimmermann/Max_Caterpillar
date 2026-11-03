@@ -1,0 +1,27 @@
+{
+  "status": "READY_FOR_BOUNDED_PUBLICATION",
+  "files": {
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/EndpointContact.lean": "e8bc78a87bbbf0ceb22a001c47261fb60040a4d1c8673188043e58bb4c7ac0ba",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/Statements.lean": "30e039fc7c92b358961e9435e4063fd79b892a9dcef79f2cee8ed7a009ae396b",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/verify.py": "7f525b5c45b68987e2ed28804deacb3a47c027c39dce2b972d7c497d4153421e",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/README.md": "d86b2e004960b728f09f272346004aa2bb72c07ad71ccbc7c53e0444a1280f9c",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/receipt.json": "cdf0b7d9a532647a0e981c5769147604e71cfdfa1ca7899fa88467a9c0a40c3c",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/dependency.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/dependency.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/triple_dependency.log": "3da6c7eb61bc570af9ca002104a020ab3511f2ce7f6ed5062f453823169697f7",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/triple_dependency.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/build.log": "78718bab70ea4cf93a81d4f271b57fbe748e3050ef3f32c27730b816759eb16c",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/statements.log": "0af0c67e0427812473856a2a3d90b5ce45428e499f424a725aad70ff51bec467",
+    "research/sN/max5_optimal_20261103/lower/endpoint_contact/statements.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "publication_checkout_comparison": {
+    "matching_source_and_control_files": 80,
+    "missing": [
+      "research/sN/max5_optimal_20261103/lower/endpoint_contact/EndpointContact.lean",
+      "research/sN/max5_optimal_20261103/lower/endpoint_contact/Statements.lean",
+      "research/sN/max5_optimal_20261103/lower/endpoint_contact/verify.py"
+    ],
+    "different": []
+  }
+}

@@ -1,0 +1,10 @@
+no_three_point_zero_cover : ∀ (a b c d x y : ℝ),
+  x < y →
+    y < 1 / 2 →
+      curve a b 1 = 0 →
+        curve c d 1 = 0 →
+          curve a b x = 0 ∨ curve c d x = 0 →
+            curve a b y = 0 ∨ curve c d y = 0 → curve a b (3 / 4) = 0 ∨ curve c d (3 / 4) = 0 → False
+'MaxCaterpillar.Max5Optimal.SegmentScalar.no_three_point_zero_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
