@@ -1,0 +1,44 @@
+@exact_explicit_type : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  3 ≤ N →
+    ∀ (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (θ a : Fin h₂ → ℝ) (β C : ℝ),
+      0 < C →
+        (∀ (x : Fin N → ℝ),
+            ∑ k : Fin h₂, a k * max 0 (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin N, A j i * x i + b j) + θ k) + β =
+              Maximum N x) →
+          ↑h₁ ≤ C * ↑N ^ 2 → ↑N ^ 2 / (175000 * max 1 C) ≤ ↑h₂
+exact_exists_type : ∃ c,
+  0 < c ∧
+    ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+      3 ≤ N →
+        ∀ (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (θ a : Fin h₂ → ℝ) (β C : ℝ),
+          0 < C →
+            (∀ (x : Fin N → ℝ),
+                ∑ k : Fin h₂, a k * max 0 (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin N, A j i * x i + b j) + θ k) + β =
+                  Maximum N x) →
+              ↑h₁ ≤ C * ↑N ^ 2 → c * ↑N ^ 2 / max 1 C ≤ ↑h₂
+exact_fixed_scale_type : ∀ (C : ℝ),
+  0 < C →
+    ∃ c,
+      0 < c ∧
+        ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+          3 ≤ N →
+            ∀ (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (θ a : Fin h₂ → ℝ) (β : ℝ),
+              (∀ (x : Fin N → ℝ),
+                  ∑ k : Fin h₂, a k * max 0 (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin N, A j i * x i + b j) + θ k) + β =
+                    Maximum N x) →
+                ↑h₁ ≤ C * ↑N ^ 2 → c * ↑N ^ 2 ≤ ↑h₂
+'MaxCaterpillar.CleanQuadratic.Ordinary.Check.exact_explicit_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Ordinary.Check.exact_exists_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Ordinary.Check.exact_fixed_scale_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Ordinary.Check.withDormantBias_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Ordinary.Check.actual_biased_max_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
