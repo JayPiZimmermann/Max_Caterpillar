@@ -1,0 +1,6 @@
+@selected_component_card : ∀ {N : ℕ} (G : SimpleGraph (Fin N)) (S : Finset (Fin N)),
+  Nat.card (SimpleGraph.ConnectedComponent (SimpleGraph.comap (⇑(selectedEmbedding S)) G)) =
+    Nat.card (SimpleGraph.ConnectedComponent (SimpleGraph.induce (↑S) G))
+'MaxCaterpillar.ExponentialPush.DegreeTwo.selected_component_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

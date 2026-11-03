@@ -1,0 +1,12 @@
+@choose_le_sum_capacity : ∀ {N : ℕ} {J : Type u_2} [inst : Fintype J] (G : J → SimpleGraph (Fin N)) (m : ℕ),
+  (∀ (S : Finset (Fin N)),
+      Finset.card S = m → ∃ j, Nat.card (SimpleGraph.ConnectedComponent (SimpleGraph.induce (↑S) (G j))) ≤ 2) →
+    Nat.choose N m ≤ ∑ j : J, Finset.card (twoComponentSets (G j) m)
+@choose_le_card_mul_capacity : ∀ {N : ℕ} {J : Type u_2} [inst : Fintype J] (G : J → SimpleGraph (Fin N)) (m C : ℕ),
+  (∀ (S : Finset (Fin N)),
+      Finset.card S = m → ∃ j, Nat.card (SimpleGraph.ConnectedComponent (SimpleGraph.induce (↑S) (G j))) ≤ 2) →
+    (∀ (j : J), Finset.card (twoComponentSets (G j) m) ≤ C) → Nat.choose N m ≤ Fintype.card J * C
+'MaxCaterpillar.Overnight.DegreeTwo.choose_le_sum_capacity' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.choose_le_card_mul_capacity' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

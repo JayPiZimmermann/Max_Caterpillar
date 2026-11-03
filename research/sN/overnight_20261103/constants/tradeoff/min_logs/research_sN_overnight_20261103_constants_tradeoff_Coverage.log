@@ -1,0 +1,2 @@
+research/sN/overnight_20261103/constants/tradeoff/Coverage.lean:26:7: warning: unused variable `hC0` [linter.unusedVariables]
+'MaxCaterpillar.OvernightConstants.Tradeoff.coverage' depends on axioms: [propext, Classical.choice, Quot.sound]

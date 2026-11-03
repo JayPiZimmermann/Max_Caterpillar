@@ -1,0 +1,35 @@
+@raw_nine_array_bounds : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ)
+  (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Fin N → ℝ) (θ d : Fin h₂ → ℝ) (B : Fin h₁ → ℝ) (L : Fin N → ℝ) (β : ℝ),
+  (∀ (x : Fin N → ℝ),
+      ∑ k : Fin h₂,
+            d k *
+              max 0 (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, U k i * x i + θ k) +
+          (∑ j : Fin h₁, B j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, L i * x i + β) =
+        Maximum N x) →
+    (∀ (j : Fin h₁), ∑ i : Fin N, A j i = 0) →
+      (∀ (j : Fin h₁), Finset.card (Finset.filter (fun i => A j i ≠ 0) Finset.univ) ≤ 2) →
+        (∀ (k : Fin h₂) (v : Fin N),
+            Finset.card
+                (Finset.filter
+                  (fun w =>
+                    v ≠ w ∧
+                      ∑ j in
+                          Finset.filter (fun j => Finset.filter (fun i => A j i ≠ 0) Finset.univ = {v, w}) Finset.univ,
+                          W k j * |A j v| ≠
+                        0)
+                  Finset.univ) ≤
+              2) →
+          (∀ (m : ℕ), 3 ≤ m → Nat.choose N m ≤ h₂ * (2 * N + 2 * (m - 1) * N ^ 2)) ∧
+            (6 ≤ N → 2 ^ N / (↑N ^ 3 * (↑N + 1)) ≤ ↑h₂)
+four_input_nonvacuity : TranslationNormalized Check.fourNet ∧
+  (∀ (x : Point 4), NormalizedNetwork.eval Check.fourNet x = Maximum 4 x) ∧
+    (∀ (j : Fin 2), Finset.card (rowSupport (A Check.fourNet j)) ≤ 2) ∧
+      ∀ (k : Fin 1) (v : Fin 4),
+        SimpleGraph.degree (braidInteractionGraph Check.fourNet Check.fourNet_normalized k) v ≤ 2
+'MaxCaterpillar.Overnight.DegreeTwo.Audit.raw_degree_literal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.Audit.raw_nine_array_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.Audit.four_input_nonvacuity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

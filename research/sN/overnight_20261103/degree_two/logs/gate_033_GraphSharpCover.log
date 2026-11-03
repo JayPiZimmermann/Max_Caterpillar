@@ -1,0 +1,10 @@
+@two_choose_le_card_mul_sharp_capacity : ∀ {N : ℕ} {J : Type u_2} [inst : Fintype J] (G : J → SimpleGraph (Fin N)),
+  (∀ (j : J) (v : Fin N), SimpleGraph.degree (G j) v ≤ 2) →
+    ∀ (m : ℕ),
+      0 < m →
+        (∀ (S : Finset (Fin N)),
+            Finset.card S = m → ∃ j, Nat.card (SimpleGraph.ConnectedComponent (SimpleGraph.induce (↑S) (G j))) ≤ 2) →
+          2 * Nat.choose N m ≤ Fintype.card J * (2 * N + (m - 1) * N ^ 2)
+'MaxCaterpillar.Overnight.DegreeTwo.two_choose_le_card_mul_sharp_capacity' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

@@ -1,0 +1,15 @@
+[
+  "cycle_bridge/receipt.json",
+  "cycle_bridge/five_via_cover_receipt.json",
+  "constants/quadratic_receipt.json",
+  "constants/falling_receipt.json",
+  "portfolio/transversal/receipt.json",
+  "portfolio/coordinate_quotient/receipt.json",
+  "constants/tradeoff/min_receipt.json",
+  "h1_tradeoffs/receipt.json",
+  "constants/theta_receipt.json",
+  "constants/tradeoff_theta/min_receipt.json",
+  "constants/tradeoff_theta/feeding_min_receipt.json",
+  "constants/tradeoff_theta/product_receipt.json",
+  "degree_two/receipt.json"
+]

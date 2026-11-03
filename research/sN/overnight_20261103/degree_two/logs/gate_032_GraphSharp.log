@@ -1,0 +1,10 @@
+@connectedSets_card_le_sharp : ∀ {N : ℕ} (G : SimpleGraph (Fin N)),
+  (∀ (v : Fin N), degree G v ≤ 2) → ∀ (k : ℕ), 0 < k → Finset.card (connectedSets G k) ≤ N
+@two_mul_twoComponentSets_card_le_sharp : ∀ {N : ℕ} (G : SimpleGraph (Fin N)),
+  (∀ (v : Fin N), degree G v ≤ 2) → ∀ (m : ℕ), 0 < m → 2 * Finset.card (twoComponentSets G m) ≤ 2 * N + (m - 1) * N ^ 2
+'MaxCaterpillar.Overnight.DegreeTwo.connectedSets_card_le_sharp' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.two_mul_twoComponentSets_card_le_sharp' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

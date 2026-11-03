@@ -1,0 +1,4 @@
+research/sN/overnight_20261103/constants/tradeoff_theta/Parameters.lean:17:7: warning: unused variable `hs0` [linter.unusedVariables]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.cutoff_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

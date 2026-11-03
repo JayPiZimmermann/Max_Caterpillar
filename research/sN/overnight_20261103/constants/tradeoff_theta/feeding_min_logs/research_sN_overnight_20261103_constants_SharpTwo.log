@@ -1,0 +1,27 @@
+@conditional_finite_transfer_two : ∀ {m k h₁ h₂ : ℕ} [inst : NeZero k],
+  LocalMatchingObstruction k 2 →
+    ∀ (net : NormalizedNetwork (m + k) h₁ h₂),
+      NormalizedNetwork.TranslationNormalized net →
+        (∀ (x : Point (m + k)), NormalizedNetwork.eval net x = Maximum (m + k) x) →
+          ∀ (K : ℕ),
+            2 ≤ m →
+              4 ≤ m + k →
+                4 ≤ K →
+                  K < m →
+                    1 - 8 * ↑K / ↑m -
+                          ↑(BadFirst.largeSupportCount (firstSupports net)) * ↑(Nat.descFactorial k 3) /
+                            ↑(Nat.descFactorial (m + k) 3) -
+                        (∑ j : Fin h₁, ↑(Nat.descFactorial (Finset.card (firstSupports net j)) 4)) /
+                            ↑(Nat.descFactorial (m + k) 4) *
+                          (↑K ^ 2 * (1 + ↑k / ↑m) / (1 - ↑K / ↑m) + ↑(Nat.descFactorial k 2) * ↑K / 2) ≤
+                      ↑h₂ * (2 / 7) * (↑(Nat.descFactorial k 4) / ↑(Nat.descFactorial (m + k) 4)) *
+                          (tailRate m K ^ 2)⁻¹ *
+                        Real.exp (tailRate m K * (↑k * (↑m + ↑k - 1)))
+'MaxCaterpillar.Overnight.Constants.square_exp_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.Constants.selectedTailMean_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.Constants.actualNeuron_fraction_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.conditional_finite_transfer_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,79 @@
+[
+  {
+    "declaration": "MaxCaterpillar.OvernightConstants.affine_quadratic",
+    "path": "research/sN/overnight_20261103/constants/Quadratic.lean",
+    "line": 124,
+    "scope": "Unconditional N\u22653, total h1\u2264N\u00b2 implies h2\u2265N\u00b2/650000.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.OvernightConstants.Tradeoff.affine_min_tradeoff",
+    "path": "research/sN/overnight_20261103/constants/tradeoff/Min.lean",
+    "line": 13,
+    "scope": "Unconditional N\u22653, no total first-width cap; h2\u2265min(N\u00b2,N4/h1)/650000.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.ExponentialPush.CycleBridge.matchingRepresentable_iff_coverRepresentable",
+    "path": "research/sN/overnight_20261103/cycle_bridge/Equivalence.lean",
+    "line": 37,
+    "scope": "Exact same-arity normalized-braid representability equivalence; width need not be preserved.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.ExponentialPush.CycleBridge.localMatchingObstruction_iff_no_cover_representation",
+    "path": "research/sN/overnight_20261103/cycle_bridge/Equivalence.lean",
+    "line": 70,
+    "scope": "Exact H(N,r+1) equivalence to cover-r MAX exclusion, not a proof of new H instances.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.ExponentialPush.CycleBridge.localMatchingObstruction_five_two_via_cycle_deletion",
+    "path": "research/sN/overnight_20261103/cycle_bridge/FiveViaCover.lean",
+    "line": 67,
+    "scope": "Alternative unconditional H(5,2) proof using the star certificate and generic cycle deletion.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.Overnight.SupportTransversal.affine_transversal_quadratic",
+    "path": "research/sN/overnight_20261103/portfolio/transversal/Bounds.lean",
+    "line": 73,
+    "scope": "No h1 cap; retained dimension N\u2212|C|\u22653, actual support transversal premise; h2\u2265(N\u2212|C|)\u00b2/3000000.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.Overnight.SupportTransversal.conditional_affine_retained_lower_bound",
+    "path": "research/sN/overnight_20261103/portfolio/transversal/Bounds.lean",
+    "line": 59,
+    "scope": "Conditional on H(4q+1,q); actual retained braid model gives (23/25)4^q.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.Overnight.CoordinateQuotient.affine_quotient_quadratic",
+    "path": "research/sN/overnight_20261103/portfolio/coordinate_quotient/Bounds.lean",
+    "line": 13,
+    "scope": "Exact quotient transport under BraidBlockSums; does not improve optimal deletion criterion.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_sharp_explicit",
+    "path": "research/sN/overnight_20261103/h1_tradeoffs/SharpTradeoff.lean",
+    "line": 62,
+    "scope": "Conditional on exact H and n>=10^10*d\u00b2; original feeding count F, d=1+floor(sqrt(105F/(16n\u00b2))), unrestricted total h1.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_sqrt_coefficient",
+    "path": "research/sN/overnight_20261103/h1_tradeoffs/SharpTradeoff.lean",
+    "line": 97,
+    "scope": "Conditional H and size budget; F<=C*N\u00b2, exponent denominator48000*sqrtCeiling(C), unrestricted output-only rows.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  },
+  {
+    "declaration": "MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_support_tradeoff",
+    "path": "research/sN/overnight_20261103/h1_tradeoffs/WeightedTradeoff.lean",
+    "line": 68,
+    "scope": "Conditional H and size budget; support-weighted original feeding-row cost replaces all first-width caps.",
+    "link_status": "Await parent publication commit; use GitHub blob/<actual commit>/<path>#L<line>."
+  }
+]

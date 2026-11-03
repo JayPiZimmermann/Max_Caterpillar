@@ -1,0 +1,16 @@
+@conditional_sqrt_lower_bound : ∀ {n d h₁ h₂ : ℕ} [inst : NeZero n],
+  1 ≤ d →
+    10000000000 * d ^ 2 ≤ n →
+      LocalMatchingObstruction (minimumArity n d) (matchingOrder n d) →
+        ∀ (net : NormalizedNetwork n h₁ h₂),
+          NormalizedNetwork.TranslationNormalized net →
+            (∀ (x : Point n), NormalizedNetwork.eval net x = Maximum n x) →
+              ↑(Finset.card (largeSupports (firstSupports (core net)))) ≤ ↑d ^ 2 * ↑n ^ 2 →
+                ∑ j : Fin h₁, ↑(Nat.descFactorial (Finset.card (firstSupports (core net) j)) 4) ≤ ↑d ^ 2 * ↑n ^ 2 →
+                  1 / 2 * Real.exp (3 * Real.sqrt ↑n / (8000 * ↑d)) ≤ ↑h₂
+'MaxCaterpillar.ExponentialPush.FeedingBernoulli.finite_conditional_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.FeedingBernoulli.conditional_sqrt_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

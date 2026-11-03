@@ -1,0 +1,7 @@
+pow_two_le_width_polynomial : ∀ (N h₂ : ℕ),
+  6 ≤ N → Nat.choose N (N / 2) ≤ h₂ * (2 * N + 2 * (N / 2 - 1) * N ^ 2) → 2 ^ N ≤ h₂ * (N ^ 3 * (N + 1))
+'MaxCaterpillar.Overnight.DegreeTwo.pow_two_le_middle_choose' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.middle_capacity_le_cube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.pow_two_le_width_polynomial' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

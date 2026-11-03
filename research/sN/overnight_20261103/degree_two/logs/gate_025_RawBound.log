@@ -1,0 +1,30 @@
+@raw_width_binomial : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+    ∀ (hA : ∀ (j : Fin h₁), ∑ i : Fin N, AffineSkipNetwork.A net j i = 0),
+      (∀ (j : Fin h₁), Finset.card (rowSupport (AffineSkipNetwork.A net j)) ≤ 2) →
+        (∀ (k : Fin h₂) (v : Fin N),
+            SimpleGraph.degree (ExponentialPush.DegreeTwo.Recession.rawInteractionGraph net hA k) v ≤ 2) →
+          ∀ (m : ℕ), 3 ≤ m → Nat.choose N m ≤ h₂ * (2 * N + 2 * (m - 1) * N ^ 2)
+@raw_width_exponential : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  6 ≤ N →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+        ∀ (hA : ∀ (j : Fin h₁), ∑ i : Fin N, AffineSkipNetwork.A net j i = 0),
+          (∀ (j : Fin h₁), Finset.card (rowSupport (AffineSkipNetwork.A net j)) ≤ 2) →
+            (∀ (k : Fin h₂) (v : Fin N),
+                SimpleGraph.degree (ExponentialPush.DegreeTwo.Recession.rawInteractionGraph net hA k) v ≤ 2) →
+              2 ^ N ≤ h₂ * (N ^ 3 * (N + 1))
+@raw_width_exponential_real : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  6 ≤ N →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+        ∀ (hA : ∀ (j : Fin h₁), ∑ i : Fin N, AffineSkipNetwork.A net j i = 0),
+          (∀ (j : Fin h₁), Finset.card (rowSupport (AffineSkipNetwork.A net j)) ≤ 2) →
+            (∀ (k : Fin h₂) (v : Fin N),
+                SimpleGraph.degree (ExponentialPush.DegreeTwo.Recession.rawInteractionGraph net hA k) v ≤ 2) →
+              2 ^ N / (↑N ^ 3 * (↑N + 1)) ≤ ↑h₂
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_exponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_exponential_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

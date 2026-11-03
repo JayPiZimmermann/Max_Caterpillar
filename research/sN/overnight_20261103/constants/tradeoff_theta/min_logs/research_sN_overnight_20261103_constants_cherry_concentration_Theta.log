@@ -1,0 +1,27 @@
+research/sN/overnight_20261103/constants/cherry_concentration/Theta.lean:28:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+research/sN/overnight_20261103/constants/cherry_concentration/Theta.lean:78:7: warning: unused variable `hm0` [linter.unusedVariables]
+research/sN/overnight_20261103/constants/cherry_concentration/Theta.lean:79:7: warning: unused variable `hK0` [linter.unusedVariables]
+@actual_centered_moment_le : ∀ {m K : ℕ},
+  2 ≤ m →
+    5 * K ≤ m → (rankAverage K fun Γ => (↑(Finset.card (selectedGapAdjacencies Γ)) - ↑K ^ 2 / ↑m) ^ 2) ≤ 2 * ↑K ^ 2 / ↑m
+@highBad_fraction_le : ∀ {m K : ℕ},
+  2 ≤ m →
+    50 ≤ K → 10 * K ≤ m → ↑(Finset.card (highBadIsolatedEvent m K)) / ↑(Fintype.card (Equiv.Perm (Fin m))) ≤ 1250 / ↑m
+@highBad_fraction_le_tenth : ∀ {m K : ℕ},
+  20000 ≤ m →
+    50 ≤ K → 10 * K ≤ m → ↑(Finset.card (highBadIsolatedEvent m K)) / ↑(Fintype.card (Equiv.Perm (Fin m))) ≤ 1 / 10
+'MaxCaterpillar.OvernightConstants.CherryConcentration.actual_centered_moment_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.CherryConcentration.highBad_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.CherryConcentration.highBad_fraction_le_sixteenth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.CherryConcentration.highBad_fraction_le_tenth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.CherryConcentration.highBad_tenth_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

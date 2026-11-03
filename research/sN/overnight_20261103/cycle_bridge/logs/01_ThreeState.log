@@ -1,0 +1,20 @@
+@three_state_circuit_deletion : ∀ {ι : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι] (s : ι → State)
+  (S : Finset ι) (reverse : ι → Bool) (ell c : ι → ℝ) (a : ℝ) (F : ℝ → ℝ),
+  Finset.Nonempty S →
+    (∀ i ∈ S, s i = 2) →
+      ∑ i in S, oriented (reverse i) (ell i) = 0 →
+        F (argument s ell c a) =
+          -∑ T in Finset.erase (Finset.powerset S) S,
+              (-1) ^ Finset.card (S \ T) * F (argument (updateState s S reverse T) ell c a)
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.argument_reorientation' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.three_state_circuit_deletion' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.active_updateState' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.distinct_states_card_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

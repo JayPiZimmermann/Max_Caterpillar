@@ -1,0 +1,6 @@
+research/sN/overnight_20261103/constants/ThetaQuadratic.lean:41:7: warning: unused variable `hmpos` [linter.unusedVariables]
+'MaxCaterpillar.OvernightConstants.Theta.model_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.OvernightConstants.Theta.normalized_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Theta.affine_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]

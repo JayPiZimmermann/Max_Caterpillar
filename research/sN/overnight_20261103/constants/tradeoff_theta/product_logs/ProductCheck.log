@@ -1,0 +1,12 @@
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.ProductCheck.exact_raw_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.ProductCheck.exact_ordinary_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.ProductCheck.actual_max_six' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.ProductCheck.actual_affine_max_fifteen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

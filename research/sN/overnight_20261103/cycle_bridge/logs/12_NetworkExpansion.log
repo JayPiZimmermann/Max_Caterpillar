@@ -1,0 +1,15 @@
+@exists_expansion : ∀ {N h₁ h₂ : ℕ} (net : NormalizedNetwork N h₁ h₂),
+  TranslationNormalized net →
+    (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+      ∃ d, ∀ (x : Point N), eval (expandedNetwork net d) x = eval net x
+'MaxCaterpillar.ExponentialPush.CycleBridge.expanded_translationNormalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.expanded_support_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.expanded_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.expanded_width_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.exists_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]

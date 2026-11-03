@@ -1,0 +1,24 @@
+@actual_neuron_forest_expansion : ∀ {N h₁ h₂ : ℕ} (net : NormalizedNetwork N h₁ h₂),
+  TranslationNormalized net →
+    (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+      ∀ (k : Fin h₂),
+        ∃ d,
+          ∀ (x : Point N),
+            relu (NormalizedNetwork.inner net k x) =
+              ∑ t : UnitState net k,
+                d t *
+                  relu
+                    (lin (stateHead net k ↑t) x +
+                      ∑ p : Pair N, stateWeight net k (↑t) p * relu (lin (braidRoot (left p) (right p)) x))
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.state_argument_realization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.initial_argument' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.stateHead_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.actual_neuron_forest_expansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,6 @@
+'MaxCaterpillar.ExponentialPush.DegreeTwo.Check.fourNet_proper_tie' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.Check.fourNet_full_tie' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -61,6 +61,23 @@ Priority C means a longer structural branch with a potentially large payoff.
 | 29 | A | Sharpen the q=2 envelope using the exact maximum of y² exp(-y), and replace raw fourth powers by falling fourth moments in the half restriction. | Rational upper bounds, all small support sizes, floor effects, and the original raw nine-array theorem. | A substantial unconditional quadratic constant improvement without changing any model assumptions. |
 | 30 | B | Combine several fixed-arity bounds and the linear bound with an optimized finite crossover, instead of a single conservative large-N cutoff. | Exact finite arithmetic over the crossover range; verify the chosen constant uniformly for N>=3. | Better all-N quadratic constants and simpler final hypotheses; cannot improve the asymptotic exponent on its own. |
 
+## Additional routes admitted after the first tests
+
+These emerged during the run and are separate from the initial count of 30.
+
+| # | Priority | Target | Discriminator and payoff |
+|---|---|---|---|
+| 31 | A | Global support-hypergraph alteration: retain Np minus the sum of p to each relevant support size, by removing one coordinate from each remaining bad support. | Prove the repair and expectation for actual row supports, then use the actual braid restriction. Large minimum support can permit polynomially or exponentially many first rows while retaining a linear-size MAX problem. The all-real raw model bridge now passes Lean. |
+| 32 | B | Preserve both sides of a twice-resampled gradient event. The four-copy rectangle gives p^4 <= E[4^(-rank M)] for a weighted random interval-interlacement matrix. | A linear expected-rank bound would suffice via bounded differences. This changes the dependence information retained, unlike reoptimizing scalar Hölder after its hierarchical-graph barrier. |
+| 33 | A | Use each original second neuron's support-union graph: connect coordinates occurring together in any feeding first row. | Generic tie localization plus the finite-difference obstruction should again force at most two components. This extends bounded-degree counting to arbitrary first covectors and biases, with no first-width cap; it deliberately uses a different graph from summed signed braid interactions. |
+| 34 | B | Force a prescribed edge directly in a uniform partial matching, with a weighted transition kernel that changes its edge count by at most two. | Exact small-matching enumeration must prove the conditional uniform law before any moment estimate is imported. A valid coupling would improve the Laplace constant used by the unrestricted quadratic bound. |
+| 35 | B | Encode connected induced sets by a spanning-tree contour: backward steps are forced, so only k-1 forward neighbor choices are charged. | Prove a literal injective finite encoding with at most 4^(k-1) Delta^(k-1) codes. Combined with actual tie coverage, this gives an unconditional exp(cN/Delta) bound without an analytic generating-series proof. |
+
+Coordinate identification was also tested, but is not added as a stronger
+dimension route: choosing one representative per block proves that its braid
+criterion already implies a same-size valid generic deletion. Its exact
+network pullback remains a useful verified model bridge.
+
 ## Depth-first execution and evidence
 
 Immediate branches: 1–4, 9, 16–20, 26–27, and 29. Longer alternatives

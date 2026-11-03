@@ -1,0 +1,34 @@
+@conditional_union_bound : ∀ {n k₀ q h₁ h₂ : ℕ} [inst : NeZero n] [inst_1 : NeZero k₀],
+  LocalMatchingObstruction k₀ q →
+    0 < q →
+      ∀ (net : NormalizedNetwork n h₁ h₂),
+        NormalizedNetwork.TranslationNormalized net →
+          (∀ (x : Point n), NormalizedNetwork.eval net x = Maximum n x) →
+            ∀ (p : ℝ),
+              0 ≤ p →
+                p ≤ 1 →
+                  ∀ (D : Finset (Finset (Fin n))),
+                    IsLowerSet ↑D →
+                      0 < mass p D →
+                        ∀ (b m₀ K : ℕ),
+                          4 ≤ m₀ →
+                            4 ≤ K →
+                              K < m₀ →
+                                (∀ S ∈ D, m₀ ≤ Sampling.tailCount S) →
+                                  (∀ S ∈ D, Finset.card S ≤ b) →
+                                    (∀ S ∈ D,
+                                        ∀ (j : Fin h₁),
+                                          3 ≤ Finset.card (firstSupports (core net) j) →
+                                            ¬firstSupports (core net) j ⊆ S) →
+                                      (1 - condMean p D fun S => if Finset.card S < k₀ then 1 else 0) - 8 * ↑K / ↑m₀ -
+                                          (∑ j : Fin h₁,
+                                              ↑(Nat.descFactorial (Finset.card (firstSupports (core net) j)) 4)) *
+                                            GoodEvent.badSupportRate p m₀ K ≤
+                                        ↑h₂ * (p ^ 2 / ambientRate n K) ^ q *
+                                          Real.exp (ambientRate n K * (↑b * (↑n - 1)))
+'MaxCaterpillar.ExponentialPush.FeedingBernoulli.auxiliary_event_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.FeedingBernoulli.conditional_union_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

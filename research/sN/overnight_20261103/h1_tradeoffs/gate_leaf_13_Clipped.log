@@ -1,0 +1,17 @@
+@exists_affine_feeding_clipped_model : ∀ {N n h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero n]
+  (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+    2 * n ≤ N →
+      ∀ (cost : ℕ → ℝ),
+        cost 0 = 0 →
+          (∀ (r : ℕ), 0 ≤ cost r) →
+            ∃ S,
+              Finset.card S = n ∧
+                ∃ model,
+                  (∀ (x : Point n), NormalizedNetwork.eval model x = Maximum n x) ∧
+                    TranslationNormalized model ∧
+                      ∑ j : Fin h₁, cost (Finset.card (rowSupport (A (core model) j))) ≤
+                        affineFeedingSupportBudget (clipCost n cost) net
+'MaxCaterpillar.ExponentialPush.WeightedSupport.exists_affine_feeding_clipped_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,25 @@
+@conditional_affine_feeding_sharp_explicit : ∀ {N h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂)
+  (hsize : 10000000000 * sharpParameter (N / 2) (affineFeedingCard net) ^ 2 ≤ N / 2),
+  LocalMatchingObstruction (Parameters.minimumArity (N / 2) (sharpParameter (N / 2) (affineFeedingCard net)))
+      (Parameters.matchingOrder (N / 2) (sharpParameter (N / 2) (affineFeedingCard net))) →
+    (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+      1 / 2 * Real.exp (3 * Real.sqrt ↑(N / 2) / (8000 * ↑(sharpParameter (N / 2) (affineFeedingCard net)))) ≤ ↑h₂
+@conditional_affine_feeding_sqrt_coefficient : ∀ {N h₁ h₂ : ℕ} (C : ℕ)
+  (hsize : 10000000000 * (6 * sqrtCeiling C) ^ 2 ≤ N / 2),
+  LocalMatchingObstruction (Parameters.minimumArity (N / 2) (6 * sqrtCeiling C))
+      (Parameters.matchingOrder (N / 2) (6 * sqrtCeiling C)) →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+        affineFeedingCard net ≤ C * N ^ 2 → 1 / 2 * Real.exp (3 * Real.sqrt ↑(N / 2) / (48000 * ↑(sqrtCeiling C))) ≤ ↑h₂
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_sharp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.sharpParameter_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_sharp_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_sqrt_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

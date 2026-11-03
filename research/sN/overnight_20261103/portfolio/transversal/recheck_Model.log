@@ -1,0 +1,24 @@
+@exists_braid_model : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m] (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+    ∀ (e : Fin m ↪ Fin N),
+      BraidOnRetained net e →
+        ∃ model,
+          (∀ (x : Point m), NormalizedNetwork.eval model x = Maximum m x) ∧
+            TranslationNormalized model ∧
+              (∀ (j : Fin h₁), Finset.card (rowSupport (A model j)) ≤ 2) ∧
+                ∀ (j : Fin h₁), Feeding model j → ∃ k, AffineSkipNetwork.W net k j ≠ 0
+@braidOnRetained_of_transversal : ∀ {N m h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂) (e : Fin m ↪ Fin N)
+  (C : Finset (Fin N)),
+  (∀ (a : Fin m), e a ∉ C) →
+    (∀ (j : Fin h₁),
+        AffineSkipNetwork.b net j = 0 →
+          ∑ i : Fin N, AffineSkipNetwork.A net j i = 0 →
+            3 ≤ Finset.card (rowSupport (AffineSkipNetwork.A net j)) →
+              ∃ i ∈ rowSupport (AffineSkipNetwork.A net j), i ∈ C) →
+      BraidOnRetained net e
+'MaxCaterpillar.Overnight.SupportTransversal.exists_braid_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.SupportTransversal.braidOnRetained_of_transversal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

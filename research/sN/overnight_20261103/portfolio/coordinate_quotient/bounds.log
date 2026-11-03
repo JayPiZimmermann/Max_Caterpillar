@@ -1,0 +1,18 @@
+@affine_quotient_quadratic : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m],
+  3 ≤ m →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), eval net x = Maximum N x) →
+        ∀ (φ : Fin N → Fin m), Function.Surjective φ → BraidBlockSums net φ → ↑m ^ 2 / 3000000 ≤ ↑h₂
+@conditional_affine_quotient_lower_bound : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] (q : ℕ),
+  1 ≤ q →
+    160000 * q ^ 2 ≤ m →
+      LocalMatchingObstruction (Parameters.braidArity q) q →
+        ∀ (net : AffineSkipNetwork N h₁ h₂),
+          (∀ (x : Point N), eval net x = Maximum N x) →
+            ∀ (φ : Fin N → Fin m), Function.Surjective φ → BraidBlockSums net φ → 23 / 25 * 4 ^ q ≤ ↑h₂
+'MaxCaterpillar.Overnight.CoordinateQuotient.affine_quotient_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.conditional_affine_quotient_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

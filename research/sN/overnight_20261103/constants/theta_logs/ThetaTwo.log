@@ -1,0 +1,25 @@
+Try this: ring_nf
+research/sN/overnight_20261103/constants/ThetaTwo.lean:66:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+research/sN/overnight_20261103/constants/ThetaTwo.lean:66:55: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+research/sN/overnight_20261103/constants/ThetaTwo.lean:67:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+research/sN/overnight_20261103/constants/ThetaTwo.lean:67:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+@highSelectedTailMean_le_two : ∀ {m n : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj]
+  (H : Equiv.Perm (Fin n) → SimpleGraph (Fin m)) [hH : (σ : Equiv.Perm (Fin n)) → DecidableRel (H σ).Adj] (k K : ℕ)
+  (d : ℝ),
+  k ≤ n →
+    2 ≤ m →
+      0 < ↑K →
+        (∀ (σ : Equiv.Perm (Fin n)),
+            ↑(Finset.card (SimpleGraph.edgeFinset G)) - d ≤ ↑(Finset.card (SimpleGraph.edgeFinset (H σ)))) →
+          highSelectedTailMean G H k K ≤
+            2 / 7 * (↑(Nat.descFactorial k 4) / ↑(Nat.descFactorial n 4)) * (highTailRate m K ^ 2)⁻¹ *
+              Real.exp (highTailRate m K * d)
+'MaxCaterpillar.Overnight.Constants.Theta.high_good_implies_old_good' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.Constants.Theta.high_lowRankMatchingMean_le_shifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.Theta.highSelectedTailMean_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

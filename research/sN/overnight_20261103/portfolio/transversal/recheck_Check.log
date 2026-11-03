@@ -1,0 +1,41 @@
+@raw_nine_arrays : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m],
+  3 ≤ m →
+    ∀ (e : Fin m ↪ Fin N) (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Fin N → ℝ)
+      (θ d : Fin h₂ → ℝ) (B : Fin h₁ → ℝ) (L : Fin N → ℝ) (β : ℝ),
+      (∀ (x : Fin N → ℝ),
+          ∑ k : Fin h₂,
+                d k *
+                  max 0
+                    (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, U k i * x i + θ k) +
+              (∑ j : Fin h₁, B j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, L i * x i + β) =
+            Maximum N x) →
+        (∀ (j : Fin h₁),
+            b j = 0 →
+              ∑ i : Fin N, A j i = 0 →
+                Finset.filter (fun i => A j i ≠ 0) Finset.univ ⊆ Finset.image (⇑e) Finset.univ →
+                  Finset.card (Finset.filter (fun i => A j i ≠ 0) Finset.univ) ≤ 2) →
+          ↑m ^ 2 / 3000000 ≤ ↑h₂
+@literal_transversal : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m],
+  3 ≤ m →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+        ∀ (e : Fin m ↪ Fin N) (C : Finset (Fin N)),
+          (∀ (a : Fin m), e a ∉ C) →
+            (∀ (j : Fin h₁),
+                AffineSkipNetwork.b net j = 0 →
+                  ∑ i : Fin N, AffineSkipNetwork.A net j i = 0 →
+                    3 ≤ Finset.card (rowSupport (AffineSkipNetwork.A net j)) →
+                      ∃ i ∈ rowSupport (AffineSkipNetwork.A net j), i ∈ C) →
+              ↑m ^ 2 / 3000000 ≤ ↑h₂
+actual_max_three_control : ∃ net,
+  (∀ (x : Point 3), AffineSkipExtension.eval net x = Maximum 3 x) ∧
+    BraidOnRetained net (Function.Embedding.refl (Fin 3)) ∧ 3 ^ 2 / 3000000 ≤ 3
+'MaxCaterpillar.Overnight.SupportTransversal.Check.raw_nine_arrays' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.SupportTransversal.Check.literal_transversal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.SupportTransversal.Check.actual_max_three_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

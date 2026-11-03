@@ -1,0 +1,6 @@
+@connectedSets_card_le : ∀ {N : ℕ} (G : SimpleGraph (Fin N)),
+  (∀ (v : Fin N), degree G v ≤ 2) → ∀ (k : ℕ), 0 < k → Finset.card (connectedSets G k) ≤ 2 * N
+'MaxCaterpillar.Overnight.DegreeTwo.connected_set_spanning_path' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.connectedSets_card_le' depends on axioms: [propext, Quot.sound, Classical.choice]

@@ -1,0 +1,9 @@
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.Feeding.model_bound_scaled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.Feeding.normalized_scaled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.Feeding.affine_scaled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

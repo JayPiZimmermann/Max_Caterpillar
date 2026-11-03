@@ -1,0 +1,129 @@
+@Overnight.DegreeTwo.raw_width_binomial : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N]
+  (net : Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), Frontier.RandomRestriction.AffineSkipExtension.eval net x = Maximum N x) →
+    ∀
+      (hA :
+        ∀ (j : Fin h₁),
+          (Finset.sum Finset.univ fun i => Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j i) =
+            0),
+      (∀ (j : Fin h₁),
+          Finset.card
+              (Frontier.RandomRestriction.NormalizedNetwork.rowSupport
+                (Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j)) ≤
+            2) →
+        (∀ (k : Fin h₂) (v : Fin N),
+            SimpleGraph.degree (ExponentialPush.DegreeTwo.Recession.rawInteractionGraph net hA k) v ≤ 2) →
+          ∀ (m : ℕ), 3 ≤ m → Nat.choose N m ≤ h₂ * (2 * N + 2 * (m - 1) * N ^ 2)
+@Overnight.DegreeTwo.raw_width_exponential_real : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  6 ≤ N →
+    ∀ (net : Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), Frontier.RandomRestriction.AffineSkipExtension.eval net x = Maximum N x) →
+        ∀
+          (hA :
+            ∀ (j : Fin h₁),
+              (Finset.sum Finset.univ fun i =>
+                  Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j i) =
+                0),
+          (∀ (j : Fin h₁),
+              Finset.card
+                  (Frontier.RandomRestriction.NormalizedNetwork.rowSupport
+                    (Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j)) ≤
+                2) →
+            (∀ (k : Fin h₂) (v : Fin N),
+                SimpleGraph.degree (ExponentialPush.DegreeTwo.Recession.rawInteractionGraph net hA k) v ≤ 2) →
+              2 ^ N / (↑N ^ 3 * (↑N + 1)) ≤ ↑h₂
+@Overnight.DegreeTwo.Audit.raw_nine_array_bounds : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (A : Fin h₁ → Fin N → ℝ)
+  (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Fin N → ℝ) (θ d : Fin h₂ → ℝ) (B : Fin h₁ → ℝ)
+  (L : Fin N → ℝ) (β : ℝ),
+  (∀ (x : Fin N → ℝ),
+      (Finset.sum Finset.univ fun k =>
+            d k *
+              max 0
+                (((Finset.sum Finset.univ fun j =>
+                      W k j * max 0 ((Finset.sum Finset.univ fun i => A j i * x i) + b j)) +
+                    Finset.sum Finset.univ fun i => U k i * x i) +
+                  θ k)) +
+          (((Finset.sum Finset.univ fun j => B j * max 0 ((Finset.sum Finset.univ fun i => A j i * x i) + b j)) +
+              Finset.sum Finset.univ fun i => L i * x i) +
+            β) =
+        Maximum N x) →
+    (∀ (j : Fin h₁), (Finset.sum Finset.univ fun i => A j i) = 0) →
+      (∀ (j : Fin h₁), Finset.card (Finset.filter (fun i => A j i ≠ 0) Finset.univ) ≤ 2) →
+        (∀ (k : Fin h₂) (v : Fin N),
+            Finset.card
+                (Finset.filter
+                  (fun w =>
+                    v ≠ w ∧
+                      (Finset.sum
+                          (Finset.filter (fun j => Finset.filter (fun i => A j i ≠ 0) Finset.univ = {v, w}) Finset.univ)
+                          fun j => W k j * |A j v|) ≠
+                        0)
+                  Finset.univ) ≤
+              2) →
+          (∀ (m : ℕ), 3 ≤ m → Nat.choose N m ≤ h₂ * (2 * N + 2 * (m - 1) * N ^ 2)) ∧
+            (6 ≤ N → 2 ^ N / (↑N ^ 3 * (↑N + 1)) ≤ ↑h₂)
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_exponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_exponential_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.Audit.raw_nine_array_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.Audit.four_input_nonvacuity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.exists_active_second_on_set' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.twoComponentSets_card_le' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.Recession.model_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Overnight.DegreeTwo.raw_width_binomial_sharp : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N]
+  (net : Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), Frontier.RandomRestriction.AffineSkipExtension.eval net x = Maximum N x) →
+    ∀
+      (hA :
+        ∀ (j : Fin h₁),
+          (Finset.sum Finset.univ fun i => Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j i) =
+            0),
+      (∀ (j : Fin h₁),
+          Finset.card
+              (Frontier.RandomRestriction.NormalizedNetwork.rowSupport
+                (Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j)) ≤
+            2) →
+        (∀ (k : Fin h₂) (v : Fin N),
+            SimpleGraph.degree (ExponentialPush.DegreeTwo.Recession.rawInteractionGraph net hA k) v ≤ 2) →
+          ∀ (m : ℕ), 3 ≤ m → 2 * Nat.choose N m ≤ h₂ * (2 * N + (m - 1) * N ^ 2)
+@Overnight.DegreeTwo.raw_width_exponential_sharp_real : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  6 ≤ N →
+    ∀ (net : Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), Frontier.RandomRestriction.AffineSkipExtension.eval net x = Maximum N x) →
+        ∀
+          (hA :
+            ∀ (j : Fin h₁),
+              (Finset.sum Finset.univ fun i =>
+                  Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j i) =
+                0),
+          (∀ (j : Fin h₁),
+              Finset.card
+                  (Frontier.RandomRestriction.NormalizedNetwork.rowSupport
+                    (Frontier.RandomRestriction.AffineSkipExtension.AffineSkipNetwork.A net j)) ≤
+                2) →
+            (∀ (k : Fin h₂) (v : Fin N),
+                SimpleGraph.degree (ExponentialPush.DegreeTwo.Recession.rawInteractionGraph net hA k) v ≤ 2) →
+              4 * 2 ^ N / (↑N ^ 3 * (↑N + 1)) ≤ ↑h₂
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_binomial_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.raw_width_exponential_sharp_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.normalized_width_binomial_sharp_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.SharpAudit.raw_nine_array_sharp_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.SharpAudit.normalized_feeding_exact_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+research/sN/overnight_20261103/constants/SharpCherries.lean:25:7: warning: unused variable `hmR` [linter.unusedVariables]
+'MaxCaterpillar.OvernightConstants.badIsolated_forces_adjacencies' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.OvernightConstants.badIsolated_fraction_le' depends on axioms: [propext, Classical.choice, Quot.sound]

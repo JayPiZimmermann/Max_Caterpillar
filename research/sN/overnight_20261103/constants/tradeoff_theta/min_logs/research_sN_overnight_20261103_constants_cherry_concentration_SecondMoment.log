@@ -1,0 +1,3 @@
+'MaxCaterpillar.Overnight.Constants.Cherry.rankAverage_adjacency_square_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

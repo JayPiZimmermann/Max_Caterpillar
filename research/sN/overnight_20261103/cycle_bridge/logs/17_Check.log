@@ -1,0 +1,48 @@
+@exact_replacement_contract : ∀ {N h₁ h₂ : ℕ} (net : NormalizedNetwork N h₁ h₂),
+  (∀ (j : Fin h₁), ∑ i : Fin N, A net j i = 0) →
+    (∀ (k : Fin h₂), ∑ i : Fin N, U net k i = 0) →
+      ∑ i : Fin N, L net i = 1 →
+        (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+          ∃ w₂ out,
+            ∃ (hn : TranslationNormalized out),
+              w₂ ≤ h₂ * 3 ^ Fintype.card (Pair N) ∧
+                (∀ (j : Fin (Fintype.card (Pair N))), Finset.card (rowSupport (A out j)) ≤ 2) ∧
+                  (∀ (x : Point N), eval out x = eval net x) ∧
+                    ∀ (k : Fin w₂), SimpleGraph.IsAcyclic (braidInteractionGraph out hn k)
+exact_obstruction_contract : ∀ (N r : ℕ) [inst : NeZero N],
+  LocalMatchingObstruction N (r + 1) ↔
+    ∀ (h₁ h₂ : ℕ) (net : NormalizedNetwork N h₁ h₂) (hn : TranslationNormalized net),
+      (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+        (∀ (x : Point N), eval net x = Maximum N x) →
+          (∀ (k : Fin h₂),
+              ∃ C,
+                (∀ (a b : Fin N), SimpleGraph.Adj (braidInteractionGraph net hn k) a b → a ∈ C ∨ b ∈ C) ∧
+                  Finset.card C ≤ r) →
+            False
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.exact_replacement_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.exact_obstruction_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.triangle_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.triangle_graph' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.triangle_source_nonacyclic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.triangle_inner_sign_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.triangle_replacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.empty_cover_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.IndependentCheck.one_input_obstruction_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

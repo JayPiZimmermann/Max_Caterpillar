@@ -1,0 +1,23 @@
+@eval_quotient : ∀ {N m h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂) (φ : Fin N → Fin m) (x : Point m),
+  eval (quotient net φ) x = eval net (pullback φ x)
+@quotient_computes_max : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m] (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) →
+    ∀ (φ : Fin N → Fin m), Function.Surjective φ → ∀ (x : Point m), eval (quotient net φ) x = Maximum m x
+@exists_normalized_braid_quotient : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m]
+  (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) →
+    ∀ (φ : Fin N → Fin m),
+      Function.Surjective φ →
+        BraidBlockSums net φ →
+          ∃ model,
+            (∀ (x : Point m), NormalizedNetwork.eval model x = Maximum m x) ∧
+              NormalizedNetwork.TranslationNormalized model ∧
+                ∀ (j : Fin h₁), Finset.card (rowSupport (NormalizedNetwork.A model j)) ≤ 2
+'MaxCaterpillar.Overnight.CoordinateQuotient.blockSum_dot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.eval_quotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.quotient_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.exists_normalized_braid_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

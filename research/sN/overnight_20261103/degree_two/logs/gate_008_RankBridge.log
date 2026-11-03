@@ -1,0 +1,24 @@
+@exists_nondiagonal_ker_of_finrank : ∀ {N : ℕ} {E : Type u_1} [inst : AddCommGroup E] [inst_1 : Module ℝ E]
+  [inst_2 : FiniteDimensional ℝ E],
+  2 ≤ N → ∀ (A : Point N →ₗ[ℝ] E), FiniteDimensional.finrank ℝ E ≤ N - 2 → ∃ v, A v = 0 ∧ ∃ i j, v i ≠ v j
+@maximum_ne_affine_sum_of_lowrank_observations : ∀ {N : ℕ} [inst : NeZero N] {J : Type u_2} [inst_1 : Fintype J]
+  (E : J → Type u_1) [inst_2 : (j : J) → AddCommGroup (E j)] [inst_3 : (j : J) → Module ℝ (E j)],
+  2 ≤ N →
+    ∀ (A : (j : J) → Point N →ₗ[ℝ] E j) (F : (j : J) → E j → ℝ),
+      (∀ (j : J), FiniteDimensional.finrank ℝ ↥(LinearMap.range (A j)) ≤ N - 2) →
+        ∀ (a : Point N →+ ℝ) (c : ℝ), ¬∀ (x : Point N), Maximum N x = a x + c + ∑ j : J, F j ((A j) x)
+'MaxCaterpillar.ExponentialPush.Ridge.exists_nondiagonal_ker_of_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.exists_nondiagonal_ker_of_row_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.maximum_ne_affine_sum_of_lowdim_observations' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.Ridge.maximum_ne_affine_sum_of_lowrank_observations' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.Ridge.exists_highrank_observation_of_maximum' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

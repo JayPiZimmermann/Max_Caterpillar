@@ -1,0 +1,16 @@
+research/sN/overnight_20261103/h1_tradeoffs/weighted/Average.lean:27:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+@exists_half_weighted_restriction : ∀ {κ : Type u_3} [inst : Fintype κ] {N n : ℕ},
+  2 * n ≤ N →
+    ∀ (T : κ → Finset (Fin N)) (cost : ℕ → ℝ),
+      cost 0 = 0 →
+        (∀ (r : ℕ), 0 ≤ cost r) →
+          ∃ U,
+            Finset.card U = n ∧
+              (∑ j : κ, if T j ⊆ U then cost (Finset.card (T j)) else 0) ≤
+                ∑ j : κ, cost (Finset.card (T j)) / 2 ^ Finset.card (T j)
+'MaxCaterpillar.ExponentialPush.WeightedSupport.exists_selector_weighted' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.WeightedSupport.exists_half_weighted_restriction' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

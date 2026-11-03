@@ -1,0 +1,12 @@
+'MaxCaterpillar.Overnight.DegreeTwo.exists_component_constant_kernel' depends on axioms: [Quot.sound,
+ propext,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.inner_period_of_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.exists_active_second_two_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.exists_active_second_le_two_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

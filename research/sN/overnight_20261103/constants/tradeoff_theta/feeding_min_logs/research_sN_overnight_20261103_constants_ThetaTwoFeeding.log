@@ -1,0 +1,24 @@
+Try this: ring_nf
+@finite_transfer_of_highShortRank_bound : ∀ {m h₁ h₂ : ℕ} (net : NormalizedNetwork (m + 5) h₁ h₂),
+  NormalizedNetwork.TranslationNormalized net →
+    (∀ (x : Point (m + 5)), NormalizedNetwork.eval net x = Maximum (m + 5) x) →
+      ∀ (K : ℕ),
+        2 ≤ m →
+          0 < K →
+            K < m →
+              ∀ (bQ : ℝ),
+                ↑(Finset.card (highShortRankEvent 5 m K)) / ↑(Fintype.card (Configuration 5 m)) ≤ bQ →
+                  1 - bQ -
+                        ↑(GrowingMatching.BadFirst.largeSupportCount (firstSupports (FeedingCore.core net))) * 60 /
+                          ↑(Nat.descFactorial (m + 5) 3) -
+                      (∑ j : Fin h₁, ↑(Nat.descFactorial (Finset.card (firstSupports (FeedingCore.core net) j)) 4)) /
+                          ↑(Nat.descFactorial (m + 5) 4) *
+                        (↑K ^ 2 * (1 + 5 / ↑m) / (1 - ↑K / ↑m) + 10 * ↑K) ≤
+                    ↑h₂ * (2 / 7) * (120 / ↑(Nat.descFactorial (m + 5) 4)) * (highTailRate m K ^ 2)⁻¹ *
+                      Real.exp (highTailRate m K * (5 * (↑m + 4)))
+'MaxCaterpillar.Overnight.Constants.Theta.Feeding.high_actual_event_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.Theta.Feeding.finite_transfer_of_highShortRank_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
