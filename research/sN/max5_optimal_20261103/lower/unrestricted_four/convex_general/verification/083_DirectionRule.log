@@ -1,0 +1,5 @@
+@eventually_eval_direction : ∀ {N m h₁ h₂ : ℕ} (net : NormalizedNetwork N h₁ h₂) (q : Point N) (e : Fin m ↪ Fin N)
+  (x : Point m), ∀ᶠ (ε : ℝ) in 𝓝[>] 0, eval net (q + ε • lift e x) = eval net q + ε * directionalEval net q e x
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.eventually_eval_direction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,11 @@
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Nonvacuity.lean:31:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+core_raw : ∀ (x : Point 3), core x = lin ![1, 0, -1] x + 0 + ∑ _j : Fin 1, 1 * relu (lin ![-1, 1, 0] x + 0)
+boundary_nonempty : Nonempty (ConvexRepresentation 3 (Fin 1))
+'MaxCaterpillar.Max5Optimal.ConvexCores.Nonvacuity.core_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.Nonvacuity.core_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.Nonvacuity.core_convex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.Nonvacuity.boundary_nonempty' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

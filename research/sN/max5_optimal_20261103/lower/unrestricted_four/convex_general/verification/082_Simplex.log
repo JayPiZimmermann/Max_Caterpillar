@@ -1,0 +1,13 @@
+@exists_contact_barycentric : ∀ {N : ℕ} [inst : NeZero N] (x : Point N),
+  ∃ M s w, 0 < s ∧ (∀ (i : Fin N), 0 < w i) ∧ ∑ i : Fin N, w i = 1 ∧ ∑ i : Fin N, w i • contactVertex M s i = x
+@convex_nonpos_of_contact_zeros : ∀ {N : ℕ} [inst : NeZero N] {f : Point N → ℝ},
+  ConvexOn ℝ Set.univ f → (∀ (M s : ℝ), 0 < s → ∀ (i : Fin N), f (contactVertex M s i) = 0) → ∀ (x : Point N), f x ≤ 0
+'MaxCaterpillar.Max5Optimal.ConvexCores.exists_contact_barycentric' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.convex_nonpos_of_contact_nonpos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.convex_nonpos_of_contact_zeros' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

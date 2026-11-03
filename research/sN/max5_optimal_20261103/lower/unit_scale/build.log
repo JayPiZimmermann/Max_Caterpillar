@@ -1,0 +1,14 @@
+@scalar_eq_zero_of_locOddLin_max : ∀ {N : ℕ} [inst : NeZero N] (s : ℝ) (q : Point N) (I : Finset (Fin N)),
+  3 ≤ Finset.card I → (∀ i ∈ I, q i = 0) → (∀ i ∉ I, q i ≤ -1) → LocOddLin (fun x => s * Maximum N x) q → s = 0
+'MaxCaterpillar.Max5Optimal.UnitScale.scalar_eq_zero_of_locOddLin_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@unit_comparator_scale : ∀ {mR : ℕ} (aR : Point 4) (bR : ℝ) (AR : Fin mR → Point 4) (βR cR : Fin mR → ℝ) (aH : Point 4)
+  (bH cH scale : ℝ),
+  0 ≤ scale →
+    (∀ (x : Point 4),
+        shallow aR bR AR βR cR x + relu (scale * (max (x 0) (x 1) - max (x 2) (x 3))) +
+            relu (lin aH x + bH + cH * relu (x 0 - x 1)) =
+          Maximum 4 x) →
+      scale = 1
+'MaxCaterpillar.Max5Optimal.UnitScale.unit_comparator_scale' depends on axioms: [propext, Classical.choice, Quot.sound]

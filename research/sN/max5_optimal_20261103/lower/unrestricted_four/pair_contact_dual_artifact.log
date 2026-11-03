@@ -1,0 +1,9 @@
+@zero_or_negatively_proportional : ∀ {ι : Type u_2} [inst : Fintype ι] (a b : ι → ℝ),
+  ∑ i : ι, a i = 0 → ∑ i : ι, b i = 0 → NoNegativePair a b → a = 0 ∨ b = 0 ∨ ∃ c, 0 < c ∧ ∀ (i : ι), b i = -c * a i
+'MaxCaterpillar.Max5.PairContactDual.negatively_proportional' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Max5.PairContactDual.zero_or_negatively_proportional' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@noNegativePair_iff : ∀ {ι : Type u_2} [inst : Fintype ι] (a b : ι → ℝ),
+  ∑ i : ι, a i = 0 → ∑ i : ι, b i = 0 → (NoNegativePair a b ↔ a = 0 ∨ b = 0 ∨ ∃ c, 0 < c ∧ ∀ (i : ι), b i = -c * a i)
+'MaxCaterpillar.Max5.PairContactDual.noNegativePair_iff' depends on axioms: [propext, Quot.sound, Classical.choice]

@@ -1,0 +1,36 @@
+@exists_convex_representation : ∀ {N : ℕ} [inst : NeZero N] {κ : Type u_1} [inst_1 : Fintype κ] (R : Point N → ℝ)
+  (g : κ → Point N → ℝ) (d : κ → ℝ),
+  IsShallow R →
+    (∀ (k : κ), IsShallow (g k)) →
+      (∀ (k : κ), ConvexOn ℝ Set.univ (g k) ∨ ConcaveOn ℝ Set.univ (g k)) →
+        (∀ (x : Point N), R x + ∑ k : κ, d k * relu (g k x) = Maximum N x) → Nonempty (ConvexRepresentation N κ)
+@shape_bound : ∀ {N : ℕ} [inst : NeZero N] {κ : Type u_1} [inst_1 : Fintype κ] (R : Point N → ℝ) (g : κ → Point N → ℝ)
+  (d : κ → ℝ),
+  IsShallow R →
+    (∀ (k : κ), IsShallow (g k)) →
+      (∀ (k : κ), ConvexOn ℝ Set.univ (g k) ∨ ConcaveOn ℝ Set.univ (g k)) →
+        (∀ (x : Point N), R x + ∑ k : κ, d k * relu (g k x) = Maximum N x) → N ≤ Fintype.card κ + 2
+@raw_shape_bound : ∀ {N K mR mg : ℕ} [inst : NeZero N] (aR : Point N) (bR : ℝ) (AR : Fin mR → Point N)
+  (βR cR : Fin mR → ℝ) (ag : Fin K → Point N) (bg : Fin K → ℝ) (Ag : Fin K → Fin mg → Point N)
+  (βg cg : Fin K → Fin mg → ℝ) (d : Fin K → ℝ),
+  (∀ (k : Fin K),
+      (ConvexOn ℝ Set.univ fun x => lin (ag k) x + bg k + ∑ j : Fin mg, cg k j * relu (lin (Ag k j) x + βg k j)) ∨
+        ConcaveOn ℝ Set.univ fun x => lin (ag k) x + bg k + ∑ j : Fin mg, cg k j * relu (lin (Ag k j) x + βg k j)) →
+    (∀ (x : Point N),
+        lin aR x + bR + ∑ j : Fin mR, cR j * relu (lin (AR j) x + βR j) +
+            ∑ k : Fin K, d k * relu (lin (ag k) x + bg k + ∑ j : Fin mg, cg k j * relu (lin (Ag k j) x + βg k j)) =
+          Maximum N x) →
+      N ≤ K + 2
+max5_two_core_impossible : ∀ (R : Point 5 → ℝ) (g : Fin 2 → Point 5 → ℝ) (d : Fin 2 → ℝ),
+  IsShallow R →
+    (∀ (k : Fin 2), IsShallow (g k)) →
+      (∀ (k : Fin 2), ConvexOn ℝ Set.univ (g k) ∨ ConcaveOn ℝ Set.univ (g k)) →
+        (∀ (x : Point 5), R x + ∑ k : Fin 2, d k * relu (g k x) = Maximum 5 x) → False
+'MaxCaterpillar.Max5Optimal.ConvexCores.exists_convex_representation' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Max5Optimal.ConvexCores.shape_bound' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Max5Optimal.ConvexCores.raw_shape_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.max5_two_core_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

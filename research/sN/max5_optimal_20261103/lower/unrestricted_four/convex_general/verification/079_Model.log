@@ -1,0 +1,10 @@
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Model.lean:52:8: warning: unused variable `hf` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Model.lean:52:11: warning: unused variable `hg` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Model.lean:53:11: warning: unused variable `hf` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Model.lean:62:8: warning: unused variable `hf` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Model.lean:62:11: warning: unused variable `hg` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Model.lean:63:11: warning: unused variable `hf` [linter.unusedVariables]
+@IsShallow.raw : ∀ {N m : ℕ} (a : Point N) (b : ℝ) (A : Fin m → Point N) (β c : Fin m → ℝ),
+  IsShallow fun x => lin a x + b + ∑ j : Fin m, c j * relu (lin (A j) x + β j)
+@not_shallow_max : ∀ {N : ℕ} [inst : NeZero N], 3 ≤ N → ¬IsShallow (Maximum N)
+'MaxCaterpillar.Max5Optimal.ConvexCores.not_shallow_max' depends on axioms: [propext, Classical.choice, Quot.sound]

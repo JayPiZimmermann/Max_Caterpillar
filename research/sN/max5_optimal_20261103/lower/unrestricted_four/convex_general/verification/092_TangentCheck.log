@@ -1,0 +1,13 @@
+@raw_affine_convex_tangent : ∀ {N m w : ℕ} (a : Point N) (b : ℝ) (A : Fin w → Point N) (β c : Fin w → ℝ),
+  (ConvexOn ℝ Set.univ fun x => lin a x + b + ∑ j : Fin w, c j * relu (lin (A j) x + β j)) →
+    ∀ (q : Point N) (e : Fin m ↪ Fin N),
+      ∃ D,
+        IsShallow D ∧
+          ConvexOn ℝ Set.univ D ∧
+            ∀ (x : Point m),
+              ∀ᶠ (ε : ℝ) in 𝓝[>] 0,
+                lin a (q + ε • lift e x) + b + ∑ j : Fin w, c j * relu (lin (A j) (q + ε • lift e x) + β j) =
+                  lin a q + b + ∑ j : Fin w, c j * relu (lin (A j) q + β j) + ε * D x
+'MaxCaterpillar.Max5Optimal.ConvexCores.Check.raw_affine_convex_tangent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

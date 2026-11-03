@@ -1,0 +1,21 @@
+ConvexRepresentation.bound : ∀ (N : ℕ) [inst : NeZero N] {κ : Type u_1} [inst_1 : Fintype κ],
+  ConvexRepresentation N κ → N ≤ Fintype.card κ + 2
+@convex_core_lower_bound : ∀ {N : ℕ} [inst : NeZero N] {κ : Type u_1} [inst_1 : Fintype κ] (R : Point N → ℝ)
+  (g : κ → Point N → ℝ) (d : κ → ℝ),
+  IsShallow R →
+    (∀ (k : κ), IsShallow (g k)) →
+      (∀ (k : κ), ConvexOn ℝ Set.univ (g k)) →
+        (∀ (x : Point N), R x + ∑ k : κ, d k * relu (g k x) = Maximum N x) → N ≤ Fintype.card κ + 2
+@shape_bound : ∀ {N : ℕ} [inst : NeZero N] {κ : Type u_1} [inst_1 : Fintype κ] (R : Point N → ℝ) (g : κ → Point N → ℝ)
+  (d : κ → ℝ),
+  IsShallow R →
+    (∀ (k : κ), IsShallow (g k)) →
+      (∀ (k : κ), ConvexOn ℝ Set.univ (g k) ∨ ConcaveOn ℝ Set.univ (g k)) →
+        (∀ (x : Point N), R x + ∑ k : κ, d k * relu (g k x) = Maximum N x) → N ≤ Fintype.card κ + 2
+'MaxCaterpillar.Max5Optimal.ConvexCores.ConvexRepresentation.bound' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Max5Optimal.ConvexCores.convex_core_lower_bound' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Max5Optimal.ConvexCores.shape_bound' depends on axioms: [propext, Quot.sound, Classical.choice]

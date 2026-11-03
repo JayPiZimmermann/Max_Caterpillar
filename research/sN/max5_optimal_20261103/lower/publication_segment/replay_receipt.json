@@ -1,0 +1,72 @@
+{
+  "checked_at_utc": "2026-11-03T10:43:27.328112+00:00",
+  "command": [
+    "python3",
+    "research/sN/max5_optimal_20261103/lower/publication_segment/verify_bundle.py",
+    "--replay"
+  ],
+  "declarations": {
+    "MaxCaterpillar.Max5Optimal.EndpointContact.shared_endpoint_directional_disjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.EndpointContact.shared_endpoint_slope_disjunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.balance_or_zero_midpoint_mass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.balance_or_zero_pair_mass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.core_no_cross_midpoint_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.exceptional_row_balanced": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.exceptional_row_balanced_of_nonzero_mass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.no_cross_nonzero_midpoint_masses": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.no_cross_unit_midpoint_masses": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.no_three_coordinate_exception": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5Optimal.SegmentNetwork.row_no_cross_midpoint_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "existing_dependencies_checked": 83,
+  "exit_code": 0,
+  "manifest_sha256": "9341cc83a438e5d9444a0ae0525f2b906aee3efeb5c53832b34e9ba3d3a694c7",
+  "new_files_checked": 95,
+  "scope": "Fresh targeted replay of all five receipt command sequences, including literal-array consumers and permitted-axiom output; not a full-project build. Frozen proof sources, logs, and original receipts were not modified.",
+  "status": "COMBINED_READ_ONLY_LEAN_REPLAY_PASS",
+  "verifier_sha256": "e00bfc2eed8c372a399e4701c642492908aaa4682eb65996aee2e8f91962fe7b"
+}
