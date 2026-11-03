@@ -1,0 +1,3965 @@
+{
+  "scope": "Inventory of existing independent-check receipts only; no proof replay and no complete source-to-support-cover audit.",
+  "receipt_count": 421,
+  "distinct_cases": 421,
+  "hash_matching_distinct_cases": 421,
+  "uncovered_of_587": [
+    2,
+    35,
+    89,
+    91,
+    93,
+    95,
+    96,
+    97,
+    98,
+    101,
+    109,
+    112,
+    114,
+    126,
+    129,
+    130,
+    132,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    149,
+    152,
+    154,
+    155,
+    162,
+    163,
+    164,
+    166,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    179,
+    180,
+    181,
+    184,
+    185,
+    205,
+    207,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    233,
+    234,
+    235,
+    237,
+    238,
+    239,
+    240,
+    244,
+    271,
+    272,
+    277,
+    282,
+    283,
+    286,
+    299,
+    300,
+    301,
+    305,
+    307,
+    310,
+    312,
+    315,
+    323,
+    324,
+    331,
+    336,
+    382,
+    383,
+    384,
+    396,
+    399,
+    425,
+    469,
+    470,
+    492,
+    494,
+    498,
+    499,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586
+  ],
+  "entries": [
+    {
+      "case": 1,
+      "receipt": "max5_four_shared_cert_c1_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 31,
+      "receipt": "max5_four_shared_cert_c31_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 32,
+      "receipt": "max5_four_shared_cert_c32_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 41,
+      "receipt": "max5_four_shared_cert_c41_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 64,
+      "receipt": "max5_four_shared_cert_c64_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 65,
+      "receipt": "max5_four_shared_cert_c65_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 66,
+      "receipt": "max5_four_shared_cert_c66_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 80,
+      "receipt": "max5_four_shared_cert_c80_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 88,
+      "receipt": "max5_four_shared_cert_c88_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 90,
+      "receipt": "max5_four_shared_cert_c90_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 92,
+      "receipt": "max5_four_shared_cert_c92_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 94,
+      "receipt": "max5_four_shared_cert_c94_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 0,
+      "receipt": "max5_four_shared_easy_c0_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 100,
+      "receipt": "max5_four_shared_easy_c100_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 102,
+      "receipt": "max5_four_shared_easy_c102_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 103,
+      "receipt": "max5_four_shared_easy_c103_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 104,
+      "receipt": "max5_four_shared_easy_c104_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 105,
+      "receipt": "max5_four_shared_easy_c105_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 106,
+      "receipt": "max5_four_shared_easy_c106_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 107,
+      "receipt": "max5_four_shared_easy_c107_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 108,
+      "receipt": "max5_four_shared_easy_c108_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 10,
+      "receipt": "max5_four_shared_easy_c10_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 110,
+      "receipt": "max5_four_shared_easy_c110_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 111,
+      "receipt": "max5_four_shared_easy_c111_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 113,
+      "receipt": "max5_four_shared_easy_c113_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 115,
+      "receipt": "max5_four_shared_easy_c115_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 116,
+      "receipt": "max5_four_shared_easy_c116_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 117,
+      "receipt": "max5_four_shared_easy_c117_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 118,
+      "receipt": "max5_four_shared_easy_c118_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 119,
+      "receipt": "max5_four_shared_easy_c119_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 11,
+      "receipt": "max5_four_shared_easy_c11_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 120,
+      "receipt": "max5_four_shared_easy_c120_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 121,
+      "receipt": "max5_four_shared_easy_c121_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 122,
+      "receipt": "max5_four_shared_easy_c122_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 123,
+      "receipt": "max5_four_shared_easy_c123_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 124,
+      "receipt": "max5_four_shared_easy_c124_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 125,
+      "receipt": "max5_four_shared_easy_c125_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 127,
+      "receipt": "max5_four_shared_easy_c127_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 128,
+      "receipt": "max5_four_shared_easy_c128_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 12,
+      "receipt": "max5_four_shared_easy_c12_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 131,
+      "receipt": "max5_four_shared_easy_c131_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 133,
+      "receipt": "max5_four_shared_easy_c133_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 13,
+      "receipt": "max5_four_shared_easy_c13_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 140,
+      "receipt": "max5_four_shared_easy_c140_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 147,
+      "receipt": "max5_four_shared_easy_c147_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 148,
+      "receipt": "max5_four_shared_easy_c148_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 14,
+      "receipt": "max5_four_shared_easy_c14_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 150,
+      "receipt": "max5_four_shared_easy_c150_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 151,
+      "receipt": "max5_four_shared_easy_c151_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 153,
+      "receipt": "max5_four_shared_easy_c153_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 156,
+      "receipt": "max5_four_shared_easy_c156_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 157,
+      "receipt": "max5_four_shared_easy_c157_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 158,
+      "receipt": "max5_four_shared_easy_c158_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 159,
+      "receipt": "max5_four_shared_easy_c159_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 15,
+      "receipt": "max5_four_shared_easy_c15_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 160,
+      "receipt": "max5_four_shared_easy_c160_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 161,
+      "receipt": "max5_four_shared_easy_c161_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 165,
+      "receipt": "max5_four_shared_easy_c165_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 167,
+      "receipt": "max5_four_shared_easy_c167_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 168,
+      "receipt": "max5_four_shared_easy_c168_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 16,
+      "receipt": "max5_four_shared_easy_c16_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 175,
+      "receipt": "max5_four_shared_easy_c175_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 176,
+      "receipt": "max5_four_shared_easy_c176_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 177,
+      "receipt": "max5_four_shared_easy_c177_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 178,
+      "receipt": "max5_four_shared_easy_c178_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 17,
+      "receipt": "max5_four_shared_easy_c17_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 182,
+      "receipt": "max5_four_shared_easy_c182_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 183,
+      "receipt": "max5_four_shared_easy_c183_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 186,
+      "receipt": "max5_four_shared_easy_c186_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 187,
+      "receipt": "max5_four_shared_easy_c187_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 188,
+      "receipt": "max5_four_shared_easy_c188_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 189,
+      "receipt": "max5_four_shared_easy_c189_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 18,
+      "receipt": "max5_four_shared_easy_c18_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 190,
+      "receipt": "max5_four_shared_easy_c190_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 191,
+      "receipt": "max5_four_shared_easy_c191_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 192,
+      "receipt": "max5_four_shared_easy_c192_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 193,
+      "receipt": "max5_four_shared_easy_c193_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 194,
+      "receipt": "max5_four_shared_easy_c194_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 195,
+      "receipt": "max5_four_shared_easy_c195_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 196,
+      "receipt": "max5_four_shared_easy_c196_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 197,
+      "receipt": "max5_four_shared_easy_c197_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 198,
+      "receipt": "max5_four_shared_easy_c198_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 199,
+      "receipt": "max5_four_shared_easy_c199_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 19,
+      "receipt": "max5_four_shared_easy_c19_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 200,
+      "receipt": "max5_four_shared_easy_c200_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 201,
+      "receipt": "max5_four_shared_easy_c201_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 202,
+      "receipt": "max5_four_shared_easy_c202_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 203,
+      "receipt": "max5_four_shared_easy_c203_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 204,
+      "receipt": "max5_four_shared_easy_c204_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 206,
+      "receipt": "max5_four_shared_easy_c206_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 208,
+      "receipt": "max5_four_shared_easy_c208_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 209,
+      "receipt": "max5_four_shared_easy_c209_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 20,
+      "receipt": "max5_four_shared_easy_c20_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 210,
+      "receipt": "max5_four_shared_easy_c210_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 211,
+      "receipt": "max5_four_shared_easy_c211_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 212,
+      "receipt": "max5_four_shared_easy_c212_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 213,
+      "receipt": "max5_four_shared_easy_c213_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 214,
+      "receipt": "max5_four_shared_easy_c214_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 215,
+      "receipt": "max5_four_shared_easy_c215_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 216,
+      "receipt": "max5_four_shared_easy_c216_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 217,
+      "receipt": "max5_four_shared_easy_c217_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 218,
+      "receipt": "max5_four_shared_easy_c218_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 21,
+      "receipt": "max5_four_shared_easy_c21_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 22,
+      "receipt": "max5_four_shared_easy_c22_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 232,
+      "receipt": "max5_four_shared_easy_c232_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 236,
+      "receipt": "max5_four_shared_easy_c236_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 23,
+      "receipt": "max5_four_shared_easy_c23_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 241,
+      "receipt": "max5_four_shared_easy_c241_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 242,
+      "receipt": "max5_four_shared_easy_c242_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 243,
+      "receipt": "max5_four_shared_easy_c243_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 245,
+      "receipt": "max5_four_shared_easy_c245_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 246,
+      "receipt": "max5_four_shared_easy_c246_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 247,
+      "receipt": "max5_four_shared_easy_c247_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 248,
+      "receipt": "max5_four_shared_easy_c248_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 249,
+      "receipt": "max5_four_shared_easy_c249_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 24,
+      "receipt": "max5_four_shared_easy_c24_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 250,
+      "receipt": "max5_four_shared_easy_c250_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 251,
+      "receipt": "max5_four_shared_easy_c251_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 252,
+      "receipt": "max5_four_shared_easy_c252_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 253,
+      "receipt": "max5_four_shared_easy_c253_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 254,
+      "receipt": "max5_four_shared_easy_c254_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 255,
+      "receipt": "max5_four_shared_easy_c255_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 256,
+      "receipt": "max5_four_shared_easy_c256_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 257,
+      "receipt": "max5_four_shared_easy_c257_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 258,
+      "receipt": "max5_four_shared_easy_c258_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 259,
+      "receipt": "max5_four_shared_easy_c259_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 25,
+      "receipt": "max5_four_shared_easy_c25_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 260,
+      "receipt": "max5_four_shared_easy_c260_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 261,
+      "receipt": "max5_four_shared_easy_c261_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 262,
+      "receipt": "max5_four_shared_easy_c262_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 263,
+      "receipt": "max5_four_shared_easy_c263_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 264,
+      "receipt": "max5_four_shared_easy_c264_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 265,
+      "receipt": "max5_four_shared_easy_c265_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 266,
+      "receipt": "max5_four_shared_easy_c266_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 267,
+      "receipt": "max5_four_shared_easy_c267_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 268,
+      "receipt": "max5_four_shared_easy_c268_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 269,
+      "receipt": "max5_four_shared_easy_c269_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 26,
+      "receipt": "max5_four_shared_easy_c26_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 270,
+      "receipt": "max5_four_shared_easy_c270_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 273,
+      "receipt": "max5_four_shared_easy_c273_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 274,
+      "receipt": "max5_four_shared_easy_c274_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 275,
+      "receipt": "max5_four_shared_easy_c275_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 276,
+      "receipt": "max5_four_shared_easy_c276_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 278,
+      "receipt": "max5_four_shared_easy_c278_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 279,
+      "receipt": "max5_four_shared_easy_c279_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 27,
+      "receipt": "max5_four_shared_easy_c27_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 280,
+      "receipt": "max5_four_shared_easy_c280_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 281,
+      "receipt": "max5_four_shared_easy_c281_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 284,
+      "receipt": "max5_four_shared_easy_c284_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 285,
+      "receipt": "max5_four_shared_easy_c285_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 287,
+      "receipt": "max5_four_shared_easy_c287_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 288,
+      "receipt": "max5_four_shared_easy_c288_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 289,
+      "receipt": "max5_four_shared_easy_c289_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 28,
+      "receipt": "max5_four_shared_easy_c28_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 290,
+      "receipt": "max5_four_shared_easy_c290_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 291,
+      "receipt": "max5_four_shared_easy_c291_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 292,
+      "receipt": "max5_four_shared_easy_c292_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 293,
+      "receipt": "max5_four_shared_easy_c293_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 294,
+      "receipt": "max5_four_shared_easy_c294_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 295,
+      "receipt": "max5_four_shared_easy_c295_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 296,
+      "receipt": "max5_four_shared_easy_c296_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 297,
+      "receipt": "max5_four_shared_easy_c297_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 298,
+      "receipt": "max5_four_shared_easy_c298_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 29,
+      "receipt": "max5_four_shared_easy_c29_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 302,
+      "receipt": "max5_four_shared_easy_c302_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 303,
+      "receipt": "max5_four_shared_easy_c303_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 304,
+      "receipt": "max5_four_shared_easy_c304_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 306,
+      "receipt": "max5_four_shared_easy_c306_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 308,
+      "receipt": "max5_four_shared_easy_c308_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 309,
+      "receipt": "max5_four_shared_easy_c309_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 30,
+      "receipt": "max5_four_shared_easy_c30_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 311,
+      "receipt": "max5_four_shared_easy_c311_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 313,
+      "receipt": "max5_four_shared_easy_c313_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 314,
+      "receipt": "max5_four_shared_easy_c314_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 316,
+      "receipt": "max5_four_shared_easy_c316_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 317,
+      "receipt": "max5_four_shared_easy_c317_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 318,
+      "receipt": "max5_four_shared_easy_c318_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 319,
+      "receipt": "max5_four_shared_easy_c319_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 320,
+      "receipt": "max5_four_shared_easy_c320_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 321,
+      "receipt": "max5_four_shared_easy_c321_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 322,
+      "receipt": "max5_four_shared_easy_c322_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 325,
+      "receipt": "max5_four_shared_easy_c325_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 326,
+      "receipt": "max5_four_shared_easy_c326_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 327,
+      "receipt": "max5_four_shared_easy_c327_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 328,
+      "receipt": "max5_four_shared_easy_c328_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 329,
+      "receipt": "max5_four_shared_easy_c329_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 330,
+      "receipt": "max5_four_shared_easy_c330_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 332,
+      "receipt": "max5_four_shared_easy_c332_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 333,
+      "receipt": "max5_four_shared_easy_c333_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 334,
+      "receipt": "max5_four_shared_easy_c334_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 335,
+      "receipt": "max5_four_shared_easy_c335_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 337,
+      "receipt": "max5_four_shared_easy_c337_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 338,
+      "receipt": "max5_four_shared_easy_c338_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 339,
+      "receipt": "max5_four_shared_easy_c339_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 33,
+      "receipt": "max5_four_shared_easy_c33_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 340,
+      "receipt": "max5_four_shared_easy_c340_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 341,
+      "receipt": "max5_four_shared_easy_c341_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 342,
+      "receipt": "max5_four_shared_easy_c342_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 343,
+      "receipt": "max5_four_shared_easy_c343_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 344,
+      "receipt": "max5_four_shared_easy_c344_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 345,
+      "receipt": "max5_four_shared_easy_c345_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 346,
+      "receipt": "max5_four_shared_easy_c346_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 347,
+      "receipt": "max5_four_shared_easy_c347_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 348,
+      "receipt": "max5_four_shared_easy_c348_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 349,
+      "receipt": "max5_four_shared_easy_c349_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 34,
+      "receipt": "max5_four_shared_easy_c34_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 350,
+      "receipt": "max5_four_shared_easy_c350_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 351,
+      "receipt": "max5_four_shared_easy_c351_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 352,
+      "receipt": "max5_four_shared_easy_c352_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 353,
+      "receipt": "max5_four_shared_easy_c353_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 354,
+      "receipt": "max5_four_shared_easy_c354_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 355,
+      "receipt": "max5_four_shared_easy_c355_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 356,
+      "receipt": "max5_four_shared_easy_c356_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 357,
+      "receipt": "max5_four_shared_easy_c357_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 358,
+      "receipt": "max5_four_shared_easy_c358_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 359,
+      "receipt": "max5_four_shared_easy_c359_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 360,
+      "receipt": "max5_four_shared_easy_c360_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 361,
+      "receipt": "max5_four_shared_easy_c361_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 362,
+      "receipt": "max5_four_shared_easy_c362_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 363,
+      "receipt": "max5_four_shared_easy_c363_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 364,
+      "receipt": "max5_four_shared_easy_c364_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 365,
+      "receipt": "max5_four_shared_easy_c365_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 366,
+      "receipt": "max5_four_shared_easy_c366_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 367,
+      "receipt": "max5_four_shared_easy_c367_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 368,
+      "receipt": "max5_four_shared_easy_c368_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 369,
+      "receipt": "max5_four_shared_easy_c369_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 36,
+      "receipt": "max5_four_shared_easy_c36_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 370,
+      "receipt": "max5_four_shared_easy_c370_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 371,
+      "receipt": "max5_four_shared_easy_c371_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 372,
+      "receipt": "max5_four_shared_easy_c372_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 373,
+      "receipt": "max5_four_shared_easy_c373_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 374,
+      "receipt": "max5_four_shared_easy_c374_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 375,
+      "receipt": "max5_four_shared_easy_c375_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 376,
+      "receipt": "max5_four_shared_easy_c376_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 377,
+      "receipt": "max5_four_shared_easy_c377_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 378,
+      "receipt": "max5_four_shared_easy_c378_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 379,
+      "receipt": "max5_four_shared_easy_c379_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 37,
+      "receipt": "max5_four_shared_easy_c37_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 380,
+      "receipt": "max5_four_shared_easy_c380_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 381,
+      "receipt": "max5_four_shared_easy_c381_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 385,
+      "receipt": "max5_four_shared_easy_c385_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 386,
+      "receipt": "max5_four_shared_easy_c386_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 387,
+      "receipt": "max5_four_shared_easy_c387_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 388,
+      "receipt": "max5_four_shared_easy_c388_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 389,
+      "receipt": "max5_four_shared_easy_c389_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 38,
+      "receipt": "max5_four_shared_easy_c38_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 390,
+      "receipt": "max5_four_shared_easy_c390_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 391,
+      "receipt": "max5_four_shared_easy_c391_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 392,
+      "receipt": "max5_four_shared_easy_c392_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 393,
+      "receipt": "max5_four_shared_easy_c393_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 394,
+      "receipt": "max5_four_shared_easy_c394_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 395,
+      "receipt": "max5_four_shared_easy_c395_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 397,
+      "receipt": "max5_four_shared_easy_c397_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 398,
+      "receipt": "max5_four_shared_easy_c398_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 39,
+      "receipt": "max5_four_shared_easy_c39_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 3,
+      "receipt": "max5_four_shared_easy_c3_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 400,
+      "receipt": "max5_four_shared_easy_c400_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 401,
+      "receipt": "max5_four_shared_easy_c401_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 402,
+      "receipt": "max5_four_shared_easy_c402_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 403,
+      "receipt": "max5_four_shared_easy_c403_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 404,
+      "receipt": "max5_four_shared_easy_c404_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 405,
+      "receipt": "max5_four_shared_easy_c405_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 406,
+      "receipt": "max5_four_shared_easy_c406_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 407,
+      "receipt": "max5_four_shared_easy_c407_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 408,
+      "receipt": "max5_four_shared_easy_c408_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 409,
+      "receipt": "max5_four_shared_easy_c409_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 40,
+      "receipt": "max5_four_shared_easy_c40_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 410,
+      "receipt": "max5_four_shared_easy_c410_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 411,
+      "receipt": "max5_four_shared_easy_c411_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 412,
+      "receipt": "max5_four_shared_easy_c412_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 413,
+      "receipt": "max5_four_shared_easy_c413_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 414,
+      "receipt": "max5_four_shared_easy_c414_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 415,
+      "receipt": "max5_four_shared_easy_c415_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 416,
+      "receipt": "max5_four_shared_easy_c416_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 417,
+      "receipt": "max5_four_shared_easy_c417_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 418,
+      "receipt": "max5_four_shared_easy_c418_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 419,
+      "receipt": "max5_four_shared_easy_c419_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 420,
+      "receipt": "max5_four_shared_easy_c420_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 421,
+      "receipt": "max5_four_shared_easy_c421_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 422,
+      "receipt": "max5_four_shared_easy_c422_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 423,
+      "receipt": "max5_four_shared_easy_c423_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 424,
+      "receipt": "max5_four_shared_easy_c424_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 426,
+      "receipt": "max5_four_shared_easy_c426_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 427,
+      "receipt": "max5_four_shared_easy_c427_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 428,
+      "receipt": "max5_four_shared_easy_c428_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 429,
+      "receipt": "max5_four_shared_easy_c429_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 42,
+      "receipt": "max5_four_shared_easy_c42_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 430,
+      "receipt": "max5_four_shared_easy_c430_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 431,
+      "receipt": "max5_four_shared_easy_c431_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 432,
+      "receipt": "max5_four_shared_easy_c432_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 433,
+      "receipt": "max5_four_shared_easy_c433_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 434,
+      "receipt": "max5_four_shared_easy_c434_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 435,
+      "receipt": "max5_four_shared_easy_c435_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 436,
+      "receipt": "max5_four_shared_easy_c436_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 437,
+      "receipt": "max5_four_shared_easy_c437_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 438,
+      "receipt": "max5_four_shared_easy_c438_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 439,
+      "receipt": "max5_four_shared_easy_c439_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 43,
+      "receipt": "max5_four_shared_easy_c43_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 440,
+      "receipt": "max5_four_shared_easy_c440_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 441,
+      "receipt": "max5_four_shared_easy_c441_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 442,
+      "receipt": "max5_four_shared_easy_c442_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 443,
+      "receipt": "max5_four_shared_easy_c443_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 444,
+      "receipt": "max5_four_shared_easy_c444_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 445,
+      "receipt": "max5_four_shared_easy_c445_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 446,
+      "receipt": "max5_four_shared_easy_c446_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 447,
+      "receipt": "max5_four_shared_easy_c447_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 448,
+      "receipt": "max5_four_shared_easy_c448_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 449,
+      "receipt": "max5_four_shared_easy_c449_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 44,
+      "receipt": "max5_four_shared_easy_c44_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 450,
+      "receipt": "max5_four_shared_easy_c450_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 451,
+      "receipt": "max5_four_shared_easy_c451_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 452,
+      "receipt": "max5_four_shared_easy_c452_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 453,
+      "receipt": "max5_four_shared_easy_c453_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 454,
+      "receipt": "max5_four_shared_easy_c454_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 455,
+      "receipt": "max5_four_shared_easy_c455_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 456,
+      "receipt": "max5_four_shared_easy_c456_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 457,
+      "receipt": "max5_four_shared_easy_c457_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 458,
+      "receipt": "max5_four_shared_easy_c458_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 459,
+      "receipt": "max5_four_shared_easy_c459_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 45,
+      "receipt": "max5_four_shared_easy_c45_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 460,
+      "receipt": "max5_four_shared_easy_c460_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 461,
+      "receipt": "max5_four_shared_easy_c461_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 462,
+      "receipt": "max5_four_shared_easy_c462_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 463,
+      "receipt": "max5_four_shared_easy_c463_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 464,
+      "receipt": "max5_four_shared_easy_c464_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 465,
+      "receipt": "max5_four_shared_easy_c465_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 466,
+      "receipt": "max5_four_shared_easy_c466_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 467,
+      "receipt": "max5_four_shared_easy_c467_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 468,
+      "receipt": "max5_four_shared_easy_c468_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 46,
+      "receipt": "max5_four_shared_easy_c46_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 471,
+      "receipt": "max5_four_shared_easy_c471_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 472,
+      "receipt": "max5_four_shared_easy_c472_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 473,
+      "receipt": "max5_four_shared_easy_c473_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 474,
+      "receipt": "max5_four_shared_easy_c474_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 475,
+      "receipt": "max5_four_shared_easy_c475_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 476,
+      "receipt": "max5_four_shared_easy_c476_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 477,
+      "receipt": "max5_four_shared_easy_c477_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 478,
+      "receipt": "max5_four_shared_easy_c478_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 479,
+      "receipt": "max5_four_shared_easy_c479_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 47,
+      "receipt": "max5_four_shared_easy_c47_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 480,
+      "receipt": "max5_four_shared_easy_c480_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 481,
+      "receipt": "max5_four_shared_easy_c481_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 482,
+      "receipt": "max5_four_shared_easy_c482_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 483,
+      "receipt": "max5_four_shared_easy_c483_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 484,
+      "receipt": "max5_four_shared_easy_c484_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 485,
+      "receipt": "max5_four_shared_easy_c485_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 486,
+      "receipt": "max5_four_shared_easy_c486_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 487,
+      "receipt": "max5_four_shared_easy_c487_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 488,
+      "receipt": "max5_four_shared_easy_c488_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 489,
+      "receipt": "max5_four_shared_easy_c489_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 48,
+      "receipt": "max5_four_shared_easy_c48_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 490,
+      "receipt": "max5_four_shared_easy_c490_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 491,
+      "receipt": "max5_four_shared_easy_c491_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 493,
+      "receipt": "max5_four_shared_easy_c493_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 495,
+      "receipt": "max5_four_shared_easy_c495_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 496,
+      "receipt": "max5_four_shared_easy_c496_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 497,
+      "receipt": "max5_four_shared_easy_c497_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 49,
+      "receipt": "max5_four_shared_easy_c49_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 4,
+      "receipt": "max5_four_shared_easy_c4_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 500,
+      "receipt": "max5_four_shared_easy_c500_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 501,
+      "receipt": "max5_four_shared_easy_c501_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 502,
+      "receipt": "max5_four_shared_easy_c502_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 503,
+      "receipt": "max5_four_shared_easy_c503_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 504,
+      "receipt": "max5_four_shared_easy_c504_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 505,
+      "receipt": "max5_four_shared_easy_c505_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 506,
+      "receipt": "max5_four_shared_easy_c506_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 507,
+      "receipt": "max5_four_shared_easy_c507_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 508,
+      "receipt": "max5_four_shared_easy_c508_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 509,
+      "receipt": "max5_four_shared_easy_c509_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 50,
+      "receipt": "max5_four_shared_easy_c50_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 510,
+      "receipt": "max5_four_shared_easy_c510_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 511,
+      "receipt": "max5_four_shared_easy_c511_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 512,
+      "receipt": "max5_four_shared_easy_c512_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 513,
+      "receipt": "max5_four_shared_easy_c513_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 514,
+      "receipt": "max5_four_shared_easy_c514_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 515,
+      "receipt": "max5_four_shared_easy_c515_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 516,
+      "receipt": "max5_four_shared_easy_c516_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 517,
+      "receipt": "max5_four_shared_easy_c517_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 518,
+      "receipt": "max5_four_shared_easy_c518_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 519,
+      "receipt": "max5_four_shared_easy_c519_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 51,
+      "receipt": "max5_four_shared_easy_c51_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 520,
+      "receipt": "max5_four_shared_easy_c520_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 521,
+      "receipt": "max5_four_shared_easy_c521_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 52,
+      "receipt": "max5_four_shared_easy_c52_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 53,
+      "receipt": "max5_four_shared_easy_c53_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 54,
+      "receipt": "max5_four_shared_easy_c54_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 55,
+      "receipt": "max5_four_shared_easy_c55_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 56,
+      "receipt": "max5_four_shared_easy_c56_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 57,
+      "receipt": "max5_four_shared_easy_c57_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 58,
+      "receipt": "max5_four_shared_easy_c58_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 59,
+      "receipt": "max5_four_shared_easy_c59_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 5,
+      "receipt": "max5_four_shared_easy_c5_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 60,
+      "receipt": "max5_four_shared_easy_c60_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 61,
+      "receipt": "max5_four_shared_easy_c61_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 62,
+      "receipt": "max5_four_shared_easy_c62_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 63,
+      "receipt": "max5_four_shared_easy_c63_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 67,
+      "receipt": "max5_four_shared_easy_c67_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 68,
+      "receipt": "max5_four_shared_easy_c68_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 69,
+      "receipt": "max5_four_shared_easy_c69_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 6,
+      "receipt": "max5_four_shared_easy_c6_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 70,
+      "receipt": "max5_four_shared_easy_c70_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 71,
+      "receipt": "max5_four_shared_easy_c71_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 72,
+      "receipt": "max5_four_shared_easy_c72_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 73,
+      "receipt": "max5_four_shared_easy_c73_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 74,
+      "receipt": "max5_four_shared_easy_c74_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 75,
+      "receipt": "max5_four_shared_easy_c75_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 76,
+      "receipt": "max5_four_shared_easy_c76_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 77,
+      "receipt": "max5_four_shared_easy_c77_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 78,
+      "receipt": "max5_four_shared_easy_c78_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 79,
+      "receipt": "max5_four_shared_easy_c79_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 7,
+      "receipt": "max5_four_shared_easy_c7_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 81,
+      "receipt": "max5_four_shared_easy_c81_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 82,
+      "receipt": "max5_four_shared_easy_c82_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 83,
+      "receipt": "max5_four_shared_easy_c83_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 84,
+      "receipt": "max5_four_shared_easy_c84_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 85,
+      "receipt": "max5_four_shared_easy_c85_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 86,
+      "receipt": "max5_four_shared_easy_c86_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 87,
+      "receipt": "max5_four_shared_easy_c87_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 8,
+      "receipt": "max5_four_shared_easy_c8_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 99,
+      "receipt": "max5_four_shared_easy_c99_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    },
+    {
+      "case": 9,
+      "receipt": "max5_four_shared_easy_c9_audit.ethos.json",
+      "hashes_match": true,
+      "checks": {
+        "original_source": true,
+        "proof": true
+      }
+    }
+  ]
+}

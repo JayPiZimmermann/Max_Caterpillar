@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Exact integer control; universal proof is in AUDIT.md",
+  "selected_coordinates": 3,
+  "tail_coordinates": 4,
+  "weights": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "zero_sum_nonbraid_rows": 8050,
+  "good_tail_supported_rows": 1612,
+  "selected_only_rows": 6,
+  "pair_orientations_per_row": 4
+}

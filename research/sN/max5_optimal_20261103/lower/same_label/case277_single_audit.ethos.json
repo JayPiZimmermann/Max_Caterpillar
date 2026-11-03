@@ -1,0 +1,11 @@
+{
+  "status": "INDEPENDENT_ETHOS_PASS",
+  "seconds": 29.256574830040336,
+  "original_source": "case277_single.smt2",
+  "original_source_sha256": "2bad2bfbdb34a7ed6660e38f7e6d9374db93aa67002acc3ce0eda269e1fdfa01",
+  "normalized_source_sha256": "be83e2dc92f136490395c9366faf88bc8d13e5664588718da4ed6a973d3c90b5",
+  "proof_sha256": "8994275f05d23cacf4511eff76bb7c7837feac34810b6d4cfbca9949f495dbfa",
+  "checker_binary_sha256": "939147a0a40b6ba78dc32dfd2f8d9fe9686154057773c023984ebe0b0168e3d1",
+  "dependency_manifest_sha256": "86aba548a6e612df96e8fb06858a8a03c0b2c4abf7a2ed1acda7f1d3a00aff67",
+  "audit_script_sha256": "dbfd8cbfc474939125ae11df048f59f3d60d7e5d136b18be17074045e96d8e1b"
+}

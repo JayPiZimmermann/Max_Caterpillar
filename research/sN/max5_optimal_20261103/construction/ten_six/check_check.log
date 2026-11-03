@@ -1,0 +1,8 @@
+literal_formula : ∀ (x : Fin 5 → ℝ),
+  ∑ k : Fin 6,
+      ↑(outputWeights k) * relu (∑ j : Fin 10, ↑(secondWeights k j) * relu (∑ i : Fin 5, ↑(firstWeights j i) * x i)) =
+    Maximum 5 x
+exact_type : ∃ f,
+  (∀ (x : Fin 5 → ℝ), Network.eval f x = Maximum 5 x) ∧ Network.HasRationalWeights f ∧ Network.HasZeroBiases f
+'MaxCaterpillar.MaxFiveTenSix.Check.literal_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.MaxFiveTenSix.Check.exact_type' depends on axioms: [propext, Classical.choice, Quot.sound]

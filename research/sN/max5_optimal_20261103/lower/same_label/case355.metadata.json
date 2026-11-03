@@ -1,0 +1,65 @@
+{
+  "index": 355,
+  "scope": "One necessary support class only; not a global MAX5 exclusion.",
+  "model_source": "research/sN/frontier5/max5_exact_three_shared_local.py",
+  "model_sha256": "e9ea5d767546ea8f5fb06a661ff962d7cb4034f5eea0a370353f45364d66072e",
+  "cover_sha256": "b77b4cd726c5d80be16c1be2832b7b59137a0b9b783914f9e9c138cf59065421",
+  "producer_sha256": "9943ed2ea70d0127be3335c60ce8f628bbcd5f02bea8086aabd6d065deb65447",
+  "source": "case355.smt2",
+  "source_sha256": "9af38d1cf5a69259da62c70e2012665135af2a79fe829778a8967d7c06704e73",
+  "kind": "one_each_same",
+  "mode": "general",
+  "samples": "boolean",
+  "shared_germs": true,
+  "wall": true,
+  "rigid": true,
+  "mandatory_roots": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "supports": [
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      2,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "coefficient_gauge": true
+}

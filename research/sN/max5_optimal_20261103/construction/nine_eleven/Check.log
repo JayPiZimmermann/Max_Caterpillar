@@ -1,0 +1,10 @@
+network_correct : ∀ (x : Point 5), Network.eval network x = Maximum 5 x
+exists_network : ∃ net,
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) ∧ Network.HasRationalWeights net ∧ Network.HasZeroBiases net
+'MaxCaterpillar.Max5Optimal.NineEleven.network_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.NineEleven.exists_network' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.NineEleven.Check.literal_arrays' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.NineEleven.Check.input_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.NineEleven.Check.deletion_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

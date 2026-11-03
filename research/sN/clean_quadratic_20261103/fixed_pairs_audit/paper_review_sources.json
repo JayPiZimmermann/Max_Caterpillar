@@ -1,0 +1,9 @@
+{
+  "review": "mathematical audit; not Lean verification of fixed-pair proof",
+  "status": "PASS_ANALYTIC_SECTION_WITH_EXPLICIT_STRUCTURAL_RESIDUAL",
+  "sources": {
+    "paper/drafts/quadratic_width/main.tex": "b67f37c41b1921526ec9eb8b24d96476c9e016ffbe5f3bb810b2a9a38fedc3b5",
+    "paper/drafts/quadratic_width/normalization.tex": "ae17950460b886782cfcd2355b2efb1d885346674279ad1c1e349f493d1b10bb",
+    "paper/drafts/quadratic_width/fixed_pairs.tex": "fa99702038869e4f85d0fce297f77b639262aabbcb49e22567f93debcd7a0401"
+  }
+}

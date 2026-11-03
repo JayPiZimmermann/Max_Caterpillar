@@ -1,0 +1,2 @@
+'MaxCaterpillar.Max5Optimal.NineEleven.network_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.NineEleven.exists_network' depends on axioms: [propext, Classical.choice, Quot.sound]

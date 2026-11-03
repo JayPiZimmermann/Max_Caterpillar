@@ -1,0 +1,179 @@
+{
+  "status": "INDEPENDENT_OMISSION_ONLY_SIX_CASE_COVER_PASS",
+  "scope": "Complete support cover for exactly three physical roots in the declared same-label contact sector; no arithmetic UNSAT or Lean claim.",
+  "support_types": 16,
+  "multisets_examined": 3876,
+  "labelled_survivors": 12,
+  "support_orbits": 6,
+  "c3_c4_redundant_on_all_survivors": true,
+  "cases": [
+    {
+      "index": 275,
+      "supports": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "orbit_size": 2
+    },
+    {
+      "index": 277,
+      "supports": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "orbit_size": 1
+    },
+    {
+      "index": 280,
+      "supports": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          3,
+          4
+        ]
+      ],
+      "orbit_size": 2
+    },
+    {
+      "index": 307,
+      "supports": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "orbit_size": 2
+    },
+    {
+      "index": 353,
+      "supports": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "orbit_size": 1
+    },
+    {
+      "index": 355,
+      "supports": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "orbit_size": 4
+    }
+  ],
+  "selected_metadata_sha256": {
+    "case275.metadata.json": "24c0866c75d3d27fd6cb4a913ac4b8bc06ac4bca3294cbbe3da0dc6ee870b389",
+    "case277_single.metadata.json": "30afbfb590926a1b03b9aefd2dd6552a668704a0cbd95f7e97c2a326dff718d3",
+    "case280.metadata.json": "04ca42f7b38a30d5f3ac30bdd619ce216f3b54b347448e80b5e5b1f6ff244f06",
+    "case307.metadata.json": "f9798f9851c0bad189d78c38d82492b2d3bdf5fd1a842982e8f62a54a741e091",
+    "case353.metadata.json": "82e63653cd05c70baecb6584b4fbf6d632180b7d4b85179067a5684c2f6a7585",
+    "case355.metadata.json": "6af49a0f0868112e4a8ca1ff4a10cd4926effe24fe1ca584013fa761ae2bec2a"
+  },
+  "checker_sha256": "1db650ef9be42dc1bdd3ee9ddfd8c120946765d5e45b7462ba14cd1fe34874df",
+  "argument_sha256": "1e847b0fb3e6165506b61a20d0f4ad839afedd3ae335c542b10a3ea265feba66"
+}

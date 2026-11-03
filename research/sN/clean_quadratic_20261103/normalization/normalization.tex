@@ -1,0 +1,147 @@
+% Manuscript fragment.  No numerical width constant is used here.
+% The diagonal-preserving localization is also formalized in the adjacent
+% AnchorLift.lean and AnchorLocalization.lean files.
+
+\subsection{Normalization and coordinate restriction}
+
+Write $\sigma(t)=\max\{t,0\}$ and $\mathbf1_I=(1)_{i\in I}$.
+The network in our theorem has the ordinary form
+\begin{equation}\label{eq:clean-ordinary-network}
+ F(x)=b+\sum_{k=1}^{h_2}v_k\sigma\!\left(
+ c_k+\sum_{j=1}^{h_1}W_{kj}\sigma(b_j+A_jx)\right),
+ \qquad x\in\mathbb R^N,
+\end{equation}
+with arbitrary real parameters.  We assume throughout that
+$F(x)=\operatorname{MAX}_N(x)=\max_i x_i$ for all $x$.
+
+\begin{lemma}\label{lem:clean-normalization}
+There is a representation
+\begin{equation}\label{eq:clean-normalized-network}
+ \operatorname{MAX}_N(x)
+ =Lx+\sum_j B_j\sigma(A_jx)+\sum_k d_k\sigma(g_k(x)),
+ \qquad
+ g_k(x)=U_kx+\sum_j W_{kj}\sigma(A_jx),
+\end{equation}
+using at most $h_1$ first-layer forms and at most $h_2$ outer ReLU terms,
+such that
+\[
+ A_j\mathbf1_{[N]}=U_k\mathbf1_{[N]}=0,
+ \qquad L\mathbf1_{[N]}=1.
+\]
+\end{lemma}
+
+\begin{proof}
+For $t>0$, divide $F(tx)$ by $t$ and let $t$ tend to infinity.  Positive
+homogeneity and continuity of $\sigma$ give
+\[
+ \operatorname{MAX}_N(x)
+ =\sum_k v_k\sigma\!\left(\sum_jW_{kj}\sigma(A_jx)\right).
+\]
+Thus all biases may be removed without changing either width.
+
+Put $e=\mathbf1_{[N]}$, $\alpha_j=A_je$, and
+\[
+ s_k=\sum_jW_{kj}\sigma(\alpha_j),\qquad
+ \ell_k(x)=\sum_{\alpha_j>0}W_{kj}A_jx,\qquad
+ q_k(x)=\ell_k(x)+\sum_{\alpha_j=0}W_{kj}\sigma(A_jx).
+\]
+For fixed $x$ and sufficiently small $\varepsilon>0$, the $k$th inner
+function at $e+\varepsilon x$ equals $s_k+\varepsilon q_k(x)$.
+The one-sided directional derivative of $\sigma$ at $s$ in direction $u$
+is $u$ if $s>0$, is zero if $s<0$, and is $\sigma(u)$ if $s=0$.
+Since $\operatorname{MAX}_N(e+\varepsilon x)
+=1+\varepsilon\operatorname{MAX}_N(x)$, taking this derivative gives
+\[
+ \operatorname{MAX}_N(x)
+ =\sum_{s_k>0}v_kq_k(x)+\sum_{s_k=0}v_k\sigma(q_k(x)).
+\]
+Only forms with $A_je=0$ remain inside first-layer ReLU functions.
+For each retained outer ReLU, $\ell_k(e)=s_k=0$.
+Expanding the first sum supplies the linear and shallow terms in
+\Cref{eq:clean-normalized-network}; its linear part has value
+$\sum_{s_k>0}v_ks_k=1$ at $e$.
+\end{proof}
+
+The linear and shallow terms in \Cref{eq:clean-normalized-network} are
+introduced by the proof.  The statement of the theorem concerns precisely
+the ordinary architecture in \Cref{eq:clean-ordinary-network}.
+
+\begin{lemma}\label{lem:clean-coordinate-localization}
+Let $S\subseteq[N]$ be nonempty.  A normalized representation as in
+\Cref{eq:clean-normalized-network} gives a normalized representation of
+$\operatorname{MAX}_S$ with no larger widths, whose nonlinear first-layer
+forms are exactly the restrictions of the original forms supported in $S$.
+\end{lemma}
+
+\begin{proof}
+Fix $a\in S$ and define $H_S:\mathbb R^S\to\mathbb R^N$ by
+\[
+ (H_Sy)_i=
+ \begin{cases}y_i,&i\in S,\\y_a,&i\notin S.\end{cases}
+\]
+In particular $H_S\mathbf1_S=\mathbf1_{[N]}$.
+Choose $q_i=0$ for $i\in S$ and $q_i<0$ otherwise, with
+$A_jq\ne0$ whenever $\operatorname{supp}(A_j)\not\subseteq S$.
+For completeness, enumerate the outside coordinates as $i_1,\ldots,i_r$
+and take $q_{i_l}=-t^l$.  Each equation to avoid is a nonzero polynomial
+in $t$, so all are avoided by taking $t>0$ sufficiently large.
+
+For every $\varepsilon>0$,
+\[
+ \operatorname{MAX}_N(q+\varepsilon H_Sy)
+ =\varepsilon\operatorname{MAX}_S(y),
+\]
+because every outside coordinate is less than $\varepsilon y_a$.
+Take the directional derivative at $q$.  A first-layer ReLU survives
+nonlinearly exactly when $A_jq=0$, equivalently when its whole support
+is contained in $S$.  All other first-layer terms become linear or zero.
+The derivative of the $k$th inner function is
+\[
+ U_kH_Sy+\sum_{A_jq>0}W_{kj}A_jH_Sy
+ +\sum_{\operatorname{supp}(A_j)\subseteq S}
+     W_{kj}\sigma\bigl((A_j|_S)y\bigr).
+\]
+An outer ReLU survives nonlinearly if its preactivation at $q$ is zero;
+otherwise its derivative contributes only a linear and shallow expression,
+or zero.  This preserves both width bounds.
+Every resulting inner linear head annihilates $\mathbf1_S$, since
+$H_S\mathbf1_S=\mathbf1_{[N]}$.  The output linear head has value one
+there, and each surviving first-layer form has zero coordinate sum.
+Thus the representation is already normalized.
+\end{proof}
+
+\begin{lemma}\label{lem:clean-support-regularization}
+There is an absolute constant $B<\infty$ with the following property.
+For $n=\lfloor N/2\rfloor\ge1$, a normalized representation of
+$\operatorname{MAX}_N$ using at most $h_1$ first-layer forms and $h_2$
+outer ReLU terms admits a normalized representation of
+$\operatorname{MAX}_n$ with the same width bounds and
+\[
+ \sum_{j:\,|\operatorname{supp}(A_j)|\ge3}
+       |\operatorname{supp}(A_j)|^4\le Bh_1.
+\]
+\end{lemma}
+
+\begin{proof}
+Choose an $n$-element subset $S\subseteq[N]$ uniformly.  A fixed support
+$T$ of size $r\le n$ is contained in $S$ with probability
+\[
+ \frac{(n)_r}{(N)_r}\le\left(\frac nN\right)^r\le2^{-r};
+\]
+for $r>n$ the probability is zero.  Here $(a)_r=a(a-1)\cdots(a-r+1)$.
+The constant $B=\sup_{r\ge3}r^4 2^{-r}$ is finite.  Consequently
+\[
+ \mathbb E\sum_{\substack{j:\,|\operatorname{supp}(A_j)|\ge3\\
+                           \operatorname{supp}(A_j)\subseteq S}}
+             |\operatorname{supp}(A_j)|^4
+ \le Bh_1.
+\]
+Choose one $S$ attaining at most this expectation and apply
+\Cref{lem:clean-coordinate-localization}.
+\end{proof}
+
+If $h_1\le CN^2$ and $N\ge3$, then $N\le3n$, so the bound in
+\Cref{lem:clean-support-regularization} is at most $9BCn^2$.
+It controls both the number of supports of size at least three and the
+sum of their fourth falling factorials: the former is at most one
+eighty-first of this bound, and the latter is at most the bound itself.

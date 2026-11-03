@@ -1,0 +1,7 @@
+'MaxCaterpillar.Max5Optimal.TripleContact.exists_zero_core_at_top_tie' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.TripleContact.max5_pair_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.TripleContact.max5_weighted_pair_contact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

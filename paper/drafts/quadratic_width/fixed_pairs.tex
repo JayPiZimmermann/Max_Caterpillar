@@ -1,0 +1,247 @@
+% Requires the ordinary theorem environments, amsmath/amssymb, and cleveref.
+% External proof obligations: lem:clean-support-regularization and
+% lem:five-input-obstruction. The latter must be proved in the same paper
+% if the resulting proof is to be advertised as self-contained.
+
+\subsection{A restriction with fixed adjacent pairs}
+
+Write $(a)_r=a(a-1)\cdots(a-r+1)$. After normalization, the network has the
+form
+\begin{equation}\label{eq:fixed-pair-model}
+ F(x)=\ell_0(x)+\sum_{j=1}^{h_1}d_j\sigma(\langle a_j,x\rangle)
+             +\sum_{k=1}^{h_2}v_k\sigma(g_k(x)),
+ \qquad
+ g_k(x)=\ell_k(x)+\sum_{j=1}^{h_1}w_{kj}\sigma(\langle a_j,x\rangle),
+\end{equation}
+where all first-layer rows and the inner linear forms $\ell_k$, $k\ge1$,
+are translation invariant. The output linear form $\ell_0$ carries the
+unit translation slope of MAX. The auxiliary linear forms and shallow
+output terms in this intermediate model do not change the architecture
+in the theorem statement. In particular, the original second-layer index
+set is retained.
+
+Put $r_j=|\operatorname{supp}(a_j)|$ and
+\[
+ M=|\{j:r_j\ge3\}|,
+ \qquad L=\sum_j(r_j)_4,
+ \qquad Q=\sum_{j:r_j\ge3}r_j^4.
+\]
+Thus $M,L\le Q$. Every row of support two is a scalar multiple of
+$e_u-e_v$. Using $\sigma(-t)=\sigma(t)-t$ to give all such rows a fixed
+orientation, define
+\[
+ c_{k,uv}=\sum_{j:\operatorname{supp}(a_j)=\{u,v\}}
+                  w_{kj}|a_{j,u}|,
+ \qquad
+ E(G_k)=\{\{u,v\}:c_{k,uv}\ne0\}.
+\]
+These coefficients are summed before the graph is defined, so signed
+cancellation between parallel contributions is included.
+
+Fix $n\ge10$, put $m=n-5$, and take an integer $1\le J\le m/2$.
+Choose a uniform permutation of the $n$ coordinate labels. Its first five
+labels form $S$; the others occupy ordered tail positions $1,\ldots,m$.
+The selected coordinates will have value zero. Pair tail positions
+\[
+ (1,2),(3,4),\ldots,(2J-1,2J),
+\]
+and let $P$ be the resulting matching of coordinate labels. Position zero
+is an anchor with value zero. The gap between positions $r-1$ and $r$ is
+$T^{\kappa(r)}$, where $\kappa$ is a fixed bijection of $\{1,\ldots,m\}$
+such that
+\[
+ \{\kappa(2),\kappa(4),\ldots,\kappa(2J)\}=\{1,\ldots,J\}.
+\]
+Thus all paired gaps have smaller exponents than every gap between blocks,
+including the anchor gap. The value at tail position $t$ is
+$y_t=-\sum_{r\le t}T^{\kappa(r)}$.
+
+There is one sufficiently large $T$ that works for every sample and every
+neuron. To see this, each first-row value is a polynomial in $T$, so its
+sign eventually stabilizes. After all these finitely many signs stabilize,
+each second preactivation is also a fixed polynomial. Choose $T$ beyond
+all roots of the nonzero polynomials. For this common choice,
+\begin{equation}\label{eq:zero-tail-gradient}
+ g_k(y)=0\quad\Longrightarrow\quad
+ \text{the coefficient vector of $g_k$ in the tail variables is zero}.
+\end{equation}
+Indeed, if that vector is $b$, the gap polynomial is
+$-\sum_r(\sum_{t\ge r}b_t)T^{\kappa(r)}$. Distinct exponents force every
+suffix sum to vanish, and hence $b=0$. A first row supported on $S$ is
+identically zero on the tail subspace and causes no difficulty here.
+
+Declare a first-row support of size at least three to be \emph{pair-bad}
+if it contains either the endpoints of two pairs in $P$, or the endpoints
+of one pair in $P$ and two labels of $S$. Let $B_{\rm pair}$ be the union
+of these events. Let $B_{\rm selected}$ be the event that a first-row
+support of size at least three is wholly contained in $S$.
+
+\begin{lemma}\label{lem:fixed-pair-errors}
+The two bad events satisfy
+\[
+ \mathbb P(B_{\rm selected})\le M\frac{(5)_3}{(n)_3},
+ \qquad
+ \mathbb P(B_{\rm pair})\le
+ \frac{L}{(n)_4}\left[\binom J2+J\binom52\right].
+\]
+\end{lemma}
+\begin{proof}
+For the first bound, fix three labels in each eligible support. Their
+probability of belonging to $S$ is $(5)_3/(n)_3$.
+For the second, there are $\binom J2$ choices of two pair slots, and
+$J\binom52$ choices of a pair slot and two selected positions. For each
+choice, all four labels lie in a support of size $r$ with probability
+$(r)_4/(n)_4$. Sum over choices and rows.
+\end{proof}
+
+\begin{lemma}\label{lem:fixed-pair-coins}
+Fix $S$, the unordered labels in each pair, and all remaining tail labels.
+If $X_k=|P\cap E(G_k)|$, then
+\[
+ \mathbb P\bigl(g_k(y)=0,\ B_{\rm pair}^{\mathsf c}
+       \mid\text{these unordered data}\bigr)\le2^{-X_k}.
+\]
+\end{lemma}
+\begin{proof}
+The pair orientations are independent fair bits. The bad event is
+unchanged by these bits, so assume that the fixed data are good.
+
+Consider a zero-sum first-row covector $a$. Reversing a pair changes only
+the coefficient of that pair's small gap; all large-gap coefficients are
+unchanged. If some large-gap coefficient is nonzero, its highest nonzero
+term determines the sign for our common large $T$. Thus the activation
+gate is fixed under every pair reversal.
+
+If every large-gap coefficient is zero, differences of successive block
+boundary sums show that every singleton tail coefficient is zero, the
+two coefficients in each pair add to zero, and the selected coefficients
+add to zero. A row with tail support therefore contains an entire pair
+with opposite nonzero coefficients. If it has support at least three,
+it either contains a second such pair, or has a nonzero selected
+coefficient. In the latter case it has at least two selected coefficients,
+since their sum is zero. Both alternatives are pair-bad. Consequently,
+on good data every non-braid row is either supported on $S$ or has a
+fixed activation gate.
+
+A braid row changes its gate only when its two labels form one of our
+pairs. It follows that the tail coefficient vector of $g_k$ is
+\[
+ b_k+\sum_{i=1}^J\varepsilon_i c_{k,u_iv_i}(e_{u_i}-e_{v_i}),
+ \qquad \varepsilon_i\in\{0,1\},
+\]
+with a fixed orientation convention. Its nonzero columns have disjoint
+supports, hence are linearly independent. At most one assignment to the
+$X_k$ relevant bits can make this vector zero. Apply
+\Cref{eq:zero-tail-gradient}.
+\end{proof}
+
+% The following lemma is also supplied separately as matching/lemma.tex.
+\begin{lemma}\label{lem:fixed-pair-matching}
+Let $G$ have $e$ edges on $m\ge2$ vertices, and let $P$ be a uniformly
+random matching of size $J$, with $0\le2J\le m$. Then
+\[
+ \mathbb E\,2^{-|P\cap E(G)|}\le\exp\!\left(-\frac{Je}{2m^2}\right).
+\]
+\end{lemma}
+\begin{proof}
+The cases $e=0$ or $J=0$ are immediate. Generate $P$ by a uniform
+permutation, pairing its first $2J$ positions. For each graph edge $ab$,
+swap $a$ into position one and then $b$ into position two. Every
+permutation with these two fixed entries has exactly $m(m-1)$ preimages,
+as one sees by undoing the swaps. After forgetting the pair order, the
+result has the conditional matching law given $ab\in P$.
+
+Put $X=|P\cap E(G)|$ and let $X_{ab}$ be the count after these swaps.
+At most three pairs change, so $X_{ab}\le X+3$. With
+$F(z)=\mathbb E z^X$ and $p=\mathbb P(ab\in P)=2J/[m(m-1)]$, we get
+\[
+ F'(z)=p\sum_{ab\in E(G)}\mathbb E z^{X_{ab}-1}
+       \ge epz^2F(z),\qquad 0<z\le1.
+\]
+Integrating $F'/F\ge epz^2$ from $1/2$ to $1$ gives
+$F(1/2)\le\exp(-7Je/[12m(m-1)])$, which implies the claim.
+\end{proof}
+
+\begin{proposition}\label{prop:fixed-pair-counting}
+There is an absolute constant $D>0$ such that every normalized exact
+$\operatorname{MAX}_n$ network as in \Cref{eq:fixed-pair-model} satisfies
+\begin{equation}\label{eq:fixed-pair-counting}
+ 1-M\frac{(5)_3}{(n)_3}
+  -\frac{L}{(n)_4}\left[\binom J2+J\binom52\right]
+ \le \frac{D h_2}{J^2}
+\end{equation}
+for $n\ge10$ and $1\le J\le(n-5)/2$.
+\end{proposition}
+\begin{proof}
+First fix a second neuron $k$ and put $e=|E(G_k)|$.
+By a union bound over pairs of disjoint graph edges,
+\[
+ \mathbb P\bigl(G_k[S]\text{ contains two disjoint edges}\bigr)
+ \le \frac{e^2}{2}\frac{(5)_4}{(n)_4}.
+\]
+Conditional on $S$, the tail pairs form a uniform $J$-matching on its
+$m=n-5$ remaining labels. Deleting $S$ removes at most $5(n-1)$ edges.
+The preceding two lemmas therefore bound the probability that this neuron
+is zero, the data are pair-good, and $G_k[S]$ contains two disjoint edges by
+\begin{equation}\label{eq:fixed-pair-neuron-cost}
+ \frac{e^2}{2}\frac{(5)_4}{(n)_4}
+ \exp\!\left(-\frac{J(e-5(n-1))}{2m^2}\right).
+\end{equation}
+Here the conditional bound is uniform in $S$; no independence of the
+selected event and tail graph density is being assumed. The inequality
+is also valid when $e-5(n-1)<0$.
+
+Since $m\ge n/2$ and $J\le m/2$, the positive shift in the exponent is
+bounded absolutely. Also $(n)_4\ge n^4/2$. On putting $u=Je/(2m^2)$,
+\Cref{eq:fixed-pair-neuron-cost} is at most an absolute multiple of
+$J^{-2}u^2e^{-u}$. The latter function of $u$ is bounded, so the neuron
+cost is at most $D/J^2$ for an absolute $D$.
+
+It remains to show that these neuron events cover every good sample.
+Outside $B_{\rm selected}$, localization on the five tied coordinates
+has only braid first-layer rows: genericity says a first-row covector
+vanishes at the base point exactly when its support is contained in $S$.
+ The localized network computes $\operatorname{MAX}_5$; its shallow output
+ terms are a linear form and a sum of coordinate-difference ReLUs, as
+ permitted by the structural lemma. By
+\Cref{lem:five-input-obstruction}, one of its second preactivations has
+two disjoint interaction edges. An original second neuron with nonzero
+preactivation at the base point contributes only linear and shallow
+first-layer terms, or zero, and supplies no retained outer ReLU.
+Thus the witness is an original neuron with
+$g_k(y)=0$, and its interaction graph on the selected coordinates is
+exactly $G_k[S]$.
+
+Every sample outside $B_{\rm selected}\cup B_{\rm pair}$ is therefore
+covered by one of the $h_2$ events just bounded. Sum their probabilities
+and apply \Cref{lem:fixed-pair-errors}.
+\end{proof}
+
+\begin{proof}[Proof of the existential-constant width bound]
+Fix $C>0$ and replace it by $\max\{1,C\}$. By
+\Cref{lem:clean-support-regularization}, the original biased network yields an exact
+normalized model on $n=\lfloor N/2\rfloor$ inputs, with the same second
+hidden width and $Q\le ACn^2$ for an absolute $A$.
+
+Choose a sufficiently small absolute $\delta>0$, depending only on $A$,
+and put $J=\lfloor\delta n/\sqrt C\rfloor$. For all sufficiently large
+$n$ with $C$ fixed, $J\ge\delta n/(2\sqrt C)$ and $1\le J\le(n-5)/2$.
+Since $M,L\le Q$, the two error terms in
+\Cref{eq:fixed-pair-counting} are respectively
+$O(C/n)$ and $O(CJ^2/n^2+CJ/n^2)$. The constants here are absolute.
+Choose $\delta$ so that the quadratic contribution is at most $1/4$,
+and then take $n$ large enough that the remaining terms have sum at most
+$1/4$. The counting inequality gives
+\[
+ h_2\ge \frac{J^2}{2D}
+      \ge \frac{\delta^2 n^2}{8DC}.
+\]
+As $n\ge N/3$ for $N\ge3$, this proves the desired quadratic bound
+for all sufficiently large $N$, with $C$ fixed.
+
+In the finite remaining range, $h_2\ge1$: an ordinary network with no
+second-layer neurons has constant output and cannot compute
+$\operatorname{MAX}_N$. Decrease the positive constant to cover these
+finitely many values of $N$. This proves the existence of $c_C>0$ for
+every fixed $C>0$.
+\end{proof}

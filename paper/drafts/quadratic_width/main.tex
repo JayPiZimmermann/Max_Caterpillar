@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\title{A quadratic lower bound for the second hidden width}
+\author{Working proof draft}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+
+\noindent\textbf{Proof status.}
+The width theorem below is already verified in Lean for ordinary networks
+with arbitrary biases. This draft replaces its normalization and probability
+arguments by simpler proofs. It is not yet a self-contained replacement:
+the existing finite proof of \Cref{lem:five-input-obstruction} has not yet
+been replaced by a proof in this document. The new normalization is also
+verified in Lean; the fixed-pair counting argument has an independent
+mathematical audit and is awaiting its own Lean formalization.
+
+\begin{theorem}\label{thm:clean-quadratic-width}
+For every $C>0$ there exists $c_C>0$ such that the following holds for
+every $N\ge3$. If an ordinary two-hidden-layer ReLU network with arbitrary
+real weights and biases represents $\operatorname{MAX}_N$ on all of
+$\mathbb R^N$, and its hidden widths satisfy $h_1\le CN^2$, then
+$h_2\ge c_C N^2$.
+\end{theorem}
+
+The ordinary architecture is specified in
+\Cref{eq:clean-ordinary-network}; it has no skip connections.
+The proof uses linear and shallow terms only in intermediate representations.
+A separate formal theorem records an explicit numerical constant; its
+optimization plays no role in this draft.
+
+\section{Normalization and restriction}
+\input{normalization.tex}
+
+\section{The structural ingredient}
+\begin{lemma}[Five-input obstruction]\label{lem:five-input-obstruction}
+Suppose a normalized representation of $\operatorname{MAX}_5$ has the
+form in \Cref{eq:clean-normalized-network}, and every nonlinear first-layer
+function is a scalar multiple of $\sigma(x_i-x_j)$.
+For each second-layer preactivation, combine coefficients and orient the
+comparisons to write
+\[
+ g_k(x)=\ell_k(x)+\sum_{i<j}a_{k,ij}\sigma(x_i-x_j).
+\]
+Then at least one graph with edges $\{i,j\}$ for which $a_{k,ij}\ne0$
+contains two disjoint edges.
+\end{lemma}
+
+\noindent\textbf{Remaining proof obligation for this draft.}
+The existing all-real proof uses a star-neuron certificate and a reduction
+of graphs without two disjoint edges. Its coefficient identities, real
+parameter coverage, and network interpretation are checked in Lean.
+A new cycle-deletion proof removes the separate triangle treatment, but
+retains the star certificate. The present simplification search aims to
+replace that certificate by explicit identities and a short treatment of
+their degenerate cases. The arguments below use the established lemma;
+they do not prove it anew.
+
+\section{Counting with disjoint pairs}
+\input{fixed_pairs.tex}
+
+\paragraph{Formal statements.}
+The ordinary-network existential theorem and the separate explicit theorem
+are in
+\href{https://github.com/JayPiZimmermann/Max_Caterpillar/blob/82ef24b251327b2e1bfdf92a39c6f6b9e7c6924f/research/sN/clean_quadratic_20261103/ordinary/Bounds.lean}{\texttt{ordinary/Bounds.lean}}.
+Those existential declarations currently reuse the earlier explicit proof.
+They do not certify that the new manuscript argument is self-contained.
+
+\end{document}

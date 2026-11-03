@@ -1,0 +1,12 @@
+@second_width_ge_four : ∀ {h₁ h₂ : ℕ} (net : Network 5 h₁ h₂),
+  (∀ (x : Point 5), Network.eval net x = Maximum 5 x) → 4 ≤ h₂
+no_second_width_three : ∀ (h₁ : ℕ), ¬∃ net, ∀ (x : Point 5), Network.eval net x = Maximum 5 x
+@second_width_ge_four_raw : ∀ {h₁ h₂ : ℕ} (A : Fin h₁ → Fin 5 → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ)
+  (c d : Fin h₂ → ℝ) (e : ℝ),
+  (∀ (x : Fin 5 → ℝ),
+      ∑ k : Fin h₂, d k * max 0 (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin 5, A j i * x i + b j) + c k) + e =
+        Maximum 5 x) →
+    4 ≤ h₂
+'MaxCaterpillar.Max5Optimal.Lower.second_width_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.Lower.no_second_width_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.Lower.second_width_ge_four_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
