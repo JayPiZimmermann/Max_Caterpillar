@@ -1,0 +1,31 @@
+\begin{lemma}[A random matching estimate]\label{lem:random-matching-estimate}
+Let $G$ be a graph with $e$ edges on $m\ge 2$ vertices, let $0\le 2J\le m$,
+let $M$ be a uniformly random matching of size $J$, and put
+$X=|M\cap E(G)|$.
+For $0<\theta\le 1$,
+\[
+ \mathbb E\theta^X
+ \le \exp\!\left(-\frac{2Je(1-\theta^3)}{3m(m-1)}\right).
+\]
+In particular, $\mathbb E2^{-X}\le \exp(-Je/(2m^2))$.
+\end{lemma}
+\begin{proof}
+The cases $e=0$ or $J=0$ are immediate. Generate $M$ by a uniform
+permutation, pairing its first $2J$ positions consecutively. For each
+$ab\in E(G)$, swap $a$ into the first position and then $b$ into the
+second. The resulting permutation is uniform subject to these two
+positions: every such permutation has exactly $m(m-1)$ preimages, as one
+sees by undoing the swaps. After forgetting the pair order, the resulting
+matching therefore has the conditional law of $M$ given $ab\in M$.
+Write $X_{ab}$ for its number of graph edges. Only three pairs can change,
+so $X_{ab}\le X+3$.
+
+Set $F(z)=\mathbb E z^X$ and $p=\mathbb P(ab\in M)=2J/(m(m-1))$.
+Expanding $X$ as a sum of edge indicators, for $0<z\le 1$ we obtain
+\[
+ F'(z)=p\sum_{ab\in E(G)}\mathbb E z^{X_{ab}-1}
+ \ge epz^2F(z).
+\]
+Integrating $F'/F\ge epz^2$ from $\theta$ to $1$, and using $F(1)=1$,
+gives the claim.
+\end{proof}

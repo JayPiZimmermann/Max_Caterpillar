@@ -1,0 +1,21 @@
+@exists_original_second_highrank : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  3 ≤ N →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), eval net x = Maximum N x) →
+        ∃ k, N - 1 ≤ FiniteDimensional.finrank ℝ ↥(LinearMap.range (secondObservation net k))
+@exists_active_original_second_highrank : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  3 ≤ N →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), eval net x = Maximum N x) →
+        ∃ k,
+          AffineSkipNetwork.d net k ≠ 0 ∧
+            N - 1 ≤ FiniteDimensional.finrank ℝ ↥(LinearMap.range (secondObservation net k))
+'MaxCaterpillar.ExponentialPush.Ridge.inner_period_of_observation_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.exists_original_second_highrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.exists_active_original_second_highrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

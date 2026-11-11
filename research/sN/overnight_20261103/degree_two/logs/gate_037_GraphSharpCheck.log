@@ -1,0 +1,27 @@
+@exact_sharp_connected_type : ∀ {N : ℕ} (G : SimpleGraph (Fin N)),
+  (∀ (v : Fin N), SimpleGraph.degree G v ≤ 2) →
+    ∀ (k : ℕ),
+      0 < k →
+        Finset.card
+            (Finset.filter (fun S => Finset.card S = k ∧ SimpleGraph.Connected (SimpleGraph.induce (↑S) G))
+              (Finset.powerset Finset.univ)) ≤
+          N
+@exact_sharp_two_component_type : ∀ {N : ℕ} (G : SimpleGraph (Fin N)),
+  (∀ (v : Fin N), SimpleGraph.degree G v ≤ 2) →
+    ∀ (m : ℕ),
+      0 < m →
+        2 *
+            Finset.card
+              (Finset.filter
+                (fun S => Finset.card S = m ∧ Nat.card (SimpleGraph.ConnectedComponent (SimpleGraph.induce (↑S) G)) ≤ 2)
+                (Finset.powerset Finset.univ)) ≤
+          2 * N + (m - 1) * N ^ 2
+'MaxCaterpillar.Overnight.DegreeTwo.Check.exact_sharp_connected_type' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.Check.exact_sharp_two_component_type' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.Check.sharp_singleton_attains' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

@@ -110,7 +110,7 @@ theorem second_width_joint_hyp_false_three {h₁ h₂ : ℕ} (net : Network 3 h�
   have h4 : 4 ≤ h₁ := (max3_widths_iff.1 ⟨net, h⟩).1
   intro hh
   norm_num at hh
-  omega
+  linarith only [h4, hh]
 
 /-- No network computing `max₄` satisfies the hypothesis of `second_width_joint`. -/
 theorem second_width_joint_hyp_false_four {h₁ h₂ : ℕ} (net : Network 4 h₁ h₂)
@@ -118,7 +118,7 @@ theorem second_width_joint_hyp_false_four {h₁ h₂ : ℕ} (net : Network 4 h�
   have h6 : 6 ≤ h₁ := (max4_widths_iff.1 ⟨net, h⟩).1
   intro hh
   norm_num at hh
-  omega
+  linarith only [h6, hh]
 
 /-! ## `free_neurons`: the identity is satisfiable -/
 

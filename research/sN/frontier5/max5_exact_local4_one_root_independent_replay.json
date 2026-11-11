@@ -1,0 +1,36 @@
+{
+  "status": "STRUCTURE_AND_INDEPENDENT_ETHOS_PASS",
+  "source": "max5_exact_local4_one_root_germs.smt2",
+  "source_sha256": "3abd78fbbfcf8daa8d38911257714146d5bf9fcc1e7d95b74629ecd3fbe3fd77",
+  "disjuncts": 288,
+  "constraints_per_disjunct": 31,
+  "strict_ratio_bounds_per_disjunct": 4,
+  "linear_local_equations_per_disjunct": 24,
+  "point_conditions_per_disjunct": 3,
+  "point_conditions_rebuilt": 864,
+  "input_points": [
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1
+    ]
+  ],
+  "ethos_receipt": "max5_exact_local4_one_root_germs_audit.ethos.json",
+  "ethos_receipt_sha256": "e1ccf0c4fcc60f1265ca3ce19ae4ec82b7231f046699049a993e6e7775061978",
+  "proof_sha256": "2cb2fce89ca8e440e420943fd7c106ad64bc0ecfb9bc38b24bdc7eca5cc31bd7",
+  "checker_sha256": "81e8014cb53691e100d1534978cebfa0c9c5c322a234e24efb78c9d87d499aa1",
+  "scope": "Structural model replay and independent proof replay; geometric necessity audited separately."
+}

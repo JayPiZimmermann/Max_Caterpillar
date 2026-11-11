@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "definition": "braidSqrtMatching n := Nat.sqrt n /400",
+  "integer_bounds": "160000<=n implies 1<=braidSqrtMatching n and160000*(braidSqrtMatching n)^2<=n.",
+  "real_floor_identity": "For every n:Nat, braidSqrtMatching n=Nat.floor(Real.sqrt(n:Real)/400), with no lower-bound assumption.",
+  "proof_method": "Exact natural sqrt lower/upper squares, monotonic squaring, Nat.floor_div_nat and the strict real-square-root floor interval.",
+  "scope": "Arithmetic parameter bridge only; the network corollary continues to require the corresponding explicit structural hypothesis.",
+  "boundary_scope": "The real-floor identity is proved for every n, including n=0; no concrete Nat.sqrt normalization is part of the audit.",
+  "axiom_checks": {
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braidSqrtMatching_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braidSqrtMatching_eq_floor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Parameters/Sqrt.lean": "b9c521b4e18489103ddbeb38ce9e4be98937aa586a46fa4bb58a870f18163198",
+    "verification/h2/BraidSqrtParametersCheck.lean": "f66b29310f4390d211b515c4d6aa2860976d620a6f6b831d92799118f7eed0a0",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "research/sN/jensen_bound/counting_routes/braid_sqrt_receipt.py": "9f59dcc2553f870c575700c20e043327d31ed735273428d3f522a34aea5a692b",
+    "research/sN/jensen_bound/counting_routes/braid_sqrt_final_build.log": "0a1c2018f80fd7f3e6fd6916023cccb23c7cd1eb44188ae911bf40a018b4ae5d",
+    "research/sN/jensen_bound/counting_routes/braid_sqrt_final_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/braid_sqrt_check_symbolic.log": "50211e6391dc7459f5674a3222898e8894163753c194a5aa5417a45eb6516d11",
+    "research/sN/jensen_bound/counting_routes/braid_sqrt_check_symbolic.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  }
+}

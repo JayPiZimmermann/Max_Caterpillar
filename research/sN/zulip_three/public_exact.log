@@ -1,0 +1,45 @@
+'MaxCaterpillar.Fiber.max4_6_5_at_least_two_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_at_least_65_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.max4_6_5_has_65_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Fiber.NaturalInterventions.connected_natural_activation_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.regular_same_gate_exact_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.BinaryPatterns.strict_connected_binary_pattern_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.BinaryPatterns.joined_of_global_binary_maps_output_signs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.NetworkLowerBound.second_width_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips_unshifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.QuadraticCutoff.affine_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Affine.conditional_affine_sqrt_lower_bound_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

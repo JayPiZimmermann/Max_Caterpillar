@@ -1,0 +1,3 @@
+[4204/4205] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventModel
+stdout:
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventModel.lean:35:10: warning: unused variable `hW` [linter.unusedVariables]

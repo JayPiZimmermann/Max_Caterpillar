@@ -1,0 +1,45 @@
+@exists_normalizedModel : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) →
+    ∃ model,
+      (∀ (x : Point N), NormalizedNetwork.eval model x = Maximum N x) ∧
+        NormalizedNetwork.TranslationNormalized model ∧
+          (∀ (j : Fin h₁),
+              NormalizedNetwork.A model j =
+                if AffineSkipNetwork.b net j = 0 ∧ ∑ i : Fin N, AffineSkipNetwork.A net j i = 0 then
+                  AffineSkipNetwork.A net j
+                else 0) ∧
+            ∀ (j : Fin h₁), NormalizedNetwork.Feeding model j → ∃ k, AffineSkipNetwork.W net k j ≠ 0
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.homogeneousExtension_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.homogeneousModel_exact_direction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.homogeneousModel_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.homogeneousModel_first_row' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.homogeneousModel_feeding_original' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.diagonalModel_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.normalizedModel_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.normalizedModel_translation_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.normalizedModel_first_row' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.normalizedModel_feeding_original' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.exists_normalizedModel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'biasedSkipWitness_max' depends on axioms: [propext, Classical.choice, Quot.sound]

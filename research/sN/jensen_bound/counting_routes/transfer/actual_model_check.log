@@ -1,0 +1,80 @@
+@selectedTailMean : {m n : ℕ} →
+  (G : SimpleGraph (Fin n)) → [inst : DecidableRel G.Adj] → (Equiv.Perm (Fin n) → SimpleGraph (Fin m)) → ℕ → ℕ → ℕ → ℝ
+@actualNeuronEvent : {k m h₁ h₂ : ℕ} →
+  (net : NormalizedNetwork (m + k) h₁ h₂) →
+    NormalizedNetwork.TranslationNormalized net → ℕ → ℕ → ℝ → Fin h₂ → Finset (Configuration k m)
+@CommonGapScale : {k m h₁ h₂ : ℕ} → NormalizedNetwork (m + k) h₁ h₂ → ℝ → Prop
+@actualNeuron_fraction_le : ∀ {k m h₁ h₂ : ℕ} (net : NormalizedNetwork (m + k) h₁ h₂)
+  (hn : NormalizedNetwork.TranslationNormalized net) (q K : ℕ) (T : ℝ) (r : Fin h₂),
+  CommonGapScale net T →
+    2 ≤ m →
+      0 < ↑K →
+        ↑(Finset.card (actualNeuronEvent net hn q K T r)) / ↑(Fintype.card (Configuration k m)) ≤
+          ↑(Nat.descFactorial k (2 * q)) / ↑(Nat.descFactorial (m + k) (2 * q)) * (tailRate m K ^ q)⁻¹ *
+            Real.exp (tailRate m K * (↑k * (↑m + ↑k - 1)))
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.meanOver_mono' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.meanOver_const' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.lowRankMatchingMean_le_shifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedTailMean_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.meanOver_prod' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.meanOver_comm' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.meanOver_indicator' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.native_braid_count_eq_active' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.actual_clean_mean_le_matching_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.exists_common_gap_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mem_actualNeuronEvent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.actualNeuron_fraction_le_selectedTailMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.actualNeuron_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEvent.mem_roleEvents' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEvent.mem_supportBadAt' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEvent.mem_supportBadAt_of_caseA' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEvent.mem_supportBadAt_of_caseB' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEvent.mem_supportBadAt_of_caseC' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEvent.mem_supportBadConfigurations' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mem_feedingBadConfigurationsThree' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.good_implies_actualClean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.feedingBadConfigurationsThree_fraction' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

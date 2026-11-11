@@ -1,0 +1,3 @@
+'MaxCaterpillar.Max5Optimal.ConvexCores.ConvexRepresentation.localize' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

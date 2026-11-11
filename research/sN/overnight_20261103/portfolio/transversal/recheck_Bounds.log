@@ -1,0 +1,40 @@
+@normalized_braid_quadratic : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  3 ≤ N →
+    ∀ (net : NormalizedNetwork N h₁ h₂),
+      TranslationNormalized net →
+        (∀ (x : Point N), NormalizedNetwork.eval net x = Maximum N x) →
+          (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) → ↑N ^ 2 / 3000000 ≤ ↑h₂
+@affine_retained_quadratic : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m],
+  3 ≤ m →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+        ∀ (e : Fin m ↪ Fin N), BraidOnRetained net e → ↑m ^ 2 / 3000000 ≤ ↑h₂
+@conditional_affine_retained_lower_bound : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] (q : ℕ),
+  1 ≤ q →
+    160000 * q ^ 2 ≤ m →
+      LocalMatchingObstruction (Parameters.braidArity q) q →
+        ∀ (net : AffineSkipNetwork N h₁ h₂),
+          (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+            ∀ (e : Fin m ↪ Fin N), BraidOnRetained net e → 23 / 25 * 4 ^ q ≤ ↑h₂
+@affine_transversal_quadratic : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+    ∀ (C : Finset (Fin N)),
+      3 ≤ N - Finset.card C →
+        (∀ (j : Fin h₁),
+            AffineSkipNetwork.b net j = 0 →
+              ∑ i : Fin N, AffineSkipNetwork.A net j i = 0 →
+                3 ≤ Finset.card (rowSupport (AffineSkipNetwork.A net j)) →
+                  ∃ i ∈ rowSupport (AffineSkipNetwork.A net j), i ∈ C) →
+          ↑(N - Finset.card C) ^ 2 / 3000000 ≤ ↑h₂
+'MaxCaterpillar.Overnight.SupportTransversal.normalized_braid_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.SupportTransversal.affine_retained_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.SupportTransversal.conditional_affine_retained_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.SupportTransversal.affine_transversal_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

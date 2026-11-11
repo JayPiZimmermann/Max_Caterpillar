@@ -1,0 +1,162 @@
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:7:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:7:43: warning: unused variable `hp1` [linter.unusedVariables]
+@weight_nonneg : ∀ {n : ℕ} {p : ℝ}, 0 ≤ p → p ≤ 1 → ∀ (S : Finset (Fin n)), 0 ≤ weight p S
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.weight_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@weight_eq_pow_card : ∀ {n : ℕ} (p : ℝ) (S : Finset (Fin n)),
+  weight p S = p ^ Finset.card S * (1 - p) ^ (n - Finset.card S)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.weight_eq_pow_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@sum_prod_choice : ∀ {n : ℕ} (a b : Fin n → ℝ),
+  (∑ S : Finset (Fin n), ∏ i : Fin n, if i ∈ S then a i else b i) = ∏ i : Fin n, (a i + b i)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.sum_prod_choice' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mass_univ : ∀ {n : ℕ} (p : ℝ), mass p Finset.univ = 1
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mean_one : ∀ {n : ℕ} (p : ℝ), (mean p fun x => 1) = 1
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:36:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:36:43: warning: unused variable `hp1` [linter.unusedVariables]
+@mass_nonneg : ∀ {n : ℕ} {p : ℝ}, 0 ≤ p → p ≤ 1 → ∀ (E : Finset (Finset (Fin n))), 0 ≤ mass p E
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@weight_modular : ∀ {n : ℕ} (p : ℝ) (S T : Finset (Fin n)),
+  weight p S * weight p T = weight p (S ∩ T) * weight p (S ∪ T)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.weight_modular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mass_contains : ∀ {n : ℕ} (p : ℝ) (I : Finset (Fin n)),
+  mass p (Finset.filter (fun S => I ⊆ S) Finset.univ) = p ^ Finset.card I
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_contains' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mass_empty : ∀ {n : ℕ} (p : ℝ), mass p ∅ = 0
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mass_compl : ∀ {n : ℕ} (p : ℝ) (E : Finset (Finset (Fin n))), mass p Eᶜ = 1 - mass p E
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_compl' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:65:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:65:43: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:66:37: warning: unused variable `hDE` [linter.unusedVariables]
+@mass_mono : ∀ {n : ℕ} {p : ℝ}, 0 ≤ p → p ≤ 1 → ∀ {D E : Finset (Finset (Fin n))}, D ⊆ E → mass p D ≤ mass p E
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_mono' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:71:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:71:43: warning: unused variable `hp1` [linter.unusedVariables]
+@mass_le_one : ∀ {n : ℕ} {p : ℝ}, 0 ≤ p → p ≤ 1 → ∀ (E : Finset (Finset (Fin n))), mass p E ≤ 1
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mass_avoids : ∀ {n : ℕ} (p : ℝ) (I : Finset (Fin n)),
+  mass p (Finset.filter (fun S => ¬I ⊆ S) Finset.univ) = 1 - p ^ Finset.card I
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_avoids' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:83:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:83:43: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:84:32: warning: unused variable `hf0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:84:53: warning: unused variable `hg0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:85:5: warning: unused variable `hf` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:85:23: warning: unused variable `hg` [linter.unusedVariables]
+@mean_mul_ge : ∀ {n : ℕ} {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ {f g : Finset (Fin n) → ℝ},
+        (∀ (S : Finset (Fin n)), 0 ≤ f S) →
+          (∀ (S : Finset (Fin n)), 0 ≤ g S) → Monotone f → Monotone g → mean p f * mean p g ≤ mean p fun S => f S * g S
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_mul_ge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:91:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:91:43: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:92:32: warning: unused variable `hf0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:92:53: warning: unused variable `hg0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:93:5: warning: unused variable `hf` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:93:23: warning: unused variable `hg` [linter.unusedVariables]
+@mean_mul_ge_antitone : ∀ {n : ℕ} {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ {f g : Finset (Fin n) → ℝ},
+        (∀ (S : Finset (Fin n)), 0 ≤ f S) →
+          (∀ (S : Finset (Fin n)), 0 ≤ g S) → Antitone f → Antitone g → mean p f * mean p g ≤ mean p fun S => f S * g S
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_mul_ge_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mean_indicator : ∀ {n : ℕ} (p : ℝ) (D : Finset (Finset (Fin n))), (mean p fun S => if S ∈ D then 1 else 0) = mass p D
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_indicator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@mean_mul_indicator : ∀ {n : ℕ} (p : ℝ) (D : Finset (Finset (Fin n))) (f : Finset (Fin n) → ℝ),
+  (mean p fun S => f S * if S ∈ D then 1 else 0) = ∑ S in D, weight p S * f S
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_mul_indicator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:113:5: warning: unused variable `hD` [linter.unusedVariables]
+@antitone_indicator_of_isLowerSet : ∀ {n : ℕ} (D : Finset (Finset (Fin n))),
+  IsLowerSet ↑D → Antitone fun S => if S ∈ D then 1 else 0
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.antitone_indicator_of_isLowerSet' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:119:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:119:43: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:121:5: warning: unused variable `hD` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:122:5: warning: unused variable `hE` [linter.unusedVariables]
+@mass_mul_le_mass_inter : ∀ {n : ℕ} {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 → ∀ (D E : Finset (Finset (Fin n))), IsLowerSet ↑D → IsLowerSet ↑E → mass p D * mass p E ≤ mass p (D ∩ E)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_mul_le_mass_inter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:128:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:128:43: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:129:35: warning: unused variable `hD` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:130:5: warning: unused variable `hpos` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:131:5: warning: unused variable `hf0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:131:26: warning: unused variable `hf` [linter.unusedVariables]
+@condMean_le_mean : ∀ {n : ℕ} {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ (D : Finset (Finset (Fin n))),
+        IsLowerSet ↑D →
+          0 < mass p D →
+            ∀ (f : Finset (Fin n) → ℝ), (∀ (S : Finset (Fin n)), 0 ≤ f S) → Monotone f → condMean p D f ≤ mean p f
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_le_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:137:41: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:137:55: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:139:5: warning: unused variable `hE` [linter.unusedVariables]
+@prod_mass_le_mass_all : ∀ {n : ℕ} {ι : Type u_1} {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ (J : Finset ι) (E : ι → Finset (Finset (Fin n))),
+        (∀ j ∈ J, IsLowerSet ↑(E j)) →
+          ∏ j in J, mass p (E j) ≤ mass p (Finset.filter (fun S => ∀ j ∈ J, S ∈ E j) Finset.univ)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.prod_mass_le_mass_all' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:146:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:146:43: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:147:35: warning: unused variable `hD` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/Verify.lean:148:5: warning: unused variable `hpos` [linter.unusedVariables]
+@condMean_contains_le : ∀ {n : ℕ} {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ (D : Finset (Finset (Fin n))),
+        IsLowerSet ↑D →
+          0 < mass p D → ∀ (I : Finset (Fin n)), (condMean p D fun S => if I ⊆ S then 1 else 0) ≤ p ^ Finset.card I
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_contains_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

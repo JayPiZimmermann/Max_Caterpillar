@@ -1,0 +1,25 @@
+@indexed_graph_le_active : ∀ {N : ℕ} {K : Type u_2} [inst : Fintype K] (U : K → Point N) (W : K → Pair N → ℝ)
+  (L : Point N) (B : Pair N → ℝ) (d : K → ℝ) (s : K → Pair N → State),
+  (∀ (k : K) (p : Pair N), s k p ≠ 2 → W k p = 0) →
+    ∀ (hn : TranslationNormalized (indexedNetwork (fun p => braidRoot (left p) (right p)) U W L B d)) (k : K),
+      braidInteractionGraph (indexedNetwork (fun p => braidRoot (left p) (right p)) U W L B d) hn
+          ((Fintype.equivFin K) k) ≤
+        indexedGraph (active (s k)) left right
+@indexed_graph_le_state : ∀ {N : ℕ} {K : Type u_2} [inst : Fintype K] {h₁ h₂ : ℕ} (net : NormalizedNetwork N h₁ h₂)
+  (original : K → Fin h₂) (s : K → Pair N → State) (L : Point N) (B : Pair N → ℝ) (d : K → ℝ)
+  (hn :
+    TranslationNormalized
+      (indexedNetwork (fun p => braidRoot (left p) (right p)) (fun k => stateHead net (original k) (s k))
+        (fun k => stateWeight net (original k) (s k)) L B d))
+  (k : K),
+  braidInteractionGraph
+      (indexedNetwork (fun p => braidRoot (left p) (right p)) (fun k => stateHead net (original k) (s k))
+        (fun k => stateWeight net (original k) (s k)) L B d)
+      hn ((Fintype.equivFin K) k) ≤
+    indexedGraph (active (s k)) left right
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.indexed_graph_le_active' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.indexed_graph_le_state' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

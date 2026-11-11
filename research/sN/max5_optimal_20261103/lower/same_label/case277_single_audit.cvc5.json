@@ -1,0 +1,21 @@
+{
+  "status": "unsat",
+  "seconds": 97.53510552691296,
+  "budget": 300,
+  "original_source": "case277_single.smt2",
+  "original_source_sha256": "2bad2bfbdb34a7ed6660e38f7e6d9374db93aa67002acc3ce0eda269e1fdfa01",
+  "normalized_source": "case277_single_audit.smt2",
+  "normalized_source_sha256": "be83e2dc92f136490395c9366faf88bc8d13e5664588718da4ed6a973d3c90b5",
+  "normalization": {
+    "neutral_unary": 0,
+    "at_least": 0
+  },
+  "cvc5_version": "1.4.2-modified",
+  "assertions": 329,
+  "audit_script_sha256": "dbfd8cbfc474939125ae11df048f59f3d60d7e5d136b18be17074045e96d8e1b",
+  "proof": "case277_single_audit.proof.cpc",
+  "proof_sha256": "8994275f05d23cacf4511eff76bb7c7837feac34810b6d4cfbca9949f495dbfa",
+  "proof_bytes": 27129044,
+  "proof_roots": 1,
+  "trust_rule_present": false
+}

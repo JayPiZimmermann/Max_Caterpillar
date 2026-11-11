@@ -1,0 +1,12 @@
+@conditional_affine_feeding_tradeoff_explicit : ∀ {N h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂)
+  (hsize : 10000000000 * widthParameter (N / 2) (affineFeedingCard net) ^ 2 ≤ N / 2),
+  LocalMatchingObstruction (Parameters.minimumArity (N / 2) (widthParameter (N / 2) (affineFeedingCard net)))
+      (Parameters.matchingOrder (N / 2) (widthParameter (N / 2) (affineFeedingCard net))) →
+    (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+      1 / 2 * Real.exp (3 * Real.sqrt ↑(N / 2) / (8000 * ↑(widthParameter (N / 2) (affineFeedingCard net)))) ≤ ↑h₂
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_tradeoff_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

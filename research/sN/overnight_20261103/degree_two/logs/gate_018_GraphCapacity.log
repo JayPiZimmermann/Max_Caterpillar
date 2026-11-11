@@ -1,0 +1,6 @@
+'MaxCaterpillar.Overnight.DegreeTwo.twoComponentSets_decomposition' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.twoComponentSets_card_le_of_connected' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

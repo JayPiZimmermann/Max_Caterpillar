@@ -1,0 +1,13 @@
+@balance_or_zero_pair_mass : ∀ {m mR : ℕ} (A : Fin m → Point 5) (c d : Fin m → ℝ) (k : Fin m) (aR : Point 5) (bR : ℝ)
+  (AR : Fin mR → Point 5) (βR cR : Fin mR → ℝ) (i j : Fin 5),
+  i ≠ j →
+    (∀ (l : Fin m), l ≠ k → A l i = 0 ∨ A l j = 0 ∨ A l i + A l j = 0) →
+      core A c (-unitVec i) = 0 →
+        core A c (-unitVec j) = 0 →
+          core A d (-unitVec i) = 0 →
+            core A d (-unitVec j) = 0 →
+              (∀ (x : Point 5), shallow aR bR AR βR cR x + relu (core A c x) + relu (core A d x) = Maximum 5 x) →
+                pairMidpointMass A c k i j = 0 ∨ pairMidpointMass A d k i j = 0 ∨ A k i + A k j = 0
+'MaxCaterpillar.Max5Optimal.SegmentNetwork.balance_or_zero_pair_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

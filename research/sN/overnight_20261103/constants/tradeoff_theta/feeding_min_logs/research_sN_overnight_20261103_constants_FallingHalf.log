@@ -1,0 +1,14 @@
+falling_four_decay : ∀ (s : ℕ), 16 * Nat.descFactorial s 4 ≤ 105 * 2 ^ s
+@half_falling_restriction : ∀ {κ : Type u_4} [inst : Fintype κ] {α : Type u_3} [inst_1 : Fintype α]
+  [inst_2 : DecidableEq α] (n : ℕ),
+  Fintype.card α = 2 * n →
+    ∀ (T : κ → Finset α),
+      ∃ U,
+        Finset.card U = n ∧
+          (16 * ∑ j : κ, if T j ⊆ U then Nat.descFactorial (Finset.card (T j)) 4 else 0) ≤ 105 * Fintype.card κ
+'MaxCaterpillar.Overnight.Constants.FallingHalf.falling_four_decay' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.FallingHalf.half_falling_restriction' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

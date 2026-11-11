@@ -1,0 +1,12 @@
+pow_mul_exp_neg_div_factorial_le_inv_pow : ∀ (c η : ℝ),
+  0 < c → 0 ≤ η → ∀ (q : ℕ), η ^ q * Real.exp (-(c * η)) / ↑(Nat.factorial q) ≤ (c ^ q)⁻¹
+le_shifted_exp_envelope : ∀ (P A c η d : ℝ) (q : ℕ),
+  0 < c →
+    0 ≤ η →
+      0 ≤ A → P ≤ A * η ^ q / ↑(Nat.factorial q) * Real.exp (-(c * (η - d))) → P ≤ A * (c ^ q)⁻¹ * Real.exp (c * d)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.pow_mul_exp_neg_div_factorial_le_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.le_shifted_exp_envelope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

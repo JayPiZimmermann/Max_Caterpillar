@@ -1,0 +1,13 @@
+'MaxCaterpillar.ExponentialPush.ActualBraid.abs_row_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.ActualBraid.coefficient_eq_original' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.ActualBraid.linear_combination_canonical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.ActualBraid.head_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.ExponentialPush.ActualBraid.eval_eq_canonical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

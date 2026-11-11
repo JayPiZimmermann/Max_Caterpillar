@@ -1,0 +1,27 @@
+@second_width_tradeoff_feeding : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) →
+    1 / 400000000 * min (↑N ^ 2) (↑N ^ 4 / ↑(feedingCount net)) ≤ ↑h₂
+@second_width_quadratic_feeding : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : Network N h₁ h₂),
+  (∀ (x : Point N), Network.eval net x = Maximum N x) → ↑(feedingCount net) ≤ ↑N ^ 2 → 1 / 400000000 * ↑N ^ 2 ≤ ↑h₂
+@second_width_tradeoff_affine_skips : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) → 1 / 400000000 * min (↑N ^ 2) (↑N ^ 4 / (↑h₁ + 2 * ↑N)) ≤ ↑h₂ + 2
+@second_width_tradeoff_affine_skips_unshifted : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) → 1 / 1600000000 * min (↑N ^ 2) (↑N ^ 4 / ↑h₁) ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.prune_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_quadratic_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.encode_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips_unshifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

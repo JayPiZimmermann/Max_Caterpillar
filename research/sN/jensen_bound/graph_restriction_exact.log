@@ -1,0 +1,44 @@
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedFourSetEvent_fraction' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.twoEdgesEvent_card_mul_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.twoEdgesEvent_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.edge_card_le_retained_add' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.comap_edge_card_eq_retained' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.induce_edge_card_eq_retained' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.five_vertex_deletion_lower_bound' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedLabelEmbedding_range' depends on axioms: [propext,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.tailLabelEmbedding_range' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.tailGraph_edge_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.not_pairwiseIntersecting_comap_iff' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selected_graph_not_pairwise_iff' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedGraphBadEvent_eq_twoEdgesEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedGraphBadEvent_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GraphRestriction.selectedGraphBadEvent_fraction_le_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

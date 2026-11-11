@@ -1,0 +1,3 @@
+'MaxCaterpillar.OvernightConstants.model_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.OvernightConstants.normalized_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.OvernightConstants.affine_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]

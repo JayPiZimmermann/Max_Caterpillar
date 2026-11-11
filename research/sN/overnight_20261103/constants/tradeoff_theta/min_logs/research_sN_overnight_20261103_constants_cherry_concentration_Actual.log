@@ -1,0 +1,9 @@
+@badIsolated_fraction_le_one_percent : ∀ {m K : ℕ},
+  20000 ≤ m →
+    36 ≤ K → 8 * K ≤ m → ↑(Finset.card (badIsolatedEvent m K)) / ↑(Fintype.card (Equiv.Perm (Fin m))) ≤ 1 / 100
+'MaxCaterpillar.OvernightConstants.CherryConcentration.badIsolated_fraction_le_one_percent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.CherryConcentration.badIsolated_eighth_fraction_le_one_percent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

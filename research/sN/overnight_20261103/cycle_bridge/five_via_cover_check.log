@@ -1,0 +1,23 @@
+@actual_cover_one_counterinput : ∀ {h₁ h₂ : ℕ} (net : NormalizedNetwork 5 h₁ h₂) (hn : TranslationNormalized net),
+  (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+    (∀ (k : Fin h₂),
+        ∃ C,
+          (∀ (a b : Fin 5), SimpleGraph.Adj (braidInteractionGraph net hn k) a b → a ∈ C ∨ b ∈ C) ∧ Finset.card C ≤ 1) →
+      ∃ x, eval net x ≠ Maximum 5 x
+@actual_two_edge_witness : ∀ {h₁ h₂ : ℕ} (net : NormalizedNetwork 5 h₁ h₂) (hn : TranslationNormalized net),
+  (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+    (∀ (x : Point 5), eval net x = Maximum 5 x) →
+      ∃ k,
+        ∃ B ⊆ SimpleGraph.edgeFinset (braidInteractionGraph net hn k),
+          Finset.card B = 2 ∧
+            ∀ e ∈ B, ∀ f ∈ B, e ≠ f → Disjoint (GraphRestriction.edgeVertices e) (GraphRestriction.edgeVertices f)
+'MaxCaterpillar.ExponentialPush.CycleBridge.FiveCheck.actual_cover_one_counterinput' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.FiveCheck.actual_two_edge_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.FiveCheck.nonempty_cover_control' depends on axioms: [propext, Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.FiveCheck.empty_cover_control' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

@@ -1,0 +1,10 @@
+'MaxCaterpillar.ExponentialPush.DegreeTwo.exists_longest_path' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.external_neighbor_endpoint_of_unique' depends on axioms: [propext, Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.exists_hamiltonian_path_of_unique' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.exists_hamiltonian_path' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

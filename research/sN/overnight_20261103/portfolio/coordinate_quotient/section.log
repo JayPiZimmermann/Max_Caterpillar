@@ -1,0 +1,8 @@
+@exists_braid_retained_of_quotient : ∀ {N m h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂) (φ : Fin N → Fin m),
+  Function.Surjective φ → BraidBlockSums net φ → ∃ e, SupportTransversal.BraidOnRetained net e
+'MaxCaterpillar.Overnight.CoordinateQuotient.blockSum_eq_on_section' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.exists_braid_retained_of_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,23 @@
+@conditional_affine_quadratic_width_lower_bound : ∀ {N h₁ h₂ : ℕ} (C q : ℕ) (hC : 1 ≤ C),
+  1 ≤ q →
+    ∀ (hsize : 8000 * quadraticParameter C ^ 2 ≤ N / 2),
+      1000 * quadraticParameter C ^ 2 * q ^ 3 ≤ N / 2 →
+        LocalMatchingObstruction (Parameters.braidArity q) q →
+          ∀ (net : AffineSkipNetwork N h₁ h₂),
+            (∀ (x : Point N), AffineSkipExtension.eval net x = Maximum N x) →
+              h₁ ≤ C * N ^ 2 → 1 / 2 * (↑(N / 2) / (400000 * ↑(quadraticParameter C) * ↑q ^ 2)) ^ q ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.exists_normalized_half_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.exists_affine_half_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.fourthMoment_le_quadratic_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.general_rows_budgets_of_fourthMoment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.AffineGeneralRows.conditional_affine_quadratic_width_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

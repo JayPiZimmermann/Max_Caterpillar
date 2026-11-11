@@ -1,0 +1,8 @@
+@actual_input_witness : ∀ {N : ℕ} [inst : NeZero N] {J : Type} [inst_1 : Fintype J],
+  2 ≤ N →
+    ∀ (f : J → Point N → ℝ),
+      (∀ (k : J), ∃ v, (∃ i j, v i ≠ v j) ∧ ∀ (x : Point N), f k (x + v) = f k x) →
+        ∀ (a : Point N →+ ℝ) (c : ℝ), ∃ x, Maximum N x ≠ a x + c + ∑ k : J, f k x
+'IndependentRidgeAudit.actual_input_witness' depends on axioms: [propext, Quot.sound, Classical.choice]
+'IndependentRidgeAudit.diagonal_period_countercontrol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentRidgeAudit.one_input_countercontrol' depends on axioms: [propext, Classical.choice, Quot.sound]

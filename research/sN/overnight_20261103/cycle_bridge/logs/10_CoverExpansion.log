@@ -1,0 +1,9 @@
+@forestState_small_cover : ∀ {n : ℕ} {ι : Type u_2} [inst : Fintype ι] (A : Finset ι) (a b : ι → Fin n) (r : ℕ),
+  (¬∃ B, B ∈ matchings (indexedGraph A a b) (r + 1)) →
+    ∀ (t : ForestState A a b), ∃ C, IsVertexCover (indexedGraph (active ↑t) a b) C ∧ Finset.card C ≤ r
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.matching_mem_of_graph_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.forestState_small_cover' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

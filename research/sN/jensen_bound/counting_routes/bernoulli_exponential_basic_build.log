@@ -1,0 +1,8 @@
+[1118/1119] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.ExponentialBasic
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.generic_envelope_strong' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.generic_conditioned_size_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

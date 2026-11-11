@@ -1,0 +1,6 @@
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.feeding_good_excludes_nonbraid_dominant' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.feeding_good_excludes_nonbraid_dominant_of_tail_order' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

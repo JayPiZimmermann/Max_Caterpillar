@@ -1,0 +1,90 @@
+@firstSupports : {m h₁ h₂ : ℕ} → NormalizedNetwork (m + 5) h₁ h₂ → Fin h₁ → Finset (Fin (m + 5))
+@actualPoint : {m : ℕ} → Configuration m → ℝ → Point (m + 5)
+@neuronEvent : {m h₁ h₂ : ℕ} →
+  (net : NormalizedNetwork (m + 5) h₁ h₂) →
+    NormalizedNetwork.TranslationNormalized net → ℕ → ℝ → Fin h₂ → Finset (Configuration m)
+@UniformGapScale : {m h₁ h₂ : ℕ} → NormalizedNetwork (m + 5) h₁ h₂ → ℝ → Prop
+@neuron_event_card_le_four_hundred : ∀ {m h₁ h₂ : ℕ} (net : NormalizedNetwork (m + 5) h₁ h₂)
+  (hn : NormalizedNetwork.TranslationNormalized net) (K : ℕ) (T : ℝ) (k : Fin h₂),
+  400 ≤ m →
+    4 ≤ K →
+      ↑K ≤ ↑m / 100 →
+        UniformGapScale net T → K ^ 2 * Finset.card (neuronEvent net hn K T k) ≤ 400 * Fintype.card (Configuration m)
+@exists_neuron_event_counting_threshold : ∀ {m h₁ h₂ : ℕ} (net : NormalizedNetwork (m + 5) h₁ h₂)
+  (hn : NormalizedNetwork.TranslationNormalized net),
+  ∃ B,
+    2 ≤ B ∧
+      ∀ (T : ℝ),
+        B ≤ T →
+          ∀ (K : ℕ) (k : Fin h₂),
+            400 ≤ m →
+              4 ≤ K →
+                ↑K ≤ ↑m / 100 → K ^ 2 * Finset.card (neuronEvent net hn K T k) ≤ 400 * Fintype.card (Configuration m)
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.outer_density_fiber_count_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.outer_density_event_card_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.mem_tailFiber' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.card_eq_sum_tailFiber' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.sum_by_recording' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.clean_survival_card_le_sum' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.nativeMatchingCount_recorded_eq' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.enumerated_matchingCount_eq' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.enumeratedSlot_false' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.enumeratedSlot_true' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.native_matching_counting_le_four_hundred' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.uniform_gap_scale_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.exists_uniform_gap_scale_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.mem_neuronEvent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.good_implies_actualClean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.native_braid_matchingCount_eq' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.baseTail_eq_tailLabelEmbedding' depends on axioms: [Quot.sound,
+ propext]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.tail_braidGraph_edge_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.neuron_tail_card_le_of_clean_fiber_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.neuron_event_card_le_of_clean_fiber_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.activeMatchingEdges_card_eq_native' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.neuron_event_card_le_four_hundred' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.PerNeuron.exists_neuron_event_counting_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

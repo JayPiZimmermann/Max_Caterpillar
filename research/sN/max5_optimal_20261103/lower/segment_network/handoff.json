@@ -1,0 +1,33 @@
+{
+  "dependency_sources_absent_from_publication": [
+    "research/sN/max5_optimal_20261103/lower/segment_network/SegmentNetwork.lean",
+    "research/sN/max5_optimal_20261103/lower/segment_network/Statements.lean",
+    "research/sN/max5_optimal_20261103/lower/segment_network/verify.py",
+    "research/sN/max5_optimal_20261103/lower/width4_geometry/SegmentBalance.lean"
+  ],
+  "existing_dependency_source_drift": [],
+  "files": {
+    "research/sN/max5_optimal_20261103/lower/segment_network/README.md": "2da79b92d469198d149befb31ba2994de018256e663af106b7461a852b0e82e3",
+    "research/sN/max5_optimal_20261103/lower/segment_network/SegmentNetwork.lean": "bfcf70d29bf79b65375cce435c09bdb2d0735170894949e0607af416635316e2",
+    "research/sN/max5_optimal_20261103/lower/segment_network/Statements.lean": "b4d71c649786feed1a9f3f6157c2de36614bd4671b48d2db3d03c6be73b55e92",
+    "research/sN/max5_optimal_20261103/lower/segment_network/bridge_statement_audit.md": "687f503601a3bdf42067f5a1e70dce502c68e446609768a52214d6b7704ab098",
+    "research/sN/max5_optimal_20261103/lower/segment_network/build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/segment_network/build.log": "8e6b6083886664bb8133d595a4d8c50ade9152cb152d0d29d9fdcbffc68aae9e",
+    "research/sN/max5_optimal_20261103/lower/segment_network/dependency.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/segment_network/dependency.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/sN/max5_optimal_20261103/lower/segment_network/receipt.json": "469838870a24bc75d9eb93841c3e1074c1d2a44f93b81d56128a4f6f67906c64",
+    "research/sN/max5_optimal_20261103/lower/segment_network/segment_balance.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/segment_network/segment_balance.log": "6e73166a42f53b034ec8ba54ad2515c5ea7aa23fe0338b77d65006d1adb0cd53",
+    "research/sN/max5_optimal_20261103/lower/segment_network/segment_scalar.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/segment_network/segment_scalar.log": "bed46ae97eb3ebacdf4db2c38403f774a86aa062a3940aa07f08fb2bb07a3bc0",
+    "research/sN/max5_optimal_20261103/lower/segment_network/statements.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/segment_network/statements.log": "d8ba1629a97155c46be6c666e42ae97fe1c19f83cb1c4bba58d08ee3684da2d9",
+    "research/sN/max5_optimal_20261103/lower/segment_network/triple_contact.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/segment_network/triple_contact.log": "3da6c7eb61bc570af9ca002104a020ab3511f2ce7f6ed5062f453823169697f7",
+    "research/sN/max5_optimal_20261103/lower/segment_network/verify.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/segment_network/verify.log": "77923c36aa650d66bb4656d8829a979b85dcf3a0affbab4c629b81f887ba1f22",
+    "research/sN/max5_optimal_20261103/lower/segment_network/verify.py": "d549c84860721ae5212c76ac3d638aa79cfb7ed7d5ddf121e6bed2e7052f28eb"
+  },
+  "scope": "Actual homogeneous shallow-array segment bridge and support-three exclusion; not the full Max5 support classification.",
+  "status": "FROZEN_UNIT_BRIDGE_READY"
+}

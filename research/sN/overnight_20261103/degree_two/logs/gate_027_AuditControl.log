@@ -1,0 +1,7 @@
+research/sN/overnight_20261103/degree_two/AuditControl.lean:27:14: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+fourNet_degree : ∀ (k : Fin 1) (a : Fin 4),
+  SimpleGraph.degree (braidInteractionGraph fourNet fourNet_normalized k) a ≤ 1
+'MaxCaterpillar.Overnight.DegreeTwo.Audit.fourNet_graph_edges' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.Audit.fourNet_degree' depends on axioms: [propext, Quot.sound, Classical.choice]

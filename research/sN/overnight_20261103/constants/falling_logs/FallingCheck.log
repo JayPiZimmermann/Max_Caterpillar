@@ -1,0 +1,23 @@
+research/sN/overnight_20261103/constants/FallingCheck.lean:30:11: warning: unused variable `j` [linter.unusedVariables]
+@exact_model_type : ∀ {N n h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero n] (net : NormalizedNetwork N h₁ h₂),
+  TranslationNormalized net →
+    (∀ (x : Point N), eval net x = Maximum N x) →
+      2 * n ≤ N →
+        ∃ S,
+          Finset.card S = n ∧
+            ∃ model,
+              (∀ (x : Point n), eval model x = Maximum n x) ∧
+                TranslationNormalized model ∧
+                  16 * ∑ j : Fin h₁, Nat.descFactorial (Finset.card (rowSupport (A model j))) 4 ≤ 105 * h₁ ∧
+                    8 * Finset.card (Finset.filter (fun j => 3 ≤ Finset.card (rowSupport (A model j))) Finset.univ) ≤ h₁
+'MaxCaterpillar.Overnight.Constants.FallingHalf.Check.exact_model_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.FallingHalf.Check.equality_at_seven' depends on axioms: [propext]
+'MaxCaterpillar.Overnight.Constants.FallingHalf.Check.equality_at_eight' depends on axioms: [propext]
+'MaxCaterpillar.Overnight.Constants.FallingHalf.Check.joint_equality_at_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.FallingHalf.Check.empty_control' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

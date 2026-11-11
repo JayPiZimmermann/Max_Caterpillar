@@ -1,0 +1,18 @@
+@exists_active_second_on_set_feeding : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : NormalizedNetwork N h₁ h₂)
+  (hn : TranslationNormalized net),
+  (∀ (k : Fin h₂) (j : Fin h₁), W net k j ≠ 0 → Finset.card (rowSupport (A net j)) ≤ 2) →
+    (∀ (x : Point N), eval net x = Maximum N x) →
+      ∀ (S : Finset (Fin N)),
+        3 ≤ Finset.card S →
+          ∃ r,
+            d net r ≠ 0 ∧
+              Nat.card (SimpleGraph.ConnectedComponent (SimpleGraph.induce (↑S) (braidInteractionGraph net hn r))) ≤ 2
+'MaxCaterpillar.ExponentialPush.DegreeTwo.original_weight_ne_zero_of_localized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.exists_active_second_on_embedding_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.exists_active_second_on_set_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

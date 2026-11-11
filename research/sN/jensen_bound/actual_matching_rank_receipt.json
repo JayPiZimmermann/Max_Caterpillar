@@ -1,0 +1,285 @@
+{
+  "sources": [
+    {
+      "path": "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRow.lean",
+      "sha256": "e341f71c32c673ab072e5c6ca2631a8f9f6ab2081507971aac3c9a10382e9d6e",
+      "role": "owned source"
+    },
+    {
+      "path": "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingFlip.lean",
+      "sha256": "fa2fa5279c44ff957688fe886c84b6364948ce6c3b2a8b5c1ecd70aa4a8e018e",
+      "role": "owned source"
+    },
+    {
+      "path": "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingCleanFlip.lean",
+      "sha256": "c20cf4c8edbe99143156f30a28cfe12f4773840aea26c28d4c9e2442b78a3865",
+      "role": "owned source"
+    },
+    {
+      "path": "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRank.lean",
+      "sha256": "9d797b9a59b86e9dc20bb483dbf107f8a4d7449fc4defb20fcdcc47c4fcc7d49",
+      "role": "owned source"
+    }
+  ],
+  "check": "verification/h2/ActualMatchingRankCheck.lean",
+  "check_sha256": "50e49b34343883a4b1190ba4993dfb29529c6c27ef125bbaaf97a9c5a94e3241",
+  "producer": "verification/h2/check_actual_matching_rank.py",
+  "producer_sha256": "bdaf74b1d6a654b70a75dd368ff0727357948714398e09f989f327891a17f8b0",
+  "integrated": false,
+  "steps": [
+    {
+      "name": "ActualMatchingRow",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_actual_matching_rank_s0e466gx/MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRow.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRow.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_zero_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.restrict_braidRoot": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_sub_of_effective_difference": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/actual_matching_rank_ActualMatchingRow.log",
+      "log_sha256": "f16097e2f7b6f593e4a9c419b8f4904d7f561cdbb1cf2a28c44ce2f1fd8fdb4f"
+    },
+    {
+      "name": "ActualMatchingFlip",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_actual_matching_rank_s0e466gx/MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingFlip.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingFlip.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.actualEffectiveRow_matchingSwap_of_nonpair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_swap_of_nonpair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/actual_matching_rank_ActualMatchingFlip.log",
+      "log_sha256": "bc79253d558160b792f3281e71890adcd4a40232b9fc8e8f97614cce29da4138"
+    },
+    {
+      "name": "ActualMatchingCleanFlip",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_actual_matching_rank_s0e466gx/MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingCleanFlip.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingCleanFlip.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.actualClean_nonpair_not_dominant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_swap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/actual_matching_rank_ActualMatchingCleanFlip.log",
+      "log_sha256": "c793d1ad90a3dc47f671249a0389e515ae5d7f9701fb2c37c2f4b152d34eb3e5"
+    },
+    {
+      "name": "ActualMatchingRank",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "-o",
+        "/tmp/max_caterpillar_actual_matching_rank_s0e466gx/MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRank.olean",
+        "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRank.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_fiber_flip": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.actualClean_fiber_survival_fraction_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/actual_matching_rank_ActualMatchingRank.log",
+      "log_sha256": "a717f5be3dd05fce3dbd9cbaddedc79c7353232ed6a4410f891b66282592c059"
+    },
+    {
+      "name": "ActualMatchingRankCheck",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "verification/h2/ActualMatchingRankCheck.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_zero_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_swap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_fiber_flip": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "MaxCaterpillar.Frontier.RandomRestriction.actualClean_fiber_survival_fraction_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ActualMatchingRankCheck.oneEdge_normalized": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ActualMatchingRankCheck.oneEdge_weight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/actual_matching_rank_ActualMatchingRankCheck.log",
+      "log_sha256": "a11f1801891175545b13194e1a20053dbd720ca0aa9270f74aad969c4c4d0364"
+    },
+    {
+      "name": "ActualCleanSanityCheck",
+      "command": [
+        "/home/jzimmermann/.elan/toolchains/leanprover--lean4---v4.4.0/bin/lean",
+        "-j1",
+        "verification/h2/ActualCleanSanityCheck.lean"
+      ],
+      "exit_code": 0,
+      "axioms": {
+        "ActualCleanSanityCheck.cancellationNet_normalized": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ActualCleanSanityCheck.cancellation_row_support": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "ActualCleanSanityCheck.last_gap_is_selected_isolated": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "ActualCleanSanityCheck.cancellation_row_dominant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ActualCleanSanityCheck.cancellation_example_not_clean": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "log": "research/sN/jensen_bound/actual_matching_rank_ActualCleanSanityCheck.log",
+      "log_sha256": "faa7af2bca0fc12428f69b2258dfd5422442d0a5349bcc744ca9324561dc5261"
+    }
+  ],
+  "project_source_closure": {
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRow.lean": "e341f71c32c673ab072e5c6ca2631a8f9f6ab2081507971aac3c9a10382e9d6e",
+    "MaxCaterpillar/Frontier/RandomRestriction/CleanActivation.lean": "8f4aa5d1dc0a68d57bd768d6b65093f903a9df361f41472468ee5e0658b594f6",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualClean.lean": "374b31b5bdb9ddd1f134b3b408a957bc5c600d6acb01a6955d4222c41bda51c8",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingFiber.lean": "d9495f336349fe3b4992b6edf209082b8e495fde4f063804db7132634bfb5683",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingCoins.lean": "42d33bf5d0af21a711d4f199a84fc94c0bd3bbf4d24860eb91144c2a8a504189",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinUniformity.lean": "306023fc21fbdf8378ba23f2e36760ce7a0b12cabf00877d633bbff77a675391",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesPairs.lean": "515d28e6cce775955349aee9c60745479257540fd743c6995640e51919cb61e8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesGeometry.lean": "3f7adb96877fc48da14894892261384b7b20ad7c474b78cb93183e0e953e6903",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventCherriesDefs.lean": "f7b5f7f8465a7813e6a97377154173966dc5951ad1a9f2ff5669fa701c251be5",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/PrefixSwapDominance.lean": "8eb7ce7b621dd93e887e37e3bf0974be643ebe31c1c9d8fd26acb569dc5c141c",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/PrefixSwap.lean": "e2d5c976bbb57853443ea7f5cad408e0090099d163d490c1c093f1adefeefbe1",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/GapPolynomial.lean": "d9892966c78c2c6f12e56bed52fd15d59dd4250a8652501190bfeb8abdac10b6",
+    "MaxCaterpillar/Frontier/RandomRestriction/CartesianRaw.lean": "eedc006eef25d1bfebc5a240cd859f5ee1bdc94a914e8dd0924193b56f5de90d",
+    "MaxCaterpillar/Frontier/RandomRestriction/CartesianInorder.lean": "30f6822a723735f028972fe07dfbae025044459f1b46489121e40c8192a488a7",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/DominantSwap.lean": "0b52175c91008a5a58f429c0824ae29034e7301bf6bc6d21578046f7f5e1a4e2",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Realization.lean": "0c0b9d5bd47d382dfd01bf7c483aa71235b9111601c8fe777e076173998770ce",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Powers.lean": "bfe961316461720993d761645768e326ebc955a4173c4ba398e0576c3e9aa1e6",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/LiftedPoint.lean": "080043342480108f9f9db2e83a1d166683fee09483d6b07e7463bfbabd2bdb88",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Directional.lean": "7197b086fd35fb5fc5761d0dfc32c71791da992d293468811041e948f238e261",
+    "MaxCaterpillar/Frontier/RandomRestriction/NormalizedNetwork/Model.lean": "f93c46e75b9f7346fa181d3378f8e1dff5acab6486c96508ef975de010b14729",
+    "MaxCaterpillar/Frontier/Asymptotics.lean": "74f2c827fef9c776c30ee902a756ef69d3dfa9a39a7272d4119d055032f7dc30",
+    "MaxCaterpillar/Frontier/Basic.lean": "47ff6904c8471b8bded4f4d4990de0d60cf23ceea727ffde66b8bfc425a19820",
+    "MaxCaterpillar/Definitions.lean": "53c4011b28721f26cffe6978327dfd2b2b17c3f52150f71766af1e29db2ba3be",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/Linearization.lean": "8f782960379dbbc307bc51abed59811026a0f74e90e34071354eb3e65c537edb",
+    "MaxCaterpillar/Frontier/RandomRestriction/EffectiveCoinDifference.lean": "5e93c6a8c7f18579f9686f62817125790073e5f833e2dc389cdb094b4841404a",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidCoinColumn.lean": "5388fe1077a28b7d9870ac01bed86c5c1c8f46544798bc3def85e3f2a8eae285",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRank.lean": "1a9b7c4b8314b2f7834b78c87a371fed73f7f067f8b3ae52a6c633feebf28f71",
+    "MaxCaterpillar/Frontier/RandomRestriction/BraidCoinActivation.lean": "27f91781361458362608fc2cf90650e83c17451348f998a6fb840d4f39e67d15",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/NetworkRealization.lean": "6fa5cb819aaad38ba52a39f715995391432154cc877f9fb55269fdeefba53ebc",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingFlip.lean": "fa2fa5279c44ff957688fe886c84b6364948ce6c3b2a8b5c1ecd70aa4a8e018e",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingCleanFlip.lean": "c20cf4c8edbe99143156f30a28cfe12f4773840aea26c28d4c9e2442b78a3865",
+    "MaxCaterpillar/Frontier/RandomRestriction/DominantGap/DominantPairSupport.lean": "7a77f7fe7bc1019144585847a8db5d893e7197d9e3edfd48e62c48cebf4dfe8b",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRank.lean": "9d797b9a59b86e9dc20bb483dbf107f8a4d7449fc4defb20fcdcc47c4fcc7d49",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingColumnOrientation.lean": "4bab6ef8574c7301754e82b3f9bc1f8a7c8a54bd152f93f135522917d36c7ed1",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingColumns.lean": "3ba2e84f170484a65c3f4c03a9155d40cec96fb9546a6ca2247a2ee8b78ab3b2",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingRank.lean": "596171f2868661dd7bb7be4931fe1162a226e17264fe673f1243421bade2b9df",
+    "MaxCaterpillar/Frontier/RandomRestriction/MatchingAffine.lean": "c3c0a0d5903e9f4539c989492ee67855e8f466859d6423915c2cc7e14c471263",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinUniformityRank.lean": "087174e19b7f5984e87e7960ceb9d9f5fc3e82fe8825520c04fa7d0ed98a258d",
+    "MaxCaterpillar/Frontier/RandomRestriction/StructuralWitness/Graph.lean": "5c1036e48aac2eeb7b6643e88cdc599045e31cd1c2641983e1f4650af818e2be",
+    "MaxCaterpillar/Frontier/StarCertificate/SmallMatchingGraph.lean": "a2f38746094baed1347e98ca6d625ee63dc96853d0f1fe3c77784e4226182d09",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "verification/h2/ActualMatchingRankCheck.lean": "50e49b34343883a4b1190ba4993dfb29529c6c27ef125bbaaf97a9c5a94e3241",
+    "verification/h2/ActualCleanSanityCheck.lean": "0973cc5fbc43db14fb9746ed665c291036b2d3ceeaa5d199e7d27fc1bd71f746"
+  },
+  "freshly_rebuilt": [
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRow.lean",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingFlip.lean",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingCleanFlip.lean",
+    "MaxCaterpillar/Frontier/RandomRestriction/ActualMatchingRank.lean"
+  ],
+  "independent_checks": {
+    "verification/h2/ActualMatchingRankCheck.lean": "50e49b34343883a4b1190ba4993dfb29529c6c27ef125bbaaf97a9c5a94e3241",
+    "verification/h2/ActualCleanSanityCheck.lean": "0973cc5fbc43db14fb9746ed665c291036b2d3ceeaa5d199e7d27fc1bd71f746"
+  },
+  "sources_unchanged": true,
+  "check_unchanged": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": true,
+  "closure_unchanged": true,
+  "owned_lexical_passed": true,
+  "checks_unchanged": true,
+  "success": true
+}

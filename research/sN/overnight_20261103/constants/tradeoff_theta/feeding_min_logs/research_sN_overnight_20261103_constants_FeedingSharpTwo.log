@@ -1,0 +1,36 @@
+Try this: ring_nf
+@actual_event_cover : ∀ {m h₁ h₂ : ℕ} (net : NormalizedNetwork (m + 5) h₁ h₂) (hn : TranslationNormalized net),
+  (∀ (x : Point (m + 5)), eval net x = Maximum (m + 5) x) →
+    ∀ (K : ℕ) (T : ℝ),
+      CommonGapScale net T →
+        Finset.univ ⊆
+          BadFirst.configurationBadFirstEvent 5 m (firstSupports (FeedingCore.core net)) ∪ shortRankEvent 5 m K ∪
+              feedingBadConfigurationsThree 5 (firstSupports (FeedingCore.core net)) K ∪
+            Finset.biUnion Finset.univ
+              (actualNeuronEvent (FeedingCore.core net) (_ : TranslationNormalized (FeedingCore.core net)) 2 K T)
+@finite_transfer_of_shortRank_bound : ∀ {m h₁ h₂ : ℕ} (net : NormalizedNetwork (m + 5) h₁ h₂),
+  TranslationNormalized net →
+    (∀ (x : Point (m + 5)), eval net x = Maximum (m + 5) x) →
+      ∀ (K : ℕ),
+        2 ≤ m →
+          0 < K →
+            K < m →
+              ∀ (bQ : ℝ),
+                ↑(Finset.card (shortRankEvent 5 m K)) / ↑(Fintype.card (Configuration 5 m)) ≤ bQ →
+                  1 - bQ -
+                        ↑(GrowingMatching.BadFirst.largeSupportCount (firstSupports (FeedingCore.core net))) * 60 /
+                          ↑(Nat.descFactorial (m + 5) 3) -
+                      (∑ j : Fin h₁, ↑(Nat.descFactorial (Finset.card (firstSupports (FeedingCore.core net) j)) 4)) /
+                          ↑(Nat.descFactorial (m + 5) 4) *
+                        (↑K ^ 2 * (1 + 5 / ↑m) / (1 - ↑K / ↑m) + 10 * ↑K) ≤
+                    ↑h₂ * (2 / 7) * (120 / ↑(Nat.descFactorial (m + 5) 4)) * (tailRate m K ^ 2)⁻¹ *
+                      Real.exp (tailRate m K * (5 * (↑m + 4)))
+'MaxCaterpillar.Overnight.Constants.Feeding.matchingOn_two_of_embedded_twoDisjoint' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.Constants.Feeding.actual_event_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.Feeding.finite_transfer_of_shortRank_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

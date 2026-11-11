@@ -1,0 +1,37 @@
+braid_parameter_bounds : ∀ (n q : ℕ), 1 ≤ q → 160000 * q ^ 2 ≤ n → BraidParameterBounds n q
+@falling_tail_envelope_le : ∀ {m k K q : ℕ},
+  2 ≤ m →
+    0 < K →
+      2 * q ≤ k →
+        ↑(Nat.descFactorial k (2 * q)) / ↑(Nat.descFactorial (m + k) (2 * q)) * (tailRate m K ^ q)⁻¹ ≤
+          (24 * ↑k ^ 2 / (7 * ↑K)) ^ q
+@exp_shift_le : ∀ {m k K q : ℕ},
+  2 ≤ m → 100 * K ≤ m → m + k + 2 ≤ 3 * m → k ≤ 5 * q → Real.exp (tailRate m K * (↑k * (↑m + ↑k - 1))) ≤ (7 / 6) ^ q
+@perNeuronEnvelope_le_four_sq_div_pow : ∀ {m k K q : ℕ},
+  2 ≤ m →
+    0 < K → 2 * q ≤ k → 100 * K ≤ m → m + k + 2 ≤ 3 * m → k ≤ 5 * q → perNeuronEnvelope m k K q ≤ (4 * ↑k ^ 2 / ↑K) ^ q
+braid_envelope_le : ∀ (n q : ℕ),
+  1 ≤ q → 160000 * q ^ 2 ≤ n → perNeuronEnvelope (braidTail n q) (braidArity q) (braidRanks n q) q ≤ (1 / 4) ^ q
+@BraidCorollary.conditional_braid_integer_q_lower_bound : ∀ {n h₁ h₂ : ℕ} (q : ℕ) (hq : 1 ≤ q)
+  (hsize : 160000 * q ^ 2 ≤ n),
+  LocalMatchingObstruction (braidArity q) q →
+    ∀ (net : NormalizedNetwork n h₁ h₂),
+      NormalizedNetwork.TranslationNormalized net →
+        (∀ (x : Point n), NormalizedNetwork.eval net x = Maximum n x) →
+          (∀ (j : Fin h₁), Finset.card (NormalizedNetwork.rowSupport (NormalizedNetwork.A net j)) ≤ 2) →
+            23 / 25 * 4 ^ q ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braid_parameter_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.falling_tail_envelope_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.exp_shift_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braid_envelope_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.BraidCorollary.conditional_braid_integer_q_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

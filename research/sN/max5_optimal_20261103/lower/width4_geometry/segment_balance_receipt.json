@@ -1,0 +1,24 @@
+{
+  "claim": "Scalar segment balance, literal consumer, and nonvacuity control pass Lean",
+  "scope": "Isolated research declarations checked against existing imported artifacts; not a clean transitive rebuild or an actual-network-to-segment bridge.",
+  "declarations": [
+    "MaxCaterpillar.Max5Optimal.SegmentBalance.crossing_balanced",
+    "MaxCaterpillar.Max5Optimal.SegmentBalance.coordinates_balanced",
+    "MaxCaterpillar.Max5Optimal.SegmentBalance.balanced_control"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "exit_code": 0,
+  "hashes": {
+    "SegmentBalance.lean": "34ab7b27969073bc624b00e3f6ae1b83ac8d36354f77f68704c9789723d0038c",
+    "SegmentScalar.lean": "d0d8c50abc6c1cbf83832b2894e6fd2b50001e18c49b2e6368481ea19b94befa",
+    "segment_balance.log": "6e73166a42f53b034ec8ba54ad2515c5ea7aa23fe0338b77d65006d1adb0cd53",
+    "segment_balance.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "import_artifact": ".lake/build/lib/research/sN/max5_optimal_20261103/lower/width4_geometry/SegmentScalar.olean",
+  "output_artifact": ".lake/build/lib/research/sN/max5_optimal_20261103/lower/width4_geometry/SegmentBalance.olean",
+  "balanced_control": "Both curves equal ReLU(2t-1)-ReLU(2t-1), identically zero; exceptional hinge slope is2, nonzero."
+}

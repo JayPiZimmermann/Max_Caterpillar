@@ -1,0 +1,31 @@
+[4051/4052] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Selected
+stdout:
+@selectedEvent_card_mul_le_choose : ∀ {n k q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+  k ≤ n →
+    Finset.card (selectedEvent G k q) * Nat.descFactorial n (2 * q) ≤
+      Nat.choose (Finset.card (SimpleGraph.edgeFinset G)) q *
+        (Nat.descFactorial k (2 * q) * Fintype.card (Equiv.Perm (Fin n)))
+@selectedEvent_card_mul_factorial_le : ∀ {n k q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+  k ≤ n →
+    Nat.factorial q * (Finset.card (selectedEvent G k q) * Nat.descFactorial n (2 * q)) ≤
+      Finset.card (SimpleGraph.edgeFinset G) ^ q * (Nat.descFactorial k (2 * q) * Fintype.card (Equiv.Perm (Fin n)))
+@selectedEvent_fraction_le : ∀ {n k q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+  k ≤ n →
+    ↑(Finset.card (selectedEvent G k q)) / ↑(Fintype.card (Equiv.Perm (Fin n))) ≤
+      ↑(Finset.card (SimpleGraph.edgeFinset G)) ^ q / ↑(Nat.factorial q) *
+        (↑(Nat.descFactorial k (2 * q)) / ↑(Nat.descFactorial n (2 * q)))
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.containment_card_mul_descFactorial' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.matchingVertices_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_card_mul_factorial_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

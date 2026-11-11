@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-02T15:36:34.408961+00:00",
+  "scope": "For every selected arity k, including zero and one, literal GrowingMatching supportBadAt and supportBadConfigurations events have four distinct original support labels. No lower bound on k and no geometry, probability or support-weight assumption is imposed.",
+  "not_claimed": "The parent dominant-gap semantic bridge or probability bounds.",
+  "modules": [
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.Cardinality"
+  ],
+  "exact_type_driver": "verification/h2/GrowingGoodEventCardinalityCheck.lean",
+  "axiom_checks": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.support_bad_requires_card_four",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.support_bad_configuration_requires_card_four",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventGeometry.lean": "70c159b881fd6aee73dbd3d1688f40756fa1a05de5ed1d36a1ce82815b97512a",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventRoles.lean": "587e071cf520dcd2f6b8d441df558f79539d29ce2bdfb04c5fc85cfec830f63e",
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/Deletion.lean": "0afd322d837bcd7cec2e3cc8a8952b7351d565b1a19bd77e4a7f61fc665a1584",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ConfigurationsGeometry.lean": "73bca36b6f5c23aead42d396234973c84594569ea5824751312e2ece9b50cfae",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventDominance/Cardinality.lean": "39e8f4591ce436b75c0283c21fbefead7e09df56e7fc6789a55ed5819212fae5",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventMembership.lean": "e4a1b6e6bd08165b9f2764eeb772d5ddb8401be8df17b11991ffc482c37b1fc7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/GoodEventPlacements.lean": "651334b144c078400979e5f5708b52e69289ae2bcc9a5669bcbb02445e14aeb7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Selected.lean": "4db12f9634fa0cbee58c879c46abc5a666e523a23caf2a9e6a286488e0d410b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuplesRoles.lean": "c401cea9120b7e66c76f4cc8b45b2548f8283ab0e3b118a2501be20b57f07630",
+    "verification/h2/GrowingGoodEventCardinalityCheck.lean": "b8bbfd94e214d7df486502af34f50bd96dbcca7f107ac1697637174d6762a678"
+  },
+  "project_import_closure_sources": 14,
+  "source_closure_stable_during_verification": true,
+  "exact_log_sha256": "e9d47cae72376d35e66a273ea8f275f2f5a4bdff8dd89b514e6c632cc01d26bf",
+  "recheck_script_sha256": "e130a0675fc0df0870288172475f1a5b875d7959cca5bff9abe339082db77b7c",
+  "toolchain_sha256": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+  "lake_manifest_sha256": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+  "receipt_kind": "Scoped working-tree module/type/axiom receipt; no clean publication gate is claimed.",
+  "reproduce": "python3 research/sN/jensen_bound/growing_good_event_cardinality_recheck.py"
+}

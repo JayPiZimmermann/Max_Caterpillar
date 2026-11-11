@@ -1,0 +1,10 @@
+'MaxCaterpillar.ExponentialPush.ForestMatching.walk_difference_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.ForestMatching.indexedGraph_mono' depends on axioms: [propext, Quot.sound]
+'MaxCaterpillar.ExponentialPush.ForestMatching.exists_oriented_cycle_of_not_acyclic' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.indexedGraph_oriented_cycle' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

@@ -1,0 +1,91 @@
+{
+  "status": "finite weighted size-bias Laplace theorem and scalar 400 assembly verified; actual permutation coupling separate",
+  "analytic_module": "MaxCaterpillar.Frontier.RandomRestriction.CoinRankSizeBias",
+  "scalar_module": "MaxCaterpillar.Frontier.RandomRestriction.CoinRankSizeBiasConstants",
+  "analytic_scope": "normalized nonnegative finite weights, nonnegative mean, standard all-test-functions finite size-bias identity and pointwise Y<=X+c; negative Laplace parameters",
+  "analytic_bound": "finiteLaplace p X t <= exp((mu/c)*(exp(c*t)-1)), t<=0",
+  "natural_count_bound": "sum p*theta^X <= exp(-mu*(1-theta^3)/3), 0<theta<=1, coupling radius3",
+  "scalar_scope": "m>=400, 0<K<=m/100, eta>=0, all real",
+  "scalar_bound": "60*eta^2/m^4 * exp(-(7/24)*K*(eta-5*(m+4))/m^2) <= 400/K^2",
+  "main_declarations": [
+    "finiteLaplace_le_of_bounded_size_bias",
+    "finite_geometric_le_of_size_bias_three",
+    "matching_counting_expression_le_four_hundred"
+  ],
+  "nonvacuity": "constant-one source and biased variable on a normalized one-state finite space, positive mean1 and coupling radius3",
+  "commands": [
+    "lake build MaxCaterpillar.Frontier.RandomRestriction.CoinRankSizeBiasConstants",
+    "lake env lean -j1 verification/h2/SizeBiasCheck.lean"
+  ],
+  "exit_code": 0,
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBias.lean": "56fd341de70bc3acced37fb94609013a82027125fa1e0869bc50f64d95210e03",
+    "MaxCaterpillar/Frontier/RandomRestriction/CoinRankSizeBiasConstants.lean": "e2235ebe52baf5caa30c132523b509cbb76875e07a99a4ba533da0a8f90e5f51",
+    "verification/h2/SizeBiasCheck.lean": "937e51d7c557b1d0f70c9b001dd5f395dc39e32f8b267c22495888de6ee2d18d"
+  },
+  "axiom_audit": {
+    "MaxCaterpillar.Frontier.RandomRestriction.hasDerivAt_finiteLaplace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.finiteLaplace_derivative_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.finiteLaplace_le_of_bounded_size_bias": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.finite_geometric_le_of_size_bias_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.square_mul_exp_neg_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.exp_ninety_nine_fiftieths_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.shifted_square_exp_le_four_hundred": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.deletion_shift_le_one_fiftieth": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.matching_counting_expression_le_four_hundred": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_scan": "canonical scripts/verify.py comment-stripped lexical check passed on scoped files",
+  "primary_source": {
+    "authors": [
+      "Richard Arratia",
+      "Peter Baxendale"
+    ],
+    "arxiv": "1306.0157",
+    "result": "Proposition4.1",
+    "url": "https://arxiv.org/abs/1306.0157"
+  },
+  "not_proved_here": [
+    "actual permutation forcing size-bias identity and damage bound (matching worker)",
+    "actual Cartesian-tree coin uniformity and neuron-affine dependence",
+    "local graph two-disjoint-edge count",
+    "end-to-end h2 network lower bound"
+  ],
+  "integration": "built analytic/scalar leaves and exact scoped consumer; stable public root integration delegated",
+  "receipt_scope": "dirty shared workspace, content-bound scoped receipt"
+}

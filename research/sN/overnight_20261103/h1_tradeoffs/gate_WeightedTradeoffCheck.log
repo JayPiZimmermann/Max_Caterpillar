@@ -1,0 +1,31 @@
+@exact_weighted_support_contract : ∀ {N h₁ h₂ : ℕ} (d : ℕ) (hd : 1 ≤ d) (hsize : 10000000000 * d ^ 2 ≤ N / 2),
+  LocalMatchingObstruction (4 * ⌊Real.sqrt ↑(N / 2) / (8000 * ↑d)⌋₊ + 1) ⌊Real.sqrt ↑(N / 2) / (8000 * ↑d)⌋₊ →
+    ∀ (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Fin N → ℝ)
+      (theta outerCoeff : Fin h₂ → ℝ) (B : Fin h₁ → ℝ) (L : Fin N → ℝ) (beta : ℝ),
+      (∀ (x : Fin N → ℝ),
+          ∑ k : Fin h₂,
+                outerCoeff k *
+                  max
+                    (∑ j : Fin h₁, W k j * max (∑ i : Fin N, A j i * x i + b j) 0 + ∑ i : Fin N, U k i * x i + theta k)
+                    0 +
+              (∑ j : Fin h₁, B j * max (∑ i : Fin N, A j i * x i + b j) 0 + ∑ i : Fin N, L i * x i + beta) =
+            Maximum N x) →
+        (∑ j : Fin h₁,
+              let r := Finset.card (Finset.filter (fun i => A j i ≠ 0) Finset.univ);
+              if b j = 0 ∧ ∑ i : Fin N, A j i = 0 ∧ ∃ k, W k j ≠ 0 then
+                (if r ≤ N / 2 then ↑(if 3 ≤ r then max 1 (Nat.descFactorial r 4) else 0) else 0) / 2 ^ r
+              else 0) ≤
+            ↑d ^ 2 * ↑(N / 2) ^ 2 →
+          1 / 2 * Real.exp (3 * Real.sqrt ↑(N / 2) / (8000 * ↑d)) ≤ ↑h₂
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.Audit.exact_weighted_support_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.Audit.exact_cost_at_small_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.Audit.exact_clipped_cost_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_support_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

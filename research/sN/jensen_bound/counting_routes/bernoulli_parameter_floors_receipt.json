@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "hypotheses": "d:Nat,1<=d,n:Nat,10^10*d^2<=n.",
+  "scope": "Exact scalar size, positivity and floor conditions for the literal Bernoulli definitions. No probability, support-budget, neuron-envelope, structural hypothesis or network lower bound is assumed or proved here.",
+  "main_declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.parameter_bounds",
+  "main_type": "ParameterBounds n d",
+  "bounds": [
+    "n,d,sqrt(n)>0",
+    "mu>=100",
+    "0<p<=1/1000<=1",
+    "q>=1",
+    "mu/9<=q<=mu/8",
+    "k0<=3mu/5",
+    "cap<=2mu",
+    "cap<=n",
+    "m0+cap=n",
+    "n<=2m0",
+    "m0>=400",
+    "K>=4",
+    "100K<=m0",
+    "delta*n/2<=K<=delta*n",
+    "0<delta<=1/1000",
+    "k0<=cap"
+  ],
+  "exact_identities": [
+    "p*n=mu",
+    "p^2*n=alpha^2",
+    "mu^2=alpha^2*n",
+    "alpha^2=1/(10^6*d^2)",
+    "K=Nat.floor((n:Real)/(1000*(d:Real)^2))"
+  ],
+  "verification": "Symbolic expected-type and axiom audit only; no concrete numeric square-root evaluation.",
+  "axiom_checks": {
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.parameter_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.probability_mul_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.probability_sq_mul_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.mean_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.alpha_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.rankCount_eq_floor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/Defs.lean": "5e7bf088bcae2e2a8bd0789fc1872a74f2abff107bc625aae558d9523533a894",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/Floors.lean": "9ebd5aab55ae8254c6e40d01f5d8f660dcf49afa2ffcd3475f626ed61ffafcf0",
+    "verification/h2/BernoulliParameterFloorsCheck.lean": "c5d98a7ed597fdad406d1341ded1f685f123fc5b2a7983a208a28cb9e0d60489",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameter_floors_receipt.py": "c0e6bb98efe9a544c2bffa53a87766d9b420681781aac42a387b3e3c34fec5e4",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameter_defs_final_build.log": "58db4efd9445c078d4130bd3bfa76cd0711e547203b1a4d3fc2bd54d56ffe39e",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameter_defs_final_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameter_floors_algebra_build.log": "f5212e4d6385c873590a78c177eb10835449ccd975a48d4934309697475067a4",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameter_floors_algebra_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameter_floors_check_final.log": "fe3f35f620a55f0f9dcc0a8c2011699a80d7dfc97a5b6757fe9e26ff9942a152",
+    "research/sN/jensen_bound/counting_routes/bernoulli_parameter_floors_check_final.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  }
+}

@@ -1,0 +1,9 @@
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.Feeding.Check.exact_raw_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.Feeding.Check.exact_quadratic_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.TradeoffTheta.Feeding.Check.actual_max_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

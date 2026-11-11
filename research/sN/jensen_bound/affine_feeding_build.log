@@ -1,0 +1,55 @@
+[5412/5426] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingCore
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.core_inner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.core_edgeWeight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.absorb_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.absorb_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5422/5426] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingWitness
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.exists_original_matching_of_feeding_braid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.exists_original_outer_at_localization_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.structural_witness_of_generic_embedding_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5423/5426] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingCounting
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.feeding_neuron_event_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.model_counting_feeding_on_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5424/5426] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingHalf
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.feedingCard_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.exists_feeding_half_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5425/5426] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingTransfer
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.exists_feeding_half_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.normalized_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingCore.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

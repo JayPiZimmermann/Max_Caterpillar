@@ -1,0 +1,59 @@
+{
+  "evidence": "Diagnostic working-tree receipt. Five exact expected types are checked by SupportBoundsCheck.lean; no public-root integration or clean committed closure claimed.",
+  "producer": "flock /tmp/max_caterpillar_count65_small_lean_1.lock: lake env lean -o <SupportBounds.olean> <SupportBounds.lean>, then lake env lean <SupportBoundsCheck.lean>; python3 <this support_bounds_audit.py>",
+  "claims": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_two_card_mul_cube_le_mass_noInternalEvent",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_inter_ge_sub_compl",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_admissibleSets_floor_two_mean_ge",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_card_lt_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_admissibleSets_card_lt_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Weight.lean": "599a38f9d093f7e086c37c95dc814e6c8328224546f6197a69383618e498e27b",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Association.lean": "e4894e705ef320fec2fa3cfd85e86f7f588756db3a241f3f4f55309e7d04d261",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Support.lean": "2c4ee5fbdc8d5df80aa2eb3eec90e5dffa5dc95928594534ad3352364338a6b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Mgf.lean": "52e96b27fc6abfdfcd82170af35def62ebec38be37ae23fcb6e28debf36eaa33",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Tails.lean": "61f7fa49d31d07bf37ffe48f925e6ad35681569ac72bc4ebfba424dcff7ba636",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/SupportBounds.lean": "7361e80fae2a34d32c565d133703a832e8cdaa57ce6371bb2d56826f4ee40f6d",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/counting_routes/bernoulli_tails/SupportBoundsCheck.lean": "7aed4706a9f2972352ace6748c947eced1aa9a34123e84c04b915536723e1762",
+    "research/sN/jensen_bound/counting_routes/bernoulli_tails/support_bounds_check.log": "cdd0f5e493baa8ab5cb461470beb898e33df7e5a841cd4adee99d54bc0ff98c6",
+    "research/sN/jensen_bound/counting_routes/bernoulli_tails/support_bounds_audit.py": "70e346c188b658b2450159e06c19b32d17db0aaec1757057293aa227915343be"
+  }
+}

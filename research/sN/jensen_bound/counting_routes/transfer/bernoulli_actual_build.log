@@ -1,0 +1,9 @@
+[4202/4209] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.TailEnvelope
+stdout:
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/TailEnvelope.lean:113:7: warning: unused variable `hnR` [linter.unusedVariables]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/TailEnvelope.lean:142:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/TailEnvelope.lean:142:42: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/TailEnvelope.lean:145:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/TailEnvelope.lean:145:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/TailEnvelope.lean:145:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+[4208/4209] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.ActualModel

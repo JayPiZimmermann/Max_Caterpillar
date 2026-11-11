@@ -1,0 +1,25 @@
+[5353/5428] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingSharpScalar
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.counting_raw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.compare_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.forty_million_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.linear_absorption' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[5427/5428] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.normalized_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

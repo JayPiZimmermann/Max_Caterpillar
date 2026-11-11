@@ -1,0 +1,51 @@
+@finite_conditional_bound : ∀ {n k₀ q h₁ h₂ : ℕ} [inst : NeZero n] [inst_1 : NeZero k₀],
+  LocalMatchingObstruction k₀ q →
+    0 < q →
+      ∀ (net : NormalizedNetwork n h₁ h₂),
+        NormalizedNetwork.TranslationNormalized net →
+          (∀ (x : Point n), NormalizedNetwork.eval net x = Maximum n x) →
+            ∀ (p : ℝ),
+              0 ≤ p →
+                p ≤ 1 / 2 →
+                  ∀ (K : ℕ),
+                    ↑k₀ ≤ 3 * (↑n * p) / 5 →
+                      0 <
+                          Real.exp (-2 * ↑(Finset.card (largeSupports (firstSupports net))) * p ^ 3) -
+                            Real.exp (-(↑n * p) / 3) →
+                        4 ≤ n - ⌊2 * (↑n * p)⌋₊ →
+                          4 ≤ K →
+                            K < n - ⌊2 * (↑n * p)⌋₊ →
+                              1 -
+                                      Real.exp (-3 * (↑n * p) / 40) /
+                                        (Real.exp (-2 * ↑(Finset.card (largeSupports (firstSupports net))) * p ^ 3) -
+                                          Real.exp (-(↑n * p) / 3)) -
+                                    8 * ↑K / ↑(n - ⌊2 * (↑n * p)⌋₊) -
+                                  (∑ j : Fin h₁, ↑(Nat.descFactorial (Finset.card (firstSupports net j)) 4)) *
+                                    GoodEvent.badSupportRate p (n - ⌊2 * (↑n * p)⌋₊) K ≤
+                                ↑h₂ * (p ^ 2 / ambientRate n K) ^ q *
+                                  Real.exp (ambientRate n K * (↑⌊2 * (↑n * p)⌋₊ * (↑n - 1)))
+@conditional_sqrt_lower_bound : ∀ {n d h₁ h₂ : ℕ} [inst : NeZero n],
+  1 ≤ d →
+    10000000000 * d ^ 2 ≤ n →
+      LocalMatchingObstruction (Parameters.minimumArity n d) (Parameters.matchingOrder n d) →
+        ∀ (net : NormalizedNetwork n h₁ h₂),
+          NormalizedNetwork.TranslationNormalized net →
+            (∀ (x : Point n), NormalizedNetwork.eval net x = Maximum n x) →
+              ↑(Finset.card (largeSupports (firstSupports net))) ≤ ↑d ^ 2 * ↑n ^ 2 →
+                ∑ j : Fin h₁, ↑(Nat.descFactorial (Finset.card (firstSupports net j)) 4) ≤ ↑d ^ 2 * ↑n ^ 2 →
+                  1 / 2 * Real.exp (3 * Real.sqrt ↑n / (8000 * ↑d)) ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.actual_raw_event_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.conditional_union_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.finite_conditional_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.conditional_sqrt_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.localMatchingObstruction_five_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

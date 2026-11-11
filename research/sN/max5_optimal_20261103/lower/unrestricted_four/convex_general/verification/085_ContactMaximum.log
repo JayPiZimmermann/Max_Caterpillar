@@ -1,0 +1,19 @@
+@tied_Maximum_eq_level : ∀ {N m : ℕ} [inst : NeZero N] [inst_1 : NeZero m] (e : Fin m ↪ Fin N) (q : Point N) (M : ℝ),
+  (∀ (a : Fin m), q (e a) = M) → (∀ i ∉ Finset.image (⇑e) Finset.univ, q i < M) → Maximum N q = M
+@eventually_tied_Maximum_at_level : ∀ {N m : ℕ} [inst : NeZero N] [inst_1 : NeZero m] (e : Fin m ↪ Fin N) (q : Point N)
+  (M : ℝ),
+  (∀ (a : Fin m), q (e a) = M) →
+    (∀ i ∉ Finset.image (⇑e) Finset.univ, q i < M) →
+      ∀ (x : Point m), ∀ᶠ (ε : ℝ) in 𝓝[>] 0, Maximum N (q + ε • lift e x) = M + ε * Maximum m x
+'MaxCaterpillar.Max5Optimal.ConvexCores.tied_Maximum_eq_level' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.eventually_tied_Maximum_at_level' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.contactVertex_Maximum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.eventually_contactVertex_Maximum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

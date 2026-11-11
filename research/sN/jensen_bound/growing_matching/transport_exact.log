@@ -1,0 +1,36 @@
+@exact_transport_contract : ∀ {m n q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (f : Fin m ↪ Fin n),
+  ∀ B ∈ matchings (SimpleGraph.comap (⇑f) G) q,
+    ∃ C ⊆ SimpleGraph.edgeFinset G,
+      Finset.card C = q ∧
+        (∀ e ∈ C, ∀ e' ∈ C, e ≠ e' → Disjoint (GraphRestriction.edgeVertices e) (GraphRestriction.edgeVertices e')) ∧
+          GraphRestriction.pairVertices C ⊆ Finset.image (⇑f) Finset.univ
+@exact_event_contract : ∀ {m n k q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (f : Fin m ↪ Fin n),
+  ∀ B ∈ matchings (SimpleGraph.comap (⇑f) G) q,
+    ∀ (σ : Equiv.Perm (Fin n)), (∀ (i : Fin m), ↑(σ (f i)) < k) → σ ∈ selectedEvent G k q
+'GrowingMatchingTransportCheck.exact_transport_contract' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GrowingMatchingTransportCheck.exact_event_contract' depends on axioms: [propext, Quot.sound, Classical.choice]
+'GrowingMatchingTransportCheck.identity_transport' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.edgeVertices_map' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatching_card' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatchingVertices' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapped_edge_mem' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatching_mem' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatchingVertices_subset_range' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.transport_matching' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_of_comap_matching' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

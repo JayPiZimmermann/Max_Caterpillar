@@ -1,0 +1,7 @@
+'MaxCaterpillar.Overnight.DegreeTwo.feedingMask_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.exists_inner_period_of_many_components_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.exists_active_second_two_components_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

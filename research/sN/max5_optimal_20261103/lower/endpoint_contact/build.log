@@ -1,0 +1,24 @@
+@shared_endpoint_directional_disjunction : ∀ {mR mg mh : ℕ} (aR ag ah : Point 5) (bR bg bh : ℝ) (AR : Fin mR → Point 5)
+  (βR cR : Fin mR → ℝ) (Ag : Fin mg → Point 5) (βg cg : Fin mg → ℝ) (Ah : Fin mh → Point 5) (βh ch : Fin mh → ℝ),
+  (∀ (x : Point 5),
+      shallow aR bR AR βR cR x + relu (shallow ag bg Ag βg cg x) + relu (shallow ah bh Ah βh ch x) = Maximum 5 x) →
+    ∀ (i j : Fin 5),
+      i ≠ j →
+        shallow ag bg Ag βg cg (-unitVec i) = 0 →
+          shallow ah bh Ah βh ch (-unitVec i) = 0 →
+            directionalSlope ag Ag βg cg (-unitVec i) (-unitVec j) = 0 ∨
+              directionalSlope ah Ah βh ch (-unitVec i) (-unitVec j) = 0
+'MaxCaterpillar.Max5Optimal.EndpointContact.shared_endpoint_directional_disjunction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@shared_endpoint_slope_disjunction : ∀ {mR mg mh : ℕ} (aR ag ah : Point 5) (bR bg bh : ℝ) (AR : Fin mR → Point 5)
+  (βR cR : Fin mR → ℝ) (Ag : Fin mg → Point 5) (cg : Fin mg → ℝ) (Ah : Fin mh → Point 5) (ch : Fin mh → ℝ),
+  (∀ (x : Point 5),
+      shallow aR bR AR βR cR x + relu (shallow ag bg Ag 0 cg x) + relu (shallow ah bh Ah 0 ch x) = Maximum 5 x) →
+    ∀ (i j : Fin 5),
+      i ≠ j →
+        shallow ag bg Ag 0 cg (-unitVec i) = 0 →
+          shallow ah bh Ah 0 ch (-unitVec i) = 0 → endpointSlope ag Ag cg i j = 0 ∨ endpointSlope ah Ah ch i j = 0
+'MaxCaterpillar.Max5Optimal.EndpointContact.shared_endpoint_slope_disjunction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

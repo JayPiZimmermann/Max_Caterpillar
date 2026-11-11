@@ -1,0 +1,9 @@
+@literal_type : ∀ {ι : Type u_1} [inst : Fintype ι] (a b : ι → ℝ),
+  ∑ i : ι, a i = 0 →
+    ∑ i : ι, b i = 0 →
+      (∀ (i j : ι) (s t : ℝ), 0 ≤ s → 0 ≤ t → ¬(s * a i + t * a j < 0 ∧ s * b i + t * b j < 0)) →
+        a = 0 ∨ b = 0 ∨ ∃ c, 0 < c ∧ ∀ (i : ι), b i = -c * a i
+'MaxCaterpillar.Max5.PairContactDual.Check.literal_type' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Max5.PairContactDual.Check.two_coordinate_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

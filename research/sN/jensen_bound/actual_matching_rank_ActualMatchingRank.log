@@ -1,0 +1,6 @@
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_fiber_flip' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualClean_fiber_survival_fraction_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "Scalar exponential-series inequalities only; no local structural matching hypothesis or unconditional network lower bound is established here.",
+  "core": "eta^q * exp(-(c*eta)) / q! <= (c^q)^(-1), for c>0, eta>=0, q:Nat.",
+  "shifted": "P<=A*eta^q/q!*exp(-(c*(eta-d))) implies P<=A*(c^q)^(-1)*exp(c*d), for A>=0,c>0,eta>=0, arbitrary real P,d.",
+  "method": "One nonnegative term of the real exponential series, Real.pow_div_factorial_le_exp; then positive multiplication and exact field algebra. No calculus or Stirling estimate.",
+  "power_notation": "The Lean type explicitly uses inverse of c^q; no natural-number negation is used.",
+  "boundary_checks": [
+    "q=0",
+    "eta=0"
+  ],
+  "axiom_checks": {
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.pow_mul_exp_neg_div_factorial_le_inv_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.le_shifted_exp_envelope": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/ExpSeries.lean": "c0b7304454ff2ebc7e24d3d4922934cfbdfdd1f7e72713a3d2ea0101f41c5ec7",
+    "verification/h2/GrowingExpSeriesCheck.lean": "549a63dace6ca5330143742635940e1f69383e3d5c52543db3e27c2eaaa6b1f3",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "research/sN/jensen_bound/counting_routes/growing_exp_series_receipt.py": "6cc7153724ca86e7ec96457b0257d1057215f0605348e92ece0ed43594c6ecdf",
+    "research/sN/jensen_bound/counting_routes/growing_exp_series_final_build.log": "73cb126f0e0ce6a36b0f1e11a7746b92a56af682d94438252dc9f43e43a7b26e",
+    "research/sN/jensen_bound/counting_routes/growing_exp_series_final_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/counting_routes/growing_exp_series_check.log": "1546b2e3e94ecadc864110eb6ce934b80f15ad1b809faa22b342341e13fd0b5d",
+    "research/sN/jensen_bound/counting_routes/growing_exp_series_check.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  }
+}

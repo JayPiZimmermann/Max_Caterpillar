@@ -1,0 +1,88 @@
+{
+  "evidence": "Diagnostic working-tree receipt; exact expected types are checked by Check.lean. No public-root integration or clean committed closure claimed.",
+  "producer": "flock /tmp/max_caterpillar_count65_small_lean_1.lock: lake env lean -o <module.olean> <Mgf.lean>, then <Tails.lean>, then lake env lean <Check.lean>; python3 <this audit.py>",
+  "claims": [
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_exp_card",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mean_exp_card_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_le_exp_markov",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_half_le_five_thirds",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_half_le_five_eighths",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_card_gt_two_mean_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_card_le_three_fifths_mean_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_two_mul_le_one_sub",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_two_sum_le_prod_one_sub",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Mgf.lean": "52e96b27fc6abfdfcd82170af35def62ebec38be37ae23fcb6e28debf36eaa33",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Tails.lean": "61f7fa49d31d07bf37ffe48f925e6ad35681569ac72bc4ebfba424dcff7ba636",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Weight.lean": "599a38f9d093f7e086c37c95dc814e6c8328224546f6197a69383618e498e27b",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/counting_routes/bernoulli_tails/Check.lean": "ee2c33a3e548a861651f3ff9343546fc0e00144ff0a8a333b929a85296591822",
+    "research/sN/jensen_bound/counting_routes/bernoulli_tails/check.log": "e08bb053345a893ae6ba76f56ca30f06750ff683bfc8770e30507d17931459ec",
+    "research/sN/jensen_bound/counting_routes/bernoulli_tails/audit.py": "173aa1eb621120e2bf47b4f51503c50e59380524dfdef1d0258f8f3207cc8e2b"
+  }
+}

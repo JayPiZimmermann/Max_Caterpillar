@@ -1,0 +1,20 @@
+@normalized_graph_le_raw : ∀ {N h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂)
+  (hA : ∀ (j : Fin h₁), ∑ i : Fin N, AffineSkipNetwork.A net j i = 0) (hn : TranslationNormalized (normalized net))
+  (k : Fin h₂), braidInteractionGraph (normalized net) hn k ≤ rawInteractionGraph net hA k
+@normalized_degree_le_raw : ∀ {N h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂)
+  (hA : ∀ (j : Fin h₁), ∑ i : Fin N, AffineSkipNetwork.A net j i = 0) (hn : TranslationNormalized (normalized net))
+  (k : Fin h₂) (a : Fin N),
+  SimpleGraph.degree (braidInteractionGraph (normalized net) hn k) a ≤
+    SimpleGraph.degree (rawInteractionGraph net hA k) a
+'MaxCaterpillar.ExponentialPush.DegreeTwo.Recession.normalized_computes_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.Recession.normalized_translation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.Recession.normalized_graph_le_raw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.Recession.normalized_degree_le_raw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

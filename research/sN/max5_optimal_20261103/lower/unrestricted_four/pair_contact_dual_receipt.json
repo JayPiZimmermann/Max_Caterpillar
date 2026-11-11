@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite real-vector classification; no network-width claim",
+  "type_consumer": "research/sN/max5_optimal_20261103/lower/unrestricted_four/PairContactDualCheck.lean",
+  "axiom_audits": {
+    "MaxCaterpillar.Max5.PairContactDual.negatively_proportional": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5.PairContactDual.zero_or_negatively_proportional": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5.PairContactDual.noNegativePair_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5.PairContactDual.Check.literal_type": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Max5.PairContactDual.Check.two_coordinate_control": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "repository_lean_import_closure": [
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/PairContactDual.lean",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/PairContactDualCheck.lean"
+  ],
+  "external_dependencies": "Mathlib and Lake packages bound by lake-manifest.json and lean-toolchain",
+  "files": {
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/PAIR_CONTACT_DUAL.md": "d2853efb39f47c90bb5a10dc6de0c2381574c7165f6b2f9267dd369f0566d9ce",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/PairContactDual.lean": "15704a2e4986d77ebdfe9812d0ce185ed7193bfb322c81adcfc9d641fc417f42",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/PairContactDualCheck.lean": "ace928afc11c1ce267a771d9492677898815c4973a19edfac11a9539c9c2b158",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/pair_contact_dual_artifact.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/pair_contact_dual_artifact.log": "cce8154c719df1a811f36454ae781b9493d37da4170b072ad142a672c327de28",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/pair_contact_dual_check.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/pair_contact_dual_check.log": "27a95adcc7e2d3e6454f3f24f88ad0d0dbe767f9c1871b0d04b48261200709ae",
+    "research/sN/max5_optimal_20261103/lower/unrestricted_four/pair_contact_dual_recheck.py": "caae85fc85a4379d3fd4eca8ae9d0b3cc2e2e7818eec31d9e81c4d0efc9c9560",
+    "research/sN/overnight_20261103/lean_pool.py": "cea2dca3385a45329875984f7c362698f4ff183ebec9cf8bf4eef3a3ee8b5c3e"
+  }
+}

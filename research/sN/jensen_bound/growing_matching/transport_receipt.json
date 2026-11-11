@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-02T15:30:08.461579+00:00",
+  "evidence_kind": "canonical module rebuild and exact-type gate",
+  "module": "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Transport",
+  "driver": "verification/frontier/GrowingMatchingTransportCheck.lean",
+  "source_sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Selected.lean": "4db12f9634fa0cbee58c879c46abc5a666e523a23caf2a9e6a286488e0d410b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Transport.lean": "9bd8a564dbb6bad403899ff305a8d3f7a82d95f4d99121d973da1d543f5f7c17",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/jensen_bound/growing_matching/transport_recheck.py": "888ef2c7093d7e2ad756fca97cfd4df86fd3226cfdddcd93afe88965e3119c26",
+    "research/sN/zulip_three/lean_small_pool.py": "b77338cb63afb353264edb6cf9df156b44a9a3d45797ee182f0919e7ebfe52d3",
+    "scripts/lean_lock.sh": "4fbb8e63df2e6b540750fc10c0718706f996dbeb45961a50ff3f461057b06d9b",
+    "scripts/verify.py": "8271d6ec495e5bbfc67cde596cf445d6e7320fb650940a784b53009527c4b29c",
+    "verification/frontier/GrowingMatchingTransportCheck.lean": "7bb3e94a132a5ecdf98d9df00849ac87209b8455ac0ac7261cbbe088a68fa896"
+  },
+  "source_unchanged": true,
+  "scope": "Actual injective f:Fin m -> Fin n and ordinary finite simple graph G; every actual q-matching of G.comap f maps to an actual q-matching of G, including empty domains/matchings.",
+  "result": "The image Sym2 edge set has exactly q edges, its endpoints are exactly the image of the original endpoints, and lie in the actual embedding range. If that range is selected by sigma then the original ambient selectedEvent holds.",
+  "semantic_checks": [
+    "Edges are actual Sym2.map images, not a newly postulated graph witness.",
+    "Embedding injectivity proves injectivity on unordered edges and preserves disjoint endpoint supports.",
+    "Local graph adjacency is the actual comap adjacency.",
+    "Independent expanded consumer states ordinary edge membership, cardinality, pairwise-disjointness and endpoint containment.",
+    "The identity embedding preserves every actual edge set."
+  ],
+  "not_claimed": [
+    "No new unconditional neural-network width theorem.",
+    "No published source or public aggregator was edited."
+  ],
+  "commands": [
+    {
+      "command": [
+        "scripts/lean_lock.sh",
+        "lake",
+        "build",
+        "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Transport"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "research/sN/zulip_three/lean_small_pool.py",
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "verification/frontier/GrowingMatchingTransportCheck.lean"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "axiom_checks": {
+    "GrowingMatchingTransportCheck.exact_transport_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "GrowingMatchingTransportCheck.exact_event_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "GrowingMatchingTransportCheck.identity_transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.edgeVertices_map": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatching_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatchingVertices": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapped_edge_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatching_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.mapMatchingVertices_subset_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.transport_matching": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selectedEvent_of_comap_matching": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "log_sha256": {
+    "research/sN/jensen_bound/growing_matching/transport_build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/sN/jensen_bound/growing_matching/transport_build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/jensen_bound/growing_matching/transport_exact.log": "ae31f59a58f989a50ab9ab12257c36e210336bf50b034432479fec6983a639b3",
+    "research/sN/jensen_bound/growing_matching/transport_exact.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  }
+}

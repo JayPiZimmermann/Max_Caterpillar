@@ -1,0 +1,18 @@
+research/sN/exponential_push_20261102/ridge_annihilator/NoRidgeSum.lean:68:17: warning: try 'simp' instead of 'simpa' [linter.unnecessarySimpa]
+research/sN/exponential_push_20261102/ridge_annihilator/NoRidgeSum.lean:64:12: warning: unused variable `hk` [linter.unusedVariables]
+@iterDiff_maximum_ne_zero : ∀ {N : ℕ} [inst : NeZero N] (vs : List (Point N)),
+  (∀ v ∈ vs, ∃ i j, v i ≠ v j) → iterDiff vs (Maximum N) ≠ 0
+@maximum_ne_affine_sum_of_exists_periods : ∀ {N : ℕ} [inst : NeZero N] {J : Type u_1} [inst_1 : Fintype J],
+  2 ≤ N →
+    ∀ (f : J → Point N → ℝ),
+      (∀ (k : J), ∃ v, (∃ i j, v i ≠ v j) ∧ ∀ (x : Point N), f k (x + v) = f k x) →
+        ∀ (a : Point N →+ ℝ) (c : ℝ), ¬∀ (x : Point N), Maximum N x = a x + c + ∑ k : J, f k x
+'MaxCaterpillar.ExponentialPush.Ridge.iterDiff_maximum_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.maximum_ne_affine_sum_of_periods' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.Ridge.maximum_ne_affine_sum_of_exists_periods' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

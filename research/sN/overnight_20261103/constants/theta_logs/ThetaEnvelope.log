@@ -1,0 +1,3 @@
+research/sN/overnight_20261103/constants/ThetaEnvelope.lean:34:8: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+research/sN/overnight_20261103/constants/ThetaEnvelope.lean:48:8: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.OvernightConstants.Theta.envelope_le' depends on axioms: [propext, Classical.choice, Quot.sound]

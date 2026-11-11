@@ -1,0 +1,44 @@
+{
+  "status": "Lean verified diagnostic; uncommitted closure; not integrated into frozen publication root",
+  "created_utc": "2026-11-02T16:22:03.804122+00:00",
+  "lean_toolchain": "leanprover/lean4:v4.4.0",
+  "declarations": [
+    "mem_largeSupports",
+    "mem_noInternalEvent",
+    "mem_admissibleSets",
+    "isLowerSet_noInternalEvent",
+    "isLowerSet_admissibleSets",
+    "empty_mem_noInternalEvent",
+    "empty_mem_admissibleSets",
+    "mass_pos_of_empty_mem",
+    "mass_noInternalEvent_pos",
+    "mass_admissibleSets_pos",
+    "prod_one_sub_pow_le_mass_noInternalEvent"
+  ],
+  "canonical_definitions": [
+    "largeSupports",
+    "noInternalEvent",
+    "admissibleSets"
+  ],
+  "accepted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "exact_type_axiom_driver": "research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean",
+  "commands": [
+    "flock /tmp/max_caterpillar_count65_small_lean_1.lock lake env lean -o .lake/build/lib/MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Support.olean MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Support.lean",
+    "flock /tmp/max_caterpillar_count65_small_lean_1.lock lake env lean research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean"
+  ],
+  "sha256": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Weight.lean": "599a38f9d093f7e086c37c95dc814e6c8328224546f6197a69383618e498e27b",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Association.lean": "e4894e705ef320fec2fa3cfd85e86f7f588756db3a241f3f4f55309e7d04d261",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Support.lean": "2c4ee5fbdc8d5df80aa2eb3eec90e5dffa5dc95928594534ad3352364338a6b7",
+    "research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean": "85584541d5f4d9fa63964826e5db91d083c58acf3da960c236b453903ccfb5ca",
+    "research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/support_verify.log": "01aef4169269fea2aab30446ad5faa0a138305ddb0ea0463b0bf71f2ec1b7b84"
+  },
+  "rechecked_utc": "2026-11-02T16:53:49.927526+00:00",
+  "recheck_scope": "Trailing horizontal whitespace removed only from exact-check driver; production sources unchanged. Read-only driver recheck against current prebuilt import closure; no olean production writes.",
+  "recheck_command": "flock /tmp/max_caterpillar_count65_small_lean_2.lock lake env lean research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean",
+  "verified_theorem_count": 11
+}

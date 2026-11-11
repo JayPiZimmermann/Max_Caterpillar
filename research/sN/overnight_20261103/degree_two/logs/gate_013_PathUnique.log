@@ -1,0 +1,10 @@
+research/sN/exponential_push_20261102/degree_two/PathUnique.lean:45:18: warning: unused variable `hp` [linter.unusedVariables]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.neighbor_eq_of_degree_le_two' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.support_eq_after_same_edge' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.support_eq_of_first_step' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

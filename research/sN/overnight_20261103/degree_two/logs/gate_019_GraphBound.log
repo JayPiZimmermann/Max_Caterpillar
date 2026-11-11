@@ -1,0 +1,4 @@
+@twoComponentSets_card_le : ∀ {N : ℕ} (G : SimpleGraph (Fin N)),
+  (∀ (v : Fin N), SimpleGraph.degree G v ≤ 2) →
+    ∀ (m : ℕ), 0 < m → Finset.card (twoComponentSets G m) ≤ 2 * N + 2 * (m - 1) * N ^ 2
+'MaxCaterpillar.Overnight.DegreeTwo.twoComponentSets_card_le' depends on axioms: [propext, Quot.sound, Classical.choice]

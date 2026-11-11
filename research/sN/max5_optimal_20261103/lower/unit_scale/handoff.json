@@ -1,0 +1,27 @@
+{
+  "status": "READY_FOR_BOUNDED_PUBLICATION",
+  "files": {
+    "research/sN/max5_optimal_20261103/lower/unit_scale/UnitComparator.lean": "f3142c9feb1ce150db6c63080070ecb55fcd18d6a5b65c6ed540d2c2e3467908",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/Statements.lean": "6ea9d3e7c1f7810049df2ff72ff8fc16060ee733f1ee66cf06dffd0f12f1b7d0",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/verify.py": "23c8b67beedbadab81de4f1ddb2900627391589968c15be1e509537ddbcca6a0",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/README.md": "5e1ef4332fb646b973a2750b61e62b7a46d2640b4153deab3bee6f526399f054",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/receipt.json": "be84db7db241dc01f76ac05de57a535a493a493bc7a5e2a7f27455a130703f00",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/dependency.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/dependency.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/triple_dependency.log": "3da6c7eb61bc570af9ca002104a020ab3511f2ce7f6ed5062f453823169697f7",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/triple_dependency.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/build.log": "af753149d4e8ed964bd7363522a4d5bfd4c7e06c469bb4779ebd522a393d30ec",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/statements.log": "67db1c3c9c27f30ff5084c3199d042d056b360dea42e265ee5ccc6e01c343e0f",
+    "research/sN/max5_optimal_20261103/lower/unit_scale/statements.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "publication_checkout_comparison": {
+    "matching_source_and_control_files": 168,
+    "missing": [
+      "research/sN/max5_optimal_20261103/lower/unit_scale/Statements.lean",
+      "research/sN/max5_optimal_20261103/lower/unit_scale/UnitComparator.lean",
+      "research/sN/max5_optimal_20261103/lower/unit_scale/verify.py"
+    ],
+    "different": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "forbidden_construct_scan": "PASS",
+  "headline_axioms": {
+    "MaxCaterpillar.ExponentialPush.Forest.exists_leaf": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.Check.exact_cycle_type": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.Check.singleEdge_acyclic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.Check.triangle_dictionary_control": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.Check.triangle_nonacyclic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.cover_card_le_of_no_matching": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.exists_cover_matching": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.indexedGraph_oriented_cycle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MaxCaterpillar.ExponentialPush.ForestMatching.matching_of_no_small_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "limits": "These are graph and cycle identities. The actual network cycle-deletion and signed-span bridge is separate; no structural MAX obstruction or exponential lower bound is claimed here.",
+  "logs": {
+    "research/sN/exponential_push_20261102/forest_matching/logs/check_recheck.log": "c2fa86775281ebc8c299a327915620b23267724ae67b8b7904a9e22fd2df79e9",
+    "research/sN/exponential_push_20261102/forest_matching/logs/cover_recheck.log": "4df447e054dfd747069702536f395cd8d8de5026ccfc5528471236c4edac95b3",
+    "research/sN/exponential_push_20261102/forest_matching/logs/cycle_recheck.log": "aa5d06a860233349003e72dc323f4d97b365adf72bdc0b27438feda356e7b101",
+    "research/sN/exponential_push_20261102/forest_matching/logs/cyclecheck_recheck.log": "7bb745cf227e4067b26dae07ca11cf05043ab524977ee621852f8cbe9fa47909",
+    "research/sN/exponential_push_20261102/forest_matching/logs/dependency_recheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/sN/exponential_push_20261102/forest_matching/logs/konig_recheck.log": "6d7ba8c83d5935ca65f6a52315e5682c90d0976d0a34a3b868ddd16cd95b384c",
+    "research/sN/exponential_push_20261102/forest_matching/logs/leaf_recheck.log": "d088b45e0d702b807bf6d91be72bad39779b4d4408ac32e626346bb79aaaaee3"
+  },
+  "nonvacuity": "Check.lean proves singleEdge on Fin3 acyclic and applies actual leaf theorem to its explicit edge. CycleCheck.lean gives a genuine triangle and a redundant dictionary with all nine ordered pairs, including loops and reverse duplicates.",
+  "reproduce": "python3 research/sN/exponential_push_20261102/forest_matching/recheck.py --run",
+  "scope": "Genuine finite SimpleGraph.IsAcyclic implies an original-vertex cover no larger than a literal matching. Nonacyclic indexed graphs yield a nonempty original index subset and consistently oriented globally zero sum of coordinate differences. Arbitrary finite n, real inputs, loops ignored and parallel indices allowed in the indexed graph.",
+  "source_count": 18,
+  "source_files": {
+    "MaxCaterpillar/Frontier/RandomRestriction/GoodEventSubset.lean": "f24c1ecddff847dd08a10d511100ba6a71a7150abfa3e58978861f802229c4af",
+    "MaxCaterpillar/Frontier/RandomRestriction/GraphRestriction/TwoEdges/Basic.lean": "65241da43661131588a07fbd215922f809cb91d2078c33d405b70f393a06b4a8",
+    "MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Selected.lean": "4db12f9634fa0cbee58c879c46abc5a666e523a23caf2a9e6a286488e0d410b7",
+    "MaxCaterpillar/Frontier/RandomRestriction/SelectedSetProbability.lean": "6770e401ddff3cea883ab106de066cc6410053808577b17593e1026d9c87801f",
+    "MaxCaterpillar/Frontier/RandomRestriction/UniformTuples.lean": "dfc7a4fee33bea937e5a69e53e8d543044213a0f4788c1e0bedc4414ebac4676",
+    "lake-manifest.json": "7906818781c6e2aeeb0054d1a7530ea7814ce086d9796832a6b25ca559a58044",
+    "lakefile.lean": "e7cb3208edfaaae42e586a789217aa0d6bd04aae5ee1b6b0df54aec3bea05596",
+    "lean-toolchain": "cca192200b121ec45020e2f422656c6d372d193a09f3444b638ca202b5797112",
+    "research/sN/exponential_push_20261102/forest_matching/CYCLE.md": "bdcad2902842d450ab082d6f1cc6d08a4edc70f1ffe254c44d54e91d3158acd5",
+    "research/sN/exponential_push_20261102/forest_matching/Check.lean": "3ad6695a7c2eacefc840bb5b7b5721641ba39227cdc5c765f5087ee01bf6b6e0",
+    "research/sN/exponential_push_20261102/forest_matching/Cover.lean": "a08ae90a308d2b8836b156e24dd0eed6d102cb55e9e3f8859e31200034b850aa",
+    "research/sN/exponential_push_20261102/forest_matching/Cycle.lean": "d8c73ac4291889d49a66e684ac0b45bcfc423ed9a420e8ba20d50162288029b4",
+    "research/sN/exponential_push_20261102/forest_matching/CycleCheck.lean": "55cd0965fc11716231b1f0e1db8739c6ee9511f74a55b2b81029efce3ad5c0b1",
+    "research/sN/exponential_push_20261102/forest_matching/Konig.lean": "0c5f064e4249c1c78eb102ecc5a9332127d88ee296206fcd3225609647f3d64a",
+    "research/sN/exponential_push_20261102/forest_matching/Leaf.lean": "bd1f6fbc472bf37ff1f1bbfde5fc30eb47ab1af54bfa6e7559867c726248ea1d",
+    "research/sN/exponential_push_20261102/forest_matching/README.md": "4b0b98ec84d105048f99be8585b3ec7c734e8d8e611fd7b50cec1584febd1bba",
+    "research/sN/exponential_push_20261102/forest_matching/recheck.py": "8a4084a2da54f07acfb0bb2acbfb1202d78c1ad42ccf346de16286f660c8de46",
+    "research/sN/zulip_three/lean_small_pool.py": "b77338cb63afb353264edb6cf9df156b44a9a3d45797ee182f0919e7ebfe52d3"
+  },
+  "state": "Lean verified research leaves; not integrated or published",
+  "status": "PASS"
+}

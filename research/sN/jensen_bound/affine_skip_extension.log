@@ -1,0 +1,13 @@
+[5417/5418] Building MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension
+stdout:
+Try this: ring_nf
+./././MaxCaterpillar/Frontier/RandomRestriction/AffineSkipExtension.lean:164:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.encode_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.AffineSkipExtension.second_width_tradeoff_affine_skips_unshifted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

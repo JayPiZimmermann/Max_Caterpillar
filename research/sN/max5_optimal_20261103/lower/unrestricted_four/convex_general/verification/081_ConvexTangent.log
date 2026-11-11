@@ -1,0 +1,9 @@
+@convex_of_exact_tangent : ∀ {N m : ℕ} (f : Point N → ℝ) (q : Point N) (e : Fin m ↪ Fin N) (D : Point m → ℝ),
+  (∀ (x : Point m), ∀ᶠ (ε : ℝ) in 𝓝[>] 0, f (q + ε • lift e x) = f q + ε * D x) →
+    ConvexOn ℝ Set.univ f → ConvexOn ℝ Set.univ D
+'MaxCaterpillar.Max5Optimal.ConvexCores.convex_of_exact_tangent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ExactTangent.convex : ∀ {N m : ℕ} {f : Point N → ℝ} {q : Point N} {e : Fin m ↪ Fin N} {D : Point m → ℝ},
+  ExactTangent f q e D → ConvexOn ℝ Set.univ f → ConvexOn ℝ Set.univ D
+'MaxCaterpillar.Max5Optimal.ConvexCores.ExactTangent.convex' depends on axioms: [propext, Classical.choice, Quot.sound]

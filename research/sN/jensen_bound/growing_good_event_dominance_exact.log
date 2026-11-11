@@ -1,0 +1,39 @@
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.collapsedRow_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.selected_nonzero_of_support_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.selected_sum_zero_of_only_opposite_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GoodEventDominance.dominant_prefix_cuts_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GoodEventDominance.isolated_pair_prefix_values' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GoodEventDominance.isolated_pair_run_members' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.dominant_isolated_support_bad' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.good_event_excludes_nonbraid_dominant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.tailCoefficient_eq_full_position_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.dominant_isolated_support_bad_of_tail_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.good_event_excludes_nonbraid_dominant_of_tail_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.support_three_no_isolated_dominant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.GoodEventDominance.support_three_no_isolated_dominant_of_tail_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

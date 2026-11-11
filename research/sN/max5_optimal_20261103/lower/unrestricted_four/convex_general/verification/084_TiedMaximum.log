@@ -1,0 +1,9 @@
+@directional_computes_max_of_tied : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m]
+  (net : NormalizedNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) →
+    ∀ (e : Fin m ↪ Fin N) (q : Point N),
+      (∀ (a : Fin m), q (e a) = 0) →
+        (∀ i ∉ Finset.image (⇑e) Finset.univ, q i < 0) → ∀ (x : Point m), directionalEval net q e x = Maximum m x
+'MaxCaterpillar.Frontier.RandomRestriction.NormalizedNetwork.directional_computes_max_of_tied' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

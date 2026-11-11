@@ -1,0 +1,10 @@
+[1109/1110] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.Sqrt
+stdout:
+braidSqrtMatching_bounds : ∀ (n : ℕ), 160000 ≤ n → 1 ≤ braidSqrtMatching n ∧ 160000 * braidSqrtMatching n ^ 2 ≤ n
+braidSqrtMatching_eq_floor : ∀ (n : ℕ), braidSqrtMatching n = ⌊Real.sqrt ↑n / 400⌋₊
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braidSqrtMatching_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Parameters.braidSqrtMatching_eq_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

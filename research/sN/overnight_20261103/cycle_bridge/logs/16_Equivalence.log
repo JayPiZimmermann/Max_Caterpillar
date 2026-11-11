@@ -1,0 +1,13 @@
+matchingRepresentable_iff_coverRepresentable : ∀ (N r : ℕ) (f : Point N → ℝ),
+  MatchingRepresentable N r f ↔ CoverRepresentable N r f
+localMatchingObstruction_iff_no_cover_representation : ∀ (N r : ℕ) [inst : NeZero N],
+  LocalMatchingObstruction N (r + 1) ↔ ¬CoverRepresentable N r (Maximum N)
+'MaxCaterpillar.ExponentialPush.CycleBridge.matchingRepresentable_iff_coverRepresentable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.localMatchingObstruction_iff_no_cover_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.localMatchingObstruction_of_cover_obstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

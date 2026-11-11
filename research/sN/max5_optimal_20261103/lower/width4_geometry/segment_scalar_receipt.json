@@ -1,0 +1,16 @@
+{
+  "status": "LEAN_SCALAR_COMPONENT_PASS",
+  "scope": "Scalar three-point zero-cover lemma and literal-form consumer only; actual-network segment bridge remains mathematical prose. Not a transitive clean-closure rebuild.",
+  "theorem": "MaxCaterpillar.Max5Optimal.SegmentScalar.no_three_point_zero_cover",
+  "command": "lake env lean research/sN/max5_optimal_20261103/lower/width4_geometry/SegmentScalar.lean",
+  "files": {
+    "research/sN/max5_optimal_20261103/lower/width4_geometry/SegmentScalar.lean": "d0d8c50abc6c1cbf83832b2894e6fd2b50001e18c49b2e6368481ea19b94befa",
+    "research/sN/max5_optimal_20261103/lower/width4_geometry/segment_scalar.log": "bed46ae97eb3ebacdf4db2c38403f774a86aa062a3940aa07f08fb2bb07a3bc0",
+    "research/sN/max5_optimal_20261103/lower/width4_geometry/segment_scalar.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

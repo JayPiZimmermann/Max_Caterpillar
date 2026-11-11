@@ -1,0 +1,19 @@
+@normalized_width_binomial : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : NormalizedNetwork N h₁ h₂)
+  (hn : TranslationNormalized net),
+  (∀ (x : Point N), eval net x = Maximum N x) →
+    (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+      (∀ (k : Fin h₂) (v : Fin N), SimpleGraph.degree (braidInteractionGraph net hn k) v ≤ 2) →
+        ∀ (m : ℕ), 3 ≤ m → Nat.choose N m ≤ h₂ * (2 * N + 2 * (m - 1) * N ^ 2)
+@normalized_width_exponential : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  6 ≤ N →
+    ∀ (net : NormalizedNetwork N h₁ h₂) (hn : TranslationNormalized net),
+      (∀ (x : Point N), eval net x = Maximum N x) →
+        (∀ (j : Fin h₁), Finset.card (rowSupport (A net j)) ≤ 2) →
+          (∀ (k : Fin h₂) (v : Fin N), SimpleGraph.degree (braidInteractionGraph net hn k) v ≤ 2) →
+            2 ^ N ≤ h₂ * (N ^ 3 * (N + 1))
+'MaxCaterpillar.Overnight.DegreeTwo.normalized_width_binomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.normalized_width_exponential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

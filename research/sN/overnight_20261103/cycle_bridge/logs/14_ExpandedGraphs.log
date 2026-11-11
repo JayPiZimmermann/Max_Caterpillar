@@ -1,0 +1,14 @@
+@expanded_small_covers : ∀ {N h₁ h₂ : ℕ} (net : NormalizedNetwork N h₁ h₂) (hn : TranslationNormalized net) (r : ℕ),
+  (∀ (k : Fin h₂), ¬∃ B, B ∈ matchings (braidInteractionGraph net hn k) (r + 1)) →
+    ∀ (d : (k : Fin h₂) → UnitState net k → ℝ) (hnew : TranslationNormalized (expandedNetwork net d))
+      (k : Fin (Fintype.card (ExpandedIndex net))),
+      ∃ C, IsVertexCover (braidInteractionGraph (expandedNetwork net d) hnew k) C ∧ Finset.card C ≤ r
+'MaxCaterpillar.ExponentialPush.CycleBridge.expanded_graph_acyclic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.expanded_graph_le_original' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.expanded_small_covers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

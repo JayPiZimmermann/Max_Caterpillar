@@ -1,0 +1,30 @@
+@conditional_finite_transfer_two_of_highShortRank_bound : ∀ {k m h₁ h₂ : ℕ} [inst : NeZero k],
+  LocalMatchingObstruction k 2 →
+    ∀ (net : NormalizedNetwork (m + k) h₁ h₂),
+      NormalizedNetwork.TranslationNormalized net →
+        (∀ (x : Point (m + k)), NormalizedNetwork.eval net x = Maximum (m + k) x) →
+          ∀ (K : ℕ),
+            2 ≤ m →
+              4 ≤ m + k →
+                0 < K →
+                  K < m →
+                    ∀ (bQ : ℝ),
+                      ↑(Finset.card (highShortRankEvent k m K)) / ↑(Fintype.card (Configuration k m)) ≤ bQ →
+                        1 - bQ -
+                              ↑(BadFirst.largeSupportCount (firstSupports net)) * ↑(Nat.descFactorial k 3) /
+                                ↑(Nat.descFactorial (m + k) 3) -
+                            (∑ j : Fin h₁, ↑(Nat.descFactorial (Finset.card (firstSupports net j)) 4)) /
+                                ↑(Nat.descFactorial (m + k) 4) *
+                              (↑K ^ 2 * (1 + ↑k / ↑m) / (1 - ↑K / ↑m) + ↑(Nat.descFactorial k 2) * ↑K / 2) ≤
+                          ↑h₂ * (2 / 7) * (↑(Nat.descFactorial k 4) / ↑(Nat.descFactorial (m + k) 4)) *
+                              (highTailRate m K ^ 2)⁻¹ *
+                            Real.exp (highTailRate m K * (↑k * (↑m + ↑k - 1)))
+'MaxCaterpillar.Overnight.Constants.Theta.highShortRankEvent_fraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.Theta.high_actual_event_cover' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.Theta.conditional_finite_transfer_two_of_highShortRank_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

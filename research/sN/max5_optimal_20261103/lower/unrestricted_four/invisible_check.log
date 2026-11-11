@@ -1,0 +1,14 @@
+five_neuron_barrier : ∃ A c K,
+  (∀ (i : Fin 5), ∑ k : Fin 5, A i k = 0) ∧
+    (∀ (i k : Fin 5), A i k ≠ 0) ∧
+      (∀ (x : Fin 5 → ℝ), K x = ∑ i : Fin 5, c i * relu (∑ k : Fin 5, A i k * x k)) ∧
+        (∀ (x : Fin 5 → ℝ) (t : ℝ), (K fun k => x k + t) = K x) ∧
+          (∀ (x : Fin 5 → ℝ), (K fun k => -x k) = K x) ∧
+            (∀ (i j : Fin 5) (m s t : ℝ),
+                0 ≤ s → 0 ≤ t → (K fun k => (m - if k = i then s else 0) - if k = j then t else 0) = 0) ∧
+              (∀ (i : Fin 5), ∀ᶠ (x : Fin 5 → ℝ) in 𝓝 fun k => -if k = i then 1 else 0, K x = 0) ∧
+                K ![0, 0, 2, 1, 2] = -1
+'MaxCaterpillar.Frontier.Max5Invisible.Check.five_neuron_barrier' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.Check.literal_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]

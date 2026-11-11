@@ -1,0 +1,31 @@
+@FeedingSharp.normalized_feeding_tradeoff : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  1040 ≤ N →
+    ∀ (net : NormalizedNetwork N h₁ h₂),
+      NormalizedNetwork.TranslationNormalized net →
+        (∀ (x : Point N), NormalizedNetwork.eval net x = Maximum N x) →
+          1 / 40000000 * min (↑N ^ 2) (↑N ^ 4 / ↑(feedingCard net)) ≤ ↑h₂
+@FeedingSharp.affine_feeding_tradeoff : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) → 1 / 40000000 * min (↑N ^ 2) (↑N ^ 4 / ↑(affineFeedingCard net)) ≤ ↑h₂
+@FeedingSharp.affine_feeding_quadratic : ∀ {N h₁ h₂ : ℕ} (hN : 1040 ≤ N) (net : AffineSkipNetwork N h₁ h₂),
+  (∀ (x : Point N), eval net x = Maximum N x) → ↑(affineFeedingCard net) ≤ ↑N ^ 2 → 1 / 40000000 * ↑N ^ 2 ≤ ↑h₂
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.counting_raw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.compare_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.forty_million_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.linear_absorption' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.normalized_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_tradeoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingSharp.affine_feeding_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

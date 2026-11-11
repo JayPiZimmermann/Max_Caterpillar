@@ -1,0 +1,46 @@
+@exact_sharp_feeding_contract : ∀ {N h₁ h₂ : ℕ} (d : ℕ) (hd : 1 ≤ d) (hsize : 10000000000 * d ^ 2 ≤ N / 2),
+  LocalMatchingObstruction (4 * ⌊Real.sqrt ↑(N / 2) / (8000 * ↑d)⌋₊ + 1) ⌊Real.sqrt ↑(N / 2) / (8000 * ↑d)⌋₊ →
+    ∀ (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Fin N → ℝ)
+      (theta outerCoeff : Fin h₂ → ℝ) (B : Fin h₁ → ℝ) (L : Fin N → ℝ) (beta : ℝ),
+      (∀ (x : Fin N → ℝ),
+          ∑ k : Fin h₂,
+                outerCoeff k *
+                  max
+                    (∑ j : Fin h₁, W k j * max (∑ i : Fin N, A j i * x i + b j) 0 + ∑ i : Fin N, U k i * x i + theta k)
+                    0 +
+              (∑ j : Fin h₁, B j * max (∑ i : Fin N, A j i * x i + b j) 0 + ∑ i : Fin N, L i * x i + beta) =
+            Maximum N x) →
+        105 * Fintype.card { j // ∃ k, W k j ≠ 0 } ≤ 16 * d ^ 2 * (N / 2) ^ 2 →
+          1 / 2 * Real.exp (3 * Real.sqrt ↑(N / 2) / (8000 * ↑d)) ≤ ↑h₂
+@exact_sqrt_coefficient_contract : ∀ {N h₁ h₂ : ℕ} (C : ℕ)
+  (hsize : 10000000000 * (6 * (Nat.sqrt (C - 1) + 1)) ^ 2 ≤ N / 2),
+  LocalMatchingObstruction (4 * ⌊Real.sqrt ↑(N / 2) / (48000 * ↑(Nat.sqrt (C - 1) + 1))⌋₊ + 1)
+      ⌊Real.sqrt ↑(N / 2) / (48000 * ↑(Nat.sqrt (C - 1) + 1))⌋₊ →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), eval net x = Maximum N x) →
+        Fintype.card { j // ∃ k, AffineSkipNetwork.W net k j ≠ 0 } ≤ C * N ^ 2 →
+          1 / 2 * Real.exp (3 * Real.sqrt ↑(N / 2) / (48000 * ↑(Nat.sqrt (C - 1) + 1))) ≤ ↑h₂
+@conditional_affine_feeding_sharp_explicit : ∀ {N h₁ h₂ : ℕ} (net : AffineSkipNetwork N h₁ h₂)
+  (hsize : 10000000000 * sharpParameter (N / 2) (FeedingCore.affineFeedingCard net) ^ 2 ≤ N / 2),
+  LocalMatchingObstruction
+      (Parameters.minimumArity (N / 2) (sharpParameter (N / 2) (FeedingCore.affineFeedingCard net)))
+      (Parameters.matchingOrder (N / 2) (sharpParameter (N / 2) (FeedingCore.affineFeedingCard net))) →
+    (∀ (x : Point N), eval net x = Maximum N x) →
+      1 / 2 *
+          Real.exp (3 * Real.sqrt ↑(N / 2) / (8000 * ↑(sharpParameter (N / 2) (FeedingCore.affineFeedingCard net)))) ≤
+        ↑h₂
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.Audit.exact_sharp_feeding_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.Audit.exact_sharp_rounding_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.Audit.exact_sqrt_coefficient_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_sharp_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.conditional_affine_feeding_sqrt_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

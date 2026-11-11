@@ -1,0 +1,36 @@
+Try this: ring_nf
+Try this: ring_nf
+Try this: ring_nf
+Try this: ring_nf
+Try this: ring_nf
+translation_invariant : ∀ (x : Point 5) (t : ℝ), (invisible fun i => x i + t) = invisible x
+even : ∀ (x : Point 5), invisible (-x) = invisible x
+contact_zero : ∀ (i j : Fin 5) (s t : ℝ), 0 ≤ s → 0 ≤ t → invisible (contact i j s t) = 0
+nonzero_witness : invisible ![0, 0, 2, 1, 2] = -1
+'MaxCaterpillar.Frontier.Max5Invisible.translation_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.contact_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.nonzero_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+shallow_representation : ∀ (x : Point 5), invisible x = ∑ i : Fin 5, coefficient i * relu (lin (firstRow i) x)
+firstRow_sum : ∀ (i : Fin 5), ∑ k : Fin 5, firstRow i k = 0
+firstRow_full_support : ∀ (i k : Fin 5), firstRow i k ≠ 0
+eventually_zero_at_vertex : ∀ (i : Fin 5), ∀ᶠ (x : Point 5) in 𝓝 (-unitVec i), invisible x = 0
+'MaxCaterpillar.Frontier.Max5Invisible.shallow_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.firstRow_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.firstRow_full_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.eventually_zero_at_vertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+shifted_contact_zero : ∀ (i j : Fin 5) (m s t : ℝ),
+  0 ≤ s → 0 ≤ t → (invisible fun k => (m - if k = i then s else 0) - if k = j then t else 0) = 0
+perturbation_odd_part : ∀ (g : Point 5 → ℝ) (a : ℝ) (x : Point 5),
+  g x + a * invisible x - (g (-x) + a * invisible (-x)) = g x - g (-x)
+perturbation_same_local_germ : ∀ (g : Point 5 → ℝ) (a : ℝ) (i : Fin 5),
+  ∀ᶠ (x : Point 5) in 𝓝 (-unitVec i), g x + a * invisible x = g x
+'MaxCaterpillar.Frontier.Max5Invisible.shifted_contact_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.perturbation_odd_part' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.Max5Invisible.perturbation_same_local_germ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

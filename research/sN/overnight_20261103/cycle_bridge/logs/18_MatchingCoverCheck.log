@@ -1,0 +1,12 @@
+@exact_matching_cover_type : ∀ {n q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (C : Finset (Fin n)),
+  (∀ (a b : Fin n), SimpleGraph.Adj G a b → a ∈ C ∨ b ∈ C) →
+    ∀ B ⊆ SimpleGraph.edgeFinset G,
+      Finset.card B = q →
+        (∀ e ∈ B, ∀ f ∈ B, e ≠ f → Disjoint (GraphRestriction.edgeVertices e) (GraphRestriction.edgeVertices f)) →
+          q ≤ Finset.card C
+'MaxCaterpillar.ExponentialPush.CycleBridge.Check.exact_matching_cover_type' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.CycleBridge.Check.nonempty_sharp_control' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

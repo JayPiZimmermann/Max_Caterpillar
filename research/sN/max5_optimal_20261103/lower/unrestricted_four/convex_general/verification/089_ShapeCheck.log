@@ -1,0 +1,28 @@
+@literal_arrays : ∀ {N K mR mg : ℕ} [inst : NeZero N] (aR : Fin N → ℝ) (bR : ℝ) (AR : Fin mR → Fin N → ℝ)
+  (βR cR : Fin mR → ℝ) (ag : Fin K → Fin N → ℝ) (bg : Fin K → ℝ) (Ag : Fin K → Fin mg → Fin N → ℝ)
+  (βg cg : Fin K → Fin mg → ℝ) (d : Fin K → ℝ),
+  (∀ (k : Fin K),
+      (ConvexOn ℝ Set.univ fun x =>
+          ∑ i : Fin N, ag k i * x i + bg k + ∑ j : Fin mg, cg k j * relu (∑ i : Fin N, Ag k j i * x i + βg k j)) ∨
+        ConcaveOn ℝ Set.univ fun x =>
+          ∑ i : Fin N, ag k i * x i + bg k + ∑ j : Fin mg, cg k j * relu (∑ i : Fin N, Ag k j i * x i + βg k j)) →
+    (∀ (x : Fin N → ℝ),
+        ∑ i : Fin N, aR i * x i + bR + ∑ j : Fin mR, cR j * relu (∑ i : Fin N, AR j i * x i + βR j) +
+            ∑ k : Fin K,
+              d k *
+                relu
+                  (∑ i : Fin N, ag k i * x i + bg k +
+                    ∑ j : Fin mg, cg k j * relu (∑ i : Fin N, Ag k j i * x i + βg k j)) =
+          Maximum N x) →
+      N ≤ K + 2
+literal_max5_two_core_exclusion : ∀ (R : (Fin 5 → ℝ) → ℝ) (g : Fin 2 → (Fin 5 → ℝ) → ℝ) (d : Fin 2 → ℝ),
+  IsShallow R →
+    (∀ (k : Fin 2), IsShallow (g k)) →
+      (∀ (k : Fin 2), ConvexOn ℝ Set.univ (g k) ∨ ConcaveOn ℝ Set.univ (g k)) →
+        (∀ (x : Fin 5 → ℝ), R x + ∑ k : Fin 2, d k * relu (g k x) = Maximum 5 x) → False
+'MaxCaterpillar.Max5Optimal.ConvexCores.ShapeCheck.literal_arrays' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.ShapeCheck.literal_max5_two_core_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

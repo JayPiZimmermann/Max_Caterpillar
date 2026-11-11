@@ -1,0 +1,10 @@
+research/sN/overnight_20261103/constants/tradeoff/MinCheck.lean:54:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.OvernightConstants.Tradeoff.Check.exact_raw_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Tradeoff.Check.exact_scaled_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Tradeoff.Check.actual_max_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

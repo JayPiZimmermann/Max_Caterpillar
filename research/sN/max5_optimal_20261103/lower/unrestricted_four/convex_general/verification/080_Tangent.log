@@ -1,0 +1,14 @@
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Tangent.lean:75:8: warning: unused variable `hf` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Tangent.lean:75:11: warning: unused variable `hg` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Tangent.lean:83:11: warning: unused variable `hf` [linter.unusedVariables]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Tangent.lean:74:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+research/sN/max5_optimal_20261103/lower/unrestricted_four/convex_general/Tangent.lean:74:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+@IsShallow.exists_tangent : ∀ {N m : ℕ} {f : Point N → ℝ},
+  IsShallow f → ∀ (q : Point N) (e : Fin m ↪ Fin N), ∃ D, IsShallow D ∧ ExactTangent f q e D
+'MaxCaterpillar.Max5Optimal.ConvexCores.IsShallow.exists_tangent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.ExactTangent.add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.ExactTangent.smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.ExactTangent.relu' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Max5Optimal.ConvexCores.ExactTangent.sum' depends on axioms: [propext, Classical.choice, Quot.sound]

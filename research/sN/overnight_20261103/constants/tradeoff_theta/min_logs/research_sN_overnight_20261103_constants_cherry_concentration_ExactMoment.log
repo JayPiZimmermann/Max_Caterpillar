@@ -1,0 +1,8 @@
+research/sN/overnight_20261103/constants/cherry_concentration/ExactMoment.lean:21:14: warning: unused variable `hi` [linter.unusedVariables]
+research/sN/overnight_20261103/constants/cherry_concentration/ExactMoment.lean:90:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.OvernightConstants.CherryConcentration.rank_containment_weight_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.CherryConcentration.rankAverage_selectedGapAdjacencies_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,70 @@
+@mem_largeSupports : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] (T : κ → Finset (Fin n)) (j : κ),
+  j ∈ largeSupports T ↔ 3 ≤ Finset.card (T j)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mem_largeSupports' depends on axioms: [propext,
+ Quot.sound]
+@mem_noInternalEvent : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] (T : κ → Finset (Fin n)) (S : Finset (Fin n)),
+  S ∈ noInternalEvent T ↔ ∀ (j : κ), 3 ≤ Finset.card (T j) → ¬T j ⊆ S
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mem_noInternalEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@mem_admissibleSets : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] (T : κ → Finset (Fin n)) (b : ℕ) (S : Finset (Fin n)),
+  S ∈ admissibleSets T b ↔ (∀ (j : κ), 3 ≤ Finset.card (T j) → ¬T j ⊆ S) ∧ Finset.card S ≤ b
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mem_admissibleSets' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@isLowerSet_noInternalEvent : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] (T : κ → Finset (Fin n)),
+  IsLowerSet ↑(noInternalEvent T)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.isLowerSet_noInternalEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@isLowerSet_admissibleSets : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] (T : κ → Finset (Fin n)) (b : ℕ),
+  IsLowerSet ↑(admissibleSets T b)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.isLowerSet_admissibleSets' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@empty_mem_noInternalEvent : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] (T : κ → Finset (Fin n)), ∅ ∈ noInternalEvent T
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.empty_mem_noInternalEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@empty_mem_admissibleSets : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] (T : κ → Finset (Fin n)) (b : ℕ),
+  ∅ ∈ admissibleSets T b
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.empty_mem_admissibleSets' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:50:29: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:50:43: warning: unused variable `hp1` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:51:35: warning: unused variable `hE` [linter.unusedVariables]
+@mass_pos_of_empty_mem : ∀ {n : ℕ} {p : ℝ}, 0 ≤ p → p < 1 → ∀ (E : Finset (Finset (Fin n))), ∅ ∈ E → 0 < mass p E
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_pos_of_empty_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:56:53: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:56:67: warning: unused variable `hp1` [linter.unusedVariables]
+@mass_noInternalEvent_pos : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] {p : ℝ},
+  0 ≤ p → p < 1 → ∀ (T : κ → Finset (Fin n)), 0 < mass p (noInternalEvent T)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_noInternalEvent_pos' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:62:53: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:62:67: warning: unused variable `hp1` [linter.unusedVariables]
+@mass_admissibleSets_pos : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] {p : ℝ},
+  0 ≤ p → p < 1 → ∀ (T : κ → Finset (Fin n)) (b : ℕ), 0 < mass p (admissibleSets T b)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_admissibleSets_pos' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:68:53: warning: unused variable `hp0` [linter.unusedVariables]
+research/sN/jensen_bound/counting_routes/transfer/bernoulli_association/SupportVerify.lean:68:67: warning: unused variable `hp1` [linter.unusedVariables]
+@prod_one_sub_pow_le_mass_noInternalEvent : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 → ∀ (T : κ → Finset (Fin n)), ∏ j in largeSupports T, (1 - p ^ Finset.card (T j)) ≤ mass p (noInternalEvent T)
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.prod_one_sub_pow_le_mass_noInternalEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.largeSupports' depends on axioms: [propext,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.noInternalEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.admissibleSets' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

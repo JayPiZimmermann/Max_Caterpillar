@@ -1,0 +1,44 @@
+@exact_raw_eval : ∀ {N m h₁ h₂ : ℕ} (A : Fin h₁ → Point N) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ)
+  (U : Fin h₂ → Point N) (θ d : Fin h₂ → ℝ) (B : Fin h₁ → ℝ) (L : Point N) (β : ℝ) (φ : Fin N → Fin m) (x : Point m),
+  ∑ k : Fin h₂,
+        d k *
+          relu
+            (∑ j : Fin h₁, W k j * relu (∑ c : Fin m, (∑ i : Fin N, if φ i = c then A j i else 0) * x c + b j) +
+                ∑ c : Fin m, (∑ i : Fin N, if φ i = c then U k i else 0) * x c +
+              θ k) +
+      (∑ j : Fin h₁, B j * relu (∑ c : Fin m, (∑ i : Fin N, if φ i = c then A j i else 0) * x c + b j) +
+          ∑ c : Fin m, (∑ i : Fin N, if φ i = c then L i else 0) * x c +
+        β) =
+    ∑ k : Fin h₂,
+        d k *
+          relu (∑ j : Fin h₁, W k j * relu (∑ i : Fin N, A j i * x (φ i) + b j) + ∑ i : Fin N, U k i * x (φ i) + θ k) +
+      (∑ j : Fin h₁, B j * relu (∑ i : Fin N, A j i * x (φ i) + b j) + ∑ i : Fin N, L i * x (φ i) + β)
+@exact_quadratic : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m],
+  3 ≤ m →
+    ∀ (net : AffineSkipNetwork N h₁ h₂),
+      (∀ (x : Point N), eval net x = Maximum N x) →
+        ∀ (φ : Fin N → Fin m),
+          Function.Surjective φ →
+            (∀ (j : Fin h₁),
+                AffineSkipNetwork.b net j = 0 →
+                  ∑ i : Fin N, AffineSkipNetwork.A net j i = 0 →
+                    Finset.card
+                        (Finset.filter (fun c => (∑ i : Fin N, if φ i = c then AffineSkipNetwork.A net j i else 0) ≠ 0)
+                          Finset.univ) ≤
+                      2) →
+              ↑m ^ 2 / 3000000 ≤ ↑h₂
+'MaxCaterpillar.Overnight.CoordinateQuotient.Check.exact_raw_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.Check.exact_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.Check.maxTwo_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.Check.noninjective_surjection_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.CoordinateQuotient.Check.nonsurjection_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

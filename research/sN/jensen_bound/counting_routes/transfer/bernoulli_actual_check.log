@@ -1,0 +1,61 @@
+@matchingSets : {n : ℕ} → (G : SimpleGraph (Fin n)) → [inst : DecidableRel G.Adj] → ℕ → Finset (Finset (Fin n))
+@actualNeuronEvent : {n h₁ h₂ : ℕ} →
+  (net : NormalizedNetwork n h₁ h₂) →
+    NormalizedNetwork.TranslationNormalized net →
+      ℕ → ℕ → ℝ → Fin h₂ → (S : Finset (Fin n)) → Finset (Sampling.RawConfig S)
+@actualNeuronFraction : {n h₁ h₂ : ℕ} →
+  (net : NormalizedNetwork n h₁ h₂) →
+    NormalizedNetwork.TranslationNormalized net → ℕ → ℕ → ℝ → Fin h₂ → Finset (Fin n) → ℝ
+@actualNeuronMean : {n h₁ h₂ : ℕ} →
+  ℝ →
+    Finset (Finset (Fin n)) →
+      (net : NormalizedNetwork n h₁ h₂) → NormalizedNetwork.TranslationNormalized net → ℕ → ℕ → ℝ → Fin h₂ → ℝ
+@actualNeuronMean_le : ∀ {n h₁ h₂ : ℕ} (p : ℝ),
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ (D : Finset (Finset (Fin n))),
+        IsLowerSet ↑D →
+          0 < mass p D →
+            ∀ (net : NormalizedNetwork n h₁ h₂) (hnorm : NormalizedNetwork.TranslationNormalized net) (q K : ℕ) (T : ℝ)
+              (r : Fin h₂),
+              Sampling.CommonGapScale net T →
+                ∀ (b : ℕ),
+                  0 < n →
+                    0 < ↑K →
+                      (∀ S ∈ D, 2 ≤ Sampling.tailCount S) →
+                        (∀ S ∈ D, Finset.card S ≤ b) →
+                          actualNeuronMean p D net hnorm q K T r ≤
+                            (p ^ 2 / ambientRate n K) ^ q * Real.exp (ambientRate n K * (↑b * (↑n - 1)))
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mem_matchingSets' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.matchingSets_upper' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_matchingSets_le_matchings' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_matchingSets_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_matchingSets_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.tail_edge_lower_bound' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.subset_tail_mean_le_shifted' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.selectedTailMean_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mem_actualNeuronEvent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.actualNeuronFraction_le_tailMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.actualNeuronMean_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

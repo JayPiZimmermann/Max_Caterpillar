@@ -1,0 +1,3 @@
+'MaxCaterpillar.Overnight.DegreeTwo.Check.fourNet_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.Check.fourNet_braid' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.Check.fourNet_max' depends on axioms: [propext, Classical.choice, Quot.sound]

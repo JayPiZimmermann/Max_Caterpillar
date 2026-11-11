@@ -1,0 +1,42 @@
+@raw_nine_array_contract : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N],
+  3 ≤ N →
+    ∀ (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ) (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Fin N → ℝ) (θ d : Fin h₂ → ℝ)
+      (B : Fin h₁ → ℝ) (L : Fin N → ℝ) (β : ℝ),
+      (∀ (x : Fin N → ℝ),
+          ∑ k : Fin h₂,
+                d k *
+                  max 0
+                    (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, U k i * x i + θ k) +
+              (∑ j : Fin h₁, B j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, L i * x i + β) =
+            Maximum N x) →
+        ↑h₁ ≤ ↑N ^ 2 → 1 / 175000 * ↑N ^ 2 ≤ ↑h₂
+actual_high_rank_event_contract : ∀ (m K : ℕ),
+  20000 ≤ m →
+    50 ≤ K →
+      10 * K ≤ m →
+        ↑(Finset.card
+                (Finset.filter
+                  (fun ρ =>
+                    ↑(Finset.card (GoodEvent.isolatedGaps (Finset.filter (fun g => ↑(ρ g) < K) Finset.univ))) <
+                      7 / 10 * ↑K)
+                  Finset.univ)) /
+            ↑(Fintype.card (Equiv.Perm (Fin m))) ≤
+          1 / 16
+'MaxCaterpillar.OvernightConstants.Theta.Check.raw_nine_array_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Theta.Check.actual_joint_half_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Theta.Check.five_input_obstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Theta.Check.actual_high_rank_event_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Theta.Check.smallest_arity_nonvacuity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Theta.Check.odd_large_arity_nonvacuity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

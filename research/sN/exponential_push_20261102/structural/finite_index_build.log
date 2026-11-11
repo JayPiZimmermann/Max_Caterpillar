@@ -1,0 +1,11 @@
+'MaxCaterpillar.ExponentialPush.FiniteIndex.sum_equivFin_symm' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.inner_indexed' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.eval_indexed' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.translationNormalized_indexed' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.FiniteIndex.braidEdgeWeight_indexed' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

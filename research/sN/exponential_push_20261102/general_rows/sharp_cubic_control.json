@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "scope": "Finite exact controls, not an SCprime2 certificate or a network lower bound.",
+  "arity_checks": [
+    {
+      "n": 4,
+      "top_mobius": -1,
+      "coefficient_identity_subsets": 16,
+      "unique_two_cover": false,
+      "no_anchor_at_most_two": false
+    },
+    {
+      "n": 5,
+      "top_mobius": 1,
+      "coefficient_identity_subsets": 32,
+      "unique_two_cover": true,
+      "no_anchor_at_most_two": true
+    },
+    {
+      "n": 6,
+      "top_mobius": -1,
+      "coefficient_identity_subsets": 64,
+      "unique_two_cover": true,
+      "no_anchor_at_most_two": true
+    },
+    {
+      "n": 7,
+      "top_mobius": 1,
+      "coefficient_identity_subsets": 128,
+      "unique_two_cover": true,
+      "no_anchor_at_most_two": true
+    },
+    {
+      "n": 8,
+      "top_mobius": -1,
+      "coefficient_identity_subsets": 256,
+      "unique_two_cover": true,
+      "no_anchor_at_most_two": true
+    },
+    {
+      "n": 9,
+      "top_mobius": 1,
+      "coefficient_identity_subsets": 512,
+      "unique_two_cover": true,
+      "no_anchor_at_most_two": true
+    }
+  ],
+  "actual_localization_checks": 4374,
+  "probabilities": [
+    {
+      "N": 9,
+      "p_exact": "1/72",
+      "N_cubed_p": "81/8"
+    },
+    {
+      "N": 16,
+      "p_exact": "3/208",
+      "N_cubed_p": "768/13"
+    },
+    {
+      "N": 32,
+      "p_exact": "75/28768",
+      "N_cubed_p": "76800/899"
+    },
+    {
+      "N": 64,
+      "p_exact": "133/363072",
+      "N_cubed_p": "544768/5673"
+    },
+    {
+      "N": 128,
+      "p_exact": "121/2519680",
+      "N_cubed_p": "1982464/19685"
+    },
+    {
+      "N": 256,
+      "p_exact": "2573/419502336",
+      "N_cubed_p": "168624128/1638681"
+    },
+    {
+      "N": 512,
+      "p_exact": "31815/41073645056",
+      "N_cubed_p": "8340111360/80221963"
+    },
+    {
+      "N": 1024,
+      "p_exact": "43053/442437428224",
+      "N_cubed_p": "45144342528/432067801"
+    },
+    {
+      "N": 4096,
+      "p_exact": "696493/456392523485184",
+      "N_cubed_p": "11685213503488/111423955929"
+    }
+  ],
+  "asymptotic_constant": 105,
+  "source_sha256": "2c07946734fbe78790efd1c5dfbec0027f585bb4c79b14b97b69c47181536fb8"
+}

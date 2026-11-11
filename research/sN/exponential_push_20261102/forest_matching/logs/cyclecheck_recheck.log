@@ -1,0 +1,15 @@
+@indexedGraph_oriented_cycle : ∀ {V : Type u_2} {ι : Type u_1} [inst : DecidableEq V] [inst : DecidableEq ι]
+  (A : Finset ι) (a b : ι → V),
+  ¬SimpleGraph.IsAcyclic (indexedGraph A a b) →
+    ∃ S ⊆ A,
+      Finset.Nonempty S ∧
+        ∃ reverse, ∀ (x : V → ℝ), (∑ i in S, if reverse i = true then -(x (a i) - x (b i)) else x (a i) - x (b i)) = 0
+'MaxCaterpillar.ExponentialPush.ForestMatching.Check.exact_cycle_type' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.Check.triangle_nonacyclic' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.Check.triangle_dictionary_control' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

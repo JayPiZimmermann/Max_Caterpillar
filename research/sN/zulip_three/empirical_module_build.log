@@ -1,0 +1,38 @@
+[1898/2101] Building MaxCaterpillar.Fiber.GatingAbstractions.Regularity
+stdout:
+./././MaxCaterpillar/Fiber/GatingAbstractions/Regularity.lean:123:10: warning: unused variable `hx` [linter.unusedVariables]
+'MaxCaterpillar.Fiber.GatingAbstractions.HasRegularFiberChartAt.exists_chart_with_inverse_derivative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.eventual_fiber_iff_of_inverse_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.regular_fiber_chart_of_inverse_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.regular_level_set_chart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+[2100/2101] Building MaxCaterpillar.Fiber.GatingAbstractions.EmpiricalRegularity
+stdout:
+./././MaxCaterpillar/Fiber/GatingAbstractions/EmpiricalRegularity.lean:134:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+Try this: ring_nf
+./././MaxCaterpillar/Fiber/GatingAbstractions/EmpiricalRegularity.lean:216:62: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.hasStrictFDerivAt_observations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.observationsD_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.regular_empirical_fiber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.regular_empirical_max_fiber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.empirical_kernel_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.GatingAbstractions.Empirical.regular_same_gate_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

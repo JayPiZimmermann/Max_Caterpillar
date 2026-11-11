@@ -1,0 +1,4 @@
+'MaxCaterpillar.ExponentialPush.alternating_zero_coordinate' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.proper_subset_deletion' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.positive_circuit_zero_hinge' depends on axioms: [propext, Quot.sound, Classical.choice]
+'MaxCaterpillar.ExponentialPush.circuit_deletion' depends on axioms: [propext, Quot.sound, Classical.choice]

@@ -1,0 +1,50 @@
+@exact_step : ∀ {N m : ℕ} [inst : NeZero N] [inst_1 : NeZero m] (e : Fin m ↪ Fin N) (a : Fin m) (q : Point N),
+  (∀ (i : Fin m), q (e i) = 0) →
+    (∀ i ∉ Finset.image (⇑e) Finset.univ, q i < 0) →
+      ∀ (x : Point m) (ε : ℝ),
+        0 < ε → (Maximum N fun i => q i + ε * (lift e (fun j => x j - x a) i + x a)) = ε * Maximum m x
+@exact_sum : ∀ {N m : ℕ} (e : Fin m ↪ Fin N) (a : Fin m) (v : Point N),
+  ∑ j : Fin m, (v (e j) + (∑ i : Fin N, v i - ∑ b : Fin m, v (e b)) * if j = a then 1 else 0) = ∑ i : Fin N, v i
+@exact_model : ∀ {N m h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero m] (net : NormalizedNetwork N h₁ h₂),
+  (∀ (j : Fin h₁), ∑ i : Fin N, A net j i = 0) →
+    (∀ (k : Fin h₂), ∑ i : Fin N, U net k i = 0) →
+      ∑ i : Fin N, L net i = 1 →
+        (∀ (x : Point N),
+            lin net.L x + ∑ j : Fin h₁, B net j * relu (lin (A net j) x) +
+                ∑ k : Fin h₂, d net k * relu (lin (U net k) x + ∑ j : Fin h₁, W net k j * relu (lin (A net j) x)) =
+              Maximum N x) →
+          ∀ (e : Fin m ↪ Fin N),
+            ∃ model,
+              (∀ (x : Point m),
+                  lin model.L x + ∑ j : Fin h₁, B model j * relu (lin (A model j) x) +
+                      ∑ k : Fin h₂,
+                        d model k * relu (lin (U model k) x + ∑ j : Fin h₁, W model k j * relu (lin (A model j) x)) =
+                    Maximum m x) ∧
+                ((∀ (j : Fin h₁), ∑ i : Fin m, A model j i = 0) ∧
+                    (∀ (k : Fin h₂), ∑ i : Fin m, U model k i = 0) ∧ ∑ i : Fin m, L model i = 1) ∧
+                  ∀ (j : Fin h₁),
+                    A model j =
+                      if Finset.filter (fun i => A net j i ≠ 0) Finset.univ ⊆ Finset.image (⇑e) Finset.univ then
+                        fun i => A net j (e i)
+                      else 0
+'MaxCaterpillar.CleanQuadratic.Normalization.IndependentCheck.exact_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Normalization.IndependentCheck.exact_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Normalization.IndependentCheck.exact_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Normalization.IndependentCheck.canonical_base_control' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Normalization.IndependentCheck.maxTwo_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Normalization.IndependentCheck.maxTwo_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.CleanQuadratic.Normalization.IndependentCheck.maxTwo_restriction_realizable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

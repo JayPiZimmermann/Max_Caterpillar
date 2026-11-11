@@ -1,0 +1,14 @@
+relu_rectangle : ∀ (g a a' b b' t : ℝ),
+  relu (g + a * relu t + b * relu (-t)) - relu (g + a' * relu t + b * relu (-t)) -
+        relu (g + a * relu t + b' * relu (-t)) +
+      relu (g + a' * relu t + b' * relu (-t)) =
+    0
+@relu_rectangle_function : ∀ {X : Type} (g t : X → ℝ) (a a' b b' : ℝ) (x : X),
+  relu (g x + a * relu (t x) + b * relu (-t x)) - relu (g x + a' * relu (t x) + b * relu (-t x)) -
+        relu (g x + a * relu (t x) + b' * relu (-t x)) +
+      relu (g x + a' * relu (t x) + b' * relu (-t x)) =
+    0
+'MaxCaterpillar.Frontier.ExponentialPush.relu_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.ExponentialPush.relu_rectangle_function' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

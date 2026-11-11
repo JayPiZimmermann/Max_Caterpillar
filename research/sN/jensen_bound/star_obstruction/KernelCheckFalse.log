@@ -1,0 +1,4 @@
+research/sN/jensen_bound/star_obstruction/KernelCheckFalse.lean:3:0: error: (kernel) declaration type mismatch, '_example' has type
+  true = true
+but it is expected to have type
+  (true && false) = true

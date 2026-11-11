@@ -1,0 +1,8 @@
+no_cover_one_maximum_five : ¬CoverRepresentable 5 1 (Maximum 5)
+localMatchingObstruction_five_two_via_cycle_deletion : LocalMatchingObstruction 5 2
+'MaxCaterpillar.ExponentialPush.CycleBridge.no_cover_one_maximum_five' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.CycleBridge.localMatchingObstruction_five_two_via_cycle_deletion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

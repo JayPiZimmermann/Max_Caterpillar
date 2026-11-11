@@ -1,0 +1,27 @@
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.localized_support_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.localized_dead_weights' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.original_outer_zero_of_local_matching' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.localized_braidGraph_eq_comap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.structural_witness_of_generic_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.exists_structural_witness_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.selected_event_witness_of_generic_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GrowingMatchingChecks.linearOne_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrowingMatchingChecks.linearOne_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrowingMatchingChecks.not_obstruction_one_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.localMatchingObstruction_five_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

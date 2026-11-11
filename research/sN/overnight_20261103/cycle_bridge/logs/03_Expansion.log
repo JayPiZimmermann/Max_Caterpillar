@@ -1,0 +1,15 @@
+@forest_expansion : ∀ {ι : Type u_4} {V : Type u_3} [inst : Fintype ι] [inst_1 : DecidableEq ι] [inst_2 : DecidableEq V]
+  (A : Finset ι) (a b : ι → V) (c : ι → ℝ) (h : (V → ℝ) → ℝ) (F : ℝ → ℝ) (s : ι → State),
+  active s ⊆ A → ∃ d, ∀ (x : V → ℝ), stateUnit s a b c h F x = ∑ t : ForestState A a b, d t * stateUnit (↑t) a b c h F x
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.active_card_decreases' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.stateUnit_mem_forestSpan' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.forest_expansion' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DictionaryBridge.forest_states_card_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

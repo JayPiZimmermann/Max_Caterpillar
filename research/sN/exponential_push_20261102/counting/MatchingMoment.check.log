@@ -1,0 +1,84 @@
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:163:10: warning: unused variable `σ` [linter.unusedVariables]
+@containsIndicator_insert : ∀ {V : Type u_1} [inst : DecidableEq V] (v : V) (I S : Finset V),
+  containsIndicator (insert v I) S = containsIndicator I S * if v ∈ S then 1 else 0
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.containsIndicator_insert' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@edgeFactor_nonneg : ∀ {V : Type u_2} {ι : Type u_1} [inst : DecidableEq V] (e : ι × Bool ↪ V) (i : ι) (S : Finset V),
+  0 ≤ edgeFactor e i S
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.edgeFactor_nonneg' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@weighted_product_expansion : ∀ {Ω : Type u_3} {V : Type u_2} {ι : Type u_1} [inst : Fintype Ω] [inst_1 : DecidableEq V]
+  (w : Ω → ℝ) (selected : Ω → Finset V) (e : ι × Bool ↪ V) (i : ι) (I : Finset V) (J : Finset ι),
+  ∑ ω : Ω,
+      w ω * containsIndicator I (selected ω) * (edgeFactor e i (selected ω) * ∏ j in J, edgeFactor e j (selected ω)) =
+    1 / 2 * ∑ ω : Ω, w ω * containsIndicator I (selected ω) * ∏ j in J, edgeFactor e j (selected ω) +
+        1 / 2 *
+          ∑ ω : Ω,
+            w ω * containsIndicator (insert (e (i, false)) I) (selected ω) * ∏ j in J, edgeFactor e j (selected ω) +
+      1 / 2 *
+        ∑ ω : Ω, w ω * containsIndicator (insert (e (i, true)) I) (selected ω) * ∏ j in J, edgeFactor e j (selected ω)
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.weighted_product_expansion' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:216:5: warning: unused variable `hinclusion` [linter.unusedVariables]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:219:5: warning: unused variable `hfree` [linter.unusedVariables]
+@weighted_product_le : ∀ {Ω : Type u_3} {V : Type u_2} {ι : Type u_1} [inst : Fintype Ω] [inst_1 : DecidableEq V]
+  (w : Ω → ℝ) (selected : Ω → Finset V) (e : ι × Bool ↪ V) {p : ℝ},
+  (∀ (I : Finset V), ∑ ω : Ω, w ω * containsIndicator I (selected ω) ≤ p ^ Finset.card I) →
+    ∀ (J : Finset ι) (I : Finset V),
+      (∀ i ∈ J, e (i, false) ∉ I ∧ e (i, true) ∉ I) →
+        ∑ ω : Ω, w ω * containsIndicator I (selected ω) * ∏ i in J, edgeFactor e i (selected ω) ≤
+          p ^ Finset.card I * (1 / 2 + p) ^ Finset.card J
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.weighted_product_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+@half_pow_outsideCount_le_product : ∀ {V : Type u_2} {ι : Type u_1} [inst : DecidableEq V] (e : ι × Bool ↪ V)
+  (J : Finset ι) (S : Finset V), (1 / 2) ^ outsideCount e J S ≤ ∏ i in J, edgeFactor e i S
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.half_pow_outsideCount_le_product' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:235:5: warning: unused variable `hw` [linter.unusedVariables]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:236:5: warning: unused variable `hinclusion` [linter.unusedVariables]
+@weighted_matching_moment_le : ∀ {Ω : Type u_3} {V : Type u_2} {ι : Type u_1} [inst : Fintype Ω]
+  [inst_1 : DecidableEq V] (w : Ω → ℝ) (selected : Ω → Finset V),
+  (∀ (ω : Ω), 0 ≤ w ω) →
+    ∀ (e : ι × Bool ↪ V) {p : ℝ},
+      (∀ (I : Finset V), ∑ ω : Ω, w ω * containsIndicator I (selected ω) ≤ p ^ Finset.card I) →
+        ∀ (J : Finset ι), ∑ ω : Ω, w ω * (1 / 2) ^ outsideCount e J (selected ω) ≤ (1 / 2 + p) ^ Finset.card J
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.weighted_matching_moment_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:246:5: warning: unused variable `hw` [linter.unusedVariables]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:247:5: warning: unused variable `hinclusion` [linter.unusedVariables]
+@weighted_q_matching_moment_le : ∀ {Ω : Type u_2} {V : Type u_1} [inst : Fintype Ω] [inst_1 : DecidableEq V] {q : ℕ}
+  (w : Ω → ℝ) (selected : Ω → Finset V),
+  (∀ (ω : Ω), 0 ≤ w ω) →
+    ∀ (e : Fin q × Bool ↪ V) {p : ℝ},
+      (∀ (I : Finset V), ∑ ω : Ω, w ω * containsIndicator I (selected ω) ≤ p ^ Finset.card I) →
+        ∑ ω : Ω, w ω * (1 / 2) ^ outsideCount e Finset.univ (selected ω) ≤ (1 / 2 + p) ^ q
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.weighted_q_matching_moment_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:256:5: warning: unused variable `hn` [linter.unusedVariables]
+research/sN/exponential_push_20261102/counting/MatchingMomentCheck.lean:256:18: warning: unused variable `hkn` [linter.unusedVariables]
+@uniform_permutation_matching_moment_le : ∀ {n k q : ℕ},
+  0 < n →
+    k ≤ n →
+      ∀ (e : Fin q × Bool ↪ Fin n),
+        (↑(Fintype.card (Equiv.Perm (Fin n))))⁻¹ *
+            ∑ σ : Equiv.Perm (Fin n),
+              (1 / 2) ^ outsideCount e Finset.univ (Frontier.RandomRestriction.GoodEvent.smallRankGaps σ k) ≤
+          (1 / 2 + ↑k / ↑n) ^ q
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.uniform_permutation_matching_moment_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.containsIndicator' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.edgeFactor' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Research.ExponentialPush20261102.Counting.MatchingMoment.outsideCount' depends on axioms: [propext,
+ Quot.sound]

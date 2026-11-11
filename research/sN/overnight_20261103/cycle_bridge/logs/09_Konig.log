@@ -1,0 +1,9 @@
+'MaxCaterpillar.ExponentialPush.ForestMatching.exists_cover_matching' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.cover_card_le_of_no_matching' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.ForestMatching.matching_of_no_small_cover' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

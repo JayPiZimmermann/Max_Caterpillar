@@ -1,0 +1,6 @@
+'MaxCaterpillar.Max5Optimal.EndpointContact.shared_endpoint_directional_disjunction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Max5Optimal.EndpointContact.shared_endpoint_slope_disjunction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

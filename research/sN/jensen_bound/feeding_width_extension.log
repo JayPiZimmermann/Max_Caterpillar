@@ -1,0 +1,11 @@
+[5417/5418] Building MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension
+stdout:
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.prune_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_tradeoff_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.FeedingWidthExtension.second_width_quadratic_feeding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

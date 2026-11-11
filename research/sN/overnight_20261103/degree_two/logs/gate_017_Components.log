@@ -1,0 +1,9 @@
+'MaxCaterpillar.ExponentialPush.DegreeTwo.component_support_connected' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.componentVertices_connected' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.DegreeTwo.two_components_decomposition' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

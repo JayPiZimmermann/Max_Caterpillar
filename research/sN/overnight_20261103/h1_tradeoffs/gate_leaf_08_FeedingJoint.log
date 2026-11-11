@@ -1,0 +1,13 @@
+@exists_feeding_joint_model : ∀ {N n h₁ h₂ : ℕ} [inst : NeZero N] [inst_1 : NeZero n] (net : NormalizedNetwork N h₁ h₂),
+  TranslationNormalized net →
+    (∀ (x : Point N), NormalizedNetwork.eval net x = Maximum N x) →
+      2 * n ≤ N →
+        ∃ model,
+          (∀ (x : Point n), NormalizedNetwork.eval model x = Maximum n x) ∧
+            TranslationNormalized model ∧
+              16 * ∑ j : Fin h₁, Nat.descFactorial (Finset.card (rowSupport (A (core model) j))) 4 ≤
+                  105 * feedingCard net ∧
+                8 * nonBraidCount (core model) ≤ feedingCard net
+'MaxCaterpillar.ExponentialPush.WidthTradeoff.exists_feeding_joint_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

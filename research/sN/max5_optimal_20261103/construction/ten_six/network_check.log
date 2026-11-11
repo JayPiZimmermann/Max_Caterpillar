@@ -1,0 +1,5 @@
+net_eval : ∀ (x : Point 5), Network.eval net x = Maximum 5 x
+exists_network : ∃ f,
+  (∀ (x : Point 5), Network.eval f x = Maximum 5 x) ∧ Network.HasRationalWeights f ∧ Network.HasZeroBiases f
+'MaxCaterpillar.MaxFiveTenSix.net_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxCaterpillar.MaxFiveTenSix.exists_network' depends on axioms: [propext, Classical.choice, Quot.sound]

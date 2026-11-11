@@ -1,0 +1,19 @@
+research/sN/exponential_push_20261102/ridge_annihilator/MaxTent.lean:69:6: warning: try 'simp' instead of 'simpa' [linter.unnecessarySimpa]
+'MaxCaterpillar.ExponentialPush.Ridge.maxCoordinateDifference_at_min' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.maxCoordinateDifference_eq_tent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.maxCoordinateDifference_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.maxCoordinateDifference_eq_zero_of_contrast' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.maxCoordinateDifference_eq_zero_of_abs_contrast' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.maxCoordinateDifference_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

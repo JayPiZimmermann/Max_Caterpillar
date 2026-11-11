@@ -2,6 +2,55 @@
 
 Status: **historical verification receipt; the current cleanup needs a new gate**.
 
+## Scoped fiber and second-width gate, 2 November 2026
+
+The [seventeen-claim manifest](../research/sN/zulip_three/public_claim_manifest.json)
+has a separate [working-tree receipt](../research/sN/zulip_three/public_claim_receipt.json).
+Its gate rebuilds `MaxCaterpillar`, checks handwritten exact statements through
+that public root, checks compatibility with the existing fiber interface, scans
+the local import closure, and audits the three permitted foundational axioms.
+Run it with:
+
+```sh
+scripts/lean_lock.sh python3 research/sN/zulip_three/check_public_claims.py
+```
+
+The claims cover exactly 65 components after extra width, equal natural activations
+with different interchange responses, incomparable representation partitions
+at regular points with unchanged gates, and binary gate changes within one
+exact fiber component. A positive converse joins networks with equal complete
+labelled binary maps and matching nonzero output signs, with arbitrary first
+layers and biases. The regular all-input exact-fiber statement allows all
+45 physical weights to vary with biases fixed to zero; the separate empirical
+regularity theorem allows arbitrary biases on its specified four-input dataset.
+Two additional claims prove, for ordinary exact MAX networks with arbitrary
+real weights and biases and `N ≥ 1040`,
+`h₂ ≥ min(N²,N⁴/h₁)/400000000`, including its quadratic corollary when
+`h₁ ≤ N²`. The [expanded six-array contract](h2/NetworkLowerBoundCheck.lean)
+and [topical receipt](../research/sN/jensen_bound/network_lower_bound_receipt.json)
+check the actual network formula and all proof dependencies. The strongest full affine-skip theorem additionally charges only the original
+feeding first neurons, has improved constant `1/40000000`, and has no first-width
+cap. Its [nine-array contract](h2/AffineFeedingSharpCheck.lean) and
+[receipt](../research/sN/jensen_bound/feeding_sharp_receipt.json) are separate.
+For total first width `h₁ ≤ N²`, the further [larger-cutoff theorem](../MaxCaterpillar/Frontier/RandomRestriction/QuadraticCutoff.lean#L123)
+proves `h₂ ≥ N²/10000000` for every `N ≥ 3`, also with all affine skips.
+Its [independent contract](h2/QuadraticCutoffCheck.lean) and
+[receipt](../research/sN/jensen_bound/quadratic_cutoff_receipt.json)
+instantiate the proved five-input obstruction.
+The seventeenth claim is explicitly conditional: the [Bernoulli affine theorem](../MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/AffineLowerBound.lean#L50)
+gives a square-root exponential lower bound at `h₁ ≤ C N²` from the displayed
+growing local matching obstruction `H(4q+1,q)`. The hypothesis `H` remains
+unproved. Its [expanded raw contract](h2/AffineBernoulliLowerBoundCheck.lean)
+and [receipt](../research/sN/jensen_bound/affine_bernoulli_receipt.json) check
+the original network formula and all normalization, restriction, probability
+and counting steps.
+The finite coefficient certificate is proved, not an extra hypothesis. See the
+[proof overview](../research/sN/jensen_bound/README.md).
+
+These are content-bound workspace checks. A publication must contain the
+same source contents; they do not replace the historical repository-wide
+manifest below.
+
 The 122-statement receipt below predates the consolidation into
 `MaxCaterpillar/Count/`, `MaxCaterpillar/Dimension.lean`, and
 `MaxCaterpillar/Retained.lean`. Its source hashes do not certify the current

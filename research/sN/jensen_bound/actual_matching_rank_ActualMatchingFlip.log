@@ -1,0 +1,6 @@
+'MaxCaterpillar.Frontier.RandomRestriction.actualEffectiveRow_matchingSwap_of_nonpair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.actualMatchingRow_swap_of_nonpair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

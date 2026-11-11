@@ -1,0 +1,608 @@
+{
+  "status": "SIX_CASE_SCOPE_AND_ENCODING_AUDIT_PASS_NOT_UNSAT",
+  "scope": "Exactly the six surviving support classes with three physical root rows in the same-label one-each three-shared-contact sector.",
+  "source_model_sha256": "e9ea5d767546ea8f5fb06a661ff962d7cb4034f5eea0a370353f45364d66072e",
+  "support_cover_sha256": "b77b4cd726c5d80be16c1be2832b7b59137a0b9b783914f9e9c138cf59065421",
+  "runner_sha256": "9943ed2ea70d0127be3335c60ce8f628bbcd5f02bea8086aabd6d065deb65447",
+  "audit_sha256": "a383e420a1e36987d64fe6e165b359fbb0de218c55572cf4502e6df295836a75",
+  "cases": [
+    {
+      "index": 275,
+      "source": "case275.smt2",
+      "source_sha256": "1fc474c2e10a193baa167a673a3e020686a1a069106b0bd472f11e8a2e50b1cc",
+      "metadata_sha256": "24c0866c75d3d27fd6cb4a913ac4b8bc06ac4bca3294cbbe3da0dc6ee870b389",
+      "supports": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "singular_counts": [
+        4,
+        4,
+        5
+      ],
+      "nonroot_singular_counts": [
+        3,
+        2,
+        3
+      ],
+      "assertions": 322,
+      "expression_nodes": 2068,
+      "integer_divisions": 0,
+      "quantifiers": 0,
+      "variables": [
+        "a3_0",
+        "a3_1",
+        "a3_2",
+        "a4_0",
+        "a4_1",
+        "a4_3",
+        "a5_0",
+        "a5_1",
+        "a5_3",
+        "a6_0",
+        "a6_1",
+        "a6_4",
+        "active0",
+        "active1",
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "h0",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "orient0",
+        "orient1",
+        "orient2",
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "index": 277,
+      "source": "case277.smt2",
+      "source_sha256": "ea6e7e450b10a1ce1385d3ba33783219fc36d2386fc83a3fe10a558d16538b22",
+      "metadata_sha256": "34ea9f86fe910e48b31b31a523215d1d8edc95bb0bc53a717ad752b32a39e763",
+      "supports": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "singular_counts": [
+        4,
+        4,
+        4
+      ],
+      "nonroot_singular_counts": [
+        3,
+        2,
+        2
+      ],
+      "assertions": 323,
+      "expression_nodes": 2273,
+      "integer_divisions": 0,
+      "quantifiers": 0,
+      "variables": [
+        "a3_0",
+        "a3_1",
+        "a3_2",
+        "a4_0",
+        "a4_1",
+        "a4_3",
+        "a5_0",
+        "a5_1",
+        "a5_3",
+        "a5_4",
+        "a6_0",
+        "a6_1",
+        "a6_4",
+        "active0",
+        "active1",
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "h0",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "orient0",
+        "orient1",
+        "orient2",
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "index": 280,
+      "source": "case280.smt2",
+      "source_sha256": "9550b57077dc22edcf3ca0bb9f0979cac607e74d8346cebda99828425ca8e138",
+      "metadata_sha256": "04ca42f7b38a30d5f3ac30bdd619ce216f3b54b347448e80b5e5b1f6ff244f06",
+      "supports": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "singular_counts": [
+        4,
+        4,
+        4
+      ],
+      "nonroot_singular_counts": [
+        3,
+        2,
+        2
+      ],
+      "assertions": 322,
+      "expression_nodes": 2086,
+      "integer_divisions": 0,
+      "quantifiers": 0,
+      "variables": [
+        "a3_0",
+        "a3_1",
+        "a3_2",
+        "a4_0",
+        "a4_1",
+        "a4_3",
+        "a5_0",
+        "a5_1",
+        "a5_4",
+        "a6_0",
+        "a6_3",
+        "a6_4",
+        "active0",
+        "active1",
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "h0",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "orient0",
+        "orient1",
+        "orient2",
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "index": 307,
+      "source": "case307.smt2",
+      "source_sha256": "795910bfe7ecb64fa8697ca4d482ab59e2ad6ecb9cd373de469b71bf9b72a875",
+      "metadata_sha256": "f9798f9851c0bad189d78c38d82492b2d3bdf5fd1a842982e8f62a54a741e091",
+      "supports": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "singular_counts": [
+        4,
+        4,
+        4
+      ],
+      "nonroot_singular_counts": [
+        3,
+        2,
+        2
+      ],
+      "assertions": 323,
+      "expression_nodes": 2335,
+      "integer_divisions": 0,
+      "quantifiers": 0,
+      "variables": [
+        "a3_0",
+        "a3_1",
+        "a3_2",
+        "a3_3",
+        "a4_0",
+        "a4_1",
+        "a4_3",
+        "a5_0",
+        "a5_1",
+        "a5_4",
+        "a6_0",
+        "a6_1",
+        "a6_4",
+        "active0",
+        "active1",
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "h0",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "orient0",
+        "orient1",
+        "orient2",
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "index": 353,
+      "source": "case353.smt2",
+      "source_sha256": "26672d74244b323be250d5434ef93a4774335b77ffc7da23185585a83fffe7bd",
+      "metadata_sha256": "82e63653cd05c70baecb6584b4fbf6d632180b7d4b85179067a5684c2f6a7585",
+      "supports": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "singular_counts": [
+        5,
+        4,
+        4
+      ],
+      "nonroot_singular_counts": [
+        4,
+        2,
+        2
+      ],
+      "assertions": 322,
+      "expression_nodes": 2112,
+      "integer_divisions": 0,
+      "quantifiers": 0,
+      "variables": [
+        "a3_0",
+        "a3_1",
+        "a3_3",
+        "a4_0",
+        "a4_1",
+        "a4_3",
+        "a5_0",
+        "a5_1",
+        "a5_4",
+        "a6_0",
+        "a6_1",
+        "a6_4",
+        "active0",
+        "active1",
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "h0",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "orient0",
+        "orient1",
+        "orient2",
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ]
+    },
+    {
+      "index": 355,
+      "source": "case355.smt2",
+      "source_sha256": "9af38d1cf5a69259da62c70e2012665135af2a79fe829778a8967d7c06704e73",
+      "metadata_sha256": "6af49a0f0868112e4a8ca1ff4a10cd4926effe24fe1ca584013fa761ae2bec2a",
+      "supports": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "singular_counts": [
+        4,
+        4,
+        4
+      ],
+      "nonroot_singular_counts": [
+        3,
+        2,
+        2
+      ],
+      "assertions": 322,
+      "expression_nodes": 2147,
+      "integer_divisions": 0,
+      "quantifiers": 0,
+      "variables": [
+        "a3_0",
+        "a3_1",
+        "a3_3",
+        "a4_0",
+        "a4_1",
+        "a4_3",
+        "a5_0",
+        "a5_1",
+        "a5_4",
+        "a6_0",
+        "a6_2",
+        "a6_4",
+        "active0",
+        "active1",
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "h0",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "orient0",
+        "orient1",
+        "orient2",
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ]
+    }
+  ]
+}

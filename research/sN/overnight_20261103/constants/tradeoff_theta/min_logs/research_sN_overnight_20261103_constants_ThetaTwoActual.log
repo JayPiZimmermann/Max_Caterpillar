@@ -1,0 +1,14 @@
+@highActualNeuron_fraction_le_two : ∀ {k m h₁ h₂ : ℕ} (net : NormalizedNetwork (m + k) h₁ h₂)
+  (hn : NormalizedNetwork.TranslationNormalized net) (K : ℕ) (T : ℝ) (r : Fin h₂),
+  CommonGapScale net T →
+    2 ≤ m →
+      0 < ↑K →
+        ↑(Finset.card (highActualNeuronEvent net hn K T r)) / ↑(Fintype.card (Configuration k m)) ≤
+          2 / 7 * (↑(Nat.descFactorial k 4) / ↑(Nat.descFactorial (m + k) 4)) * (highTailRate m K ^ 2)⁻¹ *
+            Real.exp (highTailRate m K * (↑k * (↑m + ↑k - 1)))
+'MaxCaterpillar.Overnight.Constants.Theta.highActualNeuron_fraction_le_selectedTailMean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.Constants.Theta.highActualNeuron_fraction_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

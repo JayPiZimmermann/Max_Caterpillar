@@ -1,0 +1,10 @@
+@anchored_last_increment_zero : ∀ {α : Type} [inst : Fintype α] [inst_1 : DecidableEq α] (G : Finset α → ℝ)
+  (A : Finset α) (z : α), (∀ (B : Finset α), A ⊆ B → G B = 0) → z ∉ A → G univ - G (erase univ z) = 0
+@anchored_mixed_increment_zero : ∀ {α : Type} [inst : DecidableEq α] (G : Finset α → ℝ) (A : Finset α) (a b : α),
+  (∀ (B : Finset α), A ⊆ B → G B = 0) → G (insert a (insert b A)) - G (insert a A) - G (insert b A) + G A = 0
+'MaxCaterpillar.Frontier.ExponentialPush.anchored_last_increment_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.ExponentialPush.anchored_mixed_increment_zero' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

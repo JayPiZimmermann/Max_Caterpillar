@@ -1,0 +1,13 @@
+research/sN/exponential_push_20261102/ridge_annihilator/ContrastSupport.lean:20:12: warning: try 'simp' instead of 'simpa' [linter.unnecessarySimpa]
+research/sN/exponential_push_20261102/ridge_annihilator/ContrastSupport.lean:47:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+@contrastBounded_periodic_eq_zero : ∀ {ι : Type u_2} (f : (ι → ℝ) → ℝ),
+  ContrastBounded f → ∀ (v : ι → ℝ), (∃ i j, v i ≠ v j) → (∀ (x : ι → ℝ), f (x + v) = f x) → f = 0
+'MaxCaterpillar.ExponentialPush.Ridge.contrastBounded_periodic_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.contrastBounded_sub_translate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.ExponentialPush.Ridge.iterDiff_eq_zero_iff_of_contrastBounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

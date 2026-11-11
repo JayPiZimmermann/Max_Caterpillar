@@ -1,0 +1,9 @@
+research/sN/overnight_20261103/constants/tradeoff/ScalarMin.lean:35:6: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+min_tradeoff_of_scaled : ∀ (x M y D : ℝ),
+  0 < x → 0 < D → (∀ (C : ℝ), 1 ≤ C → M ≤ C * x → x / (D * C) ≤ y) → min x (x ^ 2 / M) / D ≤ y
+'MaxCaterpillar.OvernightConstants.Tradeoff.min_tradeoff_of_scaled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.OvernightConstants.Tradeoff.scaled_linear_absorption' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

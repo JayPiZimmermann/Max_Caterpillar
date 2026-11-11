@@ -1,0 +1,54 @@
+@raw_nine_array_sharp_bounds : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (A : Fin h₁ → Fin N → ℝ) (b : Fin h₁ → ℝ)
+  (W : Fin h₂ → Fin h₁ → ℝ) (U : Fin h₂ → Fin N → ℝ) (θ d : Fin h₂ → ℝ) (B : Fin h₁ → ℝ) (L : Fin N → ℝ) (β : ℝ),
+  (∀ (x : Fin N → ℝ),
+      ∑ k : Fin h₂,
+            d k *
+              max 0 (∑ j : Fin h₁, W k j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, U k i * x i + θ k) +
+          (∑ j : Fin h₁, B j * max 0 (∑ i : Fin N, A j i * x i + b j) + ∑ i : Fin N, L i * x i + β) =
+        Maximum N x) →
+    (∀ (j : Fin h₁), ∑ i : Fin N, A j i = 0) →
+      (∀ (j : Fin h₁), Finset.card (Finset.filter (fun i => A j i ≠ 0) Finset.univ) ≤ 2) →
+        (∀ (k : Fin h₂) (v : Fin N),
+            Finset.card
+                (Finset.filter
+                  (fun w =>
+                    v ≠ w ∧
+                      ∑ j in
+                          Finset.filter (fun j => Finset.filter (fun i => A j i ≠ 0) Finset.univ = {v, w}) Finset.univ,
+                          W k j * |A j v| ≠
+                        0)
+                  Finset.univ) ≤
+              2) →
+          (∀ (m : ℕ), 3 ≤ m → 2 * Nat.choose N m ≤ h₂ * (2 * N + (m - 1) * N ^ 2)) ∧
+            (6 ≤ N → 4 * 2 ^ N / (↑N ^ 3 * (↑N + 1)) ≤ ↑h₂)
+@normalized_feeding_exact_type : ∀ {N h₁ h₂ : ℕ} [inst : NeZero N] (net : NormalizedNetwork N h₁ h₂)
+  (hA : ∀ (j : Fin h₁), ∑ i : Fin N, A net j i = 0) (hU : ∀ (k : Fin h₂), ∑ i : Fin N, U net k i = 0)
+  (hL : ∑ i : Fin N, L net i = 1),
+  (∀ (x : Point N), NormalizedNetwork.eval net x = Maximum N x) →
+    (∀ (k : Fin h₂) (j : Fin h₁),
+        W net k j ≠ 0 → Finset.card (Finset.filter (fun i => A net j i ≠ 0) Finset.univ) ≤ 2) →
+      (∀ (k : Fin h₂) (v : Fin N),
+          SimpleGraph.degree
+              (braidInteractionGraph net
+                (_ :
+                  (∀ (j : Fin h₁), ∑ i : Fin N, A net j i = 0) ∧
+                    (∀ (k : Fin h₂), ∑ i : Fin N, U net k i = 0) ∧ ∑ i : Fin N, L net i = 1)
+                k)
+              v ≤
+            2) →
+        ∀ (m : ℕ), 3 ≤ m → 2 * Nat.choose N m ≤ h₂ * (2 * N + (m - 1) * N ^ 2)
+'MaxCaterpillar.Overnight.DegreeTwo.SharpAudit.raw_nine_array_sharp_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.SharpAudit.normalized_feeding_exact_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Overnight.DegreeTwo.connectedSets_card_le_sharp' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.two_mul_twoComponentSets_card_le_sharp' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Overnight.DegreeTwo.four_pow_two_le_width_polynomial' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

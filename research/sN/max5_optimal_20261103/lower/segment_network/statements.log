@@ -1,0 +1,31 @@
+@exceptional_row_balanced : ∀ {m mR : ℕ} (A : Fin m → Point 5) (c d : Fin m → ℝ) (k : Fin m) (aR : Point 5) (bR : ℝ)
+  (AR : Fin mR → Point 5) (βR cR : Fin mR → ℝ),
+  (∀ (j : Fin m), j ≠ k → A j 3 = 0 ∨ A j 4 = 0 ∨ A j 3 + A j 4 = 0) →
+    midpointMass A c k = 1 →
+      midpointMass A d k = 1 →
+        core A c (-unitVec 3) = 0 →
+          core A c (-unitVec 4) = 0 →
+            core A d (-unitVec 3) = 0 →
+              core A d (-unitVec 4) = 0 →
+                (∀ (x : Point 5), shallow aR bR AR βR cR x + relu (core A c x) + relu (core A d x) = Maximum 5 x) →
+                  A k 3 + A k 4 = 0
+'MaxCaterpillar.Max5Optimal.SegmentNetwork.exceptional_row_balanced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@no_three_coordinate_exception : ∀ {m mR : ℕ} (A : Fin m → Point 5) (c d : Fin m → ℝ) (k : Fin m) (aR : Point 5)
+  (bR : ℝ) (AR : Fin mR → Point 5) (βR cR : Fin mR → ℝ),
+  (∀ (j : Fin m), j ≠ k → A j 3 = 0 ∨ A j 4 = 0 ∨ A j 3 + A j 4 = 0) →
+    midpointMass A c k = 1 →
+      midpointMass A d k = 1 →
+        core A c (-unitVec 3) = 0 →
+          core A c (-unitVec 4) = 0 →
+            core A d (-unitVec 3) = 0 →
+              core A d (-unitVec 4) = 0 →
+                (∀ (x : Point 5), shallow aR bR AR βR cR x + relu (core A c x) + relu (core A d x) = Maximum 5 x) →
+                  ∀ (r : Fin 5),
+                    r ≠ 3 →
+                      r ≠ 4 →
+                        (∀ (i : Fin 5), i ≠ r → i ≠ 3 → i ≠ 4 → A k i = 0) → ∑ i : Fin 5, A k i = 0 → A k r ≠ 0 → False
+'MaxCaterpillar.Max5Optimal.SegmentNetwork.no_three_coordinate_exception' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

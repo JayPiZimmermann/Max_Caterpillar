@@ -1,0 +1,13 @@
+@matching_card_le_cover : ∀ {n q : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (C : Finset (Fin n)),
+  IsVertexCover G C → ∀ B ∈ matchings G q, q ≤ Finset.card C
+@no_matching_of_small_cover : ∀ {n r : ℕ} (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (C : Finset (Fin n)),
+  IsVertexCover G C → Finset.card C ≤ r → ¬∃ B, B ∈ matchings G (r + 1)
+'MaxCaterpillar.ExponentialPush.CycleBridge.edge_has_cover_endpoint' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.CycleBridge.matching_card_le_cover' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.CycleBridge.no_matching_of_small_cover' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

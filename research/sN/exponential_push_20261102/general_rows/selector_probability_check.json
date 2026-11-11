@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "rank_cases": 115,
+  "enlarged_rank_cases": 154,
+  "enlarged_joint_position_rank_cases": 30,
+  "geometry_subsets": 131071,
+  "selection_cases": 72,
+  "asymptotic_float_checks": [
+    {
+      "n": 1000,
+      "r": 333,
+      "k": 3,
+      "scaled": 3.3297072897535314,
+      "limiting_constant": 4.609053497942389
+    },
+    {
+      "n": 10000,
+      "r": 3333,
+      "k": 39,
+      "scaled": 3.647354206330743,
+      "limiting_constant": 4.609053497942389
+    },
+    {
+      "n": 100000,
+      "r": 33333,
+      "k": 390,
+      "scaled": 3.83934996503047,
+      "limiting_constant": 4.609053497942389
+    },
+    {
+      "n": 1000000,
+      "r": 333333,
+      "k": 3906,
+      "scaled": 3.9675913505087297,
+      "limiting_constant": 4.609053497942389
+    }
+  ],
+  "enlarged_asymptotic_float_checks": [
+    {
+      "n": 1000,
+      "r": 200,
+      "k": 3,
+      "scaled": 12.436811143010962,
+      "limiting_constant": 17.203200000000002
+    },
+    {
+      "n": 10000,
+      "r": 2000,
+      "k": 39,
+      "scaled": 13.614544479019786,
+      "limiting_constant": 17.203200000000002
+    },
+    {
+      "n": 100000,
+      "r": 20000,
+      "k": 390,
+      "scaled": 14.330383555219766,
+      "limiting_constant": 17.203200000000002
+    },
+    {
+      "n": 1000000,
+      "r": 200000,
+      "k": 3906,
+      "scaled": 14.80896401367043,
+      "limiting_constant": 17.203200000000002
+    }
+  ],
+  "scope": "Exact finite permutation, selection, and isolated-gap geometry checks; network survival and literal Good are not checked here."
+}

@@ -1,0 +1,6 @@
+research/sN/exponential_push_20261102/ridge_annihilator/DifferenceAlgebra.lean:26:9: warning: unused variable `x` [linter.unusedVariables]
+research/sN/exponential_push_20261102/ridge_annihilator/DifferenceAlgebra.lean:129:10: warning: unused variable `hi` [linter.unusedVariables]
+'MaxCaterpillar.ExponentialPush.Ridge.iterDiff_weighted_translate' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.ExponentialPush.Ridge.iterDiff_sum_eq_zero' depends on axioms: [propext, Quot.sound, Classical.choice]

@@ -1,0 +1,44 @@
+@exp_neg_two_card_mul_cube_le_mass_noInternalEvent : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 / 2 →
+      ∀ (T : κ → Finset (Fin n)), Real.exp (-2 * ↑(Finset.card (largeSupports T)) * p ^ 3) ≤ mass p (noInternalEvent T)
+@mass_inter_ge_sub_compl : ∀ {n : ℕ} {p : ℝ},
+  0 ≤ p → p ≤ 1 → ∀ (A B : Finset (Finset (Fin n))), mass p A - mass p Bᶜ ≤ mass p (A ∩ B)
+@mass_admissibleSets_floor_two_mean_ge : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 / 2 →
+      ∀ (T : κ → Finset (Fin n)),
+        Real.exp (-2 * ↑(Finset.card (largeSupports T)) * p ^ 3) - Real.exp (-(↑n * p) / 3) ≤
+          mass p (admissibleSets T ⌊2 * (↑n * p)⌋₊)
+@condMean_card_lt_le : ∀ {n : ℕ} {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 →
+      ∀ (D : Finset (Finset (Fin n))),
+        0 < mass p D →
+          ∀ (k : ℕ),
+            ↑k ≤ 3 * (↑n * p) / 5 →
+              (condMean p D fun S => if Finset.card S < k then 1 else 0) ≤ Real.exp (-3 * (↑n * p) / 40) / mass p D
+@condMean_admissibleSets_card_lt_le : ∀ {n : ℕ} {κ : Type u_1} [inst : Fintype κ] {p : ℝ},
+  0 ≤ p →
+    p ≤ 1 / 2 →
+      ∀ (T : κ → Finset (Fin n)) (k : ℕ),
+        ↑k ≤ 3 * (↑n * p) / 5 →
+          0 < Real.exp (-2 * ↑(Finset.card (largeSupports T)) * p ^ 3) - Real.exp (-(↑n * p) / 3) →
+            (condMean p (admissibleSets T ⌊2 * (↑n * p)⌋₊) fun S => if Finset.card S < k then 1 else 0) ≤
+              Real.exp (-3 * (↑n * p) / 40) /
+                (Real.exp (-2 * ↑(Finset.card (largeSupports T)) * p ^ 3) - Real.exp (-(↑n * p) / 3))
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.exp_neg_two_card_mul_cube_le_mass_noInternalEvent' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_inter_ge_sub_compl' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.mass_admissibleSets_floor_two_mean_ge' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_card_lt_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.condMean_admissibleSets_card_lt_le' depends on axioms: [propext,
+ Quot.sound,
+ Classical.choice]

@@ -1,0 +1,14 @@
+[1118/1119] Building MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.Floors
+stdout:
+./././MaxCaterpillar/Frontier/RandomRestriction/GrowingMatching/Bernoulli/Parameters/Floors.lean:31:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice [linter.unnecessarySeqFocus]
+parameter_bounds : ∀ (n d : ℕ), 1 ≤ d → 10000000000 * d ^ 2 ≤ n → ParameterBounds n d
+probability_sq_mul_total : ∀ (n d : ℕ), 0 < n → 1 ≤ d → selectionProbability n d ^ 2 * ↑n = alpha d ^ 2
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.parameter_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.probability_sq_mul_total' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Frontier.RandomRestriction.GrowingMatching.Bernoulli.Parameters.rankCount_eq_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

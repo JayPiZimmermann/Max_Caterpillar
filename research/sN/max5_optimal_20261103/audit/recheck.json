@@ -1,0 +1,157 @@
+{
+  "status": "PASS_FINITE_FRONTIER_CONTROLS",
+  "scope": "Fresh exact finite classification replays and all-input rational upper constructions; written model bridges are not newly Lean checked.",
+  "first_width_minimum": 9,
+  "second_width_intervals": {
+    "h1=9": [
+      4,
+      11
+    ],
+    "h1>=10": [
+      4,
+      6
+    ]
+  },
+  "classification_replays": [
+    {
+      "name": "overnight_general_check.py",
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "N": 5,
+        "coefficient_sign_classes": 416,
+        "checked_equations": 955,
+        "contradiction_lengths": {
+          "2": 300,
+          "3": 109,
+          "4": 7
+        },
+        "support_cover_counts": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 102
+        },
+        "support_orbits": 3,
+        "certificate_sha256": "7605750ae5f0de8b70a273ea6b9aadb38437853aefc75da7ac5b5156b37b0fd4",
+        "seconds": 0.04417268605902791,
+        "scope": "Uniform real-coefficient cell-condition exclusion; mathematical model bridge in overnight_general.md; not Lean verified."
+      }
+    },
+    {
+      "name": "overnight_general_six_check.py",
+      "exit_code": 0,
+      "result": {
+        "status": "PASS: complete real-coefficient support/sign classification via exact finite necessities",
+        "support_multisets": 2767,
+        "support_orbits": 43,
+        "coefficient_sign_profiles": 58176,
+        "counts": {
+          "negative_flags": 55839,
+          "full_flags": 1300,
+          "pair_cuts": 1031,
+          "global_cuts": 2,
+          "bowties": 4
+        },
+        "rank_arithmetic": {
+          "prime": 1009,
+          "max_columns": 6,
+          "entry_bound": 1,
+          "all_minor_abs_bound": 720
+        },
+        "hashes": {
+          "overnight_general_six_supports.json": "9f86924da89ba88318aac4ddf30856255bf5591205b54a8a5c835362fadd7f92",
+          "overnight_general_six_pairpeeling.json": "0d00d7f03d193ff2d4a0c3d7c3f9ff500753a7d1a5d7c57dce890037897b55b5",
+          "overnight_general_six_global.json": "4f72c752f82ce1299aed36933c5f99a30759e1b56d117411d4d4a53d8999d8e3"
+        },
+        "seconds": 13.682180096162483,
+        "scope": "Finite classification plus written cell/span bridge; not Lean verified."
+      }
+    }
+  ],
+  "upper_replays": [
+    {
+      "network": "research/sN/frontier5/max5_nine_c5_atoms_o2_r1.network.json",
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "N": 5,
+        "h1": 9,
+        "h2": 11,
+        "scope": "all real inputs; bias-free two-hidden-layer rational network",
+        "method": "winner/first-layer open cells, exact grouped crossing-ridge cancellation, continuity",
+        "stats": {
+          "first_cells": 134,
+          "first_hyperplanes": 7,
+          "crossing_groups": 157,
+          "feasibility_requests": 1856,
+          "reused_interior_witnesses": 133,
+          "exact_feasibility_calls": 3650,
+          "fm_eliminations": 1927,
+          "seconds": 1.1830001098569483
+        },
+        "counterexample": null,
+        "network_sha256": "8ce20f0932973fde28f499852637e938dd1ef5a7b8522cbeae3dedcad970665d",
+        "checker_sha256": "b2db3c477e7e0cc24e320f990fe13780dc6a4feb6ca06fc4ec1d5da8f8c025f3",
+        "feasibility_core_sha256": "18195a91f9d079e27313287069b2b60c1eb5328070780d650839e1eff224fe0f"
+      }
+    },
+    {
+      "network": "research/sN/best5/netB_10_6.json",
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "N": 5,
+        "h1": 10,
+        "h2": 6,
+        "scope": "all real inputs; bias-free two-hidden-layer rational network",
+        "method": "winner/first-layer open cells, exact grouped crossing-ridge cancellation, continuity",
+        "stats": {
+          "first_cells": 104,
+          "first_hyperplanes": 7,
+          "crossing_groups": 70,
+          "feasibility_requests": 1032,
+          "reused_interior_witnesses": 132,
+          "exact_feasibility_calls": 1918,
+          "fm_eliminations": 1018,
+          "seconds": 0.6244270880706608
+        },
+        "counterexample": null,
+        "network_sha256": "64bf2e58946535477754e45ab4b7a0188781bb3e15021e494ba67942d87f2c88",
+        "checker_sha256": "b2db3c477e7e0cc24e320f990fe13780dc6a4feb6ca06fc4ec1d5da8f8c025f3",
+        "feasibility_core_sha256": "18195a91f9d079e27313287069b2b60c1eb5328070780d650839e1eff224fe0f"
+      }
+    }
+  ],
+  "sources": {
+    "research/sN/frontierN/overnight_general_check.py": "7101bb21906d23b9b3f3134b39b81ba461afc571cb7083d0a08a192bd4c1a28d",
+    "research/sN/frontierN/overnight_general_flags.json": "7605750ae5f0de8b70a273ea6b9aadb38437853aefc75da7ac5b5156b37b0fd4",
+    "research/sN/frontierN/overnight_general_six_check.py": "2b14267750027ad66eb3365ca5ff49c1dfac7824693c6133a493f6b0d3bf5644",
+    "research/sN/frontierN/overnight_general_six_supports.json": "9f86924da89ba88318aac4ddf30856255bf5591205b54a8a5c835362fadd7f92",
+    "research/sN/frontierN/overnight_general_six_pairpeeling.json": "0d00d7f03d193ff2d4a0c3d7c3f9ff500753a7d1a5d7c57dce890037897b55b5",
+    "research/sN/frontierN/overnight_general_six_global.json": "4f72c752f82ce1299aed36933c5f99a30759e1b56d117411d4d4a53d8999d8e3",
+    "research/sN/frontier5/max5_nine_c5_atoms_o2_r1.network.json": "56ad1198f88edea57bd6e51abf0dc6dbabce14ae5140aad7304700b6bcae2497",
+    "research/sN/best5/netB_10_6.json": "8bb67dd1a65c03a5b4e31db9f361976bae0ba18427576400c16981f00eb41432",
+    "research/sN/frontier5/max5_certificate_checker.py": "b2db3c477e7e0cc24e320f990fe13780dc6a4feb6ca06fc4ec1d5da8f8c025f3",
+    "research/sN/frontierN/causal_intervention_certifier.py": "18195a91f9d079e27313287069b2b60c1eb5328070780d650839e1eff224fe0f",
+    "research/sN/frontierN/overnight_general.md": "5385e6f650b77ab5586f2b363b4e9f7cd82487cec85b812ed128a81de047f1dd",
+    "research/sN/frontierN/overnight_general_six.md": "0c94a7fb77d046a4f1fac5b10a4c9bf6e48ab6a5c34398fd5b5cfa797d6dee91",
+    "research/sN/frontierN/overnight_general_antipodal.lean": "710673ff92a7edf041066eb1610ce2eec0b59937274fa665db09c84c65b96d1b",
+    "research/sN/frontierN/overnight_general_antipodal.md": "2bfe391ad9b69892899f50608f225a8935b12411d3ba4a44b555261ba3ec8a7c",
+    "research/sN/best5/overnight_fixed_natural8_rectangle.md": "bb6a0a1163686a7222038a2be65d192af17b126538c25af5cea40141f62f98e0",
+    "research/sN/frontier5/construction_frontier.md": "91478c9e66296d228040a5f9f94b91b39746a2a21ab565eea9ca7b204c7f9b90",
+    "research/sN/frontier5/max5_oct31_complete3_theorem.md": "89e801ff15b45df598150fa56547899caec486e065e8b885581b20c831e32bd0",
+    "research/sN/frontier5/max5_oct31_fiber_summary.md": "a9acb8aa424bd7bc30ddeea62d955d5cd7fa8f131d76dea0f6c372397a9b2f05",
+    "notes/max5_exact/README.md": "b76e288b3f87ff11982909979a81ac799bcae4bd0426420d0fa03a0b12a31c0f",
+    "notes/max5_exact/first9_mixed.md": "e6b52137486291b05c35c5698751c72d19f0ddbd1ada7467fc3e73dd3656c53b",
+    "notes/max5_exact/first9_nonroot.md": "e58cee2825627bb2327fad90c5d7557ad4c45f4d419247bf7c6e7b70d7720495",
+    "notes/max5_exact/three_shared.md": "3425ada8c496c03c98b509626a19ff5bc3dbdd03963741b9ccd9d337c7189888",
+    "notes/max5_exact/four_shared.md": "47f4a50724c5143dbc69019d6ba2ea22ef34e6d374afb83692d98c79b366ad32",
+    "notes/max5_exact/first9_c5_lower.md": "cb096383d838841f1d101128d20c7d38b30dcd050a47e88903113f7be27d3ba0",
+    "notes/max5_exact/root7_k4.md": "6f8387b6e4e513df4be63559858eac3fdb8c718cbe99035a77cbe30c8e76ea07",
+    "notes/max5_exact/width5_carriers.md": "0e7bf71d6d397d95b7ed13f06149d4cfe648d08fe4ff33b8c3eb3b462bbb00be"
+  },
+  "checker_sha256": "33d5165bcaf04e83f670dbd6444e041191203b21b4297b0777c8c453db9541e5"
+}
