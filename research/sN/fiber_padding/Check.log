@@ -1,0 +1,16 @@
+'MaxCaterpillar.Fiber.Padding.isReducibleComponent_iff_eq_pairedComponent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Padding.max4_6_5_exactly_one_reducible_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MaxCaterpillar.Fiber.Padding.max4_6_5_reducible_component_count' depends on axioms: [Quot.sound,
+ propext,
+ Classical.choice]
+'MaxCaterpillar.Fiber.Padding.max4_6_5_irreducible_component_count' depends on axioms: [Quot.sound,
+ propext,
+ Classical.choice]
+'MaxCaterpillar.Fiber.Padding.Strong.Main.max4_6_5_exactly_64_components_without_expandedSolution' depends on axioms: [Quot.sound,
+ propext,
+ Classical.choice]
+EXIT=0
